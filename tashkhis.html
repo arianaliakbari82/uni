@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوه جامع بیماری‌های غدد بزاقی — دکتر حاجی مقصودی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f5f0;
+    --card:#ffffff;
+    --ink:#1f2a2e;
+    --muted:#5d6b70;
+    --line:#e3ddd2;
+    --teal:#0f6e6e;
+    --teal-d:#0a4f4f;
+    --teal-soft:#e6f1f0;
+    --amber:#b3711a;
+    --amber-soft:#fbeed8;
+    --rose:#a83246;
+    --rose-soft:#fbe6ea;
+    --violet:#5b4a8a;
+    --violet-soft:#ede9f6;
+    --green:#3f7d3a;
+    --green-soft:#e7f2e3;
+    --shadow:0 1px 2px rgba(20,40,40,.05),0 8px 24px rgba(20,40,40,.06);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Vazirmatn',system-ui,sans-serif;
+    font-size:16.5px;line-height:1.95;
+    direction:rtl;text-align:right;
+  }
+  /* bidi: keep inline latin tidy */
+  bdi,.en{unicode-bidi:isolate;}
+  .en{font-family:'Inter','Vazirmatn',sans-serif;font-weight:600;letter-spacing:.1px}
+  td,th{unicode-bidi:plaintext}
+  /* ---- Layout ---- */
+  .topbar{
+    position:sticky;top:0;z-index:40;
+    background:linear-gradient(180deg,var(--teal-d),var(--teal));
+    color:#eafaf8;padding:10px 18px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    box-shadow:0 2px 14px rgba(10,60,60,.25)
+  }
+  .topbar b{font-weight:700;font-size:15px}
+  .topbar .sub{font-size:12px;opacity:.8}
+  .topbar button{
+    font-family:inherit;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);
+    padding:6px 12px;border-radius:999px;cursor:pointer;font-size:13px
+  }
+  .topbar button:hover{background:rgba(255,255,255,.25)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px 80px}
+  header.hero{
+    margin-top:26px;padding:34px 30px;border-radius:20px;
+    background:
+      radial-gradient(120% 120% at 100% 0%, #11807e 0%, #0c5e5e 55%, #093f3f 100%);
+    color:#f0fbfa;box-shadow:var(--shadow);position:relative;overflow:hidden
+  }
+  header.hero::after{
+    content:"";position:absolute;left:-40px;bottom:-60px;width:240px;height:240px;
+    border-radius:50%;background:rgba(255,255,255,.06)
+  }
+  header.hero h1{margin:0 0 8px;font-size:30px;font-weight:800;line-height:1.4}
+  header.hero p{margin:4px 0;font-size:15px;opacity:.92}
+  .hero-tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .hero-tags span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+    padding:5px 12px;border-radius:999px;font-size:12.5px}
+
+  /* ---- TOC ---- */
+  .toc{
+    margin-top:24px;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow)
+  }
+  .toc h2{margin:0 0 12px;font-size:17px;color:var(--teal-d);display:flex;align-items:center;gap:8px}
+  .toc ol{margin:0;padding:0 18px 0 0;columns:2;column-gap:30px}
+  @media(max-width:680px){.toc ol{columns:1}}
+  .toc li{margin:5px 0;break-inside:avoid}
+  .toc a{color:var(--ink);text-decoration:none;border-bottom:1px dashed transparent}
+  .toc a:hover{color:var(--teal);border-bottom-color:var(--teal)}
+
+  /* ---- Sections ---- */
+  section.block{
+    margin-top:30px;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:64px
+  }
+  .block > .head{
+    padding:16px 24px;display:flex;align-items:center;gap:12px;
+    background:var(--teal-soft);border-bottom:1px solid var(--line)
+  }
+  .block > .head .num{
+    flex:0 0 auto;width:38px;height:38px;border-radius:10px;background:var(--teal);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Inter',sans-serif
+  }
+  .block > .head h2{margin:0;font-size:20px;color:var(--teal-d)}
+  .block > .head .tag{margin-inline-start:auto;font-size:12px;color:var(--muted);background:#fff;
+    border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+  .body{padding:22px 26px}
+  @media(max-width:680px){.body{padding:18px 16px}}
+
+  h3.sub{font-size:18px;color:var(--teal-d);margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--teal-soft)}
+  h4.subsub{font-size:16px;color:var(--amber);margin:18px 0 6px}
+  p{margin:9px 0}
+  ul,ol{margin:8px 0;padding-inline-start:24px}
+  li{margin:5px 0}
+  strong{font-weight:700;color:#143a3a}
+
+  /* callouts */
+  .note{border-radius:12px;padding:12px 16px;margin:14px 0;border:1px solid;line-height:1.85}
+  .note .lbl{font-weight:700;display:block;margin-bottom:3px;font-size:13.5px}
+  .note.key{background:var(--amber-soft);border-color:#e6cd9a;color:#5b3d10}
+  .note.tip{background:var(--green-soft);border-color:#bcd9b4;color:#234d1f}
+  .note.warn{background:var(--rose-soft);border-color:#eabac4;color:#7a1f30}
+  .note.def{background:var(--violet-soft);border-color:#cfc6e6;color:#3c2f63}
+  .note.info{background:var(--teal-soft);border-color:#bfe0dd;color:#0c4747}
+
+  /* tables */
+  .tbl-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px;background:#fff}
+  caption{caption-side:top;text-align:right;font-weight:700;color:var(--teal-d);padding:10px 12px;font-size:15px}
+  th,td{border:1px solid var(--line);padding:9px 11px;vertical-align:top;text-align:right;line-height:1.7}
+  thead th{background:var(--teal-d);color:#eafaf8;font-weight:600;position:sticky;top:0}
+  tbody tr:nth-child(even){background:#faf8f4}
+  tbody tr:hover{background:var(--teal-soft)}
+  td.c{text-align:center}
+  .pill{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;font-weight:600}
+  .pill.b{background:var(--green-soft);color:#2f6b29}   /* benign */
+  .pill.m{background:var(--rose-soft);color:#8c2336}    /* malign */
+
+  /* quiz */
+  #quiz .body{padding:6px 26px 30px}
+  .quiz-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 6px}
+  .quiz-tools button{font-family:inherit;cursor:pointer;border-radius:999px;padding:8px 16px;font-size:14px;border:1px solid var(--teal);background:#fff;color:var(--teal-d)}
+  .quiz-tools button.solid{background:var(--teal);color:#fff}
+  .quiz-tools button:hover{filter:brightness(.97)}
+  .score{font-weight:700;color:var(--teal-d)}
+  .q{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:14px 0;background:#fff}
+  .q .qn{font-weight:700;margin-bottom:8px}
+  .q .qn .badge{display:inline-block;background:var(--teal);color:#fff;font-family:'Inter';font-size:12px;
+    padding:1px 8px;border-radius:6px;margin-inline-start:6px}
+  .opts{list-style:none;margin:0;padding:0}
+  .opts li{margin:7px 0}
+  .opts label{display:flex;gap:9px;align-items:flex-start;cursor:pointer;padding:7px 10px;border:1px solid var(--line);
+    border-radius:9px;transition:.12s;unicode-bidi:plaintext}
+  .opts label:hover{background:var(--teal-soft)}
+  .opts input{margin-top:7px}
+  .opts label.correct{background:var(--green-soft);border-color:#9fc998}
+  .opts label.wrong{background:var(--rose-soft);border-color:#e3a9b4}
+  .explain{margin-top:10px;font-size:13.5px;background:var(--amber-soft);border:1px solid #e6cd9a;color:#5b3d10;
+    border-radius:9px;padding:9px 12px;display:none}
+  .explain.show{display:block}
+  .footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
+  .backtop{position:fixed;inset-block-end:18px;inset-inline-start:18px;z-index:30;background:var(--teal);color:#fff;
+    border:none;border-radius:50%;width:46px;height:46px;font-size:18px;cursor:pointer;box-shadow:var(--shadow);opacity:.92}
+  .anchor{display:block;position:relative;top:-60px;visibility:hidden}
+  @media print{
+    .topbar,.backtop,.quiz-tools{display:none}
+    .opts label{break-inside:avoid}
+    .explain{display:block}
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div><b>جزوه جامع غدد بزاقی</b> <span class="sub">دکتر حاجی مقصودی · جلسات ۱ تا ۷</span></div>
+  <div>
+    <button onclick="window.print()">چاپ / PDF</button>
+    <button id="quizBtn" onclick="document.getElementById('quiz').scrollIntoView()">آزمون جامع</button>
+  </div>
+</div>
+
+<div class="wrap">
+<header class="hero">
+  <h1>بیماری‌ها و اختلالات غدد بزاقی</h1>
+  <p>جزوهٔ مرور کامل و طبقه‌بندی‌شده برای آمادگی امتحان — همراه با جداول مقایسه‌ای و آزمون جامع.</p>
+  <p style="font-size:13px;opacity:.8">تمام نکات شش فایل درس (آناتومی و فیزیولوژی، تصویربرداری، بیوپسی و سنگ، موکوسل/رانولا، رادیوتراپی و ویروسی، سیالادنیت و شوگرن) پوشش داده شده است.</p>
+  <div class="hero-tags">
+    <span>آناتومی و فیزیولوژی بزاق</span><span>روش‌های تشخیصی و تصویربرداری</span>
+    <span>سنگ و اختلالات تکاملی</span><span>موکوسل و رانولا</span>
+    <span>ضایعات التهابی/واکنشی</span><span>سیالادنیت باکتریال و ویروسی</span>
+    <span>سندروم شوگرن و گرانولوماتوزها</span><span>رادیوتراپی و IgG4-RD</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>🗂️ فهرست مطالب</h2>
+  <ol>
+    <li><a href="#s1">۱) آناتومی و فیزیولوژی غدد بزاقی و بزاق</a></li>
+    <li><a href="#s1b">۲) اپروچ تشخیصی، معاینه و جمع‌آوری بزاق</a></li>
+    <li><a href="#s2">۳) تصویربرداری غدد بزاقی (Imaging)</a></li>
+    <li><a href="#s3a">۴) بیوپسی و بررسی سرولوژیک</a></li>
+    <li><a href="#s3b">۵) اختلالات تکاملی غدد بزاقی</a></li>
+    <li><a href="#s3c">۶) سنگ غده بزاقی (Sialolithiasis)</a></li>
+    <li><a href="#s4a">۷) موکوسل و رانولا</a></li>
+    <li><a href="#s4b">۸) سیالومتاپلازی نکروزان و کیلیت گلاندولاریس</a></li>
+    <li><a href="#s6a">۹) سیالادنیت باکتریال، نوزادی و JRP</a></li>
+    <li><a href="#s6b">۱۰) وضعیت‌های سیستمیک و داروها</a></li>
+    <li><a href="#s6c">۱۱) سندروم شوگرن (SS)</a></li>
+    <li><a href="#s6d">۱۲) بیماری‌های گرانولوماتوز</a></li>
+    <li><a href="#s6e">۱۳) سیالوره (Sialorrhea)</a></li>
+    <li><a href="#s5a">۱۴) آسیب‌های ناشی از رادیوتراپی</a></li>
+    <li><a href="#s5b">۱۵) بیماری مرتبط با IgG4 (Küttner / Mikulicz)</a></li>
+    <li><a href="#s5c">۱۶) بیماری‌های ویروسی (اوریون، CMV، HIV)</a></li>
+    <li><a href="#tables">۱۷) جداول جمع‌بندی و مقایسه نهایی</a></li>
+    <li><a href="#quiz">★ آزمون جامع ۱۰۰ سؤالی</a></li>
+  </ol>
+</nav>
+</div>
+
+<div class="wrap" id="content">
+<!-- ===================== SESSION 1: ANATOMY & PHYSIOLOGY ===================== -->
+<span class="anchor" id="s1"></span>
+<section class="block">
+  <div class="head"><span class="num">۱</span><h2>آناتومی و فیزیولوژی غدد بزاقی و بزاق</h2><span class="tag">جلسه اول</span></div>
+  <div class="body">
+
+    <p>غدد بزاقی به دو دستهٔ <strong>ماژور</strong> و <strong>مینور</strong> تقسیم می‌شوند. ساختار داخلی همهٔ غدد از <strong>سلول‌های مجاری (ductal)</strong> و <strong>انتهای آسینی (acinar)</strong> تشکیل شده است. انتهای آسینی مهم‌ترین قسمت غده است و حجم اصلی بزاق از آن ترشح می‌شود؛ <strong>تنها جایی که آب وارد غده می‌شود انتهای آسینی است</strong> (ابتدا مشابه سرم/ایزوتونیک). در مسیر عبور از مجاری، سلول‌های مجاری یون‌ها و پروتئین‌های اضافه را به بزاق می‌افزایند یا برمی‌دارند تا بزاق کامل ساخته شود.</p>
+
+    <h3 class="sub">غدد بزاقی ماژور (سه جفت)</h3>
+    <div class="tbl-wrap"><table>
+      <caption>مشخصات غدد بزاقی اصلی و مجاری آن‌ها</caption>
+      <thead><tr><th>غده</th><th>موقعیت / لوب</th><th>نام مجرا</th><th>محل و مشخصات مجرا</th><th>نوع بزاق</th></tr></thead>
+      <tbody>
+        <tr><td><strong>پاروتید</strong></td><td>دو لوب سطحی و عمقی؛ <bdi>عصب facial (۷)</bdi> بین دو لوب عبور می‌کند (عصب حرکتی صورت، مهم در پاتولوژی و جراحی)</td><td><bdi>Stenson (Stensen)</bdi></td><td>مجاور دندان ۶ و ۷ بالا باز می‌شود؛ از <bdi>buccal fat pad</bdi> و <bdi>Masseter</bdi> عبور و <bdi>buccinator</bdi> را سوراخ می‌کند؛ ورود از طریق <bdi>parotid papilla</bdi>. طول ۴–۶ سانتی‌متر، عرض ۲–۲٫۵ میلی‌متر</td><td>سروزی</td></tr>
+        <tr><td><strong>ساب‌مندیبولار</strong></td><td>دوکی‌شکل، خوابیده در کف دهان، در مثلث <bdi>submandibular</bdi>؛ برخی آن را U-شکل و continues در خلف <bdi>mylohyoid</bdi> می‌دانند</td><td><bdi>Wharton</bdi></td><td>دهانه‌ها = <bdi>caruncle</bdi> زیر زبان دو طرف <bdi>lingual frenum</bdi>. طول متوسط ۵ سانتی‌متر، عرض ۱–۳ میلی‌متر</td><td>میکس (ترکیبی)</td></tr>
+        <tr><td><strong>ساب‌لینگوال</strong></td><td>یک غدهٔ اصلی + ۸ تا ۳۰ غدهٔ فرعی (ساختار منفرد نیست)؛ فوقانی‌تر و قدامی‌تر از ساب‌مندیبولار، بالای <bdi>mylohyoid</bdi></td><td><bdi>Bartholin</bdi> (و گاهی <bdi>Rivinus</bdi>)</td><td><bdi>Bartholin</bdi> در ۲/۳ موارد به مجرای <bdi>Wharton</bdi> می‌ریزد؛ در درصد کمتر مجرای <bdi>Rivinus</bdi> مستقلاً به دهان می‌ریزد</td><td>موکوسی</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">غدد بزاقی مینور (فرعی)</h3>
+    <ul>
+      <li>حدود <strong>۴۵۰ تا ۱۰۰۰ غده</strong> در سراسر حفرهٔ دهان و اوروفارنکس؛ به‌صورت نرمال در <bdi>aerodigestive tract</bdi>، <bdi>sinonasal cavity</bdi> و <bdi>middle ear</bdi> نیز دیده می‌شوند.</li>
+      <li>مجرای مشخص ندارند؛ با مجرای کوچک، مخاط را سوراخ کرده و ترشحات را به دهان تخلیه می‌کنند (نزدیک سطح).</li>
+      <li>نام‌گذاری بر اساس ناحیهٔ آناتومیک (مثلاً غدد فرعی لب بالا، کام نرم، <bdi>Retromolar pad</bdi>، باکال).</li>
+    </ul>
+    <div class="note def"><span class="lbl">سه غدهٔ فرعی نام‌گذاری‌شده (به نام کاشف)</span>
+      <strong>Weber</strong>: <bdi>lateral border of tongue</bdi> (ترشح موکوسی) · <strong>Von Ebner</strong>: اطراف <bdi>circumvallate papilla</bdi> (یک‌سوم خلفی زبان، جلوی شیار V؛ ترشح سروزی) · <strong>Blandin & Nuhn</strong>: <bdi>anterior ventral tongue</bdi> = قدام زیر زبان (ترشح میکس).
+    </div>
+
+    <h3 class="sub">بزاق (Saliva): ترکیب و انواع</h3>
+    <p>بزاق ترکیب پیچیده‌ای از آب، مواد معدنی و آلی است؛ در حالت عادی <strong>۹۹٪ آن آب</strong> است، بی‌رنگ و شفاف با <strong>pH بین ۶ تا ۷</strong>.</p>
+    <div class="tbl-wrap"><table>
+      <caption>انواع بزاق و غدد ترشح‌کننده</caption>
+      <thead><tr><th>نوع بزاق</th><th>غدد اصلی</th><th>غدهٔ فرعی</th><th>ویژگی‌ها و نقش</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Serous</strong></td><td>عمدتاً پاروتید</td><td>Von Ebner</td><td>آبکی (ویسکوزیتهٔ پایین)، حاوی آنزیم فراوان، عمدتاً هنگام غذا خوردن برای آسانی بلع و جویدن</td></tr>
+        <tr><td><strong>Mucous</strong></td><td>ساب‌لینگوال</td><td>Weber</td><td>ویسکوزیتهٔ بالا و غلیظ‌تر، عمدتاً گلیکوپروتئین موسین، نقش <bdi>lubricant</bdi> و <bdi>barrier</bdi> محافظتی انتخابی</td></tr>
+        <tr><td><strong>میکس</strong></td><td>ساب‌مندیبولار</td><td>Blandin–Nuhn</td><td>ترکیبی از سروزی و موکوسی</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>ترشح <strong>مایع</strong> صرفاً در انتهای <bdi>acini</bdi>؛ <strong>پروتئین‌ها</strong> عمدتاً از سلول‌های acinar و مقداری از مجاری.</li>
+      <li>هنگام <strong>شب و استراحت</strong>: ساب‌مندیبولار و ساب‌لینگوال بیشترین فعالیت و بیشترین حجم بزاق <strong>موکوسی</strong>.</li>
+      <li>هنگام <strong>غذا خوردن</strong>: بیشترین حجم از <strong>پاروتید (سروزی)</strong>؛ حدود ۱۰٪ حجم بزاق هنگام غذا و تحریک چشایی مربوط به غدد فرعی است، بقیه پاروتید و ساب‌مندیبولار (میکس).</li>
+    </ul>
+
+    <h4 class="subsub">یون‌ها و اجزای آلی</h4>
+    <ul>
+      <li><strong>یون‌ها:</strong> <bdi>sodium, chloride, calcium, potassium, bicarbonate, phosphate, fluorine, iodine, magnesium, thiocyanate</bdi>.</li>
+      <li><strong>عملکرد بافری</strong> عمدتاً با <strong>بی‌کربنات</strong>؛ کلسیم و فسفر نیز مستقلاً اسیدها را خنثی می‌کنند.</li>
+      <li><strong>اجزای آلی:</strong> <bdi>urea, ammonia, uric acid, glucose, cholesterol, fatty acids, lipids, amino acids, steroid hormones, proteins</bdi>.</li>
+    </ul>
+    <div class="tbl-wrap"><table>
+      <caption>دسته‌بندی پروتئین‌های بزاق</caption>
+      <thead><tr><th>دسته</th><th>نقش</th><th>نمونه‌ها</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Digestion</strong></td><td>هضم</td><td><bdi>amylase, lipase, DNAase</bdi></td></tr>
+        <tr><td><strong>Protection</strong></td><td>حفاظتی</td><td>سردسته = موسین‌ها؛ نیز <bdi>amylases, agglutinins, lactoferrin, secretory IgA</bdi></td></tr>
+        <tr><td><strong>PRPs</strong> (Proline-rich proteins)</td><td>دستهٔ جدید</td><td>سرشار از پرولین، <strong>۷۰٪ پروتئین‌های بزاقی</strong>؛ ضدمیکروبی، افزایش lubrication و افزایش <bdi>mineralization</bdi> دندانی (ضد پوسیدگی)</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="note key"><span class="lbl">تونیسیتهٔ بزاق</span>
+      بزاق در انتهای آسینی <strong>ایزوتونیک</strong> است. در عبور از مجاری، <bdi>Na</bdi> و <bdi>Cl</bdi> جذب و <bdi>K (پتاسیم)</bdi> ترشح می‌شود؛ پس <bdi>whole saliva</bdi> که وارد دهان می‌شود <strong>هیپوتونیک</strong> و مملو از پروتئین است. حجم <bdi>whole saliva</bdi> در فرد نرمال <strong>۰٫۵ تا ۱٫۵ لیتر در شبانه‌روز</strong>.
+    </div>
+
+    <h4 class="subsub">تغییرات با افزایش سن (در فرد سیستمیکِ نرمال)</h4>
+    <ul>
+      <li>آتروفی <bdi>Acinar</bdi> · تبدیل پارانشیم به چربی و سایر بافت‌ها · اتساع مجاری · افزایش <bdi>infiltration</bdi> سلول‌های التهابی.</li>
+      <li>بدن می‌کوشد حجم بزاق را همان ۰٫۵–۱٫۵ لیتر نگه دارد مگر پاتولوژی ایجاد شود.</li>
+    </ul>
+
+    <h3 class="sub">کنترل عصبی ترشح بزاق</h3>
+    <div class="tbl-wrap"><table>
+      <caption>تنظیم اتونومیک ترشح بزاق</caption>
+      <thead><tr><th>شاخه</th><th>رسپتور / واسطه</th><th>اثر</th></tr></thead>
+      <tbody>
+        <tr><td><strong>پاراسمپاتیک</strong></td><td><bdi>Muscarinic cholinergic</bdi> با <bdi>Acetylcholine</bdi></td><td>کنترل ترشح <strong>مایع</strong>؛ افزایش حجم و روان‌بودن بزاق (آبکی‌تر)</td></tr>
+        <tr><td><strong>سمپاتیک</strong></td><td><bdi>β-adrenergic</bdi> با <bdi>noradrenaline</bdi></td><td>محرک ترشح <strong>پروتئین</strong>؛ بزاق غلیظ‌تر</td></tr>
+      </tbody>
+    </table></div>
+    <p>هر دو شاخه در افزایش بزاق نقش دارند و کم‌کاری هرکدام بزاق را کاهش می‌دهد. کنترل دیگر = <strong>ریتم شبانه‌روزی</strong>. محرک‌های دیگر: چشایی، بویایی، تحریک مکانیکی (جویدن)، درد، تغییرات هورمونی (به‌ویژه خانم‌ها)، داروهای سمپاتومیمتیک و پاراسمپاتومیمتیک.</p>
+    <div class="note warn"><span class="lbl">عوامل کاهندهٔ بزاق</span>
+      منوپوز · تغییرات هورمونی · استرس · داروهای <bdi>antiadrenergic</bdi> و <bdi>anticholinergic</bdi>.
+    </div>
+    <p class="note tip" style="margin-top:12px"><span class="lbl">نکتهٔ تحریک</span>
+      ۱۰–۲۰٪ شبانه‌روز تحریک غدد رخ می‌دهد؛ در فرد دارای خشکی دهان باید بیشتر باشد (مثلاً ۴۰٪): ماساژ غده، آدامس، آب‌نبات ترش و شور، آبلیمو روی زبان. بیشترین تحریک = چشایی، بویایی و مکانیکی.</p>
+  </div>
+</section>
+
+<!-- ===================== SESSION 1b: DIAGNOSTIC APPROACH ===================== -->
+<span class="anchor" id="s1b"></span>
+<section class="block">
+  <div class="head"><span class="num">۲</span><h2>اپروچ تشخیصی، معاینهٔ کلینیکی و جمع‌آوری بزاق</h2><span class="tag">جلسه اول</span></div>
+  <div class="body">
+
+    <h3 class="sub">شکایت بیمار: خشکی دهان</h3>
+    <div class="note def"><span class="lbl">اصطلاح‌شناسی</span>
+      <strong>Symptom = Xerostomia</strong> (حس خشکی) ، <strong>Sign = dry mouth</strong> (خشکی قابل‌مشاهده/قابل‌اندازه‌گیری).</div>
+    <ul>
+      <li>گاهی <bdi>dehydration</bdi> باعث خشکی ثانویه است؛ صرفاً علت دهیدراتاسیون رفع می‌شود (پاتولوژی غده نیست).</li>
+      <li>گاهی بزاق در معاینه طبیعی است ولی بیمار حس خشکی دارد → اختلال حسی-شناختی (مشکل مغزی)؛ ارجاع به نورولوژیست.</li>
+      <li><strong>شایع‌ترین علت</strong> این شکایت = اختلال فانکشن غدد بزاقی.</li>
+      <li>خشکی صرفاً شبانه/هنگام بیداری اهمیت بالینی پایین دارد؛ ولی خشکی مختل‌کنندهٔ جویدن/بلع نیازمند ارزیابی بیشتر است.</li>
+    </ul>
+    <div class="note key"><span class="lbl">شایع‌ترین علل اختلال عملکرد غدد بزاقی</span>
+      دارو، کافئین، الکل، سیگار، رادیوتراپی، بیماری‌های سیستمیک، توده‌های غده، <bdi>malnutrition</bdi>، بیماری‌های اتوایمیون، شرایط ویروسی/باکتریال/قارچی.</div>
+
+    <h3 class="sub">Table 9-1 — تشخیص‌های افتراقی اختلال عملکرد غدد بزاقی</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>دسته</th><th>موارد</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Autoimmune</strong></td><td>Chronic graft-versus-host disease · Sjögren's syndrome</td></tr>
+        <tr><td><strong>Developmental</strong></td><td>Salivary gland aplasia and hypoplasia</td></tr>
+        <tr><td><strong>Iatrogenic</strong></td><td>Botulinum toxin injection · External beam radiation · Internal radiation (Radioactive iodine I-131) · Postsurgical (adenectomy, ductal ligation)</td></tr>
+        <tr><td><strong>IgG4-related</strong></td><td>Küttner tumor; Mikulicz's disease</td></tr>
+        <tr><td><strong>Infectious</strong></td><td>Bacterial: Staph aureus, MRSA, H. influenzae · Viral: CMV, HIV, hepatitis C, paramyxovirus</td></tr>
+        <tr><td><strong>Inflammatory (Granulomatous)</strong></td><td>Tuberculosis, sarcoidosis</td></tr>
+        <tr><td><strong>Medication-associated</strong></td><td>—</td></tr>
+        <tr><td><strong>Neoplastic</strong></td><td>Benign and malignant salivary gland tumors</td></tr>
+        <tr><td><strong>Non-neoplastic</strong></td><td>Sialolithiasis</td></tr>
+        <tr><td><strong>Systemic</strong></td><td>Anorexia nervosa, chronic alcoholism, diabetes mellitus</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">معاینهٔ کلینیکی</h3>
+    <h4 class="subsub">علائم بالینی مرتبط با خشکی دهان</h4>
+    <ul>
+      <li>لب‌های ترک‌خورده، پوسته‌پوسته و آتروفیک.</li>
+      <li>حالت کنگره‌ای (<bdi>corrugated</bdi>) در مخاط باکال یا کناره‌های زبان (اصطکاک با دندان).</li>
+      <li>بدون پاپی شدن و صاف شدن زبان.</li>
+      <li>استعداد به <bdi>Candidiasis</bdi> (کاهش عملکرد بزاق در برابر میکروارگانیسم‌ها).</li>
+    </ul>
+    <div class="note key"><span class="lbl">شایع‌ترین کاندیدیازیس در خشکی دهان</span>
+      ۱) <strong>Erythematous</strong> (پچ اریتماتوز روی زبان/جاهای دیگر) ← ۲) <strong>Thrush</strong> (سودوممبرانوس) ← ۳) <strong>Angular cheilitis</strong> (گوشهٔ لب).</div>
+    <div class="note info"><span class="lbl">دو علامت کمکی ویژه</span>
+      <strong>Lipstick sign</strong>: چسبیدن رژ به دندان‌های قدامی بالا (کاهش lubrication/پاکسازی) · <strong>Tongue blade sign</strong>: چسبیدن آبسلانگ/آینه به مخاط باکال هنگام برداشتن (مثبت = خشکی دهان).</div>
+    <p>افزایش پوسیدگی در خشکی دهان شدید (مثل شوگرن) غالباً در سطوح <strong>سرویکال</strong> و <strong>نوک کاسپ دندان‌های خلفی</strong>.</p>
+
+    <h4 class="subsub">افزایش حجم غده و کیفیت بزاق در معاینه</h4>
+    <ul>
+      <li>علل افزایش حجم: التهابی (شوگرن)، عفونت‌های ویروسی/باکتریال/قارچی، نئوپلاستیک.</li>
+      <li>بزاق باید شفاف، آبکی، پرحجم باشد؛ <strong>cloudy/غیرشفاف</strong> = عفونت باکتریال → کشت + آنتی‌بیوگرام.</li>
+      <li>در لمس، غده <strong>rubbery</strong> است؛ <strong>firm/stony</strong> = نیاز به بررسی پاتولوژیک.</li>
+      <li>درد در عفونت، التهاب حاد و برخی تومورها مهم است. بیشتر تومورها بدون درد یا درد گنگ؛ ~۱۰–۲۰٪ بسیار دردناک (غالباً غدد فرعی خلف کام، با دست‌اندازی عصبی <bdi>ACC</bdi>).</li>
+    </ul>
+    <div class="note warn"><span class="lbl">نشانه‌های پیش‌آگهی بد در افزایش حجم غده</span>
+      توده‌های متعدد در یک غده (<bdi>multinodular</bdi>) · دست‌اندازی به اطراف و سفتی قاعده (<bdi>induration and invasion</bdi>) · لنفادنوپاتی گردنی همراه توده (شک متاستاز) · <bdi>Facial nerve paralysis</bdi> (در بدخیمی پاروتید؛ اما اختصاصی نیست و در عفونت/تومور سریع‌الرشد حتی خوش‌خیم هم ممکن است) · زخم سطحی همراه با افزایش حجم (دست‌اندازی سلول بدخیم به سطح).</div>
+
+    <div class="tbl-wrap"><table>
+      <caption>الگوهای توده‌ای غدد بزاقی (نکات پاتولوژی مرتبط)</caption>
+      <thead><tr><th>الگو</th><th>موارد</th></tr></thead>
+      <tbody>
+        <tr><td>توده‌های <strong>دوطرفهٔ پاروتید</strong></td><td>Warthin tumor · lymphoepithelial cysts و lymph nodes در HIV · <span class="pill m">بدخیم</span> Acinic cell adenocarcinoma</td></tr>
+        <tr><td>توده‌های بدون درد و <strong>متعدد در یک پاروتید</strong></td><td>Warthin · lymph nodes · متاستاتیک · تومورهای خوش‌خیم و بدخیم</td></tr>
+        <tr><td>دو تومور <strong>متاستاتیک شایع</strong> به غدهٔ بزاقی</td><td>۱) Melanoma پوستی یا دهانی ۲) SCC</td></tr>
+        <tr><td>تومورهای <strong>ساب‌لینگوال/ساب‌مندیبولار</strong></td><td>اغلب بدون درد، منفرد، کندرشد، متحرک</td></tr>
+        <tr><td>شایع‌ترین محل تومور <strong>غدد فرعی</strong></td><td>کام سخت و نرم؛ برجستگی اگزوفیتیک با سطح صاف (منشأ همبند)؛ پشت روگا (۲/۳ خلفی کام)، نه در ۱/۳ قدامی</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">جمع‌آوری بزاق (Saliva collection)</h3>
+    <ul>
+      <li><strong>Passive drainage method:</strong> جمع‌آوری بزاق ترشح‌شدهٔ طبیعی بدون تحریک.</li>
+      <li><strong>Active drainage method:</strong> بیمار بزاق را نگه می‌دارد و هر ۱ دقیقه به ظرف استریل منتقل می‌کند (۵ تا ۱۵ دقیقه)؛ کاربرد آزمایشگاهی بیشتر.</li>
+    </ul>
+    <div class="note tip"><span class="lbl">شرایط پیش از نمونه‌گیری</span>
+      از ۱٫۵ ساعت قبل: نخوردن، نیاشامیدن، سیگار، آدامس و بهداشت دهانی (مسواک/نخ) و هر محرک (بویایی/چشایی/جویدن) پرهیز شود؛ ۱۰ دقیقه قبل شست‌وشوی مختصر دهان برای خالی‌شدن از دبری.</div>
+    <div class="note key"><span class="lbl">معیارهای کمی خشکی دهان</span>
+      <bdi>whole saliva</bdi> غیرتحریکی <strong>&lt; ۰٫۱ ml/min</strong> = خشکی دهان · بزاق <strong>تحریکی</strong> (بعد آبلیمو/اسید سیتریک روی زبان) باید <strong>&gt; ۰٫۷ ml/min</strong> باشد؛ کمتر = خشکی مشخص.</div>
+    <p><strong>Sialochemistry</strong> = بررسی‌های تشخیصی روی بزاق؛ برای <bdi>screening</bdi> شوگرن، شک سوءمصرف الکل/کوکائین و بیماری‌های ویروسی (HIV، هپاتیت C، HPV). در نارسایی کلیه، اورهٔ بزاق ↑ (تجزیه توسط باکتری → افزایش جرم و کاهش اسیدیته → کاهش پوسیدگی).</p>
+  </div>
+</section>
+
+<!-- ===================== SESSION 2: IMAGING ===================== -->
+<span class="anchor" id="s2"></span>
+<section class="block">
+  <div class="head"><span class="num">۳</span><h2>تصویربرداری غدد بزاقی (Salivary gland imaging)</h2><span class="tag">جلسه دوم</span></div>
+  <div class="body">
+
+    <p>تورم دردناک حاد غده با تشدید هنگام غذا خوردن نشانگر <strong>سیالادنیت احتباسی</strong> است (تجمع بزاق پشت سنگ بعد از تحریک ترشح). برای بررسی سنگ، رادیوگرافی ساده.</p>
+
+    <h3 class="sub">Plain-Film Radiography</h3>
+    <ul>
+      <li>پرکاربردترین‌ها: <strong>Panoramic</strong> · <strong>Occlusal</strong> (مناسب غدد تحت‌فکی) · <strong>Ant-Pos</strong> · <strong>Lateral oblique</strong>.</li>
+      <li>سنگ <strong>کلسیفیه</strong> دیده می‌شود؛ سنگ غیرکلسیفیه در گرافی معمولی دیده نمی‌شود. سنگ نزدیک انتهای مجرای <bdi>Wharton</bdi> در معاینهٔ بالینی هم قابل مشاهده است؛ سنگ عمقی‌تر → اکلوزال.</li>
+    </ul>
+    <div class="note info"><span class="lbl">دو کاربرد دیگر Plain-Film</span>
+      ۱) بررسی دست‌اندازی بدخیمی (تحلیل استخوان مجاور) — برخلاف بدخیمی‌ها، ضایعات <strong>التهابی مزمن</strong> می‌توانند <bdi>Bone sclerosis</bdi> (افزایش دانسیته) ایجاد کنند. ۲) <strong>بستری برای سیالوگرافی</strong>: برای دیدن میزان پخش کنتراست باید <bdi>Plain-Film</bdi> تهیه شود.</div>
+
+    <h3 class="sub">Sialography</h3>
+    <p>روش <strong>انتخابی</strong> برای اختلالات سیستم مجاری غدد ماژور (مادرزادی/داخلی یا اکتسابی مثل سنگ و تنگی) و ضایعات فضاگیر مؤثر بر مسیر بزاق. بهترین تصویر از شاخه‌های داخل غده، مجاری و آسینی. هر تنگی، سیالولیت و انسداد به‌خوبی دیده می‌شود.</p>
+    <ul>
+      <li>کنتراست (رادیواپک، سیالیتِ بالا) از دهانهٔ مجرا تزریق می‌شود و باید به آسینی‌های انتهایی برسد؛ نمای نرمال = <strong>«leafless tree» (درخت بدون برگ)</strong>.</li>
+      <li>سنگ <strong>غیراپک</strong>: انسداد دیده می‌شود (کنتراست عبور نمی‌کند) و خود سنگ به‌صورت <strong>void</strong>.</li>
+      <li><strong>Sialectasias</strong> = تجمعات موضعی کنتراست («دانه‌برفی»)؛ در بیماری‌های اتوایمیون/التهابی مثل <strong>شوگرن</strong>. نواحی ملتهب کنتراست بیشتری جذب می‌کنند.</li>
+      <li>گرافی‌های تفسیر سیالوگرافی: <strong>Panoramic (بهترین)</strong> · Lateral oblique · Ant-Pos · Ant-Pos with puffed cheek.</li>
+      <li>بهترین تشخیص‌ها: تنگی و پارگی مجرا · انواع سنگ · سایر انسدادها · گشادشدگی مجرا (مجاری <strong>wide</strong>تر).</li>
+    </ul>
+    <div class="note warn"><span class="lbl">کنترااندیکاسیون‌های سیالوگرافی</span>
+      <strong>عفونت فعال</strong> (کنتراست سیالیت‌بالا عفونت را پخش می‌کند) · <strong>آلرژی به کنتراست</strong> (پایهٔ آب یا روغن، هر دو یددار) · <strong>تداخل با تست‌های تیروئید/کنسر تیروئید</strong> (ید نشان‌دار) → مشورت با متخصص غدد و انجام با فاصله.</div>
+
+    <h3 class="sub">Ultrasonography</h3>
+    <p>برای اندام‌های سطحی (پاروتید و ساب‌مندیبولار)؛ روش <bdi>imaging</bdi> اولیه و در دسترس‌تر از X-ray. تعیین داخل/خارج غده بودن توده و <strong>solid یا cystic</strong> بودن افزایش حجم.</p>
+
+    <h3 class="sub">Radionuclide Salivary Imaging (Scintigraphy)</h3>
+    <ul>
+      <li>یون نشان‌دار <strong>Technetium (Tc) 99m</strong>؛ کم‌تهاجم‌ترین روش، نمایش <strong>dynamic</strong> (در طی زمان) فانکشن غده با رسم <bdi>curve</bdi> از تحریک تا ورود بزاق به دهان؛ اطلاعات <strong>کمّی</strong>.</li>
+      <li>فقط پاروتید و ساب‌مندیبولار دیده می‌شود (تیروئید هم Tc را جذب می‌کند). در ایران استفاده نمی‌شود.</li>
+      <li>کاربرد: وقتی سیالوگرافی منع مصرف دارد (عفونت فعال/آلرژی به ید) و بخواهیم فانکشن را مستقیم بسنجیم.</li>
+    </ul>
+
+    <h3 class="sub">CT و MRI</h3>
+    <p>غالباً وقتی پاتولوژی تومورال است (به‌ویژه نیاز به جراحی): بررسی بافت‌های اطراف، نزدیکی به <bdi>facial nerve</bdi>، <bdi>Retromandibular vein</bdi>، <bdi>carotid artery</bdi>، لنف‌نودهای عمیق گردنی و تغییرات استخوانی (erosions یا sclerosis).</p>
+    <div class="tbl-wrap"><table>
+      <caption>CT scan — کاربردها، انواع و محدودیت‌ها</caption>
+      <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+      <tbody>
+        <tr><td>کاربردها</td><td>سنگ (خصوصاً کلسیفیه) به‌خوبی دیده می‌شود · تشخیص دیواره‌های <bdi>cystic</bdi> (تعداد/ابعاد کیست) · افتراق تودهٔ حاوی مایع از حاوی چرک (آبسه)</td></tr>
+        <tr><td>محدودیت</td><td>تداخل با <bdi>restoration</bdi>های دندانی (آمالگام/روکش متال) → در این شرایط <strong>MRI</strong> جایگزین · همچنین <bdi>radiation exposure</bdi></td></tr>
+        <tr><td><strong>Enhanced</strong></td><td>با ماده حاجب؛ برای برخی تومورها، آبسه‌ها و لنف‌نودهای التهابی (بدون درگیری تومورال)؛ کنتراست متفاوت از بافت نرمال</td></tr>
+        <tr><td><strong>Non-enhanced</strong></td><td>بدون کنتراست؛ برای sialoliths، توده‌ها، افزایش حجم، asymmetry بدون علت و درگیری زنجیرهٔ لنف‌نودهای گردنی</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note info"><span class="lbl">MRI — نکات کلیدی</span>
+      وقتی نتوان از CT استفاده کرد (CT ارزان‌تر و در دسترس‌تر است) · در ریستوریشن متعدد دندانی CT دچار <bdi>artifact</bdi> می‌شود · <strong>بهترین روش قبل از جراحی غدد بزاقی</strong> (نمایش بافت نرم) · گاهی ترکیب با سیالوگرافی = بالاترین ارزش تشخیصی · در شوگرن نمای <strong>«salt-and-pepper» / «honeycomb-like»</strong> روی <bdi>T2</bdi> (هر دو T1 و T2 کاربردی‌اند).</div>
+    <div class="note warn"><span class="lbl">کنترااندیکاسیون‌های MRI</span>
+      <bdi>pacemaker</bdi> (خطر قلبی/کشنده) · ایمپلنت‌های مغناطیسی مثل <bdi>aneurismal bone clips</bdi> (ایمپلنت‌های دندانی غیرمغناطیسی‌اند → مشکلی ندارند) · کلاستروفوبیا.</div>
+
+    <h3 class="sub">PET/CT</h3>
+    <p>به‌دنبال بدخیمی‌ها؛ <bdi>imaging</bdi> فانکشنال تمام‌بدن با <bdi>tracer</bdi> رادیواکتیو (آنالوگ گلوکز). مغز، کلیه‌ها و سلول‌های سرطانی جذب بیشتری دارند → اگر اندام دیگری مثبت شود ممکن است سرطانی باشد (مثبت/منفی کاذب دارد). ارزش در بدخیمی غده، درگیری لنف‌نود گردنی و بررسی سیستمیک شوگرن. <strong>شایع‌ترین تومور خوش‌خیم غدهٔ بزاقی = Pleomorphic adenoma</strong> (در پاروتید؛ غالباً تورم بدون درد، ممکن است خشکی دهان نباشد).</p>
+
+    <h3 class="sub">Table 9-2 — جمع‌بندی مودالیته‌های تصویربرداری</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>روش</th><th>اندیکاسیون</th><th>مزایا</th><th>معایب</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Plain film</strong></td><td>Sialolithiasis</td><td>در دسترس، ارزان</td><td>Anatomic overlap؛ سنگ رادیولوسنت دیده نمی‌شود</td></tr>
+        <tr><td><strong>Ultrasonography</strong></td><td>تشخیص توده، راهنمای بیوپسی، کمک در شوگرن</td><td>غیرتهاجمی، مقرون‌به‌صرفه</td><td>پاروتید عمقی دیده نمی‌شود؛ بدون کمیت؛ وابسته به اپراتور</td></tr>
+        <tr><td><strong>CT</strong></td><td>وضعیت التهابی، ساختار کلسیفیه، تحلیل استخوان</td><td>افتراق ساختار استخوانی از بافت نرم</td><td>بدون کمیت؛ نیاز به کنتراست؛ radiation</td></tr>
+        <tr><td><strong>CBCT</strong></td><td>Sialolithiasis</td><td>قابل ترکیب با سیالوگرافی؛ کاهش artifact فلزی؛ <strong>کاهش superimposition، sensitivity بالاتر از ۲بُعدی، هزینهٔ کمتر، radiation کمتر، دسترسی بیشتر</strong></td><td>مقداری radiation</td></tr>
+        <tr><td><strong>MRI</strong></td><td>پروسه‌های نئوپلاستیک</td><td>بهترین رزولوشن بافت نرم؛ بدون radiation</td><td>منع در فلز فرومغناطیس و برخی pacemakers؛ هزینهٔ بالا</td></tr>
+        <tr><td><strong>PET/CT</strong></td><td>Staging/re-staging تومور بدخیم</td><td>ترکیب داده فانکشنال + آناتومیک</td><td>radiation؛ افتراق قطعی بدخیم از خوش‌خیم نمی‌کند</td></tr>
+        <tr><td><strong>PET/MRI</strong></td><td>تومورهای بزاقی</td><td>حساسیت بالا برای انتشار perineural؛ radiation کمتر از PET/CT</td><td>در دسترس نیست (Not widely available)</td></tr>
+        <tr><td><strong>Sialography</strong></td><td>Sialolithiasis؛ اختلالات سیستم مجاری</td><td>نمایش آناتومی/انسداد مجرا؛ رزولوشن مکانی بالا</td><td>تهاجمی؛ بدون کمیت؛ منع در عفونت فعال</td></tr>
+        <tr><td><strong>Scintigraphy</strong></td><td>ارزیابی فانکشن بعد جراحی/رادیوتراپی و در شوگرن</td><td>اجرای نسبتاً آسان</td><td>طولانی، پرهزینه، radiation، بدون داده مورفولوژیک، تهاجمی</td></tr>
+        <tr><td><strong>Sialendoscopy</strong></td><td>Sialolithiasis؛ تنگی مجرا؛ درمان mucus plugs در شوگرن</td><td>امکان مشاهده و درمان هم‌زمان</td><td>تهاجمی؛ غیرقابل‌استفاده در سیالادنیت حاد</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ===================== SESSION 3a: BIOPSY & SEROLOGIC ===================== -->
+<span class="anchor" id="s3a"></span>
+<section class="block">
+  <div class="head"><span class="num">۴</span><h2>بیوپسی غده بزاقی و بررسی سرولوژیک</h2><span class="tag">جلسه سوم</span></div>
+  <div class="body">
+
+    <p>برای تشخیص قطعی ضایعات غدد بزاقی به بررسی <strong>هیستوپاتولوژیک</strong> نیاز است. بیوپسی یکی از کرایتریاهای مهم تشخیص <strong>سندروم شوگرن</strong> است (از غدد ماژور یا — به‌صورت مرسوم — غدد فرعی مخاط لب پایین).</p>
+    <div class="note key"><span class="lbl">سایر بیماری‌های قابل‌تشخیص با بیوپسی غدد فرعی لب پایین</span>
+      ۱) Amyloidosis ۲) Sarcoidosis ۳) Graft versus host disease.</div>
+    <ul>
+      <li>برش لب پایین به‌صورت <strong>elliptical/دوکی</strong>؛ چند غده جدا می‌شود تا نمونهٔ کافی به دست آید.</li>
+      <li>مصرف اخیر کورتون، <bdi>smoking</bdi> و <bdi>radiation exposure</bdi> نتیجه را مختل می‌کند → یک هفته قبل کورتون قطع، همان روز سیگار نه و اخیراً اشعه به لب نه.</li>
+      <li>عوارض: <strong>بی‌حسی طولانی‌مدت</strong> ناحیه (۰ تا ۱۰٪)؛ و <strong>موکوسل</strong> (آسیب غده‌ای که برداشته نشده → موکوسل عودکننده).</li>
+    </ul>
+
+    <div class="tbl-wrap"><table>
+      <caption>مقایسهٔ روش‌های بیوپسی غدد بزاقی</caption>
+      <thead><tr><th>روش</th><th>کاربرد و مشخصات</th><th>نکات</th></tr></thead>
+      <tbody>
+        <tr><td><strong>FNA</strong> (Fine Needle Aspiration)</td><td>روش اولیهٔ بیوپسی غدد <strong>ماژور</strong> با سوزن؛ بررسی سلولی. پاروتید/ساب‌مندیبولار از خارج؛ ساب‌لینگوال در صورت لزوم از داخل دهان</td><td>در تومور بدخیم مثل <bdi>lymphoma</bdi> با مارکر اختصاصی، <bdi>immunophenotyping/IHC</bdi> برای تشخیص قطعی. <strong>عیب: seeding</strong> سلول‌های بدخیم (گیج کم سوزن)</td></tr>
+        <tr><td><strong>CNB</strong> (Core Needle Biopsy)</td><td>سوزن قطر بالا که استوانه‌ای از بافت خارج می‌کند</td><td>عوارض کم (عمدتاً کبودی، خصوصاً پاروتید)؛ <strong>احتمال seeding کمتر</strong> → اگر شک به بدخیمی، CNB ارجح بر FNA است</td></tr>
+        <tr><td>هر دو</td><td>قابل انجام <strong>ULTRASOUND-GUIDED</strong>؛ نیز برای لنفادنوپاتی سر و گردن مرتبط با تیروئید</td><td>—</td></tr>
+        <tr><td><strong>Frozen Section</strong></td><td>بلافاصله قبل/حین جراحی؛ تعیین خوش‌خیم/بدخیم و مارژین (margin safe)</td><td>آنالیز سریع در اتاق عمل؛ مهم وقتی شک به بدخیمی</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note info"><span class="lbl">لنفوم‌های غدد بزاقی</span>
+      شایع‌ترین: <strong>MALT</strong> (mucosa-associated lymphoid tissue) و <strong>non-Hodgkin lymphoma</strong>. <bdi>MALT</bdi> منشأ مخاطی دارد و نسبت به سایر انواع پروگنوز نسبتاً خوبی دارد.</div>
+
+    <h3 class="sub">SEROLOGIC EVALUATION (شوگرن)</h3>
+    <p>وقتی خشکی دهان بدون علت سیستمیک/دارویی/موضعی + علائم دیگر (خشکی چشم) باشد → غربالگری شوگرن.</p>
+    <div class="tbl-wrap"><table>
+      <caption>تست‌های سرولوژیک شوگرن</caption>
+      <thead><tr><th>تست</th><th>ویژگی</th><th>نکته</th></tr></thead>
+      <tbody>
+        <tr><td>ANA, RF, elevated IgG, ESR</td><td>غیراختصاصی</td><td>مثبت‌شدن لزوماً نشانهٔ بیماری نیست</td></tr>
+        <tr><td><strong>ANA</strong></td><td><strong>حساس‌ترین</strong> تست؛ در ۸۰–۹۰٪ مبتلایان مثبت</td><td>غیراختصاصی؛ در طیف وسیعی از بیماری‌ها مثبت</td></tr>
+        <tr><td><strong>Anti-SS-A/Ro</strong> و <strong>Anti-SS-B/La</strong></td><td>اختصاصی؛ حساسیت پایین (۶۰٪) اما اختصاصیت بالا</td><td>Anti-SS-B = anti-La · Anti-SS-A = anti-Ro · <strong>اختصاصی‌ترین مارکر = anti-Ro</strong></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ===================== SESSION 3b: DEVELOPMENTAL ===================== -->
+<span class="anchor" id="s3b"></span>
+<section class="block">
+  <div class="head"><span class="num">۵</span><h2>اختلالات تکاملی (Developmental) غدد بزاقی</h2><span class="tag">جلسه سوم</span></div>
+  <div class="body">
+
+    <h3 class="sub">Agenesis / Aplasia</h3>
+    <p>غدهٔ بزاقی به‌صورت مادرزادی تشکیل نشده است. در مطالعات همراه با: <strong>هیپوپلازی مینایی، فقدان مادرزادی برخی دندان‌ها، سایش شدید دندان‌ها</strong>.</p>
+    <div class="note key"><span class="lbl">سندروم‌های همراه با آپلازی پاروتید</span>
+      Hemifacial microsomia · Mandibulofacial dysostosis (Treacher Collins) · Cleft palate lacrimo-auriculodento-digital syndrome · Anophthalmia (عدم تشکیل چشم).</div>
+    <p>در کودکان با پوسیدگی <bdi>rampant</bdi> بدون علت → شک به خشکی دهان ناشی از آپلازی → گرافی و بررسی.</p>
+
+    <h3 class="sub">Ectopic salivary glands</h3>
+    <p>محل‌های نابجا: <bdi>Middle ear cleft, external auditory canal, neck, posterior mandible, anterior mandible, pituitary, cerebellopontine angle</bdi>.</p>
+    <div class="note def"><span class="lbl">Stafne's cyst</span>
+      در <strong>خلف مندیبل و زیر کانال</strong>؛ یک لوسنسی <strong>unilocular</strong> با <bdi>border</bdi> کیستیک و <strong>Hypercorticated border</strong> که در ابتدا مشابه کیست است ولی در واقع یک <strong>غدهٔ ساب‌مندیبولار نابجا</strong> در قسمت تحتانی خلف مندیبل است (در لمس ممکن است بافت غده حس شود). تشخیص قطعی: <strong>FNA</strong> (آسپیره بزاق) یا <strong>سیالوگرافی</strong>. علت = ژنتیکی.</div>
+
+    <h3 class="sub">Accessory salivary ducts و Accessory tissue</h3>
+    <ul>
+      <li><strong>Accessory ducts:</strong> در مسیر <bdi>Wharton</bdi> یا <bdi>Stensen</bdi> صدها مجرای فرعی ممکن است وجود داشته باشد (تشخیص با میکروسکوپ الکترونی).</li>
+      <li><strong>Accessory tissue:</strong> بافت جانبی در مسیر مجاری اصلی. شایع‌ترین = <strong>پاروتید فرعی</strong> در ~<strong>۲۱٪</strong> جمعیت (تقریباً <bdi>variant</bdi> آناتومیک نرمال)، در قدامی-فوقانی مجرای <bdi>Stensen</bdi>. تشخیص: سیالوگرافی با کنتراست. بافت‌شناسی مشابه غدهٔ اصلی اما <strong>استعداد بیشتر برای نئوپلاسم</strong>.</li>
+    </ul>
+
+    <h3 class="sub">Diverticuli و Darier's disease</h3>
+    <ul>
+      <li><strong>Diverticulum:</strong> کیسه‌ای که از دیوارهٔ مجرا به خارج <bdi>protrude</bdi> می‌شود؛ تجمع بزاق → <strong>sialadenitis</strong> (عفونت باکتریال)؛ عارضه = sialadenitis عودکننده. تشخیص: سیالوگرافی + کنتراست.</li>
+      <li><strong>Darier's disease:</strong> مجاری به‌صورت <bdi>periodic</bdi> دچار تنگی و گشادی می‌شوند → احتباس بزاق و <strong>sialadenitis انسدادی</strong> باکتریال. تشخیص: سیالوگرافی.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== SESSION 3c: SIALOLITHIASIS ===================== -->
+<span class="anchor" id="s3c"></span>
+<section class="block">
+  <div class="head"><span class="num">۶</span><h2>سنگ غده بزاقی (Sialolithiasis)</h2><span class="tag">جلسه سوم</span></div>
+  <div class="body">
+
+    <p>سنگ غده بزاقی به <strong>غدد ماژور</strong> مربوط است. ترتیب شیوع: <strong>ساب‌مندیبولار &gt; پاروتید &gt; ساب‌لینگوال</strong>.</p>
+    <div class="note key"><span class="lbl">چرا ساب‌مندیبولار شایع‌تر است؟</span>
+      مجرای طولانی و پرپیچ‌وخم · محتویات کلسیم و فسفر بیشتر · حالت خوابیده در کف دهان (استاز بیشتر).</div>
+
+    <div class="tbl-wrap"><table>
+      <caption>فاکتورهای اتیولوژیک سنگ غده بزاقی</caption>
+      <thead><tr><th>دسته</th><th>عوامل</th></tr></thead>
+      <tbody>
+        <tr><td>کاهش عملکرد غده / استاز</td><td>دهیدراتاسیون · داروهای آنتی‌کولینرژیک و دیورتیک (خشکی دهان) · سیستم مجاری نامنظم مادرزادی · التهاب موضعی (کاهش تولید بزاق)</td></tr>
+        <tr><td>اشباع کلسیمی بزاق</td><td>هرچه اشباع کلسیم بیشتر = سنگ بیشتر · افزایش <strong>pH بزاق</strong> نیز احتمال سنگ را بالا می‌برد</td></tr>
+      </tbody>
+    </table></div>
+    <p>سنگ‌ها اغلب <strong>زیر یک سانتی‌متر</strong> هستند.</p>
+
+    <h3 class="sub">علائم</h3>
+    <ul>
+      <li>بزاق نمی‌تواند خارج شود → <strong>تورم و درد هنگام غذا خوردن</strong>.</li>
+      <li>اگر مزمن شود (sialadenitis انسدادی + عفونت): <bdi>fibrosis and gland atrophy, Fistula, sinus tract, ulceration</bdi>.</li>
+      <li><strong>شایع‌ترین علامت:</strong> ۱) درد + افزایش حجم غده ۲) علائم عفونت.</li>
+      <li>غالباً یک‌طرفه؛ بدون عفونت = فقط اریتم؛ با عفونت = sinus tract، تب، علائم عفونی، خروج چرک.</li>
+    </ul>
+    <div class="note info"><span class="lbl">ریسک‌فاکتورهای مشترک با سنگ سایر نواحی</span>
+      ارتباط معنادار مستقیمی نیست؛ ولی <strong>هیپوولمی/دهیدراتاسیون · دیابت ملیتوس درمان‌نشده · استعداد خانوادگی</strong> احتمال هر دو را بالا می‌برند.</div>
+
+    <h3 class="sub">تشخیص</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>روش</th><th>کاربرد</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Occlusal radiograph</strong></td><td>بهترین روش برای سنگ <strong>ساب‌مندیبولار</strong></td></tr>
+        <tr><td><strong>AP view of the face</strong></td><td>بهترین برای سنگ <strong>کلسیفیهٔ پاروتید</strong></td></tr>
+        <tr><td><strong>CT</strong></td><td>خصوصاً سنگ کلسیفیه (روش انتخابی)</td></tr>
+        <tr><td><strong>CBCT</strong></td><td>کاهش superimposition · sensitivity بالاتر از ۲بُعدی · هزینهٔ کمتر · radiation کمتر · دسترسی بیشتر در مطب</td></tr>
+        <tr><td><strong>Ultrasonography</strong></td><td>وقتی X-ray در دسترس نیست؛ بررسی اولیه/اورژانسی</td></tr>
+        <tr><td><strong>Sialography</strong></td><td>افتراق سنگ از <bdi>mucus plugs</bdi> و تنگی و <strong>Phlebolithes</strong> (سنگ مسیر ورید که در گرافی/CT مشابه سنگ بزاقی است)؛ تعیین قرارگیری در مسیر مجرا یا ورید (Superimposed)</td></tr>
+        <tr><td><strong>Sialoendoscopy</strong></td><td>ورود اندوسکوپ از orifice؛ <strong>اکتشافی</strong> (تنگی/سنگ/mucus plugs/توده) و <strong>درمانی</strong> (خروج سنگ کوچک)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">درمان</h3>
+    <p>درمان <strong>supportive</strong> (بهبود علائم): درد → ضددرد · عفونت → آنتی‌بیوتیک · تب → ضدتب. <strong>Hydration</strong> کافی + آموزش <strong>milking</strong> → کمک به خروج سنگ یا نزدیک‌شدن به orifice.</p>
+    <div class="note key"><span class="lbl">معیار اندازه برای روش درمان</span>
+      سنگ <strong>۴ تا ۵ میلی‌متر</strong> → از طریق <strong>sialoendoscopy</strong>؛ بزرگ‌تر → جراحی. گاهی قبل از جراحی <strong>lithotripsy</strong> (لیزر یا دستگاه pneumatic).</div>
+    <div class="note warn"><span class="lbl">کنترااندیکاسیون‌های Lithotripsy</span>
+      تنگی مجرا (<bdi>stenosis</bdi>) دیستالِ سنگ (خطر پارگی مجرا) · Sialadenitis/عفونت حاد (گسترش التهاب) · بارداری · <bdi>cardiac pacemakers</bdi>.
+      <br><span class="lbl" style="margin-top:6px">عوارض Lithotripsy</span>
+      تغییرات شنوایی گذرا (پاروتید) · Hematoma · درد.</div>
+    <p>بعد از سنگ‌شکنی: خروج سنگ‌های کوچک با <bdi>sialoendoscopy</bdi>، شست‌وشوی مجرا با <bdi>Saline</bdi> + ترکیبات <bdi>steroid</bdi>، گاهی <bdi>stent</bdi> برای جلوگیری از کلاپس مجدد. <strong>کاربردهای Sialoendoscopy:</strong> ۱) soft tissue biopsies ۲) Explorative procedures ۳) removal of stones.</p>
+
+    <h3 class="sub">برداشتن غده و عوارض</h3>
+    <p>اگر سنگ خیلی بزرگ/مزمن/sinus tract/عفونت وسیع یا تخریب پارانشیم باشد → برداشت غده:</p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>جراحی</th><th>عوارض</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Parotidectomy</strong></td><td>آسیب عصب <bdi>facial</bdi> · آسیب عصب <bdi>greater auricular</bdi> · <strong>Frey's syndrome</strong> (فقط مرتبط با پاروتید)</td></tr>
+        <tr><td><strong>Submandibular gland removal</strong></td><td>آسیب عصب <bdi>marginal mandibular</bdi> · <bdi>hypoglossal</bdi> · <bdi>lingual</bdi> · hematomas · salivary fistulas · sialoceles · عفونت زخم · اسکار hypertrophic · التهاب پس از برداشت</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ===================== SESSION 4a: MUCOCELE & RANULA ===================== -->
+<span class="anchor" id="s4a"></span>
+<section class="block">
+  <div class="head"><span class="num">۷</span><h2>موکوسل (Mucocele) و رانولا (Ranula)</h2><span class="tag">جلسه چهارم</span></div>
+  <div class="body">
+
+    <p><strong>Mucocele</strong> یک لغت بالینی است: تورمی در قسمتی از مخاط دهان به‌دلیل تجمع بزاق در زیر آن؛ مربوط به <strong>غدد بزاقی مینور</strong>. با تروما به غده یا انسداد مجرای کوچک، بزاق زیر مخاط جمع می‌شود و ضایعه‌ای مدور با سطح صاف و حدود مشخص در زیرمخاط ایجاد می‌شود.</p>
+
+    <h3 class="sub">دو نوع هیستوپاتولوژیک</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>نوع</th><th>شیوع و علت</th><th>محل شایع</th><th>سن</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Extravasation</strong></td><td><strong>شایع‌ترین</strong>؛ علت اصلی = <strong>تروما</strong> (مشت به لب، تصادف، جویدن مکرر لب)</td><td><strong>لب پایین (۹۰٪)</strong>؛ نیز buccal، زبان، کف دهان، Retromolar pad</td><td>کودکان، نوجوانان، بالغین جوان</td></tr>
+        <tr><td><strong>Retention</strong></td><td>عمدتاً <strong>انسداد</strong> مجرای غدهٔ فرعی (تومور غدد فرعی، اسکار، به‌ندرت sialolith)</td><td>لب بالا، کام، باکال، کف دهان (به‌ندرت لب پایین)</td><td>غالباً جمعیت مسن</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">نکات تشخیصی موکوسل</h3>
+    <ul>
+      <li>تاریخچهٔ ترومای حاد اخیر.</li>
+      <li><strong>تغییر سایز</strong> (پر و خالی‌شدن): با نیدل دندان‌پزشکی همان جلسه <bdi>flat</bdi> می‌شود ولی هفتهٔ بعد ممکن است دوباره رشد کند.</li>
+      <li>اندازه از چند میلی‌متر تا چند سانتی‌متر · ضایعهٔ بدون درد برجسته با سطح صاف و حدود کاملاً مشخص.</li>
+      <li>سطحی → <strong>blue hue</strong> (تجمع مایع)؛ عمیق → ممکن است blue hue نباشد (همبند بیشتر) و هم‌رنگ مخاط مجاور.</li>
+    </ul>
+
+    <h3 class="sub">Superficial mucoceles</h3>
+    <ul>
+      <li>اصطلاح جدید؛ متعدد و عودکننده، نادر؛ هرکدام <strong>&lt; ۳ میلی‌متر</strong>، بسیار سطحی، به‌آسانی پاره می‌شوند و به‌سرعت عود می‌کنند (<bdi>short-lived</bdi>).</li>
+      <li>علت <strong>ایدیوپاتیک</strong>؛ ممکن است ثانویه به تروما (مثلاً غذای داغ، در ناحیهٔ سوختگی).</li>
+    </ul>
+    <div class="note key"><span class="lbl">وضعیت‌های مرتبط با موکوسل‌های کوچک متعدد</span>
+      لیکن پلان · cGVHD · ترومای مزمن دهانی (ارتودنسی) · دهان‌شویهٔ الکلی · Smoking · مواد قالب‌گیری <bdi>alginate</bdi> · کموتراپی · کنسر دهانی (در حاشیهٔ بیوپسی).</div>
+
+    <h3 class="sub">درمان موکوسل</h3>
+    <ul>
+      <li>برداشت <strong>Excisional</strong> + برداشت غدد بزاقی همان ناحیه (جلوگیری از عود).</li>
+      <li>آسپیراسیون فقط در <strong>تشخیص</strong> کاربرد دارد، نه درمان (تا جدار و غدد درگیر باشند عود می‌شود).</li>
+      <li>موکوسل عمیق لب مشابه <strong>گرانولوم پیوژنیک</strong> است (افتراق: نیدل در مرکز → خروج بزاق کشسان).</li>
+      <li>ضایعات بزرگ/دردناک: قبل از برداشت <strong>تزریق corticosteroid</strong> (تریامسینولون + سوزن انسولین، ۳ هفتهٔ متوالی هفته‌ای یک‌بار، در عمق و ۴ جهت) → فیبروز و کوچک‌شدن → ندول فیبروتیک قابل‌برداشت آسان‌تر؛ سپس جراحی.</li>
+    </ul>
+
+    <h3 class="sub">Ranula</h3>
+    <p>یک <strong>موکوسل بزرگ با منشأ غدهٔ ساب‌لینگوال</strong> در کف دهان یا خارج (گردن). «ranula» = شکم قورباغه. علت اصلی = <strong>تروما</strong>.</p>
+    <div class="note def"><span class="lbl">علل کمتر شایع رانولا</span>
+      انسداد مجرای ساب‌لینگوال · آنوریسم مجرا (تنگی و گشادی) · جراحی کف دهان · اختلالات آناتومیک مادرزادی · چسبندگی عضلهٔ <bdi>mylohyoid</bdi> به کف دهان · بافت غده بزاقی اکتوپیک.</div>
+    <div class="tbl-wrap"><table>
+      <caption>انواع رانولا و افتراق آن‌ها</caption>
+      <thead><tr><th>نوع</th><th>اسامی دیگر</th><th>جنسیت شایع‌تر</th><th>محل</th></tr></thead>
+      <tbody>
+        <tr><td><strong>داخل دهانی</strong></td><td>simple, superficial, nonplunging</td><td>خانم‌ها</td><td>برجستگی داخل دهان، سطحی، حتماً یک سمت فرنوم</td></tr>
+        <tr><td><strong>Plunging</strong></td><td>cervical, diving</td><td>آقایان</td><td>نوع گردنی</td></tr>
+        <tr><td><strong>Mixed</strong></td><td>—</td><td>—</td><td>هم داخل دهان هم گردن</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note key"><span class="lbl">نکتهٔ کلیدی تشخیص رانولا</span>
+      رانولا در دههٔ ۲ و ۳ و در خانم‌ها شایع‌تر است. برجستگی داخل‌دهانی حتماً در <strong>یک سمت فرنوم</strong> است (یک غده درگیر). اگر در <strong>خط وسط</strong> باشد → تشخیص‌های دیگر مثل کیست‌های درموئید و اپی‌درموئید.</div>
+    <p><strong>تشخیص افتراقی رانولای گردنی:</strong> کیست مجرای thyroglossal · epidermoid cyst · cystic hygroma (منشأ لنفاوی). تشخیص قطعی نهایی: <strong>excisional biopsy</strong>.</p>
+    <p><strong>تشخیص:</strong> رادیوگرافی برای بررسی سنگ · تزریق ماده حاجب برای تعیین گسترش به فضاهای گردنی (مهم برای جراح) · FNA biopsy، ultrasound، CT with contrast، MRI.</p>
+
+    <h3 class="sub">درمان رانولا</h3>
+    <ul>
+      <li>روش اصلی = <strong>جراحی Excisional</strong> (ضایعه + غدهٔ درگیر).</li>
+      <li><strong>Marsupialization</strong> = ایجاد پنجره در جدار برای کوچک‌شدن؛ فقط درمان اولیه، نهایتاً کل ضایعه + جدار + غده برداشته می‌شود.</li>
+    </ul>
+    <div class="note warn"><span class="lbl">عوارض جراحی رانولا</span>
+      ۱) عود مکرر (درمان ناکافی) ۲) اختلالات حسی ۳) آسیب مجرای <bdi>Wharton</bdi>.</div>
+    <div class="tbl-wrap"><table>
+      <caption>میزان عود رانولا بر اساس روش جراحی</caption>
+      <thead><tr><th>روش</th><th>میزان عود</th></tr></thead>
+      <tbody>
+        <tr><td>Marsopialization به‌تنهایی</td><td class="c"><strong>۶۷٪</strong></td></tr>
+        <tr><td>Ranula excision به‌تنهایی</td><td class="c"><strong>&gt; ۵۰٪</strong></td></tr>
+        <tr><td>Sublingual gland excision + رانولا</td><td class="c"><strong>۱٪</strong></td></tr>
+      </tbody>
+    </table></div>
+    <p>مانند موکوسل، ضایعهٔ بزرگ → تزریق corticosteroid در قاعده در ۳ مرحله برای کوچک‌شدن.</p>
+  </div>
+</section>
+
+<!-- ===================== SESSION 4b: NS & CG ===================== -->
+<span class="anchor" id="s4b"></span>
+<section class="block">
+  <div class="head"><span class="num">۸</span><h2>سیالومتاپلازی نکروزان و کیلیت گلاندولاریس</h2><span class="tag">جلسه چهارم · ضایعات التهابی/واکنشی</span></div>
+  <div class="body">
+
+    <h3 class="sub">Necrotizing Sialometaplasia (NS)</h3>
+    <p>ضایعهٔ <strong>خوش‌خیم خودمحدودشونده</strong> اما با نمای بد و <strong>مقلد بدخیمی</strong>؛ غالباً بیوپسی نیاز است. <bdi>Reactive</bdi> (واکنش به عامل موضعی در غدد فرعی)؛ بیشتر در <strong>کام</strong> (از خلف روگا به انتها). اتیولوژی نامشخص.</p>
+    <div class="note key"><span class="lbl">ریسک‌فاکتورها</span>
+      smoking · آسیب‌های داخل دهانی · ترومای کند (blunt) به کام · دنچر · پروسه‌های دندان‌پزشکی/جراحی · بی‌حسی موضعی کام · بارداری · diabetes mellitus · sickle-cell disease · الکل/کوکائین · anorexia · bulimia · chronic vomiting.</div>
+    <ul>
+      <li>زخم بدشکل با غشای ضخیم در کام؛ تفاوت با زخم‌های مزمن: بیمار می‌گوید طی <strong>۲ تا ۳ روز</strong> ایجاد شده (<strong>شروع ناگهانی و حاد</strong>).</li>
+      <li>ابتدا <strong>erythematous nodule</strong> → پاره می‌شود → زخم کریتر بدشکل با حاشیهٔ برجسته و غشای فیبرولکوسیتی ضخیم.</li>
+      <li>اغلب بدون درد یا درد خفیف تا متوسط گنگ؛ سن <strong>۱۷ تا ۸۰</strong> سال؛ اندازه <strong>۱ تا ۳ سانتی‌متر</strong>.</li>
+      <li>نواحی شایع: <bdi>palate, retromolar pad, gingiva, labial mucosa, tongue, buccal mucosa</bdi> — شایع‌ترین = <strong>کام</strong>.</li>
+      <li>ممکن است بدحسی/بی‌حسی ناحیه → شک به بدخیمی. یک‌طرفه (دوطرفه بسیار نادر).</li>
+      <li>در نواحی غدهٔ اکتوپیک هم نادراً: Tonsil، مخاط بینی، نای، سینوس ماگزیلاری، پاروتید. ☆☆ ما آن را صرفاً مربوط به <strong>غدد فرعی</strong> در نظر می‌گیریم.</li>
+    </ul>
+    <div class="tbl-wrap"><table>
+      <caption>تشخیص‌های افتراقی NS</caption>
+      <thead><tr><th>محل</th><th>DDx</th><th>وجه افتراق</th></tr></thead>
+      <tbody>
+        <tr><td>کام سخت (بهترین)</td><td>بدخیمی غدهٔ بزاقی: mucoepidermoid carcinoma، adenoid cystic carcinoma</td><td rowspan="2">NS <strong>سریع و ناگهانی</strong>؛ بدخیمی‌ها سیر می‌گذرانند و مزمن‌اند</td></tr>
+        <tr><td>نواحی دیگر</td><td>SCC/metastatic cancer · major aphthous stomatitis · secondary syphilis · primary oral tuberculosis</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note tip"><span class="lbl">تشخیص و درمان</span>
+      <strong>تشخیص:</strong> بیوپسی برای رد بدخیمی؛ بدون سلول بدخیم و با وجود نکروز، <strong>ساختار غده بزاقی حفظ شده است</strong>. <strong>درمان:</strong> خودمحدودشونده؛ supportive (ضددرد) + دبریدمان + دهان‌شویهٔ ضدمیکروبی (کلرهگزیدین یا نرمال سالین) روزانه. بهبودی <strong>۳ تا ۱۲ هفته</strong>، <bdi>healing</bdi> ثانویه.</div>
+
+    <h3 class="sub">Cheilitis Glandularis (CG)</h3>
+    <p>بیماری <strong>التهابی مزمن</strong> درگیرکنندهٔ غدد فرعی؛ شایع‌ترین محل = <strong>لب پایین</strong>. علت مشخص نیست ولی <strong>وراثت اتوزومال غالب</strong> دیده شده. ریسک‌فاکتور مهم = تابش بیش از حد <strong>UV</strong> (افراد پوست روشن/fair و آلبینیسم بیشتر).</p>
+    <div class="note key"><span class="lbl">سایر ریسک‌فاکتورها</span>
+      Poor oral hygiene · chronic exposure to sunlight and wind · smoking · immunocompromised state. — بیشتر <strong>مردان میانسال و مسن</strong>.</div>
+    <p>شکایت: بزاق بسیار چسبنده و لب دائماً خیس؛ دهانهٔ غدد فرعی به‌صورت مدخل‌های گشاد، تورم مختصر لب پایین. CG = افزایش غلظت بزاق + گشادشدگی مجاری غدد لب پایین. مزمن درمان‌نشده → زخم سطحی/عمقی یا عفونت.</p>
+    <p><strong>DDx:</strong> ضایعات گرانولوماتوز لب مثل <strong>کرون</strong>؛ نیز actinic cheilitis · multiple mucocele · chronic sialadenitis of minor salivary glands.</p>
+    <div class="tbl-wrap"><table>
+      <caption>سه نمای کلینیکی CG</caption>
+      <thead><tr><th>نوع</th><th>توضیح</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Simple</strong></td><td>گشادشدگی غدد لب پایین + بزاق چسبنده و غلیظ</td></tr>
+        <tr><td><strong>Superficial suppurative</strong></td><td>سطحی چرکی؛ زخم سطحی با کراست بدون درد، تورم بیشتر، <bdi>induration</bdi> (سفتی لب)، اگزودای چرکی موسینی</td></tr>
+        <tr><td><strong>Deep suppurative</strong></td><td>عمقی چرکی؛ عفونت به عمق، <bdi>fistulae</bdi> و آبسه در نواحی عمیق لب</td></tr>
+      </tbody>
+    </table></div>
+    <p>اغلب در مرحلهٔ <strong>simple</strong> کشف می‌شوند؛ نوع دوم و سوم نادرترند.</p>
+    <div class="note tip"><span class="lbl">درمان CG</span>
+      حذف عامل مستعدکننده (کاهش آفتاب، ضدآفتاب، بالم لب استروئیدی) · درمان اصلی = <strong>corticosteroid</strong> (موضعی/داخل‌ضایعه/سیستمیک) · بزاق اذیت‌کننده → <strong>anticholinergic و آنتی‌هیستامین</strong> · نوع چرکی → آنتی‌بیوتیک · مقاوم/طولانی → جراحی (cryosurgery یا vermillionectomy برای سرکوب عملکرد غدد).</div>
+    <div class="note warn"><span class="lbl">⚠ پیش‌بدخیم</span>
+      CG <strong>پیش‌بدخیم</strong> است و ممکن است به‌مرور زخم‌های <strong>SCC</strong> ایجاد شود؛ پس بعد از درمان فالوآپ منظم و در صورت زخم/تغییر، بیوپسی.</div>
+  </div>
+</section>
+
+<!-- ===================== SESSION 6&7a: BACTERIAL SIALADENITIS ===================== -->
+<span class="anchor" id="s6a"></span>
+<section class="block">
+  <div class="head"><span class="num">۹</span><h2>سیالادنیت باکتریال، نوزادی و JRP</h2><span class="tag">جلسه ششم و هفتم</span></div>
+  <div class="body">
+
+    <h3 class="sub">Bacterial Sialadenitis</h3>
+    <p>وقوع <strong>ناگهانی</strong> با تورم + درد + تندرنس؛ یک‌طرفه (غالباً) یا دوطرفه (<strong>۲۰٪</strong>)؛ نمای مشابه سلولیت. عودکننده = <strong>سیالادنیت باکتریال مزمن</strong> (علت مزمن داخل غده مثل التهاب/انسداد/سیالولیت → احتباس → عفونت → بهبود با آنتی‌بیوتیک ولی عود ~۱ ماه بعد). به‌دنبال <bdi>general anesthesia</bdi>، نوع <strong>retrograde</strong> دو هفته بعد از جراحی بیمارستانی (افت بهداشت، افزایش لود باکتری).</p>
+    <div class="note key"><span class="lbl">چرا در پاروتید شایع‌تر است؟</span>
+      ۱) دهانهٔ مجرا مجاور دندان ۶ و ۷ بالا (ناحیهٔ شایع جرم) ۲) حرکت زبان در کف دهان نقش protective و شست‌وشوی دبری دارد (کاهش سیالادنیت ساب‌مندیبولار) ۳) بزاق ساب‌مندیبولار موسینی و غلیظ‌تر، موسین نقش محافظتی دارد.</div>
+    <div class="note info"><span class="lbl">تشخیص و آنتی‌بیوتیک</span>
+      چرک داخل دهان نزدیک مجرا کمک‌کننده است. در عفونت بیمارستانی (retrograde)، بیشترین عامل = <strong>MRSA Staph aureus</strong>. بهترین کار: آنتی‌بیوگرام هوازی و بی‌هوازی. درمان <strong>Empiric</strong> اولیه = <strong>آموکسی‌سیلین</strong> (کتاب قبلی: کلوگزاسیلین)؛ پاسخ نامناسب → اصلاح طبق آنتی‌بیوگرام.</div>
+    <div class="note key"><span class="lbl">ریسک‌فاکتورها</span>
+      Dehydration · داروهای خشک‌کنندهٔ دهان · بیماری‌های غده بزاقی · آسیب عصب در تروما · انسداد مجرا (سنگ و غیره) · رادیوتراپی سر و گردن · بیماری مزمن (diabetes mellitus، Sjögren) · Poor oral hygiene.</div>
+    <div class="note tip"><span class="lbl">درمان</span>
+      آنتی‌بیوتیک تجربی ضد استاف (آموکسی‌سیلین، کلوگزاسیلین) + کشت · hydration بالا · oral hygiene · ضدالتهاب/ضددرد تا انجام milking · پاسخ در <strong>۲۴ تا ۴۸ ساعت</strong> → ادامه؛ بدون پاسخ → آنتی‌بیوتیک مناسب؛ همچنان بدون پاسخ → <strong>incision and drainage</strong>.</div>
+
+    <h3 class="sub">Neonatal Suppurative Parotitis</h3>
+    <p>نام دیگر: <strong>Acute suppurative parotitis</strong>؛ نادر، بیشتر نوزادان <strong>۲ تا ۴ هفته</strong>. اختلال بلع، عدم توانایی شیر خوردن، اریتم، تب، درد شدید، تحریک‌پذیری؛ خروج اگزودای چرکی داخل دهان؛ یک‌طرفه یا دوطرفه. درمان: آنتی‌بیوتیک (تجربی سپس طبق آنتی‌بیوگرام).</p>
+    <div class="note key"><span class="lbl">ریسک‌فاکتورها</span>
+      پسر بودن · عدم توانایی شیر خوردن + Dehydration · وزن کم · ساپرس ایمنی (بیماری ژنتیکی، HIV) · انسداد مجرا · ترومای دهانی (مثلاً حین زایمان).</div>
+
+    <h3 class="sub">Juvenile Recurrent Parotitis (JRP)</h3>
+    <p>التهاب <strong>عودکننده و غیرانسدادی</strong> پاروتید در کودکان/نوجوانان؛ علت نامعلوم. تورم دردناک اپیزودیک، اغلب یک‌طرفه، ممکن است با تب/ناخوشی؛ <bdi>xerostomia</bdi> و کاهش بزاق شایع. بیشتر ایدیوپاتیک؛ در ساپرس ایمنی بیشتر.</p>
+    <div class="tbl-wrap"><table>
+      <caption>مشخصات JRP</caption>
+      <thead><tr><th>ویژگی</th><th>مقدار</th></tr></thead>
+      <tbody>
+        <tr><td>سن</td><td>زیر ۱۶ سال؛ نیاز به ≥۲ اپیزود (یک/دوطرفه طی ۶ ماه گذشته)</td></tr>
+        <tr><td>دو پیک سنی</td><td>۲ تا ۵ سالگی · حدود ۱۰ سالگی</td></tr>
+        <tr><td>جنسیت</td><td>پسران شایع‌تر؛ تا ۳۰ بار در سال (میانگین ~۱٫۵ بار/سال)</td></tr>
+        <tr><td>سیر</td><td>با افزایش سن کاهش؛ از بلوغ به بعد فروکش (بهبود خودبه‌خودی)؛ هر دوره ۲ تا ۷ روز (میانگین ۳)</td></tr>
+        <tr><td>درمان</td><td>علامتی: ضددرد، NSAID، کورتیکواستروئید (التهاب شدید)، آنتی‌بیوتیک (عفونت ثانویه)</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ===================== SESSION 6&7b: SYSTEMIC & MEDICATION ===================== -->
+<span class="anchor" id="s6b"></span>
+<section class="block">
+  <div class="head"><span class="num">۱۰</span><h2>وضعیت‌های سیستمیک و داروها</h2><span class="tag">جلسه ششم و هفتم</span></div>
+  <div class="body">
+
+    <h3 class="sub">Metabolic Conditions</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>وضعیت</th><th>مکانیسم خشکی دهان</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Diabetes</strong></td><td>کنترل نامناسب (دهیدراتاسیون) · عارضهٔ داروهای متعدد · نوروپاتی (ابتدا حسی، با تشدید → اتونوم سمپاتیک/پاراسمپاتیک)</td></tr>
+        <tr><td><strong>Anorexia / Bulimia</strong></td><td>خشکی شدید؛ با درمان و رسیدن به وزن نرمال، افزایش حجم و خشکی فروکش می‌کند</td></tr>
+        <tr><td><strong>Chronic alcoholism</strong></td><td>دهیدراتاسیون + تغذیهٔ نامناسب؛ اغلب <strong>دوطرفه پاروتید</strong></td></tr>
+        <tr><td><strong>Dehydration</strong></td><td>با افزایش سن توانایی حفظ آب کاهش → خشکی شدیدتر</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">Medication-Induced Salivary Dysfunction</h3>
+    <ul>
+      <li>بیشترین خشکی در افراد مسن با چنددارویی؛ دارو عمدتاً <strong>بزاق غیرتحریکی</strong> را کاهش می‌دهد.</li>
+      <li><strong>TCA</strong> (سه‌حلقه‌ای: آمی‌تریپتیلین، نورتریپتیلین) → خشکی شدید؛ در صورت خشکی/پوسیدگی سرویکال مشورت برای جایگزینی با <strong>SSRI</strong> (مثل فلوکستین).</li>
+      <li><strong>Anticholinergic</strong> (مثلاً مشکلات گوارشی) → خشکی شدید (ضد پاراسمپاتیک). بهتر است طی روز تجویز شود؛ دوز کمتر با دفعات بیشتر → اثر کمتر روی <bdi>output</bdi> غده.</li>
+    </ul>
+
+    <h3 class="sub">Parotid Lipomatosis و ESRD</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>وضعیت</th><th>توضیح</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Parotid lipomatosis</strong></td><td>سندروم <bdi>lipodystrophy</bdi> (تبدیل غده به چربی)؛ به‌دنبال مصرف مزمن ضد HIV (<strong>HAART</strong>)، خصوصاً نسل اول مهارکننده‌های <bdi>protease</bdi> (indinavir، nelfinavir). <strong>دوطرفه</strong>؛ درمان = parotidectomy سطحی دوطرفه</td></tr>
+        <tr><td><strong>End stage renal disease</strong></td><td>فیبروز و آتروفی غده · polypharmacy · محدودیت مایعات · دیالیز → دهیدراتاسیون شدید</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ===================== SESSION 6&7c: SJÖGREN ===================== -->
+<span class="anchor" id="s6c"></span>
+<section class="block">
+  <div class="head"><span class="num">۱۱</span><h2>سندروم شوگرن (Sjögren's Syndrome — SS)</h2><span class="tag">جلسه ششم و هفتم</span></div>
+  <div class="body">
+
+    <p>بیماری <strong>اتوایمیون مزمن</strong> چنداندامی؛ شایع‌ترین نواحی درگیر = <strong>غدد بزاقی و اشکی</strong> (خشکی دهان و چشم + انفیلتراسیون لنفوسیتی). علت ناشناخته، بدون درمان قطعی (درمان supportive/ضدالتهاب). اندام‌های exocrine دیگر (تیروئید، ریه، کلیه) نیز ممکن است درگیر شوند. علائم دیگر: درد عضلانی/مفصلی، نوروپاتی محیطی، راش پوستی.</p>
+    <ul>
+      <li>بیشتر در خانم‌های <strong>postmenopausal</strong>؛ نسبت خانم به آقا = <strong>۹:۱</strong>. تورم یک‌طرفه یا دوطرفه (اغلب دوطرفه).</li>
+      <li>دو فرم: اولیه و ثانویه. شایع‌ترین بیماری‌های مولد شوگرن ثانویه (به‌ترتیب): <strong>RA، SLE، SD (اسکلرودرما)، primary biliary cirrhosis</strong>.</li>
+    </ul>
+    <div class="note def"><span class="lbl">Schirmer's test</span>
+      <bdi>paper strip</bdi> در گوشهٔ چشم؛ میزان نفوذ اشک: ۵ میلی‌متر / ۵ تا ۱۵ / بالای ۱۵. <strong>نکته:</strong> ممکن است شیرمر مثبت (اشک طبیعی) باشد ولی چشم‌پزشک خشکی چشم تشخیص دهد — این‌ها کرایتریای جداگانه‌اند.</div>
+    <div class="note key"><span class="lbl">عوارض هایپوفانکشن غده + خشکی دهان</span>
+      افزایش پوسیدگی · افزایش <bdi>Muco-cutaneous candida</bdi> (غالباً erythematous form) · کاهش pH و قدرت بافری بزاق · کاهش پاکسازی (clearance) قند.</div>
+    <p><strong>سرولوژی</strong> (هر دو نوع): hypergammaglobulinemia · autoantibodies · elevated ESR · decreased WBCs · hypocomplementemia.</p>
+    <div class="note warn"><span class="lbl">عوارض مزمن و دیرتشخیصی</span>
+      اگر درمان‌نشده طولانی شود → <strong>MALT lymphoma</strong> (نیاز به مانیتورینگ). علائم دهانی خشکی شدید: سوزش دهان، stomatitis، درد زبان. مزمن → <bdi>oral or facial numbness, paresthesia, dysesthesia</bdi>. تشخیص دیرهنگام؛ به‌طور متوسط <strong>۲٫۸ سال</strong> از علائم تا تشخیص.</div>
+
+    <h3 class="sub">بیوپسی و Focus Score</h3>
+    <p>بالاترین صحت = <strong>بیوپسی غدد فرعی لب پایین</strong> (برش elliptical). مقطع <strong>۲×۲ میلی‌متر</strong>؛ شمارش لنفوسیت. هر <strong>۵۰ لنفوسیت = یک focus score</strong> (دامنه ۰ تا ۱۲). <strong>&lt; ۵۰ لنفوسیت</strong> در ۴ میلی‌متر → focus score صفر (منفی)؛ <strong>focus score ≥ ۱ = مثبت</strong>.</p>
+
+    <h3 class="sub">Table 9-4 — کرایتریای ۲۰۱۶ ACR/EULAR (نیاز به امتیاز ≥۴)</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>آیتم</th><th>امتیاز</th></tr></thead>
+      <tbody>
+        <tr><td>Labial salivary gland with focal lymphocytic sialadenitis و focus score ≥1 foci/4 mm²</td><td class="c">۳</td></tr>
+        <tr><td>Anti-SSA/Ro-positive</td><td class="c">۳</td></tr>
+        <tr><td>Ocular staining score ≥5 (یا van Bijsterveld ≥4) حداقل در یک چشم</td><td class="c">۱</td></tr>
+        <tr><td>Schirmer's test ≤5 mm/5 min حداقل در یک چشم</td><td class="c">۱</td></tr>
+        <tr><td>Unstimulated whole saliva flow rate ≤0.1 mL/min</td><td class="c">۱</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">بررسی‌های تصویری و درمان</h3>
+    <ul>
+      <li><strong>سیالوگرافی:</strong> <bdi>sialectasia</bdi> / دانه‌برفی · <strong>CT/MRI:</strong> MRI ارجح (بافت نرم دقیق‌تر) · <strong>TC99 scintigraphy:</strong> سنجش عملکرد.</li>
+    </ul>
+    <div class="note tip"><span class="lbl">درمان دارویی (افزایش بزاق)</span>
+      دو داروی تأییدشده: <strong>pilocarpine و cevimeline</strong> (muscarinic / پاراسمپاتومیمتیک). <strong>Cevimeline</strong> جدیدتر و برای رسپتورهای muscarinic <strong>M1 و M3</strong> اختصاصی‌تر → عوارض کمتر.</div>
+    <div class="note warn"><span class="lbl">عوارض و کنترااندیکاسیون این داروها</span>
+      <strong>عوارض:</strong> افزایش تعریق، flushing، urinary urgency، ناراحتی گوارشی. <br>
+      <strong>کنترااندیکاسیون:</strong> آسم کنترل‌نشده، گلوکوم زاویه باریک، التهاب چشمی، بیماری‌های cardiovascular، پارکینسون، COPD.</div>
+
+    <h3 class="sub">Lymphoma به‌دنبال شوگرن</h3>
+    <p>عارضهٔ نسبتاً شایع؛ فالوآپ دوره‌ای مهم است. تست‌های سرمی + مشاهدهٔ <strong>Monoclonal gammopathy</strong>؛ بیوپسی FNA از غدد ماژور. لنفوم‌ها غالباً <strong>MALT</strong> (پروگنوز نسبتاً خوب، کندرشد)؛ مراحل اولیه فقط مانیتورینگ.</p>
+  </div>
+</section>
+
+<!-- ===================== SESSION 6&7d: GRANULOMATOUS ===================== -->
+<span class="anchor" id="s6d"></span>
+<section class="block">
+  <div class="head"><span class="num">۱۲</span><h2>بیماری‌های گرانولوماتوز</h2><span class="tag">جلسه ششم و هفتم</span></div>
+  <div class="body">
+
+    <div class="tbl-wrap"><table>
+      <caption>مقایسهٔ بیماری‌های گرانولوماتوز درگیرکنندهٔ غدد بزاقی</caption>
+      <thead><tr><th>بیماری</th><th>غدد درگیر</th><th>هیستوپاتولوژی</th><th>نکات کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Tuberculosis (سل)</strong></td><td>غالباً یک‌طرفه</td><td>گرانولوم با <strong>نکروز کازئوز (پنیری)</strong> مرکزی</td><td>گرانولوم/کیست داخل غده؛ تست TB: <strong>PCR</strong> (۹۸٪ مثبت واقعی، دقیق‌ترین) یا کشت بزاق (صحت پایین‌تر)؛ بهبود با درمان چنددارویی؛ مزمن/بزرگ → جراحی</td></tr>
+        <tr><td><strong>Sarcoidosis</strong></td><td>اغلب دوطرفه؛ ماژور و مینور</td><td>گرانولوم <strong>noncaseating</strong> (بدون نکروز پنیری)؛ تجمع لنفوسیت T و mononuclear phagocytes</td><td>غیرعفونی، ایمنی‌واسطه؛ بخشی از <strong>Heerfordt's syndrome (uveoparotid fever)</strong>؛ تورم firm پاروتید بدون درد؛ آزمایش: ↑کلسیم خون، ↑ANA/ESR/RF، ↑<strong>ACE (angiotensin converting enzyme)</strong></td></tr>
+        <tr><td><strong>Crohn disease</strong></td><td><strong>فقط غدد فرعی</strong></td><td><strong>Non caseating granulomas</strong> + تجمع لنفوسیتی زیرمخاط</td><td>جزئی از IBD (دیگری = ulcerative colitis)؛ ندول‌های Submucosal؛ درمان: استروئید + ساپرس ایمنی</td></tr>
+        <tr><td><strong>Granulomatosis with polyangiitis (Wegener)</strong></td><td>اغلب ماژور (پاروتید، ساب‌مندیبولار)</td><td>گرانولوم‌های <strong>نکروزه</strong></td><td>بیشترین درگیری = مجرای تنفسی فوقانی/تحتانی؛ غده نادر (گاهی تنها ناحیه)؛ تورم بدون درد، ممکن fistula خارجی؛ علائم دیگر: <strong>Strawberry gingivitis</strong> و زخم‌های دهانی (خصوصاً کام)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note key"><span class="lbl">تریاد Heerfordt's syndrome</span>
+      ۱) التهاب مجرای اشکی چشم ۲) تورم غدهٔ پاروتید ۳) فلج عصب ۷. در غیاب یا حضور سارکوئیدوز سیستمیک ممکن است غده را درگیر کند.</div>
+    <p>درمان مربوط به غده در گرانولوماتوزها <strong>علامتی</strong> است؛ درمان خود بیماری (سارکوئیدوز/کرون) = ضدالتهاب (کورتیکواستروئید + ساپرس‌کننده‌های سیستم ایمنی).</p>
+  </div>
+</section>
+
+<!-- ===================== SESSION 6&7e: SIALORRHEA ===================== -->
+<span class="anchor" id="s6e"></span>
+<section class="block">
+  <div class="head"><span class="num">۱۳</span><h2>سیالوره (Sialorrhea — افزایش بزاق)</h2><span class="tag">جلسه ششم و هفتم</span></div>
+  <div class="body">
+
+    <p>افزایش بزاق در دو شرایط: ۱) <strong>افزایش تولید</strong> ۲) <strong>کاهش کلیرانس</strong> (عدم بلع/خروج کافی). <strong>کاهش کلیرانس شایع‌تر است</strong>.</p>
+    <div class="note key"><span class="lbl">شایع‌ترین عوامل</span>
+      داروهای پاراسمپاتومیمتیک (پیلوکارپین) · Hyperhydration · infant teething · فاز ترشحی منس · <bdi>idiopathic paroxismal hypersalivation</bdi> · مسمومیت ارگانوفسفره و فلزات سنگین · تهوع · <bdi>GERD</bdi> · اختلالات نورولوژیک.</div>
+
+    <h3 class="sub">Table 9-5 — داروها و شرایط مولد هایپرسالیویشن</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>دسته</th><th>موارد</th></tr></thead>
+      <tbody>
+        <tr><td>Medications</td><td>Pilocarpine, Cevimeline, Bethanechol, Clozapine¹, Olanzapine¹, Venlafaxine¹, Clobazam¹, Digoxin, Lithium¹, Nitrazepam, Physostigmine, Risperidone¹</td></tr>
+        <tr><td>Neurologic diseases</td><td>Parkinson's, Wilson's, Amyotrophic lateral sclerosis, Down syndrome, Fragile X, Autism, Cerebral palsy</td></tr>
+        <tr><td>Toxins</td><td>Organophosphate poisoning · Heavy metals (Arsenic, Iron, Lead, Mercury, Selenium, Thallium)</td></tr>
+        <tr><td>سایر</td><td>Hyperhydration · Ill-fitting dentures · Rabies · Secretory phase of menstruation</td></tr>
+      </tbody>
+    </table></div>
+    <p style="font-size:13px;color:var(--muted)">¹ = ممکن است باعث xerostomia نیز شود.</p>
+
+    <div class="note warn"><span class="lbl">علائم خطرناک</span>
+      <strong>Drooling</strong> (شایع‌ترین) · انسداد مجاری هوایی (خطرناک) · آسپیراسیون → <strong>pneumonia</strong> (خطرناک) · زخم‌های تروماتیک اطراف لب.</div>
+    <div class="note tip"><span class="lbl">تشخیص و درمان</span>
+      تاریخچهٔ دقیق؛ CT برای مشکلات مغزی مؤثر بر بلع؛ نمونهٔ خونی برای فلزات سنگین/سموم؛ تست بارداری در خانم‌ها؛ سطح <strong>androgen</strong> در خانم‌های premenopausal و مردان (افزایش → افزایش بزاق)؛ شروع ناگهانی بدون علت → <strong>CT مغزی</strong>.
+      <br><strong>درمان:</strong> وابسته به اتیولوژی. مشکل بلع → Physical therapy. بزاق زیاد → داروهای <strong>ضدپاراسمپاتیک (xerostomic)</strong>: Scopalamine transdermal patch, propantheline, benztropine, atropine, glycopyrrolate, diphenhydramine. GERD → درمان آن. بدون علت و غیرقابل‌تحمل → جراحی غده. روش در حال بررسی: <strong>Botulinum toxin</strong> روی غده.</div>
+
+    <h3 class="sub">درمان کلی خشکی دهان</h3>
+    <ol>
+      <li>preventive therapy</li>
+      <li>symptomatic treatment</li>
+      <li>local or topical salivary stimulation</li>
+      <li>systemic salivary stimulation</li>
+      <li>therapy directed at an underlying systemic disorder</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== SESSION 5a: RADIATION ===================== -->
+<span class="anchor" id="s5a"></span>
+<section class="block">
+  <div class="head"><span class="num">۱۴</span><h2>آسیب‌های ناشی از رادیوتراپی (Radiation-induced)</h2><span class="tag">جلسه پنجم</span></div>
+  <div class="body">
+
+    <h3 class="sub">External Beam Radiation</h3>
+    <p>رادیوتراپی خارجی سر و گردن می‌تواند خشکی دهان <strong>دائمی</strong> و کاهش عملکرد ایجاد کند. بعد از <strong>۲۴ تا ۲۶ گری</strong> تابش به سر و گردن، علائم دائمی خشکی دهان.</p>
+    <div class="note key"><span class="lbl">مکانیسم</span>
+      ۱) القای <strong>Apoptosis</strong> ۲) تولید <strong>رادیکال آزاد</strong> → تخریب بافتی ۳) <strong>کاهش خون‌رسانی</strong> → تخریب بافت بزاقی.</div>
+    <ul>
+      <li>علائم از <strong>هفتهٔ اول</strong>؛ شکایت: خشکی دهان و افزایش غلظت/ویسکوزیتهٔ بزاق.</li>
+      <li>تا هفتهٔ دوم پیشرفت؛ تا اتمام دوره تقریباً فانکشنی نمی‌ماند (دورهٔ معمول <strong>۶ تا ۷ هفته</strong>).</li>
+    </ul>
+
+    <h3 class="sub">Internal Radiation (Radioactive Iodine)</h3>
+    <p>ید رادیواکتیو <strong>I-131</strong> (درمان سرطان تیروئید papillary/follicular و پرکاری تیروئید مثل گریوز و ندول‌های hyperactive) توسط <strong>انکوسیت‌های</strong> غدد بزاقی نیز جذب می‌شود → تخریب سلولی/بافتی (خصوصاً غدد اصلی). میزان اثر وابسته به <strong>دوز تجمعی</strong>؛ می‌تواند فیبروز و <strong>hypofunction دائمی</strong> ایجاد کند.</p>
+    <div class="tbl-wrap"><table>
+      <caption>عوارض ید رادیواکتیو</caption>
+      <thead><tr><th>زمان</th><th>عوارض</th></tr></thead>
+      <tbody>
+        <tr><td>حاد</td><td>تورم غده + درد حین بلع · <strong>Ageusia</strong> (اختلال چشایی)</td></tr>
+        <tr><td>طولانی‌مدت</td><td>افزایش حجم غده + xerostomia → <strong>sialadenitis مزمن/عودکننده</strong> (خصوصاً پاروتید، عفونت باکتریال عودکننده) · <strong>Stomatitis</strong> (هر دو رادیوتراپی) · <strong>Dental caries</strong> (هر دو)</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>افزایش حجم خصوصاً پاروتید اغلب دوطرفه و متقارن · درد هنگام غذا · حس xerostomia.</li>
+      <li><strong>Ageusia/dysgeusia</strong> غالباً <strong>salty taste</strong> (حس شوری)؛ موقت یا با دوز بیشتر دائمی.</li>
+    </ul>
+    <div class="note tip"><span class="lbl">تشخیص و درمان</span>
+      تاریخچهٔ بیمار مهم (سرطان تیروئید سپس خشکی دهان)؛ <strong>scintigraphy</strong> برای سنجش کمی فانکشن. درمان = <strong>تحریک خیلی شدید غده</strong>: Hydration کافی (جرعه‌جرعه)، ماساژ غده (خصوصاً پاروتید)، آب‌نبات ترش و شور یا آبلیمو + روغن زیتون روی زبان مکرر.</div>
+    <div class="note warn"><span class="lbl">⚠ نکتهٔ زمان‌بندی</span>
+      در <strong>۲۴ ساعت اول</strong> پس از دریافت ید این اقدامات انجام نشود (حجم بیشتری از ید به‌جای تیروئید به غدد بزاقی می‌رسد). بعد از ۲۴ ساعت شروع، تا <strong>۲ تا ۳ هفته</strong> ادامه.</div>
+  </div>
+</section>
+
+<!-- ===================== SESSION 5b: IgG4 ===================== -->
+<span class="anchor" id="s5b"></span>
+<section class="block">
+  <div class="head"><span class="num">۱۵</span><h2>بیماری مرتبط با IgG4 (IgG4-Related Disease)</h2><span class="tag">جلسه پنجم</span></div>
+  <div class="body">
+
+    <p>واژهٔ جدید؛ قبلاً <strong>Küttner Tumor</strong> و <strong>Mikulicz's disease</strong>. وجه اشتراک: افزایش <strong>IgG4 سرم</strong> و افزایش <strong>پلاسماسل‌های IgG4-positive</strong> در بیوپسی. می‌تواند هم‌زمان <strong>پانکراس، کلیه، ریه، لنف‌نود، تیروئید</strong> را درگیر کند.</p>
+    <div class="tbl-wrap"><table>
+      <caption>مقایسهٔ Küttner Tumor و Mikulicz's disease</caption>
+      <thead><tr><th>ویژگی</th><th>Küttner Tumor</th><th>Mikulicz's disease</th></tr></thead>
+      <tbody>
+        <tr><td>نام دیگر</td><td>Chronic sclerosing sialadenitis</td><td>قبلاً subtype شوگرن</td></tr>
+        <tr><td>طرفین</td><td>اغلب <strong>یک‌طرفه</strong></td><td><strong>دوطرفه symmetric</strong></td></tr>
+        <tr><td>غده</td><td>غالباً <strong>ساب‌مندیبولار</strong> (سپس پاروتید/ساب‌لینگوال)</td><td>پاروتید + ساب‌مندیبولار + <strong>غدد اشکی</strong></td></tr>
+        <tr><td>قوام</td><td>سفت (sclerosing)، non-tender، firm</td><td>—</td></tr>
+        <tr><td>عملکرد غده</td><td>نرمال یا اندکی کاهش (سایر غدد جبران می‌کنند)</td><td>—</td></tr>
+        <tr><td>Anti-SSA/SSB</td><td colspan="2">در هر دو <strong>منفی</strong> (افتراق از شوگرن)؛ در Mikulicz افزایش <strong>IgG4 سرم</strong> دیده می‌شود</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>افزایش حجم بدون درد <strong>منفرد بیشتر از ۳ ماه</strong> (بیماری مزمن). گاهی لنفادنوپاتی (اغلب دوطرفه، mild، کوچک، خوش‌خیم).</li>
+      <li>شایع‌ترین نواحی لنفادنوپاتی: <bdi>supraclavicular, cervical, submandibular</bdi>.</li>
+      <li>هر دو نیاز به <strong>systemic workup</strong>؛ ممکن است بدخیم شود → <strong>non-Hodgkin lymphoma</strong> → نیاز به observation و فالوآپ.</li>
+    </ul>
+    <div class="note tip"><span class="lbl">درمان IgG4-RD</span>
+      Küttner خفیف → فقط observe · یک غده درگیر و آزاردهنده → جراحی (تومور + غده) · بیش از یک غده/حجم زیاد → <strong>first-line:</strong> دوز بالای <strong>corticosteroid</strong>؛ سپس کاهش کورتون + ساپرس‌کننده‌ها: <bdi>mycophenolate mofetil, tacrolimus, cyclophosphamide, azathioprine, 6-mercaptopurine</bdi>.</div>
+  </div>
+</section>
+
+<!-- ===================== SESSION 5c: VIRAL ===================== -->
+<span class="anchor" id="s5c"></span>
+<section class="block">
+  <div class="head"><span class="num">۱۶</span><h2>بیماری‌های ویروسی درگیرکنندهٔ غدد بزاقی</h2><span class="tag">جلسه پنجم</span></div>
+  <div class="body">
+
+    <p>سردسته = <strong>paramyxovirus</strong> (اوریون/Mumps). شایع دیگر: <strong>CMV، HIV، HCV</strong>. نادر: Echoviruses، EBV، parainfluenza، choriomeningitis virus.</p>
+
+    <h3 class="sub">Mumps (اوریون)</h3>
+    <p>ویروسی، بیشتر کودکان کم‌سن؛ اختلال غده به‌دلیل <strong>انفیلتراسیون لنفوسیتی</strong> → انسداد مجرا، تورم شدید و درد.</p>
+    <ul>
+      <li>واکسن <strong>MMR</strong>: دوز اول ۱۲ تا ۱۵ ماهگی، دوز بعدی ۴ تا ۶ سالگی؛ جدیداً varicella اضافه (<strong>MMRV</strong>).</li>
+      <li>درگیری بالینی غالباً <strong>۴ تا ۶ سالگی</strong>؛ <bdi>incubation</bdi> = <strong>۲ تا ۳ هفته</strong> (برادر ~۲۰ روز بعد علامت‌دار).</li>
+      <li>دورهٔ <bdi>prodromal</bdi> (۱ تا ۲ روز قبل): سردرد، تب، بی‌اشتهایی، درد عضلانی، خستگی، ناخوشی.</li>
+      <li>علامت اصلی: افزایش حجم التهابی غده، اغلب دوطرفه، <strong>غیرچرکی</strong> (milking → بدون چرک). <strong>۹۵٪ پاروتید را درگیر می‌کنند</strong>؛ ۱۰٪ ساب‌مندیبولار/ساب‌لینگوال دوطرفه (هر ۶ غده)؛ نیز Trismus و درد مرتبط با salivation.</li>
+      <li>۲۰٪ درگیری پاروتید <strong>یک‌طرفه</strong> (افتراق از عفونت دندانی)؛ در اوریون افزایش حجم به سمت <strong>پایین</strong> کشیده می‌شود؛ تورم ~۷ روز.</li>
+    </ul>
+    <div class="note warn"><span class="lbl">عوارض انتشار ویروس</span>
+      مننژیت، انسفالیت، <strong>ناشنوایی</strong>؛ نادر: myocarditis, thyroiditis, pancreatitis. در پسران از <bdi>adolescence</bdi> به بعد: <strong>epididimitis و orchitis → infertility</strong>.</div>
+    <div class="note info"><span class="lbl">تشخیص</span>
+      ۱) <strong>swab</strong> از orifice بعد از ~۳۰ ثانیه ماساژ پاروتید، در ۲ml محیط transport (دمای ۴°C)، کشت یا <strong>PCR</strong> → paramyxovirus. ۲) نمونهٔ خونی، <strong>IgM</strong> (افزایش در حاد) و IgG (روش قدیمی‌تر).
+      <br><strong>درمان:</strong> علامتی؛ استراحت، هیدراتاسیون، ضدتب، مایعات، milking. واکسیناسیون مهم.</div>
+
+    <h3 class="sub">Anesthesia Mumps</h3>
+    <p>نام دیگر: <strong>Post operative sialadenitis / Surgical mumps</strong>. در بیمار بستری با جراحی عمومی و <bdi>General anesthesia</bdi> → افزایش حجم گذرای پاروتید (اغلب یک‌طرفه). <strong>ارتباطی با mumps ندارد و ویروسی نیست</strong> (نام به‌دلیل شباهت). علت نامشخص؛ ریسک‌فاکتور: Diabetes mellitus، Sjögren، hypothyroidism، malnutrition، داروها. خودمحدودشونده؛ درد → NSAID.</p>
+
+    <h3 class="sub">CMV Infection</h3>
+    <p>= <strong>HHV-5 (human betaherpesvirus 5)</strong>؛ مثل همهٔ هرپس‌ها بعد از مواجهه نهفته می‌ماند و با ساپرس ایمنی فعال می‌شود.</p>
+    <div class="note key"><span class="lbl">نکتهٔ مونونوکلئوز</span>
+      شایع‌ترین عامل مونونوکلئوز عفونی = <strong>EBV</strong>؛ دومین عامل = <strong>CMV</strong>. حدود <strong>۷۰ تا ۷۵٪</strong> افراد سالم IgG anti-CMV مثبت دارند (مواجههٔ قبلی).</div>
+    <ul>
+      <li>اکثر مبتلایان بی‌علامت‌اند مگر ساپرس ایمنی یا کودک (حتی کشنده). تشخیص از کشت مایعات بدن (خون، مدفوع، بزاق، ادرار، ترشحات تنفسی).</li>
+      <li>مونونوکلئوز CMV در کودکان → <strong>sepsis-like syndrome</strong>: Hepatosplenomegaly، کاهش blood counts (لنفوسیت/نوتروفیل/پلاکت)، abnormal transaminases (↑AST/ALT)، Pneumonitis.</li>
+      <li>CMV مادرزادی نوزادان → <strong>parotitis</strong>؛ نقایص دندانی: diffuse enamel hypoplasia، attrition، enamel hypomaturation، رنگ زرد عاج.</li>
+      <li>در بالغ سالم: مونونوکلئوز خفیف خودمحدود؛ علائم (تب، ناخوشی، میالژی، فارنژیت) خفیف‌تر از EBV. <strong>تفاوت با EBV:</strong> در CMV سیالادنیت حاد و درگیری غده (تورم دردناک پاروتید/ساب‌مندیبولار + خشکی دهان) شایع‌تر.</li>
+      <li>در ساپرس ایمنی → مونونوکلئوز <strong>disseminated</strong> شدید؛ علائم دهانی: زخم‌های مزمن مقاوم به درمان (بیوپسی/کشت لازم)، درگیری عفونی غده.</li>
+      <li>گروه مهم ساپرس ایمنی = <strong>گیرندگان پیوند</strong> → پروفیلاکسی CMV با <strong>valganciclovir یا ganciclovir</strong>.</li>
+    </ul>
+    <div class="tbl-wrap"><table>
+      <caption>انتقال CMV</caption>
+      <thead><tr><th>نوع</th><th>توضیح</th><th>راه‌های شایع</th></tr></thead>
+      <tbody>
+        <tr><td>Horizontal</td><td>طی یک نسل</td><td>بالغین: تزریق خون، پیوند ارگان، تماس جنسی · کودکان: بزاق، ترشحات تنفسی، ادرار</td></tr>
+        <tr><td>Vertical</td><td>بین دو نسل (جفت مادر→جنین)</td><td>malformation مادرزادی و مرگ نوزاد</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note warn"><span class="lbl">نکات کلیدی CMV</span>
+      عفونت CMV غده بزاقی &gt; ۱ ماه با افزایش حجم و درد = <strong>مارکر رسیدن HIV+ به ایدز (مرحله سوم)</strong>. سلول <strong>owl's eye</strong> (انکلوزیون ویروسی) قابل تشخیص میکروسکوپی.
+      <br><strong>درمان:</strong> ایمن‌کامپتنت → علامتی؛ ساپرس ایمنی → IV valganciclovir/ganciclovir؛ شدید → دوز <strong>induction</strong> (بالا، ۲–۳ هفته) سپس <strong>maintenance</strong> تا دو نمونهٔ منفی.</div>
+
+    <h3 class="sub">HIV Infection (HIV-SGD)</h3>
+    <p>درگیری Neoplastic و non-neoplastic؛ پدیدهٔ <strong>Sjögren's syndrome-like</strong>. تومورهای بدخیم شایع: <strong>Kaposi's sarcoma و lymphoma</strong>. در HIV+ عفونت‌ها (ویروسی/باکتریال/قارچی) افزایش می‌یابد و <strong>HAART</strong> می‌تواند خشکی دهان دهد.</p>
+    <ul>
+      <li><strong>تورم غده (شایع‌ترین):</strong> ۹۸٪ پاروتید، ۶۰٪ دوطرفه (مانند شوگرن و Mikulicz).</li>
+      <li><strong>Diffuse infiltrative lymphocytosis:</strong> ارتشاح لنفوسیتی منتشر (غدد، ریه، گوارش، کبد، عضلات، اعصاب)؛ بیوپسی لب مانند شوگرن. هرچه <strong>CD4</strong> کمتر، ارتشاح بیشتر؛ لنفوسیت‌ها عمدتاً <strong>CD8</strong> (برخلاف شوگرن که CD4+ افزایش می‌یابد) → افتراق با <strong>IHC</strong>. خشکی دهان شایع.</li>
+    </ul>
+    <div class="tbl-wrap"><table>
+      <caption>شباهت و افتراق HIV+ و شوگرن</caption>
+      <thead><tr><th>شباهت‌ها</th><th>افتراق‌ها</th></tr></thead>
+      <tbody>
+        <tr><td>کاهش بزاق · افزایش حجم پاروتید دوطرفه · اغلب ↑IgA · hypergammaglobulinemia · ↑کمپلکس ایمنی · ↑rheumatoid factors · focal mononuclear cell infiltration در بیوپسی</td><td><strong>IHC:</strong> افتراق CD4+ (شوگرن) و CD8+ (HIV) · <strong>Anti-SS-A و Anti-SS-B</strong>: در شوگرن مثبت، در HIV منفی</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note key"><span class="lbl">ضایعات لنفواپیتلیال</span>
+      <strong>BLELs</strong> (benign lympho epithelial lesions) و <strong>BLECs</strong> (benign lympho epithelial cysts) — توده/کیست‌های خوش‌خیم متعدد خصوصاً پاروتید؛ نیازمند درمان (افزایش شدید اندازه).</div>
+    <div class="note info"><span class="lbl">شباهت سه‌گانه</span>
+      نمای کلینیکی شوگرن، HIV+ و IgG4-RD/Mikulicz مشابه است: ۱) درگیری غده مشابه ۲) درگیری غدد اشکی + خشکی چشم ۳) بسیاری بررسی‌های سرولوژیک مشترک. <strong>Anti-SSA/SSB فقط در شوگرن مثبت</strong>؛ در Mikulicz افزایش IgG4؛ بیوپسی CD4+/CD8+ افتراق شوگرن از HIV؛ در IgG4-RD پلاسماسل‌های ترشح‌کنندهٔ IgG4 افزایش.</div>
+    <div class="note tip"><span class="lbl">درمان HIV-SGD</span>
+      عمدتاً <strong>حمایتی</strong> (Hydration، آب‌نبات ترش و شور بدون قند، ماساژ غده). بزاق تنها مایع بدنی است که می‌توان <strong>HHV-8</strong> را در آن بررسی کرد (خصوصاً در ضایعهٔ شبه‌Kaposi). <strong>HAART</strong> عوارض را سرکوب و حتی تغییرات هیستوپاتولوژیک را برگشت‌پذیر می‌کند.
+      <br><strong>کیست‌های لنفواپیتلیال متعدد:</strong> کوچک/کم → follow-up؛ بزرگ/زیاد → آسپیراسیون؛ سایر: antiretroviral، <strong>sclerosing therapy</strong> (تزریق داخل غده)، radiation therapy؛ نهایتاً parotidectomy. (رادیوتراپی controversy است چون می‌تواند نئوپلاسم القا و خشکی را تشدید کند.)</div>
+  </div>
+</section>
+
+<!-- ===================== FINAL SUMMARY TABLES ===================== -->
+<span class="anchor" id="tables"></span>
+<section class="block">
+  <div class="head"><span class="num">۱۷</span><h2>جداول جمع‌بندی و مقایسه نهایی</h2><span class="tag">مرور سریع</span></div>
+  <div class="body">
+
+    <h3 class="sub">۱) «شایع‌ترین‌ها» (High-Yield)</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>موضوع</th><th>شایع‌ترین</th></tr></thead>
+      <tbody>
+        <tr><td>محل موکوسل Extravasation</td><td>لب پایین (۹۰٪)</td></tr>
+        <tr><td>غدهٔ سنگ‌ساز</td><td>ساب‌مندیبولار &gt; پاروتید &gt; ساب‌لینگوال</td></tr>
+        <tr><td>تومور خوش‌خیم غدهٔ بزاقی</td><td>Pleomorphic adenoma (پاروتید)</td></tr>
+        <tr><td>محل تومور غدد فرعی</td><td>کام سخت و نرم</td></tr>
+        <tr><td>محل سیالومتاپلازی نکروزان</td><td>کام</td></tr>
+        <tr><td>محل کیلیت گلاندولاریس</td><td>لب پایین</td></tr>
+        <tr><td>غدهٔ درگیر در سیالادنیت باکتریال</td><td>پاروتید</td></tr>
+        <tr><td>کاندیدیازیس در خشکی دهان</td><td>Erythematous &gt; Thrush &gt; Angular cheilitis</td></tr>
+        <tr><td>لنفوم غدد بزاقی / بعد از شوگرن</td><td>MALT</td></tr>
+        <tr><td>عامل مونونوکلئوز عفونی</td><td>EBV (دوم: CMV)</td></tr>
+        <tr><td>غدهٔ درگیر در اوریون</td><td>پاروتید (۹۵٪)</td></tr>
+        <tr><td>تست حساس شوگرن / اختصاصی شوگرن</td><td>حساس = ANA · اختصاصی = anti-Ro (SS-A)</td></tr>
+        <tr><td>تومور متاستاتیک به غده</td><td>Melanoma و SCC</td></tr>
+        <tr><td>غدهٔ accessory tissue</td><td>پاروتید فرعی (~۲۱٪)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">۲) یک‌طرفه یا دوطرفه؟</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>غالباً یک‌طرفه</th><th>غالباً دوطرفه</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Küttner tumor · سل (TB) · سیالادنیت باکتریال (۸۰٪) · سیالومتاپلازی نکروزان · سنگ غده · اوریون یک‌طرفه (۲۰٪) · JRP (اغلب)</td>
+          <td>Mikulicz · Sarcoidosis · رادیوتراپی (پاروتید متقارن) · HIV (۶۰٪) · اوریون (۹۵٪ موارد دوطرفه) · Parotid lipomatosis · شوگرن (اغلب) · سیالادنیت باکتریال (۲۰٪)</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">۳) موکوسل در برابر رانولا</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>ویژگی</th><th>Mucocele</th><th>Ranula</th></tr></thead>
+      <tbody>
+        <tr><td>منشأ</td><td>غدد بزاقی مینور</td><td>غدهٔ ساب‌لینگوال</td></tr>
+        <tr><td>اندازه</td><td>کوچک تا متوسط</td><td>موکوسل بزرگ</td></tr>
+        <tr><td>محل</td><td>لب پایین (شایع‌ترین)</td><td>کف دهان / گردن (plunging)</td></tr>
+        <tr><td>درمان</td><td>Excisional + برداشت غدد ناحیه</td><td>Excisional + برداشت ساب‌لینگوال (عود ۱٪)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">۴) گرانولوم Caseating در برابر Noncaseating</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Caseating (نکروز پنیری)</th><th>Noncaseating</th></tr></thead>
+      <tbody>
+        <tr><td>Tuberculosis</td><td>Sarcoidosis · Crohn disease</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">۵) افتراق شوگرن / HIV / IgG4-RD (Mikulicz)</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>پارامتر</th><th>Sjögren</th><th>HIV-SGD</th><th>IgG4-RD (Mikulicz)</th></tr></thead>
+      <tbody>
+        <tr><td>Anti-SSA/SSB</td><td>مثبت</td><td>منفی</td><td>منفی</td></tr>
+        <tr><td>لنفوسیت غالب در بافت</td><td>CD4+</td><td>CD8+</td><td>پلاسماسل IgG4+</td></tr>
+        <tr><td>IgG4 سرم</td><td>طبیعی</td><td>—</td><td>افزایش</td></tr>
+        <tr><td>خشکی چشم / غدد اشکی</td><td>بله</td><td>بله</td><td>بله</td></tr>
+        <tr><td>پتانسیل بدخیمی</td><td>MALT lymphoma</td><td>Kaposi، lymphoma</td><td>non-Hodgkin lymphoma</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">۶) ضایعات پیش‌بدخیم / تبدیل به بدخیمی</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>ضایعه</th><th>تبدیل به</th></tr></thead>
+      <tbody>
+        <tr><td>Cheilitis glandularis</td><td>SCC (پیش‌بدخیم)</td></tr>
+        <tr><td>Sjögren درمان‌نشده</td><td>MALT lymphoma</td></tr>
+        <tr><td>IgG4-RD</td><td>non-Hodgkin lymphoma</td></tr>
+        <tr><td>BLELs در HIV</td><td>lymphoma (با گذشت زمان)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">۷) داروهای کلیدی</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>هدف</th><th>داروها</th></tr></thead>
+      <tbody>
+        <tr><td>افزایش بزاق (شوگرن، خشکی دهان)</td><td>Pilocarpine · Cevimeline (muscarinic / پاراسمپاتومیمتیک؛ Cevimeline اختصاصی M1/M3)</td></tr>
+        <tr><td>کاهش بزاق (سیالوره)</td><td>Scopolamine patch · propantheline · benztropine · atropine · glycopyrrolate · diphenhydramine (ضدپاراسمپاتیک) · Botulinum toxin (در حال بررسی)</td></tr>
+        <tr><td>سیالادنیت باکتریال (تجربی)</td><td>آموکسی‌سیلین (یا کلوگزاسیلین)؛ retrograde = MRSA</td></tr>
+        <tr><td>CMV (ساپرس ایمنی/پروفیلاکسی)</td><td>Valganciclovir · Ganciclovir</td></tr>
+        <tr><td>IgG4-RD</td><td>Corticosteroid (first-line) ± mycophenolate, tacrolimus, cyclophosphamide, azathioprine, 6-MP</td></tr>
+        <tr><td>جایگزین TCA در خشکی دهان</td><td>SSRI (فلوکستین)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">۸) روش تشخیصی منتخب برای هر وضعیت</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>وضعیت</th><th>روش تشخیصی</th></tr></thead>
+      <tbody>
+        <tr><td>سنگ ساب‌مندیبولار</td><td>Occlusal radiograph</td></tr>
+        <tr><td>سنگ کلسیفیهٔ پاروتید</td><td>AP view of face</td></tr>
+        <tr><td>اختلالات سیستم مجاری / تنگی</td><td>Sialography</td></tr>
+        <tr><td>قبل از جراحی غده (بافت نرم)</td><td>MRI</td></tr>
+        <tr><td>سنجش عملکرد غده (دینامیک/کمی)</td><td>Scintigraphy (Tc-99m)</td></tr>
+        <tr><td>Staging بدخیمی</td><td>PET/CT</td></tr>
+        <tr><td>Stafne's cyst</td><td>FNA یا سیالوگرافی</td></tr>
+        <tr><td>سل (TB)</td><td>PCR بزاق (دقیق‌ترین) یا کشت</td></tr>
+        <tr><td>شوگرن (بالاترین صحت)</td><td>بیوپسی غدد فرعی لب پایین (focus score ≥1)</td></tr>
+        <tr><td>اوریون</td><td>swab + PCR یا IgM</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ===================== QUIZ ===================== -->
+<span class="anchor" id="quiz"></span>
+<section class="block" id="quizblock">
+  <div class="head"><span class="num">★</span><h2 id="quizHeading">آزمون جامع مرور کامل</h2><span class="tag">گزینه‌ای</span></div>
+  <div class="body">
+    <p>برای هر سؤال یک گزینه انتخاب کنید؛ سپس «<strong>تصحیح</strong>» را بزنید تا پاسخ درست، نمره و توضیح هر سؤال نمایش داده شود. می‌توانید با «نمایش همهٔ پاسخ‌ها» مستقیماً مرور کنید.</p>
+    <div class="quiz-tools">
+      <button class="solid" onclick="checkQuiz()">✔ تصحیح و نمره</button>
+      <button onclick="revealAll()">نمایش همهٔ پاسخ‌ها</button>
+      <button onclick="resetQuiz()">پاک‌کردن انتخاب‌ها</button>
+      <span class="score" id="scoreBox"></span>
+    </div>
+    <div id="quizContainer"></div>
+    <div class="quiz-tools" style="margin-top:18px">
+      <button class="solid" onclick="checkQuiz()">✔ تصحیح و نمره</button>
+      <span class="score" id="scoreBox2"></span>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<button class="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="بازگشت به بالا">↑</button>
+
+<div class="wrap">
+  <p class="footer">پایان جزوه — موفق باشید 🌿 | تهیه‌شده بر پایهٔ متن کامل جلسات درسی دکتر حاجی مقصودی</p>
+</div>
+
+<script>
+/* ============ QUIZ DATA — 100 questions ============ */
+const QUIZDATA = [
+/* --- Anatomy & Physiology --- */
+{q:"کدام قسمت غدهٔ بزاقی مهم‌ترین بخش بوده و حجم اصلی بزاق از آن ترشح می‌شود؟",o:["سلول‌های مجاری","انتهای آسینی (acinar)","مجرای دفعی","سلول‌های striated duct"],a:1,e:"تنها جایی که آب وارد غده می‌شود انتهای آسینی است و حجم اصلی بزاق از آن‌جا ترشح می‌شود."},
+{q:"عصب facial (۷) بین کدام دو لوب عبور می‌کند؟",o:["لوب‌های ساب‌مندیبولار","لوب سطحی و عمقی پاروتید","لوب‌های ساب‌لینگوال","لوب قدامی و خلفی تیروئید"],a:1,e:"عصب ۷ بین لوب سطحی و عمقی پاروتید عبور می‌کند و عصب حرکتی صورت است."},
+{q:"نام مجرای غدهٔ پاروتید چیست و کجا باز می‌شود؟",o:["Wharton — کنار فرنوم","Stenson — مجاور دندان ۶ و ۷ بالا","Bartholin — کف دهان","Rivinus — زیر زبان"],a:1,e:"مجرای Stenson مجاور دندان ۶ و ۷ بالا باز می‌شود؛ طول ۴–۶ سانتی‌متر."},
+{q:"مجرای غدهٔ ساب‌لینگوال که در دو‌سوم موارد به Wharton می‌ریزد کدام است؟",o:["Stenson","Rivinus","Bartholin","Caruncle"],a:2,e:"مجرای Bartholin در ۲/۳ موارد به مجرای Wharton می‌ریزد؛ Rivinus مستقل است."},
+{q:"غدهٔ فرعی Von Ebner در کجا قرار دارد و چه نوع بزاقی ترشح می‌کند؟",o:["کناره زبان — موکوسی","اطراف circumvallate papilla — سروزی","قدام زیر زبان — میکس","لب بالا — سروزی"],a:1,e:"Von Ebner اطراف پاپی‌های circumvallate و ترشح سروزی دارد."},
+{q:"بزاق کدام غده عمدتاً موکوسی است؟",o:["پاروتید","ساب‌مندیبولار","ساب‌لینگوال","Von Ebner"],a:2,e:"ساب‌لینگوال موکوسی، پاروتید سروزی و ساب‌مندیبولار میکس است."},
+{q:"پروتئین‌های PRPs چند درصد پروتئین‌های بزاقی را تشکیل می‌دهند؟",o:["۲۰٪","۴۰٪","۷۰٪","۹۹٪"],a:2,e:"PRPs (سرشار از پرولین) ۷۰٪ پروتئین‌های بزاقی؛ ضدمیکروبی و افزایش mineralization."},
+{q:"بزاقی که وارد دهان می‌شود (whole saliva) از نظر تونیسیته چگونه است؟",o:["ایزوتونیک","هایپرتونیک","هیپوتونیک","هم‌اسمولار با پلاسما"],a:2,e:"در آسینی ایزوتونیک است؛ با جذب Na/Cl و ترشح K به دهان هیپوتونیک می‌رسد."},
+{q:"کنترل ترشح مایع بزاق عمدتاً توسط کدام شاخهٔ عصبی است؟",o:["سمپاتیک","پاراسمپاتیک","سوماتیک","هیچ‌کدام"],a:1,e:"پاراسمپاتیک (muscarinic/استیل‌کولین) ترشح مایع را افزایش می‌دهد و بزاق را آبکی‌تر می‌کند."},
+{q:"محرک ترشح پروتئین‌ها به داخل بزاق کدام رسپتور است؟",o:["muscarinic","β-adrenergic","nicotinic","GABA"],a:1,e:"β-adrenergic با noradrenaline ترشح پروتئین را زیاد و بزاق را غلیظ‌تر می‌کند."},
+{q:"حجم نرمال whole saliva در شبانه‌روز چقدر است؟",o:["۰٫۱ تا ۰٫۵ لیتر","۰٫۵ تا ۱٫۵ لیتر","۲ تا ۳ لیتر","۳ تا ۴ لیتر"],a:1,e:"۰٫۵ تا ۱٫۵ لیتر در شبانه‌روز."},
+{q:"کدام مورد جزو تغییرات نرمال غدد بزاقی با افزایش سن نیست؟",o:["آتروفی acinar","اتساع مجاری","افزایش infiltration التهابی","افزایش حجم acinar و پرکاری"],a:3,e:"با سن آتروفی acinar، تبدیل به چربی، اتساع مجاری و افزایش انفیلتراسیون رخ می‌دهد، نه پرکاری."},
+{q:"در فرد دارای خشکی دهان، توصیه برای تحریک غده شامل کدام است؟",o:["پرهیز از جویدن","ماساژ غده و آب‌نبات ترش/شور","کاهش مصرف آب","استفاده از داروی آنتی‌کولینرژیک"],a:1,e:"ماساژ، آدامس، آب‌نبات ترش و شور و آبلیمو روی زبان تحریک‌کننده‌اند."},
+{q:"pH طبیعی بزاق چقدر است؟",o:["۴ تا ۵","۶ تا ۷","۸ تا ۹","۹ تا ۱۰"],a:1,e:"بزاق شفاف و بی‌رنگ با pH بین ۶ تا ۷."},
+{q:"کدام مورد جزو علل کاهش بزاق است؟",o:["تحریک چشایی","داروهای anticholinergic و antiadrenergic","جویدن","تحریک بویایی"],a:1,e:"منوپوز، استرس و داروهای ضدسمپاتیک/پاراسمپاتیک بزاق را کاهش می‌دهند."},
+/* --- Diagnostic approach / clinical --- */
+{q:"Symptom و Sign خشکی دهان به‌ترتیب کدام‌اند؟",o:["dry mouth و Xerostomia","Xerostomia و dry mouth","هر دو Xerostomia","هر دو dry mouth"],a:1,e:"Symptom = Xerostomia (حس) ، Sign = dry mouth."},
+{q:"شایع‌ترین نوع کاندیدیازیس در بیماران دارای خشکی دهان کدام است؟",o:["Thrush","Erythematous","Angular cheilitis","Hyperplastic"],a:1,e:"ترتیب: Erythematous > Thrush > Angular cheilitis."},
+{q:"علامت Tongue blade در خشکی دهان به چه معناست؟",o:["چسبیدن رژ به دندان","چسبیدن آبسلانگ/آینه به مخاط هنگام برداشتن","ترک‌خوردگی لب","بدون‌پاپی شدن زبان"],a:1,e:"چسبیدن آبسلانگ به مخاط باکال مثبت = خشکی دهان."},
+{q:"معیار کمی whole saliva غیرتحریکی برای خشکی دهان کدام است؟",o:["کمتر از ۰٫۱ ml/min","کمتر از ۰٫۷ ml/min","بیشتر از ۰٫۷ ml/min","بیشتر از ۱ ml/min"],a:0,e:"غیرتحریکی < ۰٫۱ ml/min؛ تحریکی باید > ۰٫۷ ml/min باشد."},
+{q:"دو تومور متاستاتیک شایع به غدهٔ بزاقی کدام‌اند؟",o:["Melanoma و SCC","Lymphoma و Sarcoma","Adenoma و Carcinoma","Kaposi و MALT"],a:0,e:"شایع‌ترین متاستازها: Melanoma پوستی/دهانی و SCC."},
+{q:"شایع‌ترین محل تومورهای غدد بزاقی فرعی کجاست؟",o:["لب پایین","کام سخت و نرم","کف دهان","زبان"],a:1,e:"کام سخت و نرم؛ پشت روگا (۲/۳ خلفی)، نه ۱/۳ قدامی."},
+/* --- Imaging --- */
+{q:"بهترین گرافی Plain-Film برای تفسیر سیالوگرافی کدام است؟",o:["Occlusal","Panoramic","Lateral oblique","Ant-Pos with puffed cheek"],a:1,e:"Panoramic بهترین برای تفسیر سیالوگرافی است."},
+{q:"نمای نرمال غده در سیالوگرافی چه نامیده می‌شود؟",o:["snowflake","leafless tree","honeycomb","owl's eye"],a:1,e:"نمای نرمال = leafless tree (درخت بدون برگ)."},
+{q:"نمای sialectasia (دانه‌برفی) در سیالوگرافی نشانهٔ چیست؟",o:["سنگ کلسیفیه","بیماری اتوایمیون/التهابی مثل شوگرن","تنگی مادرزادی","آبسه"],a:1,e:"sialectasia در شوگرن و بیماری‌های التهابی دیده می‌شود."},
+{q:"کدام مورد کنترااندیکاسیون سیالوگرافی نیست؟",o:["عفونت فعال","آلرژی به کنتراست","سنگ کوچک ساب‌مندیبولار","تداخل با تست تیروئید"],a:2,e:"عفونت فعال، آلرژی به ید و تداخل با تست تیروئید کنترااندیکاسیون‌اند؛ سنگ خودش اندیکاسیون است."},
+{q:"در Scintigraphy غدد بزاقی از کدام یون نشان‌دار استفاده می‌شود؟",o:["ید ۱۳۱","Technetium 99m","گالیوم","فلوئور ۱۸"],a:1,e:"Tc-99m؛ کم‌تهاجم‌ترین روش با نمایش dynamic فانکشن."},
+{q:"بهترین روش تصویربرداری قبل از جراحی غدد بزاقی کدام است؟",o:["CT non-enhanced","MRI","Plain film","Ultrasound"],a:1,e:"MRI بیشترین نمایش بافت نرم و بالاترین ارزش پیش از جراحی را دارد."},
+{q:"نمای 'salt-and-pepper' یا 'honeycomb-like' روی T2 در MRI نشانهٔ چیست؟",o:["پلئومورفیک آدنوما","سندروم شوگرن","سنگ کلسیفیه","Stafne cyst"],a:1,e:"این نما در T2 بیانگر سندروم شوگرن است."},
+{q:"کدام مورد کنترااندیکاسیون MRI است؟",o:["ایمپلنت دندانی","pacemaker و aneurysmal bone clips","پرکردگی کامپوزیت","بریج سرامیکی"],a:1,e:"pacemaker و کلیپس‌های مغناطیسی منع‌اند؛ ایمپلنت دندانی غیرمغناطیسی مشکلی ندارد."},
+{q:"شایع‌ترین تومور خوش‌خیم غدهٔ بزاقی کدام است؟",o:["Warthin tumor","Pleomorphic adenoma","Mucoepidermoid carcinoma","Adenoid cystic carcinoma"],a:1,e:"Pleomorphic adenoma، اغلب در پاروتید با تورم بدون درد."},
+{q:"اگر بیمار ریستوریشن متعدد فلزی داشته باشد و CT دچار artifact شود، جایگزین کدام است؟",o:["Panoramic","MRI","Occlusal","PET"],a:1,e:"MRI جایگزین CT در artifact فلزی است."},
+/* --- Biopsy / serologic --- */
+{q:"بیوپسی برای تشخیص شوگرن معمولاً از کجا گرفته می‌شود؟",o:["پاروتید","غدد فرعی مخاط لب پایین","ساب‌مندیبولار","کام نرم"],a:1,e:"برش elliptical از غدد فرعی لب پایین، مرسوم‌ترین روش."},
+{q:"کدام روش بیوپسی احتمال seeding سلول بدخیم کمتری دارد و در شک به بدخیمی ارجح است؟",o:["FNA","CNB","Frozen section","Brush"],a:1,e:"CNB کل بافت را خارج می‌کند و seeding کمتری دارد."},
+{q:"اختصاصی‌ترین مارکر تشخیصی سندروم شوگرن کدام است؟",o:["ANA","anti-Ro (SS-A)","ESR","RF"],a:1,e:"حساس‌ترین = ANA؛ اختصاصی‌ترین = anti-Ro (SS-A)."},
+{q:"حساس‌ترین تست برای شوگرن که در ۸۰–۹۰٪ مثبت است کدام است؟",o:["anti-La","ANA","ESR","IgG"],a:1,e:"ANA حساس‌ترین (۸۰–۹۰٪) ولی غیراختصاصی است."},
+{q:"کدام بیماری با بیوپسی غدد فرعی لب پایین قابل تشخیص نیست؟",o:["Amyloidosis","Sarcoidosis","Graft versus host disease","Sialolithiasis"],a:3,e:"آمیلوئیدوز، سارکوئیدوز و GVHD با این بیوپسی تشخیص داده می‌شوند."},
+/* --- Developmental --- */
+{q:"Stafne's cyst در واقع چیست؟",o:["کیست واقعی","غدهٔ ساب‌مندیبولار نابجا در خلف مندیبل","تومور پاروتید","موکوسل عمیق"],a:1,e:"لوسنسی unilocular با border هایپرکورتیکه که در واقع غدهٔ ساب‌مندیبولار نابجاست."},
+{q:"accessory parotid در حدود چند درصد جمعیت دیده می‌شود؟",o:["۵٪","۲۱٪","۵۰٪","۷۰٪"],a:1,e:"حدود ۲۱٪؛ تقریباً variant آناتومیک نرمال با استعداد بیشتر برای نئوپلاسم."},
+{q:"عارضهٔ Diverticulum مجرای بزاقی کدام است؟",o:["تومور","sialadenitis عودکننده","کیست درموئید","فیستول"],a:1,e:"تجمع بزاق در دیورتیکول → sialadenitis باکتریال عودکننده."},
+{q:"در بیماری Darier مجاری دچار چه تغییری می‌شوند؟",o:["انسداد دائمی","تنگی و گشادی periodic","پارگی","کلسیفیکاسیون"],a:1,e:"تنگی و گشادی دوره‌ای → احتباس و sialadenitis انسدادی."},
+/* --- Sialolithiasis --- */
+{q:"شایع‌ترین غدهٔ ماژور برای ایجاد سنگ کدام است؟",o:["پاروتید","ساب‌مندیبولار","ساب‌لینگوال","غدد فرعی"],a:1,e:"ساب‌مندیبولار > پاروتید > ساب‌لینگوال؛ به‌دلیل مجرای طولانی، محتوای کلسیم بالا و استاز."},
+{q:"بهترین گرافی برای سنگ ساب‌مندیبولار کدام است؟",o:["Panoramic","Occlusal radiograph","AP view of face","Lateral oblique"],a:1,e:"Occlusal برای سنگ ساب‌مندیبولار؛ AP view برای سنگ کلسیفیه پاروتید."},
+{q:"سنگ‌های با چه اندازه‌ای از طریق sialoendoscopy خارج می‌شوند؟",o:["تا ۲ میلی‌متر","۴ تا ۵ میلی‌متر","۸ تا ۱۰ میلی‌متر","بیش از ۱ سانتی‌متر"],a:1,e:"۴ تا ۵ میلی‌متر؛ بزرگ‌تر نیاز به جراحی دارد."},
+{q:"کدام مورد کنترااندیکاسیون lithotripsy نیست؟",o:["تنگی دیستال سنگ","سیالادنیت حاد","بارداری","سنگ کوچک بدون عفونت"],a:3,e:"تنگی دیستال، عفونت حاد، بارداری و pacemaker منع‌اند."},
+{q:"Frey's syndrome عارضهٔ جراحی کدام غده است؟",o:["ساب‌مندیبولار","پاروتید","ساب‌لینگوال","تیروئید"],a:1,e:"Frey's syndrome فقط با پاروتیدکتومی مرتبط است."},
+{q:"Phlebolith که با سنگ بزاقی اشتباه می‌شود چیست؟",o:["سنگ کلیه","سنگ در مسیر ورید","کیست","mucus plug"],a:1,e:"Phlebolith سنگ مسیر ورید است؛ سیالوگرافی آن را افتراق می‌دهد."},
+{q:"شایع‌ترین علامت سنگ غدهٔ بزاقی کدام است؟",o:["تب","درد و افزایش حجم هنگام غذا خوردن","خشکی چشم","فلج عصب صورت"],a:1,e:"درجهٔ اول درد و افزایش حجم، درجهٔ دوم علائم عفونت."},
+/* --- Mucocele / Ranula / NS / CG --- */
+{q:"شایع‌ترین نوع و محل موکوسل کدام است؟",o:["Retention — لب بالا","Extravasation — لب پایین","Retention — کام","Extravasation — کف دهان"],a:1,e:"Extravasation شایع‌ترین، ۹۰٪ در لب پایین، علت اصلی تروما."},
+{q:"موکوسل نوع Retention بیشتر در چه سنی و کجا دیده می‌شود؟",o:["کودکان — لب پایین","جمعیت مسن — لب بالا/کام","جوانان — کف دهان","نوزادان — زبان"],a:1,e:"Retention با انسداد مجرا، در مسن‌تر، لب بالا/کام/باکال."},
+{q:"اندازهٔ Superficial mucocele معمولاً چقدر است؟",o:["کمتر از ۳ میلی‌متر","۵ تا ۱۰ میلی‌متر","۱ تا ۲ سانتی‌متر","بیش از ۳ سانتی‌متر"],a:0,e:"کمتر از ۳ میلی‌متر، بسیار سطحی، short-lived و عودکننده."},
+{q:"درمان قطعی موکوسل کدام است؟",o:["فقط آسپیراسیون","برداشت Excisional + غدد ناحیه","فقط کورتون موضعی","کرایوتراپی"],a:1,e:"آسپیراسیون فقط تشخیصی است؛ درمان Excisional + برداشت غدد."},
+{q:"رانولا منشأ کدام غده است؟",o:["پاروتید","ساب‌مندیبولار","ساب‌لینگوال","مینور لب"],a:2,e:"رانولا موکوسل بزرگ با منشأ ساب‌لینگوال است."},
+{q:"نوع plunging رانولا در کدام جنس شایع‌تر است؟",o:["خانم‌ها","آقایان","کودکان","نوزادان"],a:1,e:"plunging (گردنی) در آقایان؛ داخل‌دهانی در خانم‌ها."},
+{q:"اگر برجستگی رانولا در خط وسط باشد، به چه تشخیص دیگری فکر می‌کنیم؟",o:["پلئومورفیک آدنوما","کیست‌های درموئید و اپی‌درموئید","سنگ","موکوسل"],a:1,e:"رانولا حتماً یک سمت فرنوم است؛ خط وسط → کیست درموئید/اپی‌درموئید."},
+{q:"کم‌ترین میزان عود رانولا با کدام روش جراحی است؟",o:["Marsupialization (۶۷٪)","Ranula excision تنها (>۵۰٪)","Sublingual gland excision + رانولا (۱٪)","آسپیراسیون"],a:2,e:"برداشت غدهٔ ساب‌لینگوال همراه رانولا فقط ۱٪ عود دارد."},
+{q:"تشخیص افتراقی رانولای گردنی شامل کدام نیست؟",o:["کیست thyroglossal","epidermoid cyst","cystic hygroma","pleomorphic adenoma"],a:3,e:"DDx رانولای گردنی: thyroglossal، epidermoid، cystic hygroma."},
+{q:"سیالومتاپلازی نکروزان معمولاً کجا و در چه مدتی ایجاد می‌شود؟",o:["لب پایین — چند ماه","کام — ۲ تا ۳ روز (حاد)","زبان — چند هفته","کف دهان — مزمن"],a:1,e:"کام؛ شروع ناگهانی ۲–۳ روزه که آن را از زخم‌های مزمن جدا می‌کند."},
+{q:"بهترین تشخیص افتراقی NS در کام سخت کدام است؟",o:["آفت","موکوئپیدرموئید و آدنوئید سیستیک کارسینوما","لیکن پلان","کاندیدیازیس"],a:1,e:"بدخیمی‌های غده بزاقی؛ NS سریع و ناگهانی است ولی بدخیمی سیر دارد."},
+{q:"در بیوپسی NS چه چیزی حفظ شده دیده می‌شود؟",o:["سلول بدخیم","ساختار غدهٔ بزاقی (lobular)","کلسیفیکاسیون","گرانولوم پنیری"],a:1,e:"بدون سلول بدخیم؛ با وجود نکروز، ساختار لوبولار غده حفظ است."},
+{q:"شایع‌ترین محل کیلیت گلاندولاریس کجاست؟",o:["لب بالا","لب پایین","کام","زبان"],a:1,e:"CG شایع‌تر در لب پایین؛ ریسک‌فاکتور مهم = UV."},
+{q:"کیلیت گلاندولاریس از نظر بدخیمی چه وضعیتی دارد؟",o:["خوش‌خیم بدون خطر","پیش‌بدخیم (احتمال SCC)","همیشه بدخیم","فقط التهابی"],a:1,e:"CG پیش‌بدخیم است و ممکن است به SCC تبدیل شود؛ فالوآپ لازم است."},
+{q:"الگوی وراثت دیده‌شده در کیلیت گلاندولاریس کدام است؟",o:["اتوزومال مغلوب","اتوزومال غالب","وابسته به X","میتوکندریال"],a:1,e:"وراثت اتوزومال غالب در CG گزارش شده است."},
+{q:"درمان اصلی کیلیت گلاندولاریس کدام است؟",o:["آنتی‌بیوتیک","corticosteroid","آنتی‌هیستامین","جراحی فوری"],a:1,e:"درمان اصلی corticosteroid؛ حذف عامل مستعدکننده و ضدآفتاب نیز مهم است."},
+/* --- Bacterial / JRP / systemic --- */
+{q:"سیالادنیت باکتریال در کدام غده شایع‌تر است؟",o:["ساب‌مندیبولار","پاروتید","ساب‌لینگوال","غدد فرعی"],a:1,e:"پاروتید؛ به‌دلیل نزدیکی مجرا به ناحیهٔ جرم، بزاق سروزی و حفاظت کمتر."},
+{q:"در عفونت retrograde بیمارستانی شایع‌ترین عامل کدام است؟",o:["استرپتوکوک","MRSA Staph aureus","H. influenzae","Pseudomonas"],a:1,e:"MRSA Staph aureus؛ به‌دلیل افت بهداشت پس از جراحی."},
+{q:"اگر سیالادنیت باکتریال در ۲۴–۴۸ ساعت پاسخ ندهد و آنتی‌بیوتیک مناسب هم مؤثر نباشد، گام بعدی کدام است؟",o:["مشاهده","incision and drainage","رادیوتراپی","سیالوگرافی"],a:1,e:"عدم پاسخ → I&D غدد بزاقی."},
+{q:"Neonatal suppurative parotitis بیشتر در چه سنی رخ می‌دهد؟",o:["۲ تا ۴ هفته","۴ تا ۶ ماه","۱ تا ۲ سال","۴ تا ۶ سال"],a:0,e:"نادر، بیشتر نوزادان ۲ تا ۴ هفته؛ نام دیگر Acute suppurative parotitis."},
+{q:"JRP برای تشخیص به چند اپیزود نیاز دارد و در چه سنی است؟",o:["۱ اپیزود، بالای ۱۶ سال","۲ اپیزود یا بیشتر، زیر ۱۶ سال","۳ اپیزود، بزرگسالان","بدون معیار سنی"],a:1,e:"JRP زیر ۱۶ سال، حداقل ۲ اپیزود طی ۶ ماه؛ دو پیک ۲–۵ و ~۱۰ سالگی."},
+{q:"در دیابت کنترل‌نشده، نوروپاتی اتونوم می‌تواند کدام شاخه را درگیر کند؟",o:["فقط سمپاتیک","فقط پاراسمپاتیک","سمپاتیک و پاراسمپاتیک","هیچ‌کدام"],a:2,e:"نوروپاتی اتونوم هر دو شاخه را درگیر می‌کند و خشکی دهان می‌دهد."},
+{q:"کدام داروی کاهندهٔ بزاق با مشورت بهتر است با SSRI جایگزین شود؟",o:["آنتی‌هیستامین","TCA (سه‌حلقه‌ای)","NSAID","بتابلوکر"],a:1,e:"TCA (آمی‌تریپتیلین/نورتریپتیلین) خشکی شدید؛ جایگزین SSRI مثل فلوکستین."},
+{q:"Parotid lipomatosis با مصرف مزمن کدام دارو دیده می‌شود؟",o:["TCA","HAART (به‌ویژه مهارکنندهٔ protease نسل اول)","پیلوکارپین","کورتیکواستروئید"],a:1,e:"با indinavir و nelfinavir؛ دوطرفه و درمان = پاروتیدکتومی سطحی دوطرفه."},
+{q:"در ESRD کدام مورد علت خشکی دهان نیست؟",o:["فیبروز و آتروفی غده","polypharmacy","دیالیز/دهیدراتاسیون","افزایش تولید بزاق سروزی"],a:3,e:"در ESRD بزاق کاهش می‌یابد، نه افزایش."},
+{q:"چرا بزاق ساب‌مندیبولار نقش محافظتی در برابر سیالادنیت دارد؟",o:["چون سروزی است","چون موسینی و غلیظ است","چون pH اسیدی دارد","چون حجم کمی دارد"],a:1,e:"بزاق موسینی غلیظ و موسین آن نقش محافظتی دارد."},
+/* --- Sjögren --- */
+{q:"نسبت ابتلای خانم به آقا در سندروم شوگرن چقدر است؟",o:["۱:۱","۳:۱","۹:۱","۲:۱"],a:2,e:"۹:۱؛ بیشتر در خانم‌های postmenopausal."},
+{q:"شایع‌ترین بیماری مولد شوگرن ثانویه کدام است؟",o:["SLE","RA (آرتریت روماتوئید)","اسکلرودرما","سیروز صفراوی"],a:1,e:"ترتیب: RA > SLE > SD > primary biliary cirrhosis."},
+{q:"در بیوپسی شوگرن، چند لنفوسیت یک focus score را تشکیل می‌دهد؟",o:["۲۵","۵۰","۱۰۰","۲۰۰"],a:1,e:"هر ۵۰ لنفوسیت = ۱ focus score؛ focus score ≥۱ مثبت است."},
+{q:"حداقل امتیاز لازم در کرایتریای ۲۰۱۶ ACR/EULAR برای تشخیص شوگرن چقدر است؟",o:["۲","۳","۴","۵"],a:2,e:"مجموع امتیاز ≥۴ لازم است."},
+{q:"در کرایتریای ۲۰۱۶، Anti-SSA/Ro-positive چند امتیاز دارد؟",o:["۱","۲","۳","۴"],a:2,e:"Anti-SSA/Ro و focus score ≥۱ هر کدام ۳ امتیاز دارند."},
+{q:"عارضهٔ مهم درازمدت شوگرن درمان‌نشده کدام است؟",o:["SCC","MALT lymphoma","ملانوما","کاپوزی"],a:1,e:"شوگرن می‌تواند به MALT lymphoma تبدیل شود."},
+{q:"کدام دو دارو برای افزایش بزاق در شوگرن تأیید شده‌اند؟",o:["آتروپین و گلیکوپیرولات","پیلوکارپین و سویملین","پروپانتلین و بنزتروپین","سکوپولامین و دیفن‌هیدرامین"],a:1,e:"pilocarpine و cevimeline (muscarinic)؛ cevimeline اختصاصی M1/M3."},
+{q:"کدام مورد کنترااندیکاسیون pilocarpine/cevimeline است؟",o:["دیابت","آسم کنترل‌نشده و گلوکوم زاویه باریک","فشار خون پایین","کم‌خونی"],a:1,e:"آسم کنترل‌نشده، گلوکوم زاویه باریک، التهاب چشمی، CV، پارکینسون، COPD."},
+{q:"کدام تغییر سرولوژیک در شوگرن دیده می‌شود؟",o:["کاهش ESR","افزایش WBC","hypocomplementemia و hypergammaglobulinemia","کاهش ایمونوگلوبولین"],a:2,e:"hypergammaglobulinemia، autoantibodies، ↑ESR، ↓WBC، hypocomplementemia."},
+{q:"به‌طور متوسط چه مدت از علائم تا تشخیص کامل شوگرن طول می‌کشد؟",o:["۶ ماه","۲٫۸ سال","۵ سال","۱۰ سال"],a:1,e:"تشخیص دیرهنگام؛ به‌طور متوسط ۲٫۸ سال."},
+/* --- Granulomatous --- */
+{q:"دقیق‌ترین تست برای بررسی TB غده بزاقی کدام است؟",o:["کشت بزاق","PCR (۹۸٪ مثبت واقعی)","ANA","ESR"],a:1,e:"PCR دقیق‌ترین (۹۸٪)؛ کشت بزاق صحت پایین‌تری دارد."},
+{q:"تریاد Heerfordt's syndrome شامل کدام است؟",o:["تب، سرفه، خشکی","التهاب مجرای اشکی + تورم پاروتید + فلج عصب ۷","درد مفصل + راش + کم‌خونی","سنگ + عفونت + فیستول"],a:1,e:"uveoparotid fever: التهاب اشکی، تورم پاروتید، فلج عصب ۷."},
+{q:"گرانولوم noncaseating مشخصهٔ کدام بیماری‌هاست؟",o:["سل","سارکوئیدوز و کرون","سیفلیس","کاندیدیازیس"],a:1,e:"سارکوئیدوز و کرون noncaseating؛ سل caseating (پنیری)."},
+{q:"در سارکوئیدوز کدام آنزیم افزایش می‌یابد؟",o:["آمیلاز","ACE (angiotensin converting enzyme)","لیپاز","ALT"],a:1,e:"↑ACE، ↑کلسیم خون، ↑ANA/ESR/RF در سارکوئیدوز."},
+{q:"کرون کدام غدد بزاقی را درگیر می‌کند؟",o:["فقط ماژور","فقط غدد فرعی","فقط پاروتید","فقط ساب‌مندیبولار"],a:1,e:"برخلاف TB و سارکوئیدوز، کرون فقط غدد فرعی را درگیر می‌کند (ندول submucosal)."},
+{q:"نام دیگر Granulomatosis with polyangiitis چیست و علائم دهانی آن کدام است؟",o:["بهجت — آفت","Wegener — Strawberry gingivitis","لوپوس — پروانه","کرون — ندول"],a:1,e:"Wegener؛ Strawberry gingivitis و زخم‌های کام، گرانولوم نکروزه."},
+{q:"در سل غده بزاقی، الگوی درگیری معمولاً چگونه است؟",o:["دوطرفه","یک‌طرفه","فقط مینور","فقط پاروتید دوطرفه"],a:1,e:"اغلب یک‌طرفه؛ گرانولوم/کیست با نکروز پنیری."},
+/* --- Sialorrhea --- */
+{q:"شایع‌ترین مکانیسم سیالوره کدام است؟",o:["افزایش تولید بزاق","کاهش کلیرانس (مشکل بلع)","افزایش pH","کاهش حجم پلاسما"],a:1,e:"کاهش کلیرانس/بلع شایع‌تر از تولید بیش از حد است."},
+{q:"شایع‌ترین علامت سیالوره کدام است؟",o:["خشکی دهان","Drooling","تب","فلج صورت"],a:1,e:"Drooling (ریزش بزاق) شایع‌ترین علامت است."},
+{q:"کدام مورد جزو علائم خطرناک سیالوره است؟",o:["تغییر رنگ زبان","آسپیراسیون و pneumonia","ترک لب","افزایش پوسیدگی"],a:1,e:"انسداد مجاری هوایی و آسپیراسیون → pneumonia خطرناک‌اند."},
+{q:"داروهای درمان سیالوره (کاهش بزاق) از چه دسته‌ای هستند؟",o:["پاراسمپاتومیمتیک","ضدپاراسمپاتیک (xerostomic) مثل گلیکوپیرولات","β-آگونیست","کورتیکواستروئید"],a:1,e:"اسکوپولامین، پروپانتلین، آتروپین، گلیکوپیرولات، دیفن‌هیدرامین؛ نیز Botulinum toxin."},
+{q:"در مردان و خانم‌های premenopausal با سیالوره، سطح کدام هورمون اندازه‌گیری می‌شود؟",o:["کورتیزول","Androgen","تیروکسین","انسولین"],a:1,e:"افزایش androgen می‌تواند بزاق را افزایش دهد."},
+/* --- Radiation --- */
+{q:"بعد از چند گری تابش سر و گردن خشکی دهان دائمی محتمل است؟",o:["۵ تا ۱۰","۲۴ تا ۲۶","۵۰ تا ۶۰","۸۰ تا ۱۰۰"],a:1,e:"بعد از ۲۴–۲۶ گری؛ علائم از هفتهٔ اول، دورهٔ معمول ۶–۷ هفته."},
+{q:"ید رادیواکتیو توسط کدام سلول‌های غده بزاقی جذب می‌شود؟",o:["acinar","oncocytes","ductal","myoepithelial"],a:1,e:"I-131 توسط انکوسیت‌های غدد بزاقی جذب و باعث تخریب می‌شود."},
+{q:"عارضهٔ حاد ید رادیواکتیو شامل کدام است؟",o:["MALT lymphoma","Ageusia و تورم با درد بلع","SCC","فلج صورت"],a:1,e:"حاد: تورم + درد بلع و Ageusia؛ درازمدت: sialadenitis مزمن، stomatitis، caries."},
+{q:"در اقدامات تحریک غده پس از ید رادیواکتیو، چه زمانی نباید تحریک کرد؟",o:["۲۴ ساعت اول","هفتهٔ دوم","ماه اول","هیچ‌گاه"],a:0,e:"۲۴ ساعت اول نباید تحریک شود (ید بیشتری به‌جای تیروئید به غدد می‌رود)."},
+{q:"Ageusia ناشی از رادیوتراپی غالباً به چه صورت بروز می‌کند؟",o:["شیرینی","شوری (salty taste)","تلخی","ترشی"],a:1,e:"غالباً salty taste؛ ممکن است موقت یا با دوز بالا دائمی باشد."},
+{q:"کدام مکانیسم آسیب رادیوتراپی خارجی نیست؟",o:["القای Apoptosis","تولید رادیکال آزاد","کاهش خون‌رسانی","افزایش تولید موسین"],a:3,e:"مکانیسم‌ها: آپوپتوز، رادیکال آزاد، کاهش خون‌رسانی."},
+/* --- IgG4 --- */
+{q:"وجه اشتراک Küttner tumor و Mikulicz disease چیست؟",o:["هر دو بدخیم","افزایش IgG4 و پلاسماسل IgG4+","هر دو یک‌طرفه","هر دو در پاروتید"],a:1,e:"هر دو IgG4-Related با افزایش IgG4 سرم و پلاسماسل IgG4+ هستند."},
+{q:"Küttner tumor غالباً کدام غده را به‌صورت یک‌طرفه درگیر می‌کند؟",o:["پاروتید","ساب‌مندیبولار","ساب‌لینگوال","لاکریمال"],a:1,e:"Küttner = Chronic sclerosing sialadenitis، اغلب یک‌طرفه در ساب‌مندیبولار."},
+{q:"Mikulicz disease از سندروم شوگرن با کدام تست افتراق می‌یابد؟",o:["ANA مثبت","anti-SSA و anti-SSB منفی","ESR بالا","RF مثبت"],a:1,e:"در Mikulicz این دو منفی‌اند و IgG4 سرم افزایش می‌یابد."},
+{q:"خط اول درمان IgG4-RD با درگیری چند غده کدام است؟",o:["جراحی","corticosteroid دوز بالا","رادیوتراپی","آنتی‌بیوتیک"],a:1,e:"corticosteroid دوز بالا؛ سپس ساپرس‌کننده‌ها مثل آزاتیوپرین."},
+/* --- Viral: Mumps / CMV / HIV --- */
+{q:"اوریون عمدتاً کدام غده را درگیر می‌کند؟",o:["ساب‌مندیبولار (۹۵٪)","پاروتید (۹۵٪)","ساب‌لینگوال","غدد فرعی"],a:1,e:"در ۹۵٪ موارد پاروتید؛ اغلب دوطرفه و غیرچرکی."},
+{q:"دورهٔ incubation اوریون چقدر است؟",o:["۱ تا ۲ روز","۲ تا ۳ هفته","۲ تا ۳ ماه","۶ ماه"],a:1,e:"۲ تا ۳ هفته؛ ممکن است برادر ~۲۰ روز بعد علامت‌دار شود."},
+{q:"عارضهٔ اوریون در پسران adolescence که به استراحت کافی نرسند کدام است؟",o:["دیابت","epididimitis و orchitis → infertility","فلج صورت","کم‌خونی"],a:1,e:"احتمال orchitis/epididimitis و ناباروری."},
+{q:"Anesthesia mumps چه ماهیتی دارد؟",o:["ویروسی","غیرویروسی و خودمحدودشونده، بعد از جراحی عمومی","باکتریال","قارچی"],a:1,e:"ارتباطی با اوریون ندارد؛ افزایش حجم گذرای پاروتید پس از General anesthesia."},
+{q:"CMV معادل کدام ویروس هرپس است؟",o:["HHV-4 (EBV)","HHV-5","HHV-8","HHV-3"],a:1,e:"CMV = HHV-5 (human betaherpesvirus 5)."},
+{q:"شایع‌ترین عامل مونونوکلئوز عفونی کدام است؟",o:["CMV","EBV","HIV","HCV"],a:1,e:"EBV شایع‌ترین؛ CMV دومین عامل است."},
+{q:"سلول owl's eye مشخصهٔ کدام عفونت است؟",o:["اوریون","CMV","HIV","سل"],a:1,e:"owl's eye (انکلوزیون ویروسی) در CMV دیده می‌شود."},
+{q:"در HIV+ تورم غده بزاقی بیشتر در کدام و چند درصد دوطرفه است؟",o:["ساب‌مندیبولار، ۲۰٪","پاروتید (۹۸٪)، ۶۰٪ دوطرفه","ساب‌لینگوال، ۱۰۰٪","مینور، ۵۰٪"],a:1,e:"شایع‌ترین علامت تورم؛ ۹۸٪ پاروتید، ۶۰٪ دوطرفه."},
+{q:"لنفوسیت غالب در ارتشاح غده بزاقی بیماران HIV چیست (برخلاف شوگرن)؟",o:["CD4+","CD8+","B cell","NK"],a:1,e:"در HIV غالب CD8+؛ در شوگرن CD4+؛ افتراق با IHC."},
+{q:"کدام تست در شوگرن مثبت ولی در HIV منفی است؟",o:["ANA","Anti-SSA و Anti-SSB","RF","IgA"],a:1,e:"Anti-SSA/SSB فقط در شوگرن مثبت است."},
+{q:"داروی پروفیلاکسی/درمان CMV در گیرندگان پیوند کدام است؟",o:["آسیکلوویر","Valganciclovir یا Ganciclovir","پنی‌سیلین","فلوکونازول"],a:1,e:"valganciclovir/ganciclovir؛ در شدید دوز induction سپس maintenance."},
+{q:"عفونت CMV غده بزاقی بیش از یک ماه با تورم و درد، در HIV+ نشانهٔ چیست؟",o:["بهبودی","رسیدن به ایدز (مرحله سوم)","عفونت باکتریال","سل"],a:1,e:"مارکر تشخیصی رسیدن HIV+ به ایدز (مرحله سوم) است."},
+{q:"بزاق تنها مایع بدنی است که می‌توان کدام ویروس را در آن بررسی کرد؟",o:["HHV-5","HHV-8","EBV","HCV"],a:1,e:"HHV-8، خصوصاً در ضایعهٔ شبه‌Kaposi."}
+];
+
+/* ============ RENDER ============ */
+(function renderQuiz(){
+  const c = document.getElementById('quizContainer');
+  if(!c) return;
+  QUIZDATA.forEach((item,i)=>{
+    const div = document.createElement('div');
+    div.className='q'; div.id='q'+i;
+    let opts='';
+    item.o.forEach((op,j)=>{
+      opts += '<li><label data-i="'+i+'" data-j="'+j+'"><input type="radio" name="q'+i+'" value="'+j+'"><span>'+op+'</span></label></li>';
+    });
+    div.innerHTML =
+      '<div class="qn"><span class="badge">'+(i+1)+'</span> '+item.q+'</div>'+
+      '<ul class="opts">'+opts+'</ul>'+
+      '<div class="explain" id="e'+i+'"><b>پاسخ:</b> '+item.o[item.a]+' — '+item.e+'</div>';
+    c.appendChild(div);
+  });
+  var n=QUIZDATA.length;
+  var h=document.getElementById('quizHeading'); if(h) h.textContent='آزمون جامع مرور کامل — '+n+' سؤال';
+  var b=document.getElementById('quizBtn'); if(b) b.textContent='آزمون '+n+' سؤالی';
+})();
+
+/* ============ LOGIC ============ */
+function clearMarks(){
+  document.querySelectorAll('.opts label').forEach(l=>l.classList.remove('correct','wrong'));
+  document.querySelectorAll('.explain').forEach(e=>e.classList.remove('show'));
+}
+function checkQuiz(){
+  let score=0, answered=0;
+  QUIZDATA.forEach((item,i)=>{
+    const sel = document.querySelector('input[name="q'+i+'"]:checked');
+    const labels = document.querySelectorAll('label[data-i="'+i+'"]');
+    labels.forEach(l=>l.classList.remove('correct','wrong'));
+    labels[item.a].classList.add('correct');
+    if(sel){
+      answered++;
+      const j = +sel.value;
+      if(j===item.a) score++;
+      else labels[j].classList.add('wrong');
+    }
+    document.getElementById('e'+i).classList.add('show');
+  });
+  const txt = 'نمره: '+score+' از '+QUIZDATA.length+' (پاسخ‌داده: '+answered+')';
+  document.getElementById('scoreBox').textContent = txt;
+  document.getElementById('scoreBox2').textContent = txt;
+}
+function revealAll(){
+  QUIZDATA.forEach((item,i)=>{
+    document.querySelectorAll('label[data-i="'+i+'"]')[item.a].classList.add('correct');
+    document.getElementById('e'+i).classList.add('show');
+  });
+}
+function resetQuiz(){
+  document.querySelectorAll('#quizContainer input[type=radio]').forEach(r=>r.checked=false);
+  clearMarks();
+  document.getElementById('scoreBox').textContent='';
+  document.getElementById('scoreBox2').textContent='';
+}
+
+</script>
+</body>
+</html>

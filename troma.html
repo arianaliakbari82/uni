@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوه جامع تروماتولوژی دندانپزشکی</title>
+<style>
+  :root{
+    --bg:#f7f5f0;
+    --paper:#ffffff;
+    --ink:#1d2025;
+    --muted:#5a6270;
+    --primary:#1d6e63;
+    --primary-dark:#124a43;
+    --accent:#b5532a;
+    --accent-soft:#fdecdf;
+    --line:#d9d4ca;
+    --tbl-head:#1d6e63;
+    --tbl-stripe:#f0f4f2;
+    --warn-bg:#fff6e6;
+    --warn-bd:#e0a93a;
+    --note-bg:#e9f3f1;
+    --note-bd:#1d6e63;
+    --danger-bg:#fdeceb;
+    --danger-bd:#c0392b;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:Vazirmatn,"Segoe UI",Tahoma,sans-serif;
+    line-height:2;
+    font-size:17px;
+  }
+  /* English fragments stay LTR */
+  .en,code,.ltr{
+    direction:ltr;
+    unicode-bidi:isolate;
+    display:inline-block;
+    font-family:"Consolas","Courier New",monospace;
+  }
+  .term{
+    direction:ltr;
+    unicode-bidi:isolate;
+    color:var(--primary-dark);
+    font-weight:600;
+  }
+  header.cover{
+    background:linear-gradient(135deg,var(--primary-dark),var(--primary));
+    color:#fff;
+    padding:60px 24px 50px;
+    text-align:center;
+  }
+  header.cover h1{font-size:2.4rem;margin:0 0 10px;}
+  header.cover p{margin:4px 0;opacity:.93;font-size:1.05rem;}
+  header.cover .badge{
+    display:inline-block;margin-top:18px;background:rgba(255,255,255,.15);
+    padding:8px 18px;border-radius:30px;font-size:.95rem;border:1px solid rgba(255,255,255,.3);
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px 80px;}
+  /* TOC */
+  nav.toc{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:24px 28px;
+    margin:30px 0;
+    box-shadow:0 4px 18px rgba(0,0,0,.05);
+  }
+  nav.toc h2{margin-top:0;color:var(--primary-dark);border:none;padding:0;}
+  nav.toc ol{margin:0;padding-right:22px;}
+  nav.toc li{margin:6px 0;}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--line);}
+  nav.toc a:hover{color:var(--accent);}
+  section.chap{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:30px 34px;
+    margin:26px 0;
+    box-shadow:0 4px 18px rgba(0,0,0,.04);
+  }
+  h2{
+    color:#fff;background:var(--primary);
+    padding:12px 18px;border-radius:10px;
+    font-size:1.5rem;margin:0 0 22px;
+    scroll-margin-top:20px;
+  }
+  h3{
+    color:var(--primary-dark);
+    border-right:5px solid var(--accent);
+    padding:4px 14px 4px 0;
+    margin:30px 0 14px;
+    font-size:1.25rem;
+  }
+  h4{
+    color:var(--accent);
+    margin:20px 0 8px;
+    font-size:1.08rem;
+  }
+  p{margin:10px 0;text-align:justify;}
+  ul,ol{padding-right:26px;}
+  li{margin:6px 0;}
+  table{
+    width:100%;border-collapse:collapse;margin:18px 0;
+    background:var(--paper);font-size:.95rem;
+    border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  }
+  caption{
+    caption-side:top;text-align:right;font-weight:700;
+    color:var(--primary-dark);padding:6px 2px 10px;font-size:1.05rem;
+  }
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  thead th{background:var(--tbl-head);color:#fff;font-weight:700;}
+  tbody tr:nth-child(even){background:var(--tbl-stripe);}
+  .box{border-radius:10px;padding:14px 18px;margin:16px 0;}
+  .note{background:var(--note-bg);border-right:5px solid var(--note-bd);}
+  .warn{background:var(--warn-bg);border-right:5px solid var(--warn-bd);}
+  .danger{background:var(--danger-bg);border-right:5px solid var(--danger-bd);}
+  .box .lbl{font-weight:700;display:block;margin-bottom:4px;}
+  .note .lbl{color:var(--primary-dark);}
+  .warn .lbl{color:#9a6b14;}
+  .danger .lbl{color:var(--danger-bd);}
+  .pill{
+    display:inline-block;background:var(--accent-soft);color:var(--accent);
+    border-radius:20px;padding:2px 12px;font-size:.85rem;font-weight:600;margin:2px;
+  }
+  .src{font-size:.82rem;color:var(--muted);font-style:italic;}
+  .top-link{display:block;text-align:left;margin-top:18px;}
+  .top-link a{color:var(--primary);text-decoration:none;font-size:.88rem;}
+  /* Quiz */
+  #quiz .q{
+    background:var(--paper);border:1px solid var(--line);
+    border-radius:10px;padding:16px 20px;margin:14px 0;
+  }
+  #quiz .q .qnum{color:var(--accent);font-weight:700;margin-left:6px;}
+  #quiz .opts{list-style:none;padding:0;margin:10px 0 0;}
+  #quiz .opts li{
+    padding:8px 14px;margin:6px 0;border:1px solid var(--line);
+    border-radius:8px;cursor:pointer;transition:.15s;
+  }
+  #quiz .opts li:hover{background:var(--tbl-stripe);}
+  #quiz .opts li.correct{background:#d8f0e4;border-color:var(--primary);font-weight:600;}
+  #quiz .opts li.wrong{background:#fcdcd8;border-color:var(--danger-bd);}
+  #quiz .explain{
+    margin-top:10px;padding:10px 14px;background:var(--note-bg);
+    border-radius:8px;display:none;font-size:.92rem;
+  }
+  #quiz .explain.show{display:block;}
+  .quiz-controls{text-align:center;margin:20px 0;}
+  .quiz-controls button{
+    background:var(--primary);color:#fff;border:none;border-radius:8px;
+    padding:10px 22px;font-size:1rem;cursor:pointer;font-family:inherit;margin:0 6px;
+  }
+  .quiz-controls button:hover{background:var(--primary-dark);}
+  #score{font-size:1.2rem;font-weight:700;color:var(--accent);margin-top:14px;}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 10px;}
+  @media print{
+    body{background:#fff;font-size:12px;}
+    section.chap,nav.toc{box-shadow:none;border:1px solid #ccc;}
+    .top-link{display:none;}
+  }
+</style>
+</head>
+<body>
+<header class="cover">
+  <h1>جزوه جامع تروماتولوژی دندانپزشکی</h1>
+  <p>پوشش کامل تمام جلسات: دکتر اسلامی، دکتر مختاری، دکتر ساجدی، دکتر توکلی</p>
+  <p>ورودی مهر ۱۴۰۰ / مهر ۹۶ یزد</p>
+  <span class="badge">جامع‌ترین حالت + جداول مقایسه‌ای + آزمون ۱۰۰ سؤالی</span>
+</header>
+
+<div class="wrap">
+
+<nav class="toc" id="top">
+  <h2>فهرست مطالب</h2>
+  <ol>
+    <li><a href="#c1">فصل ۱ — ارزیابی اولیه بیمار ترومایی (دکتر اسلامی)</a></li>
+    <li><a href="#c2">فصل ۲ — تروما به دندان دائمی: شکستگی‌های تاج (دکتر مختاری ۱)</a></li>
+    <li><a href="#c3">فصل ۳ — درمان ریشه دندان‌های تروماتیزه (دکتر مختاری ۲)</a></li>
+    <li><a href="#c4">فصل ۴ — شکستگی ریشه و صدمات جابجایی دندان (دکتر مختاری ۳)</a></li>
+    <li><a href="#c5">فصل ۵ — آسیب تروماتیک دندان شیری (دکتر ساجدی ۳)</a></li>
+    <li><a href="#c6">فصل ۶ — جابجایی‌ها، تغییر رنگ و عوارض دندان شیری (دکتر ساجدی ۴)</a></li>
+    <li><a href="#c7">فصل ۷ — تروماهای فک و صورت: مندیبل، ماگزیلا، لفور (دکتر توکلی ۷)</a></li>
+    <li><a href="#c8">فصل ۸ — ZMC، اوربیت، سینوس فرونتال، NOE، بینی (دکتر توکلی ۸)</a></li>
+    <li><a href="#summary">جداول جمع‌بندی نهایی (مقایسه‌ای)</a></li>
+    <li><a href="#quiz">آزمون مرور ۱۰۰ سؤالی</a></li>
+  </ol>
+</nav>
+
+<!-- ============ فصل ۱ ============ -->
+<section class="chap" id="c1">
+  <h2>فصل ۱ — ارزیابی اولیه بیمار ترومایی</h2>
+  <p class="src">منبع: دکتر اسلامی، جلسه اول</p>
+
+  <h3>مقدمه و اهمیت ارزیابی اولیه</h3>
+  <p>وقتی برای بیماری تروما اتفاق می‌افتد (چه مربوط به دندانپزشکی و چه سانحه و درگیری سایر ارگان‌های بدن)، مهم‌ترین چیز <strong>ارزیابی اولیه بیمار</strong> است؛ یعنی یک سری اقدامات و مراحل را پیش می‌بریم تا بیمار را ارزیابی کنیم. اگر آسیب صرفاً محدود به سر و گردن باشد تمرکز ما روی این موارد است؛ در صورت آسیب‌های متعدد، همه موارد باید ارزیابی شوند.</p>
+
+  <div class="box note">
+    <span class="lbl">هدف اصلی ارزیابی اولیه</span>
+    شناسایی بیماری است که آسیب‌های <strong>تهدیدکننده زندگی</strong> دارد، سپس تعیین اولویت‌های درمانی و مدیریت تهاجمی آن‌ها. ابتدا باید نوع آسیب را تشخیص دهیم و بر اساس آن پروتکل‌ها و اقدامات بعدی را انجام داده و طرح درمان ارائه دهیم.
+  </div>
+
+  <p><strong>سه مرحله کلی:</strong> ۱) ارزیابی تروما ← ۲) اقداماتی که باید انجام شود ← ۳) درمان و مدیریت بیمار.</p>
+
+  <h3>طبقه‌بندی شدت آسیب‌ها</h3>
+  <table>
+    <caption>جدول ۱-۱: انواع آسیب بر اساس شدت</caption>
+    <thead>
+      <tr><th>نوع آسیب</th><th>درصد از کل آسیب‌ها</th><th>تهدید حیات</th><th>توضیحات</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>آسیب‌های شدید</td><td>≈ ۵٪</td><td>بله — تهدیدکننده حیات</td><td>عامل ≈ <strong>۵۰٪ مرگ‌های</strong> ناشی از تروما؛ فانکشن فیزیولوژیک بیمار مختل می‌شود</td></tr>
+      <tr><td>آسیب‌های اورژانسی</td><td>≈ ۱۰ تا ۱۵٪</td><td>خیر</td><td>نیاز به درمان سریع و مداخله جراحی؛ علائم حیاتی ثابت است و نیاز به احیا نیست</td></tr>
+      <tr><td>آسیب‌های غیر اورژانسی</td><td>≈ ۸۰٪</td><td>خیر</td><td>نیاز به مداخله جراحی، رادیوگرافی و مراقبت؛ بیمار باید مرتب فالو شود تا مشکل حادی پیش نیاید</td></tr>
+    </tbody>
+  </table>
+
+  <h3>اقدامات فوری و ارزیابی قلبی-ریوی</h3>
+  <p>اولین ارزیابی برای هر بیمار مصدوم، <strong>ارزیابی قلبی ریوی</strong> است (بیمار از لحاظ گردش خون و تنفسی مشکلی نداشته باشد). اقدامات فوری در محل حادثه مثل بند آوردن خونریزی با اعمال فشار بر ناحیه (با پنس و گاز) ممکن است لازم باشد.</p>
+
+  <div class="box warn">
+    <span class="lbl">محافظت نورولوژیک و گردنی</span>
+    بیمار حتماً از لحاظ نورولوژیک (تمام اعصاب طناب نخاعی) بررسی شود. برخی ضربه‌های سخت که موجب شکستگی استخوان‌های صورت می‌شوند ممکن است به <strong>نخاع گردنی</strong> نیز آسیب بزنند. در این موارد سر و گردن باید موقتاً با <span class="term">collar</span> گردنی فیکس شود (مخصوصاً در جابه‌جایی‌ها و رادیوگرافی‌ها). در صورت رد آسیب گردنی، کالر باز می‌شود.
+  </div>
+
+  <h3>راه هوایی در شکستگی فک پایین</h3>
+  <p>توجه به وضعیت تنفسی بسیار حیاتی است. اگر شکستگی در <strong>قدام فک پایین</strong> اتفاق بیفتد، اتصالات عضلات <span class="term">genioglossus</span> و <span class="term">geniohyoid</span> (که به ناحیه لینگوال سمفیز مندیبل است) دچار مشکل می‌شود و قطعات استخوانی به سمت حلق کشیده می‌شوند. در این حالت فضای زبان در دهان کمتر شده، زبان بالا و عقب رفته و مسیر هوایی را می‌بندد ← مشکل تنفسی.</p>
+  <p>اگر شکستگی در ناحیه قدام مندیبل (مثلاً ناحیه بین دو دندان کانین) باشد، ناحیه سمفیز آزاد شده و توسط این دو عضله به عقب کشیده می‌شود. در این موارد قطعه شکسته باید <strong>اورژانسی فیکس</strong> شود:</p>
+  <ul>
+    <li>اگر بیمار <strong>دندان دارد</strong>: دندان‌های در خط شکستگی را به دندان‌های مجاور سمت سالم فیکس می‌کنیم.</li>
+    <li>اگر بیمار <strong>دندان ندارد</strong>: زبان را با نخ بخیه بیرون آورده و با سوچور نگه می‌داریم (تکنیکی: نخ بخیه را از وسط زبان رد کرده و به ناحیه استرنوم بخیه می‌زنند).</li>
+  </ul>
+  <div class="box note">
+    تکه‌های خرد شده دندان یا استخوان می‌توانند <strong>آسپیره</strong> شوند و باید کاملاً خارج شوند. بزاق و خون داخل دهان باید تخلیه شود. برای بهبود موقت راه تنفسی، یک راه هوایی <span class="term">nasopharyngeal</span> یا <span class="term">oropharyngeal</span> کافی است؛ در بعضی موارد گذاشتن لوله <span class="term">endotracheal</span> ضرورت دارد.
+  </div>
+  <p>در انسداد کامل راه هوایی فوقانی می‌توان از <span class="term">cricothyrotomy</span> به‌صورت اورژانسی استفاده کرد؛ این راه هوایی تا <strong>۴۵ دقیقه</strong> کمک می‌کند. در مطب باید وسایل احیا (آمبوبگ، لوله تراشه و...) موجود باشد. توجه: خونریزی ناشی از جراحت کریکوتیروتومی خودش می‌تواند شرایط را بدتر کند.</p>
+
+  <h3>گرفتن شرح حال (History) — ۵ سؤال مهم</h3>
+  <p>پس از ثبات شرایط، شرح حال از خود بیمار گرفته می‌شود؛ اگر بیهوش یا آسیب نورولوژیک داشته باشد، از شاهدان حادثه یا همراهان.</p>
+  <ol>
+    <li>حادثه چطور اتفاق افتاد؟</li>
+    <li>چه موقع حادثه رخ داد؟</li>
+    <li>جزئیات جراحات چیست؟ (عامل اصابت، جهت اصابت و...)</li>
+    <li>آیا بیمار بیهوش شده؟</li>
+    <li>در حال حاضر چه علائمی وجود دارد؟ (درد، تغییرات ظاهری/حسی/بینایی) + بررسی حساسیت‌ها، داروها، ایمنی کزاز و جراحی‌های گذشته.</li>
+  </ol>
+
+  <h3>علائم بالینی تشخیصی</h3>
+  <table>
+    <caption>جدول ۱-۲: علائم بالینی و آسیب احتمالی</caption>
+    <thead><tr><th>علامت بالینی</th><th>آسیب احتمالی</th></tr></thead>
+    <tbody>
+      <tr><td>اکیموز و خونریزی زیر ملتحمه</td><td>شکستگی استخوان اطراف اوربیت (مثل زائده زایگوماتیک استخوان فرونتال یا زائده فرونتال استخوان ماگزیلا). ضعیف‌ترین ناحیه محل اتصال این دو زائده است.</td></tr>
+      <tr><td>عدم حرکت کامل چشم به سمت پایین در سمت آسیب‌دیده</td><td>شکستگی کف اوربیت — عضلات در شکستگی گیر کرده‌اند و به‌راحتی منقبض نمی‌شوند (چشم به سمت بالا راحت می‌رود).</td></tr>
+    </tbody>
+  </table>
+
+  <h3>پروتکل ATLS (Advanced Trauma Life Support)</h3>
+  <ol>
+    <li>مرحله آماده‌سازی و انتقال بیمار</li>
+    <li>ارزیابی‌های اولیه (مانیتورینگ و رادیوگرافی‌های لازم)</li>
+    <li>ارزیابی‌های ثانویه و مداخلات اختصاصی (رادیوگرافی، CT، اقدامات جراحی تشخیصی)</li>
+    <li>ارزیابی کلی مجدد</li>
+    <li>درمان</li>
+  </ol>
+  <div class="box note">
+    <span class="lbl">نکته مهم آماده‌سازی</span>
+    مکانیزم آسیب، علائم حیاتی و یافته‌ها باید به بیمارستان گزارش شوند. اگر بیمار <strong>دنچر</strong> دارد، دنچر باید پیدا شود — وقتی بیمار بی‌دندان است و فک شکسته، راهنمایی برای فیکس فک وجود ندارد و از دنچر به‌عنوان گاید استفاده می‌شود. آنچه در فیکس فک مهم است، حفظ <strong>اکلوژن دندانی</strong> است.
+  </div>
+  <p><strong>تجهیزات استند بای فاز بیمارستانی:</strong> اتاق احیا با وسایل محافظت راه هوایی، لوله‌های اینتوبیشن/اندوتراکئال، لارنگوسکوپ، ساکشن، کیت تراکئوستومی و کریکوتیروتومی؛ وسایل احیای وریدی (IV، آنژیوکت، سوزن با گیج‌های مختلف)، سرم‌های کریستالوئید (سرد و گرم)، وسایل رگ‌گیری مرکزی.</p>
+
+  <h3>اسکورینگ تروما — مقیاس کمای گلاسکو (GCS)</h3>
+  <p>شاخص‌ترین روش بررسی سطح هوشیاری <span class="term">GCS (Glasgow Coma Scale)</span> است که شامل بررسی <strong>۳ پاسخ</strong> است:</p>
+  <table>
+    <caption>جدول ۱-۳: مقیاس کمای گلاسکو (GCS) — مجموع ۳ تا ۱۵</caption>
+    <thead>
+      <tr><th>نمره</th><th>Eye Opening (E) — ۴ نمره</th><th>Verbal Response (V) — ۵ نمره</th><th>Motor Response (M) — ۶ نمره</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>۶</td><td>—</td><td>—</td><td>اطاعت از دستورهای حرکتی (Normal)</td></tr>
+      <tr><td>۵</td><td>—</td><td>گفتگوی نرمال و پاسخ درست (Normal conversation)</td><td>نشان دادن محل درد ولی ناتوان در اجرای دقیق دستور (Localizes to pain)</td></tr>
+      <tr><td>۴</td><td>خودبه‌خود باز است (Spontaneous)</td><td>جملات مناسب ولی ناآگاه به زمان و مکان (Disoriented)</td><td>دور کردن ناخودآگاه عامل درد (Withdraws to pain)</td></tr>
+      <tr><td>۳</td><td>با تحریک صدا باز می‌کند (To voice)</td><td>کلمات بی‌ارتباط (Words, not coherent)</td><td>Decortication (دست‌ها جمع، پاها به خط وسط — مثل فرد سردش)</td></tr>
+      <tr><td>۲</td><td>با تحریک درد باز می‌کند (To pain)</td><td>فقط صدا، نه کلمه (No words, only sounds)</td><td>Decerebrate (دست و پا باز و از هم فاصله گرفته)</td></tr>
+      <tr><td>۱</td><td>هیچ‌گاه باز نمی‌کند (None)</td><td>هیچ پاسخی (None)</td><td>هیچ حرکت — حالت مرده (None)</td></tr>
+    </tbody>
+  </table>
+  <div class="box warn">
+    <span class="lbl">تفسیر نمره کل GCS</span>
+    <ul style="margin:6px 0;">
+      <li>کمترین مقدار <strong>۳</strong> و بیشترین <strong>۱۵</strong> است (زیر ۳ نداریم).</li>
+      <li>عدد <strong>۸ یا کمتر</strong> = بیمار به <strong>کما</strong> رفته است.</li>
+      <li>عدد <strong>۳ تا ۸</strong> = آسیب شدید به سر.</li>
+      <li>عدد <strong>۹ تا ۱۳</strong> = آسیب جزئی به سر.</li>
+    </ul>
+    نکته: تحریک هم‌زمان (مثلاً تکان دادن + صدا زدن) در ارزیابی هوشیاری <strong>اشتباه</strong> است.
+  </div>
+
+  <h3>ارزیابی آناتومیکی</h3>
+  <p>پس از ارزیابی سطح هوشیاری، بیمار از لحاظ آناتومیک بررسی می‌شود: زخم/سوراخ‌شدگی/پارگی در سر، صورت، گردن، ناحیه تناسلی، ران، قفسه سینه (محل عبور عروق بزرگ). بررسی موارد:</p>
+  <ul>
+    <li><span class="term">Flail chest</span>: ۳ دنده یا بیشتر کنار هم شکسته و قفسه سینه حالت شناور دارد.</li>
+    <li>سوختگی شدید، قطع عضو، شکستگی ۲ یا بیشتر استخوان دراز، فلج.</li>
+  </ul>
+  <h4>فاکتورهای بدتر کننده وضعیت بیمار</h4>
+  <ul>
+    <li>بیماری زمینه‌ای مثل دیابت یا پوکی استخوان</li>
+    <li>سن کمتر از ۵ یا بیشتر از ۵۵ سال</li>
+    <li>بیماری‌های قلبی یا تنفسی</li>
+  </ul>
+
+  <h3>الگوریتم ABCDE</h3>
+  <table>
+    <caption>جدول ۱-۴: مراحل ABCDE در ارزیابی اولیه</caption>
+    <thead><tr><th>حرف</th><th>معنا</th><th>اقدام</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">A</span></td><td>Airway (راه هوایی)</td><td>حفظ راه هوایی + محافظت گردنی (تا رد آسیب، فرض بر آسیب‌دیدگی است). توجه: فلج‌های گردنی اغلب به‌خاطر جابه‌جایی غیراصولی پس از تروما رخ می‌دهد نه خود تروما.</td></tr>
+      <tr><td><span class="term">B</span></td><td>Breathing (تنفس)</td><td>آیا می‌تواند نفس بکشد؟ آیا تهویه اتفاق می‌افتد؟</td></tr>
+      <tr><td><span class="term">C</span></td><td>Circulation (گردش خون)</td><td>بررسی گردش خون و کنترل خونریزی (Circulation & Hemorrhage control).</td></tr>
+      <tr><td><span class="term">D</span></td><td>Disability (ناتوانی)</td><td>بررسی وضعیت نورولوژیک/اعصاب.</td></tr>
+      <tr><td><span class="term">E</span></td><td>Exposure (آشکارسازی)</td><td>درآوردن لباس‌ها + بررسی کامل + بررسی محیط (مثلاً پیدا کردن دنچر که اغلب miss می‌شود). مراقب <strong>هایپوترمی</strong> باشیم.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>جزئیات Airway</h3>
+  <h4>عوامل بسته شدن راه هوایی</h4>
+  <ul>
+    <li><strong>موقعیت زبان</strong>: عقب افتادن زبان (مثلاً شکستگی دوطرفه فک پایین که عضلات زبان آزاد می‌شوند و قسمت قدامی به عقب می‌رود).</li>
+    <li><strong>جسم خارجی آسپیره‌شده</strong> (دندان خود فرد) یا بازگشت محتویات معده.</li>
+    <li><strong>خونریزی دهان و حلق</strong> (به دلیل خونرسانی زیاد صورت).</li>
+    <li><strong>هماتوم</strong>: هماتوم ساب‌لینگوال (در شکستگی فک پایین) باعث بالا آمدن زبان؛ هماتوم گردن به سمت داخل بافت‌ها تورم ایجاد می‌کند.</li>
+    <li><strong>آسیب مغزی</strong> به مرکز تنفس در ساقه مغز.</li>
+  </ul>
+  <h4>دو مانور باز کردن راه هوایی</h4>
+  <table>
+    <caption>جدول ۱-۵: مقایسه مانورهای راه هوایی</caption>
+    <thead><tr><th>مانور</th><th>روش</th><th>ایمن برای آسیب گردنی؟</th><th>نکات</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="term">Jaw Thrust</span></td>
+        <td>انگشتان دو دست دوطرفه در زاویه مندیبل؛ شست‌ها روی گونه/دندان؛ مندیبل به جلو و پایین.</td>
+        <td><strong>بله — ایمن‌ترین</strong> (پوزیشن گردن تغییر نمی‌کند)</td>
+        <td>در مطب کمک‌کننده است (برای بیماری که از اسپاسم عضلات می‌ترسد).</td>
+      </tr>
+      <tr>
+        <td><span class="term">Chin Lift</span></td>
+        <td>یک دست روی پیشانی؛ شست روی لبه اینسیزور فک پایین و دو انگشت زیر چانه؛ چانه به جلو و بالا.</td>
+        <td><strong>خیر</strong> — به‌دلیل کشش می‌تواند در آسیب گردنی فلج ایجاد کند</td>
+        <td>در بچه‌های زیر ۱۲ سال هم استفاده نمی‌شود (ستون فقرات هنوز کاملاً سفت نشده).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>پس از باز کردن راه هوایی: گذاشتن <span class="term">oral airway</span> یا <span class="term">nasal airway</span> برای حفظ موقعیت زبان (بر حسب سن و جثه). بیمار هوشیار <span class="term">nasal airway</span> را راحت‌تر تحمل می‌کند.</p>
+
+  <h3>احتمال آسیب گردنی</h3>
+  <div class="box warn">
+    هر بیمار با ترومای مولتی‌سیستم، تغییر سطح هوشیاری، یا آسیب <span class="term">blunt</span> (در مقابل <span class="term">sharp</span> مثل چاقو) در ناحیه <strong>بالای کلاویکل</strong> ← باید فرض شود آسیب گردنی دارد تا با رادیوگرافی/CT رد شود. از کالر گردنی (<span class="term">C-spine</span>) استفاده می‌شود (هرچند ۳۰ تا ۵۰٪ بیشتر محافظت نمی‌دهد ولی کمک‌کننده است).
+  </div>
+  <p>بیمار با تغییر سطح هوشیاری، <span class="term">drug abuse</span> (الکل یا داروی دیگر)، یا <span class="term">GCS ≤ 8</span> حتماً نیاز دارد به: ۱) راه هوایی قطعی (لوله تنفسی / در صحنه: کریکوتیروتومی یا تراکئه اورژانسی) و ۲) محافظت گردنی.</p>
+
+  <h3>اندوتراکئال اینتوبیشن</h3>
+  <p>برای راه هوایی قطعی، اینتوبیشن انجام می‌شود (معمولاً ۲ نفر: یکی دارودرمانی/آماده‌سازی، یکی اینتوبیشن). از طریق دهان یا بینی:</p>
+  <ul>
+    <li>شکستگی متعدد صورت یا مشکل بینی ← اینتوبیشن <strong>نازال ممنوع</strong>، باید دهانی باشد (با لارنگوسکوپ که اپی‌گلوت را بالا نگه می‌دارد).</li>
+    <li>شکستگی بیس جمجمه (استخوان اسفنوئید) ← اینتوبیشن نازال <strong>خطرناک</strong> است (لوله ممکن است به سمت مغز برود).</li>
+    <li>شکستگی وسیع داخل دهان + شکستگی بیس جمجمه + اهمیت اکلوژن ← راهکار: <strong>برش زیر چانه</strong> و وارد کردن لوله از زیر چانه و زیر زبان به حلق (لوله از بین دندان‌ها عبور نمی‌کند).</li>
+  </ul>
+
+  <h3>راه هوایی جراحی</h3>
+  <table>
+    <caption>جدول ۱-۶: مقایسه نیدل و سرجیکال کریکوتایروئیدکتومی</caption>
+    <thead><tr><th>روش</th><th>ابزار</th><th>مدت کمک</th><th>منع در سن</th></tr></thead>
+    <tbody>
+      <tr><td>نیدل کریکوتایروئیدکتومی</td><td>سوزن با گیج کم (قطر زیاد) — غضروف کریکوئید را سوراخ می‌کند</td><td>۳۰ تا ۴۵ دقیقه (اورژانسی)</td><td>—</td></tr>
+      <tr><td>سرجیکال کریکوتایروئیدکتومی</td><td>بیستوری/تیغ (همان کار با تیغ)</td><td>—</td><td><strong>بچه‌های زیر ۱۱ سال نباید</strong> (آسیب به غضروف کریکوئید)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Breathing (تنفس)</h3>
+  <p>هدف تنفس، تهویه (تبادل اکسیژن و CO₂) است. ابزار سنجش:</p>
+  <ul>
+    <li><span class="term">Capnometer</span>: میزان CO₂ هوای بازدمی را اندازه می‌گیرد؛ بسیار دقیق؛ در فرد بیهوش استفاده می‌شود.</li>
+    <li><span class="term">Pulse oximeter</span>: اشباع اکسیژن خون را اندازه می‌گیرد.</li>
+  </ul>
+  <p>سه روش چک تنفس: <strong>لمس، شنوایی (سمع)، دیدن</strong>. علائم مشکل تنفسی: حرکت ناهماهنگ قفسه سینه، استفاده از عضلات فرعی دنده‌ها (تنفس نرمال با دیافراگم)، صدای <span class="term">stridor</span>.</p>
+
+  <h3>Circulation (گردش خون)</h3>
+  <div class="box danger">
+    <span class="lbl">خونریزی = عامل اصلی مرگ قابل پیشگیری</span>
+    میزان مرگ‌ومیر ناشی از خونریزی ≈ ۳۰ تا ۴۰٪؛ <strong>۵۰٪ مرگ‌های ثانویه به خونریزی در ۲۴ ساعت اول</strong> رخ می‌دهد. خون ≈ ۷٪ وزن بدن (در بچه‌ها ۸ تا ۹٪). پس از تروما ممکن است شوک <span class="term">hypovolemic</span> رخ دهد.
+  </div>
+  <h4>علل اختلال گردش خون و خونریزی</h4>
+  <ul>
+    <li>اختلالات تنفس، هایپوکسی، هایپرکربیا</li>
+    <li>از دست دادن خون (داخلی یا خارجی)</li>
+    <li><span class="term">Tension pneumothorax</span> (خونریزی داخل ریه و جمع شدن خون در ریه)</li>
+    <li><span class="term">Pericardial tamponade</span> (جمع شدن خون اطراف بافت قلب)</li>
+    <li>پارگی بطن‌ها یا کانتیوژن (کوفتگی) بافت قلب</li>
+    <li>تغییرات متابولیک (اسیدوز)، سوختگی، هایپوترمی</li>
+  </ul>
+  <h4>نشانه‌های خونریزی</h4>
+  <ul>
+    <li>کاهش/از دست رفتن سطح هوشیاری</li>
+    <li>دیسترس تنفسی</li>
+    <li>کاهش حجم خون → شوک هایپوولمیک</li>
+    <li>هایپوکسی بافتی، اسیدوز متابولیک</li>
+    <li>افزایش تعداد تنفس (اکسیژن‌رسانی به بافت‌ها کم شده)</li>
+    <li>کاهش خونرسانی به ارگان‌های حیاتی (مغز، کبد، کلیه، روده‌ها) → ایسکمی و مرگ سلولی</li>
+  </ul>
+
+  <h3>مدیریت بیمار (گام‌به‌گام در Circulation)</h3>
+  <ol>
+    <li>ارزیابی کامل و بررسی سطح هوشیاری.</li>
+    <li><strong>نبض</strong>: از شریان‌های مرکزی (کاروتید یا فمورال). نبض سریع = خونریزی؛ نبض نامنظم = مشکل قلبی.</li>
+    <li><strong>تعداد تنفس</strong>: در خونریزی افزایش (تاکی‌پنه) — برای جبران کاهش حجم خون و هموگلوبین.</li>
+    <li><strong>فشار خون</strong>: اگر بیش از ۳۰٪ حجم خون از دست برود، تغییر در فشار خون دیده می‌شود؛ کمتر از آن از طریق انقباض عروقی یا ضربان قلب جبران می‌شود.</li>
+    <li><strong>رنگ پوست</strong>: نرمال صورتی است؛ خاکستری/پریده = خونریزی. تست فشار: برداشتن انگشت و زمان طولانی برگشت رنگ.</li>
+    <li>کاهش برون‌ده ادرار یا ورود به فاز اسیدوز = نشانه خونریزی.</li>
+  </ol>
+
+  <h3>Disability (ناتوانی) — روش AVPU</h3>
+  <p>ارزیابی سریع وضعیت عصبی + بررسی پوسچر (Decorticate/Decerebrate) + قرینگی مردمک و پاسخ به نور.</p>
+  <table>
+    <caption>جدول ۱-۷: مقیاس AVPU</caption>
+    <thead><tr><th>حرف</th><th>وضعیت</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">A</span></td><td>Awake — بیمار هوشیار، آگاه و مناسب پاسخگو</td></tr>
+      <tr><td><span class="term">V</span></td><td>Voice — فقط به صدا پاسخ می‌دهد</td></tr>
+      <tr><td><span class="term">P</span></td><td>Pain — به تحریک دردناک پاسخ می‌دهد</td></tr>
+      <tr><td><span class="term">U</span></td><td>Unresponsive — هیچ پاسخی ندارد</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Exposure (آشکارسازی) و فاز ثانویه</h3>
+  <p>پس از کندن لباس، مراقب هایپوترمی باشیم؛ لباس/سرم گرم استفاده شود و دمای بدن بین <strong>۲۸ تا ۳۰ درجه</strong> یا دمای اتاق حفظ شود. سپس وارد فاز ثانویه می‌شویم (با بیمار پاسخگو در ارتباط هستیم).</p>
+
+  <h3>گرفتن تاریخچه — واژه اختصاری AMPLE</h3>
+  <table>
+    <caption>جدول ۱-۸: AMPLE</caption>
+    <thead><tr><th>حرف</th><th>معنا</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">A</span></td><td>Allergy (آلرژی)</td></tr>
+      <tr><td><span class="term">M</span></td><td>Medication (داروهای مصرفی)</td></tr>
+      <tr><td><span class="term">P</span></td><td>Past Medical History (بیماری زمینه‌ای/سابقه جراحی)</td></tr>
+      <tr><td><span class="term">L</span></td><td>Last Meal (آخرین وعده غذایی — مهم برای اینتوبیشن و خطر بازگشت محتویات معده)</td></tr>
+      <tr><td><span class="term">E</span></td><td>Events (حوادث منتهی به سانحه)</td></tr>
+    </tbody>
+  </table>
+  <p>ارزیابی‌های objective: دق، لمس، سمع. همه اعضای بدن کامل بررسی شوند. تکمیل با آزمایش‌ها و تصویربرداری + اقدامات ویژه مثل <strong>شستشوی صفاقی</strong>. کبودی‌های بدن اطلاعات زیادی درباره مکانیسم و شدت آسیب می‌دهند.</p>
+
+  <h3>آسیب‌های قفسه سینه، شکم و لگن</h3>
+  <table>
+    <caption>جدول ۱-۹: آسیب‌های ناحیه تنه</caption>
+    <thead><tr><th>ناحیه</th><th>آسیب‌ها</th></tr></thead>
+    <tbody>
+      <tr><td>قفسه سینه</td><td>پنوموتوراکس باز، بسته، فشاری، تنشن پنوموتوراکس (قفسه سینه مواج)، تامپوناد قلبی، آسیب تراکئوبرونشیال، آسیب قلبی</td></tr>
+      <tr><td>شکم و لگن</td><td>آسیب دیافراگم، دوازدهه، دستگاه تناسلی، شکستگی لگن، و <span class="term">seat belt sign</span> (رد کمربند روی شکم = نشانه آسیب روده کوچک)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>ارزیابی ناحیه گردن — زون‌بندی</h3>
+  <table>
+    <caption>جدول ۱-۱۰: زون‌های گردن و مدیریت</caption>
+    <thead><tr><th>زون</th><th>محدوده</th><th>مدیریت پارگی</th></tr></thead>
+    <tbody>
+      <tr><td>Zone I</td><td>از استخوان کلاویکل تا سطح تحتانی غضروف تیروئید</td><td>بیشتر فالوآپ؛ نیاز به مداخله جراحی ندارد</td></tr>
+      <tr><td>Zone II</td><td>از تیروئید تا بیس مندیبل</td><td>محل عبور اعصاب و شریان‌های مهم. پارگی کوچک (مثلاً ۱ سانتی) را راحت سوچور نمی‌کنیم بلکه آن را بزرگ‌تر کرده و <strong>اکسپلور (جراحی اکتشافی)</strong> می‌کنیم تا کاروتید و ورید ژوگولار را ببینیم — چون ممکن است بعداً (با ثبات فشار خون یا بلند کردن وسیله سنگین) خونریزی شدید رخ دهد.</td></tr>
+      <tr><td>Zone III</td><td>از بیس مندیبل تا بیس جمجمه</td><td>بیشتر فالوآپ؛ نیاز به مداخله جراحی ندارد</td></tr>
+    </tbody>
+  </table>
+
+  <h3>علل انسداد راه هوایی در آسیب ماگزیلوفیشیال</h3>
+  <ol>
+    <li>خون و ترشحات</li>
+    <li>شکستگی فک پایین (زبان به عقب و دیواره خلفی حلق می‌افتد)</li>
+    <li>آسیب ناحیه <span class="term">mid face</span> (فک بالا به سمت پایین و خلف می‌افتد)</li>
+    <li>بقایای خارجی (دندان کنده‌شده، دنچر، استخوان شکسته)</li>
+  </ol>
+
+  <h3>چرا ۵۰٪ مرگ‌های قابل پیشگیری در ۲۴ ساعت اول؟</h3>
+  <div class="box danger">
+    برخی اندام‌ها بدون تغییر فاحش در وضعیت حیاتی، خون را در خود جمع می‌کنند:
+    <table style="margin-top:10px;">
+      <thead><tr><th>محل شکستگی</th><th>حجم خون جمع‌شونده</th></tr></thead>
+      <tbody>
+        <tr><td>استخوان لگن</td><td>تا ۵ لیتر</td></tr>
+        <tr><td>استخوان فمور</td><td>۱ تا ۴ لیتر</td></tr>
+        <tr><td>استخوان بازو</td><td>۰.۵ تا ۱ لیتر</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ فصل ۲ ============ -->
+<section class="chap" id="c2">
+  <h2>فصل ۲ — تروما به دندان دائمی: شکستگی‌های تاج</h2>
+  <p class="src">منبع: دکتر مختاری، جلسه ۱ (رفرنس: مبحث تروما کتاب Pathway و Ingle)</p>
+
+  <h3>اپیدمیولوژی تروما به دندان دائمی</h3>
+  <ul>
+    <li>اکثر تروماهای دندانی در گروه سنی <strong>۷ تا ۱۰ سال</strong> رخ می‌دهد.</li>
+    <li>عمدتاً در نواحی <strong>قدامی</strong> دهان.</li>
+    <li>در <strong>فک بالا</strong> بیشتر از فک پایین دیده می‌شود.</li>
+  </ul>
+
+  <h3>طبقه‌بندی کلی تروماها (بر اساس میزان آسیب)</h3>
+  <ul>
+    <li>شکستگی‌های تاج</li>
+    <li>شکستگی‌های تاج و ریشه</li>
+    <li>شکستگی ریشه</li>
+    <li>صدماتی که باعث جابجایی دندان می‌شود</li>
+  </ul>
+
+  <h3>طبقه‌بندی شکستگی تاج (بر اساس درگیری بافت‌ها)</h3>
+  <table>
+    <caption>جدول ۲-۱: انواع شکستگی تاج و طرح درمان</caption>
+    <thead><tr><th>نوع</th><th>تعریف</th><th>اصطلاح</th><th>درگیری پالپ</th><th>طرح درمان</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td>شکستگی محدود به مینا (یکسری ترک در مینا)</td><td>«ترک مینایی»</td><td>خیر</td><td>ترمیم و بازگرداندن زیبایی</td></tr>
+      <tr><td>B</td><td>شکستگی بافت مینا و عاج بدون اکسپوز پالپ</td><td><span class="term">Uncomplicated fracture</span></td><td>خیر</td><td>ترمیم و بازگرداندن زیبایی</td></tr>
+      <tr><td>C</td><td>شکستگی همراه با درگیری و اکسپوز پالپ</td><td><span class="term">Complicated fracture</span></td><td>بله</td><td>نیاز به درمان ریشه</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box warn">
+    <span class="lbl">فالوآپ اجباری ۵ ساله</span>
+    در مورد <strong>تمام</strong> دندان‌های ترومایی — حتی محدود به مینا (ترک مینایی) — نیاز به <span class="term">follow up</span> حداقل <strong>۵ سال</strong> بعد از تروما وجود دارد، چون:
+    <ul style="margin:6px 0;">
+      <li>پالپ می‌تواند به‌علت تروما بعداً نکروز شده و نیاز به درمان ریشه پیدا کند.</li>
+      <li>درمان ترمیمی انجام‌شده می‌تواند باعث آسیب و نکروز پالپ شود.</li>
+    </ul>
+    در ترک‌های مینایی احتمال نکروز در جلسات follow up <strong>حداقل</strong> است، اما انجام فالوآپ ۵ ساله همچنان وظیفه ماست.
+  </div>
+
+  <h3>بررسی پالپ در جلسات فالوآپ</h3>
+  <p>پالپ از لحاظ <span class="term">vitality</span> هم بالینی و هم رادیوگرافی بررسی می‌شود:</p>
+  <ul>
+    <li><strong>بالینی</strong>: تست‌های vitality مثل <span class="term">percussion</span>.</li>
+    <li><strong>رادیوگرافی</strong>: بررسی سلامت یا تشکیل ضایعه.</li>
+  </ul>
+  <p>به محض مشاهده نکروز، درمان ریشه انجام می‌شود.</p>
+
+  <h3>نوع Complicated (اکسپوز پالپ)</h3>
+  <p>این نوع حدود <strong>۱۳٪</strong> تروماهای دندانی را شامل می‌شود. در صورت اکسپوز و عدم درمان، به سمت نکروز پیش می‌رود ← حتماً درمان ریشه نیاز است.</p>
+  <h4>واکنش پالپ به اکسپوز</h4>
+  <p>اولین واکنش = <strong>خونریزی از پالپ</strong> سپس التهاب سطحی. بسته به توانایی دفاعی پالپ:</p>
+  <table>
+    <caption>جدول ۲-۲: دو الگوی واکنش پالپ به اکسپوز</caption>
+    <thead><tr><th>الگو</th><th>شرط</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">Proliferative</span> (پیشروی)</td><td>دفاع و خونرسانی خوب پالپ</td><td>پالپ پیشروی می‌کند؛ بیشتر در <strong>کودکان</strong> (خونرسانی و دفاع پالپی بیشتر). در نمای هیستوپاتولوژی: ۲۴ ساعت اول خونریزی و التهاب سطحی، طی یک هفته تبدیل به proliferation.</td></tr>
+      <tr><td><span class="term">Destructive</span> (تخریبی)</td><td>دفاع و خونرسانی ضعیف</td><td>پالپ عقب‌نشینی کرده و دچار نکروز می‌شود (رنگ تیره محل اکسپوز).</td></tr>
+    </tbody>
+  </table>
+
+  <h3>چهار فاکتور مؤثر در طرح درمان ریشه</h3>
+  <table>
+    <caption>جدول ۲-۳: فاکتورهای انتخاب طرح درمان</caption>
+    <thead><tr><th>#</th><th>فاکتور</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td>۱</td><td><span class="term">Stage of Development</span> (مرحله تکامل دندان / سن بیمار)</td><td>درمان دندان‌های تکامل‌نیافته با <span class="term">open apex</span> یا حالت <span class="term">blunderbuss</span> دشوار، وقت‌گیر و کم‌موفقیت‌تر است؛ دیواره عاجی نازک ← خطر شکستگی ریشه. در این دندان‌ها سراغ <span class="term">vital pulp therapy</span> می‌رویم.</td></tr>
+      <tr><td>۲</td><td><span class="term">Time between accident & treatment</span> (فاصله تروما تا درمان)</td><td>التهاب در ۴۸ ساعت اول معمولاً کمتر از <strong>۲mm</strong> پیشروی می‌کند؛ بعد از ۴۸ ساعت آلودگی باکتریایی باعث حرکت التهاب به سمت اپیکال و پالپ کمتر برای درمان. هرچه زمان کمتر = درمان موفق‌تر.</td></tr>
+      <tr><td>۳</td><td><span class="term">Concomitant Attachment Damage</span> (آسیب بافت پریودنتال همراه)</td><td>هرچه آسیب پریودنتال بیشتر = آسیب بیشتر به عروق/عصب پالپ = احتمال نکروز بیشتر. دندان‌های تکامل‌نیافته به‌دلیل خونرسانی قوی شانس آسیب پالپی کمتری دارند.</td></tr>
+      <tr><td>۴</td><td><span class="term">Restorative Treatment Plan</span> (طرح درمان ترمیمی آینده)</td><td>اگر درمان ساده (کامپوزیت) ← درمان‌های conservative تر (مثل pulp cap). اگر crown یا post & core ← دیگر vital pulp therapy نمی‌توان و باید pulpectomy.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>گزینه‌های طرح درمان</h3>
+  <div class="box note">
+    <span class="lbl">Vital Pulp Therapy (۳ مورد اول)</span>
+    تلاش برای حفظ پالپ تا تکمیل ریشه:
+    <ol style="margin:6px 0;">
+      <li><span class="term">Pulp Capping</span></li>
+      <li><span class="term">Partial Pulpotomy</span></li>
+      <li><span class="term">Full Pulpotomy</span></li>
+    </ol>
+    و اگر پالپ نکروز و حفظ آن ممکن نبود ← <span class="term">Pulpectomy</span>.
+  </div>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ فصل ۳ ============ -->
+<section class="chap" id="c3">
+  <h2>فصل ۳ — نحوه درمان ریشه دندان‌های تروماتیزه</h2>
+  <p class="src">منبع: دکتر مختاری، جلسه ۲</p>
+
+  <h3>سه اصل کلیدی Vital Pulp Therapy</h3>
+  <table>
+    <caption>جدول ۳-۱: سه اصل مهم در درمان حفظ پالپ</caption>
+    <thead><tr><th>اصل</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td>۱. درمان روی پالپ <span class="term">non-inflamed</span> (غیر ملتهب)</td><td>بهترین زمان درمان = <strong>۲۴ ساعت اول</strong> (التهاب سطحی). با تأخیر، پالپ بیشتری ملتهب می‌شود و باید پالپ بیشتری حذف شود ← موفقیت کمتر. در نمای هیستوپاتولوژیک: ۲۴ ساعت بعد از تروما ناحیه‌ای به طول ~۱.۳ میلی‌متر ملتهب می‌شود؛ اگر رها شود التهاب و نکروز سطحی بیشتر می‌گردد.</td></tr>
+      <tr><td>۲. <span class="term">Bacteria-tight seal</span> (سیل ضد باکتری خوب)</td><td>اگر سیل خوب نباشد، جلوی <span class="term">healing</span> گرفته می‌شود. <strong>سیل اهمیت بسیار بالاتری از نوع ماده پوشاننده دارد</strong> (هر ماده‌ای که سیل خوب بدهد گزینه مناسبی است).</td></tr>
+      <tr><td>۳. <span class="term">Pulp dressing</span> (پوشش پالپ با ماده مناسب)</td><td>پوشش پالپ با ماده مناسب — جزئیات در جدول مواد.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>مواد پوشاننده پالپ</h3>
+  <table>
+    <caption>جدول ۳-۲: مقایسه کلسیم هیدروکساید و MTA</caption>
+    <thead><tr><th>ویژگی</th><th>کلسیم هیدروکساید خالص</th><th>کلسیم هیدروکساید Hard-setting (مثل دایکال)</th><th>MTA</th></tr></thead>
+    <tbody>
+      <tr><td>خاصیت ضد میکروبی</td><td>دارد (disinfection پالپ سطحی)</td><td>دارد</td><td>اثر ضد میکروبی خوب (PH بالا قبل از ست)</td></tr>
+      <tr><td>PH</td><td>≈ ۱۲.۵ (بالا)</td><td>پایین‌تر</td><td>نزدیک به Ca(OH)₂ قبل از ست</td></tr>
+      <tr><td>نکروز سطحی پالپ</td><td>تا ~۱.۵ میلی‌متر (<strong>نکروز میعانی</strong>؛ در لایه‌های پایین‌تر نکروز انعقادی)</td><td><strong>ایجاد نمی‌کند</strong></td><td>—</td></tr>
+      <tr><td>تشکیل بافت سخت (hard-tissue barrier)</td><td>بله (با تحریک ملایم)</td><td>بله</td><td>بله</td></tr>
+      <tr><td>کیفیت سیل</td><td><strong>ضعیف</strong> — با مایعات شسته می‌شود ← نیاز به بیس (زونالین یا گلس آینومر)</td><td>بهتر</td><td><strong>سیل خیلی خوب</strong> — نیاز به بیس ندارد، مستقیم زیر ماده ترمیمی</td></tr>
+      <tr><td>نکته ست</td><td>—</td><td>—</td><td>برای ست نهایی، ~۶ ساعت در محیط مرطوب (پنبه مرطوب روی ماده)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>درمان ۱: Pulp Capping</h3>
+  <p>پوشش <strong>مستقیم</strong> پالپ با یک ماده پوشاننده.</p>
+  <ul>
+    <li>میزان موفقیت ≈ <strong>۸۰٪</strong> (در مقایسه با partial pulpotomy که ۹۵٪ است).</li>
+    <li>دلایل موفقیت پایین‌تر نسبت به پارشیال پالپوتومی: ۱) مستقیم روی پالپ <strong>inflamed و ملتهب</strong> گذاشته می‌شود (نه پالپ سالم)، ۲) در محل اکسپوز حفره مناسبی برای ماده پوشاننده نیست ← سیل کمتر.</li>
+  </ul>
+
+  <h3>درمان ۲: Partial Pulpotomy (Cvek Pulpotomy)</h3>
+  <p>حذف پالپ <span class="term">coronal</span> تا رسیدن به پالپ سالم.</p>
+  <h4>مراحل (روش انجام)</h4>
+  <ol>
+    <li>تزریق بی‌حسی + ایزولاسیون با رابردم.</li>
+    <li>با <strong>فرز الماسی تیز high speed</strong>، حفره‌ای به عمق ۱ تا ۲ میلی‌متر و حذف پالپ ملتهب. (وسایل low speed یا اکسکویتور ← تروما بیشتر و موفقیت کمتر.)</li>
+    <li>شست‌وشو (سرم یا محلول بی‌حسی). در حین خشک کردن نباید لخته روی پالپ تشکیل شود.</li>
+    <li>بررسی رسیدن به پالپ سالم: ۱) خونریزی کم و ملایم (نه شدید)، ۲) رنگ متمایل به صورتی. (در غیر این صورت پالپ ملتهب است و باید برداشته شود.)</li>
+    <li>پوشاندن با Ca(OH)₂ یا MTA. اگر Ca(OH)₂ ← بیس (زونالین/گلس آینومر) ← ماده ترمیمی (کامپوزیت). اگر MTA ← پنبه مرطوب، پانسمان، بعد ۶ ساعت/جلسه بعد ماده ترمیمی.</li>
+  </ol>
+  <div class="box note">
+    کاربرد ویژه: دندانی با شکستگی پیچیده تاج و ریشه <span class="term">open apex</span> — درمان روتین اندو دشوار، سیل مناسب ممکن نیست، دیواره دنتینی نازک (خطر fracture) ← <strong>partial pulpotomy</strong> بهترین درمان است (Ca(OH)₂ روی پالپ سالم و non-inflamed). در فالوآپ باید پالپ <span class="term">vital</span> باشد و apex به سمت بسته شدن پیش رود؛ زیر Ca(OH)₂ بافت سخت تشکیل شود.
+  </div>
+
+  <h3>درمان ۳: Full Pulpotomy (پالپوتومی کامل)</h3>
+  <p>تخلیه پالپ کرونالی تا <span class="term">orifice</span> (دهانه) کانال.</p>
+  <table>
+    <caption>جدول ۳-۳: اندیکاسیون‌ها و مشخصات Full Pulpotomy</caption>
+    <thead><tr><th>مورد</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td>اندیکاسیون‌ها</td><td>۱) التهاب پالپ پایین‌تر از پالپ کرونالی، ۲) دندان‌هایی که بیش از <strong>۷۲ ساعت</strong> از اکسپوزشان گذشته، ۳) اکسپوز با پوسیدگی</td></tr>
+      <tr><td>کنترااندیکاسیون</td><td>دندان‌های بالغ و <span class="term">mature</span> (موفقیت کمتر)</td></tr>
+      <tr><td>چرا موفقیت کمتر؟</td><td>چون پالپ را نمی‌بینیم، ممکن است پوشش روی پالپ ملتهب گذاشته شود</td></tr>
+      <tr><td>پروگنوز</td><td>≈ <strong>۷۵٪</strong> (کمتر از partial pulpotomy)</td></tr>
+      <tr><td>روش</td><td>مشابه partial، اما حذف پالپ پایین‌تر و در ناحیه اوریفیس</td></tr>
+      <tr><td>مشکل در فالوآپ</td><td>به‌دلیل حذف پالپ کرونالی، تست‌های vitality قابل اعتماد نیستند و ممکن است دندان جواب ندهد</td></tr>
+    </tbody>
+  </table>
+  <div class="box note">
+    <span class="lbl">سؤال: بعد از بسته شدن apex، آیا درمان ریشه کامل شود؟</span>
+    اگر برای ترمیم تاج نیاز به crown یا post & core (وابسته به <span class="term">retention</span> از ریشه) داشته باشیم ← بله. در غیر این صورت (آمالگام/کامپوزیت ساده) ← نیاز به درمان ریشه کامل نیست.
+  </div>
+
+  <div class="box warn">
+    <span class="lbl">نکته مهم درباره تست‌های وایتالیتی دندان تروماتیزه</span>
+    حدود <strong>۹ ماه</strong> طول می‌کشد تا بعد از تروما خون‌رسانی نرمال در پالپ ایجاد شود. به همین دلیل، صرفاً با تست‌های وایتالیتی (گرما، سرما، الکتریکی) نمی‌توان نکروز را تشخیص داد ← باید علاوه بر آن، رادیوگرافی + percussion + سایر معاینات انجام شود. <br>
+    <strong>برنامه فالوآپ:</strong> ۳ هفته، ۳ ماه، ۶ ماه، ۱۲ ماه بعد از تروما و سپس سالیانه.
+  </div>
+
+  <h3>درمان ۴: Pulpectomy</h3>
+  <p>درمان ریشه روتین — کل پالپ از کرونال تا <span class="term">apical foramen</span> خارج و با گوتاپرکا پر می‌شود.</p>
+  <ul>
+    <li><strong>اندیکاسیون</strong>: دندان <span class="term">mature</span> و بالغ با شکستگی تاج <span class="term">complicated</span>.</li>
+    <li>اگر دندان mature باشد ← درمان ریشه کامل.</li>
+  </ul>
+
+  <h3>درمان دندان‌های Open Apex با پالپ نکروز شده</h3>
+  <p>تا اینجا درمان دندان‌های open apex <strong>بدون</strong> نکروز بود (هدف: حفظ پالپ تا maturation). برای دندان‌های open apex با پالپ نکروز (<span class="term">treatment of the nonvital pulp</span>) دو گزینه:</p>
+
+  <h4>Apexification</h4>
+  <p><strong>اندیکاسیون</strong>: دندان نکروز با انتهای ریشه باز، بلوغ ناکامل، دیواره دنتینی نازک.</p>
+  <ol>
+    <li>پاکسازی کانال (مواد ضد میکروبی).</li>
+    <li>پر کردن کانال با مواد تحریک‌کننده ساخت بافت سخت (در اپیکال).</li>
+    <li>پس از تشکیل بافت سخت شبه‌استخوانی، کانال با گوتاپرکا پر می‌شود.</li>
+  </ol>
+  <table>
+    <caption>جدول ۳-۴: Disinfection کانال در Apexification</caption>
+    <thead><tr><th>روش</th><th>جزئیات</th></tr></thead>
+    <tbody>
+      <tr><td>هیپوکلریت سدیم (NaOCl)</td><td>۱.۵٪ به‌جای سرم فیزیولوژیک به‌عنوان محلول شست‌وشو در پاکسازی و شکل‌دهی</td></tr>
+      <tr><td>کلسیم هیدروکساید خامه‌ای (creamy)</td><td>با lentulo یا فایل داخل کانال؛ قوام creamy تا در توبول‌های دنتینی نفوذ کند. ادامه درمان باید حداقل <strong>۱ هفته تا ۱۰ روز</strong> بعد باشد (بیشتر از این ← شسته شدن و آلودگی مجدد).</td></tr>
+      <tr><td>کلسیم هیدروکساید سفت‌تر (powdery)</td><td>در جلسه دوم، پس از خارج کردن نوع خامه‌ای؛ هدف: تشکیل بافت سخت در انتهای ریشه (باقی‌ماندن طولانی‌مدت). با آمالگام کریر یا MTA کریر گذاشته می‌شود.</td></tr>
+    </tbody>
+  </table>
+  <div class="box warn">
+    <span class="lbl">نکات Apexification</span>
+    <ul style="margin:6px 0;">
+      <li>بعد از گذاشتن Ca(OH)₂ حتماً رادیوگرافی بگیرید (در رادیوگرافی، Ca(OH)₂ با دانسیته مشابه دنتین دیده شده و قسمت مرکزی کانال <strong>محو</strong> دیده می‌شود — انگار دندان کانال ندارد).</li>
+      <li>فالوآپ: هر ۳ ماه یک‌بار. اگر Ca(OH)₂ تا حد قابل‌قبول باقی مانده، بهتر است دخالت نکنیم (تعویض ← سمیت اولیه ← تأخیر در ترمیم).</li>
+      <li>تشکیل بافت سخت ۳ تا <strong>۱۰ ماه</strong> طول می‌کشد. اگر هنگام چک با فایل انتهای ریشه هنوز باز بود ← دوباره Ca(OH)₂.</li>
+      <li><strong>معایب:</strong> ۱) مراجعات متعدد، ۲) بافت سخت گاهی به شکل «پنیر سوئیسی» (حفره‌دار) و خروج مقداری filling از ریشه، ۳) خطر شکستگی ریشه حین جلسات Apexification (به‌دنبال استفاده طولانی از Ca(OH)₂).</li>
+    </ul>
+  </div>
+
+  <h4>Apical Plug</h4>
+  <p>روش جایگزین Apexification با موادی مثل MTA: تشکیل یک <span class="term">barrier</span> در انتهای ریشه و گذاشتن مواد پرکردگی روی آن. انتهای ریشه به طول <strong>۳ تا ۴ میلی‌متر</strong> با MTA پر می‌شود.</p>
+  <ul>
+    <li><strong>مزیت:</strong> سریع — در ۱ یا ۲ جلسه؛ نیاز به فالوآپ‌های طولانی Apexification ندارد.</li>
+    <li><strong>جلسه اول:</strong> ۱) تعیین طول، ۲) پاکسازی و شکل‌دهی، ۳) شست‌وشو با NaOCl، ۴) Ca(OH)₂ خامه‌ای (حداقل ۱ هفته، حداکثر ۱ ماه — یک هفته بهترین زمان).</li>
+    <li><strong>جلسه دوم:</strong> خارج کردن Ca(OH)₂ خامه‌ای + پک کردن ۳ تا ۴ میلی‌متر انتهایی با MTA + پنبه مرطوب + پانسمان.</li>
+    <li><strong>جلسه سوم:</strong> گذاشتن گوتاپرکا روی MTA و پر کردن کانال.</li>
+  </ul>
+  <div class="box note">
+    در هر دو روش (Apexification و Apical plug)، بهتر است از <strong>گوتاهای نرم‌شده (تکنیک ورتیکال)</strong> استفاده شود؛ روش لترال به‌دلیل نازکی دیواره دنتینی ← خطر شکستگی ریشه. برای تقویت تاج، بهتر است گوتاپرکا تا کمی پایین‌تر از <span class="term">CEJ</span> بیاید (قسمتی از ماده پرکننده تاج وارد ریشه شود).
+  </div>
+
+  <h4>Revascularization</h4>
+  <p>روش جدید (هنوز روتین استفاده نمی‌شود). هدف: ایجاد یک بافت همبند مشابه پالپ داخل کانال که بلوغ و maturation ریشه را ادامه دهد.</p>
+  <ol>
+    <li><span class="term">disinfection</span> کانال.</li>
+    <li>اور کردن فایل از کانال و ایجاد خونریزی تا کانال پر از خون شود.</li>
+    <li>وقتی کانال پر از خون شد ← گذاشتن بیس و ترمیم تاج روی آن.</li>
+  </ol>
+  <div class="box note">
+    کاربرد ویژه: دندانی که انتهای ریشه آن خیلی باز است و هیچ <strong>استاپ اپیکالی</strong> ندارد ← Apexification و Apical plug ممکن نیست (هر ماده از انتها خارج می‌شود) ← ناچار <span class="term">Revascularization</span>. <br>
+    سؤال: بعد از بسته شدن انتهای ریشه آیا درمان ریشه لازم است؟ <strong>خیر</strong> — پالپ تشکیل‌شده نرمال است؛ مگر برای بازسازی تاج نیاز به retention از کانال باشد (مثل post & core).
+  </div>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ فصل ۴ ============ -->
+<section class="chap" id="c4">
+  <h2>فصل ۴ — شکستگی ریشه و صدمات جابجایی دندان</h2>
+  <p class="src">منبع: دکتر مختاری، جلسه ۳</p>
+
+  <h3>شکستگی‌های ریشه</h3>
+  <p>شکستگی ریشه نوعی شکستگی است که <strong>سمنتوم، دنتین و پالپ</strong> را درگیر می‌کند. شیوع آن کم ≈ <strong>۳٪</strong> کل تروماهای دندانی است.</p>
+  <ul>
+    <li>در دندان‌هایی با apex ناکامل و پالپ زنده، شکستگی‌های <span class="term">Horizontal</span> به‌ندرت رخ می‌دهد.</li>
+    <li>در محل شکستگی، عروق و اعصاب پارگی می‌بینند؛ الیاف پریودنتال پاره شده و التهاب ایجاد می‌شود (انتهای ریشه عروق و اعصاب سالم می‌مانند).</li>
+    <li>معمولاً شکستگی ریشه <span class="term">Oblique</span> و از باکال به پالاتال است.</li>
+    <li>میزان <span class="term">Mobility</span> بسته به محل شکستگی متفاوت است.</li>
+  </ul>
+
+  <h4>تشخیص رادیوگرافیک</h4>
+  <div class="box note">
+    برای تشخیص قطعی، حداقل <strong>۳ رادیوگرافی</strong> در زوایای <strong>۴۵، ۹۰ و ۱۱۰ درجه</strong> نیاز است. امتداد اشعه باید با امتداد <span class="term">Fracture line</span> یکی باشد تا خط شکستگی دیده شود. اگر زاویه عمودی منفی بدهیم باز هم خط دیده نمی‌شود (گاهی دو خط دیده می‌شود).
+  </div>
+
+  <h4>درمان شکستگی ریشه (جلسه اورژانس)</h4>
+  <ol>
+    <li>قطعه کرونالی را <span class="term">Reposition</span> می‌کنیم و دو خط را کنار هم قرار می‌دهیم.</li>
+    <li><span class="term">Splint</span> می‌کنیم. مدت Splint: تکست قدیمی ۲ تا ۴ <strong>ماه</strong>، تکست جدید <strong>۲ تا ۴ هفته</strong>.</li>
+  </ol>
+
+  <h3>الگوهای ترمیم (Healing Patterns) — اندریاسن چهار نوع</h3>
+  <table>
+    <caption>جدول ۴-۱: چهار الگوی ترمیم شکستگی ریشه</caption>
+    <thead><tr><th>نوع ترمیم</th><th>شرط</th><th>نمای رادیوگرافی</th></tr></thead>
+    <tbody>
+      <tr><td>۱. بافت کلسیفیه</td><td>دو سگمنت نزدیک هم و جابجایی کم</td><td>خطوط شکستگی دیده می‌شود؛ سلول‌های پالپ بافت سخت کنار خط می‌سازند و دو سگمنت کنار هم قرار می‌گیرند</td></tr>
+      <tr><td>۲. بافت همبند</td><td>کمی فاصله بین دو خط</td><td>خط <strong>رادیولوسنت</strong> بین دو Fracture line؛ پالپ از یک سمت و الیاف پریودنتال از سمت دیگر وارد می‌شوند؛ لبه‌ها <span class="term">rounded</span> می‌شوند</td></tr>
+      <tr><td>۳. بافت استخوانی و همبند</td><td>—</td><td>یک <strong>ریج استخوانی</strong> در محل شکستگی</td></tr>
+      <tr><td>۴. بافت التهابی</td><td>نکروز قسمت کرونالی پالپ (در <strong>۲۵٪</strong> موارد)</td><td>رادیولوسنسی Fracture line وسیع‌تر؛ سلول‌های التهابی و کلاستیک ← <span class="term">Resorption</span> استخوان و عاج؛ ممکن است ضایعه تشکیل شود</td></tr>
+    </tbody>
+  </table>
+
+  <h3>فالوآپ و پروگنوز شکستگی ریشه</h3>
+  <p><strong>فالوآپ:</strong> مشابه دندان‌های تروما؛ بعد از کامل شدن دوره Splint ← ۳ ماهه، ۶ ماهه و ۱۲ ماهه.</p>
+  <table>
+    <caption>جدول ۴-۲: فاکتورهای پروگنوز شکستگی ریشه</caption>
+    <thead><tr><th>فاکتور</th><th>اثر بر پروگنوز</th></tr></thead>
+    <tbody>
+      <tr><td>میزان جابجایی (Mobility) سگمنت کرونالی</td><td>جابجایی زیاد ← پروگنوز پایین‌تر (و برعکس)</td></tr>
+      <tr><td>نوع دندان</td><td>دندان‌های با <span class="term">Maturation</span> ناکامل به‌ندرت شکستگی ریشه می‌گیرند؛ اما اگر بگیرند پروگنوز بهتری نسبت به <span class="term">mature</span> دارند</td></tr>
+      <tr><td>کیفیت درمان</td><td>مؤثر</td></tr>
+    </tbody>
+  </table>
+
+  <h3>تقسیم‌بندی شکستگی ریشه بر اساس محل</h3>
+  <table>
+    <caption>جدول ۴-۳: محل شکستگی ریشه و طرح درمان</caption>
+    <thead><tr><th>محل</th><th>پروگنوز / وضعیت</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">Coronal</span> (در حد یا کرونالی‌تر از کرست استخوان)</td><td>پروگنوز بسیار پایین — Fractured line به دهان اکسپوز و آلوده، ترمیم نمی‌شود</td><td>خارج کردن قطعه کرونالی</td></tr>
+      <tr><td><span class="term">Apical-Mid</span> (میانی یا آپیکالی)</td><td>۲۵٪ موارد نکروز پالپ — معمولاً قسمت کرونالی</td><td>اگر کرونالی نکروز: خارج کردن پالپ + درمان کرونالی (به‌دلیل کانال وسیع از <span class="term">MTA apical plug</span> یا <span class="term">Apexification</span> برای open apex). اگر آپیکالی نکروز (نادر، با ضایعه انتهای ریشه): خارج کردن جراحی قسمت آپیکالی — اگر نسبت تاج به ریشه خوب بود حفظ، در غیر این صورت <span class="term">Ext</span> و ایمپلنت.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>صدمات جابجایی دندان (Luxation Injuries)</h3>
+  <table>
+    <caption>جدول ۴-۴: مقایسه جامع صدمات جابجایی دندان دائمی</caption>
+    <thead>
+      <tr><th>نوع</th><th>Mobility</th><th>Percussion</th><th>جابجایی</th><th>وضعیت عروق/PDL</th><th>درمان</th><th>پروگنوز پالپ</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="term">Concussion</span> (کوفتگی)</td>
+        <td>ندارد</td>
+        <td>حساس</td>
+        <td>ندارد</td>
+        <td>عروق apical foramen سالم؛ الیاف پریودنتال فشردگی/التهاب/پارگی موضعی</td>
+        <td><strong>Symptomatic</strong> — رست دادن به دندان (عدم استفاده، عدم فشار)</td>
+        <td>خوب</td>
+      </tr>
+      <tr>
+        <td><span class="term">Subluxation</span></td>
+        <td>مقداری دارد</td>
+        <td>حساس</td>
+        <td>ندارد (از ساکت جابجا نشده)</td>
+        <td>عروق اپکس آسیب؛ الیاف پریودنتال پارگی موضعی؛ ممکن است به Vitality جواب ندهد</td>
+        <td>رست؛ گاهی فیکس ۲ تا ۳ هفته</td>
+        <td>Immature بهتر؛ Mature حالت <span class="term">questionable</span></td>
+      </tr>
+      <tr>
+        <td><span class="term">Lateral Luxation</span></td>
+        <td>دارد</td>
+        <td>حساس</td>
+        <td>لبیالی/لینگوالی/دیستالی/مزیالی</td>
+        <td>عروق پالپ کاملاً قطع؛ PDL پارگی + فشردگی</td>
+        <td>Reposition (فشار به پالاتال و اپکس) + Splint ۳ تا ۴ هفته + فالوآپ</td>
+        <td>اکثراً نیاز به درمان ریشه (نکروز)؛ Immature ممکن است revascularize شود</td>
+      </tr>
+      <tr>
+        <td><span class="term">Intrusion</span> (فرورفتگی)</td>
+        <td>محکم در ساکت (شبیه انکیلوز)</td>
+        <td>—</td>
+        <td>به داخل ساکت</td>
+        <td>عروق پارگی شدید؛ PDL فشرده/پاره</td>
+        <td>Immature + اینترود کم: فرصت رشد خودبه‌خودی (چند هفته/ماه). Mature: جراحی یا ارتودنسی یا هردو. بعد از healing درمان ریشه</td>
+        <td>آسیب شدید پالپ</td>
+      </tr>
+      <tr>
+        <td><span class="term">Extrusion</span></td>
+        <td>خیلی زیاد</td>
+        <td>—</td>
+        <td>به سمت کرونالی (خروج از ساکت)</td>
+        <td>عروق پارگی؛ PDL آسیب شدید/پارگی</td>
+        <td>Reposition + فیکس + Splint ۴ تا ۸ هفته</td>
+        <td>Mature معمولاً نکروز (درمان ریشه)؛ Immature ممکن پالپ زنده بماند</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>نکات تکمیلی Intrusion / Extrusion / Luxation</h4>
+  <div class="box warn">
+    <ul style="margin:6px 0;">
+      <li><strong>Intrusion - روش‌های اکستروژن دندان (۳ روش):</strong> ۱) درمان‌های ارتودنسی، ۲) دندان‌های mature با اینترود کم ← فرصت اکستروژن خودبه‌خودی، ۳) اینتروژن شدید ← جراحی با فورسپس. در اینتروژن شدید نمی‌توان با ارتودنسی reposition کرد ← جراحی.</li>
+      <li>اگر دندان immature با جابجایی خیلی کم (مثلاً مختصر به پالاتال) ← گاهی بهتر است <strong>reposition نکنیم</strong> چون باعث ترومای بیشتر می‌شود؛ طی مچوریشن به موقعیت اصلی برمی‌گردد.</li>
+    </ul>
+  </div>
+
+  <h3>یافته‌های جلسات فالوآپ پس از تروما</h3>
+  <table>
+    <caption>جدول ۴-۵: عوارض و تغییرات قابل مشاهده در فالوآپ</caption>
+    <thead><tr><th>یافته</th><th>توضیح / اقدام</th></tr></thead>
+    <tbody>
+      <tr><td>بسته شدن کانال‌ها (Canal obliteration)</td><td>به‌دلیل مقاومت و دفاع پالپ در برابر تروما (مثلاً ۱ سال بعد از اکستروژن)</td></tr>
+      <tr><td>تحلیل ریشه (Resorption)</td><td>در همه‌جای ریشه؛ پالپ هم ممکن نکروز شود — در فالوآپ بررسی</td></tr>
+      <tr><td>تغییر رنگ <strong>خاکستری</strong></td><td>نشانگر نکروز پالپ ← با رادیوگرافی و تست‌های کلینیکی تأیید و درمان ریشه آغاز</td></tr>
+      <tr><td>تغییر رنگ <strong>صورتی</strong></td><td>(مثلاً ۱۱ روز بعد) ← صرفاً به‌دلیل رنگ صورتی درمان نمی‌کنیم؛ در فالوآپ ۵ ساله دندان به رنگ طبیعی برمی‌گردد</td></tr>
+      <tr><td>تغییر رنگ <strong>زرد</strong></td><td>به‌دلیل مسدود شدن و کلسیفیه شدن کانال (مثلاً ۱۰ سال بعد)</td></tr>
+    </tbody>
+  </table>
+  <div class="box note">
+    نتایج تست دندان‌های تروماتیزه خیلی ارزش ندارد ولی باید در پرونده ثبت شود تا با فالوآپ‌های بعدی و تست‌های وایتالیتی مقایسه شود. بعد از reposition ← رادیوگرافی برای اطمینان از موقعیت + سوچور پارگی‌های بافت نرم.
+  </div>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ فصل ۵ ============ -->
+<section class="chap" id="c5">
+  <h2>فصل ۵ — آسیب تروماتیک دندان شیری (بخش اول)</h2>
+  <p class="src">منبع: دکتر ساجدی، جلسه سوم (فصل ۱۶ کتاب نواک)</p>
+
+  <h3>اتیولوژی و اپیدمیولوژی</h3>
+  <ul>
+    <li>شایع‌ترین دندان‌های آسیب‌دیده: <strong>انسیزور ماگزیلا</strong>.</li>
+    <li>مولر شیری معمولاً درگیر نمی‌شود (نادر)؛ مگر ضربه سنگین به چانه و برخورد چانه به زمین ← آسیب غیرمستقیم مولرها.</li>
+    <li>انسیزور شیری بیشتر از دائمی تمایل به آسیب <span class="term">luxation</span> دارد. دو دلیل: ۱) ماهیت استخوان اسفنجی در کودکان بیشتر است، ۲) نسبت ریشه به تاج در شیری کمتر است.</li>
+    <li>شایع‌ترین سن: <strong>۲ تا ۴ سال</strong> (کودک تازه راه رفتن یاد گرفته و می‌دود).</li>
+    <li>کودکان کلاس ۲ با انسیزور پروترود ← <strong>۲ تا ۳ برابر</strong> احتمال بیشتر.</li>
+    <li><strong>علل:</strong> بازی و دویدن، تصادفات رانندگی، زمین خوردن به‌دلیل اختلالات تشنجی مزمن، کودک‌آزاری.</li>
+  </ul>
+
+  <h3>طبقه‌بندی آسیب به ساختار دندان</h3>
+  <ul>
+    <li>آسیب به تاج، ریشه یا هردو</li>
+    <li>آسیب به مینا، عاج و پالپ</li>
+    <li>شکستگی‌های پیچیده و غیر پیچیده</li>
+  </ul>
+  <div class="box note">
+    در شکستگی <strong>پیچیده</strong>، پالپ درگیر شده (عروق هم درگیر) و درمان مشکل‌تر است. اگر پالپ درگیر نباشد ← غیر پیچیده. آسیب به پالپ، <strong>پیچیده‌ترین و طاقت‌فرساترین</strong> نوع آسیب است.
+  </div>
+
+  <h3>طبقه‌بندی آسیب به بافت حمایت‌کننده دندان</h3>
+  <table>
+    <caption>جدول ۵-۱: انواع آسیب بافت حمایت‌کننده دندان شیری</caption>
+    <thead><tr><th>نوع</th><th>لقی</th><th>جابجایی</th><th>PDL / استخوان</th><th>سایر علائم</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">Concussion</span></td><td>لق نیست</td><td>جابجا نشده</td><td>—</td><td>حساسیت در جویدن و دق + احتمال خونریزی شیار لثه</td></tr>
+      <tr><td><span class="term">Subluxation</span></td><td>لق است</td><td>از ساکت جابجا نشده</td><td>—</td><td>احتمال خونریزی شیار لثه</td></tr>
+      <tr><td><span class="term">Intrusion</span></td><td>—</td><td>وارد ساکت شده</td><td>PDL فشرده + معمولاً خرد شدگی استخوان آلوئول</td><td>—</td></tr>
+      <tr><td><span class="term">Extrusion</span></td><td>—</td><td>از ساکت خارج شده</td><td>PDL پارگی</td><td>—</td></tr>
+      <tr><td><span class="term">Lateral Luxation</span></td><td>—</td><td>مزیالی/لینگوالی/لترالی</td><td>PDL پاره + شکستگی استخوان آلوئول</td><td>—</td></tr>
+      <tr><td><span class="term">Avulsion</span></td><td>—</td><td>کلاً از ساکت خارج</td><td>PDL آسیب + ممکن شکستگی استخوانی</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>رویکرد به کودک با آسیب تروماتیک</h3>
+  <ol>
+    <li>تاریخچه کامل وضعیت پزشکی و آسیب دندانی.</li>
+    <li>معاینه کامل (داخل و خارج دهانی) — تمام دندان‌ها و بافت نرم، نه فقط دندان آسیب‌دیده.</li>
+    <li>رادیوگرافی‌های لازم.</li>
+  </ol>
+
+  <h4>تاریخچه پزشکی مهم</h4>
+  <ul>
+    <li>مشکل قلبی (بررسی نیاز به پروفیلاکسی آنتی‌بیوتیک)</li>
+    <li>اختلالات خونریزی‌دهنده مثل هموفیلی (بررسی نیاز به تزریق فاکتور انعقادی)</li>
+    <li>آلرژی، اختلالات تشنج، داروهای مصرفی</li>
+    <li>وضعیت پیشگیری از کزاز</li>
+  </ul>
+  <div class="box warn">
+    <span class="lbl">کزاز</span>
+    کودک با واکسیناسیون کامل، علیه کزاز واکسینه است. باید پرسیده شود واکسیناسیون کامل است و چه مدت از آخرین واکسن گذشته. آلودگی کزاز خصوصاً مهم است وقتی کودک در <strong>محیط آلوده</strong> (آسفالت)، یا زخم‌های گسترده و عمیق، زخم کثیف (کندگی)، پارگی عمیق یا آسیب نفوذی با فرو رفتن خاک داشته باشد.
+  </div>
+
+  <h4>تاریخچه آسیب دندانی</h4>
+  <div class="box danger">
+    <span class="lbl">اولویت با آسیب سر است!</span>
+    اول بپرسیم: آیا سر کودک آسیب دیده؟ تهوع و استفراغ دارد؟ کودک با آسیب سر باید <strong>۲۴ ساعت</strong> تحت نظر باشد و حتی در خواب شبانه هر <strong>۲ تا ۳ ساعت</strong> بیدار شود. در صورت علائم آسیب سر، بلافاصله به بیمارستان ارجاع. این موارد از آسیب دندانی مهم‌تر است.
+  </div>
+  <p><strong>سه سؤال مهم:</strong> آسیب چه زمانی، کجا و چگونه اتفاق افتاد؟</p>
+  <ul>
+    <li>درد خودبه‌خودی دندان ← درگیری پالپ یا آسیب به ساختارهای اطراف و PDL.</li>
+    <li>حساسیت به سرما، گرما، شیرینی، ترشی ← اکسپوژر عاج یا پالپ.</li>
+    <li>حساسیت به لمس یا جویدن ← تغییر موقعیت اکلوزالی یا شکستگی آلوئول.</li>
+  </ul>
+
+  <h3>رادیوگرافی</h3>
+  <ul>
+    <li>استانداردی برای نوع رادیوگرافی وجود ندارد؛ تمام عکس‌ها باید ناحیه اپیکال را خوب نشان دهند. معمولاً <span class="term">PA</span> یا اکلوزال.</li>
+    <li>اگر زخم در بافت نرم لب یا زبان وجود دارد ← حتماً رادیوگرافی. برای تعیین جسم خارجی (قطعه دندان در لب/زبان)، زمان اکسپوژر باید <strong>یک‌چهارم</strong> زمان عادی باشد. (قطعه دندان فرو رفته در لب ← فیبروز و مشکلات؛ اگر زخم باز باشد راحت‌تر شست‌وشو و خارج می‌شود.)</li>
+    <li><strong>Intrusion</strong> ← احتمال آسیب به جوانه دندانی زیرین. اگر دندان آسیب‌دیده نسبت به متناظرش کوتاه‌تر و اپک‌تر افتاده باشد ← ریشه به سمت <strong>لبیال</strong> جابجا شده (نشانه خوب — دورتر از جوانه دندانی که سمت لینگوال است).</li>
+  </ul>
+  <h4>رادیوگرافی فالوآپ</h4>
+  <div class="box note">
+    تغییرات پاتولوژیک بلافاصله رخ نمی‌دهد:
+    <ul style="margin:6px 0;">
+      <li>رادیولوسنسی پری اپیکال: <strong>۳ هفته</strong> بعد</li>
+      <li>انکیلوز: <strong>۶ تا ۷ هفته</strong> بعد</li>
+      <li>رادیوگرافی فالوآپ منطقی: <strong>۴ هفته (۱ ماه)</strong> بعد؛ اگر علائم بالینی نبود، رادیوگرافی بعدی ۶ ماه بعد</li>
+    </ul>
+  </div>
+
+  <h3>شکستگی‌ها و ترک‌های مینا و عاج بدون اکسپوز پالپ (شیری)</h3>
+  <ul>
+    <li>شکستگی مینا شایع است و کار خاصی نیاز ندارد. حتی شکستگی درگیر عاج در دندان قدامی شیری می‌تواند بدون درمان بماند (آسیبی به پالپ نمی‌رساند).</li>
+    <li>اگر بزرگ باشد، به درخواست والدین ترمیم زیبایی: کامپوزیت، <span class="term">strip crown</span> (کراون شفاف با کامپوزیت داخل)، روکش زیرکونیا، <span class="term">open faced steel crown</span>.</li>
+    <li>اگر کودک کم‌سن و غیرهمکار و قرار نیست ترمیم شود ← لبه‌های تیز صاف شود (زبان و لب را زخم می‌کند).</li>
+    <li>اگر درگیری پالپ باشد ← نباید رها شود (نکروز و آبسه).</li>
+  </ul>
+
+  <h3>شکستگی‌ها و ترک‌های مینا و عاج با اکسپوز پالپ (شیری)</h3>
+  <p>نوع درمان به دو مورد بستگی دارد: ۱) وضعیت پالپ، ۲) چه مدت بعد از آسیب مراجعه کرده.</p>
+  <table>
+    <caption>جدول ۵-۲: درمان اکسپوز پالپ دندان شیری</caption>
+    <thead><tr><th>وضعیت</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td>مراجعه بلافاصله + پالپ خوب + اکسپوژر نقطه‌ای کوچک</td><td><strong>پالپوتومی</strong></td></tr>
+      <tr><td>مراجعه بعد از ۲ تا ۳ ماه (احتمالاً نکروز و تحلیل)</td><td>اگر تحلیل خارجی گسترده یا عفونت/ضایعه که جوانه دائمی را درگیر کرده ← دندان ارزش نگهداری ندارد، <span class="term">Ext</span></td></tr>
+      <tr><td>دندان وضعیت خوب، بدون عفونت و تحلیل خارجی</td><td><strong>پالپکتومی</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>شکستگی‌های تاج و ریشه (شیری)</h3>
+  <p>در دندان‌های شیری نادر است. قطعه تاج شکسته باید خارج شود تا میزان اکسپوز پالپ مشخص گردد. درمان پیشنهادی: <strong>پالپوتومی + بازسازی تاج از نظر زیبایی</strong>.</p>
+  <div class="box warn">
+    این به شرطی است که خط شکستگی خیلی داخل استخوان فرو نرفته باشد. اگر عمیق باشد، ایزوله خوبی نداریم و از نظر پریودنتال پاکت و آبسه تشکیل می‌شود ← دندان ارزش نگهداری ندارد و باید خارج شود. (متن پاور: اگر شکستگی به عمق آلوئول رفته و پاکت پریودنتال ایجاد کند، هر دو قطعه باید کشیده شوند.)
+  </div>
+
+  <h3>شکستگی ریشه (شیری)</h3>
+  <ul>
+    <li>در شیری نادر است.</li>
+    <li>اگر تداخل اکلوزالی باشد ← دندان خارج شود. فقط قطعه کرونالی خارج می‌شود؛ کاری با قطعه آپیکالی نداریم (خارج کردن آن ← خطر آسیب به جوانه دائمی). قطعه آپیکالی معمولاً باقی می‌ماند، عفونت نمی‌کند و طی رویش دائمی تحلیل می‌رود.</li>
+    <li>اگر تداخل اکلوزالی نداشت و لق نبود ← بدون درمان با رعایت بهداشت خوب. توصیه: کلرهگزیدین با گوش‌پاکن روی ناحیه تماس لثه و دندان + رژیم غذایی نرم محدود. اگر دندان لق بود ← کشیده می‌شود.</li>
+  </ul>
+  <div class="box note">
+    کشیدن دندان قدامی برای کودک (خصوصاً اولین مراجعه) دردناک است و تزریق قدام دردناک‌تر از خلف ← ممکن کودک از دندانپزشکی فراری شود. تا جای ممکن دندان را نگه می‌داریم، ولی اگر وضعیت خوب نیست باید کشید (خطر آسپیراسیون). <br>
+    در شیری برخلاف دائمی، هدف ترمیم با بافت همبند/کلسیفیه نیست (دندان زمانی ندارد و قرار است بیفتد) ← نیاز به اسپلینت نیست؛ اسپلینت فقط برای کاهش حساسیت به جویدن.
+  </div>
+
+  <h3>آسیب به چانه</h3>
+  <p>ضربه محکم به چانه/زمین خوردن ← فک بالا و پایین محکم بسته شده و مولرهای شیری آسیب می‌بینند (مینا، عاج، پالپ و حتی PDL).</p>
+  <div class="box warn">
+    نکته مهم: آیا مندیبل هم آسیب دیده؟ (نیاز به رادیوگرافی) — نواحی سمفیز، منتال و زیر کندیل. گاهی با شکستگی ستون فقرات گردنی مرتبط و ممکن آسیب به نخاع گردنی ← همه علائم از جمله درد بررسی شود.
+  </div>
+  <table>
+    <caption>جدول ۵-۳: ترمیم آسیب چانه (مولرهای شیری)</caption>
+    <thead><tr><th>وضعیت</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td>اکسپوز ناحیه کوچک از عاج</td><td>ترمیم کامپوزیت ساده</td></tr>
+      <tr><td>شکستگی بزرگ یا گسترش به زیر لثه بدون اکسپوز پالپ</td><td>استفاده از <span class="term">SSC</span></td></tr>
+      <tr><td>درگیری پالپ</td><td>پالپوتومی + <span class="term">SSC</span></td></tr>
+      <tr><td>آسیب گسترده</td><td><span class="term">Ext</span> + فضا نگه‌دار</td></tr>
+    </tbody>
+  </table>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ فصل ۶ ============ -->
+<section class="chap" id="c6">
+  <h2>فصل ۶ — جابجایی‌ها، تغییر رنگ و عوارض دندان شیری (بخش دوم)</h2>
+  <p class="src">منبع: دکتر ساجدی، جلسه چهارم</p>
+
+  <h3>مرور Concussion و Subluxation</h3>
+  <table>
+    <caption>جدول ۶-۱: علائم Concussion و Subluxation</caption>
+    <thead><tr><th>نوع</th><th>لقی</th><th>گشادی PDL</th><th>حساسیت به دق</th><th>جابجایی</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">Concussion</span></td><td>ندارد</td><td>—</td><td>دارد</td><td>ندارد</td><td>توصیه به غذای نرم و بهداشت دهانی</td></tr>
+      <tr><td><span class="term">Subluxation</span></td><td>دارد</td><td>دارد</td><td>دارد</td><td>ندارد</td><td>توصیه به غذای نرم و بهداشت دهانی</td></tr>
+    </tbody>
+  </table>
+  <p>اگر مدت کوتاهی پس از آسیب مراجعه کند، خونریزی شیار لثه‌ای داریم.</p>
+
+  <h3>Intrusion (شیری) — جزئیات</h3>
+  <p>یکی از پیچیده‌ترین آسیب‌های دندانی. علائم: کاهش لقی، صدای متالیک در دق (مانند دندان انکیلوز)، عدم درد هنگام دق، احتمال خونریزی شیار لثه، تورم لب بالا (ادم/خونریزی ناشی از شکستگی استخوان).</p>
+  <div class="box warn">
+    <span class="lbl">مهم: جهت جابجایی ریشه</span>
+    در <strong>۸۰٪</strong> موارد ریشه به سمت <strong>لبیال</strong> جابجا شده و آسیب به جوانه دائمی (که سمت پالاتال است) نمی‌زند.
+  </div>
+  <h4>شواهد کلینیکی تأییدکننده جابجایی لبیالی ریشه</h4>
+  <ol>
+    <li>شیب پالاتالی تاج = ریشه به سمت لبیال است</li>
+    <li>وجود خونریزی و تورم سفت در وستیبول لبیال</li>
+    <li>موقعیت طبیعی جوانه دندان دائمی نسبت به دندان قرینه</li>
+    <li>دندان نسبت به دندان‌های بغلی کوتاه‌تر و اپک‌تر است</li>
+  </ol>
+  <div class="box note">
+    <span class="lbl">مدیریت Intrusion شیری</span>
+    اگر جوانه زیرین آسیب ببیند ← دندان کشیدنی است. در غیر این صورت یکی از احتمالات <strong>رویش خودبه‌خودی</strong> است که پس از ۲ تا ۳ هفته شروع و حتی تا ۶ ماه طول می‌کشد (اغلب دندان چرخیده رویش می‌یابد). <br>
+    برای بررسی رویش خودبه‌خود در فالوآپ حتماً با دندان‌های مجاور (به‌وسیله پروپ یا آبسلانگ) مقایسه می‌شود؛ نباید صرفاً طول تاج کلینیکی را معیار بگیریم چون با کاهش التهاب لثه ممکن است طول تاج افزایش یافته باشد.
+  </div>
+
+  <h3>Extrusion (شیری)</h3>
+  <p>افزایش لقی، حساسیت به دق، خونریزی شیار لثه، در رادیوگرافی گشادی PDL خصوصاً در ناحیه اپکس. هرچه خروج از ساکت بیشتر ← آسیب به عروق و اعصاب و احتمال نکروز بیشتر. درمان آن مشابه <span class="term">lingual luxation</span> است.</p>
+
+  <h3>Lingual Luxation (شیری)</h3>
+  <p>در صورت جابجایی پالاتالی تاج، احتمالاً تداخل اکلوزالی خواهیم داشت (مگر اپن بایت قدامی داشته باشیم). علائم: لقی، حساسیت به دق، خونریزی شیار لثه، تورم لب، شکستگی استخوان لبیال، گشادی PDL، کوتاه‌تر و اپک‌تر بودن نسبت به مجاور.</p>
+  <table>
+    <caption>جدول ۶-۲: درمان Lingual Luxation شیری</caption>
+    <thead><tr><th>شرایط</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td>تداخل اکلوزالی شدید یا آسیب شدید به استخوان لبیال</td><td>کشیدن دندان</td></tr>
+      <tr><td>مراجعه بلافاصله</td><td><span class="term">Reposition</span> + اسپلینت + پس از ۷ تا ۱۴ روز درمان ریشه (بهتر است <span class="term">Replant</span> نشود — ممکن دندان به سمت جوانه زیرین برود). Reposition فقط وقتی کودک بلافاصله مراجعه کند ممکن است (اگر چند روز گذشته باشد، لخته تشکیل شده و دندان به موقعیت قبلی برنمی‌گردد).</td></tr>
+      <tr><td>اپن بایت</td><td>رها کرده یا با اضافه کردن کامپوزیت اپن بایت ایجاد می‌کنیم: <span class="term">button</span>های کامپوزیتی روی اکلوزال مولر اول بالا/پایین ← نیروهای فانکشنال گونه و زبان دندان لق را به موقعیت اصلی برمی‌گردانند سپس کامپوزیت حذف. (این تکنیک وقتی بیمار پس از تشکیل لخته، چند ساعت بعد آسیب مراجعه کرده است.)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Avulsion (شیری)</h3>
+  <div class="box danger">
+    <span class="lbl">قانون مهم: هیچ‌گاه دندان شیری را Replant نمی‌کنیم!</span>
+    در کودکان خردسال به‌علت نسبت بالای تاج به ریشه و انعطاف‌پذیری استخوان شایع است. در <strong>۷۵٪</strong> موارد، خروج دندان با آسیب جوانه دائمی همراه است. هیچ‌گاه دندان شیری را به ساکت بازنمی‌گردانیم چون دندان دائمی زیرین ممکن هنگام قرار دادن ریشه آسیب ببیند. آسیب replant این دندان بسیار زیاد است.
+  </div>
+  <p>برای اطمینان از عدم آسپیره، باید دندان پیدا شود؛ در غیر این صورت رادیوگرافی قفسه سینه و ارزیابی توسط متخصص اطفال توصیه می‌شود.</p>
+  <div class="box note">
+    فاصله زمانی بین صدمات تروماتیک و معاینه از فاکتورهای پروگنوز است (هرچه کمتر = بهتر)، خصوصاً در <span class="term">avulsion</span> و <span class="term">intrusion</span>. در اثر عفونت PDL و نکروز پالپ، آسیب به جوانه دائمی وارد می‌شود که باید سریع برطرف شود.
+  </div>
+
+  <h3>اطلاعات و دستورالعمل‌ها برای والدین</h3>
+  <ul>
+    <li>تماس تلفنی اضطراری.</li>
+    <li>نگرانی اصلی: خطر آسیب به دندان دائمی در <strong>Intrusion</strong> و آسپیراسیون در اثر <strong>Extrusion/Avulsion</strong>.</li>
+    <li>اگر آسیب مانند <strong>Avulsion</strong> جدی به نظر می‌رسد ← در اسرع وقت ویزیت.</li>
+    <li>مدیریت سایر شرایط را می‌توان بدون به خطر انداختن پروگنوز تا روز بعد به تعویق انداخت.</li>
+  </ul>
+
+  <h3>بهداشت دهان و دندان در Luxation</h3>
+  <ul>
+    <li>رعایت بهداشت و حذف پلاک اطراف دندان آسیب‌دیده.</li>
+    <li>کلرهگزیدین گلوکونات ۲٪، روزی ۳ بار بعد از غذا به‌مدت یک هفته (با گوش‌پاکن روی حاشیه لثه پالاتال و لبیال) جهت التیام فیبرهای لثه‌ای.</li>
+    <li>رژیم غذایی نرم در luxation شدید و آسیب بافت نرم.</li>
+  </ul>
+  <div class="box warn">
+    <span class="lbl">آنتی‌بیوتیک</span>
+    آنتی‌بیوتیک انتخابی در تروماها <strong>داکسی‌سایکلین</strong> (خانواده تتراسایکلین) است، اما در کودکان زیر <strong>۱۲ سال</strong> به‌دلیل تغییر رنگ دندان منع مصرف دارد ← از <strong>آموکسی‌سیلین</strong> استفاده می‌کنیم.
+  </div>
+
+  <h3>عوارض پاتولوژیک آسیب به دندان</h3>
+  <p>پالپیت غیرقابل برگشت، عفونت PDL، تحلیل داخلی و خارجی ریشه، تغییر رنگ دندان.</p>
+
+  <h3>تغییر رنگ دندان (شیری)</h3>
+  <div class="box note">
+    تغییر رنگ دندان شیری لزوماً به معنای غیرزنده بودن نیست، خصوصاً وقتی ۱ یا ۲ روز بعد آسیب رخ دهد. اگر تغییر رنگ تیره برای هفته‌ها/ماه‌ها ادامه یابد ← بیشتر نشانه نکروز که باید با رادیوگرافی (لوسنسی) یا کلینیکی (لقی، فیستول) تأیید شود. تغییر رنگ از نمای پالاتال با ترنسلومینیشن بهتر دیده می‌شود. تغییر رنگ به‌تنهایی دلیل انتخاب درمان نیست. علائم اضافی عفونت: رادیولوسنسی پری اپیکال، تحرک، تورم، فیستول و درد.
+  </div>
+  <table>
+    <caption>جدول ۶-۳: انواع تغییر رنگ دندان شیری</caption>
+    <thead><tr><th>رنگ</th><th>علت</th><th>اقدام</th></tr></thead>
+    <tbody>
+      <tr><td><strong>صورتی</strong></td><td>خونریزی داخل پالپ</td><td>معمولاً بهتر می‌شود؛ فقط فالوآپ</td></tr>
+      <tr><td><strong>قرمز</strong></td><td>تحلیل داخلی (پس از مدتی)</td><td>درمان خاصی نیاز ندارد؛ تحلیل تا افتادن دندان ادامه و منجر به از دست رفتن زودهنگام تاج</td></tr>
+      <tr><td><strong>زرد</strong></td><td>کلسیفیکاسیون، <span class="term">PCO</span> (محو شدن کانال پالپ)، رسوب عاج و تنگ شدن کانال — کانال در رادیوگرافی محو می‌شود، پالپ چمبر در حال کوچک شدن</td><td>معمولاً واقعه پاتولوژیک ولی فعلاً فالوآپ</td></tr>
+    </tbody>
+  </table>
+
+  <h3>صدمات به دندان دائمی زیرین</h3>
+  <ul>
+    <li>هیپوپلازی یا هایپوکلسیفیکاسیون مینا</li>
+    <li><span class="term">Dilaceration</span> ریشه</li>
+    <li>رویش اکتوپیک دائمی</li>
+  </ul>
+  <div class="box warn">
+    کلسیفیکاسیون دندان سانترال شیری در <strong>۴ سالگی</strong> کامل می‌شود. اگر آسیب <strong>قبل از ۴ ماهگی</strong> باشد (کلسیفیکاسیون دندان دائمی کامل نشده) ← آسیب بیشتر است. هیپوپلازی در جوانه دائمی ناشی از عفونت و تروما دندان شیری، <strong>هیپوپلازی Turner</strong> نامیده می‌شود.
+  </div>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ فصل ۷ ============ -->
+<section class="chap" id="c7">
+  <h2>فصل ۷ — تروماهای فک و صورت: مندیبل، ماگزیلا و لفور</h2>
+  <p class="src">منبع: دکتر توکلی، جلسه ۷ (Maxillofacial Trauma)</p>
+
+  <h3>ملاحظات کلی</h3>
+  <p>ملاحظات کلی درمان بیماران ترومایی در فک و صورت هم صدق می‌کند: موارد <span class="term">advanced normalized support</span> شامل ۱) <span class="term">ABCDs</span> و ۲) معاینات بافت نرم. تاریخچه کامل (اگر هوشیار است) + معاینات بالینی لازم.</p>
+
+  <h3>رادیوگرافی‌های سر و گردن</h3>
+  <table>
+    <caption>جدول ۷-۱: روش‌های تصویربرداری</caption>
+    <thead><tr><th>روش</th><th>کاربرد</th></tr></thead>
+    <tbody>
+      <tr><td>رادیوگرافی <span class="term">plain</span></td><td>در گذشته وسیع؛ امروزه کمتر. برای <strong>مندیبل</strong> همچنان مهم (خصوصاً <span class="term">OPG</span>). برای مندیبل سری کامل plain و panorex.</td></tr>
+      <tr><td><span class="term">CT Scan</span></td><td>اطلاعات بسیار دقیق از سر و گردن. CT فیشیال در مقاطع آگزیال و کرونال برای شکستگی اوربیت (بافت سخت و نرم)، معمولاً در سکشن‌های ۲ تا ۳ میلی‌متری.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>شکستگی‌های مندیبل (Mandible Fractures)</h3>
+  <ul>
+    <li>در مردان جوان ~ <strong>۱۸ تا ۳۰ سال</strong> شایع.</li>
+    <li><strong>علل:</strong> آسیب‌های ورزشی، گلوله، تصادفات، نزاع.</li>
+  </ul>
+  <h4>ریسک فاکتورهای افزایش شکستگی فکین</h4>
+  <ul>
+    <li>دندان‌های نهفته</li>
+    <li>پوکی استخوان / استئوپروز</li>
+    <li>ضایعات پاتولوژیک (لیز استخوان)</li>
+    <li>نواحی بی‌دندانی</li>
+  </ul>
+
+  <h4>طبقه‌بندی بر اساس محل (Site)</h4>
+  <p>۱) symphysal/parasymphyseal، ۲) body، ۳) ramus، ۴) coronoid process، ۵) condyle، ۶) alveolus (آلوئول)، ۷) angle.</p>
+
+  <h4>طبقه‌بندی بر اساس مطلوبیت (Favorability)</h4>
+  <table>
+    <caption>جدول ۷-۲: شکستگی Favorable و Unfavorable</caption>
+    <thead><tr><th>جهت دید</th><th>Favorable (مطلوب)</th><th>Unfavorable (نامطلوب)</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">Horizontal</span> (افقی)</td><td>عضله <strong>مستر</strong> قطعات را به هم نزدیک می‌کند</td><td>انقباض عضله مستر قطعات را از هم دور می‌کند</td></tr>
+      <tr><td><span class="term">Vertical</span> (عمودی)</td><td>عضله <strong>مدیال تریگوئید</strong> قطعات را به هم نزدیک می‌کند</td><td>عضله مدیال تریگوئید حدود را دور می‌کند</td></tr>
+    </tbody>
+  </table>
+  <div class="box note">شکستگی‌های <strong>favorable</strong> نیازمند درمان <strong>closed</strong> هستند (نیاز به پیچ و پلیت ندارند).</div>
+
+  <h4>طبقه‌بندی بر اساس نوع (Type of Fracture)</h4>
+  <ul>
+    <li>شکستگی <span class="term">open</span> در مقابل <span class="term">closed</span></li>
+    <li><strong>Fracture pattern:</strong> <span class="term">comminuted</span> (خرد شده)، <span class="term">oblique</span> (مایل)، <span class="term">transverse</span> (افقی)، <span class="term">spiral</span>، <span class="term">greenstick</span> (فقط یک table کورتیکال شکسته — معمولاً تابل باکال در اطفال).</li>
+    <li>شکستگی‌های <span class="term">pathologic</span> (ثانویه): استئوپروز، تومورهای استئوژنیک.</li>
+  </ul>
+  <p class="src">شکستگی simple = فقط یک خط شکستگی (معمولاً open در نظر گرفته می‌شود).</p>
+
+  <h4>طبقه‌بندی بر اساس حضور دندان در خط شکستگی</h4>
+  <table>
+    <caption>جدول ۷-۳: کلاس‌بندی بر اساس دندان</caption>
+    <thead><tr><th>کلاس</th><th>وضعیت دندان</th></tr></thead>
+    <tbody>
+      <tr><td>Class I</td><td>دو طرف خط دندان وجود دارد</td></tr>
+      <tr><td>Class II</td><td>یک طرف دندان، طرف دیگر بی‌دندانی</td></tr>
+      <tr><td>Class III</td><td>دو طرف خط بی‌دندانی</td></tr>
+    </tbody>
+  </table>
+
+  <h3>مدیریت شکستگی مندیبل (Management)</h3>
+  <div class="box note">
+    <span class="lbl">اهداف درمان</span>
+    ۱) بازگرداندن اکلوژن، ۲) ایجاد <span class="term">union</span> استخوانی، ۳) جلوگیری از پاتولوژی مفصل TMJ. بهتر است ترمیم ظرف <strong>یک هفته اول</strong> رخ دهد.
+  </div>
+
+  <h4>Closed Reduction — MMF</h4>
+  <p><span class="term">Maxillo-Mandibular Fixation (MMF)</span>: استفاده از <span class="term">arch bar</span> یا هر روشی که مانع باز شدن دهان شود. مدت بسته به محل شکستگی <strong>۲ تا ۸ هفته</strong>:</p>
+  <ul>
+    <li><strong>۲ هفته:</strong> کمترین زمان — شکستگی گردن کندیل.</li>
+    <li><strong>۸ هفته:</strong> بیشترین زمان — شکستگی انگل مندیبل.</li>
+  </ul>
+  <p>روش: arch bar فک بالا و پایین را می‌بندیم و دو فک را با سیم به هم وصل می‌کنیم.</p>
+
+  <h4>Open Reduction & Internal Fixation (ORIF)</h4>
+  <p>در موارد جابه‌جایی زیاد، خردشدگی، یا شکستگی <strong>unfavorable</strong>. Approach از طریق <span class="term">transoral</span> (داخل دهانی) یا <span class="term">external</span>.</p>
+
+  <h4>مدیریت شکستگی coronoid</h4>
+  <p>اگر greenstick، unilateral nondisplaced ← غذای نرم (observation with soft diet)، مسکن، آنتی‌بیوتیک خوراکی، فالوآپ کوتاه‌مدت، فیزیوتراپی ۳ ماهه.</p>
+  <p>شکستگی‌های favorable با حداقل جابجایی (غیر کندیل) ← <span class="term">closed reduction</span> برای ۴ تا ۶ هفته.</p>
+
+  <h3>عوارض جراحی شکستگی فک تحتانی</h3>
+  <ol>
+    <li>کم‌حسی (hypesthesis) و بی‌حسی (anesthesis) لب و چانه</li>
+    <li>استئومیلیت</li>
+    <li><span class="term">Malunion</span> (قطعات درست کنار هم قرار نگرفته و جوش نخورده)</li>
+    <li><span class="term">Nonunion</span> (قطعات اصلاً فیوز نشده و کاملاً متحرک)</li>
+    <li><span class="term">Plate exposure</span></li>
+    <li>آسیب به عصب مارژینال مندیبولار (در روش‌های خارج دهانی شایع)</li>
+    <li>نکروز <span class="term">aseptic</span> کندیل</li>
+    <li>انکیلوز TMJ</li>
+    <li>آسیب‌های دندانی</li>
+  </ol>
+
+  <h3>شکستگی‌های فک فوقانی (Maxillary Fractures)</h3>
+  <ul>
+    <li>پوزیشن فک بالا نیروها را جذب می‌کند ← شیوع شکستگی خیلی کمتر از فک پایین.</li>
+    <li><span class="term">سینوزیت</span> (سینوس ماگزیلا) از عوارض بالقوه است.</li>
+  </ul>
+
+  <h4>باترس‌ها (Buttress) — استحکامات فک و صورت</h4>
+  <table>
+    <caption>جدول ۷-۴: باترس‌های عمودی و افقی</caption>
+    <thead><tr><th>نوع</th><th>باترس‌ها</th></tr></thead>
+    <tbody>
+      <tr><td>Vertical (عمودی)</td><td>۱) Naso-Maxillary (NM)، ۲) Zygomatico-Maxillary (ZM)، ۳) Pterygo-Maxillary (PM)، ۴) Nasal Septum</td></tr>
+      <tr><td>Horizontal (افقی)</td><td>۱) Frontal Bar، ۲) ریم تحتانی اوربیت، ۳) آلوئول ماگزیلا و پلیت، ۴) زائده زایگوما، ۵) بال بزرگ اسفنوئید، ۶) Medial and Lateral Pterygoid Plates، ۷) مندیبل (خصوصاً بادی)</td></tr>
+    </tbody>
+  </table>
+  <p>اگر نیرو به باترس وارد شود احتمال شکستگی کم است و نیرو در مسیر باترس‌ها پخش می‌شود (مثل باترس pterygomaxillary به base کرانیال، باترس زایگوماتیک به بالا و خلف، نازوفرونتال، اوربیت، فرونتال).</p>
+
+  <h3>طبقه‌بندی لفور (Le Fort Classification)</h3>
+  <p>اولین بار یک آناتومیست فرانسوی روی کاداورها کار کرد؛ خط شکستگی از جایی که حداقل مقاومت است عبور می‌کند. لفور یک سمت همیشه با سمت مقابل برابر نیست؛ ممکن یک سمت لفور و سمت دیگر بدون شکستگی باشد (<span class="term">hemi-Le Fort</span>) یا ترکیبی.</p>
+  <table>
+    <caption>جدول ۷-۵: انواع لفور — مقایسه کامل</caption>
+    <thead><tr><th>نوع</th><th>نام دیگر</th><th>مکانیسم</th><th>ساختارهای درگیر</th><th>مدیریت</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="term">Le Fort I</span></td>
+        <td>Low Maxillary (شکستگی عرضی ماگزیلا)</td>
+        <td>—</td>
+        <td>امتداد سینوس ماگزیلاری، سپتوم بینی، تریگوئیدپلیت‌ها، دیواره مدیالی سینوس</td>
+        <td>جا اندازی با انگشت؛ در صورت نیاز MMF یا فیکساسیون با پیچ و پلاک در ناحیه زایگوماتیکوماگزیلاری</td>
+      </tr>
+      <tr>
+        <td><span class="term">Le Fort II</span></td>
+        <td>Pyramidal (شکل هرم)</td>
+        <td>نیروهای superiorly علیه ماگزیلا</td>
+        <td>سوچور nasofrontal، orbital foramen، کف و سقف زائده فرونتال استخوان لاکریمال، سوچور زایگوماتیکوماگزیلاری، lamina papyracea (بخشی از اتموئید)، تریگوئید پلیت، قسمت فوقانی سپتوم</td>
+        <td>ایجاد ثبات در باترس زایگوماتیکوماگزیلاری، MMF؛ زائده نازوفرونتال و ریم تحتانی اوربیت می‌توانند open reduction شوند</td>
+      </tr>
+      <tr>
+        <td><span class="term">Le Fort III</span></td>
+        <td>Craniofacial Dysjunction</td>
+        <td>نیروهای با شدت بالا (high velocity impacts)؛ جدا شدن استخوان‌های صورت از بیس اسکال</td>
+        <td>سوچور nasofrontal، zygoma and zygomatic arch، pterygoid plates، سپتوم بینی</td>
+        <td>معمولاً نیازمند <strong>فلپ کرونال</strong> (دید و دسترسی مناسب) + فیکساسیون با miniplate</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="box note">
+    <span class="lbl">تکنیک disimpaction در Le Fort I</span>
+    وقتی نیرو باعث impact شدن فک بالا (push و compress به سمت داخل) شده ← با فورسپس <span class="term">Rowe</span> یا hook استخوانی، ماگزیلا را به پوزیشن مطلوب قدامی جلو می‌آورند، سپس پیچ و پلیت یا MMF.
+  </div>
+
+  <h3>عوارض جراحی‌های فک بالا</h3>
+  <p>Malunion، Nonunion، اکسپوز شدن پلیت، پلیت‌های قابل لمس/مشاهده، بی‌حسی گونه و پیشانی (Forehead or Cheek Hypoesthesia)، استئومیلیت، آسیب‌های دندانی.</p>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ فصل ۸ ============ -->
+<section class="chap" id="c8">
+  <h2>فصل ۸ — ZMC، اوربیت، سینوس فرونتال، NOE و بینی</h2>
+  <p class="src">منبع: دکتر توکلی، جلسه ۸ (رفرنس: کتاب پترسون ۲۰۱۹)</p>
+
+  <h3>ZMC (Zygomaticomaxillary Complex)</h3>
+  <p>شکستگی گونه که <span class="term">ZMC</span> یا <span class="term">Trimalar fractures</span> نامیده می‌شود.</p>
+  <h4>علائم ZMC</h4>
+  <ol>
+    <li>اکیموز و هموراژ اطراف چشم و تحت ملتحمه (subconjunctival)</li>
+    <li>ادم پلک</li>
+    <li>خونریزی از بینی</li>
+    <li>کم‌حسی ناحیه گونه</li>
+    <li>دیپلوپیا (دوبینی)</li>
+    <li>هایپوفتالموس</li>
+    <li>انوفتالموس</li>
+    <li>تریسموس (کمتر باز شدن دهان)</li>
+  </ol>
+  <p>شکستگی ZMC دوطرفه ← نمای <span class="term">Raccoon eyes</span> (چشم‌ها شبیه راکون).</p>
+
+  <h4>استخوان مالار (گونه) — استخوان ۴ وجهی</h4>
+  <p>سوچورها (محل اتصال):</p>
+  <table>
+    <caption>جدول ۸-۱: سوچورهای استخوان مالار</caption>
+    <thead><tr><th>#</th><th>سوچور</th></tr></thead>
+    <tbody>
+      <tr><td>۱</td><td>زایگوماتیکوفرونتال</td></tr>
+      <tr><td>۲</td><td>زایگوماتیکوماگزیلاری</td></tr>
+      <tr><td>۳</td><td>زایگوماتیکوتمپورال (قوس گونه با تمپورال)</td></tr>
+      <tr><td>۴</td><td>زایگوماتیکواسفنوئید (سطح داخلی اوربیت)</td></tr>
+    </tbody>
+  </table>
+  <h4>Approach‌های دسترسی به شکستگی گونه</h4>
+  <ul>
+    <li>داخل دهانی (<span class="term">keen approach</span>)</li>
+    <li>خارج دهانی: برش کرونال، همی‌کرونال، یا <span class="term">extended pretragal approach</span></li>
+    <li>دسترسی به سوچور زایگوماتیکوفرونتال از طریق <span class="term">lateral Brow</span></li>
+  </ul>
+  <p class="src">نکته: استفاده از تکنیک وایر برای فیکس ریم اوربیت روش منسوخی است (فقط وقتی پیچ و پلاک در دسترس نباشد).</p>
+
+  <h3>شکستگی‌های کاسه اوربیت</h3>
+  <table>
+    <caption>جدول ۸-۲: هایپوفتالموس و انوفتالموس</caption>
+    <thead><tr><th>اصطلاح</th><th>تعریف</th><th>حد تشخیص</th></tr></thead>
+    <tbody>
+      <tr><td><span class="term">Hypophthalmos</span></td><td>گلوب آسیب‌دیده از روبه‌رو پایین‌تر از گلوب سالم است</td><td>بیشتر از ۲ میلی‌متر ← قابل تشخیص توسط فرد عادی</td></tr>
+      <tr><td><span class="term">Enophthalmos</span></td><td>از نمای پایین (worm eyes — نگاه از پایین به بالا) یک اوربیت نسبت به مقابل پایین‌تر است</td><td>۱ تا ۲ میلی‌متر برای کلینیسین؛ بیشتر از ۲ میلی‌متر برای فرد عادی ← نیازمند جراحی</td></tr>
+    </tbody>
+  </table>
+  <p>شکستگی اوربیت می‌تواند فقط کاسه چشم باشد (<span class="term">pure</span>) یا همراه شکستگی‌های دیگر (<span class="term">impure</span>).</p>
+
+  <h4>اندیکاسیون و کنترااندیکاسیون جراحی اوربیت</h4>
+  <table>
+    <caption>جدول ۸-۳: اندیکاسیون/کنترااندیکاسیون جراحی اوربیت</caption>
+    <thead><tr><th>اندیکاسیون (نیاز به جراحی)</th><th>کنترااندیکاسیون (نباید عمل شود)</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>
+          <ul style="margin:4px 0;">
+            <li>انوفتالموس یا هایپوفتالموس</li>
+            <li>اختلال بینایی</li>
+            <li>مشکل زیبایی</li>
+          </ul>
+          (هم فانکشنال هم زیبایی)
+        </td>
+        <td>
+          <ul style="margin:4px 0;">
+            <li>هایفِما (hyphema)</li>
+            <li>پارگی شبکیه (retinal tear)</li>
+            <li>globe perforation</li>
+            <li>آسیب چشم با سینوزیت</li>
+            <li>چشم بدون کارایی (frozen globe)</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="box note">
+    حتماً قبل از جراحی چشم/اوربیت، مشاوره چشم‌پزشکی انجام شود. خیلی از موارد مراجعه‌کننده <strong>impure</strong> و همراه شکستگی‌هایی مثل ZMC هستند. <strong>بهترین زمان: ۱ هفته بعد از تروما.</strong>
+  </div>
+
+  <h4>اپروچ‌های درمان شکستگی اوربیت</h4>
+  <ul>
+    <li>Subciliary incision (infraciliary)</li>
+    <li><span class="term">Transconjunctival</span> — <strong>روش ارجح</strong></li>
+    <li>Lynch incision (frontoethmoidal)</li>
+    <li>Brow incision</li>
+    <li>Subtarsal incision</li>
+    <li>Caldwell-luc (transantral) — وقتی بخواهیم از طریق سینوس گلوب را در موقعیت صحیح قرار دهیم</li>
+  </ul>
+  <div class="box note">
+    <span class="lbl">گرفت (Graft)</span>
+    بهترین graft که دیرتر از همه جذب می‌شود <strong>کالواریا</strong> است (خصوصاً تمپورال و پریتال). graft در کف اوربیت گذاشته می‌شود تا اوربیت elevate شده و هایپوفتالموس برطرف شود.
+  </div>
+
+  <h4>عوارض جراحی اوربیت</h4>
+  <ul>
+    <li>بی‌حسی گونه</li>
+    <li><span class="term">Ectropion</span> (برگشت پوست پلک تحتانی به خارج)</li>
+    <li>ادامه دوبینی و انوفتالموس</li>
+    <li><span class="term">CSF leak</span> (مایع مغزی نخاعی)</li>
+    <li>در موارد نادر کوری</li>
+    <li>استئومیلیت، اکسپوز پلیت، Malunion/Nonunion</li>
+    <li>خارج شدن گرفت (extrusion of grafts)</li>
+    <li>قابل مشاهده/لمس بودن پلاک‌ها</li>
+  </ul>
+
+  <h3>شکستگی‌های سینوس فرونتال</h3>
+  <p>زیاد مهم نیستند. یا در تابل خلفی یا قدامی رخ می‌دهند.</p>
+  <table>
+    <caption>جدول ۸-۴: شکستگی سینوس فرونتال و مدیریت</caption>
+    <thead><tr><th>محل/نوع</th><th>مدیریت</th></tr></thead>
+    <tbody>
+      <tr><td>تابل قدام، خطی با حداقل جابجایی</td><td>معمولاً نیاز به درمان ندارد</td></tr>
+      <tr><td>Depressed fracture (فرورفتگی پیشانی)</td><td>نیازمند مداخله جراحی</td></tr>
+      <tr><td>Comminuted (خرد شده) + قطعات unstable و جابجا</td><td>نیازمند مداخله</td></tr>
+      <tr><td>تابل خلفی ایزوله بدون جابجایی</td><td>—</td></tr>
+      <tr><td>Through and through (خرد + درگیری لوب فرونتال)</td><td><strong>Cranialization</strong> — تابل خلفی جوری جابجا شود که مغز فعالیت نرمال خودش را انجام دهد و بدون مداخله جای خودش را باز کند</td></tr>
+    </tbody>
+  </table>
+
+  <h4>عوارض جراحی سینوس فرونتال</h4>
+  <ol>
+    <li>موکوسل و موکوپایوسل (اگر مدخل سینوس بسته شود ← موکوسل؛ با عفونت ← موکوپایوسل)</li>
+    <li>سینوزیت</li>
+    <li>دفورمیتی در کانتور پیشانی</li>
+    <li>عفونت اینتراکرانیال</li>
+    <li>استئومیلیت</li>
+    <li><span class="term">CSF Leak</span> (یکی از عوارض شایع)</li>
+    <li>کم‌حسی پیشانی (hyposthesia)</li>
+    <li>شکستگی شدید (high velocity) ← forehead paralysis و شاخه فرونتال عصب هفتم</li>
+  </ol>
+
+  <h3>شکستگی‌های NOE (Naso-orbitoethmoid)</h3>
+  <p>اهمیت زیادی ندارد. استخوان‌های درگیر: زائده فرونتال استخوان ماگزیلا، استخوان نازال، فضای اوربیتال.</p>
+  <div class="box warn">
+    <span class="lbl">علائم NOE</span>
+    گردی گوشه چشم (lacrimal lake) از بین می‌رود؛ کانتوس داخلی از هم فاصله می‌گیرد ← <span class="term">traumatic telecanthus</span>. حالت نرمال <strong>۲۸ تا ۳۵ میلی‌متر</strong> در فرد بالغ؛ اگر بیشتر از <strong>۴۰ میلی‌متر</strong> ← traumatic telecanthus. ریزش اشک هم از عوارض است.
+  </div>
+  <table>
+    <caption>جدول ۸-۵: تایپ‌های NOE</caption>
+    <thead><tr><th>تایپ</th><th>توضیح</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td>تایپ ۱</td><td>شکستگی ساده — لیگامان‌های کانتوس مدیالی disruption/پارگی</td><td>معمولاً نیاز به درمان ندارد</td></tr>
+      <tr><td>تایپ ۲</td><td>جابجایی و پارگی لیگامان‌ها بیشتر</td><td>شایع‌ترین روش: برش داخل دهانی، پیچ و پلاک</td></tr>
+      <tr><td>تایپ ۳</td><td>شکستگی comminuted (خرد شده)</td><td>شایع‌ترین روش: برش داخل دهانی، پیچ و پلاک</td></tr>
+    </tbody>
+  </table>
+
+  <h3>شکستگی‌های بینی (Nasal Fractures)</h3>
+  <ul>
+    <li>یکی از شایع‌ترین استخوان‌های شکسته در صورت. در اثر نیروی قدامی یا لترال.</li>
+    <li>آسیب به غضروف/تیغه بینی ← جابجایی غضروف چهارگوش به پایین (گاهی <span class="term">c shape</span>).</li>
+    <li>در بچه‌ها معمولاً جابجایی یا شکستگی <span class="term">green stick</span> ← افزایش ریسک <strong>هماتوم سپتوم</strong>.</li>
+  </ul>
+  <div class="box danger">
+    <span class="lbl">هماتوم سپتوم — اورژانس!</span>
+    یکی از عوارض شکستگی بینی که می‌تواند باعث <strong>نکروز سپتوم</strong> شود و در صورت تشخیص باید <strong>اورژانسی تخلیه</strong> شود. خرد شدن استخوان بینی در بچه‌ها شایع‌تر است.
+  </div>
+  <p><strong>علائم:</strong> دپرشن استخوان بینی، مشکل تنفسی، <span class="term">epistaxis</span> (خونریزی از بینی).</p>
+  <p>استخوان بینی از دو استخوان متقارن (بالا) و غضروف (پایین) تشکیل شده؛ غضروف معمولاً آسیب نمی‌بیند مگر تروما شدید/شارپ. اکثراً استخوان‌ها (خصوصاً در بزرگسالان) به‌صورت comminuted در می‌آیند.</p>
+  <h4>تشخیص</h4>
+  <ul>
+    <li>روش ساده: گرافی لترال نازال دوطرفه (<span class="term">bilateral lateral nasal</span>) — دندانپزشک هم می‌تواند درخواست دهد.</li>
+    <li>اگر ترومای همراه: CT اسکن.</li>
+    <li>معمولاً در کلینیک تشخیص داده می‌شود ولی از نظر <span class="term">legal</span> باید بیمار گرافی داشته باشد.</li>
+  </ul>
+  <h4>درمان</h4>
+  <ul>
+    <li>معمولاً <span class="term">close</span>: مش یا اسپلینت داخل بینی ۳ تا ۷ روز؛ یا گچ روی بینی معمولاً ۷ روز.</li>
+    <li>معمولاً بینی کاملاً سر جای خود قرار نمی‌گیرد ← ممکن نیاز به <span class="term">open reduction</span> یا <span class="term">septorhinoplasty</span> حداقل ۶ ماه بعد.</li>
+    <li>در اطفال: درمان <span class="term">conservative</span> یا معمولاً close.</li>
+    <li>سپتوم با deviation ← با فورسپس <span class="term">Ash</span> صاف می‌شود.</li>
+    <li>اسپلینت خارجی silastic امروزه استفاده نمی‌شود.</li>
+  </ul>
+  <h4>عوارض جا اندازی بینی</h4>
+  <ul>
+    <li>دفورمیتی دائمی</li>
+    <li>انسداد بینی</li>
+    <li>هماتوم سپتوم ← perforation سپتوم و deviation تیغه بینی</li>
+    <li>شکستگی <span class="term">cribriform plate</span> (نادر)</li>
+  </ul>
+
+  <h3>نکات تکمیلی بازسازی (ORIF)</h3>
+  <div class="box note">
+    در شکستگی‌های فک پایین معمولاً ORIF: مثلاً ۲ پلیت ۴ سوراخه (یکی نزدیک بوردر تحتانی مندیبل، یکی روی <span class="term">external oblique ridge</span>). در دپرشن جمجمه (فرونتال/پریتال/تمپورال)، بازسازی با استخوان <strong>اتوژن</strong> ترجیح دارد (احتمال عفونت کمتر)؛ مش تیتانیومی بعداً قابل لمس و ناخوشایند است (خصوصاً اگر موی کم).
+  </div>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ جمع‌بندی ============ -->
+<section class="chap" id="summary">
+  <h2>جداول جمع‌بندی نهایی (مقایسه‌ای برای حفظ سریع)</h2>
+
+  <h3>مقایسه جامع صدمات جابجایی دندان دائمی</h3>
+  <table>
+    <caption>جدول جمع‌بندی S-1: همه luxation injuries در یک نگاه</caption>
+    <thead><tr><th>نوع</th><th>لقی</th><th>جابجایی</th><th>درمان کلیدی</th><th>مدت اسپلینت</th><th>وضعیت پالپ</th></tr></thead>
+    <tbody>
+      <tr><td>Concussion</td><td>ندارد</td><td>ندارد</td><td>رست/Symptomatic</td><td>—</td><td>خوب</td></tr>
+      <tr><td>Subluxation</td><td>کم</td><td>ندارد</td><td>رست؛ گاهی فیکس ۲-۳ هفته</td><td>۲-۳ هفته (در صورت لقی)</td><td>Immature بهتر؛ Mature questionable</td></tr>
+      <tr><td>Lateral Luxation</td><td>دارد</td><td>افقی</td><td>Reposition + Splint</td><td>۳-۴ هفته</td><td>اکثراً نکروز؛ Immature ممکن revascularize</td></tr>
+      <tr><td>Extrusion</td><td>خیلی زیاد</td><td>کرونالی</td><td>Reposition + Splint</td><td>۴-۸ هفته</td><td>Mature نکروز؛ Immature ممکن زنده</td></tr>
+      <tr><td>Intrusion</td><td>محکم (شبه انکیلوز)</td><td>به داخل ساکت</td><td>Immature: رشد خودبه‌خود؛ Mature: جراحی/ارتو</td><td>—</td><td>آسیب شدید؛ بعد healing درمان ریشه</td></tr>
+    </tbody>
+  </table>
+
+  <h3>مقایسه درمان‌های پالپ (Vital Pulp Therapy و بیشتر)</h3>
+  <table>
+    <caption>جدول جمع‌بندی S-2: درمان‌های پالپ</caption>
+    <thead><tr><th>درمان</th><th>میزان حذف پالپ</th><th>پروگنوز/موفقیت</th><th>اندیکاسیون اصلی</th></tr></thead>
+    <tbody>
+      <tr><td>Pulp Capping</td><td>پوشش مستقیم (بدون حذف)</td><td>≈ ۸۰٪</td><td>اکسپوز کوچک</td></tr>
+      <tr><td>Partial Pulpotomy (Cvek)</td><td>۱-۲ میلی‌متر کرونالی تا پالپ سالم</td><td>≈ ۹۵٪ (بالاترین)</td><td>open apex؛ تا ۲۴ ساعت</td></tr>
+      <tr><td>Full Pulpotomy</td><td>تا orifice کانال</td><td>≈ ۷۵٪</td><td>التهاب پایین‌تر، >۷۲ ساعت، اکسپوز پوسیدگی؛ منع در mature</td></tr>
+      <tr><td>Pulpectomy</td><td>کل پالپ تا apical foramen</td><td>—</td><td>دندان mature با شکستگی complicated</td></tr>
+    </tbody>
+  </table>
+
+  <h3>درمان دندان Open Apex نکروز</h3>
+  <table>
+    <caption>جدول جمع‌بندی S-3: Apexification vs Apical Plug vs Revascularization</caption>
+    <thead><tr><th>روش</th><th>ماده</th><th>تعداد جلسات</th><th>کاربرد ویژه</th></tr></thead>
+    <tbody>
+      <tr><td>Apexification</td><td>Ca(OH)₂ (تشکیل بافت سخت ۳-۱۰ ماه)</td><td>چندین جلسه/طولانی</td><td>open apex نکروز، دیواره نازک</td></tr>
+      <tr><td>Apical Plug</td><td>MTA (۳-۴ میلی‌متر barrier)</td><td>۱-۲ جلسه (سریع)</td><td>open apex نکروز</td></tr>
+      <tr><td>Revascularization</td><td>خونریزی داخل کانال + بیس</td><td>—</td><td>بدون استاپ اپیکالی (apex خیلی باز)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>تفاوت‌های کلیدی دندان شیری و دائمی در تروما</h3>
+  <table>
+    <caption>جدول جمع‌بندی S-4: شیری در مقابل دائمی</caption>
+    <thead><tr><th>موضوع</th><th>دندان شیری</th><th>دندان دائمی</th></tr></thead>
+    <tbody>
+      <tr><td>شایع‌ترین سن</td><td>۲-۴ سال</td><td>۷-۱۰ سال</td></tr>
+      <tr><td>Avulsion ← Replant</td><td><strong>هرگز</strong> (خطر جوانه دائمی)</td><td>انجام می‌شود</td></tr>
+      <tr><td>نگرانی اصلی</td><td>آسیب به جوانه دائمی زیرین</td><td>حفظ خود دندان</td></tr>
+      <tr><td>اسپلینت در شکستگی ریشه</td><td>نیاز نیست (فقط کاهش حساسیت)</td><td>۲-۴ هفته</td></tr>
+      <tr><td>آنتی‌بیوتیک</td><td>آموکسی‌سیلین (زیر ۱۲ سال)</td><td>داکسی‌سایکلین</td></tr>
+    </tbody>
+  </table>
+
+  <h3>طبقه‌بندی شکستگی‌های فک و صورت</h3>
+  <table>
+    <caption>جدول جمع‌بندی S-5: لفور و سایر شکستگی‌های صورت</caption>
+    <thead><tr><th>شکستگی</th><th>نام/نوع</th><th>نشانه شاخص</th></tr></thead>
+    <tbody>
+      <tr><td>Le Fort I</td><td>Low Maxillary (عرضی)</td><td>تحرک ماگزیلا</td></tr>
+      <tr><td>Le Fort II</td><td>Pyramidal (هرمی)</td><td>درگیری nasofrontal</td></tr>
+      <tr><td>Le Fort III</td><td>Craniofacial Dysjunction</td><td>جدا شدن صورت از بیس اسکال (high velocity)</td></tr>
+      <tr><td>ZMC</td><td>Trimalar</td><td>Raccoon eyes، تریسموس، کم‌حسی گونه</td></tr>
+      <tr><td>NOE</td><td>Naso-orbitoethmoid</td><td>traumatic telecanthus (>۴۰mm)</td></tr>
+      <tr><td>Nasal</td><td>شکستگی بینی</td><td>هماتوم سپتوم (اورژانس)، epistaxis</td></tr>
+      <tr><td>Frontal sinus (through&through)</td><td>سینوس فرونتال</td><td>Cranialization</td></tr>
+    </tbody>
+  </table>
+
+  <h3>اعداد طلایی برای حفظ</h3>
+  <table>
+    <caption>جدول جمع‌بندی S-6: اعداد کلیدی</caption>
+    <thead><tr><th>موضوع</th><th>عدد</th></tr></thead>
+    <tbody>
+      <tr><td>GCS کما</td><td>≤ ۸</td></tr>
+      <tr><td>GCS آسیب شدید سر</td><td>۳-۸</td></tr>
+      <tr><td>GCS آسیب جزئی سر</td><td>۹-۱۳</td></tr>
+      <tr><td>خون = درصد وزن بدن</td><td>۷٪ (بچه ۸-۹٪)</td></tr>
+      <tr><td>مرگ خونریزی در ۲۴ ساعت اول</td><td>۵۰٪</td></tr>
+      <tr><td>کریکوتیروتومی مدت کمک</td><td>۴۵ دقیقه (نیدل: ۳۰-۴۵)</td></tr>
+      <tr><td>شیوع شکستگی ریشه</td><td>۳٪</td></tr>
+      <tr><td>اکسپوز پالپ (complicated)</td><td>۱۳٪</td></tr>
+      <tr><td>نکروز کرونالی در شکستگی ریشه</td><td>۲۵٪</td></tr>
+      <tr><td>فالوآپ تروما دندان دائمی</td><td>۵ سال</td></tr>
+      <tr><td>التهاب پالپ در ۴۸ ساعت اول</td><td>< ۲mm</td></tr>
+      <tr><td>برگشت خونرسانی نرمال پالپ</td><td>۹ ماه</td></tr>
+      <tr><td>پیشروی لبیالی ریشه در Intrusion شیری</td><td>۸۰٪</td></tr>
+      <tr><td>Avulsion شیری + آسیب جوانه دائمی</td><td>۷۵٪</td></tr>
+      <tr><td>کلسیفیکاسیون سانترال شیری کامل</td><td>۴ سالگی</td></tr>
+      <tr><td>MMF کندیل / انگل مندیبل</td><td>۲ / ۸ هفته</td></tr>
+      <tr><td>telecanthus نرمال / تروماتیک</td><td>۲۸-۳۵ / >۴۰ mm</td></tr>
+    </tbody>
+  </table>
+
+  <div class="top-link"><a href="#top">↑ بازگشت به فهرست</a></div>
+</section>
+
+<!-- ============ آزمون ============ -->
+<section class="chap" id="quiz">
+  <h2>آزمون مرور جامع — ۱۰۰ سؤال</h2>
+  <p>روی گزینه کلیک کنید تا پاسخ صحیح (سبز) و توضیح نمایش داده شود. در پایان دکمه «نمایش نمره» را بزنید.</p>
+  <div class="quiz-controls">
+    <button onclick="showScore()">نمایش نمره</button>
+    <button onclick="resetQuiz()">شروع مجدد</button>
+    <div id="score"></div>
+  </div>
+  <div id="quiz"></div>
+  <div class="quiz-controls">
+    <button onclick="showScore()">نمایش نمره</button>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  جزوه جامع تروماتولوژی دندانپزشکی — تهیه‌شده برای آمادگی امتحان | تمام نکات هر ۸ جلسه پوشش داده شده است.
+</footer>
+
+<script>
+const QUIZ = [
+/* فصل ۱ — ارزیابی اولیه */
+{q:"آسیب‌های شدید چند درصد از کل آسیب‌ها و عامل چند درصد مرگ‌های ناشی از تروما هستند؟",o:["۵٪ آسیب — ۵۰٪ مرگ","۱۰٪ آسیب — ۳۰٪ مرگ","۸۰٪ آسیب — ۵٪ مرگ","۱۵٪ آسیب — ۵۰٪ مرگ"],a:0,e:"آسیب شدید ≈۵٪ کل آسیب‌ها ولی عامل ≈۵۰٪ مرگ‌های ناشی از تروماست."},
+{q:"آسیب‌های غیر اورژانسی تقریباً چند درصد آسیب‌ها را شامل می‌شوند؟",o:["۵٪","۱۵٪","۸۰٪","۵۰٪"],a:2,e:"غیر اورژانسی ≈۸۰٪؛ تهدیدکننده حیات نیستند ولی نیاز به فالو و مراقبت دارند."},
+{q:"اولین ارزیابی برای هر بیمار مصدوم چیست؟",o:["گرفتن شرح حال","ارزیابی قلبی-ریوی","رادیوگرافی","ارزیابی نورولوژیک"],a:1,e:"اولین ارزیابی قلبی-ریوی است (گردش خون و تنفس)."},
+{q:"شکستگی قدام فک پایین با درگیری کدام عضلات باعث انسداد راه هوایی می‌شود؟",o:["مستر و تمپورال","ژنیوگلوس و ژنیوهایوئید","مدیال و لترال تریگوئید","دیافراگم"],a:1,e:"اتصالات genioglossus و geniohyoid به لینگوال سمفیز ← کشش زبان به عقب و بالا."},
+{q:"راه هوایی ایجادشده با cricothyrotomy تا چند دقیقه کمک می‌کند؟",o:["۱۵ دقیقه","۳۰ دقیقه","۴۵ دقیقه","۶۰ دقیقه"],a:2,e:"کریکوتیروتومی اورژانسی تا ۴۵ دقیقه کمک‌کننده است."},
+{q:"اکیموز و خونریزی زیر ملتحمه معمولاً نشانه چیست؟",o:["شکستگی فک پایین","شکستگی استخوان اطراف اوربیت","شکستگی بینی","آسیب نخاع"],a:1,e:"نشان‌دهنده شکستگی استخوان اطراف اوربیت؛ ضعیف‌ترین ناحیه محل اتصال دو زائده است."},
+{q:"عدم حرکت کامل چشم به سمت پایین در سمت آسیب‌دیده نشانه چیست؟",o:["شکستگی سقف اوربیت","شکستگی کف اوربیت (گیر کردن عضلات)","آسیب عصب بینایی","تامپوناد"],a:1,e:"شکستگی کف اوربیت ← عضلات در شکستگی گیر کرده و چشم به پایین نمی‌رود."},
+{q:"در GCS، Motor Response حداکثر چند نمره دارد؟",o:["۴","۵","۶","۸"],a:2,e:"Eye=4، Verbal=5، Motor=6 (مجموع ۳ تا ۱۵)."},
+{q:"نمره کل GCS برابر یا کمتر از چند به معنای کما است؟",o:["۸","۱۰","۱۳","۶"],a:0,e:"GCS ≤ ۸ = کما."},
+{q:"GCS بین ۹ تا ۱۳ نشانه چیست؟",o:["کما","آسیب شدید سر","آسیب جزئی سر","نرمال"],a:2,e:"۳-۸ آسیب شدید، ۹-۱۳ آسیب جزئی به سر."},
+{q:"در GCS، حالت Decerebrate چند نمره Motor می‌گیرد؟",o:["۴","۳","۲","۱"],a:2,e:"Decortication=۳، Decerebrate=۲ (دست و پا باز و از هم فاصله گرفته)."},
+{q:"در ABCDE، حرف E به چه معناست؟",o:["Emergency","Exposure","Evaluation","Endotracheal"],a:1,e:"E = Exposure؛ درآوردن لباس + بررسی کامل + مراقبت از هایپوترمی."},
+{q:"کدام مانور راه هوایی برای آسیب گردنی ایمن‌ترین است؟",o:["Chin lift","Jaw thrust","Head tilt","هیچ‌کدام"],a:1,e:"Jaw thrust پوزیشن گردن را تغییر نمی‌دهد ← ایمن‌ترین."},
+{q:"مانور Chin lift در چه سنی استفاده نمی‌شود؟",o:["زیر ۵ سال","زیر ۱۲ سال","زیر ۱۸ سال","همه سنین"],a:1,e:"در بچه‌های زیر ۱۲ سال (ستون فقرات هنوز کاملاً سفت نشده)."},
+{q:"اینتوبیشن نازال در کدام شکستگی خطرناک است؟",o:["شکستگی مندیبل","شکستگی بیس جمجمه (اسفنوئید)","شکستگی زایگوما","شکستگی آلوئول"],a:1,e:"در شکستگی بیس جمجمه لوله ممکن به جای نای به سمت مغز برود."},
+{q:"سرجیکال کریکوتایروئیدکتومی در چه سنی نباید انجام شود؟",o:["زیر ۵ سال","زیر ۱۱ سال","زیر ۱۸ سال","همه سنین"],a:1,e:"زیر ۱۱ سال ممنوع (آسیب به غضروف کریکوئید)."},
+{q:"کدام دستگاه CO₂ هوای بازدمی را اندازه می‌گیرد و در فرد بیهوش استفاده می‌شود؟",o:["پالس اکسی‌متر","کاپنومتر","اسپیرومتر","لارنگوسکوپ"],a:1,e:"Capnometer دقیق است و در بیهوش استفاده می‌شود."},
+{q:"خون چند درصد وزن بدن را در بزرگسالان تشکیل می‌دهد؟",o:["۵٪","۷٪","۹٪","۱۲٪"],a:1,e:"≈۷٪ بزرگسال؛ در بچه‌ها ۸-۹٪."},
+{q:"چند درصد مرگ‌های ثانویه به خونریزی در ۲۴ ساعت اول رخ می‌دهد؟",o:["۳۰٪","۴۰٪","۵۰٪","۷۰٪"],a:2,e:"۵۰٪ مرگ‌های ثانویه به خونریزی در ۲۴ ساعت اول."},
+{q:"نبض سریع از شریان مرکزی نشانه چیست؟",o:["مشکل قلبی","خونریزی","نرمال","هایپوترمی"],a:1,e:"نبض سریع = خونریزی؛ نبض نامنظم = مشکل قلبی."},
+{q:"تغییر در فشار خون از دست رفتن چند درصد حجم خون را نشان می‌دهد؟",o:["بیش از ۱۰٪","بیش از ۲۰٪","بیش از ۳۰٪","بیش از ۵۰٪"],a:2,e:"از دست رفتن بیش از ۳۰٪ حجم خون ← تغییر در فشار خون."},
+{q:"در روش AVPU، حرف P به چه معناست؟",o:["پاسخ به صدا","پاسخ به درد","هوشیار","بی‌پاسخ"],a:1,e:"P = Pain؛ بیمار به تحریک دردناک پاسخ می‌دهد."},
+{q:"دمای بدن بیمار در فاز Exposure باید بین چند درجه نگه داشته شود؟",o:["۲۰-۲۵","۲۸-۳۰","۳۲-۳۵","۳۶-۳۷"],a:1,e:"بین ۲۸ تا ۳۰ درجه یا دمای اتاق."},
+{q:"در AMPLE، حرف L به چه معناست؟",o:["Allergy","Last Meal","Location","Liver"],a:1,e:"L = Last Meal (مهم برای اینتوبیشن و خطر بازگشت محتویات معده)."},
+{q:"seat belt sign روی شکم نشانه آسیب کدام عضو است؟",o:["کبد","روده کوچک","کلیه","طحال"],a:1,e:"رد کمربند روی شکم = نشانه آسیب روده کوچک."},
+{q:"کدام زون گردن محل عبور اعصاب و شریان‌های مهم است و نیاز به اکسپلور دارد؟",o:["Zone I","Zone II","Zone III","هیچ‌کدام"],a:1,e:"Zone II (از تیروئید تا بیس مندیبل) — پارگی کوچک هم اکسپلور می‌شود."},
+{q:"فضای لگن در شکستگی می‌تواند تا چند لیتر خون نگه دارد؟",o:["۱ لیتر","۳ لیتر","۵ لیتر","۱۰ لیتر"],a:2,e:"لگن تا ۵ لیتر؛ فمور ۱-۴ لیتر؛ بازو ۰.۵-۱ لیتر."},
+
+/* فصل ۲ — تروما دندان دائمی */
+{q:"اکثر تروماهای دندان دائمی در چه گروه سنی رخ می‌دهد؟",o:["۲-۴ سال","۷-۱۰ سال","۱۸-۳۰ سال","بالای ۵۰"],a:1,e:"۷ تا ۱۰ سال، عمدتاً قدام دهان و فک بالا."},
+{q:"شکستگی مینا و عاج بدون اکسپوز پالپ چه نام دارد؟",o:["Complicated","Uncomplicated","Concussion","Avulsion"],a:1,e:"Uncomplicated؛ نوع C با اکسپوز پالپ = Complicated."},
+{q:"فالوآپ دندان دائمی ترومایی حداقل چند سال باید باشد؟",o:["۱ سال","۳ سال","۵ سال","۱۰ سال"],a:2,e:"حداقل ۵ سال — حتی در ترک مینایی (احتمال نکروز بعدی)."},
+{q:"نوع complicated چند درصد تروماهای دندانی را شامل می‌شود؟",o:["۳٪","۱۳٪","۲۵٪","۵۰٪"],a:1,e:"≈۱۳٪؛ همراه اکسپوز پالپ ← نیاز به درمان ریشه."},
+{q:"حالت proliferative پالپ بیشتر در چه کسانی رخ می‌دهد؟",o:["بزرگسالان","کودکان","سالمندان","بی‌تفاوت"],a:1,e:"کودکان (خونرسانی و دفاع پالپی بیشتر)."},
+{q:"التهاب پالپ در ۴۸ ساعت اول معمولاً چقدر پیشروی می‌کند؟",o:["کمتر از ۲mm","۵mm","۱cm","تمام پالپ"],a:0,e:"کمتر از ۲mm؛ بعد از ۴۸ ساعت آلودگی باکتریایی ← پیشروی اپیکال."},
+{q:"اگر طرح درمان آینده crown یا post & core باشد، کدام درمان لازم است؟",o:["Pulp cap","Partial pulpotomy","Pulpectomy","هیچ‌کدام"],a:2,e:"دیگر vital pulp therapy نمی‌توان؛ باید pulpectomy."},
+
+/* فصل ۳ — درمان ریشه تروماتیزه */
+{q:"بهترین زمان انجام vital pulp therapy چه موقع است؟",o:["۲۴ ساعت اول","۷۲ ساعت","یک هفته","یک ماه"],a:0,e:"۲۴ ساعت اول (التهاب فقط سطحی)."},
+{q:"در vital pulp therapy، کدام مورد اهمیت بالاتری دارد؟",o:["نوع ماده پوشاننده","سیل ضد باکتری (bacteria-tight seal)","رنگ ماده","قیمت ماده"],a:1,e:"سیل اهمیت بسیار بالاتری از نوع ماده پوشاننده دارد."},
+{q:"کلسیم هیدروکساید خالص با PH بالا تا چند میلی‌متر نکروز سطحی ایجاد می‌کند؟",o:["۰.۵mm","۱.۵mm","۳mm","۵mm"],a:1,e:"تا ~۱.۵mm نکروز میعانی؛ لایه‌های پایین‌تر نکروز انعقادی."},
+{q:"کدام ماده نیازی به بیس ندارد و سیل خیلی خوبی ایجاد می‌کند؟",o:["Ca(OH)₂ خالص","دایکال","MTA","زونالین"],a:2,e:"MTA؛ برای ست نهایی ~۶ ساعت محیط مرطوب."},
+{q:"میزان موفقیت Pulp Capping چقدر است؟",o:["۸۰٪","۹۵٪","۷۵٪","۵۰٪"],a:0,e:"≈۸۰٪ (کمتر از partial pulpotomy ۹۵٪)."},
+{q:"Partial pulpotomy با چه فرزی انجام می‌شود؟",o:["Low speed","High speed الماسی تیز","اکسکویتور","فایل دستی"],a:1,e:"حتماً high speed؛ ابزار کند ← تروما بیشتر."},
+{q:"ویژگی پالپ سالم در partial pulpotomy کدام است؟",o:["خونریزی شدید + رنگ تیره","خونریزی کم و ملایم + رنگ صورتی","بدون خونریزی","رنگ سفید"],a:1,e:"خونریزی کم و ملایم + رنگ متمایل به صورتی."},
+{q:"اندیکاسیون Full pulpotomy کدام است؟",o:["اکسپوز کمتر از ۲۴ ساعت","گذشت بیش از ۷۲ ساعت از اکسپوز","دندان سالم","ترک مینایی"],a:1,e:"بیش از ۷۲ ساعت، التهاب پایین‌تر، اکسپوز پوسیدگی؛ منع در mature."},
+{q:"پروگنوز Full pulpotomy چقدر است؟",o:["۹۵٪","۸۰٪","۷۵٪","۵۰٪"],a:2,e:"≈۷۵٪ (چون ممکن پوشش روی پالپ ملتهب گذاشته شود)."},
+{q:"چند ماه طول می‌کشد تا خونرسانی نرمال پالپ بعد از تروما برگردد؟",o:["۳ ماه","۶ ماه","۹ ماه","۱۲ ماه"],a:2,e:"~۹ ماه؛ پس صرفاً تست وایتالیتی برای تشخیص نکروز کافی نیست."},
+{q:"در Apexification از کدام محلول شست‌وشو استفاده می‌شود؟",o:["سرم فیزیولوژیک","NaOCl 1.5%","الکل","کلرهگزیدین"],a:1,e:"هیپوکلریت سدیم ۱.۵٪ به جای سرم فیزیولوژیک."},
+{q:"تشکیل بافت سخت در Apexification چقدر طول می‌کشد؟",o:["۱-۲ هفته","۳-۱۰ ماه","۲ سال","۵ سال"],a:1,e:"۳ تا ۱۰ ماه ← نیاز به مراجعات متعدد (از معایب)."},
+{q:"در Apical plug انتهای ریشه به چه طولی با MTA پر می‌شود؟",o:["۱-۲mm","۳-۴mm","۵-۶mm","۱cm"],a:1,e:"۳ تا ۴ میلی‌متر barrier از MTA."},
+{q:"مزیت اصلی Apical plug نسبت به Apexification چیست؟",o:["ارزان‌تر","سریع‌تر (۱-۲ جلسه)","بدون بیهوشی","بدون رادیوگرافی"],a:1,e:"سریع — در ۱ یا ۲ جلسه؛ بدون فالوآپ طولانی."},
+{q:"کدام درمان برای دندانی که هیچ استاپ اپیکالی ندارد (apex خیلی باز) مناسب است؟",o:["Apexification","Apical plug","Revascularization","Pulpectomy"],a:2,e:"Revascularization — چون هر ماده از انتها خارج می‌شود."},
+{q:"در دندان open apex، روش پر کردن کانال ارجح کدام است؟",o:["لترال کندنزیشن","ورتیکال / گوتای نرم‌شده","تک کن خشک","بدون پر کردن"],a:1,e:"تکنیک ورتیکال (گوتای نرم‌شده)؛ لترال ← خطر شکستگی ریشه."},
+
+/* فصل ۴ — شکستگی ریشه و جابجایی */
+{q:"شیوع شکستگی ریشه چند درصد کل تروماهای دندانی است؟",o:["۳٪","۱۳٪","۲۵٪","۵۰٪"],a:0,e:"≈۳٪؛ درگیری سمنتوم، دنتین و پالپ."},
+{q:"برای تشخیص قطعی شکستگی ریشه حداقل چند رادیوگرافی لازم است؟",o:["۱","۲","۳","۵"],a:2,e:"۳ رادیوگرافی در زوایای ۴۵، ۹۰ و ۱۱۰ درجه."},
+{q:"مدت Splint شکستگی ریشه در تکست‌های جدید چقدر است؟",o:["۲-۴ هفته","۲-۴ ماه","۶ ماه","۱ سال"],a:0,e:"تکست جدید ۲-۴ هفته (قدیمی ۲-۴ ماه)."},
+{q:"در شکستگی ریشه، نکروز قسمت کرونالی پالپ در چند درصد رخ می‌دهد؟",o:["۱۰٪","۲۵٪","۵۰٪","۷۵٪"],a:1,e:"۲۵٪ موارد ← بافت التهابی و Resorption."},
+{q:"شکستگی ریشه در ناحیه Coronal (کرست استخوان) چه پروگنوزی دارد؟",o:["عالی","بسیار پایین","متوسط","بدون تغییر"],a:1,e:"بسیار پایین — اکسپوز به دهان و آلودگی ← خارج کردن قطعه کرونالی."},
+{q:"کدام صدمه جابجایی، دندان لق نیست و فقط حساس به دق است؟",o:["Subluxation","Concussion","Luxation","Avulsion"],a:1,e:"Concussion — بدون لقی و جابجایی، فقط حساسیت به percussion."},
+{q:"درمان Concussion چیست؟",o:["Reposition","Symptomatic (رست دادن)","Ext","درمان ریشه"],a:1,e:"Symptomatic — فرصت رست برای ترمیم بافت پریودنتال."},
+{q:"در Lateral Luxation مدت اسپلینت چقدر است؟",o:["۱ هفته","۳-۴ هفته","۸ هفته","۶ ماه"],a:1,e:"Reposition + Splint ۳ تا ۴ هفته."},
+{q:"کدام دندان در Intrusion ممکن است خودبه‌خود رشد کند و برگردد؟",o:["Mature","Immature با اینترود کم","هر دندان","هیچ‌کدام"],a:1,e:"Immature با اینترود کم ← فرصت رشد خودبه‌خودی."},
+{q:"در Extrusion مدت اسپلینت چقدر است؟",o:["۲ هفته","۴-۸ هفته","۳ ماه","۶ ماه"],a:1,e:"Reposition + Splint ۴ تا ۸ هفته."},
+{q:"تغییر رنگ خاکستری دندان بعد از تروما نشانه چیست؟",o:["خونریزی داخل پالپ","نکروز پالپ","کلسیفیکاسیون","نرمال"],a:1,e:"خاکستری ← نکروز ← با رادیوگرافی و تست تأیید و درمان ریشه."},
+{q:"تغییر رنگ زرد دندان بعد از تروما نشانه چیست؟",o:["نکروز","کلسیفیه شدن و مسدود شدن کانال","تحلیل داخلی","عفونت"],a:1,e:"زرد ← کلسیفیکاسیون و مسدود شدن کانال (مثلاً ۱۰ سال بعد)."},
+
+/* فصل ۵ — دندان شیری ۱ */
+{q:"شایع‌ترین دندان آسیب‌دیده در تروما شیری کدام است؟",o:["مولر شیری","انسیزور ماگزیلا","کانین","انسیزور مندیبل"],a:1,e:"انسیزور ماگزیلا؛ مولر نادر است."},
+{q:"شایع‌ترین سن آسیب تروماتیک شیری چیست؟",o:["۲-۴ سال","۷-۱۰ سال","۱-۲ سال","۵-۶ سال"],a:0,e:"۲ تا ۴ سال (تازه راه رفتن یاد گرفته و می‌دود)."},
+{q:"چرا انسیزور شیری بیشتر تمایل به luxation دارد؟",o:["استخوان متراکم","استخوان اسفنجی بیشتر + نسبت ریشه به تاج کمتر","ریشه بلندتر","مینای نازک"],a:1,e:"استخوان اسفنجی بیشتر در کودکان + نسبت ریشه به تاج کمتر."},
+{q:"کودک با آسیب سر باید چند ساعت تحت نظر باشد؟",o:["۱۲ ساعت","۲۴ ساعت","۴۸ ساعت","۷۲ ساعت"],a:1,e:"۲۴ ساعت؛ حتی در خواب هر ۲-۳ ساعت بیدار شود."},
+{q:"در Intrusion شیری، رادیولوسنسی پری اپیکال چند هفته بعد رخ می‌دهد؟",o:["۱ هفته","۳ هفته","۶-۷ هفته","۱۲ هفته"],a:1,e:"رادیولوسنسی پری اپیکال ۳ هفته؛ انکیلوز ۶-۷ هفته."},
+{q:"درمان اکسپوز پالپ شیری با مراجعه بلافاصله و اکسپوژر نقطه‌ای کوچک کدام است؟",o:["پالپکتومی","پالپوتومی","Ext","پالپ کپ"],a:1,e:"پالپوتومی (پالپ خوب + اکسپوژر کوچک)."},
+{q:"در شکستگی ریشه شیری، با قطعه آپیکالی چه می‌کنیم؟",o:["خارج می‌کنیم","باقی می‌گذاریم (خطر آسیب جوانه دائمی)","درمان ریشه","ایمپلنت"],a:1,e:"فقط قطعه کرونالی خارج؛ آپیکالی باقی می‌ماند و طی رویش دائمی تحلیل می‌رود."},
+{q:"درمان درگیری پالپ در آسیب چانه (مولر شیری) چیست؟",o:["کامپوزیت","SSC تنها","پالپوتومی + SSC","Ext"],a:2,e:"درگیری پالپ ← پالپوتومی + SSC؛ آسیب گسترده ← Ext + فضا نگه‌دار."},
+
+/* فصل ۶ — دندان شیری ۲ */
+{q:"در Intrusion شیری، در چند درصد موارد ریشه به سمت لبیال جابجا می‌شود؟",o:["۵۰٪","۸۰٪","۲۵٪","۱۰۰٪"],a:1,e:"۸۰٪ به لبیال ← آسیب به جوانه دائمی (پالاتال) نمی‌زند."},
+{q:"آیا دندان شیری Avulsion شده Replant می‌شود؟",o:["بله همیشه","هرگز","فقط Immature","فقط با شرایط خاص"],a:1,e:"هرگز — خطر آسیب به جوانه دائمی زیرین."},
+{q:"در Avulsion شیری، چند درصد موارد با آسیب جوانه دائمی همراه است؟",o:["۲۵٪","۵۰٪","۷۵٪","۱۰۰٪"],a:2,e:"۷۵٪ موارد همراه آسیب جوانه دائمی."},
+{q:"آنتی‌بیوتیک انتخابی تروما در کودک زیر ۱۲ سال کدام است؟",o:["داکسی‌سایکلین","آموکسی‌سیلین","تتراسایکلین","سفالکسین"],a:1,e:"داکسی‌سایکلین زیر ۱۲ سال منع دارد (تغییر رنگ) ← آموکسی‌سیلین."},
+{q:"تغییر رنگ صورتی دندان شیری معمولاً نشانه چیست؟",o:["نکروز","خونریزی داخل پالپ","تحلیل","کلسیفیکاسیون"],a:1,e:"صورتی = خونریزی داخل پالپ؛ معمولاً بهتر می‌شود — فقط فالوآپ."},
+{q:"PCO در تغییر رنگ زرد دندان شیری چیست؟",o:["تحلیل داخلی","محو شدن کانال پالپ","پارگی عروق","عفونت"],a:1,e:"PCO = Pulp Canal Obliteration؛ کانال در رادیوگرافی محو می‌شود."},
+{q:"کلسیفیکاسیون دندان سانترال شیری در چه سنی کامل می‌شود؟",o:["۲ سالگی","۴ سالگی","۶ سالگی","۸ سالگی"],a:1,e:"۴ سالگی؛ آسیب قبل از ۴ ماهگی ← آسیب بیشتر به دائمی."},
+{q:"هیپوپلازی در جوانه دائمی ناشی از تروما شیری چه نام دارد؟",o:["Dilaceration","هیپوپلازی Turner","Amelogenesis","Fluorosis"],a:1,e:"هیپوپلازی Turner."},
+{q:"کلرهگزیدین در luxation شیری با چه غلظت و چند بار در روز توصیه می‌شود؟",o:["۲٪، روزی ۳ بار","۰.۲٪، روزی ۱ بار","۵٪، روزی ۲ بار","۱٪، روزی ۴ بار"],a:0,e:"کلرهگزیدین گلوکونات ۲٪، روزی ۳ بار بعد از غذا یک هفته."},
+
+/* فصل ۷ — مندیبل/ماگزیلا/لفور */
+{q:"شکستگی مندیبل بیشتر در چه گروهی شایع است؟",o:["زنان مسن","مردان جوان ۱۸-۳۰ سال","کودکان","نوزادان"],a:1,e:"مردان جوان ۱۸ تا ۳۰ سال."},
+{q:"در شکستگی favorable افقی، کدام عضله قطعات را به هم نزدیک می‌کند؟",o:["مدیال تریگوئید","مستر","تمپورال","دیافراگم"],a:1,e:"عضله مستر در دید افقی (favorable horizontal)."},
+{q:"شکستگی Class II مندیبل به چه معناست؟",o:["دو طرف دندان","یک طرف دندان یک طرف بی‌دندان","دو طرف بی‌دندان","بدون دندان"],a:1,e:"Class II = یک طرف دندان، طرف دیگر بی‌دندانی."},
+{q:"کدام رادیوگرافی plain برای مندیبل همچنان مهم است؟",o:["سفالومتری","OPG (پانورکس)","بایت وینگ","پری‌اپیکال"],a:1,e:"OPG / panorex برای مندیبل."},
+{q:"کمترین زمان MMF برای شکستگی گردن کندیل چقدر است؟",o:["۲ هفته","۴ هفته","۶ هفته","۸ هفته"],a:0,e:"۲ هفته کمترین (کندیل)؛ ۸ هفته بیشترین (انگل مندیبل)."},
+{q:"ORIF در کدام شرایط استفاده می‌شود؟",o:["شکستگی favorable","جابجایی زیاد، خردشدگی، unfavorable","شکستگی ساده","ترک مینایی"],a:1,e:"Open Reduction در جابجایی زیاد، خردشدگی یا unfavorable."},
+{q:"Nonunion به چه معناست؟",o:["جوش خوردن بد","قطعات اصلاً فیوز نشده و متحرک","عفونت","نکروز"],a:1,e:"Nonunion = قطعات اصلاً فیوز نشده‌اند و کاملاً متحرک هستند."},
+{q:"کدام لفور Pyramidal (هرمی) نامیده می‌شود؟",o:["Le Fort I","Le Fort II","Le Fort III","ZMC"],a:1,e:"Le Fort II = Pyramidal؛ درگیری nasofrontal."},
+{q:"Le Fort III چه نام دیگری دارد؟",o:["Low Maxillary","Pyramidal","Craniofacial Dysjunction","Trimalar"],a:2,e:"Craniofacial Dysjunction — جدا شدن صورت از بیس اسکال."},
+{q:"Le Fort I چگونه نامیده می‌شود؟",o:["Low Maxillary (عرضی)","Pyramidal","Dysjunction","Trimalar"],a:0,e:"Le Fort I = Low Maxillary، شکستگی عرضی ماگزیلا."},
+{q:"در disimpaction لفور I از کدام فورسپس استفاده می‌شود؟",o:["Ash","Rowe","کوهر","آدسون"],a:1,e:"فورسپس Rowe یا hook استخوانی برای جلو آوردن ماگزیلا."},
+{q:"اصطلاح hemi-Le Fort به چه معناست؟",o:["لفور دوطرفه","یک سمت لفور، سمت دیگر بدون شکستگی","ترکیب لفور","لفور کامل"],a:1,e:"یک سمت لفور و سمت مقابل بدون شکستگی."},
+{q:"کدام باترس عمودی است؟",o:["Frontal Bar","Naso-Maxillary (NM)","ریم تحتانی اوربیت","بال بزرگ اسفنوئید"],a:1,e:"NM از باترس‌های عمودی (همراه ZM، PM، Nasal Septum)."},
+
+/* فصل ۸ — ZMC/اوربیت/سینوس/NOE/بینی */
+{q:"ZMC چه نام دیگری دارد؟",o:["Le Fort","Trimalar fractures","NOE","Pyramidal"],a:1,e:"Zygomaticomaxillary complex = Trimalar fractures."},
+{q:"شکستگی ZMC دوطرفه چه نمایی ایجاد می‌کند؟",o:["Worm eyes","Raccoon eyes","Frozen globe","Telecanthus"],a:1,e:"Raccoon eyes (چشم‌ها شبیه راکون)."},
+{q:"استخوان مالار (گونه) چند وجهی است؟",o:["۳ وجهی","۴ وجهی","۵ وجهی","۶ وجهی"],a:1,e:"۴ وجهی با ۴ سوچور (فرونتال، ماگزیلاری، تمپورال، اسفنوئید)."},
+{q:"کدام اپروچ درمان شکستگی اوربیت روش ارجح است؟",o:["Subciliary","Transconjunctival","Lynch","Brow"],a:1,e:"Transconjunctival روش ارجح است."},
+{q:"بهترین graft که دیرتر از همه جذب می‌شود کدام است؟",o:["ایلیاک","کالواریا","دنده","غضروف گوش"],a:1,e:"کالواریا (خصوصاً تمپورال و پریتال)."},
+{q:"کدام از کنترااندیکاسیون‌های جراحی اوربیت است؟",o:["انوفتالموس","هایفِما (hyphema)","مشکل زیبایی","اختلال بینایی"],a:1,e:"hyphema، retinal tear، globe perforation، frozen globe ← کنترااندیکاسیون."},
+{q:"بهترین زمان جراحی شکستگی اوربیت چه موقع است؟",o:["بلافاصله","۱ هفته بعد","۱ ماه بعد","۶ ماه بعد"],a:1,e:"۱ هفته بعد از تروما."},
+{q:"Ectropion به‌عنوان عارضه جراحی اوربیت چیست؟",o:["برگشت پوست پلک تحتانی به خارج","کوری","CSF leak","استئومیلیت"],a:0,e:"Ectropion = برگشت پوست اطراف پلک تحتانی به سمت خارج."},
+{q:"در شکستگی through and through سینوس فرونتال کدام روش لازم است؟",o:["MMF","Cranialization","ORIF","Closed reduction"],a:1,e:"Cranialization (تابل خلفی جوری جابجا شود که مغز فعالیت نرمال کند)."},
+{q:"موکوسل سینوس فرونتال در چه شرایطی ایجاد می‌شود؟",o:["باز شدن سینوس","بسته شدن مدخل سینوس","شکستگی خطی","عفونت گردن"],a:1,e:"بسته شدن مدخل ← موکوسل؛ با عفونت ← موکوپایوسل."},
+{q:"NOE با چه علامتی همراه است؟",o:["Raccoon eyes","Traumatic telecanthus","Trismus","Worm eyes"],a:1,e:"فاصله گرفتن کانتوس داخلی ← traumatic telecanthus."},
+{q:"فاصله کانتوس داخلی بیشتر از چند میلی‌متر traumatic telecanthus است؟",o:["۲۸mm","۳۵mm","۴۰mm","۵۰mm"],a:2,e:"نرمال ۲۸-۳۵mm؛ بیشتر از ۴۰mm ← telecanthus."},
+{q:"کدام عارضه شکستگی بینی اورژانس است و باعث نکروز سپتوم می‌شود؟",o:["epistaxis","هماتوم سپتوم","دفورمیتی","انسداد"],a:1,e:"هماتوم سپتوم — باید اورژانسی تخلیه شود."},
+{q:"تشخیص ساده شکستگی بینی با کدام گرافی است؟",o:["پانورکس","bilateral lateral nasal","سفالومتری","بایت وینگ"],a:1,e:"گرافی لترال نازال دوطرفه؛ دندانپزشک هم می‌تواند درخواست دهد."},
+{q:"درمان شکستگی بینی معمولاً به چه صورت است؟",o:["close","open همیشه","بدون درمان","فقط جراحی"],a:0,e:"معمولاً close؛ گاهی open reduction یا septorhinoplasty ۶ ماه بعد."},
+{q:"سپتوم با deviation با کدام فورسپس صاف می‌شود؟",o:["Rowe","Ash","کوهر","آدسون"],a:1,e:"فورسپس Ash برای صاف کردن سپتوم."},
+{q:"کدام بازسازی برای دپرشن جمجمه احتمال عفونت کمتری دارد؟",o:["مش تیتانیومی","استخوان اتوژن","سیمان استخوانی","پلیمر"],a:1,e:"استخوان/غضروف/بافت اتوژن (از خود فرد) ← احتمال عفونت کمتر."},
+{q:"شکستگی green stick در بینی بیشتر در چه کسانی و با چه ریسکی است؟",o:["بزرگسالان، ریسک کم","بچه‌ها، ریسک هماتوم سپتوم","سالمندان","بی‌تفاوت"],a:1,e:"در بچه‌ها؛ افزایش ریسک هماتوم سپتوم."},
+{q:"Hypophthalmos بیشتر از چند میلی‌متر توسط فرد عادی قابل تشخیص است؟",o:["۱mm","۲mm","۵mm","۱۰mm"],a:1,e:"بیشتر از ۲ میلی‌متر برای فرد عادی قابل تشخیص."},
+{q:"شکستگی شدید high velocity سینوس فرونتال به چه چیزی منجر می‌شود؟",o:["انکیلوز","forehead paralysis و شاخه فرونتال عصب هفتم","کوری","سینوزیت"],a:1,e:"فلج پیشانی و درگیری شاخه فرونتال عصب هفتم."},
+{q:"کدام عارضه شایع شکستگی سینوس فرونتال و جراحی آن است؟",o:["انکیلوز TMJ","CSF Leak","Malocclusion","تریسموس"],a:1,e:"CSF Leak از عوارض شایع سینوس فرونتال."},
+{q:"NOE تایپ ۳ به چه صورت است؟",o:["شکستگی ساده","جابجایی متوسط","comminuted (خرد شده)","بدون شکستگی"],a:2,e:"تایپ ۳ = comminuted؛ درمان: برش داخل دهانی، پیچ و پلاک."},
+{q:"کدام مورد از علائم ZMC نیست؟",o:["تریسموس","دیپلوپیا","افزایش لقی دندان","کم‌حسی گونه"],a:2,e:"علائم ZMC: اکیموز، ادم پلک، خونریزی بینی، کم‌حسی گونه، دیپلوپیا، هایپو/انوفتالموس، تریسموس."},
+{q:"اپروچ Caldwell-luc برای چه منظوری است؟",o:["برش پلک","قرار دادن گلوب از طریق سینوس","فلپ کرونال","برش ابرو"],a:1,e:"transantral — وقتی از طریق سینوس گلوب را در موقعیت صحیح قرار می‌دهیم."},
+{q:"در ORIF فک پایین معمولاً پلیت روی کدام ناحیه قرار می‌گیرد؟",o:["کندیل","external oblique ridge و بوردر تحتانی","کرونوئید","سمفیز فقط"],a:1,e:"۲ پلیت: یکی نزدیک بوردر تحتانی، یکی روی external oblique ridge."},
+{q:"شکستگی Le Fort II کدام ساختار را درگیر نمی‌کند؟",o:["سوچور nasofrontal","lamina papyracea","بادی مندیبل","تریگوئید پلیت"],a:2,e:"بادی مندیبل جزو ساختارهای Le Fort II نیست."},
+{q:"در شکستگی unfavorable عمودی، کدام عضله حدود را دور می‌کند؟",o:["مستر","مدیال تریگوئید","تمپورال","بوکسیناتور"],a:1,e:"عضله مدیال تریگوئید در دید عمودی (vertical unfavorable)."},
+{q:"کدام طبقه‌بندی شکستگی مندیبل بر اساس table کورتیکال است؟",o:["transverse","spiral","greenstick","oblique"],a:2,e:"greenstick = فقط یک table کورتیکال شکسته (معمولاً تابل باکال در اطفال)."},
+{q:"در آسیب چانه شیری، کدام نواحی مندیبل می‌تواند آسیب ببیند؟",o:["فقط کندیل","سمفیز، منتال، زیر کندیل","فقط آنگل","فقط راموس"],a:1,e:"نواحی سمفیز، منتال و زیر کندیل."},
+{q:"در شکستگی ریشه شیری با تداخل اکلوزالی چه می‌کنیم؟",o:["اسپلینت","خارج کردن (فقط قطعه کرونالی)","درمان ریشه","رها می‌کنیم"],a:1,e:"دندان خارج می‌شود؛ فقط قطعه کرونالی، آپیکالی باقی می‌ماند."},
+{q:"در Le Fort III برای دسترسی معمولاً از چه استفاده می‌شود؟",o:["برش داخل دهانی تنها","فلپ کرونال + miniplate","MMF تنها","انگشت"],a:1,e:"فلپ کرونال (دید مناسب) + فیکساسیون با miniplate."},
+];
+
+const quizDiv = document.getElementById('quiz');
+QUIZ.forEach((item, idx)=>{
+  const qd = document.createElement('div');
+  qd.className = 'q';
+  const title = document.createElement('div');
+  title.innerHTML = '<span class="qnum">سؤال '+(idx+1)+':</span> '+item.q;
+  qd.appendChild(title);
+  const ul = document.createElement('ul');
+  ul.className = 'opts';
+  item.o.forEach((opt, oi)=>{
+    const li = document.createElement('li');
+    li.textContent = opt;
+    li.onclick = ()=>{
+      if(qd.dataset.answered) return;
+      qd.dataset.answered = '1';
+      const lis = ul.querySelectorAll('li');
+      lis[item.a].classList.add('correct');
+      if(oi===item.a){ qd.dataset.correct='1'; }
+      else { li.classList.add('wrong'); }
+      qd.querySelector('.explain').classList.add('show');
+    };
+    ul.appendChild(li);
+  });
+  qd.appendChild(ul);
+  const ex = document.createElement('div');
+  ex.className = 'explain';
+  ex.innerHTML = '<strong>پاسخ:</strong> '+item.e;
+  qd.appendChild(ex);
+  quizDiv.appendChild(qd);
+});
+
+function showScore(){
+  let correct=0, answered=0;
+  document.querySelectorAll('#quiz .q').forEach(q=>{
+    if(q.dataset.answered) answered++;
+    if(q.dataset.correct) correct++;
+  });
+  document.getElementById('score').textContent =
+    'پاسخ‌داده‌شده: '+answered+' از '+QUIZ.length+' | پاسخ صحیح: '+correct;
+}
+function resetQuiz(){
+  document.querySelectorAll('#quiz .q').forEach(q=>{
+    delete q.dataset.answered; delete q.dataset.correct;
+    q.querySelectorAll('.opts li').forEach(li=>li.classList.remove('correct','wrong'));
+    q.querySelector('.explain').classList.remove('show');
+  });
+  document.getElementById('score').textContent='';
+  window.scrollTo({top:document.getElementById('quiz').offsetTop-80,behavior:'smooth'});
+}
+</script>
+</body>
+</html>

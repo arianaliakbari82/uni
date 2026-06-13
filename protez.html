@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جمع‌بندی جامع پروتز پیشرفته — دکتر ابریشم</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f1ea;
+    --paper:#fffdf8;
+    --ink:#1d2733;
+    --muted:#5b6573;
+    --navy:#10394f;
+    --teal:#0e7c7b;
+    --teal-soft:#e3f1f0;
+    --gold:#b8860b;
+    --rust:#a8431e;
+    --rust-soft:#fbe9e1;
+    --line:#dcd6c9;
+    --row:#f7f4ec;
+    --rowhover:#eef6f5;
+    --shadow:0 6px 24px rgba(16,57,79,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 12% 0%, #ece6d8 0%, transparent 45%),
+      radial-gradient(circle at 90% 5%, #e6efed 0%, transparent 40%),
+      var(--bg);
+    color:var(--ink);
+    font-family:"Vazirmatn","Tahoma",sans-serif;
+    line-height:1.95;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* keep latin/english fragments in correct logical order within rtl */
+  .en,code{ unicode-bidi:isolate; direction:ltr; }
+  code{
+    font-family:"Vazirmatn",monospace; background:var(--teal-soft);
+    color:var(--navy); padding:.04em .35em; border-radius:5px; font-size:.92em;
+    border:1px solid #cfe6e4;
+  }
+
+  header.hero{
+    position:relative;
+    padding:64px 24px 54px;
+    text-align:center;
+    color:#f4f1ea;
+    background:
+      linear-gradient(135deg, var(--navy) 0%, #0a2230 60%, #08313a 100%);
+    overflow:hidden;
+    border-bottom:5px solid var(--gold);
+  }
+  header.hero::before{
+    content:""; position:absolute; inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+    background-size:22px 22px; opacity:.6;
+  }
+  .hero .tooth{font-size:46px; margin-bottom:6px;}
+  header.hero h1{
+    position:relative; margin:0 0 10px; font-size:2.35rem; font-weight:800;
+    letter-spacing:-.5px; text-shadow:0 2px 12px rgba(0,0,0,.3);
+  }
+  header.hero p{position:relative; margin:0; color:#cfe0e2; font-size:1.05rem;}
+  .hero .meta{
+    position:relative; margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;
+    justify-content:center;
+  }
+  .hero .meta span{
+    background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2);
+    padding:5px 14px; border-radius:30px; font-size:.82rem; backdrop-filter:blur(4px);
+  }
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 18px 90px;}
+
+  /* TOC */
+  nav.toc{
+    background:var(--paper); border:1px solid var(--line); border-radius:18px;
+    margin:34px 0; padding:24px 26px; box-shadow:var(--shadow);
+  }
+  nav.toc h2{margin:0 0 14px; font-size:1.15rem; color:var(--navy); display:flex; align-items:center; gap:8px;}
+  nav.toc h2::before{content:"📚";}
+  .toc-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:10px;}
+  nav.toc a{
+    display:flex; gap:11px; align-items:center; text-decoration:none; color:var(--ink);
+    padding:11px 14px; border-radius:11px; border:1px solid var(--line);
+    background:var(--row); transition:.18s; font-size:.93rem; font-weight:500;
+  }
+  nav.toc a:hover{background:var(--teal); color:#fff; border-color:var(--teal); transform:translateX(-4px);}
+  nav.toc a .num{
+    background:var(--navy); color:#fff; min-width:30px; height:30px; border-radius:9px;
+    display:grid; place-items:center; font-weight:800; font-size:.9rem; flex-shrink:0;
+  }
+  nav.toc a:hover .num{background:#fff; color:var(--teal);}
+
+  section.lec{
+    background:var(--paper); border:1px solid var(--line); border-radius:20px;
+    margin:30px 0; padding:8px 30px 34px; box-shadow:var(--shadow); scroll-margin-top:16px;
+  }
+  .lec-head{
+    display:flex; align-items:center; gap:16px; margin:26px 0 6px;
+    padding-bottom:16px; border-bottom:3px solid var(--teal-soft);
+  }
+  .lec-head .badge{
+    background:linear-gradient(135deg,var(--teal),var(--navy)); color:#fff;
+    min-width:54px; height:54px; border-radius:15px; display:grid; place-items:center;
+    font-size:1.5rem; font-weight:800; flex-shrink:0; box-shadow:0 4px 12px rgba(14,124,123,.35);
+  }
+  .lec-head h2{margin:0; font-size:1.5rem; color:var(--navy); line-height:1.4;}
+  .lec-head .src{display:block; font-size:.8rem; color:var(--muted); font-weight:500; margin-top:2px;}
+
+  h3.sub{
+    font-size:1.15rem; color:var(--rust); margin:30px 0 12px; padding-right:14px;
+    border-right:5px solid var(--gold); font-weight:700;
+  }
+  h4.sub2{font-size:1.02rem; color:var(--navy); margin:22px 0 8px; font-weight:700;}
+  p.lead{margin:6px 0 14px; color:var(--ink);}
+
+  /* tables */
+  .tbl-scroll{overflow-x:auto; border-radius:14px; border:1px solid var(--line); margin:14px 0 8px; box-shadow:0 2px 8px rgba(0,0,0,.03);}
+  table{border-collapse:collapse; width:100%; min-width:520px; background:var(--paper); font-size:.94rem;}
+  caption{
+    caption-side:top; text-align:right; padding:12px 16px; font-weight:700; color:#fff;
+    background:var(--navy); font-size:.98rem; border-radius:0;
+  }
+  thead th{
+    background:var(--teal); color:#fff; padding:12px 14px; text-align:right; font-weight:700;
+    border-left:1px solid rgba(255,255,255,.18); position:sticky; top:0; vertical-align:middle;
+    font-size:.92rem;
+  }
+  tbody td,tbody th{padding:11px 14px; border-top:1px solid var(--line); border-left:1px solid var(--line); text-align:right; vertical-align:top;}
+  tbody th{background:var(--teal-soft); color:var(--navy); font-weight:700; min-width:120px;}
+  tbody tr:nth-child(even){background:var(--row);}
+  tbody tr:hover{background:var(--rowhover);}
+  td b,th b{color:var(--rust);}
+  .pill{display:inline-block; background:var(--gold); color:#fff; padding:1px 9px; border-radius:20px; font-size:.78rem; font-weight:700; margin:1px;}
+  .yes{color:var(--teal); font-weight:800;}
+  .no{color:var(--rust); font-weight:800;}
+
+  /* note / tip / warn boxes */
+  .box{border-radius:14px; padding:14px 18px 14px 18px; margin:16px 0; border-right:6px solid; position:relative;}
+  .box p:last-child{margin-bottom:0;}
+  .box p:first-child{margin-top:0;}
+  .note{background:var(--teal-soft); border-color:var(--teal);}
+  .warn{background:var(--rust-soft); border-color:var(--rust);}
+  .tip{background:#fdf6e3; border-color:var(--gold);}
+  .box .t{font-weight:800; display:block; margin-bottom:4px;}
+  .note .t{color:var(--teal);} .warn .t{color:var(--rust);} .tip .t{color:var(--gold);}
+
+  ul.clean{margin:8px 0; padding-right:22px;}
+  ul.clean li{margin:4px 0;}
+
+  /* summary */
+  .summary{
+    background:linear-gradient(135deg,#0a2230,#10394f); color:#eaf2f3;
+    border-radius:16px; padding:22px 26px; margin:26px 0 6px; border:1px solid #1d4a5e;
+  }
+  .summary h3{color:var(--gold); margin:0 0 12px; font-size:1.2rem; display:flex; gap:8px; align-items:center;}
+  .summary h3::before{content:"🎯";}
+  .summary ul{margin:0; padding-right:22px;}
+  .summary li{margin:7px 0;}
+  .summary b{color:#ffd97a;}
+
+  .backtop{display:inline-block; margin-top:14px; font-size:.83rem; color:var(--teal); text-decoration:none; font-weight:600;}
+  .backtop:hover{text-decoration:underline;}
+
+  footer{text-align:center; color:var(--muted); padding:30px 18px; font-size:.86rem;}
+  footer a{color:var(--teal);}
+
+  @media(max-width:640px){
+    header.hero h1{font-size:1.7rem;}
+    .lec{padding:6px 16px 26px;}
+    section.lec{padding:6px 14px 26px;}
+    .lec-head h2{font-size:1.2rem;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="tooth">🦷</div>
+  <h1>جمع‌بندی جامع پروتز پیشرفته</h1>
+  <p>دروس دکتر ابریشم — مرجع کامل و جدول‌بندی‌شده برای امتحان</p>
+  <div class="meta">
+    <span>۸ جلسه / فصل</span>
+    <span>رفرنس: مک‌کراکن ۲۰۱۷</span>
+    <span>فصول ۱۶ و ۱۷</span>
+    <span>Removable Partial Denture</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc" id="top">
+  <h2>فهرست مطالب</h2>
+  <div class="toc-grid">
+    <a href="#l1"><span class="num">۱</span> تشخیص و طرح درمان</a>
+    <a href="#l2"><span class="num">۲</span> آرتیکولاتور، فِیس‌بو و مانت</a>
+    <a href="#l3"><span class="num">۳</span> بیومکانیک و طراحی پارسیل</a>
+    <a href="#l4"><span class="num">۴</span> مواد قالبگیری (فصل ۱۶)</a>
+    <a href="#l5"><span class="num">۵</span> دیستال‌اکستنشن و Altered Cast (فصل ۱۷)</a>
+    <a href="#l6"><span class="num">۶</span> ثبت رابطه فکی و اکلوژن</a>
+    <a href="#l7"><span class="num">۷</span> انتخاب/چیدن دندان، Try-in و تحویل</a>
+    <a href="#l8"><span class="num">۸</span> Reline/Rebase و طراحی پارسیل</a>
+    <a href="#l9"><span class="num">۹</span> نگهداری پروتز: Reline/Repair/Rebase (UCLA)</a>
+    <a href="#l10"><span class="num">۱۰</span> پارسیل در پروتزهای Maxillofacial</a>
+    <a href="#final"><span class="num">★</span> خلاصهٔ نهایی و نکات کلیدی</a>
+  </div>
+</nav>
+
+<!-- ===================== LECTURE 1 ===================== -->
+<section class="lec" id="l1">
+  <div class="lec-head">
+    <div class="badge">۱</div>
+    <h2>تشخیص و طرح درمان
+      <span class="src">جلسه اول — دکتر حاجی‌مقصودی + اصلاحیهٔ دکتر ابریشم</span>
+    </h2>
+  </div>
+
+  <p class="lead">پروتز پارسیل به‌عنوان «آخرین مرحلهٔ طرح درمان» طبقه‌بندی می‌شود، ولی <b>تصمیم‌گیری</b> دربارهٔ استفاده از آن همان اول کار گرفته می‌شود. اینکه «چرا می‌خواهیم پارسیل بگذاریم» همان <b>تشخیص</b> ماست؛ و «چه کاری و با چه روالی» همان <b>طرح درمان</b>.</p>
+
+  <h3 class="sub">تعریف و تفکیک مفاهیم پایه</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تشخیص در برابر طرح درمان</caption>
+    <thead><tr><th>مفهوم</th><th>تعریف</th><th>شامل چه چیزهایی</th></tr></thead>
+    <tbody>
+      <tr><th>تشخیص (Diagnosis)</th><td>شناسایی مشکل؛ «چرا» می‌خواهیم پارسیل بگذاریم</td><td>مصاحبه با بیمار، معاینات خارج‌دهانی، معاینات پزشکی و دندانپزشکی، کارهای پاراکلینیکی (کست، رادیوگرافی). همچنین پوسیدگی‌ها، بیماری‌های پریودنتال، ضایعات استخوانی</td></tr>
+      <tr><th>طرح درمان (Treatment Plan)</th><td>تعیین کاری که بعد از تشخیص لازم است انجام شود و روال انجام آن</td><td>اول مراحل <b>اورژانسی</b>، سپس غیراورژانسی</td></tr>
+      <tr><th>هدف نهایی</th><td>رسیدن به استتیک و فانکشن</td><td>۱) <span class="en">Esthetic</span> ۲) فانکشن (جویدن، صحبت‌کردن)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box note"><span class="t">اصل کلیدی نیاز در برابر خواسته</span>
+  در روند درمان یک‌سری <b>تشخیص/نیاز</b> داریم (نیاز بیمار) و یک‌سری <b>خواسته</b> از طرف بیمار. هرچه این دو به هم نزدیک‌تر باشند، درمان موفق‌تر است. اما چون بیمار اطلاعات کافی ندارد، <b>خواستهٔ بیمار مبنای کار ما نیست</b>؛ گاهی هم اصلاً نباید کاری انجام داد (مثلاً فردی با عفونت زیاد در دهان).</div>
+
+  <h3 class="sub">برای به‌دست‌آوردن خواسته‌ها و تمایلات بیمار</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اجزای ارزیابی بیمار</caption>
+    <thead><tr><th>مورد</th><th>توضیح کامل</th></tr></thead>
+    <tbody>
+      <tr><th>۱) <span class="en">Chief complain</span></th><td>دلیل اصلی مراجعهٔ بیمار: زیبایی / عدم توانایی خوردن غذا / مراجعه برای دندان دیگر و جایگزینی دندان در کنار آن. با رفع <span class="en">chief complain</span> بیمار خوشحال می‌شود. تشخیص آن: کتبی یا مصاحبه‌ای</td></tr>
+      <tr><th>۲) سوابق پزشکی</th><td>
+        <ul class="clean">
+          <li><b>بیماری‌های سیستمیک</b>: دیابت (خشکی دهان و عدم ترمیم زخم)</li>
+          <li><b>آلرژی به مواد</b>: مثلاً حساسیت به آکریل ← تغییر طرح درمان یا تغییر مواد</li>
+          <li><b>بیماری‌های وزیکولوبولوز</b>: پروتز با <b>حداکثر پالیش و حداقل تحریک</b></li>
+          <li><b>بیماری‌های مؤثر بر استخوان</b>: هایپرتیروییدیسم، استئوپروز</li>
+        </ul>
+      </td></tr>
+      <tr><th>۳) سوابق دندانپزشکی</th><td>
+        دندان‌های پرشده/کشیده‌شده. <b>مهم‌ترین مورد:</b> آیا پروتز پارسیل قبلی داشته؟ اگر داشته ۲ رویکرد:
+        <ul class="clean">
+          <li><span class="en">Conformation</span>: از پروتز قبلی راضی بوده ← عوامل رضایت را در پروتز خودمان حفظ می‌کنیم</li>
+          <li><span class="en">Reorganized</span>: ناراضی بوده ← عوامل نارضایتی را بررسی و در صورت امکان رفع می‌کنیم (گاهی نمی‌توان: غذاگیری زیر پروتز، حرکت حین جویدن، نیاز به استراحت بافتی ← باید به بیمار گفته شود)</li>
+        </ul>
+        همچنین وضعیت پریودنتال، فضاهای موجود و دندان‌های در اکلوژن بررسی و ثبت شوند.
+      </td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">موارد پاراکلینیکی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>رادیوگرافی و کست‌ها</caption>
+    <thead><tr><th>مورد</th><th>کاربرد / نکات</th></tr></thead>
+    <tbody>
+      <tr><th>رادیوگرافی (حتماً)</th><td>حتی اگر همهٔ دندان‌ها سالم باشند باید بررسی شود: ۱) ریشهٔ باقیمانده ۲) ضایعه ۳) عقل نهفته</td></tr>
+      <tr><th>انواع رادیوگرافی</th><td>۱) پانورامیک ۲) <span class="en">PA</span> دندان‌های پایه (ساپورت، پوسیدگی، وسعت ترمیم) ۳) دندان‌های مشکوک</td></tr>
+      <tr><th>کست مطالعه</th><td>قالب گرفته و کست ریخته شود = «کست مطالعه»</td></tr>
+      <tr><th>کست تشخیصی</th><td>وقتی کست <b>مانت</b> شود = «کست تشخیصی». با مانت به این موارد می‌رسیم: روابط فکین، وکس‌آپ (مزیودیستالی، اکلوزوجینجیوالی، باکولینگوالی)، بررسی پلن (در پارسیل نامنظمی پلن شایع است و باید جبران شود)، <span class="en">alignment</span> دندان‌ها</td></tr>
+      <tr><th>استفاده از کست‌ها</th><td>۱) طراحی پروتز پارسیل ۲) ساخت تری اختصاصی ۳) رکورد بیمار</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">۲ نکتهٔ بسیار مهم در پارسیل</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>مورد</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>۱) وضعیت پریودنتال دندان‌های پایه</th><td>هم از نظر کلینیکی و هم رادیوگرافی</td></tr>
+      <tr><th>۲) عمق کف دهان</th><td>مهم برای تعیین <b>اتصال‌دهندهٔ اصلی</b>. دو روش اندازه‌گیری: مشاهده + پروب / اندازه‌گیری از روی کست (<b>دقیق‌تر</b>)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box warn"><span class="t">نکات و قواعد سفت‌وسخت</span>
+  <ul class="clean">
+    <li>رست و کلاسپ ترجیحاً <b>روی ترمیم</b> نباشد.</li>
+    <li>اگر ساپورت پریودنتال دندان پایه <b>کمتر از ۵۰٪</b> باشد، دندان <span class="en">hopeless</span> است و باید اکس شود.</li>
+  </ul>
+  </div>
+
+  <h4 class="sub2">معاینات پریودنتال + توروس</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>موضوع</th><th>اقدامات</th></tr></thead>
+    <tbody>
+      <tr><th>معاینات پریودنتال</th><td>۱) بررسی میزان ساپورت ۲) پروبینگ (پاکت ← درمان پریودنتال و حذف پاکت) ۳) اندازه‌گیری لثهٔ چسبنده</td></tr>
+      <tr><th>توروس استخوانی</th><td>۱) تغییر طراحی پارسیل ۲) خارج‌کردن توروس</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">اصلاحیهٔ دکتر ابریشم (تکمیل جلسه)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>نکات تکمیلی تشخیص و طرح درمان</caption>
+    <thead><tr><th>موضوع</th><th>توضیح کامل</th></tr></thead>
+    <tbody>
+      <tr><th>تعریف پروتز</th><td>جایگزینی بافت از دست رفته (در دندانپزشکی: جایگزینی دندان از دست رفته). انواع: ثابت/متحرک، پارسیل/کامل، متکی بر ایمپلنت / متکی بر دندان</td></tr>
+      <tr><th>اهداف پروتز</th><td>۱) <b>نگه‌داری انساج باقیمانده</b> (هر دندان قابل نگه‌داری را حفظ می‌کنیم؛ به هر قیمتی دندان را نمی‌کشیم تا ایمپلنت بگذاریم) ۲) حذف بیماری (رفع بی‌دندانی) ۳) رسیدن به فانکشن</td></tr>
+      <tr><th>دیابت</th><td>خشکی دهان ← کاهش گیر پروتز پارسیل</td></tr>
+      <tr><th>وزیکولوبولوز</th><td>اولویت اول پروتز ثابت (تماس بافتی به حداقل). اگر متحرک ← بیشتر به‌سمت <span class="en">tooth supported</span>. قبل از کار وضعیت بیمار کنترل‌شده باشد</td></tr>
+      <tr><th>روند معاینه</th><td>از بیرون دهان (اجزای نرم) شروع و به داخل دهان می‌رسیم. در صورت مهم است: تقارن، <span class="en">VDO</span>، ساپورت لب</td></tr>
+      <tr><th><span class="en">Face scanner</span></th><td>انتقال کل داده‌ها به لابراتوار با اسکن صورت (بخشی از دندانپزشکی دیجیتال)</td></tr>
+      <tr><th>عمق وستیبول لینگوال قدامی پایین</th><td>مهم است چون اتصال‌دهندهٔ اصلی در آن قسمت قرار می‌گیرد</td></tr>
+      <tr><th>رادیوگرافی پروتز کامل</th><td>اولین رادیوگرافی <b>پانورامیک</b> (دندان نهفته، ریشهٔ باقیمانده، ساپورت استخوانی، تعداد دندان پایه، تیلت، ضایعه). برای ساپورت پریودنتال ← <b>بایت‌وینگ</b></td></tr>
+      <tr><th>دندان پایه با رستوریشن وسیع</th><td>باید روکش شود. <span class="en">inlay</span> و <span class="en">onlay</span> برای پایهٔ پارسیل مناسب نیستند ← روکش تمام‌دندان. خصوصاً ناحیهٔ <span class="en">CEJ</span> (محل کلاسپ) نباید پوسیدگی داشته باشد</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">دندان tilt: راهکارها</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>راهکار</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>۱) تغییر مسیر نشست و برخاست</th><td>—</td></tr>
+      <tr><th>۲) <span class="en">reshape</span></th><td><b>کاهشی</b>: حذف قسمت اضافی / <b>افزایشی</b>: کم‌کردن میزان آندرکات (با مواد ترمیمی یا روکش)</td></tr>
+      <tr><th>۳) <span class="en">ext</span> (اکستراکشن)</th><td>اگر <span class="en">tilt</span> دندان زیاد باشد</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box tip"><span class="t">مواردی که حتماً باید به بیمار گفته شود</span>
+  ۱) چه چیزی قرار است تحویل داده شود (نمونه/عکس/فیلم) — ۲) کارهایی که قبل از شروع باید توسط ما یا همکاران انجام شود — ۳) مدت زمان درمان — ۴) میزان هزینه و نحوهٔ پرداخت.</div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۱</h3>
+    <ul>
+      <li><b>تشخیص = چرا</b> پارسیل می‌گذاریم؛ <b>طرح درمان = چه‌کار و چگونه</b>. پارسیل آخرین مرحلهٔ طرح درمان است ولی تصمیمش اول کار گرفته می‌شود.</li>
+      <li>اول اورژانس، بعد غیراورژانس. هدف نهایی: <b>استتیک + فانکشن (جویدن و صحبت)</b>.</li>
+      <li>۳ ستون ارزیابی: <b>Chief complain</b>، سوابق پزشکی، سوابق دندانپزشکی (مهم‌ترین: پارسیل قبلی → Conformation یا Reorganized).</li>
+      <li>پاراکلینیک: رادیوگرافی حتمی + کست مطالعه (ریخته) → کست تشخیصی (مانت‌شده).</li>
+      <li>۲ چیز حیاتی پارسیل: <b>وضعیت پریودنتال پایه</b> و <b>عمق کف دهان</b> (برای اتصال‌دهندهٔ اصلی).</li>
+      <li>ساپورت پریودنتال <b>زیر ۵۰٪</b> = hopeless = اکس. رست/کلاسپ روی ترمیم نباشد.</li>
+      <li>اهداف پروتز: حفظ انساج، حذف بیماری، رسیدن به فانکشن. tilt → اصلاح مسیر / reshape / ext.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ===================== LECTURE 2 ===================== -->
+<section class="lec" id="l2">
+  <div class="lec-head">
+    <div class="badge">۲</div>
+    <h2>آرتیکولاتور، فِیس‌بو و مانت کردن
+      <span class="src">جلسه دوم — دکتر ابریشم (ورودی مهر ۱۴۰۰)</span>
+    </h2>
+  </div>
+
+  <h3 class="sub">انواع آرتیکولاتور</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مقایسهٔ آرتیکولاتورها</caption>
+    <thead><tr><th>نوع</th><th>قابلیت‌ها</th><th>اجزا و نکات</th></tr></thead>
+    <tbody>
+      <tr><th>غیرقابل تنظیم</th><td>فقط حرکت فک را تقلید می‌کند؛ هیچ حرکت طرفی یا اندازه‌گیری اضافی ندارد</td><td>—</td></tr>
+      <tr><th>نیمه‌قابل تنظیم</th><td>حرکات طرفی فک را هم دارد</td><td>پلیت فوقانی، پلیت تحتانی، رینگ فوقانی، رینگ تحتانی، پلیت انسیزال. زاویه بسته به شیب ثنایا تغییر می‌کند؛ با <b>پین ثنایایی</b> ارتفاع تنظیم می‌شود. اعداد روی آن = راهنمای خلفی / شیب کندیلی (مثل زاویهٔ بِنت)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box note"><span class="t">انتخاب برای پارسیل</span>
+  برای پارسیل به آرتیکولاتور <b>نیمه‌قابل تنظیمی</b> نیاز داریم که <span class="en">face bow</span> را هم بپذیرد. <span class="en">face bow</span> روی ۲ نقطه از آرتیکولاتور قرار می‌گیرد و یک شاخص سوم هم دارد.<br>
+  <b>مواد و وسایل لازم برای مانت:</b> آرتیکولاتور، <span class="en">face bow</span>، موم، چراغ الکلی، مادهٔ ثبت.</div>
+
+  <h3 class="sub">ثبت پلن: ۳ نقطه (۲ خلفی + ۱ قدامی)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>شاخص خلفی و قدامی</caption>
+    <thead><tr><th>شاخص</th><th>روش/تعریف</th></tr></thead>
+    <tbody>
+      <tr><th>خلفی — قراردادی</th><td>انتخاب نقطهٔ <span class="en">beyron</span>: از تراگوس به‌سمت کانتوس خارجی چشم رفته و <b>۱۳ میلی‌متر</b> جلو می‌رویم؛ همین کار برای سمت دیگر. این دو نقطه = نقاط خلفی</td></tr>
+      <tr><th>خلفی — اختیاری</th><td>ثبت <span class="en">hinge axis</span> (محور بین‌کندیلی که حین باز/بسته‌شدن حرکت حول آن انجام می‌شود). فک ۲ حرکت دارد: ابتدا <span class="en">hinge</span> سپس پایین و جلو. <b>چرا فک کاملاً باز نمی‌شود؟</b> چون به راه هوایی گیر می‌کند</td></tr>
+      <tr><th>قدامی</th><td>بسته به نوع آرتیکولاتور: گاهی <span class="en">infraorbital notch</span>، گاهی از لبهٔ انسیزال بالا می‌آید، و گاهی پل بینی</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip"><span class="t">نکته</span><span class="en">ear bow</span> داخل سوراخ گوش قرار می‌گیرد.</div>
+
+  <h3 class="sub">فورک، ثبت بایت و مانت</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>فورک</th><td>خطی دارد که میدالین را مشخص می‌کند. مادهٔ ثبت بایت روی بایت‌فورک قرار می‌گیرد و <b>میدالین فک بالا را مطابق صورت</b> ثبت می‌کند</td></tr>
+      <tr><th>ثبت بایت</th><td>کافی است نوک کاسپ‌ها داخل ماده قرار بگیرند؛ لازم نیست کامل تا <span class="en">height of contour</span> رد شود</td></tr>
+      <tr><th>قاعدهٔ مهم</th><td>مادهٔ ثبت بایت <b>نباید سوراخ شود</b>؛ سوراخ‌شدن = خطا در آن قسمت</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">میانگین شاخص‌ها (وقتی اندازه‌گیری نکنیم)</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>شاخص</th><th>میانگین</th></tr></thead>
+    <tbody>
+      <tr><th>شاخص خلفی (شیب کندیلی)</th><td><span class="pill">۳۰ درجه</span></td></tr>
+      <tr><th>زاویهٔ بِنت</th><td><span class="pill">۱۵ درجه</span></td></tr>
+      <tr><th>میز ثنایایی</th><td><span class="pill">۰ درجه</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn"><span class="t">حین مانت کردن</span>
+  کست نباید با هیچ‌چیز تماس داشته باشد؛ اگر به رینگ گیر می‌کند باید برای گچ مانت فضا ایجاد شود. ابتدا کست بالا مطابق رابطه مانت می‌شود، سپس رابطهٔ فک بالا و پایین ثبت می‌گردد.</div>
+
+  <h3 class="sub">ثبت رابطهٔ فکین</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>روش</th><th>کِی استفاده می‌شود</th></tr></thead>
+    <tbody>
+      <tr><th>بیس و وکس (قدیمی)</th><td>وقتی نتوانیم <span class="en">hand articulate</span> کنیم؛ یعنی در موارد سایش یا نبود دندان‌های خلفی</td></tr>
+      <tr><th><span class="en">hand articulate</span></th><td>وقتی <b>حداقل ۳ نقطهٔ stable</b> بین فک بالا و پایین داشته باشیم</td></tr>
+      <tr><th><span class="en">slab</span> (جدید)</th><td>رابطهٔ فک بالا و پایین کاملاً دقیق و مشابه دهان در کامپیوتر اسکن می‌شود</td></tr>
+      <tr><th>پارسیل</th><td>مشابه پروتز کامل بیس و وکس‌ریم ساخته می‌شود، با این تفاوت که وکس‌ریم <b>تکه‌ای</b> است (نه کامل) و در ناحیهٔ بی‌دندانی قرار می‌گیرد. مادهٔ ثبت بایت: موم / <span class="en">ZOE</span> / افزایشی</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box note"><span class="t">دو نکتهٔ سؤال‌برانگیز دربارهٔ دندان پایه</span>
+  ریشه‌های <b>چندتایی</b> بهتر از تکی هستند؛ ریشهٔ <b>divergent</b> بهتر از conical است.</div>
+
+  <h3 class="sub">گزینه‌های پُرکردن فضای بی‌دندانی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>درمان‌های ناحیهٔ بی‌دندانی</caption>
+    <thead><tr><th>گزینه</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>۱) درمان نکنیم</th><td>به دلایل سیستمیک بیمار، شرایط دندانی، عدم بلدبودن یا...</td></tr>
+      <tr><th>۲) پروتز ثابت</th><td>متکی بر دندان یا متکی بر ایمپلنت. ثابتِ بر ایمپلنت: دندان کناری تراش نمی‌خورد، شبیه دندان است، از استخوان نگهداری می‌کند، ولی جراحی دارد و زمان‌بر است</td></tr>
+      <tr><th>۳) پروتز متحرک</th><td><b>یک‌طرفه نداریم</b> (مهم‌ترین دلیل: خطر آسپیراسیون). باید ۲طرفه باشد؛ حتی برای جایگزینی یک دندان هم باید از میدالین رد شود</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">متحرک یا ثابت؟ تصمیم بر اساس تعداد دندان از دست رفته</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>سؤال</th><th>پاسخ/قاعده</th></tr></thead>
+    <tbody>
+      <tr><th>هر تعداد دندان از دست رفته = همان تعداد جایگزین؟</th><td class="no">خیر</td></tr>
+      <tr><th>هر فضای بی‌دندانی حتماً باید پر شود؟</th><td class="no">خیر (مثلاً وقتی به‌اندازهٔ ۱ دندان‌و‌نیم فضاست، نه با ۲ دندان نه با ۱ دندان کامل پر می‌شود؛ یک دندان می‌گذاریم و کمی فاصله می‌ماند)</td></tr>
+      <tr><th>حداکثر تعداد پونتیک پروتز ثابت؟</th><td><b>۳ پونتیک</b> (برای دندان‌های تا ۴تا). بیشتر از این ← به‌سمت پروتز متحرک</td></tr>
+      <tr><th>ناحیهٔ قدامی</th><td>اولویت با پروتز ثابت؛ درمان ترکیبی: قدام ثابت، خلف متحرک</td></tr>
+      <tr><th>پروتز متحرک <span class="en">end free</span> باشد بهتر است؟</th><td class="no">خیر، بهتر است نباشد. اگر دندان انتها داریم تلاش می‌کنیم آن را برای پارسیل نگه داریم</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box tip"><span class="t">پلن و دندان tilt شده</span>
+  وقتی دندانی کشیده می‌شود جابجایی اتفاق می‌افتد و باید دندان را <span class="en">upright</span> کنیم؛ یکی از روش‌ها <b>ارتودنتیک</b> است (ایجاد فضای کافی، upright کردن، برگرداندن دندان‌های <span class="en">supra-erupted</span>). <b>وجود پلن صحیح</b> از عوامل موفقیت و افزایش طول کارایی درمان است؛ یکی از روش‌های اصلاح پلن <b>انملوپلاستی</b> است که محدودیت دارد.</div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۲</h3>
+    <ul>
+      <li>برای پارسیل به آرتیکولاتور <b>نیمه‌قابل تنظیمِ پذیرندهٔ face bow</b> نیاز داریم.</li>
+      <li>ثبت پلن = <b>۳ نقطه</b>: ۲ خلفی (beyron قراردادی یا hinge axis اختیاری) + ۱ قدامی.</li>
+      <li>beyron: از تراگوس به کانتوس خارجی چشم + <b>۱۳mm</b> جلو.</li>
+      <li>میانگین شاخص‌ها: شیب کندیلی <b>۳۰°</b>، بِنت <b>۱۵°</b>، میز ثنایایی <b>۰°</b>.</li>
+      <li>مادهٔ ثبت بایت نباید سوراخ شود؛ کست حین مانت با هیچ‌چیز تماس نداشته باشد.</li>
+      <li><b>hand articulate</b> = حداقل ۳ نقطهٔ stable؛ وگرنه بیس و وکس. در پارسیل وکس‌ریم <b>تکه‌ای</b> است.</li>
+      <li>دندان پایه: ریشهٔ چندتایی و divergent بهتر است.</li>
+      <li>متحرک یک‌طرفه ممنوع (آسپیراسیون). حداکثر پونتیک ثابت = ۳ تا. قدام اولویت با ثابت. از end free دوری کنیم.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ===================== LECTURE 3 ===================== -->
+<section class="lec" id="l3">
+  <div class="lec-head">
+    <div class="badge">۳</div>
+    <h2>بیومکانیک و ملاحظات طراحی پروتز پارسیل
+      <span class="src">Biomechanics of RPD &amp; Design Considerations</span>
+    </h2>
+  </div>
+
+  <h3 class="sub">اصول فیزیکی پایه</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>انواع اهرم و کفش اسکی</caption>
+    <thead><tr><th>اصل</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>اهرم نوع ۱</th><td><span class="en">fulcrum</span> در وسط قرار دارد. <b>در پارسیل مناسب نیست.</b></td></tr>
+      <tr><th>اهرم نوع ۲</th><td><span class="en">fulcrum</span> در یک سمت و نیروی محرک در سمت دیگر (مانند فرغون)</td></tr>
+      <tr><th>اهرم نوع ۳</th><td>مشابه چوب ماهیگیری</td></tr>
+      <tr><th>کفش اسکی</th><td>هرچه سطح بیشتر باشد، ساپورت بیشتر و در نتیجه نیروی واردشده به سطح کمتر می‌شود</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">نیروها در پروتز و مقاومت در برابر آنها</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تحلیل نیروها</caption>
+    <thead><tr><th>نوع نیرو</th><th>منشأ / مثال</th><th>چه عاملی مقاومت می‌کند</th></tr></thead>
+    <tbody>
+      <tr><th>عمودی — به سمت نسج</th><td>وزن پروتز (فک پایین)، نیروی جویدن، نیروی جاذبه (فک بالا)؛ نیروی جویدن غذای معمولی</td><td><b><span class="en">support</span></b></td></tr>
+      <tr><th>عمودی — دور از نسج</th><td>نیروی جویدنِ <b>غذای چسبنده</b> (می‌خواهد پروتز را از جا خارج کند)</td><td><b>گیر</b> (مستقیم و غیرمستقیم)</td></tr>
+      <tr><th>طرفی</th><td>—</td><td><b><span class="en">stabilization</span></b></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn"><span class="t">خطر در end free بدون گیر غیرمستقیم</span>
+  وقتی نگهدارندهٔ غیرمستقیم وجود نداشته باشد، با ورود نیرو یک سمت به‌سمت اپیکال حرکت می‌کند ← حالت <b>الاکلنگی و جابجایی <span class="en">V-shaped</span></b> ← به‌دلیل نبود <span class="en">stabilization</span> واحد، فشار مکرر بر لینگوال مندیبل و بروز زخم‌های بافتی.</div>
+
+  <h4 class="sub2">سه پلن (محور چرخش)</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>پلن</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>A — <span class="en">Sagittal</span></th><td>محور چرخش از روی رست‌ها می‌گذرد (محور عمود همان محوری است که از رست‌ها رد می‌شود)</td></tr>
+      <tr><th>B — <span class="en">Frontal</span></th><td>پلن عمودی</td></tr>
+      <tr><th>C — <span class="en">Horizontal</span></th><td>پلن افقی</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">تقسیم‌بندی ساپورت و کندی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>تقسیم‌بندی کلی</th><td><span class="en">end free</span> و <span class="en">tooth support</span>؛ <b>tooth support بهتر است</b>. یکی <span class="en">tissue supported</span> و دیگری <span class="en">tooth and tissue supported</span> نامیده می‌شود (در نوع دوم ساپورت اضافه از دندان‌ها گرفته می‌شود ← حرکت پروتز کمتر)</td></tr>
+      <tr><th>کاهش end free</th><td>دندان انتهایی خوب است؛ عقل را در صورت امکان نگه می‌داریم؛ ایمپلنت انتها ← ساپورت اضافه. تا حد ممکن از <span class="en">end free</span> دوری می‌کنیم</td></tr>
+      <tr><th>Kennedy</th><td>۱) <span class="en">Class I</span> (دوطرفه <span class="en">free end</span>) ۲) <span class="en">Class II</span> (یک‌طرفه <span class="en">free end</span>) ۳) <span class="en">Long Class IV</span> (قدامی که از میدالین عبور می‌کند)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box note"><span class="t">جابجایی مخاط در برابر PDL (مهم)</span>
+  جابجایی مخاط (<span class="en">2.0mm</span>) تقریباً <b>۱۰ برابر</b> جابجایی <span class="en">PDL</span> (<span class="en">0.25mm</span>) است. در پارسیل هدف این است که نیروها بین بافت (مخاط) و دندان به‌صورت <b>مساوی</b> تقسیم شود.</div>
+
+  <h4 class="sub2">عوامل مؤثر بر ورود مناسب نیرو</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>عامل</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>طول ناحیهٔ بی‌دندانی</th><td>هرچه بیشتر ← نیروی وارده بیشتر</td></tr>
+      <tr><th>کیفیت ریج بی‌دندانی</th><td>استخوان متراکم‌تر (کیفیت) و بیشتر (کمیت) ← نیروها بهتر وارد می‌شوند</td></tr>
+      <tr><th>نوع کلاسپ</th><td><span class="en">Suprabulge</span> یا <span class="en">infrabulge</span>؛ نوع اجزای کلاسپ هم مهم است (قطر، طول، ماده)</td></tr>
+      <tr><th>اکلوژن مقابل</th><td>از کمترین تا بیشترین نیرو: هیچ دندانی نباشد → دنچر → <span class="en">Overdenture</span> → دندان طبیعی (ممکن از Overdenture کمتر) → روکش دندانی → ایمپلنت</td></tr>
+      <tr><th>ایمپلنت</th><td>نبود <span class="en">PDL</span> ← نبود گیرنده‌های حس فشار ← انتقال مستقیم نیرو به استخوان بدون حس طبیعی فشار</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">اقدامات بهبود / کاهش مشکلات</h3>
+  <p class="lead">پنج محور: کاهش نیرو، افزایش گیر، ساپورت، طراحی پروتز، نوع قالبگیری.</p>
+  <div class="tbl-scroll">
+  <table>
+    <caption>راهکارهای مدیریت نیرو و گیر</caption>
+    <thead><tr><th>محور</th><th>راهکارها</th></tr></thead>
+    <tbody>
+      <tr><th>۱) کاهش <span class="en">occlusal load</span></th><td>
+        <ul class="clean">
+          <li>دندان‌های کوچک‌تر (پرمولر به‌جای مولر)</li>
+          <li>کم‌کردن میز اکلوزالی از باکولینگوال</li>
+          <li>حذف تعدادی دندان (۳ دندان به‌جای ۴)</li>
+          <li>هرچه تماس کمتر ← نیروی وارده به بافت زیرین کمتر</li>
+        </ul>
+      </td></tr>
+      <tr><th>۲) افزایش گیر (<span class="en">improving retention</span>)</th><td>تماس بیشتر با بافت ← اول ساپورت بالاتر؛ سپس اگر تا <span class="en">mucogingival line</span> بیاید (بین لثهٔ چسبنده و متحرک) ← گیر بیشتر. پروتز متحرک همیشه روی بافت ثابت قرار می‌گیرد. از آندرکات‌های بافتی (<span class="en">Tissue Undercuts</span>) برای افزایش گیر استفاده می‌شود</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">RPI و کلاسپ ترکیبی</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th><span class="en">RPI</span></th><td>یک کلاسپ <span class="en">infrabulge</span> (از زیر <span class="en">height of contour</span> تا HOC امتداد می‌یابد) که در نوع <span class="en">end free</span> استفاده می‌شود. رست آن ترجیحاً مزیال و پروگزیمال‌پلیت آن به‌سمت دیستال است. وقتی نیرو به‌سمت نسج وارد می‌شود <span class="en">fulcrum</span> به رست مزیال منتقل و قسمت <span class="en">I-Bar</span> بازوی مقاوم می‌شود</td></tr>
+      <tr><th><span class="en">guiding plane</span> در برابر <span class="en">proximal plate</span></th><td><span class="en">proximal plate</span> مربوط به دنچر است؛ آن قسمتی از دندان که proximal plate به آن می‌چسبد = <span class="en">guiding plane</span></td></tr>
+      <tr><th>تماس <span class="en">occlusogingival</span></th><td>تمایل به تماس <b>کمتر</b> داریم (تماس بیشتر = نیروی بیشتر به دندان). شیار لثه‌ای و لثهٔ آزاد نباید با فلز تماس داشته باشند ولی پروگزیمال می‌تواند. تماس نباید بیش از <b>۱/۳ طول occlusogingival</b> باشد</td></tr>
+      <tr><th>کلاسپ ترکیبی</th><td><span class="en">framework</span> از کروم-کبالت ریختگی، بازوی گیر به‌صورت <span class="en">Wrought Wire (WW)</span> از سیم‌های پیش‌ساخته. آندرکات مناسب <b>۱۸ گیج</b> در مزیال دندان</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">Indirect Retainer (IR)</h4>
+  <div class="box note"><span class="t">گیر غیرمستقیم</span>
+  برای تنظیم نیرو در پارسیل با <span class="en">end free</span> لازم است. یک محور از محل رست‌ها می‌گذرد؛ روی آن <b>عمودمنصف</b> رسم می‌کنیم و هر نقطه‌ای که دورتر باشد به‌عنوان <span class="en">IR</span> در نظر گرفته می‌شود. اگر روی ثنایا بیفتد، جایگزینش کانین یا پرمولر است.
+  <ul class="clean">
+    <li><b>بدون IR:</b> اهرم نوع ۱ ← حرکت پروتز ← زخم مکرر.</li>
+    <li><b>با IR:</b> گیر به <span class="en">fulcrum</span> تبدیل می‌شود ← اهرم نوع ۲ ← بدون تروما.</li>
+    <li>در شکل: <span class="en">F = fulcrum (indirect retainer)</span>، <span class="en">R = resistance (retention by clasp)</span>، <span class="en">E = effort (displacing force)</span>.</li>
+  </ul>
+  </div>
+
+  <h4 class="sub2">Abutment tooth modification و افزایش گیر</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>آندرکات باکال/لینگوال</th><td>یا از قبل وجود دارد یا ایجاد می‌کنیم: <b>افزایشی</b> (افزودن ماده ← HOC برجسته‌تر) یا <b>کاهشی</b> (تراش محل آندرکات). راه افزایشی دیگر: روکش دندان پایه (میزان و محل آندرکات و <span class="en">proximal plate</span> قابل اصلاح). رست سینگولوم برای پارسیل طراحی می‌شود</td></tr>
+      <tr><th>روش‌های دیگر افزایش گیر</th><td>۱) <span class="en">precision attachment</span> (با ایمپلنت کاربرد کم؛ شاید در Overdenture دندانی؛ دارای قسمت <span class="en">male</span> و <span class="en">female</span>) ۲) <span class="en">implant retained / supported</span> ۳) <span class="en">swing lock denture</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">Support: عوامل و PIP</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>عامل</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>عوامل مؤثر بر ساپورت</th><td>نوع ریج، مقدار ریج باقیمانده، نیروی واردشده، فیته‌بودن دنچر (<span class="en">Accuracy of Denture Base</span>)، طراحی فریم، نوع قالبگیری</td></tr>
+      <tr><th><span class="en">PIP</span> (Pressure Indicating Paste) — ۳ حالت</th><td>۱) ماده تغییر نکند = بدون تماس — ۲) ماده کاملاً از روی دنچر برود = تماس بیش از حد — ۳) الگوی منظم موازی = تماس مطلوب</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">گسترش پروتز و عوارض</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>حالت</th><th>پیامد</th></tr></thead>
+    <tbody>
+      <tr><th>گسترش حداکثری (مطلوب)</th><td>تماس بیشتر، ساپورت بهتر، تقسیم نیرو بهتر، کاهش گیر غذایی</td></tr>
+      <tr><th><span class="en">Under contour / Under extended</span></th><td>لبه‌ها کوتاه‌تر و به <span class="en">mucogingival line</span> نرسیده ← علاوه بر تأثیر بر ساپورت و نیرو، روی <b>کاهش گیر غذایی</b> مؤثر است</td></tr>
+      <tr><th><span class="en">Over-extended</span></th><td>جابجایی مکرر پروتز؛ اگر <b>کم</b> ← فقط زخم؛ اگر <b>زیاد</b> ← نسج هایپرپلاستیک و سپس <span class="en">Epulis</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box warn"><span class="t">پروتز flexible / ژله‌ای</span>
+  دو طرفش را فشار دهیم خم می‌شود. در نگاه اول خوب به‌نظر می‌رسد (نیروی کمتر، پذیرش بهتر) اما از نظر <span class="en">rigidity</span> یک پروتز <span class="en">failed</span> است؛ چون نمی‌توانیم توزیع نیروها را کنترل کنیم. جز در موارد محدود کاربرد ندارد.</div>
+
+  <div class="box tip"><span class="t">جبران تغییرات بافتی</span>
+  تغییرات بافتی در <span class="en">end free</span> بیشتر از <span class="en">tooth supported</span> است. برای جبران، تماس و گسترش باید حداکثر باشد. وقتی تغییرات استخوانی رخ می‌دهد، با <b>Relining</b> تماس را به حد مطلوب می‌رسانیم.</div>
+
+  <h3 class="sub">جدول جمع‌بندی طراحی بر اساس نوع ساپورت</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>Tooth Supported (Cl III &amp; IV) در برابر Tooth &amp; Tissue (Cl I &amp; II)</caption>
+    <thead><tr><th>ویژگی</th><th><span class="en">Tooth Supported</span> (Cl III &amp; IV)</th><th><span class="en">Tooth &amp; Tissue</span> (Cl I &amp; II)</th></tr></thead>
+    <tbody>
+      <tr><th>۱) Support</th><td>دندان‌های اباتمنت</td><td>ترکیب اباتمنت + بافت نرم</td></tr>
+      <tr><th>۲) Impression</th><td>فرم آناتومیک (<span class="en">anatomic form</span>)</td><td>آناتومیک + فانکشنال (<span class="en">altered cast technique</span>)</td></tr>
+      <tr><th>۳) Indirect retention</th><td>بدون rotation دنچر ← <b>لازم نیست</b></td><td><b>لازم است</b> برای مقاومت در برابر بلندشدن از بافت</td></tr>
+      <tr><th>۴) Base type</th><td>بیس فلزی ← reline لازم نیست</td><td>بیس آکریلی ← reline در آینده محتمل (به‌دلیل bone loss)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box note"><span class="t">جمع‌بندی نوع کلاسپ و قالب</span>
+  در قالبگیری Cl I و II می‌توان <span class="en">functional</span> اضافه کرد، ولی Cl III و IV صرفاً <span class="en">tooth supported</span> (آناتومیک) کافی است. در <span class="en">end free</span> بیس <span class="en">acrylic</span> اولویت است (احتمال reline بیشتر) ولی در tooth supported بیس فلزی هم می‌توان استفاده کرد. کلاسپ <span class="en">end free</span> = <span class="en">WW</span> یا <span class="en">RPI</span> (هر دو infrabulge)؛ بقیهٔ کلاسپ‌ها در tooth supported.</div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۳ (بیومکانیک)</h3>
+    <ul>
+      <li>نیرو به سمت نسج → <b>support</b> مقاومت می‌کند؛ دور از نسج → <b>گیر</b>؛ طرفی → <b>stabilization</b>.</li>
+      <li>اهرم نوع ۱ در پارسیل بد است؛ end free بدون IR = الاکلنگی V-shaped و زخم لینگوال مندیبل.</li>
+      <li>جابجایی مخاط ≈ <b>۱۰ برابر</b> PDL (۲mm در برابر ۰.۲۵mm) → هدف: تقسیم مساوی نیرو.</li>
+      <li>کاهش بار اکلوزال: دندان کوچک‌تر، کم‌کردن میز باکولینگوال، حذف دندان، تماس کمتر.</li>
+      <li><b>RPI</b> = رست مزیال + پروگزیمال‌پلیت دیستال + I-Bar (infrabulge، برای end free). آندرکات WW = ۱۸ گیج.</li>
+      <li><b>IR</b> برای end free لازم: گیر را به fulcrum تبدیل و اهرم نوع ۲ می‌سازد → بدون تروما.</li>
+      <li>PIP: بدون تغییر=بی‌تماس، محو کامل=تماس زیاد، خطوط موازی=مطلوب.</li>
+      <li>پروتز ژله‌ای از نظر rigidity failed است. Over-extended زیاد → Epulis.</li>
+      <li>جدول ۴ردیفی: Cl III&IV (tooth) = anatomic + بدون IR + بیس فلزی؛ Cl I&II (tooth&tissue) = functional/altered cast + IR + بیس آکریلی.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ===================== LECTURE 4 ===================== -->
+<section class="lec" id="l4">
+  <div class="lec-head">
+    <div class="badge">۴</div>
+    <h2>مواد قالبگیری در پروتز پارسیل
+      <span class="src">فصل ۱۶ مک‌کراکن ۲۰۱۷</span>
+    </h2>
+  </div>
+
+  <p class="lead">قالب در پارسیل باید <b>هم دندان‌ها و هم قسمت‌های آناتومیک</b> را ثبت کند. انتظارات از قالب: تعیین <span class="en">path of insertion</span> بر اساس سرویوری روی کست اولیه، و ایجاد <b>ساپورت، گیر و ثبات</b>. ساپورت و گیر در برابر نیروهای عمودی (به‌سمت/دور از نسج) مقاومت می‌کنند؛ ثبات در برابر نیروهای طرفی.</p>
+
+  <h3 class="sub">دسته‌بندی کلی مواد قالبگیری</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>چهار خانوادهٔ اصلی مواد قالبگیری</caption>
+    <thead><tr><th>دسته</th><th>زیرمجموعه‌ها / سردسته</th></tr></thead>
+    <tbody>
+      <tr><th>۱) <span class="en">rigid</span></th><td>گچ‌های قالبگیری و اکسیدهای فلزی (سردسته: <b>اکسید روی</b>)</td></tr>
+      <tr><th>۲) ترموپلاستیک</th><td>مدلینگ کامپاند و موم‌های قالبگیری</td></tr>
+      <tr><th>۳) الاستومر</th><td>هیدروکلوئیدهای قابل برگشت و غیرقابل برگشت</td></tr>
+      <tr><th>۴) رابر بیس</th><td>مرکپتان (پلی‌سولفاید)، پلی‌اتر و مواد سیلیکونی</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">جزئیات هر ماده</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مقایسهٔ کامل مواد قالبگیری</caption>
+    <thead><tr><th>ماده</th><th>ویژگی‌ها</th><th>کاربرد / نکات</th></tr></thead>
+    <tbody>
+      <tr><th>مواد <span class="en">rigid</span></th><td>سخت؛ در پارسیل به‌دلیل وجود دندان نمی‌توان استفاده کرد (بعد از درآوردن قالب از آندرکات‌ها رد نمی‌شویم)</td><td>پروتز کامل، <span class="en">altered casts</span> در پارسیل، موارد ریلاین در انتهای آزاد</td></tr>
+      <tr><th><span class="en">Modeling plastic</span> (ترموپلاستیک)</th><td>به‌صورت <span class="en">plate</span> یا لوله؛ رنگ بر اساس <b>نقطهٔ ذوب</b> است؛ شایع‌ترین رنگ: قرمز یا قرمز-قهوه‌ای (کیکی در ناحیهٔ بی‌دندانی، اضافات برداشته)؛ <b>پایین‌ترین نقطهٔ ذوب = نوع قرمز</b>؛ لوله‌ای قرمز و خاکستری محدودهٔ کاری بیشتری دارند</td><td>انتهای آزاد در قالبگیری اولیه؛ انتخاب رنگ خاکستری یا قرمز بر اساس قضاوت بالینی</td></tr>
+      <tr><th>موم و <span class="en">Resin wax</span></th><td>موم در وکس‌ریم، جداکننده (<span class="en">spacer</span>) و قالبگیری (موم مخصوص دهان بسته و باز). <span class="en">Resin wax</span>: موم تقویت‌شده با رزین</td><td><span class="en">Resin wax</span> باید هنگام خروج از دهان در دمای پایین‌تر نگهداری شود</td></tr>
+      <tr><th colspan="3" style="background:var(--teal-soft);color:var(--navy);font-weight:800;text-align:center;">مواد الاستیک — هیدروکلوئیدها (از آندرکات راحت خارج، یکپارچه، بدون ماده حدواسط، ثبت جزئیات خوب)</th></tr>
+      <tr><th>هیدروکلوئید برگشت‌پذیر (آگار-آگار)</th><td>از خزه‌های دریایی؛ در تیوب؛ نیاز به تجهیزات خاص؛ باید داغ شده از حالت ژله به <span class="en">sol</span> درآید، ثبت شود و در آب سرد به ژله بازگردد</td><td>عیب: نیاز به تجهیزات خاص + در اثر حرارت بافت دهان را می‌سوزاند</td></tr>
+      <tr><th>هیدروکلوئید غیرقابل برگشت (آلژینات)</th><td>پودر = آلژینات سدیم + سولفات کلسیم؛ با آب واکنش شیمیایی ← مادهٔ شیرقابل‌حل (غیرقابل برگشت)</td><td>بهترین زمان ریختن: <b>فوری</b>؛ در محیط مرطوب تا <b>۱۵ دقیقه</b> هم می‌توان ریخت</td></tr>
+      <tr><th colspan="3" style="background:var(--teal-soft);color:var(--navy);font-weight:800;text-align:center;">مواد رابری (یک بِیس + یک کاتالیست؛ با مخلوط‌شدن، ستینگ شروع می‌شود)</th></tr>
+      <tr><th>پلی‌سولفاید</th><td>دو تیوب بیس و کاتالیست؛ بوی نامطبوع، لکهٔ لباس</td><td>بیشترین ضخامت با دقت کافی = <b>۳ میلی‌متر</b>؛ ریختن حداکثر تا ۱۵ دقیقه بعد؛ نسبت به هیدروکلوئید سطح گچ صاف‌تر و سخت‌تر</td></tr>
+      <tr><th>پلی‌اتر</th><td>هیدروفیل؛ <span class="en">working time</span> و <span class="en">setting time</span> کوتاه (مشکل حین قالبگیری)؛ کمترین <span class="en">flexibility</span> و <span class="en">flowability</span> در میان الاستومرها؛ بعضی بوی نامطبوع</td><td>برای ضدعفونی نباید مدت طولانی در آب باشد (تغییرات ابعادی شدید)؛ با مواد افزایشی سازگار نیست؛ ریختن تا ۲ ساعت (در خشکی تا یک هفته)</td></tr>
+      <tr><th>سیلیکون‌ها</th><td><b>جدیدترین</b> مواد بازار؛ دو گروه. <b>تراکمی</b>: قدیمی، پوتی + واش، قوام‌ها از پوتی (خیلی سخت) تا <span class="en">heavy، medium، light، extra light</span>. <b>افزایشی</b>: بیشتر <span class="en">mixed</span>، راحت مخلوط، بدون نیاز به مهارت منشی</td><td>افزایشی در شرایط خوب تا یک هفته قابل ریختن؛ <b>تداخل با لاتکس و نخ‌های زیرلبه‌دار</b> ← اختلال در پلیمریزاسیون</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">پروسهٔ قالبگیری</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مراحل و نکات قالبگیری</caption>
+    <thead><tr><th>مرحله</th><th>جزئیات</th></tr></thead>
+    <tbody>
+      <tr><th>انتخاب و آماده‌سازی تری</th><td>اندازهٔ مناسب و جایگذاری صحیح؛ تری فلزی یا پلاستیکی. در نواحی بی‌دندانی می‌توان از مادهٔ اولیه (سیلیکون، کامپاند، مدلینگ‌پلاستیک) استفاده کرد؛ نواحی روی دندان با تیغ بیستوری جدا و سپس قالب با مادهٔ اصلی</td></tr>
+      <tr><th>بردرلمولد مختصر</th><td>در ناحیهٔ پالاتال و بی‌دندانی؛ با موم‌های قالبگیری یا حتی سیلیکون افزایشی</td></tr>
+      <tr><th>تری اختصاصی + <span class="en">tissue stop</span></th><td>نکتهٔ مهم: حتماً <span class="en">tissue stop</span> داشته باشیم تا فاصله ایجاد و ضخامت یکنواخت شود (از واجبات تریِ بافاصله). اگر لابراتوار فراموش کرد ← با کامپاند روی تری انجام می‌دهیم.<br><b>تعداد tissue stop:</b> تری فک پایین = یک قدامی + دوتا خلفی؛ تری فک بالا = یک عدد</td></tr>
+      <tr><th>امتحان تری اختصاصی</th><td>اول روی کست، سپس داخل دهان؛ باید کاملاً <span class="en">stable</span> باشد؛ اگر اصلاحات زیاد لازم بود از اول بسازیم؛ نواحی فرنوم آزادی کافی (خصوصاً قدامی فک پایین در لینگوال). همهٔ نکات تری اختصاصی پروتز کامل اینجا هم رعایت می‌شود</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">اصلاح بردر و انتخاب مادهٔ قالب</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>حالت</th><th>اقدام</th></tr></thead>
+    <tbody>
+      <tr><th><span class="en">Over extension</span></th><td>باید کوتاه شود (وگرنه جلوی حرکت راحت بافت را می‌گیرد و آزردگی ایجاد می‌کند)</td></tr>
+      <tr><th><span class="en">Under extend</span></th><td>با مواد بردرلمولد اصلاح؛ شایع‌ترین: <b>کامپاندها</b> (سبز و صورتی) که بعد از گرم‌شدن روی بردر قرار گرفته و مثل پروتز کامل فانکشن داده می‌شود</td></tr>
+      <tr><th>محدودیت اصلاح بردر</th><td>حداکثر <b>۲ تا ۴ میلی‌متر</b>؛ بیشتر از این ← آکریل در لابراتوار یا <span class="en">side chair</span> اضافه شود (با کامپاند انجام نمی‌شود)</td></tr>
+      <tr><th>انتخاب مادهٔ قالب</th><td>انتخاب اول <b>الاستومر</b>؛ اگر آندرکات وجود داشته باشد نمی‌توان آلژینات استفاده کرد (الاستیک‌ریکاوری ضعیف) ← مادهٔ با الاستیک‌ریکاوری بیشتر. دهان کاملاً خشک، بزاق اضافه با ساکشن جمع شود</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box tip"><span class="t">نکات کلیدی قالبگیری</span>
+  <ul class="clean">
+    <li><b>تکنیک block out:</b> با موم مرده (<span class="en">dead wax</span>) آندرکات‌ها و فواصل بین‌دندانی از بین می‌رود (موم مرده همان موم زیر دندان پروتز کامل است). اگر انجام نشود، ماده هنگام خروج پاره می‌شود و قالب تکرار.</li>
+    <li>تری می‌تواند <span class="en">stock</span> (اولیه) یا اختصاصی (نهایی) باشد. آلژینات: پودر+آب؛ رابری: بیس+کاتالیست. تری باید کاملاً ثابت بماند.</li>
+    <li>مادهٔ قالب را در تری <b>over load</b> نکنید (رفلکس <span class="en">gag</span>). چسب تری برای آلژینات و رابری (هم stock هم اختصاصی).</li>
+    <li><b>prepacking</b> (برای قالب بدون حباب): با سرنگ یا پرکردن نواحی. نواحی: دیستولینگوال پایین و بالا (قالب اولیه)، نواحی <span class="en">rest</span> و روی دندان‌ها (قالب نهایی).</li>
+    <li>تری از یک طرف وارد، گونه کشیده شود؛ اول نواحی خلفی سپس قدامی (تا ماده به حلق نرود و اضافات قدام جمع شود).</li>
+    <li>ناحیهٔ لینگوالی فک پایین مهم ← زبان در فانکشن. تری ۳ تا ۵ دقیقه بدون حرکت؛ خروج با یک حرکت (حرکت چندتایی → خراب).</li>
+    <li>اگر تری یا مادهٔ بردرلمولد از ورای مادهٔ قالب مشخص بود ← <span class="en">overvextension</span> ← تکرار قالب.</li>
+  </ul>
+  </div>
+
+  <h3 class="sub">مدیریت رفلکس gag</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>راهکار</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>دارویی/مشاوره</th><td>داروهای کنترل‌کننده، مشاورهٔ روانشناسی، ارجاع به متخصص</td></tr>
+      <tr><th>وضعیت نشستن</th><td>وضعیت <b>عمودی</b> نشستن</td></tr>
+      <tr><th>میزان ماده</th><td>تری خیلی پر نشود (اندازهٔ مناسب = تا لبه‌های تری)</td></tr>
+      <tr><th>حواس‌پرتی</th><td>صحبت دربارهٔ موضوعات روز/خانواده، تکان‌دادن دست یا جابه‌جا کردن پا</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">نکات قالب آلژینات و ریختن کست</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>دو پدیدهٔ مخرب</th><td><span class="en">dehydration</span> (سینرژیسم = دفع آب) و <span class="en">imbibition</span> (جذب آب). هیچ‌کدام نباید در قالب آلژینات اتفاق بیفتد</td></tr>
+      <tr><th>نگهداری قالب</th><td>محیط <b>مرطوب</b> (نه پرآب نه خشک). دستمال مرطوب روی قالب نگذاریم؛ آن را در کیسهٔ نایلونی کنار دستمال مرطوب قرار دهیم</td></tr>
+      <tr><th>سینرژیسم</th><td>سولفات پتاسیم فرایند را به‌تعویق می‌اندازد و بزاق روی قالب را برمی‌دارد (در غیر این صورت سطح نرم روی کست)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">دو روش ریختن کست</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>روش</th><th>مراحل و نکات</th></tr></thead>
+    <tbody>
+      <tr><th>۱) بدون <span class="en">boxing</span></th><td>برداشتن حولهٔ مرطوب ← اول آب، بعد گچ (نسبت طبق کارخانه) ← کاسه روی ویبراتور ← از گوشهٔ قالب یک لایه واش ← ابتدا مناطق دندان‌دار، بعد سایر نواحی. بیس کست حداقل <b>۱.۵ میلی‌متر</b> در نازک‌ترین نقطه؛ گچ زیادی استفاده نشود (تریم راحت‌تر)</td></tr>
+      <tr><th>۲) با <span class="en">boxing</span></th><td>موم بیدینگ و باکسینگ: <b>۲-۳ میلی‌متر</b> از لبهٔ بردر فاصله، <b>۴-۵ میلی‌متر</b> بیرون؛ نسبت <b>۵۰-۵۰</b> گچ و پامیس؛ موم را قرار داده و گچ را روی ویبراتور آرام بریزید؛ بعد از ست و اتمام گرما جدا کنید؛ نگهداری در آب گرم. <b>با باکسینگ نیاز به تریم نیست</b> (دیواره‌ها عمود، بدون حباب، تمام آناتومیک ثبت)؛ این کست را می‌توان رکورد یا کست نهایی استفاده کرد</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn"><span class="t">land area / art portion</span>
+  برای داشتن قسمت آناتومیک، <span class="en">land area</span> یا <span class="en">art portion</span> مهم است؛ حتماً به لابراتوار تأکید کنید که این وضعیت وجود داشته باشد، وگرنه تمام بردرلمولدها بی‌نتیجه می‌ماند.</div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۴ (مواد قالبگیری)</h3>
+    <ul>
+      <li>۴ دسته: <b>rigid</b> (گچ/اکسید روی)، <b>ترموپلاستیک</b> (کامپاند/موم)، <b>الاستومر</b> (هیدروکلوئید)، <b>رابربیس</b> (پلی‌سولفاید/پلی‌اتر/سیلیکون).</li>
+      <li>rigid در پارسیل بدلیل دندان ممنوع → فقط altered cast / کامل / ریلاین end free.</li>
+      <li>آگار-آگار: نیاز تجهیزات + می‌سوزاند. آلژینات: ریختن فوری / تا ۱۵دقیقه در رطوبت.</li>
+      <li>پلی‌سولفاید: ضخامت دقیق <b>۳mm</b>، ریختن تا ۱۵دقیقه. پلی‌اتر: working/setting کوتاه، با افزایشی ناسازگار. سیلیکون افزایشی: جدیدترین، با لاتکس/نخ زیرلبه‌دار تداخل.</li>
+      <li><b>tissue stop:</b> فک پایین ۱ قدامی + ۲ خلفی؛ فک بالا ۱ عدد. اصلاح بردر حداکثر <b>۲-۴mm</b>.</li>
+      <li>block out با موم مرده؛ over load = gag؛ prepacking برای بدون حباب؛ ورود از خلف به قدام.</li>
+      <li>آلژینات: نه dehydration نه imbibition → رطوبت متعادل، ریختن فوری. باکسینگ → بدون نیاز به تریم. land area/art portion را به لابراتوار تأکید کنید.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ===================== LECTURE 5 ===================== -->
+<section class="lec" id="l5">
+  <div class="lec-head">
+    <div class="badge">۵</div>
+    <h2>بیس‌های دیستال‌اکستنشن و تکنیک Altered Cast
+      <span class="src">فصل ۱۷ مک‌کراکن ۲۰۱۷</span>
+    </h2>
+  </div>
+
+  <h3 class="sub">شش عامل مؤثر بر ساپورت در distal extension</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>عوامل ساپورت در انتهای آزاد</caption>
+    <thead><tr><th>#</th><th>عامل</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>۱</th><td>کانتور و کیفیت ریج باقیمانده</td><td>تقسیم به PSBA / SSBA / NSBA (جدول زیر)</td></tr>
+      <tr><th>۲</th><td>میزان پوشش ریج توسط بیس</td><td>هرچه پوشش بیشتر، بهتر و انتقال نیرو بهتر</td></tr>
+      <tr><th>۳</th><td>دقت و نوع قالبگیری</td><td>آناتومیک یا فانکشنال</td></tr>
+      <tr><th>۴</th><td>فیت بیس نسبت به بافت زیرین</td><td>—</td></tr>
+      <tr><th>۵</th><td>طراحی پروتز (فریمورک)</td><td>محل رست</td></tr>
+      <tr><th>۶</th><td><span class="en">Load</span> کلی واردشده</td><td>تعداد دندان مصنوعی، عرض، کارایی اکلوزالی</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">۱) تقسیم‌بندی نواحی ریج بر اساس تحمل فشار</h4>
+  <div class="tbl-scroll">
+  <table>
+    <caption>PSBA / SSBA / NSBA در فک بالا و پایین</caption>
+    <thead><tr><th>ناحیه</th><th>نماد روی کست</th><th>فک پایین</th><th>فک بالا</th></tr></thead>
+    <tbody>
+      <tr><th><span class="en">PSBA</span><br>(ناحیهٔ فشارپذیر اولیه)</th><td>خطوط هاشورخورده</td><td>باکال شلف و ناحیهٔ شیب باکال</td><td>قلهٔ ریج</td></tr>
+      <tr><th><span class="en">SSBA</span><br>(ثانویه)</th><td>چهارخانه</td><td>شیب‌های لینگوالی</td><td>شیب‌های باکالی و پالاتالی</td></tr>
+      <tr><th><span class="en">NSBA</span><br>(هیچ فشاری نباید بیاید — ریلیف می‌شود)</th><td>نقطه‌نقطه</td><td>قلهٔ ریج</td><td>پاپی ثنایایی و رافهٔ میانی</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">۳) نوع قالبگیری: آناتومیک در برابر فانکشنال</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>نوع</th><th>تعریف</th></tr></thead>
+    <tbody>
+      <tr><th>آناتومیک</th><td>در حالتی که هیچ بار اکلوزالی روی آن نیست</td></tr>
+      <tr><th>فانکشنال (فیزیولوژیک)</th><td>بار اکلوزالی وجود دارد</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box note"><span class="t">شرایط لازم برای ثبت فانکشنال/فیزیولوژیک</span>
+  <ul class="clean">
+    <li>a) رست‌های اکلوزالی خوب</li>
+    <li>b) فریمورک <span class="en">rigid</span></li>
+    <li>c) <span class="en">Indirect retainer</span> خوب</li>
+    <li>d) پوشش کافی بیس روی ریج</li>
+  </ul>
+  <b>۳ فاکتوری که می‌تواند بافت را آزرده و distort کند</b> (و باید رعایت شود تا قالب خوب باشد): ۱) فاصلهٔ کمِ موجود ۲) فشار زیاد مادهٔ قالبگیری ۳) ویسکوزیتهٔ زیاد ماده.</div>
+
+  <h4 class="sub2">۵ و ۶) طراحی فریمورک و Load</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>عامل</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>محل رست</th><td>هرچه رست به ناحیهٔ قدامی‌تر نزدیک شود، میزان بیشتری از ریج را ساپورت می‌کند و جلوی <span class="en">rotation</span> را می‌گیرد ← تا می‌توانیم رست را قدامی‌تر منتقل کنیم</td></tr>
+      <tr><th>عوامل <span class="en">Load</span></th><td>a) تعداد دندان‌های مصنوعی (بیشتر ← load بیشتر) b) عرض آنها (سطح اکلوزال) c) کارایی اکلوزالی سطح جونده</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">قالبگیری آناتومیک و فانکشنال — مراحل</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>روند تا ساخت تری اختصاصی و قالب نهایی</caption>
+    <thead><tr><th>مرحله</th><th>جزئیات</th></tr></thead>
+    <tbody>
+      <tr><th>تری استوک</th><td>فلزی یا پلاستیکی؛ باید سوراخ کافی برای گیر ماده داشته باشد یا از چسب استفاده شود. تری ویژهٔ پارسیل (بی‌دندانی + دندانی) به‌دلیل تنوع کلاس‌بندی معمولاً توصیه نمی‌شود</td></tr>
+      <tr><th>مادهٔ قالب اولیه</th><td><b>آلژینات</b>؛ در نواحی بی‌دندانی می‌توان ابتدا مادهٔ دیگری گذاشت و سپس مادهٔ نهایی را روی آن</td></tr>
+      <tr><th>ریختن کست</th><td>معمولاً با <span class="en">type 4</span></td></tr>
+      <tr><th><span class="en">spacer</span></th><td>روی کست موم گذاشته می‌شود: روی دندان‌ها یک لایه + روی همهٔ نواحی که تری می‌آید یک لایهٔ دیگر</td></tr>
+      <tr><th>آکریل تری</th><td><span class="en">VLC</span> (ورقه‌ای) یا <span class="en">self-cure</span> (پودر + مایع مخلوط)</td></tr>
+      <tr><th>قالب نهایی</th><td>با تری اختصاصی؛ مواد می‌تواند rigid (گچ، خمیر فلزی)، ترموپلاستیک (کامپاند، موم)، الاستومر (هیدروکلوئید، پلی‌سولفاید، پلی‌اتر، سیلیکون افزایشی/تراکمی) باشد</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip"><span class="t">تفاوت آناتومیک و فیزیولوژیک</span>
+  تا اینجا روش آناتومیک و فیزیولوژیک <b>یکسان</b> هستند. برای رفتن به‌سمت فیزیولوژیک باید ثبت ناحیهٔ دندانی و ناحیهٔ غیردندانی (بافت‌ها) از هم <b>متفاوت</b> باشد. سؤال متداول: «با وجود ایمپلنت آیا پارسیل لازم است؟» بله؛ همه شرایط ایمپلنت را ندارند (عوامل آناتومیک، سیستمیک، اقتصادی، زمان) و پارسیل با اصول کلی‌اش پابرجاست (و امروزه می‌توان در پارسیل هم از ایمپلنت استفاده کرد).</div>
+
+  <h3 class="sub">تکنیک Altered Cast</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تعریف، اهداف و اندیکاسیون‌ها</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>نام‌های دیگر</th><td><span class="en">Corrected cast</span> / <span class="en">Modified cast</span></td></tr>
+      <tr><th>تعریف</th><td>روشی که نیرو را به‌صورت مساوی بین دندان‌ها و بافت‌ها پخش می‌کند</td></tr>
+      <tr><th>اهداف</th><td>۱) تطابق بهتر پارسیل با بافت زیرین ۲) استفادهٔ حداکثری از کانتورهای دنچر ۳) به‌تعادل رساندن استرس‌های بین ریج و اباتمنت</td></tr>
+      <tr><th>اندیکاسیون‌ها</th><td>۱) فک پایین کلاس ۱ یا ۲ (دیستال اکستنشن‌های فک پایین) ۲) نواحی بی‌دندانی کاملاً گسترده ۳) هر ناحیهٔ نیازمند اصلاح ۴) در فک بالا کمتر استفاده می‌شود</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">مراحل ساخت Altered Cast</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>مرحله</th><th>جزئیات</th></tr></thead>
+    <tbody>
+      <tr><th>۱) طراحی و <span class="en">Frame work</span></th><td>طبق پروسه طراحی، فریم‌ورک ساخته می‌شود. روی کست باید <span class="en">stable</span> باشد، رست‌ها و بازوها در محل، و هنگام ساخت باید یک <span class="en">tissue stop</span> بافتی داشته باشیم (استاپ‌های بافتی در هر دو طرف مشخص). امتحان با اسپری (بهتر از واش) یا واش؛ اصلاح با فرز کارباید</td></tr>
+      <tr><th>۲) ساخت تری (<span class="en">Tray fabrication</span>)</th><td>—</td></tr>
+      <tr><th>۳) قالبگیری (<span class="en">Impression</span>)</th><td>—</td></tr>
+      <tr><th>۴) ریختن گچ (<span class="en">Casting</span>)</th><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">بررسی فریم: Seating و Peripheries</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>بررسی</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th><span class="en">Check seating</span> (روی کست و در دهان)</th><td>رست، <span class="en">tissue stop</span> و مسیر نشست‌وبرخاست فریم را امتحان می‌کنیم</td></tr>
+      <tr><th><span class="en">Check peripheries</span> (داخل دهان)</th><td>میزان حرکت بافت‌ها در نواحی فرنوم و زبان را امتحان می‌کنیم: ۱) گونه، لب و زبان در شرایط <span class="en">stable</span> ۲) عدم تداخل با بردرها ۳) فاصلهٔ کافی برای <span class="en">border mold</span> (شرایط تری پارسیل مانند پروتز کامل است)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">Impression Technique (روش قالبگیری Altered Cast)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>مرحله</th><th>جزئیات</th></tr></thead>
+    <tbody>
+      <tr><th>ساخت تری</th><td>فضای کافی برای ماده: معمولاً <b>۱ میلی‌متر</b> کافی است (<span class="en">1mm wax relief</span>)</td></tr>
+      <tr><th><span class="en">Border mold</span></th><td>مثل پروتز کامل (<span class="en">Same as a denture</span>)</td></tr>
+      <tr><th><span class="en">Altered cast impression</span></th><td>ابتدا <span class="en">spacer</span> را برمی‌داریم و به همان ناحیه چسب می‌زنیم؛ مواد: سیلیکون افزایشی یا اکسیدهای فلزی (مثل <span class="en">ZOE</span>) فقط در همان ناحیه و بدون <span class="en">over load</span>. هیچ ماده‌ای در سایر نواحی (زیر رست‌ها، <span class="en">guide planes</span>، اتصال‌دهنده‌های اصلی) نباشد. تری در محل، انگشت روی رست‌ها، فریم در محل خودش، <b>هیچ فشاری به دیستال اکستنشن وارد نمی‌کنیم</b> ولی فانکشن‌های مربوطه انجام می‌شود</td></tr>
+      <tr><th><span class="en">Remove and inspect</span></th><td>نواحی زیرین تری نباید مشخص باشد — ماده فقط در تری — ماده کاملاً به تری چسبیده و در همه نواحی ست شده — بردرها و ناحیهٔ ریج کاملاً ثبت شده باشد</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 class="sub2">مراحل لابراتواری (Laboratory steps)</h4>
+  <div class="box note">
+  کست نهایی داریم که فریم روی آن ساخته شده. قسمت <span class="en">free-end</span> را سکشن داده و گچ آن ناحیه را برمی‌داریم؛ سپس نقاط گیردار (حفره یا اره‌ای) در گچ باقیمانده ایجاد می‌کنیم تا گچ جدید روی آن قرار بگیرد (بدون تداخل با کست). فریم را با موم چسب در محل صحیح ثابت می‌کنیم؛ <b>beading و boxing</b> انجام و گچ ریخته می‌شود ← کست نهایی.
+  <ul class="clean">
+    <li><span class="en">Section cast and place retentive grooves</span> + اطمینان از عدم تماس ماده با کست</li>
+    <li><span class="en">Sticky wax framework in place</span></li>
+    <li><span class="en">Box impression</span> + <span class="en">Seal retainer, major &amp; minor connector borders</span></li>
+    <li><span class="en">Pour new ridge areas in different color stone</span> (ریختن نواحی ریج جدید با گچ رنگ متفاوت)</li>
+  </ul>
+  </div>
+
+  <div class="box warn"><span class="t">مشکلات احتمالی تکنیک Altered Cast</span>
+  ۱) فریم موقع قالبگیری یا کستریزی <b>ننشیند</b> ← <span class="en">RPD</span> روی دندان‌ها و بافت‌ها فیت نمی‌شود — ۲) هنگام گچریزی گچ از قسمتی نشت کند و زیر فریم برود ← در آن قسمت <b>آرتیکولیشن نخواهیم داشت</b> — ۳) <span class="en">Premature contact</span>.<br>
+  <b>نکتهٔ مهم در تمام مراحل:</b> فریم باید سرجایش بنشیند.</div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۵ (Altered Cast)</h3>
+    <ul>
+      <li>۶ عامل ساپورت distal extension: کیفیت ریج، پوشش بیس، نوع قالب، فیت، طراحی، Load.</li>
+      <li><b>PSBA</b>: پایین=باکال شلف/شیب باکال، بالا=قلهٔ ریج. <b>NSBA</b> (ریلیف): پایین=قلهٔ ریج، بالا=پاپی ثنایایی و رافهٔ میانی.</li>
+      <li>رست را تا حد ممکن <b>قدامی‌تر</b> ببریم تا rotation کم و ساپورت بیشتر شود.</li>
+      <li>شرایط فانکشنال: رست خوب + فریم rigid + IR خوب + پوشش کافی. ۳ عامل آزردگی بافت: فاصلهٔ کم، فشار زیاد ماده، ویسکوزیتهٔ زیاد.</li>
+      <li><b>Altered cast</b> = Corrected/Modified cast؛ تقسیم مساویِ نیرو بین دندان و بافت. اندیکاسیون اصلی: <b>دیستال اکستنشن فک پایین (Cl I, II)</b>؛ در فک بالا کمتر.</li>
+      <li>۴ مرحله: طراحی/Frame → Tray → Impression → Casting. relief ماده = <b>1mm</b>.</li>
+      <li>حین قالب: هیچ فشاری به دیستال اکستنشن، ماده فقط ناحیهٔ ریج (نه زیر رست/guide plane/connector)، فانکشن انجام شود.</li>
+      <li>اصل طلایی: <b>فریم باید سرجایش بنشیند</b>؛ مشکلات = عدم نشست فریم، نشت گچ، premature contact.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ============ SECTION 6 ============ -->
+<section class="lec" id="l6">
+  <div class="lec-head">
+    <div class="badge">۶</div>
+    <h2>ثبت رابطهٔ فکی و اکلوژن در پروتز پارسیل
+      <span class="src">Jaw Relation Registration &amp; Occlusion — ترم ۹، گروه A</span>
+    </h2>
+  </div>
+
+  <div class="box note"><span class="t">نقطهٔ شروع</span>
+  بعد از قالبگیری نهایی (با آکریل یا <span class="en">altered cast</span>) ← کست نهایی ساخته می‌شود ← مانند پروتز کامل به سراغ <b>ثبت رابطهٔ فکی بالا و پایین</b> می‌رویم.</div>
+
+  <h3 class="sub">اهداف و وابستگی‌های ثبت رابطه</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>هدف از ایجاد رابطهٔ صحیح فک + عواملی که ثبت رابطه به آن وابسته است</caption>
+    <thead><tr><th>محور</th><th>موارد</th></tr></thead>
+    <tbody>
+      <tr><th>اهداف رابطهٔ صحیح فک</th><td>۱) رابطهٔ مناسب بافت نرم و سخت &nbsp;—&nbsp; ۲) ایجاد پروتزی <b>زیبا و کاربردی</b> برای بیمار</td></tr>
+      <tr><th>ثبت رابطهٔ فکین بستگی دارد به</th><td>۱) وضع اکلوژن &nbsp;—&nbsp; ۲) وضع دندان باقیمانده &nbsp;—&nbsp; ۳) وضع فک مقابل بیمار</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">تعریف اصطلاحات پایه</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مفاهیم کلیدی اکلوژن</caption>
+    <thead><tr><th>اصطلاح</th><th>تعریف</th></tr></thead>
+    <tbody>
+      <tr><th><span class="en">MI</span><br>(maximum intercuspation)</th><td>وقتی در حالت اکلوژن <b>عادتی</b> در حداکثر <span class="en">intercuspation</span> باشد.</td></tr>
+      <tr><th><span class="en">CO</span><br>(centric occlusion)</th><td>وقتی بیمار در حالت <span class="en">CR</span> قرار می‌گیرد و دهانش را می‌بندد، <b>اولین</b> جایی که دندان‌ها با هم تماس پیدا می‌کنند.</td></tr>
+      <tr><th><span class="en">CR</span><br>(centric relation)</th><td>رابطهٔ <b>استخوانی و فیزیولوژیک</b> بین فک بالا و پایین؛ طبیعی‌ترین، کم‌فشارترین، فوقانی و میانی‌ترین حالتی که کندیل نسبت به گلنوئید فوسا دارد.</td></tr>
+      <tr><th>موقعیت خارج‌مرکزی</th><td>حالتی که فک حرکت <b>پیش‌گرایی (پروتروژن)</b> به سمت جلو دارد.</td></tr>
+      <tr><th>حرکت طرفی</th><td>وقتی فک به سمت طرفین حرکت می‌کند.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">انواع اکلوژن (وضعیت دندان‌ها در CO/CR)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>۳ نوع اکلوژن و رفتار آن‌ها در حرکات طرفی و پیش‌گرایی</caption>
+    <thead><tr><th>نوع اکلوژن</th><th>مثال کاربرد</th><th>حرکت طرفی (Latrosion)</th><th>پیش‌گرایی</th><th>CO (مرکزی)</th></tr></thead>
+    <tbody>
+      <tr>
+        <th>۱) بالانس دوطرفه<br><span class="en">BALANCED BILATERAL</span></th>
+        <td>مثل پروتز کامل</td>
+        <td>وقتی فک به راست می‌رود، هم دندان‌های راست (کارگر) و هم چپ (غیرکارگر) تماس دارند و بالعکس</td>
+        <td>—</td>
+        <td>قدامی و خلفی هر دو تماس دارند</td>
+      </tr>
+      <tr>
+        <th>۲) بالانس یک‌طرفه<br><span class="en">uni-lateral group function</span></th>
+        <td>پروتز پارسیل و دندان‌های طبیعی</td>
+        <td>فقط سمت <b>کارگر</b> تماس دارد</td>
+        <td>قدامی‌ها تماس دارند، خلفی‌ها تماس <b>ندارند</b> (تماس خلفی ← اسپاسم عضلات بازکنندهٔ دهان)</td>
+        <td>بسته به وضعیت فکی؛ ممکن است فقط سانترال‌ها و لترال‌ها تماس داشته باشند</td>
+      </tr>
+      <tr>
+        <th>۳) محافظت متقابل<br><span class="en">mutually protected (canine rise)</span></th>
+        <td>دندان‌های طبیعی &nbsp;—&nbsp; <b>اکلوژن مطلوب ما</b></td>
+        <td>سمت کارگر فقط <b>کانین‌ها</b>؛ سمت غیرکارگر هیچ تماس خلفی نداریم</td>
+        <td>فقط قدامی‌ها تماس دارند، خلفی‌ها خیر</td>
+        <td>هم قدامی هم خلفی تماس دارند (تماس قدامی معمولاً <b>خفیف‌تر</b>)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip"><span class="t">قاعدهٔ ترید-آف</span>
+  هرچه تماس در <span class="en">CO</span> بیشتر باشد ← غذا خوردن راحت‌تر. هرچه تماس در اکلوژن <b>طرفی</b> بیشتر باشد ← نیروهای طرفی بیشتر ← <b>سایش بیشتر</b>.</div>
+
+  <h3 class="sub">CR یا CO؟ — تنظیم رابطه بر اساس دندان باقیمانده</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>چه موقع فک را در CR و چه موقع در CO چک کنیم</caption>
+    <thead><tr><th>وضعیت بیمار</th><th>اقدام</th></tr></thead>
+    <tbody>
+      <tr><th>استاپ خلفی دارد (دندان‌های خلفی بالا و پایین موجود)</th><td>فک را در حالت <b>CO</b> چک می‌کنیم</td></tr>
+      <tr><th>وضعیت نادرست مثل <span class="en">PREMATURITY</span> / بدون استاپ خلفی</th><td>در حالت <b>CR</b> چک می‌شود</td></tr>
+      <tr><th>پارسیل دارای اکلوژن (استاپ خلفی) + VD</th><td>احساس ثبت رابطه را <b>همان اکلوژن بیمار</b> می‌گذاریم و تماس یکنواخت قدامی-خلفی ایجاد می‌کنیم</td></tr>
+      <tr><th>بیمار اکلوژن ندارد</th><td>ابتدا <b>VD و CR</b> تعیین می‌شوند و بر اساس آن اکلوژن تنظیم می‌شود؛ اگر <span class="en">tooth-supported</span> هم باشد، تنظیم راحت‌تر است</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">تقسیم‌بندی کندی و نوع اکلوژن</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اکلوژن مناسب بر اساس کلاس کندی</caption>
+    <thead><tr><th>کلاس</th><th>فک بالا</th><th>فک پایین</th></tr></thead>
+    <tbody>
+      <tr><th>Cl I</th><td>چون کام را داریم ← <b>بالانس دوطرفه</b></td><td>چون حرکت داریم ← <span class="en">uni-lateral group function</span></td></tr>
+      <tr><th>Cl II</th><td><span class="en">uni-lateral group function</span></td><td><b>بالانس دوطرفه</b></td></tr>
+      <tr><th>Cl III</th><td colspan="2">بر اساس اکلوژن دندان موجود و رابطهٔ دندان‌های مجاور و مقابل ← خیلی راحت قابل انجام</td></tr>
+      <tr><th>یک فک کامل + فک دیگر پارسیل</th><td colspan="2">حالت اکلوژنی <span class="en">bi-lateral balance</span> می‌شود</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">روش چک کردن اکلوژن + عواقب تداخل</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>روش بررسی و عوارض تداخلات اکلوزالی</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>روش چک</th><td>ابتدا در <b>CO</b> با کاغذ کاربن <b>یک رنگ</b> گایدلاین می‌سازیم و چک می‌کنیم؛ سپس فک را به طرف دیگر می‌بریم و با <b>رنگ دوم</b> چک می‌کنیم و تداخلات رنگ دوم را رفع می‌کنیم.</td></tr>
+      <tr><th>تداخلات اکلوزالی باعث می‌شوند</th><td>۱) سایش دندانی &nbsp;—&nbsp; ۲) از بین رفتن ساپورت پریودنتال &nbsp;—&nbsp; ۳) ایجاد ترک‌های دندانی &nbsp;—&nbsp; ۴) پالپایتیس و حساسیت دندانی &nbsp;←&nbsp; باید <b>زودتر رفع</b> شوند.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">بُعد عمودی (VD): عوامل تعیین، از بین رفتن و تغییر</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>عوامل مؤثر در تعیین VD</caption>
+    <thead><tr><th>عامل</th><th>جزئیات</th></tr></thead>
+    <tbody>
+      <tr><th>۱) راحتی بیمار</th><td>—</td></tr>
+      <tr><th>۲) زیبایی</th><td><b>داخل‌دهانی:</b> میزان مشخص بودن دندان‌ها در وضع لبخند.<br><b>خارج‌دهانی:</b> تناسب یک‌سوم‌های صورتی: (۱) محل رویش مو تا ابرو (۲) ابرو تا بینی (۳) بینی تا چانه. در افراد بی‌دندان یک‌سوم تحتانی کم می‌شود ← باید آن‌ها را با هم <b>برابر</b> کنیم.</td></tr>
+      <tr><th>۳) تلفظ</th><td>در هر حالت تلفظ، بیمار باید <span class="en">free-way space</span> داشته باشد؛ یعنی وقتی لب‌ها روی هم‌اند باید فاصلهٔ <span class="en">VDO</span> و <span class="en">VDR</span> وجود داشته باشد.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <caption>VDO در برابر VDR + از بین رفتن VD</caption>
+    <thead><tr><th>مفهوم</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th><span class="en">VDO</span></th><td>بر اساس <b>اکلوژنی</b> که در دنچر پارسیل، دندان طبیعی و... است، تعیین می‌شود.</td></tr>
+      <tr><th><span class="en">VDR</span></th><td>بر اساس <b>زیبایی، تلفظ و راحتی</b> بیمار تعیین می‌شود.</td></tr>
+      <tr><th>ثبت VD</th><td>بیمار باید کاملاً عمود و <span class="en">Upright</span> نشسته باشد و هیچ تکیه‌گاه سر نداشته باشد تا فک به‌درستی در حالت <b>CR</b> برود.</td></tr>
+      <tr><th>VD چه موقع از بین می‌رود؟</th><td>۱) از دست رفتن دندان‌ها &nbsp;—&nbsp; ۲) سایش دندانی &nbsp;—&nbsp; ۳) از دست رفتن یک‌سوم‌های صورتی</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn"><span class="t">قواعد تغییر VD</span>
+  ۱) احساس راحتی بیمار &nbsp;—&nbsp; ۲) رعایت <b>۲ تا ۴ میلی‌متر</b> <span class="en">free-way space</span> (مثلاً اگر ۲ میلی‌متر فضا بین سانترال‌های بالا و پایین در حالت رست داریم، دیگر <b>حق اضافه‌کردن به ارتفاع دندان‌ها را نداریم</b>) &nbsp;—&nbsp; ۳) اگر VD را افزایش دهیم، اول باید شرایط بیمار را در آن VD چک کنیم تا با <span class="en">premature contact</span>، شکستن ترمیم دندانی، از دست رفتن ساپورت پریودنتال و نازیبایی مواجه نشویم.<br>
+  <b>پروتز موقتی:</b> باید هر روز ۲۴ ساعت، طی ۱ تا ۳ ماه استفاده شود.</div>
+
+  <h3 class="sub">ثبت CR + رکورد بیس + وکس‌ریم</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>روش‌های هدایت فک به CR و ساخت رکورد بیس</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>اصل ثبت CR</th><td>فک پایین به سمت وضعیت فیزیولوژیک هدایت می‌شود (کندیل در فوقانی-میانی‌ترین حالت نسبت به گلنوئید فوسا).</td></tr>
+      <tr><th>۱) مانور یک‌دستی</th><td>فک پایین با یک دست به سمت <b>خلف و بالا</b> هدایت می‌شود.</td></tr>
+      <tr><th>۲) مانور دو‌دستی</th><td>با یک دست فک بالا را گرفته و با دست دیگر فک پایین را هدایت می‌کنیم.</td></tr>
+      <tr><th>۳) مانور داپسون</th><td>در بیمارانی که دندان طبیعی دارند.</td></tr>
+      <tr><th>دقیق‌ترین راه (استاپ خلفی)</th><td><span class="en">hand articulation</span>: با دست، کست بالا و پایین روی هم مانت می‌شوند. ولی در <b>Cl I یا Cl II این امکان نیست</b>.</td></tr>
+      <tr><th>Cl I / Cl II</th><td>ابتدا باید <b>رکورد بیس</b> ساخته شود (<span class="en">self-cure</span> یا <span class="en">light-cure</span>؛ لایت‌کیورها مثل ورق‌های موم‌اند که روی کست شکل می‌گیرند و داخل <span class="en">oven</span> کیور می‌شوند).</td></tr>
+      <tr><th>پالیش رکورد بیس</th><td>سمت <b>داخلی</b> (تماس با بافت) باید پالیش شود تا ناراحتی بافتی نباشد؛ سمت <b>خارجی</b> (جایی که دندان‌ها هستند) <b>نباید</b> پالیش شود تا وکس‌ریم به آن بچسبد.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اکستنشن وکس‌ریم بر حسب ناحیه</caption>
+    <thead><tr><th>ناحیه</th><th>میزان اکستنشن</th></tr></thead>
+    <tbody>
+      <tr><th>نواحی tooth-supported</th><td>تا <b>مارجینال ریج</b> دندان‌های مجاور</td></tr>
+      <tr><th>بی‌دندانی فک بالا</th><td>تا محل <b>توبروزیته</b> و پلن <b>موازی ریج</b></td></tr>
+      <tr><th>بی‌دندانی فک پایین</th><td>تا <b>۱/۳ ارتفاع رترومولار پد</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">مواد ثبت رابطه</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مقایسهٔ مواد ثبت رابطهٔ فکی</caption>
+    <thead><tr><th>ماده</th><th>دقت</th><th>تکنیک / نکته</th></tr></thead>
+    <tbody>
+      <tr><th>موم</th><td>حداقل</td><td>راحت و ارزان</td></tr>
+      <tr><th>کامپاند</th><td>بالاتر از موم</td><td>—</td></tr>
+      <tr><th>اکسید روی فلزی (<span class="en">ZOE</span>)</th><td>دقیق</td><td>تکنیک <b>سخت</b></td></tr>
+      <tr><th>الاستومری</th><td>دقیق</td><td>تکنیک راحت؛ ضخامت باید <b>&gt;۲ میلی‌متر</b> باشد؛ بعد از سخت‌شدن <b>ریسک شکستن بالا</b></td></tr>
+      <tr><th>گچ</th><td>—</td><td>امروز <b>استفاده نمی‌شود</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۶ (رابطهٔ فکی و اکلوژن)</h3>
+    <ul>
+      <li>اهداف رابطهٔ فکی: رابطهٔ مناسب بافت نرم/سخت + پروتز زیبا و کاربردی. وابسته به: اکلوژن، دندان باقیمانده، فک مقابل.</li>
+      <li><b>تعاریف:</b> MI=اکلوژن عادتی؛ CO=اولین تماس در بستن از CR؛ CR=رابطهٔ استخوانی/فیزیولوژیک (کندیل فوقانی-میانی).</li>
+      <li><b>۳ اکلوژن:</b> بالانس دوطرفه (مثل کامل) / بالانس یک‌طرفه (پارسیل؛ خلفی نباید تماس کند ← اسپاسم) / محافظت متقابل = canine rise = <b>مطلوب</b>.</li>
+      <li>استاپ خلفی ← چک <b>CO</b>؛ prematurity/بدون استاپ خلفی ← چک <b>CR</b>.</li>
+      <li><b>کندی:</b> Cl I بالا=بالانس دوطرفه، پایین=یک‌طرفه؛ Cl II بالا=یک‌طرفه، پایین=بالانس دوطرفه؛ یک فک کامل+پارسیل=bilateral balance.</li>
+      <li>تداخل اکلوزالی ← سایش، از بین رفتن ساپورت پریو، ترک، پالپایتیس ← زودتر رفع.</li>
+      <li><b>VD:</b> راحتی + زیبایی (یک‌سوم‌های صورتی) + تلفظ. <b>VDO</b>=اکلوژن، <b>VDR</b>=زیبایی/تلفظ/راحتی. ثبت در حالت <b>Upright</b>. Free-way space <b>۲–۴mm</b>.</li>
+      <li><b>CR:</b> مانور یک‌دستی/دودستی/داپسون. استاپ خلفی ← hand articulation دقیق‌ترین؛ Cl I/II ← رکورد بیس لازم.</li>
+      <li>رکورد بیس: سمت بافتی پالیش، سمت دندانی پالیش نشود. وکس‌ریم: tooth-supported تا مارجینال ریج / بالا تا توبروزیته / پایین تا ۱/۳ رترومولار پد.</li>
+      <li><b>مواد ثبت:</b> موم (کمترین دقت) &lt; کامپاند &lt; ZOE (دقیق، سخت) و الاستومر (دقیق، راحت، &gt;۲mm، شکنندگی بالا). گچ منسوخ.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ============ SECTION 7 ============ -->
+<section class="lec" id="l7">
+  <div class="lec-head">
+    <div class="badge">۷</div>
+    <h2>انتخاب و چیدن دندان، Try-in، تحویل و بهداشت
+      <span class="src">Tooth Selection / Setup / Try-in / Delivery — ورودی مهر ۱۴۰۰</span>
+    </h2>
+  </div>
+
+  <div class="box note"><span class="t">نقطهٔ شروع</span>
+  در جلسه‌ای که رابطه گرفته‌ایم، یعنی <b>قدامی-خلفی (A-P)، VD، ساپورت و میدلاین</b> همه اندازه‌گیری شده‌اند. <b>قبل از رفتن بیمار</b>: تعیین نوع، رنگ و مولد دندان.</div>
+
+  <h3 class="sub">انتخاب دندان: رنگ، اندازه، مولد</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>پارامترهای انتخاب دندان مصنوعی</caption>
+    <thead><tr><th>پارامتر</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>رنگ</th><td>بر اساس شماره‌بندی <b>هیو (hue)، Value و کروما (chroma)</b>. پروتز کامل ← دست بازتر؛ هرچه دندان بیشتری بازسازی شود ← انتخاب بازتر. رنگ در <b>کارایی</b> اثری ندارد، فقط <b>ظاهر</b>.</td></tr>
+      <tr><th>اندازه</th><td>چند <b>کد روی دندان‌ها</b> نوشته شده که نشان‌دهندهٔ اندازه است.</td></tr>
+      <tr><th>مولد (قوس چیدن)</th><td><b>مثلثی</b>: سانترال‌ها و کانین‌ها بیشترین فاصله را دارند &nbsp;—&nbsp; <b>مربعی</b>: در یک خط صاف &nbsp;—&nbsp; <b>حد واسط</b>: حالت بیضی. انتخاب بر اساس <b>کاتالوگ</b>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">جنس دندان مصنوعی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مقایسهٔ پرسلن، آکریل و کامپوزیت</caption>
+    <thead><tr><th>جنس</th><th>سایش</th><th>لب‌پریدگی (chip)</th><th>فشار به بافت زیرین</th><th>نکات</th></tr></thead>
+    <tbody>
+      <tr><th>پرسلنی</th><td>کم</td><td>دارد (لب‌پر می‌شود؛ در برخورد صدا می‌دهد مثل دو کاسهٔ چینی)</td><td><b>بیشتر</b> ← روی ریج تحلیل‌رفته استفاده نمی‌شود</td><td>استحکام بیشتر؛ امروزه فقط وقتی فک مقابل پرسلن باشد (باید مشابه فک مقابل باشد).</td></tr>
+      <tr><th>آکریلی</th><td>بیشتر</td><td>ندارد</td><td>کمتر</td><td>—</td></tr>
+      <tr><th>کامپوزیتی</th><td>بیشتر</td><td>ندارد</td><td>کمتر</td><td>به دندان طبیعی <b>نزدیک‌تر</b>، ادجاست <b>راحت‌تر</b>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip"><span class="t">نکته دربارهٔ پخت</span>هرچه پخت دندان بیشتر باشد ← <b>استحکام بالاتر</b> و احتمال <b>تغییر رنگ پایین‌تر</b>.</div>
+
+  <h3 class="sub">ساخت رابطه و فریم در ناحیهٔ بی‌دندانی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>روش‌های گرفتن رابطه و شکل فریم</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>روش گرفتن رابطه</th><td>(۱) با بیس آکریلی (سلف‌کیور یا لایت‌کیور)، بعد فریم قرار بگیرد &nbsp;—&nbsp; (۲) طبق قالب فریم ساخته و روی فریم وکس قرار داده و رابطه می‌گیریم (<b>معمولاً روش دوم</b>).</td></tr>
+      <tr><th>شکل فریم در بی‌دندانی</th><td><b>مشبک</b> (mesh)، <b>نردبانی</b> (ladder)، یا <b>کاملاً فلزی</b>.</td></tr>
+      <tr><th>عیب کاملاً فلزی</th><td>آکریل به‌خوبی نمی‌چسبد ← فقط وقتی احتمال تغییرات بافتی کم است (یعنی <span class="en">tooth-supported</span> و نه <span class="en">free end</span>). در <span class="en">free end</span> دستمان برای ریلاین باز است.</td></tr>
+      <tr><th>مشبک یا نردبانی؟</th><td><b>نردبانی بهتر</b> است (فضای بیشتر برای چیدن دندان، ریلاین راحت‌تر).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <caption>بیس فلزی در برابر بیس آکریلی</caption>
+    <thead><tr><th>ویژگی</th><th>بیس فلزی</th><th>بیس آکریلی</th></tr></thead>
+    <tbody>
+      <tr><th>استحکام</th><td>بیشتر</td><td>کمتر</td></tr>
+      <tr><th>احتمال ریلاین</th><td>کمتر (اگر تمام‌فلز)</td><td>بیشتر</td></tr>
+      <tr><th>وزن</th><td>بیشتر</td><td>کمتر (سبک‌تر)</td></tr>
+      <tr><th>رسانایی حرارتی</th><td>بیشتر</td><td>کمتر</td></tr>
+      <tr><th>بهداشت</th><td>بهتر</td><td>گیر پلاک بیشتر</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn"><span class="t">پالیش آکریل</span>
+  هم سطح خارجی و هم سطح بافتی باید پالیش شود. سطح خارجی تا حدی که <b>برق بزند</b>؛ سطح داخلی به این حد نیاز ندارد و باید <b>فیتنس</b> با بافت زیرین حفظ شود.</div>
+
+  <h3 class="sub">باند دندان به بیس + دندان فلزی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اتصال دندان به بیس</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>کدام دندان بهتر باند می‌شود؟</th><td><b>آکریلی و کامپوزیتی</b>؛ در <b>پرسلنی</b> احتمال جدا شدن از بیس بیشتر است.</td></tr>
+      <tr><th>اتصال فریم به دندان</th><td>فریم زائده‌هایی دارد که درون دندان <b>سمان</b> می‌شوند. وقتی فریم را وکس‌آپ می‌کنیم، دندان روی زائده‌ها با سمان یا آکریل وصل می‌شود.</td></tr>
+      <tr><th>فضای کم</th><td>بیس فلزی قسمت بیشتری از دنچر را تشکیل می‌دهد؛ دندان خلفی می‌تواند فلزی (بخشی از فریم) باشد.</td></tr>
+      <tr><th>دندان فلزی</th><td>عیب: مشکل <b>زیبایی</b>؛ معمولاً نواحی <b>خلفی</b>. می‌توان قسمت باکال آن را با کامپوزیت/آکریل <b>ونیر</b> کرد.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">جلسهٔ Try-in: نکات بررسی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مواردی که هنگام امتحان (try-in) بررسی می‌شود</caption>
+    <thead><tr><th>مورد</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>میدلاین</th><td>تطابق میدلاین فک بالا و پایین <b>مهم نیست</b>؛ تطابق میدلاین <b>فک بالا و صورت</b> مهم است. عدم تطابق ۱–۲ میلی‌متر اگر زوایا و نسبت‌ها درست و از نظر استتیک قابل قبول باشد، ایرادی ندارد.</td></tr>
+      <tr><th>ساپورت لب</th><td>در آقایان <b>بیشتر</b> است. زاویهٔ <b>گلابلا-فیلتروم</b> در آقایان <b>کمتر</b> است.</td></tr>
+      <tr><th>خط لبخند</th><td><span class="en">smile line</span> را نسبت به <b>پلن آلاتراگوس</b> در نظر می‌گیریم.</td></tr>
+      <tr><th>VD و اکلوژن</th><td>اصلاحات، رابطهٔ VD و روابط اکلوژنی در همین جلسه بررسی می‌شوند. اگر VD زیاد باشد ← موقع صحبت دندان‌ها بهم می‌خورند و <span class="en">free-way space</span> کم است.</td></tr>
+      <tr><th>مشارکت بیمار</th><td>دندان را در <b>آینه</b> به بیمار نشان می‌دهیم؛ بیمار باید ببیند و صاحب‌نظر باشد، چون بعد از این مرحله تغییر مشکل است. هر نظری را می‌شنویم؛ اگر ممکن بود انجام، اگر نه توضیح می‌دهیم.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">جلسهٔ تحویل (Delivery) — مهم‌ترین جلسه</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>بررسی روی کست قبل از تحویل + اقدامات تحویل</caption>
+    <thead><tr><th>مرحله</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>بررسی روی کست (قبل از تحویل)</th><td>دندان‌ها سر جای خود — رنگ و لعاب درست — رنگ آکریل درست — کلاسپ‌ها سر جای خود — بدون شکستگی و تیزی — بررسی هر دو سطح خارجی و بافتی (با چشم؛ در غیر این صورت با <b>لوپ/میکروسکوپ</b>).</td></tr>
+      <tr><th>تنظیم نهایی</th><td>تنظیم بیس و اکلوژن ← تحویل پروتز.</td></tr>
+      <tr><th>تفاوت پارسیل با کامل</th><td>پارسیل <b>کلاسپ</b> دارد و باید تنظیم شوند تا گیر پروتز پارسیل برقرار شود.</td></tr>
+      <tr><th>پس از تحویل</th><td>دستورات مراقبت + تنظیم جلسهٔ مراجعهٔ مجدد. هرچه سطح صاف‌تر ← <b>fitness بهتر، sore spot کمتر، گیر پلاک کمتر، بهداشت بهتر</b>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">بررسی بوردر و تنظیم سطح بافتی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>بررسی بوردر، سطح بافتی و الگوهای PIP</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>بررسی بوردر</th><td>۱) چشمی &nbsp;—&nbsp; ۲) فانکشن بوردر مولد. پروتز متحرک روی <b>بافت ثابت</b> می‌نشیند؛ اگر با فانکشن حرکت کرد یعنی در جای نادرست است. از مواد <b>شل‌قوام</b> (واش، آلژینات شل) استفاده می‌کنیم؛ هرجا زیر ماده مشخص شد ← ادجاست تا تکان نخورد. (موم‌های آشکارکننده قدیمی‌اند و امروز کاربرد ندارند.)</td></tr>
+      <tr><th>تنظیم سطح بافتی (PIP)</th><td>بهترین ماده <span class="en">PIP</span> (خمیری که فشار را نشان می‌دهد). ۳ الگو: (۱) هیچ تغییری نکرده = اصلاً تماس ندارد &nbsp;—&nbsp; (۲) آکریل از زیر مشخص = تماس بیش از حد، باید ادجاست شود &nbsp;—&nbsp; (۳) خطوط موازی = تماس مناسب.</td></tr>
+      <tr><th>نواحی حساس (آزادی عمل کامل)</th><td><b>دیستوباکال بالا، دیستولینگوال پایین، فرنوم‌ها</b>.</td></tr>
+      <tr><th>عدم حالت الاکلنگی</th><td>پروتز نباید حالت الاکلنگی داشته باشد. از بیمار می‌پرسیم آیا جایی اذیت‌کننده است؟</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box note"><span class="t">شکایت نقطه‌ای بیمار</span>
+  اگر بیمار از <b>نقطه‌ای</b> شکایت دارد، در <b>۹۹٪</b> موارد درست می‌گوید؛ اگر ما متوجه نشویم، مشکل از مواد/تجهیزات/روش ماست. «قلمبه‌سلمبگی» مهم نیست (طبیعی است و به‌مرور درست می‌شود)، ولی اگر جایی تحت <b>فشار یا زخم</b> باشد، حق با بیمار است و باید اصلاح شود.</div>
+
+  <h3 class="sub">تنظیم اکلوژن (Occlusion adjustment)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>روش‌ها و ابزار تنظیم اکلوژن</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>چشم گاو (bull's eye)</th><td>وقتی کاربن علامت می‌زند، سطح خارجی <b>رنگی</b> و داخل <b>سفید</b> است؛ در قسمت سفید مرکزی <span class="en">prematurity</span> داریم و از آنجا باید اصلاح شود.</td></tr>
+      <tr><th>کدام فک اول؟</th><td>اگر ۲ پارسیل داشته باشیم، اول دنچر <span class="en">tooth-supported</span> (احتمال اکلوژن بیشتر)، سپس پارسیل <span class="en">free end</span>.</td></tr>
+      <tr><th>کاغذ کاربن (بهترین)</th><td>سطح رنگ‌دهندهٔ کاربن را با <b>نوار چسب شفاف یا چسب کارتنی قهوه‌ای</b> می‌زنیم ← استحکام بیشتر، راحت‌تر دست‌گرفتن، علامت بیشتر. <b>کاربن‌گیر (فورسپس)</b> برای گرفتن کاربن.</td></tr>
+      <tr><th>ضخامت کاربن</th><td>۴ تا ۱۲۰ میکرون؛ هرچه ضخیم‌تر ← prematurity بیشتری نشان می‌دهد. برای فاصلهٔ بیشتر در حرکات طرفی از کاربن ضخیم‌تر، ولی احتمال خطا بالا می‌رود. موم و مواد دیگر هم قابل استفاده.</td></tr>
+      <tr><th>استتیک</th><td>بررسی اصلی در جلسهٔ قبل بود؛ ولی اگر دندان‌های قدامی در طرح درمان‌اند باید بررسی شوند.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">روش‌های بهداشت و فالوآپ</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>بهداشت پروتز و برنامهٔ مراجعه</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>استراحت بافت</th><td>پروتز متحرک همیشه نیاز به استراحت دارد؛ بافت‌های لثه‌ای باید <b>۶–۸ ساعت در روز</b> استراحت کنند.</td></tr>
+      <tr><th>نگهداری</th><td>در گذشته در آب؛ امروزه خیلی ضروری نیست. می‌تواند در <b>کلرهگزیدین</b> یا <b>قرص‌های تمیزکنندهٔ دنچر</b> قرار گیرد.</td></tr>
+      <tr><th>مسواک</th><td><b>بدون خمیردندان</b> (خمیر باعث سایش می‌شود)؛ به جای آن می‌توان از مایع دستشویی استفاده کرد.</td></tr>
+      <tr><th>فالوآپ ۲۴–۴۸ ساعت</th><td>بسیار مهم؛ مشکلات بیمار رفع و ایرادات کار مشخص می‌شود.</td></tr>
+      <tr><th>جویدن و تکلم</th><td>دربارهٔ جویدن چیزی قول نمی‌دهیم؛ اگر مشکل بود خود بیمار مراجعه کند (خودبه‌خود رفع نمی‌شود). مشکلات تکلمی حداقل به <b>یک ماه</b> (و طبق متن: حداقل <b>دو ماه</b>) زمان نیاز دارد.</td></tr>
+      <tr><th>برنامهٔ recall</th><td>اولین recall <b>۱–۲ روز</b> بعد تحویل؛ فالوآپ معمولاً <b>هر ۶ ماه</b>؛ ممکن است نیاز به ریلاین/ری‌بیس باشد.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۷ (انتخاب دندان، Try-in، تحویل)</h3>
+    <ul>
+      <li><b>انتخاب دندان:</b> رنگ (هیو/Value/کروما، فقط ظاهری) — اندازه (کد روی دندان) — مولد (مثلثی/مربعی/حدواسط، از کاتالوگ).</li>
+      <li><b>جنس:</b> پرسلن (لب‌پر، فشار بیشتر به بافت، نه روی ریج تحلیل‌رفته، فقط مقابل پرسلن) / آکریل و کامپوزیت (سایش بیشتر، بدون chip، باند بهتر؛ کامپوزیت به طبیعی نزدیک‌تر). پخت بیشتر ← استحکام بیشتر.</li>
+      <li><b>فریم بی‌دندانی:</b> مشبک/نردبانی/تمام‌فلز. نردبانی بهتر. تمام‌فلز فقط tooth-supported. بیس فلزی: استحکام/بهداشت/رسانایی بیشتر، ریلاین و وزن کمتر.</li>
+      <li><b>Try-in:</b> میدلاین بالا-صورت مهم (نه بالا-پایین؛ ۱–۲mm مجاز) — ساپورت لب در مردان بیشتر — smile line نسبت به آلاتراگوس — VD زیاد ← کلیک دندان. مشارکت بیمار با آینه.</li>
+      <li><b>تحویل = مهم‌ترین جلسه:</b> بررسی روی کست، تنظیم بیس/اکلوژن، تنظیم کلاسپ (اختصاصی پارسیل). سطح صاف‌تر ← fitness و بهداشت بهتر.</li>
+      <li><b>سطح بافتی:</b> PIP (۳ الگو: بی‌تماس / تماس بیش‌از‌حد / موازی=مطلوب). نواحی حساس: دیستوباکال بالا، دیستولینگوال پایین، فرنوم.</li>
+      <li><b>اکلوژن:</b> چشم گاو (سفید مرکزی=prematurity). اول tooth-supported بعد free end. کاربن (۴–۱۲۰ میکرون) + چسب پشت آن.</li>
+      <li><b>بهداشت:</b> استراحت ۶–۸ ساعت، مسواک بدون خمیر، کلرهگزیدین/قرص. فالوآپ ۲۴–۴۸ ساعت؛ recall ۱–۲ روز؛ سپس هر ۶ ماه. تکلم ≥۱ (تا ۲) ماه.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ============ SECTION 8 ============ -->
+<section class="lec" id="l8">
+  <div class="lec-head">
+    <div class="badge">۸</div>
+    <h2>Reline / Rebase / Repair / Retooth و طراحی پارسیل
+      <span class="src">5R &amp; RPD Design — جلسه ششم، ورودی مهر ۱۴۰۰</span>
+    </h2>
+  </div>
+
+  <div class="box note"><span class="t">فالوآپ پس از تحویل</span>
+  در جلسهٔ تحویل ممکن است مشکلاتی باشد؛ بیمار باید <b>۱ تا ۲ روز بعد</b> حتماً برای فالوآپ مراجعه کند (چه مشکل داشته باشد چه نه)؛ مثلاً زخم کوچکی که بیمار فکر می‌کند خودبه‌خود خوب می‌شود را با یک ادجاست ساده برطرف می‌کنیم.</div>
+
+  <h3 class="sub">تعریف ۵R (Reline, Rebase, Reconstruction, Repair, Retooth)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تفکیک پنج اقدام اصلاحی</caption>
+    <thead><tr><th>اصطلاح</th><th>تعریف</th></tr></thead>
+    <tbody>
+      <tr><th><span class="en">Reline</span></th><td>تغییر <b>سطح بافتی</b> پروتز. دندان باعث حفظ استخوان می‌شود؛ بدون دندان استخوان تغییر می‌کند. سایش روی پارسیل کم است و بیشتر تغییرات روی <b>بافت نرم</b> است؛ لثه تحلیل می‌رود ← فاصله ایجاد می‌شود ← اصلاح سطح بافتی تا fit شود = Reline.</td></tr>
+      <tr><th><span class="en">Rebase</span></th><td>بیس را کاملاً کنار می‌گذاریم؛ دندان‌ها و فریم‌ورک باقی می‌مانند و <b>آکریل برداشته و آکریل جدید</b> جایگزین می‌شود.</td></tr>
+      <tr><th><span class="en">Reconstruction</span></th><td>کاملاً از اول پروتز می‌سازیم (پروتز اول به درد نمی‌خورد یا یک پروتز <b>یدک</b> می‌خواهیم).</td></tr>
+      <tr><th><span class="en">Repair</span></th><td>یک قسمت پروتز خراب است؛ همان قسمت را <b>تعمیر</b> و از همان پروتز استفاده می‌کنیم.</td></tr>
+      <tr><th><span class="en">Retooth</span></th><td>دندان‌ها برداشته می‌شوند (وقتی شکسته، سابیده، تغییر رنگ داده یا مشکل فانکشنال/استتیک دارند).</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">تشخیص نیاز به اصلاح + علل لقی (مهم)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>شکایات و علل لقی پروتز</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>شکایات Reline</th><td>لقی پروتز، درد و زخم در لبه‌ها (به‌دلیل کم شدن بافت ساپورت‌کننده)، مزمن ← <b>اپولیس فیشوراتوم</b>، مشکل تکلم، جمع شدن غذا.</td></tr>
+      <tr><th>بررسی توسط ما</th><td>حرکت پروتز در دهان؛ با مواد قالبگیری (آلژینات شل، واش سیلیکونی) میزان فاصلهٔ پروتز و بافت را بررسی می‌کنیم.</td></tr>
+      <tr><th>علل لقی (مهم)</th><td>سطح بافتی و میزان <b>fitness</b>: حالت <b>الاکلنگی</b>، <span class="en">overextend</span>، <span class="en">underextend</span>، یا سطح کاملاً fit نیست.</td></tr>
+      <tr><th>ابزار بررسی</th><td>سطح بافتی ← بهترین <span class="en">PIP</span> (موم هم می‌توان) — بوردر ← مواد قالبگیری <b>رقیق</b> — اکلوژن ← کاغذ آرتیکولاتور/موم.</td></tr>
+      <tr><th>پیامد تحلیل استخوان</th><td>VD کم می‌شود ← فک به سمت <b>کلاس ۳</b> می‌رود و فک پایین جلو می‌رود. <span class="en">OVEREXTEND</span> می‌تواند در <b>فلنج یا لترال</b> باشد.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">مراحل Reline + نکتهٔ قالبگیری پارسیل</h3>
+  <div class="box warn"><span class="t">مراحل Reline</span>
+  اندازه‌گیری VD مربوطه ← خالی‌کردن (relieve) سطح بافتی ← بوردر مولد ← قالبگیری.</div>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اصول قالبگیری در پارسیل (هنگام Reline)</caption>
+    <thead><tr><th>اصل</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>ناحیهٔ فریم</th><td>هیچ ماده قالبگیری نباید باشد؛ فریم باید کاملاً سر جای خود بنشیند.</td></tr>
+      <tr><th>فشار حین قالبگیری</th><td>نواحی <b>رست</b> را با دست فشار می‌دهیم؛ نواحی <b>انتهای آزاد را فشار نمی‌دهیم</b> (قالب جابه‌جا و خطا ایجاد می‌شود).</td></tr>
+      <tr><th>پس از قالب</th><td>کست ریخته شده و به جای ماده قالبگیری <b>آکریل</b> قرار می‌گیرد.</td></tr>
+      <tr><th>اکلوژن و pick-up</th><td>برای تنظیم اکلوژن نیاز به دندان‌های مجاور داریم؛ <b>قبل از گرفتن PICK UP باید رابطه بگیریم</b>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">Repair: اضافه‌کردن دندان، کلاسپ و دندان کنده‌شده</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>روش‌های تعمیر</caption>
+    <thead><tr><th>مورد</th><th>روش</th></tr></thead>
+    <tbody>
+      <tr><th>اضافه‌کردن دندان</th><td>رابطه و قالب <span class="en">pick-up</span> گرفته، کست می‌ریزیم؛ دندان‌ها را یکی‌یکی حذف و اضافه می‌کنیم. ۲ راهکار: (۱) به دندان‌های دنچر اضافه &nbsp;—&nbsp; (۲) قسمت آکریل صورتی = فلنج و ناحیهٔ دندان با آکریل همرنگ پر می‌شود.</td></tr>
+      <tr><th>شکستن کلاسپ</th><td><span class="en">pick-up</span> گرفته؛ هر کلاسپی که از بین رفته به کلاسپ <b>روت‌وایر (wrought wire)</b> تبدیل می‌شود.</td></tr>
+      <tr><th>دندان کنده‌شده</th><td>رابطه و pick-up گرفته، سطح را تمیز کرده، نقاط گیر ایجاد می‌کنیم و با <b>آکریل سلف‌کیور</b> دندان را وصل می‌کنیم.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">طراحی پروتز پارسیل: اهداف و معاینه</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اهداف، معاینه و طرح درمان</caption>
+    <thead><tr><th>محور</th><th>موارد</th></tr></thead>
+    <tbody>
+      <tr><th>اهداف</th><td>استتیک، فانکشن، حفظ ساختارهای باقیمانده.</td></tr>
+      <tr><th>معاینه</th><td>میزان پوسیدگی، موبیلیتی، ساپورت استخوانی، عمق وستیبول، لثهٔ چسبنده. سپس خواسته/انتظار بیمار. پس از پاراکلینیک (قالب، گرافی) ← گفت‌وگو دربارهٔ مدت درمان، رفت‌وآمد و هزینه‌ها.</td></tr>
+      <tr><th>طرح درمان بی‌دندانی</th><td>بریج، ایمپلنت، پروتز پارسیل، اکستراکشن کامل + پروتز کامل/اوردنچر، اوردنچر با دندان‌های کنونی (با/بدون اتچمنت)، یا هیچ کاری نکردن. <b>قدامی ← اولویت با پروتز ثابت</b>.</td></tr>
+      <tr><th>اولین سؤال</th><td>اصلاً باید درمان انجام دهیم یا خیر.</td></tr>
+      <tr><th>rest onlay</th><td>کاملاً روی سطح جونده را می‌گیرد؛ برای <b>اصلاح پلن</b> می‌توان قسمتی از پلن را پارسیل قرار داد.</td></tr>
+      <tr><th>دندان موبایل</th><td>هر دندانِ بدون موبیلیتی واضح، لزوماً قابل نگهداری <b>نیست</b>؛ باید با پاراکلینیک/رادیوگرافی وضعیت ساپورت استخوانی بررسی شود.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">اصول طراحی: ساپورت، کلاسپ و اتصال‌دهنده‌ها</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اباتمنت، سوروی و انتخاب کلاسپ</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>سوروی اباتمنت</th><td>زیر خط <span class="en">HOC</span> = نقاط گیر؛ بالای آن = نقاط ثبات. تماس کلاسپ با <b>دندان سالم</b> از هرچیزی بهتر است؛ بین پرسلن/آمالگام/کامپوزیت، <b>پرسلن بهتر</b>؛ برای کار بهتر سراغ <b>فلز</b> می‌رویم.</td></tr>
+      <tr><th>tooth-supported با free end</th><td>می‌توان قالبگیری <b>فانکشنال</b> انجام داد. بیس tooth-supported می‌تواند <b>فلزی</b> باشد (احتمال تغییر و نیاز به reline کمتر).</td></tr>
+      <tr><th>free end</th><td>حتماً <b>گیر غیرمستقیم</b> لازم دارد. کلاسپ: <span class="en">RPI</span> یا <span class="en">W.W (root wire)</span>، سپس به سمت کلاسپ‌های <span class="en">supra-bulge</span> یا ریختگی.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <caption>انواع کلاسپ و عوامل انتخاب</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>انواع کلاسپ</th><td>امبراژور، <span class="en">Multiple</span>، <span class="en">I-bar</span>، <span class="en">T</span>، <span class="en">half-T</span>.</td></tr>
+      <tr><th>RPI</th><td>= رست <b>مزیال</b> + پروگزیمال پلیت <b>دیستال</b> + <span class="en">I-bar</span>.</td></tr>
+      <tr><th>عوامل انتخاب کلاسپ</th><td>۱) نوع پروتز (tooth-supported یا نه) — ۲) محل آندرکات (از طریق سوروی) — ۳) ساپورت پریودنتال (بهتر ← <span class="en">suprabulge</span>، تماس بیشتر؛ <b>casting</b> نیروی بیشتری نسبت به <b>w.w</b> وارد می‌کند) — ۴) سایز دندان.</td></tr>
+      <tr><th>آندرکات بافتی</th><td>اگر آندرکات <b>بافتی</b> داشته باشیم از <span class="en">infrabulge</span> استفاده نمی‌کنیم؛ ولی برای ملاحظات <b>زیبایی</b> از infrabulge استفاده می‌کنیم.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">اتصال‌دهنده‌های اصلی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اتصال‌دهندهٔ اصلی فک بالا و پایین</caption>
+    <thead><tr><th>فک</th><th>انواع</th><th>عوامل انتخاب</th></tr></thead>
+    <tbody>
+      <tr><th>فک بالا</th><td>استرپ، پلیت، قدامی-خلفی، بار، <span class="en">U-shape</span>.<br><b>بار vs استرپ:</b> بار ضخیم‌تر و عریض‌تر کم‌تر (باریک‌تر). <b>U-shape بدترین</b> (rigidity ناکافی ← ضخیم‌تر ← بیمار بیشتر حس می‌کند).</td><td>۱) محل بی‌دندانی — ۲) تعداد دندان از دست رفته — ۳) محل توروس</td></tr>
+      <tr><th>فک پایین</th><td>لینگوال بار، دوبل لینگوال بار، کندی بار، اتصال‌دهندهٔ لولایی (hinge).</td><td>۱) عمق وستیبول (۸ میلی‌متر) — ۲) فاصلهٔ دندان‌ها (اگر فاصله دارند، در اتصال‌دهنده هم فاصله می‌گذاریم) — ۳) ساپورت پریودنتال (کم ← سراغ پلیت)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">انواع رست + نوع بیس</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>رست‌ها و بیس</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>انواع رست</th><td>اکلوزال، انسیزال، <span class="en">overlay</span>. <b>رست انسیزال از همه بدتر</b>.</td></tr>
+      <tr><th>سؤال مهم: عامل شکست رست</th><td><b>تراش ناکافی (insufficient reduction)</b>.</td></tr>
+      <tr><th>اصلاح رست</th><td>هم <span class="en">reduction</span> (شکل رست را تراش دهیم) و هم <b>افزایشی</b> (معمولاً در رست‌های سینگولوم یک پله اضافه می‌کنیم تا رست آنجا بنشیند).</td></tr>
+      <tr><th>نوع بیس</th><td>فلزی یا آکریلی (ویژگی‌های بهداشت، تطابق، وزن و رسانایی قبلاً بحث شد).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip"><span class="t">ترتیب طراحی برای Reline</span>
+  اول تعیین <b>ساپورت</b> (پروتز تا کجا می‌آید و روی چه می‌نشیند) ← سپس اتصال‌دهنده‌های اصلی و فرعی و نوع کلاسپ (<span class="en">infra-</span> یا <span class="en">supra-bulge</span>) ← اتصال این موارد ← در نهایت تعیین اینکه <b>base</b> کجا قرار می‌گیرد و به کجا ختم می‌شود.</div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۸ (5R و طراحی پارسیل)</h3>
+    <ul>
+      <li><b>5R:</b> Reline (سطح بافتی) / Rebase (آکریل کامل، فریم+دندان می‌ماند) / Reconstruction (از نو) / Repair (تعمیر جزئی) / Retooth (تعویض دندان).</li>
+      <li><b>علل لقی (مهم):</b> سطح بافتی و fitness — الاکلنگی، overextend، underextend، عدم fit. تحلیل استخوان ← VD کم ← فک به کلاس ۳.</li>
+      <li><b>Reline:</b> اندازهٔ VD → relieve سطح بافتی → بوردر مولد → قالب. ناحیهٔ فریم بدون ماده؛ رست را فشار می‌دهیم، free-end را نه؛ قبل از pick-up رابطه بگیریم.</li>
+      <li><b>Repair:</b> اضافهٔ دندان (۲ راه)، کلاسپ شکسته ← روت‌وایر، دندان کنده ← نقاط گیر + سلف‌کیور.</li>
+      <li><b>طراحی:</b> سوروی — زیر HOC=گیر، بالا=ثبات. کلاسپ با دندان سالم بهترین؛ پرسلن&gt;آمالگام/کامپوزیت؛ فلز برای کار بهتر.</li>
+      <li><b>کلاسپ:</b> امبراژور/Multiple/I-bar/T/half-T. <b>RPI</b>=رست مزیال + پروگزیمال پلیت دیستال + I-bar. عوامل انتخاب: نوع پروتز، آندرکات، ساپورت پریو (casting&gt;w.w)، سایز.</li>
+      <li><b>اتصال‌دهندهٔ بالا:</b> استرپ/پلیت/قدامی-خلفی/بار/U-shape (بدترین). <b>پایین:</b> لینگوال بار/دوبل/کندی بار/لولایی؛ وستیبول ۸mm.</li>
+      <li><b>رست:</b> اکلوزال/انسیزال (بدترین)/overlay. <b>عامل شکست = تراش ناکافی</b>. اصلاح reduction یا افزایشی.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ============ SECTION 9 ============ -->
+<section class="lec" id="l9">
+  <div class="lec-head">
+    <div class="badge">۹</div>
+    <h2>نگهداری پروتز متحرک: Reline / Repair / Rebase
+      <span class="src">RFE310 Advanced Removable Prosthodontics — Dr. Ting-Ling Chang, UCLA (جلسهٔ ۱۱ و ۱۲)</span>
+    </h2>
+  </div>
+
+  <div class="box note"><span class="t">جایگاه این جلسه</span>
+  این جلسه نسخهٔ کلاسیک و انگلیسی همان مباحث جلسهٔ ۸ است، با تأکید بر <b>تفکیک دقیق پروتز کامل (CD) از پارسیل (RPD)</b> و افزودن تکنیک <span class="en">reline jig</span>. سرفصل‌ها: ۱) تشخیص و عیب‌یابی &nbsp;۲) اندیکاسیون reline &nbsp;۳) repair (تعمیر بیس آکریلی در برابر تعمیر دندان/سیم) &nbsp;۴) اندیکاسیون rebase.</div>
+
+  <h3 class="sub">۱) تشخیص و عیب‌یابیِ پروتز لق (Trouble Shooting)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>چهار گام تشخیص لقی پروتز</caption>
+    <thead><tr><th>گام</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>۱) به بیمار گوش کن</th><td><span class="en">Listen to our patient</span></td></tr>
+      <tr><th>۲) سؤال بپرس</th><td><span class="en">Ask questions</span></td></tr>
+      <tr><th>۳) ارزیابی عینی</th><td>ارزیابی عینی پروتز و بافت نرم: گیر (<span class="en">retention</span>)، ثبات (<span class="en">stability</span>) و ساپورت — هم برای <span class="en">CD</span> و هم برای <span class="en">RPD</span>.</td></tr>
+      <tr><th>۴) انتظار بیمار</th><td><span class="en">Patient's expectation</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">تعیین علت لقی در پروتز کامل (CD)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>علل لقی CD و روش تشخیص هر کدام</caption>
+    <thead><tr><th>دستهٔ علت</th><th>زیرمجموعه</th><th>روش تشخیص/حل</th></tr></thead>
+    <tbody>
+      <tr><th rowspan="1">مرتبط با اکلوژن</th><td>تداخلات اکلوزال یا تداخل <span class="en">VDO</span></td><td>لمسی (<span class="en">tactile</span>)، <span class="en">clinical remount</span> و تعادل‌بخشی اکلوزال (<span class="en">occlusal equilibration</span>)</td></tr>
+      <tr><th rowspan="3">مرتبط با بیس پروتز</th><td>۱) چرخش روی برجستگی‌های استخوانی (<span class="en">Pivoting</span>)</td><td><span class="en">PIP</span></td></tr>
+      <tr><td>۲) گسترش بیش از حد (<span class="en">Over-extension</span>)</td><td><span class="en">Disclosing wax</span></td></tr>
+      <tr><td>۳) گسترش کمتر از حد (<span class="en">Under-extension</span>) — مثلاً <span class="en">PPS</span> ناکافی</td><td>کشیدن به سمت بالا و خارج روی لینگوال کانین‌ها؛ <span class="en">compound stick</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">رد کردن لقیِ ناشی از Over-extension در CD</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>منابع گسترش بیش از حد و روش بررسی</caption>
+    <thead><tr><th>منبع over-extension</th><th>روش بررسی</th></tr></thead>
+    <tbody>
+      <tr><th>تداخل کرونوئید (<span class="en">Coronoid interferences</span>)</th><td>حرکات طرف‌به‌طرف (<span class="en">side to side</span>) + <span class="en">disclosing wax</span></td></tr>
+      <tr><th>گسترش بیش‌ازحد فلنج‌ها</th><td>کشیدن گونه‌ها و لب‌ها، حرکت‌دادن زبان توسط بیمار + <span class="en">disclosing wax</span></td></tr>
+      <tr><th>سفتی رافهٔ پتریگومندیبولار</th><td>باز کردن کامل دهان + <span class="en">disclosing wax</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn"><span class="t">دو نکتهٔ کلیدی CD</span>
+  ۱) موم آشکارکننده را <b>قبل از قرار دادن در حمام آب گرم تمپر کنید</b>. &nbsp;—&nbsp; ۲) فلنج معیوب می‌تواند هم <b>خیلی ضخیم</b> و هم <b>خیلی بلند</b> باشد و هر دو باعث لقی می‌شوند.</div>
+  <div class="box tip"><span class="t">اصل طلایی reline در CD</span>
+  <span class="en">Reline</span> فقط مشکلات گیری ناشی از <b>تطابق ناکافی بیس پروتز</b> با بافت را حل می‌کند. پس مشکل گیر باید <b>قبل از تجویز reline</b> به‌درستی تشخیص داده شود؛ وگرنه reline بی‌فایده است.</div>
+
+  <h3 class="sub">لقی در پارسیل (RPD) — تفاوت بنیادی با CD</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>منبع گیر در RPD و نقش reline</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>منبع گیر RPD</th><td>توسط <b>گیرنده‌های فعال (active retainers)</b> و <b>پروگزیمال پلیت‌های موازی</b> تأمین می‌شود؛ گیرنده را می‌توان <b>با احتیاط</b> دوباره فعال (<span class="en">reactivate</span>) کرد.</td></tr>
+      <tr><th>میزان درگیری گیرندهٔ فعال</th><td>طوری طراحی می‌شود که <b>۰٫۰۱ تا ۰٫۰۲ اینچ</b> آندرکات را درگیر کند و در <b>محدودهٔ فیزیولوژیک</b> بماند.</td></tr>
+      <tr><th>نقطهٔ کلیدی (مهم)</th><td>در RPD، <span class="en">reline</span> فقط <b>ساپورت مخاطی</b> را بهبود می‌دهد و <b>گیر را افزایش نمی‌دهد</b>؛ آموزش و ارتباط با بیمار ضروری است.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">۲) Reline: تعریف و مراحل</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تعریف و پیش‌نیازهای reline</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>تعریف</th><td>روش‌هایی برای <b>بازسازی سطح بافتیِ</b> پروتز متحرک با <b>مادهٔ بیس جدید</b>، به‌طوری‌که تطابق دقیق با ناحیهٔ پایهٔ پروتز ایجاد شود.</td></tr>
+      <tr><th>دو نوع</th><td><span class="en">Lab reline</span> (تمرکز این جلسه) در برابر <span class="en">Chair-side reline</span>.</td></tr>
+      <tr><th>پیش‌نیاز</th><td>قبل از جلسهٔ قالب‌گیریِ reline، بافت نرم باید <b>سالم</b> باشد.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مراحل بالینی reline</caption>
+    <thead><tr><th>مرحله</th><th>جزئیات</th></tr></thead>
+    <tbody>
+      <tr><th>VDO</th><td><span class="en">VDO</span> صحیح را قبل از reline ثبت کن و <b>همان VDO</b> را حین قالب‌گیری reline حفظ کن. اگر هر دو فک (بالا و پایین) به reline نیاز دارند، یکی‌یکی انجام شود.</td></tr>
+      <tr><th>relief بیس</th><td>روی بیس پروتز: <b>relief لبه‌ای ۲ میلی‌متر</b> و <b>relief عمومی سطح بافتی ۱ میلی‌متر</b>.</td></tr>
+      <tr><th>بوردر مولدینگ</th><td>با <span class="en">compound stick</span>.</td></tr>
+      <tr><th>قالب reline</th><td>کامپاند را کمی با اسکالپل برش بده، چسب بزن، و با <b>پلی‌سولفاید</b> (یا <span class="en">ZOE</span> یا <span class="en">PVS</span>) قالب reline بگیر. <b>لایهٔ نازکی</b> از ماده با کنترل دقیق اعمال شود.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تکنیک دهان‌باز در برابر دهان‌بسته — تفاوت کلیدی CD و RPD</caption>
+    <thead><tr><th>تکنیک</th><th>توصیه برای</th><th>دلیل / روش</th></tr></thead>
+    <tbody>
+      <tr><th>دهان‌بسته (<span class="en">Close mouth</span>)</th><td><b>CD</b></td><td>برای حفظ اکلوژن صحیح و <span class="en">VDO</span>.</td></tr>
+      <tr><th>دهان‌باز (<span class="en">Open mouth</span>)</th><td><b>RPD</b></td><td>انگشتان روی رست‌ها و اتصال‌دهنده‌های اصلی برای نشاندن کامل فریم، <b>درست مثل قالب altered cast</b>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">تکنیک Reline Jig (لابراتواری)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>جیگ فلزی reline و مراحل آزمایشگاهی</caption>
+    <thead><tr><th>مرحله</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>هدف جیگ</th><td><b>جیگ فلزی reline</b> برای <b>حفظ رابطهٔ عمودی و اکلوزال</b> استفاده می‌شود.</td></tr>
+      <tr><th>کست سنگی</th><td>کست برای ثبت بخش قالب reline ساخته می‌شود؛ <b>در RPD کست باید بخش کافی از فریم را هم لمس کند</b> تا پایهٔ کست پایدار باشد.</td></tr>
+      <tr><th>مانت در جیگ</th><td>کست سنگی به یک عضو جیگ مانت می‌شود؛ به عضو دیگر گچ اضافه می‌شود تا سطوح اکلوزال دندان‌های مصنوعی را لمس کند.</td></tr>
+      <tr><th>Reline (CD)</th><td>پروتز از کست خارج → <span class="en">PPS</span> روی کست علامت و اسکور می‌شود → تمام قالب و کامپاند برداشته → پروتز تمیز روی عضو گچی اکلوزال جیگ قرار می‌گیرد → آکریل سلف‌کیور مخلوط و روی پروتز و کست اعمال → اعضای جیگ هم‌تراز و محکم بسته می‌شوند.</td></tr>
+      <tr><th>Reline (RPD)</th><td>تمام قالب و کامپاند از RPD برداشته → سطح بافتیِ تمیزِ RPD آمادهٔ افزودن آکریل اتوپلیمریزه → RPD روی عضو گچی اکلوزال قرار می‌گیرد → آکریل سلف‌کیور روی RPD و کست اعمال → اعضای جیگ هم‌تراز و محکم بسته می‌شوند.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box note"><span class="t">قرار دادن (Insertion) پروتز reline‌شده — ۳ گام</span>
+  ۱) فیت و نشست: <span class="en">PIP</span> &nbsp;—&nbsp; ۲) اکستنشن لبه‌ها: <span class="en">disclosing wax</span> &nbsp;—&nbsp; ۳) <span class="en">clinical remount</span> و اصلاح اکلوزال (در RPD با قالب <span class="en">pick-up</span> و سپس remount و equilibration).</div>
+
+  <h3 class="sub">۳) Repair (تعمیر): سه سناریو</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تبدیل RPD به CD موقت + تعمیر گیرنده + تعمیر دندان</caption>
+    <thead><tr><th>سناریو</th><th>روش</th></tr></thead>
+    <tbody>
+      <tr><th>تبدیل RPD به CD موقت<br>(مثال: کشیدن ۲۲، ۲۳، ۲۷، ۲۸)</th><td>قالب <span class="en">pick-up</span> با آلژینات و ریختن کست سنگی (با ایجاد <b>اندیس‌های repositioning</b> روی پایهٔ کست) → ساخت <b>ماتریس سیلیکونی</b> برای حفظ کانتور فاسیال و لبهٔ انسیزال دندان‌ها (با اندیس روی ماتریس) → خارج‌کردن RPD و تراش دندان‌های گچی، اعمال <span class="en">separating medium</span> → لایهٔ نازک آکریل سلف‌کیور به محل کشیده‌شده و برگرداندن RPD؛ بخش پایینی ماتریس کانتور لبیال بیس را شکل می‌دهد → آکریل <b>هم‌رنگ دندان</b> در محل کشیده‌شده و بخش بالایی ماتریس برای بازسازی فرم دندان‌ها → نتیجه: پروتز تعمیرشده به‌عنوان <b>CD موقت</b>.</td></tr>
+      <tr><th>تعمیر گیرنده<br>(مثال: شکستن گیرندهٔ #۶)</th><td>قالب pick-up و کست → خم‌کردن <b>سیم تعمیر (repair wire retainer)</b> در محل دلخواه؛ <b>نوک زیر خط HOC</b> برای تأمین گیر → تراش دقیق بیس آکریلی و دندان #۵ برای جا دادن سیم → سیم به #۶ به‌خوبی منطبق و با آکریل سلف‌کیور به بیس آکریلی محکم می‌شود.</td></tr>
+      <tr><th>تعمیر/تعویض دندان مصنوعی<br>(مثال: شکست #۲۵ یا #۳/۸)</th><td>برداشتن باقیماندهٔ دندان با <b>حفظ یکپارچگیِ کانتور لثه‌ای آکریل</b> (همین روش برای رفع مشکلات موضعی استتیک/اکلوژن هم به‌کار می‌رود) → ساخت سوکت و جا دادن دندان جدید، ساخت <b>اندیس گچی</b>؛ ایجاد <b>سوراخ گیر</b> روی دندان برای افزایش گیر مکانیکی → برگرداندن مجموعهٔ دندان/اندیس، اعمال آکریل سلف‌کیور با قلم روی دندان و سوکت، انطباق حین پلیمریزاسیون و حذف اضافه → تریم و پالیش.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn"><span class="t">نکتهٔ اکلوزال در تعمیر دندان</span>
+  هنگام قرار دادن پروتز تعمیرشده، تماس‌های اکلوزال باید با دقت علامت‌گذاری و اصلاح شوند تا روی دندان مصنوعیِ جدید <b>هایپرکنتاکت</b> نداشته باشیم.</div>
+
+  <h3 class="sub">۴) Rebase</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تعریف، اندیکاسیون و تفاوت CD/RPD در rebase</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>تعریف</th><td>تعویض <b>بیشتر یا تمامِ</b> بیس پروتز.</td></tr>
+      <tr><th>اندیکاسیون</th><td>وقتی بیس به‌طور قابل‌توجه برای پوشش ناحیهٔ <span class="en">denture bearing</span> <b>under-extend</b> است، یا بیس به‌طور <b>غیرقابل‌جبران تغییر رنگ</b> داده.</td></tr>
+      <tr><th>روش ساخت</th><td><span class="en">Flasking</span> و آکریل <b>heat-cured</b>.</td></tr>
+      <tr><th>در CD</th><td>اغلب <b>remake (ساخت مجدد)</b> به rebase ترجیح داده می‌شود.</td></tr>
+      <tr><th>در RPD</th><td>اگر فریم هنوز خوب فیت است، rebase گزینهٔ خوبی است؛ فقط <b>بیس آکریلی و دندان‌های مصنوعی</b> بازسازی می‌شوند (بازیافت فریم فلزی).</td></tr>
+      <tr><th>روش RPD</th><td>کست سنگی همراه RPD از قالب pick-up → برداشتن بیس آکریلی و دندان‌های قدیمی از فریم → بازسازی بیس و دندان.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip"><span class="t">هدف کلی عیب‌یابی (Trouble Shooting Goal)</span>
+  مقرون‌به‌صرفه‌ترین راه‌حل که با <b>کمترین تعداد جلسه</b> مشکلات را برطرف کند.<br>
+  <b>دو سخنرانی خودخوان مکمل:</b> ۱) مرور اصول طراحی RPD (Dr. John Beumer) &nbsp;—&nbsp; ۲) ملاحظات اکلوزال برای CD و RPD (Dr. Michael Hamada).</div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۹ (Reline/Repair/Rebase — UCLA)</h3>
+    <ul>
+      <li><b>۴ گام تشخیص لقی:</b> گوش‌دادن، پرسیدن، ارزیابی عینی (گیر/ثبات/ساپورت)، انتظار بیمار.</li>
+      <li><b>علل لقی CD:</b> اکلوژن (remount/equilibration) و بیس (pivoting→PIP، over-extension→disclosing wax، under-extension→PPS/compound). موم آشکارکننده را تمپر کن.</li>
+      <li><b>اصل طلایی:</b> reline فقط لقیِ ناشی از تطابق ناکافی بیس را حل می‌کند؛ در RPD فقط <b>ساپورت مخاطی</b> را بهتر می‌کند نه گیر را (گیر = active retainer، درگیری ۰٫۰۱–۰٫۰۲ اینچ).</li>
+      <li><b>relief reline:</b> لبه <b>۲mm</b>، سطح بافتی <b>۱mm</b>. VDO قبل ثبت و حفظ شود.</li>
+      <li><b>دهان‌بسته = CD</b> (حفظ اکلوژن/VDO)؛ <b>دهان‌باز = RPD</b> (انگشت روی رست/کانکتور، مثل altered cast). لایهٔ ماده نازک.</li>
+      <li><b>Reline jig:</b> حفظ رابطهٔ عمودی/اکلوزال؛ در RPD کست باید فریم را هم لمس کند. درج: PIP → disclosing wax → clinical remount.</li>
+      <li><b>Repair:</b> تبدیل RPD به CD موقت (ماتریس سیلیکونی + اندیس)، تعمیر گیرنده (سیم زیر HOC)، تعمیر دندان (سوکت + سوراخ گیر + سلف‌کیور؛ بدون هایپرکنتاکت).</li>
+      <li><b>Rebase:</b> تعویض کل بیس (heat-cure، flasking)؛ CD اغلب remake؛ RPD اگر فریم فیت است، فقط بیس/دندان بازسازی. هدف: کمترین جلسه و کمترین هزینه.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+<!-- ============ SECTION 10 ============ -->
+<section class="lec" id="l10">
+  <div class="lec-head">
+    <div class="badge">۱۰</div>
+    <h2>پروتز پارسیل در پروتزهای فک و صورت (Maxillofacial) — بخش ۱
+      <span class="src">RPD Considerations in Maxillofacial Prosthetics, Part 1 — جلسهٔ ۱۳</span>
+    </h2>
+  </div>
+
+  <div class="box note"><span class="t">دامنهٔ این جلسه</span>
+  این جلسه RPD را در بیماران فک‌وصورت (پس از جراحی تومور، تروما، نقایص مادرزادی/تکاملی) بررسی می‌کند؛ جایی که محیط طبیعی دهان به‌دلیل رزکسیون جراحی دچار تغییرات منحصربه‌فرد شده و طراحی فقط به ساپورت دندان/بافت محدود نمی‌شود.</div>
+
+  <h3 class="sub">تعریف و طبقه‌بندی پروتز فک‌وصورت</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>تعریف و دو نوع طبقه‌بندی</caption>
+    <thead><tr><th>محور</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>تعریف</th><td>هنر و علمِ بازسازی <b>آناتومیک، عملکردی یا زیبایی</b> با استفاده از جایگزین‌های <b>غیرزنده</b>، برای نواحیِ فک بالا، فک پایین و صورت که به‌علت <b>جراحی، تروما، پاتولوژی یا ناهنجاری‌های تکاملی/مادرزادی</b> از دست رفته یا معیوب‌اند.</td></tr>
+      <tr><th>طبقه‌بندی بر اساس علت</th><td><b>اکتسابی (Acquired):</b> تروما یا درمان بیماری — مثل نقص کام نرم/سخت ناشی از کارسینوم سلول سنگفرشی. &nbsp;—&nbsp; <b>مادرزادی (Congenital):</b> نقایص کرانیوفاشیال هنگام تولد. &nbsp;—&nbsp; <b>تکاملی (Developmental):</b> زمینهٔ ژنتیکی در رشد و تکامل.</td></tr>
+      <tr><th>طبقه‌بندی بر اساس نوع پروتز</th><td><b>خارج‌دهانی</b> (جایگزینی کرانیال یا فاشیال) &nbsp;—&nbsp; <b>داخل‌دهانی</b> (حفرهٔ دهان) &nbsp;—&nbsp; <b>موقت (Interim)</b> (دوره‌های کوتاه) &nbsp;—&nbsp; <b>دائمی (Definitive)</b> (ماندگارتر) &nbsp;—&nbsp; <b>پروتز درمانی</b> (اسپلینت یا استنت).</td></tr>
+      <tr><th>ویژگی متمایزکنندهٔ اصلی</th><td>پروتز <b>tooth-supported</b> یا <b>tooth-and-tissue supported</b> است. در این بیماران، طراحی فقط ملاحظات ساپورت دندان و بافت نیست؛ تغییرات ناشی از رزکسیون هم دخیل‌اند.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">زمان‌بندی مراقبت پروتزی در نقایص اکتسابی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>سه فاز مراقبت</caption>
+    <thead><tr><th>فاز</th><th>محتوا و اهداف</th></tr></thead>
+    <tbody>
+      <tr><th>۱) قبل و حین عمل<br>(Preop &amp; Intraop)</th><td>برنامه‌ریزی درمان پروتزی <b>قبل از جراحی</b>؛ ارزیابی نیازهای دندانی بیمارِ جراحی سر و گردن. مشاورهٔ پیش از عمل، رابطهٔ بیمار-درمانگر؛ شناسایی <b>دندان‌های مهم استراتژیک</b> از دید پروتز و گفت‌وگو با تیم جراحی برای حفظ آن‌ها. دورهٔ بلافاصله پس از عمل چالش‌برانگیز است: ضایعهٔ پوسیدگی بزرگ → درمان اندو؛ بیماری پریودنتال حاد → درمان؛ دندان غیرقابل‌ترمیم → قبل/حین رزکسیون کشیده شود. قالب‌گیری هر دو فک برای پروتز فوری/موقت و ارزیابی نیاز به اصلاح فوری و تأخیری دندان‌ها/ساختارهای مجاور؛ برنامه‌ریزی پروتز دائمی.</td></tr>
+      <tr><th>۲) موقت (Interim)</th><td>تأکید اصلی بر نیاز <b>مدیریت جراحی</b> بیمار. <b>نکتهٔ مهم:</b> در نقایص گسستگی (discontinuity) فک پایین، مراقبت پروتزی موقت <b>اندیکاسیون ندارد</b>. نقص اکتسابیِ معمولِ فک بالا با بینی/سینوس ماگزیلاری ارتباط (communication) ایجاد می‌کند و موجب نقص در جویدن، بلع و تکلم (و اثر روانی) می‌شود؛ تمرکز اولیه بر بهبود بلع و تکلم.</td></tr>
+      <tr><th>۳) دائمی (Definitive)</th><td>پس از تکمیل فاز درمان فعال و بلوغ کافی بافت نقص (تحمل دستکاری تهاجمی و obturation) آغاز می‌شود؛ طراحی با پروتز موقت متفاوت است.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">مراقبت موقت: ابتوراتور و تثبیت</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>هدف و روش پروتز موقت/ابتوراتور</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>هدف ابتوراتور موقت</th><td>جدا کردن حفرهٔ <b>دهانی از بینی</b> با بستن ارتباط (obturating)؛ معمولاً برای نقص کام سخت و همین‌طور کام نرم. هدف: مسدودکردن مصنوعی انتقال آزاد <b>صوت و غذا/مایعات</b> بین دو حفره.</td></tr>
+      <tr><th>ابتوراتور جراحی</th><td>کنترل بستن دسترسی جراحی و <span class="en">split-thickness skin graft</span> در دورهٔ پس از جراحی.</td></tr>
+      <tr><th>تثبیت</th><td>با <b>وایرینگ به دندان‌ها/استخوان آلوئول</b>؛ دندان‌ها و سیم‌های پروتز از <b>آندرکات‌ها</b> استفاده می‌کنند. قرار دادن فوری پروتز به <b>پذیرش نقص جراحی</b> توسط بیمار کمک می‌کند. ترجیحاً پانسمان جراحی با sponge bolster روی گرافت تثبیت شود؛ پس از ترمیم اولیه، پروتز موقت قرار می‌گیرد.</td></tr>
+      <tr><th>ماهیت پروتز موقت</th><td>پروتز رزینیِ <b>wire-retained</b> بدون دندان که با افزودن دندان اصلاح می‌شود.</td></tr>
+      <tr><th>ماگزیلکتومی کامل</th><td>ساپورت، ثبات و گیر <b>رضایت‌بخش نیست</b> (به‌علت گسترش نقص). وجود دندان → اثر نقص کمتر؛ چند دندان یک‌طرفه → ثبات پروتز کمتر.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">عوارض احتمالی فاز موقت</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مدت و عوارض شایع</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>مدت فاز موقت</th><td><b>۳ تا ۴ ماه</b>؛ هدف اولیه = فاز مشاهدهٔ جراحی.</td></tr>
+      <tr><th>عوارض شایع پروتزی</th><td>۱) تروما و ناراحتی بافتی &nbsp;—&nbsp; ۲) گیر ناکافی پروتز فک بالا &nbsp;—&nbsp; ۳) obturation ناقص با نشت هوا/غذا/مایع دور ابتوراتور &nbsp;—&nbsp; ۴) اثرات بافتی شیمی‌درمانی و رادیوتراپی.</td></tr>
+      <tr><th>منشأ ناراحتی</th><td>دینامیک ترمیم زخم جراحی، شرایط نقص، اثرات مخاطی درمان کمکی/فیت پروتز. نواحی شایع درد: محل اتصال مخاط لب/گونه (ماگزیلکتومی)، باند اسکار لترال محل گرافت، و برش‌های استخوان آلوئول که گرد نشده‌اند و مخاط را سوراخ می‌کنند (شایع‌ترین در رزکسیون فک پایین — کانتور تحتانی و لبیال).</td></tr>
+      <tr><th>حرکت پروتز و گیر</th><td>وابسته به کیفیت ساختارهای ساپورت؛ با وجود دندان → گیر با <b>کلاسپ</b>؛ بی‌دندان → <b>چسب دنچر</b>. اگر رزکسیون فک بالا گونه را بدون ساپورت استخوانی بگذارد، پروتز در دورهٔ بلوغ زخم ساپورت می‌دهد.</td></tr>
+      <tr><th>فیت و سیل</th><td>در ترمیم اولیهٔ پس از عمل، ابعاد نقص تغییر می‌کند → فیت و سیل تحت‌تأثیر → اصلاح با <b>مواد لاینینگ موقتِ resilient</b>. بیمار: حین بلع سر را افقی نگه دارد و مقادیر زیاد نبلعد تا سیل آب‌بند حفظ شود. رزکسیون خط‌وسطِ کام نرم → حفظ گیر و سیل دشوار.</td></tr>
+      <tr><th>اثرات تابش/شیمی</th><td>عارضهٔ عمدهٔ داخل‌دهانی = <b>موکوزیت</b>. اثرات بلندمدت تابش: <b>خشکی دهان (xerostomia)</b> و تغییرات بستر مویرگی در فک → خطر <b>استئورادیونکروز</b>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">بهداشت نقص + مراقبت دائمی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>بهداشت نقص و اصول فاز دائمی</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>بهداشت نقص</th><td>پس از برداشتن پک جراحی، محل نقص به‌مرور بالغ می‌شود؛ از دست رفتن اولیهٔ گرافت تثبیت‌نشده و تجمع ترشحات/خون/بقایای غذا شایع است. بیمار باید نقص را به‌طور روتین تمیز کند → ترمیم سریع‌تر و فیت بهتر پروتز. روش‌ها: شست‌وشو با <b>bulb syringe</b>، وسیلهٔ تمیزکنندهٔ اسفنجی؛ بهداشت دندان؛ در خشکی دهان → <b>فلوراید</b>.</td></tr>
+      <tr><th>زمان شروع دائمی</th><td>پس از بلوغ کافی بافت نقص؛ تمرکز اصلی بر مدیریت پروتزی.</td></tr>
+      <tr><th>تأخیر دائمی</th><td>در برخی بیماران به‌علت نگرانی سلامت عمومی، پیش‌آگهی نامطمئن تومور و بهداشت نامناسب به تعویق می‌افتد.</td></tr>
+      <tr><th>کنترل پروتز</th><td>کنترل پروتزهای فک‌وصورت نیازمند <b>مهارت و عملکرد بالای بیمار</b> است (ساختارهای دهان و نقص برای موفقیت مهم‌اند). توانایی بیمار در کنترل بیومکانیکی پروتز متحرک بزرگ، با گزینه‌های بستن/بازسازی جراحی محدود می‌شود.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">ملاحظات طراحی پروتز داخل‌دهانی + منبع ساپورت</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اصول طراحی و منبع ساپورت بر حسب وضعیت دندانی</caption>
+    <thead><tr><th>وضعیت</th><th>منبع ساپورت / اصل</th></tr></thead>
+    <tbody>
+      <tr><th>اصل کلی</th><td>پروتزی <b>well-supported، پایدار و retentive</b> با <b>حداقل حرکت</b> و حفظ <b>حداکثر بافت ساپورت‌کننده</b>؛ پوشش حداکثری ریج بی‌دندان و دندان‌های باقیمانده. مقاومت طبیعی در برابر بار عملکردی از طریق <b>اتصال پریودنتال</b> دندان طبیعی.</td></tr>
+      <tr><th>نسبتاً بی‌دندان</th><td>ساپورت و ثبات از <b>دندان‌ها</b>.</td></tr>
+      <tr><th>چند دندان خلفی</th><td>ساپورت از <b>دندان + مخاط</b>.</td></tr>
+      <tr><th>بدون دندان</th><td>ساپورت از <b>مخاط و ریج‌های باقیمانده</b>.</td></tr>
+      <tr><th>از دست رفتن دندان و ساختار به‌علت تومور</th><td>ساپورت <b>ترکیبی دندان/ریج</b>.</td></tr>
+      <tr><th>هشدار</th><td>برای پروتزهای کاملاً <b>tissue-supported</b> (پارسیل یا کامل)، تکیه بر مخاط برای تحمل بار عملکردی <b>نامناسب</b> است.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">حفظ جراحی به نفع پروتز — نقایص فک بالا (Maxillary)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اصول رزکسیون فک بالا و تأثیر بر موفقیت پروتز</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>تأثیر جراحی</th><td>میزان ساختار برداشته‌شدهٔ فک بالا بر یکپارچگی و کیفیت نقص و در نتیجه موفقیت پروتز اثر می‌گذارد. هدف در کام سخت/نرم: بازگرداندن <b>جداییِ فیزیکی حفرهٔ دهان از بینی</b> برای جویدن، بلع، تکلم و کانتور صورت.</td></tr>
+      <tr><th>پروتزهای معمول</th><td><b>ابتوراتور</b> و <b>پروتز کمک‌تکلمی (speech aid)</b>؛ ابتوراتور عملکرد <b>palatopharyngeal</b> را در نقص کام نرم بازمی‌گرداند.</td></tr>
+      <tr><th>حفظ دندان</th><td>بیشترین تأثیر = <b>اثر تثبیت‌کننده</b>. در نقص خط‌وسط، حفظ <b>پره‌ماگزیلا</b> (با گنجاندن پره‌ماگزیلای قدامی) تصمیمی فردی بر اساس کنترل تومور و تکنیک رزکسیون است. دندان مجاور نقص نیرو می‌گیرد → حرکت پروتز؛ برش استئوتومی آلوئولار نزدیک دندان مجاور بر پیش‌آگهی آن دندانِ ساپورت‌کننده اثر می‌گذارد.</td></tr>
+      <tr><th>خط‌وسط کام سخت</th><td>محل شایع فشار پروتز؛ سطح عمودی برش استخوان + advancement flap از مخاط کام → پوشش مخاطیِ resilient که نقش <b>فولکروم</b> برای پروتز پیدا می‌کند.</td></tr>
+      <tr><th>راهنمای تصمیم کام نرم</th><td>اگر رزکسیون <b>کمتر از یک‌سوم</b> کام نرم باقی بگذارد، کل کام برداشته می‌شود. استثنا: بیمار بی‌دندان با ماگزیلکتومی رادیکال؛ بدون دندان برای گیر، بیمار از قرارگیری پروتز <b>بالای باند بافت نرم خلفی</b> برای گیر بهره می‌برد.</td></tr>
+      <tr><th>آماده‌سازی محل + اندازهٔ نقص</th><td>محل با <span class="en">split-thickness graft</span>؛ اگر صفحهٔ پتریگوئید/استخوان تمپورال قدامی گرافت را ساپورت کند. اکستنشن به داخل نقص در بی‌دندان بیشتر از دندان‌دار است؛ همهٔ بیماران به ناحیهٔ لترال خلفی برای سیل نقص نیاز دارند. نقص <b>۳ سانتی‌متر یا کمتر</b> → بازسازی به کانتور و عملکرد طبیعی مناسب است؛ نقص بزرگ‌تر → بازسازی دشوار → پروتز. بازسازی کام نرم دشوار است؛ به‌علت غیرقابل‌پیش‌بینی بودن، <b>مدیریت پروتزی قابل‌پیش‌بینی اغلب درمان انتخابی است</b>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">نقایص فک پایین (Mandibular)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>نواحی آناتومیک، انواع رزکسیون و عوارض</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>نواحی درگیر در عملکرد</th><td>جویدن، بلع، تکلم و کنترل بزاق از همکاری نواحی جدا حاصل می‌شود: اسفنکتر دهانی، سالکوس‌های آلوئولینگوال و باکال، ریج‌های آلوئولار و کف دهان، زبان و ستون‌های لوزه، کام نرم و سخت، مخاط باکال. <b>هرچه نواحی بیشتری درگیر شوند، نیاز به بازسازی جراحی بیشتر است.</b></td></tr>
+      <tr><th>پیچیدگی بازسازی</th><td>بسته به <b>محل و میزان رزکسیون</b> فک پایین. اهداف اصلی پروتزی: بازگرداندن <b>جویدن و زیبایی</b> با جایگزینی دندان.</td></tr>
+      <tr><th>اصل ساپورت</th><td>صرف‌نظر از نوع ساپورت، موفقیت پروتز به مدیریت جراحیِ بافت نرم و استخوان وابسته است. برداشتن بافت نرم + استخوان → مدیریت پروتزی ممکن نیست. استثنا: رزکسیون زبان → augmentation کانتورهای کام برای تولید گفتار. تومورهای اولیه (آملوبلاستوما) → رزکسیون سگمان‌ها برای کنترل تومور.</td></tr>
+      <tr><th>انواع رزکسیون</th><td>لترال، قدامی، همی‌مندیبولار.</td></tr>
+      <tr><th>نقایص ناتوان‌کننده</th><td>تغییرشکل زیبایی یک‌سوم تحتانی صورت، کاهش عملکرد جویدن، اختلال هماهنگی زبان و دندان، تغییر تکلم و اختلال بلع.</td></tr>
+      <tr><th>توان‌بخشی جویدن</th><td>پس از رزکسیون با <b>گسستگی (discontinuity)</b> فک پایین <b>غیرقابل‌پیش‌بینی</b> است؛ در بیماران دندان‌دار → موقعیت تغییریافتهٔ فک → معلولیت عملکردی و زیبایی. <b>صفحات بازسازی (reconstruction plates)</b> تغییرشکل زیبایی را بهبود و ماهیت دوطرفهٔ حرکت فک را حفظ می‌کنند، اما ممکن است fail شوند؛ جایگزینی دندان در نواحی بالای reconstruction bar ممکن نیست → سوراخ‌شدن مخاط و نمایان‌شدن bar.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">بازسازی فک پایین با گرافت استخوانی (Bone Grafts)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>ویژگی‌های ایده‌آل و عوارض گرافت</caption>
+    <thead><tr><th>موضوع</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><th>ویژگی‌های ایده‌آل فک جایگزین</th><td>اتحاد پایدار سگمان‌های پروگزیمال و دیستال، بازگرداندن کانتور یک‌سوم تحتانی صورت، کانتور گرد ریج و <b>مخاط چسبندهٔ ۲ تا ۳ میلی‌متر</b>. در هر حال، پروتز برای استفادهٔ عملکردی به استخوان <b>زنده (vital)</b> نیاز دارد؛ برای بهترین عملکرد پروتزی → <b>ایمپلنت</b>.</td></tr>
+      <tr><th>عامل تعیین‌کنندهٔ اصلی</th><td><b>بازسازی بافت نرم</b>. عارضهٔ عمده: حجم زیاد بافت نرم → کمبود تحرک زبان؛ عارضهٔ دیگر: محل و اندازهٔ استخوان. <b>فیبولا</b> برای جایگزینی فک پایین.</td></tr>
+      <tr><th>چالش‌های موقعیت‌دهی</th><td>به‌علت ماهیت <b>صافِ</b> استخوان، خطا در موقعیت افقی و عمودی در خط‌وسط آسان است؛ ناتوانی خلفی در بازآفرینی منحنی صعودی طبیعی → دندان‌ها اکلوژن را در سمت رزکسیون بازمی‌گردانند؛ عدم تطابق ارتفاع در محل اتصال قدامی گرافت. پروتز <b>implant-supported</b> → بهداشت ایمپلنت؛ پروتز <b>متحرک</b> → تحریک، عملکرد فولکروم‌مانند و حرکت.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip"><span class="t">منابع جلسه</span>
+  McCracken's Removable Partial Prosthodontics (ویرایش ۱۱، ۲۰۰۸) — Stewart's Clinical Removable Partial Prosthodontics (ویرایش ۲) — Miller &amp; Grasso, Removable Partial Prosthodontics (ویرایش ۲).</div>
+
+  <div class="summary">
+    <h3>خلاصهٔ جلسه ۱۰ (RPD در Maxillofacial)</h3>
+    <ul>
+      <li><b>تعریف:</b> بازسازی آناتومیک/عملکردی/زیبایی با جایگزین غیرزنده. طبقه‌بندی علت: اکتسابی/مادرزادی/تکاملی؛ نوع: خارج/داخل‌دهانی، موقت/دائمی، درمانی.</li>
+      <li><b>۳ فاز:</b> قبل و حین عمل (حفظ دندان استراتژیک، اندو/کشیدن قبل از جراحی) → موقت (تمرکز بلع و تکلم، ابتوراتور) → دائمی (پس از بلوغ بافت).</li>
+      <li><b>نکتهٔ کلیدی:</b> در گسستگی فک پایین، مراقبت پروتزی موقت اندیکاسیون ندارد. نقص فک بالا → ارتباط با بینی/سینوس.</li>
+      <li><b>ابتوراتور موقت:</b> جداکردن دهان از بینی؛ تثبیت با وایرینگ به دندان/استخوان از آندرکات‌ها؛ پروتز رزینی wire-retained.</li>
+      <li><b>فاز موقت ۳–۴ ماه.</b> عوارض: تروما، گیر ناکافی، obturation ناقص (نشت)، اثرات شیمی/تابش (موکوزیت، xerostomia، استئورادیونکروز). سیل: سر افقی هنگام بلع.</li>
+      <li><b>منبع ساپورت:</b> دندان‌دار→دندان؛ چند دندان خلفی→دندان+مخاط؛ بی‌دندان→مخاط/ریج. ساپورت کاملاً مخاطی برای بار عملکردی نامناسب است.</li>
+      <li><b>فک بالا:</b> ابتوراتور/speech aid؛ حفظ دندان = اثر تثبیت‌کننده؛ اگر &lt;۱/۳ کام نرم بماند کل کام برداشته می‌شود؛ نقص ≤۳cm بازسازی، بزرگ‌تر→پروتز.</li>
+      <li><b>فک پایین:</b> رزکسیون لترال/قدامی/همی؛ discontinuity→توان‌بخشی غیرقابل‌پیش‌بینی؛ reconstruction plate زیبایی را بهتر می‌کند. گرافت: مخاط چسبندهٔ ۲–۳mm، استخوان vital، ایده‌آل = ایمپلنت؛ فیبولا برای فک پایین.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+
+<!-- ============ FINAL SUMMARY ============ -->
+<section class="lec" id="final">
+  <div class="lec-head">
+    <div class="badge">★</div>
+    <h2>خلاصهٔ نهایی و نکات کلیدی امتحانی
+      <span class="src">Cross-cutting Exam Synthesis — جمع‌بندی هر ۸ جلسه</span>
+    </h2>
+  </div>
+
+  <h3 class="sub">۱) قلب موضوع: Tooth-Supported در برابر Free-End (Distal Extension)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>مقایسهٔ سرتاسری دو نوع پروتز (پربسامدترین تم امتحانی)</caption>
+    <thead><tr><th>ویژگی</th><th>Tooth-Supported (Cl III, IV)</th><th>Free-End / Tooth &amp; Tissue (Cl I, II)</th></tr></thead>
+    <tbody>
+      <tr><th>ساپورت</th><td>اباتمنت (دندان)</td><td>ترکیب دندان + بافت نرم</td></tr>
+      <tr><th>قالبگیری</th><td>آناتومیک کافی است</td><td>آناتومیک <b>و</b> فانکشنال (تکنیک <b>altered cast</b>)</td></tr>
+      <tr><th>گیر غیرمستقیم (IR)</th><td>لازم نیست (چرخش دنچر ندارد)</td><td><b>الزامی</b> (مقاومت در برابر بلندشدن دنچر از بافت)</td></tr>
+      <tr><th>نوع بیس</th><td>فلزی — نیاز به reline نیست</td><td>آکریلی — به‌دلیل تحلیل استخوان، reline پیش‌بینی می‌شود</td></tr>
+      <tr><th>نوع کلاسپ</th><td>سایر کلاسپ‌ها (سوپرابالج)</td><td><b>WW یا RPI</b> (اینفرابالج)</td></tr>
+      <tr><th>تغییرات بافتی</th><td>کمتر</td><td>بیشتر ← تماس و گسترش حداکثری لازم</td></tr>
+      <tr><th>اولویت کلی</th><td><b>ترجیح داده می‌شود</b> (حرکت کمتر)</td><td>تا حد ممکن از آن دوری می‌کنیم</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">۲) جدول کلاس کندی ↔ اکلوژن مطلوب</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اکلوژن بر اساس کلاس و فک</caption>
+    <thead><tr><th>کلاس</th><th>فک بالا</th><th>فک پایین</th></tr></thead>
+    <tbody>
+      <tr><th>Cl I</th><td>بالانس دوطرفه</td><td>uni-lateral group function</td></tr>
+      <tr><th>Cl II</th><td>uni-lateral group function</td><td>بالانس دوطرفه</td></tr>
+      <tr><th>Cl III / IV</th><td colspan="2">بر اساس دندان موجود؛ یک فک کامل + پارسیل ← bilateral balance</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">۳) نقاط طلایی هر جلسه (مرور سریع)</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>کلیدی‌ترین نکتهٔ قابل آزمون هر جلسه</caption>
+    <thead><tr><th>جلسه</th><th>نکتهٔ طلایی</th></tr></thead>
+    <tbody>
+      <tr><th>۱ — تشخیص/طرح درمان</th><td>پارسیل آخرین مرحلهٔ طرح درمان است ولی تصمیمش اول گرفته می‌شود. دندان با ساپورت پریودنتال &lt;۵۰٪ = hopeless. inlay/onlay برای پایهٔ پارسیل مناسب نیست؛ روکش تمام‌پوششی لازم.</td></tr>
+      <tr><th>۲ — آرتیکولاتور/فیس‌بو</th><td>پارسیل ← آرتیکولاتور نیمه‌قابل‌تنظیم. میانگین‌ها: شاخص خلفی ۳۰°، بنت ۱۵°، میز ثنایایی ۰°. ماده ثبت بایت <b>نباید سوراخ</b> شود.</td></tr>
+      <tr><th>۳ — بیومکانیک</th><td>جابجایی مخاط ≈ <b>۱۰ برابر</b> PDL. اهرم نوع ۱ نامناسب؛ IR اهرم را به نوع ۲ تبدیل می‌کند. پروتز ژله‌ای از نظر rigidity مردود.</td></tr>
+      <tr><th>۴ — مواد قالبگیری</th><td>قالب اولیهٔ پارسیل = <b>آلژینات</b>. مواد rigid در پارسیل به‌دلیل آندرکات کاربرد ندارند. block out با dead wax. سینرژیسم/imbibition در آلژینات نباید رخ دهد.</td></tr>
+      <tr><th>۵ — Altered Cast (فصل ۱۷)</th><td>اصل طلایی: <b>فریم باید سرجایش بنشیند</b>. relief = 1mm. اندیکاسیون اصلی: دیستال‌اکستنشن فک پایین. رست را قدامی‌تر ببریم.</td></tr>
+      <tr><th>۶ — رابطه/اکلوژن</th><td>استاپ خلفی ← CO؛ بدون آن ← CR. canine rise = اکلوژن مطلوب. free-way space ۲–۴mm. ثبت VD در حالت Upright.</td></tr>
+      <tr><th>۷ — انتخاب/Try-in/تحویل</th><td>میدلاین بالا-صورت مهم (نه بالا-پایین). تحویل = مهم‌ترین جلسه. PIP خطوط موازی = مطلوب. چشم گاو (سفید=prematurity).</td></tr>
+      <tr><th>۸ — 5R/طراحی</th><td>عامل شکست رست = <b>تراش ناکافی</b>. U-shape بدترین اتصال‌دهنده. رست انسیزال بدترین. RPI = رست مزیال + پروگزیمال پلیت دیستال + I-bar.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">۴) ثابت‌ها و اعداد کلیدی</h3>
+  <div class="tbl-scroll">
+  <table>
+    <caption>اعداد و ثابت‌های پرتکرار امتحانی</caption>
+    <thead><tr><th>مورد</th><th>مقدار</th></tr></thead>
+    <tbody>
+      <tr><th>جابجایی PDL در برابر مخاط</th><td>PDL ≈ ۰٫۲۵mm — مخاط ≈ ۲mm (≈۱۰ برابر)</td></tr>
+      <tr><th>Free-way space</th><td>۲ تا ۴ میلی‌متر</td></tr>
+      <tr><th>relief wax (altered cast)</th><td>۱ میلی‌متر</td></tr>
+      <tr><th>ضخامت الاستومر برای ثبت رابطه</th><td>&gt; ۲ میلی‌متر</td></tr>
+      <tr><th>حداکثر ضخامت پلی‌سولفاید با دقت کافی</th><td>۳ میلی‌متر</td></tr>
+      <tr><th>ضخامت کاربن</th><td>۴ تا ۱۲۰ میکرون</td></tr>
+      <tr><th>عمق وستیبول (اتصال‌دهندهٔ پایین)</th><td>۸ میلی‌متر</td></tr>
+      <tr><th>حداقل ضخامت کست در نازک‌ترین نقطه</th><td>۱٫۵ میلی‌متر</td></tr>
+      <tr><th>اصلاح بوردر تری اختصاصی</th><td>حداکثر ۲ تا ۴ میلی‌متر (بیشتر ← آکریل اضافه شود)</td></tr>
+      <tr><th>آندرکات مناسب WW</th><td>۱۸ گیج (مزیال دندان)</td></tr>
+      <tr><th>ساپورت پریودنتال مرز hopeless</th><td>از دست رفتن &gt; ۵۰٪</td></tr>
+      <tr><th>استراحت بافت لثه</th><td>۶ تا ۸ ساعت در روز</td></tr>
+      <tr><th>فالوآپ پس از تحویل</th><td>۱–۲ روز (recall اول)، سپس هر ۶ ماه</td></tr>
+      <tr><th>پروتز موقت</th><td>۲۴ ساعت/روز، ۱ تا ۳ ماه</td></tr>
+      <tr><th>زمان سازگاری تکلم</th><td>حداقل ۱ تا ۲ ماه</td></tr>
+      <tr><th>حداکثر دندان قابل جایگزینی با فونتیک ثابت</th><td>۳ تا ۴ دندان</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="summary">
+    <h3>جمع‌بندی نهایی در یک نگاه</h3>
+    <ul>
+      <li><b>زنجیرهٔ درمان:</b> تشخیص/طرح درمان (ج۱) ← مانت با فیس‌بو روی آرتیکولاتور نیمه‌قابل‌تنظیم (ج۲) ← درک بیومکانیک و طراحی (ج۳) ← قالبگیری اولیه (آلژینات) و نهایی (الاستومر) با تری اختصاصی (ج۴) ← مدیریت distal extension با altered cast (ج۵) ← ثبت رابطه و اکلوژن (ج۶) ← انتخاب/چیدن دندان، try-in و تحویل (ج۷) ← نگهداری و اصلاح با 5R (ج۸).</li>
+      <li><b>محور تکرارشونده:</b> همه‌چیز حول تفاوت <b>tooth-supported</b> (ساده‌تر، فلزی، بدون IR، بدون reline) و <b>free-end</b> (پیچیده‌تر، آکریلی، IR و altered cast و RPI/WW و reline دوره‌ای) می‌چرخد.</li>
+      <li><b>اصول فیزیک:</b> مخاط ۱۰ برابر PDL جابجا می‌شود ← هدف تقسیم مساوی نیرو بین دندان و بافت؛ IR اهرم نوع ۱ مخرب را به نوع ۲ امن تبدیل می‌کند؛ کفش اسکی: گسترش بیشتر = فشار کمتر.</li>
+      <li><b>سوروی:</b> زیر HOC = گیر (اینفرابالج/سوپرابالج)، بالای HOC = ثبات؛ اصلاح اباتمنت افزایشی (روکش/ماده) یا کاهشی (تراش).</li>
+      <li><b>اکلوژن مطلوب:</b> canine-protected (mutually protected)؛ خلفی‌ها در حرکت طرفی نباید تماس کنند.</li>
+      <li><b>نکات «بدترین/بهترین»:</b> بدترین اتصال‌دهنده = U-shape؛ بدترین رست = انسیزال؛ عامل شکست رست = تراش ناکافی؛ بهترین مادهٔ سطح بافتی = PIP؛ بهترین تماس کلاسپ = دندان سالم.</li>
+    </ul>
+  </div>
+  <a class="backtop" href="#top">↑ بازگشت به فهرست</a>
+</section>
+
+</div><!-- /.wrap -->
+
+<footer>
+  جزوهٔ جامع پروتز پیشرفته — دکتر ابریشم &nbsp;•&nbsp; گردآوری و تنظیم ۸ جلسه در قالب جداول مقایسه‌ای &nbsp;•&nbsp; منابع: مک‌کراکن ۲۰۱۷ (فصل ۱۶ و ۱۷) و جزوات کلاسی
+</footer>
+
+</body>
+</html>

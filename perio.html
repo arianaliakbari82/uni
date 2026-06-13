@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>درس‌نامهٔ جامع پریودانتیکس ۳</title>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<style>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/vazirmatn/33.0.3/Vazirmatn-font-face.css');
+
+:root{
+  --paper:#f6f1e7;
+  --paper-2:#efe7d6;
+  --ink:#22312f;
+  --ink-soft:#3f534f;
+  --petrol:#0f5a55;
+  --petrol-dark:#0a3f3b;
+  --petrol-2:#157a72;
+  --coral:#c8512b;
+  --coral-soft:#e8956f;
+  --amber:#caa14a;
+  --line:#d8cdb6;
+  --line-2:#c2b596;
+  --card:#fffdf7;
+  --good:#1c7a4b;
+  --warn:#b9762a;
+  --bad:#b53a2c;
+  --shadow:0 4px 18px rgba(34,49,47,.10);
+  --nav-w:300px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{
+  margin:0;
+  direction:rtl;
+  font-family:'Vazirmatn','Tahoma','Segoe UI',sans-serif;
+  background:
+    radial-gradient(1200px 500px at 90% -10%, rgba(21,122,114,.08), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(200,81,43,.07), transparent 60%),
+    var(--paper);
+  color:var(--ink);
+  line-height:2;
+  font-size:16.5px;
+}
+.en{unicode-bidi:isolate;font-family:'Segoe UI','Vazirmatn',sans-serif;font-weight:600;letter-spacing:.2px;}
+.ltr{direction:ltr;unicode-bidi:isolate;text-align:left;}
+
+/* ===== Layout ===== */
+.shell{display:flex;min-height:100vh;}
+nav#side{
+  width:var(--nav-w);min-width:var(--nav-w);
+  background:linear-gradient(180deg,var(--petrol-dark),var(--petrol));
+  color:#eef6f4;position:sticky;top:0;height:100vh;overflow-y:auto;
+  padding:0 0 40px;box-shadow:-2px 0 24px rgba(10,63,59,.25);z-index:50;
+}
+nav#side .brand{
+  padding:26px 22px 18px;border-bottom:1px solid rgba(255,255,255,.12);
+  position:sticky;top:0;background:var(--petrol-dark);z-index:2;
+}
+nav#side .brand h1{font-size:20px;margin:0 0 4px;letter-spacing:.3px;}
+nav#side .brand span{font-size:12.5px;opacity:.8;font-weight:400;}
+nav#side .navgroup{padding:8px 0;}
+nav#side .navgroup>.gt{
+  padding:12px 22px 6px;font-size:13px;font-weight:700;color:var(--amber);
+  text-transform:none;opacity:.95;
+}
+nav#side a{
+  display:block;color:#dfeeeb;text-decoration:none;font-size:14px;
+  padding:7px 22px 7px 16px;border-right:3px solid transparent;
+  transition:.18s;opacity:.92;
+}
+nav#side a.sub{padding-right:38px;font-size:13px;opacity:.78;}
+nav#side a:hover{background:rgba(255,255,255,.08);opacity:1;}
+nav#side a.active{background:rgba(202,161,74,.18);border-right-color:var(--amber);color:#fff;opacity:1;font-weight:700;}
+
+main{flex:1;min-width:0;padding:0 0 90px;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
+
+/* ===== Hero ===== */
+header.hero{
+  background:linear-gradient(135deg,var(--petrol),var(--petrol-2));
+  color:#fff;padding:46px 0 40px;position:relative;overflow:hidden;
+  border-bottom:5px solid var(--amber);
+}
+header.hero::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(420px 220px at 12% 130%, rgba(202,161,74,.35), transparent 70%);
+  pointer-events:none;
+}
+header.hero h1{margin:0 0 8px;font-size:32px;letter-spacing:.4px;}
+header.hero p{margin:4px 0;opacity:.92;font-size:15px;}
+.hero-tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px;}
+.hero-tags a{
+  background:rgba(255,255,255,.14);color:#fff;text-decoration:none;
+  padding:6px 14px;border-radius:30px;font-size:13px;border:1px solid rgba(255,255,255,.22);
+  transition:.18s;
+}
+.hero-tags a:hover{background:var(--amber);color:var(--petrol-dark);font-weight:700;}
+
+/* ===== Sections ===== */
+section.topic{padding-top:34px;margin-top:10px;}
+.sec-head{
+  display:flex;align-items:center;gap:14px;margin:30px 0 6px;
+  border-bottom:3px solid var(--petrol);padding-bottom:10px;
+}
+.sec-head .num{
+  background:var(--petrol);color:#fff;width:42px;height:42px;min-width:42px;
+  border-radius:12px;display:grid;place-items:center;font-size:20px;font-weight:700;
+  box-shadow:var(--shadow);
+}
+.sec-head h2{margin:0;font-size:26px;color:var(--petrol-dark);}
+.sec-head .meta{margin-right:auto;font-size:12.5px;color:var(--ink-soft);text-align:left;}
+
+h3{
+  color:var(--coral);font-size:20px;margin:34px 0 10px;
+  padding-right:14px;border-right:5px solid var(--coral-soft);
+}
+h4{color:var(--petrol-dark);font-size:17px;margin:22px 0 8px;}
+p{margin:10px 0;}
+.lead{font-size:17px;color:var(--ink-soft);background:var(--paper-2);
+  border-radius:12px;padding:14px 18px;border-right:4px solid var(--amber);}
+
+ul,ol{margin:10px 0;padding-right:24px;}
+li{margin:6px 0;}
+
+/* ===== Tables ===== */
+.tablewrap{overflow-x:auto;margin:16px 0 8px;border-radius:14px;box-shadow:var(--shadow);
+  border:1px solid var(--line);background:var(--card);}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px;}
+caption{caption-side:top;text-align:right;padding:12px 16px 6px;font-weight:700;color:var(--petrol-dark);font-size:15px;}
+th,td{padding:11px 14px;text-align:right;vertical-align:top;border-bottom:1px solid var(--line);}
+thead th{background:var(--petrol);color:#fff;position:sticky;top:0;font-weight:700;border-bottom:none;}
+tbody tr:nth-child(even){background:rgba(15,90,85,.045);}
+tbody tr:hover{background:rgba(202,161,74,.12);}
+td.k{font-weight:700;color:var(--petrol-dark);white-space:nowrap;}
+.tc{text-align:center;}
+
+/* ===== Callouts ===== */
+.box{border-radius:12px;padding:13px 16px 13px 16px;margin:16px 0;border-right:5px solid;
+  position:relative;background:var(--card);box-shadow:0 2px 8px rgba(34,49,47,.06);}
+.box .bt{font-weight:700;display:block;margin-bottom:3px;}
+.box.note{border-color:var(--petrol-2);background:#eef6f4;}
+.box.note .bt{color:var(--petrol-dark);}
+.box.tip{border-color:var(--amber);background:#fbf4e4;}
+.box.tip .bt{color:var(--warn);}
+.box.warn{border-color:var(--bad);background:#fbeae6;}
+.box.warn .bt{color:var(--bad);}
+.box.exam{border-color:var(--coral);background:#fdeee7;}
+.box.exam .bt{color:var(--coral);}
+
+.pill{display:inline-block;background:var(--petrol);color:#fff;border-radius:20px;
+  padding:1px 10px;font-size:12px;font-weight:700;margin:0 2px;}
+.pill.c{background:var(--coral);}
+.pill.a{background:var(--amber);color:var(--petrol-dark);}
+.pill.g{background:var(--good);}
+
+mark{background:#ffe9a8;padding:0 3px;border-radius:4px;}
+.divider{height:1px;background:var(--line);margin:30px 0;border:0;}
+
+/* ===== Back to top ===== */
+#top{position:fixed;bottom:22px;left:22px;background:var(--coral);color:#fff;
+  border:none;width:48px;height:48px;border-radius:50%;font-size:20px;cursor:pointer;
+  box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:60;}
+#top.show{opacity:1;pointer-events:auto;}
+#top:hover{background:var(--coral-soft);}
+
+/* ===== Mobile ===== */
+.menu-btn{display:none;}
+@media(max-width:980px){
+  nav#side{position:fixed;right:0;top:0;transform:translateX(100%);transition:.3s;}
+  nav#side.open{transform:translateX(0);}
+  .menu-btn{display:flex;position:fixed;top:14px;right:14px;z-index:70;
+    background:var(--petrol);color:#fff;border:none;border-radius:10px;
+    width:46px;height:46px;font-size:22px;align-items:center;justify-content:center;
+    box-shadow:var(--shadow);cursor:pointer;}
+  .scrim{display:none;position:fixed;inset:0;background:rgba(10,63,59,.45);z-index:45;}
+  .scrim.open{display:block;}
+  header.hero{padding-top:54px;}
+  header.hero h1{font-size:25px;}
+  .sec-head h2{font-size:21px;}
+  body{font-size:16px;}
+}
+</style>
+</head>
+<body>
+
+<button class="menu-btn" id="menuBtn" aria-label="فهرست">☰</button>
+<div class="scrim" id="scrim"></div>
+
+<div class="shell">
+
+<!-- ===================== SIDEBAR NAV ===================== -->
+<nav id="side">
+  <div class="brand">
+    <h1>پریودانتیکس ۳</h1>
+    <span>درس‌نامهٔ جامع و یکپارچه — قابل مرور برای امتحان</span>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">بخش ۱ — درمان حمایتی پریودنتال</div>
+    <a href="#s1" class="sub">۱-۰ مقدمه و مفاهیم پایه</a>
+    <a href="#s1-phases" class="sub">۱-۱ چهار فاز درمان</a>
+    <a href="#s1-epi" class="sub">۱-۲ آمار اپیدمیولوژی و مراجعه</a>
+    <a href="#s1-reasons" class="sub">۱-۳ دلایل منطقی recall</a>
+    <a href="#s1-srp" class="sub">۱-۴ تغییرات میکروبی پس از SRP</a>
+    <a href="#s1-visit" class="sub">۱-۵ جلسهٔ recall (Box 78-1)</a>
+    <a href="#s1-radio" class="sub">۱-۶ بررسی رادیوگرافی</a>
+    <a href="#s1-recur" class="sub">۱-۷ عود بیماری و شکست درمان</a>
+    <a href="#s1-merin" class="sub">۱-۸ جدول مرین (Merin)</a>
+    <a href="#s1-refer" class="sub">۱-۹ عمومی یا متخصص؟ + ارجاع</a>
+    <a href="#s1-refract" class="sub">۱-۱۰ پریودنتیت راجعه + آنتی‌بیوتیک</a>
+    <a href="#s1-implant" class="sub">۱-۱۱ Implantitis و نگهداری ایمپلنت</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">بخش ۲ — ضایعات اندو-پریو</div>
+    <a href="#s2" class="sub">۲-۱ راه‌های ارتباط آناتومیک</a>
+    <a href="#s2-routes" class="sub">۲-۲ راه‌های غیرآناتومیک + عوامل</a>
+    <a href="#s2-class" class="sub">۲-۳ طبقه‌بندی بیماری پالپ</a>
+    <a href="#s2-perirad" class="sub">۲-۴ طبقه‌بندی پری‌رادیکولار</a>
+    <a href="#s2-types" class="sub">۲-۵ انواع ضایعات اندو-پریو</a>
+    <a href="#s2-dx" class="sub">۲-۶ تشخیص و درد</a>
+    <a href="#s2-tx" class="sub">۲-۷ درمان، عفونت خارج‌ریشه، آبسه</a>
+    <a href="#s2-implant" class="sub">۲-۸ retrograde peri-implantitis</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">بخش ۳ — لیزر در پریودنتیکس</div>
+    <a href="#s3" class="sub">۳-۱ تعریف و اثر بر بافت</a>
+    <a href="#s3-types" class="sub">۳-۲ انواع لیزر و کاربرد</a>
+    <a href="#s3-bladevs" class="sub">۳-۳ لیزر در برابر تیغ</a>
+    <a href="#s3-uses" class="sub">۳-۴ کاربردهای درمانی</a>
+    <a href="#s3-pdt" class="sub">۳-۵ PDT و LLLT و LANAP</a>
+    <a href="#s3-comp" class="sub">۳-۶ عوارض و دما</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">بخش ۴ — جراحی پلاستیک پریودنتال</div>
+    <a href="#s4" class="sub">۴-۱ تعاریف و اهداف</a>
+    <a href="#s4-struct" class="sub">۴-۲ لثهٔ چسبنده، وستیبول، فرنوم</a>
+    <a href="#s4-etio" class="sub">۴-۳ اتیولوژی تحلیل لثه</a>
+    <a href="#s4-tech" class="sub">۴-۴ تکنیک‌های افزایش لثه</a>
+    <a href="#s4-fgg" class="sub">۴-۵ FGG و تکنیک کلاسیک</a>
+    <a href="#s4-variants" class="sub">۴-۶ Accordion / Strip / Combination</a>
+    <a href="#s4-healing" class="sub">۴-۷ ترمیم پیوند (روزشمار)</a>
+    <a href="#s4-ctg" class="sub">۴-۸ CTG و فلپ اپیکالی</a>
+    <a href="#s4-miller" class="sub">۴-۹ طبقه‌بندی میلر</a>
+    <a href="#s4-cover" class="sub">۴-۱۰ تکنیک‌های پوشش ریشه</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">بخش ۵ — ادامهٔ جراحی پلاستیک (پوشش ریشه)</div>
+    <a href="#s5" class="sub">۵-۱ پدیکل گرفت‌ها (انواع)</a>
+    <a href="#s5-lateral" class="sub">۵-۲ Laterally positioned</a>
+    <a href="#s5-coronal" class="sub">۵-۳ Coronally positioned</a>
+    <a href="#s5-semilunar" class="sub">۵-۴ Semilunar</a>
+    <a href="#s5-langer" class="sub">۵-۵ CTG ساب‌اپیتلیال (Langer)</a>
+    <a href="#s5-gtr" class="sub">۵-۶ GTR در پوشش ریشه</a>
+    <a href="#s5-tunnel" class="sub">۵-۷ Pouch &amp; Tunnel</a>
+    <a href="#s5-papilla" class="sub">۵-۸ بازسازی پاپیلا (Tarnow)</a>
+    <a href="#s5-gummy" class="sub">۵-۹ Gummy smile و فرنوم</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">بخش ۶ — بازسازی پریودنتال (Regeneration)</div>
+    <a href="#s6" class="sub">۶-۱ Repair در برابر Regeneration</a>
+    <a href="#s6-eval" class="sub">۶-۲ روش‌های ارزیابی</a>
+    <a href="#s6-graftless" class="sub">۶-۳ چرا گاهی گرفت لازم نیست</a>
+    <a href="#s6-epi" class="sub">۶-۴ حذف اپیتلیوم</a>
+    <a href="#s6-gtr" class="sub">۶-۵ GTR و انواع غشا</a>
+    <a href="#s6-root" class="sub">۶-۶ Biomodification سطح ریشه</a>
+    <a href="#s6-bio" class="sub">۶-۷ فاکتورهای رشد و Emdogain</a>
+    <a href="#s6-graft" class="sub">۶-۸ مواد پیوندی استخوانی</a>
+    <a href="#s6-te" class="sub">۶-۹ مهندسی بافت و درخت تصمیم</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">بخش ۷ — نقش مکمل ارتودنسی</div>
+    <a href="#s7" class="sub">۷-۱ فواید ارتو برای بیمار پریو</a>
+    <a href="#s7-pre" class="sub">۷-۲ جراحی استخوانی پیش‌ارتو</a>
+    <a href="#s7-crater" class="sub">۷-۳ Crater و Hemiseptal</a>
+    <a href="#s7-bracket" class="sub">۷-۴ موقعیت براکت</a>
+    <a href="#s7-furca" class="sub">۷-۵ فورکا و ارتودنسی</a>
+    <a href="#s7-fracture" class="sub">۷-۶ ریشهٔ شکسته و Forced Eruption</a>
+    <a href="#s7-margin" class="sub">۷-۷ مارژین لثه و امبراژور</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">بخش ۸ — آماده‌سازی برای ترمیمی</div>
+    <a href="#s8" class="sub">۸-۱ چرا سلامت پریو مقدم است</a>
+    <a href="#s8-tfo" class="sub">۸-۲ نیروهای تروماتیک (TFO)</a>
+    <a href="#s8-phases" class="sub">۸-۳ مراحل و کنترل بیماری فعال</a>
+    <a href="#s8-pre" class="sub">۸-۴ جراحی پیش از پروتز</a>
+    <a href="#s8-ridge" class="sub">۸-۵ حفظ ریج (Socket Preservation)</a>
+    <a href="#s8-cl" class="sub">۸-۶ CL و عرض بیولوژیک</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="gt">جمع‌بندی</div>
+    <a href="#summary" class="sub">★ مرور نهایی و نکات کلیدی</a>
+  </div>
+</nav>
+
+<!-- ===================== MAIN ===================== -->
+<main>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>درس‌نامهٔ جامع پریودانتیکس ۳</h1>
+    <p>گردآوری و تدریس کامل مباحث: درمان حمایتی، ضایعات اندو-پریو، لیزر، جراحی پلاستیک و پوشش ریشه، بازسازی پریودنتال، نقش ارتودنسی، و آماده‌سازی برای درمان ترمیمی.</p>
+    <p style="font-size:13.5px;opacity:.85;">مدرسان: استاد رشیدی، استاد عرب و استاد هرندی — رفرنس: کارانزا ۲۰۱۹ (فصل‌های ۵۶، ۶۳، ۶۵، ۷۲). این درس‌نامه چنان تنظیم شده که نیازی به بازگشت به جزوهٔ اصلی نباشد.</p>
+    <div class="hero-tags">
+      <a href="#s1">۱ · درمان حمایتی</a>
+      <a href="#s2">۲ · اندو-پریو</a>
+      <a href="#s3">۳ · لیزر</a>
+      <a href="#s4">۴ · جراحی پلاستیک</a>
+      <a href="#s5">۵ · پوشش ریشه</a>
+      <a href="#s6">۶ · بازسازی</a>
+      <a href="#s7">۷ · ارتودنسی</a>
+      <a href="#s8">۸ · ترمیمی</a>
+      <a href="#summary">★ مرور نهایی</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ====================================================== -->
+<!-- ================ SECTION 1: MAINTENANCE ============== -->
+<!-- ====================================================== -->
+<section class="topic" id="s1">
+  <div class="sec-head">
+    <div class="num">۱</div>
+    <h2>درمان حمایتی پریودنتال (فاز نگهدارنده / Maintenance)</h2>
+    <div class="meta">استاد رشیدی<br>(ادغام دو جزوه)</div>
+  </div>
+
+  <p class="lead">حفظ نتیجهٔ درمان فاز یک، دقیقاً به اندازهٔ خودِ درمان پریودنتال اهمیت دارد. این حفظ نتیجه از طریق جلسات <span class="en">recall</span> یا فاز <span class="en">maintenance</span> به دست می‌آید.</p>
+
+  <h4>چرا بیماری پریودنتال هرگز «تمام» نمی‌شود؟</h4>
+  <p>بیماری‌های پریودنتال به‌سرعت و بلافاصله بعد از ابتلا اتفاق نمی‌افتند؛ مانند فردی مستعد دیابت که با پرهیز و دارو کنترل می‌شود، اما اگر این روند کنار گذاشته شود دوباره مستعد عوارض می‌شود. در پریودنتال هم اگر فردی یک بار به پریودنتیت مبتلا شود، باز هم مستعد است؛ بنابراین <mark>استعداد ابتلا به پریودنتیت در طول زندگی فرد ثابت است</mark> و به تعامل بین سیستم دفاعی میزبان و باکتری‌های پاتوژن بستگی دارد.</p>
+  <ul>
+    <li>ممکن است فردی سال‌ها بهداشت دهانی مناسبی نداشته باشد ولی پریودنتیت نگیرد؛ اگر تعامل در حالت تعادل باشد بیماری <span class="en">continuous</span> نامیده می‌شود.</li>
+    <li>ممکن است جینجیویت/التهاب لثه‌ای وجود داشته باشد که هیچ‌وقت تبدیل به پریودنتیت نشود.</li>
+    <li><strong>قاعدهٔ کلیدی:</strong> همهٔ پریودنتیت‌ها از جینجیویت شروع شده‌اند، اما لزوماً همهٔ جینجیویت‌ها به پریودنتیت تبدیل نمی‌شوند.</li>
+  </ul>
+
+  <div class="box note">
+    <span class="bt">سیستم دفاعی میزبان شامل:</span>
+    بزاق · سلول‌های <span class="en">PMN</span> ساکن در شیار لثه (اولین سلول‌های دفاعی) · سیستم دفاعی اکتسابی (مراحل بعد). وقتی این سیستم نتواند روند را محدود کند، بیماری پریودنتال اتفاق می‌افتد. به‌محض مختل‌شدن کنترل بهداشت دهان، فرد می‌تواند مجدداً مبتلا شود — به همین دلیل فاز نگهدارنده اهمیت دارد.
+  </div>
+
+  <!-- 1-1 PHASES -->
+  <h3 id="s1-phases">۱-۱ — چهار فاز درمان پریودنتال</h3>
+  <div class="box exam">
+    <span class="bt">ترتیب صحیح فازها (بسیار مهم):</span>
+    فازها به ترتیب عددی اجرا نمی‌شوند. توالی صحیح این است:
+    <div class="ltr" style="margin-top:6px;font-weight:700;">
+      Phase I → Re‑evaluation → Phase IV → Phase II → Phase IV → Phase III → Phase IV
+    </div>
+    یعنی بلافاصله بعد از فاز ۱ و ارزیابی مجدد، وارد فاز ۴ می‌شویم؛ سپس فاز ۲ و دوباره فاز ۴؛ سپس فاز ۳ و باز هم فاز ۴.
+  </div>
+
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۱ — چهار فاز درمان پریودنتال و محتوای هر فاز</caption>
+    <thead>
+      <tr><th>فاز</th><th>نام</th><th>چه کارهایی در این فاز انجام می‌شود</th><th>بعد از آن</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="k">فاز ۱</td>
+        <td class="k"><span class="en">Etiotropic</span><br>(علت‌زدا)</td>
+        <td>هر چیزی که <span class="en">cause</span> بیماری باشد؛ محدود به <span class="en">scaling</span> و <span class="en">root planning</span> نیست: حذف باکتری و عوامل مستعد، مشاورهٔ تغذیه (کاهش مواد قندی؛ پوسیدگیِ حفره‌دار مخزن باکتری است)، دهانشویهٔ آنتی‌باکتریال، <strong>حذف پوسیدگی</strong> (سطح خشن + تجمع پلاک)، <strong>ترمیم‌های ساده</strong> (کلاس I و II)، و <strong>درمان ارتودنسی مینور</strong> (پلاک متحرک برای رفع <span class="en">crowding</span> تا کنترل پلاک بهتر شود).</td>
+        <td>ارزیابی مجدد، سپس فاز ۴</td>
+      </tr>
+      <tr>
+        <td class="k">فاز ۲</td>
+        <td class="k"><span class="en">Periodontal surgery</span></td>
+        <td>جراحی افزایش طول تاج، کاشت ایمپلنت، حذف پاکت، پیوند لثه و درمان‌های <span class="en">invasive</span> مثل درمان‌های اندودنتال.</td>
+        <td>بلافاصله فاز ۴</td>
+      </tr>
+      <tr>
+        <td class="k">فاز ۳</td>
+        <td class="k"><span class="en">Restorative</span></td>
+        <td>کارهای پروتزی مثل <span class="en">crown</span>، ترمیم‌های پست و کور، و هر کاری که نیاز به کار لابراتواری دارد. (ترمیم‌هایی که اول نیاز به اندو/جراحی/لابراتوار دارند اینجا می‌آیند، نه فاز ۱.)</td>
+        <td>دوباره فاز ۴</td>
+      </tr>
+      <tr>
+        <td class="k">فاز ۴</td>
+        <td class="k"><span class="en">Maintenance</span><br>(نگهدارنده/حمایتی)</td>
+        <td>حفظ نتایج همهٔ فازها در بلندمدت از طریق جلسات <span class="en">recall</span> منظم.</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box tip">
+    <span class="bt">نکتهٔ بالینی فاز ۱ پیش از ارجاع/SRP:</span>
+    برای بیماری که برای <span class="en">scaling root planning</span> می‌آید باید طرح درمان کامل باشد؛ توصیه به برداشت پوسیدگی‌ها در همان جلسه می‌شود تا دفعهٔ بعد پوسیدگی فعال در دهان نباشد (به‌خصوص اگر قرار است ارجاع شود). اگر همهٔ کارها را خودتان انجام می‌دهید، تا اولین فالوآپ (<strong>۳ تا ۴ هفته بعد</strong>) باید پوسیدگی‌ها حذف و فاز ۱ کامل شود.
+  </div>
+
+  <!-- 1-2 EPI -->
+  <h3 id="s1-epi">۱-۲ — آمار اپیدمیولوژی و توجیه بیمار برای مراجعه</h3>
+  <p>در جلسهٔ اول، پیش از شروع فاز ۱، کل طرح درمان را برای بیمار شرح دهید و توضیح دهید چرا دورهٔ <span class="en">recall</span> اهمیت دارد. باید نوع توضیح را با کاری که برای بیمار انجام می‌دهید تطبیق دهید (چه <span class="en">SRP</span> ساده باشد، چه جراحی یا <span class="en">regenerative</span>).</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۲ — یافته‌های اپیدمیولوژیک کلیدی</caption>
+    <thead><tr><th>یافته</th><th>عدد</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td class="k">از دست دادن دندان در مراجعهٔ نامنظم</td><td class="tc"><span class="pill c">×۵٫۶</span></td><td>افراد با مراجعات نامنظم ۵٫۶ برابر بیشتر شانس از دست دادن دندان دارند؛ مراجعه‌کنندگانِ منظم شانس کمتری دارند.</td></tr>
+      <tr><td class="k">Attachment loss در عدم همکاری</td><td class="tc"><span class="pill c">×۵۰</span></td><td>افرادی که در کارهای <span class="en">regenerative</span> همکاری نکردند و برای <span class="en">recall</span> مراجعه نکردند، تا ۵۰ برابر بیشتر دچار <span class="en">attachment loss</span> شدند نسبت به مراجعهٔ منظم.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box note">
+    <span class="bt">توزیع مراجعهٔ بیماران پس از فاز ۱:</span>
+    ≈ <span class="pill g">۱۶٪</span> درمان حمایتی کامل و مراجعهٔ منظم دارند · ≈ <span class="pill a">۵۰٪</span> مراجعات نامنظم (کارایی لازم را ندارد) · ≈ <span class="pill c">۳۴٪</span> اصلاً بعد از فاز ۱ مراجعه نمی‌کنند. <br><small>(در یک نسخه از جزوه عدد ۴۴٪ برای «عدم مراجعه برای recall» نیز ذکر شده است.)</small>
+  </div>
+
+  <p><strong>چرا بیمار اصلاً مراجعه می‌کند؟</strong> تأثیر پس از <span class="en">SRP</span> و فروکش التهاب چشمگیر است؛ <span class="en">bleeding</span> و بوی بد دهان (علت اصلی مراجعه) حذف می‌شوند. بیماری‌های پریودنتال درد واضحی ندارند و فقط درد مبهم و خارش دارند — برخلاف پوسیدگی و اندو که علت اصلی مراجعه «درد» است. علت دیگر مراجعه، «ارجاع» بیمار است. <strong>حفظ بلندمدت سیستم دندانی، ارتباط کامل با کیفیت <span class="en">maintenance</span> دارد.</strong></p>
+
+  <!-- 1-3 REASONS -->
+  <h3 id="s1-reasons">۱-۳ — دلایل منطقی برای مراجعهٔ بیمار (چرا recall ضروری است)</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۳ — هفت دلیل بیولوژیک/بالینی برای نیاز به جلسات recall</caption>
+    <thead><tr><th>#</th><th>دلیل</th><th>توضیح کامل</th></tr></thead>
+    <tbody>
+      <tr><td class="tc">۱</td><td class="k">SRP ناکامل بوده</td><td>التهاب سنگین → نبود دید → عدم کنترل کامل؛ <span class="en">sub gingival root planning</span> کامل نشده. می‌گوییم بیمار برگردد تا التهاب کم، خونریزی فروکش و حجم لثه کم شده و دید بهتر شود.</td></tr>
+      <tr><td class="tc">۲</td><td class="k">پاکت‌های عمیق</td><td>نهایتاً تا <strong>۵ میلی‌متر</strong> نفوذ ممکن است. قلم‌های <span class="en">after five</span> هم نمی‌توانند پاکت‌های عمیق‌تر از ۵ میلی‌متر را حذف کنند.</td></tr>
+      <tr><td class="tc">۳</td><td class="k">باکتری هرگز صفر نمی‌شود</td><td>حتی با عالی‌ترین <span class="en">SRP</span>، دید خوب و <span class="en">surgery</span>، در بررسی میکروسکوپی تعداد باکتری به صفر نمی‌رسد؛ فقط «دوز» بیماری کم می‌شود.</td></tr>
+      <tr><td class="tc">۴</td><td class="k">انتقال خانوادگی</td><td>باکتری‌های مولد پریودنتیت ممکن است بین اعضای خانواده از طریق <span class="en">oral</span> یا وسایل مشترک منتقل شوند → احتمال آلودگی مجدد.</td></tr>
+      <tr><td class="tc">۵</td><td class="k">ضعف Long Junctional Epithelium</td><td>پس از درمان، <span class="en">attachment</span> واقعی (فیبرهای پریودنتال) تشکیل نمی‌شود؛ در بهترین حالت <span class="en">long junctional epithelium</span> داریم که تقلیدی از ورود الیاف شارپی به سمنتوم و بسیار ضعیف‌تر از اتصال <span class="en">dentogingival unit</span> است. با کوچک‌ترین نفوذ باکتری گسسته می‌شود و آن فاصله دوباره مخزن پلاک می‌شود.</td></tr>
+      <tr><td class="tc">۶</td><td class="k">بازگشت کلونیزاسیون</td><td>اگر پلاک زیر لثه‌ای باقی بماند و سیستم ایمنی مهارش نکند، حدود <strong>۹ تا ۱۱ هفته</strong> کافی است تا به حالت اولیهٔ بیماری برگردیم → نیاز به کنترل پلاک خوب.</td></tr>
+      <tr><td class="tc">۷</td><td class="k">اثر «Control Defect» (پایش)</td><td>وقتی بیمار بداند رفتارش پایش می‌شود، کنترل پلاک بهتری دارد. فردی که آگاهانه می‌داند در مطالعهٔ بررسی عادات دهانی است، خیلی بیشتر از حالت واقعی بهداشت را رعایت می‌کند.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box warn">
+    <span class="bt">خطر پنهان — تخریب بدون علامت:</span>
+    اگر جرم و پلاک زیر لثه‌ای خوب حذف نشوند، ممکن است هنگام مراجعه <span class="en">bleeding</span> و اریتم واضح نباشد (چون جرم بالای لثه برداشته شده و لثهٔ مارجینال آرام است)، ولی <span class="en">attachment loss</span> به‌دور از چشم ادامه یابد. در <strong>پریودنتیت‌های مهاجم</strong> این حالت دیده می‌شود؛ باکتری‌ها توانایی <span class="en">invagine</span> و ورود به سالکوس را دارند، ادم/اریتم/تورم نیست، بیمار بدون علامت است و <strong>بدون پروبینگ نمی‌توان بیماری را تشخیص داد</strong>.
+  </div>
+
+  <!-- 1-4 SRP MICRO -->
+  <h3 id="s1-srp">۱-۴ — تغییرات میکروبی پس از یک جلسه SRP زیر لثه‌ای</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۴ — تغییر میکروفلورای پاکت پس از scaling زیر لثه‌ای</caption>
+    <thead><tr><th>میکروب</th><th>جهت تغییر</th><th>مدت</th></tr></thead>
+    <tbody>
+      <tr><td class="k">رادهای متحرک (<span class="en">motile rods</span>)</td><td><span class="pill g">کاهش</span></td><td>کاهش قابل‌توجه برای حدود <strong>۱ هفته</strong></td></tr>
+      <tr><td class="k">اسپیروکت‌ها (<span class="en">spirochetes</span>)</td><td><span class="pill g">کاهش</span></td><td>برای <strong>۷ هفته</strong> — <mark>طولانی‌ترین حذف</mark></td></tr>
+      <tr><td class="k">کوکسی‌های گرم‌مثبت</td><td><span class="pill c">افزایش</span></td><td>افزایش قابل‌توجه برای حدود <strong>۳ هفته</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip">
+    <span class="bt">نتیجه‌گیری:</span>
+    کاهش باکتری‌ها دائمی نیست و کلونیزاسیون مجدد رخ می‌دهد. برای حفظ این کاهش‌ها باید دوره‌های <span class="en">recall</span> کوتاه شوند. <strong>اولین ملاقات بعد از ۳ هفتهٔ اول، نباید طولانی‌تر از ۳ ماه باشد.</strong>
+  </div>
+
+  <!-- 1-5 VISIT -->
+  <h3 id="s1-visit">۱-۵ — ساختار جلسهٔ recall / maintenance (Box 78-1)</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۵ — مراحل و زمان‌بندی جلسهٔ نگهدارنده</caption>
+    <thead><tr><th>بخش</th><th>زمان تقریبی</th><th>اقدامات</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="k">Part I<br>معاینه</td>
+        <td class="tc">≈ ۱۴ دقیقه<br>(۱۲–۱۵)</td>
+        <td>۱) سلام و احوال‌پرسی · ۲) تغییرات تاریخچهٔ پزشکی · ۳) معاینهٔ پاتولوژیک دهان · ۴) وضعیت بهداشت دهان · ۵) تغییرات لثه (<span class="en">Plaque index</span> و <span class="en">Bleeding index</span>) · ۶) تغییرات عمق پاکت · ۷) تغییرات <span class="en">mobility</span> · ۸) تغییرات اکلوزال (مثلاً دندان کشیده‌شده) · ۹) پوسیدگی دندانی · ۱۰) وضعیت ترمیمی، پروتزی و ایمپلنت.</td>
+      </tr>
+      <tr>
+        <td class="k">Part II<br>درمان</td>
+        <td class="tc">≈ ۳۶ دقیقه</td>
+        <td>۱) تأکید و آموزش مجدد بهداشت دهان · ۲) <span class="en">Scaling</span> (اگر عوامل موضعی دوباره تجمع یافته‌اند) · ۳) <span class="en">Polishing</span> با خمیر پروفیلاکسی · ۴) <span class="en">Chemical irrigation</span> یا قرار دادن آنتی‌میکروبیال موضعی در نواحی که دسترسی خاص نداریم.</td>
+      </tr>
+      <tr>
+        <td class="k">Part III<br>گزارش، نظافت، زمان‌بندی</td>
+        <td class="tc">≈ ۱۰ دقیقه</td>
+        <td>۱) نوشتن گزارش در چارت · ۲) بحث تغییرات با بیمار · ۳) ضدعفونی سیستم برای بیمار بعدی · ۴) زمان‌بندی <span class="en">recall</span> بعدی · ۵) زمان‌بندی درمان پریودنتال تکمیلی · ۶) زمان‌بندی/ارجاع برای درمان ترمیمی یا پروتزی.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box note">
+    <span class="bt">دید فراتر از پریودنتال:</span>
+    در معاینه فقط دید پریودنتال نداشته باشید؛ ببینید چه عواملی تجمع پلاک را تشدید می‌کنند. مثلاً روکشی که بیش از حد زیر لثه رفته و به <strong>عرض بیولوژیک</strong> تجاوز کرده، <span class="en">attachment loss</span> و التهاب پایدار ایجاد می‌کند. سلامت پریودنتال در گرو سلامت ترمیمی، اندودنتال و پروتزی است.
+  </div>
+  <p><strong>پروسهٔ التهابی آبشاری است</strong> و تا حذف علت ادامه می‌یابد. التهاب ناشی از ورود بیش از حد روکش به زیر لثه می‌تواند منجر به <span class="en">bone loss</span>، تحلیل بافت نرم، نمایان‌شدن مارجین روکش (به‌دلیل تحلیل لثه) و <span class="en">food impaction</span> شود؛ پس دندان نیازمند جراحی افزایش طول تاج باید درمان شود.</p>
+
+  <!-- 1-6 RADIO -->
+  <h3 id="s1-radio">۱-۶ — بررسی رادیوگرافی در جلسات ارزیابی</h3>
+  <p>رادیوگرافی برای تعیین تغییرات ارتفاع استخوان و بررسی علائم <strong>ترومای اکلوزالی</strong> به‌کار می‌رود. تا اکلوژن تروماتیک برطرف نشود، مشکل پریودنتال هم برطرف نمی‌شود. <mark>ترومای اکلوزالی مسیر التهاب را عوض می‌کند</mark>؛ ممکن است التهاب بافت نرم نداشته باشید ولی در جای ترومای اکلوزالی <span class="en">bone loss</span> رخ دهد. همچنین در پریودنتیت مهاجم در زمان عدم فعالیت، نمای بالینی فریب‌دهنده است (حتی <span class="en">Stippling</span> برمی‌گردد و رنگ لثه نشانی از التهاب ندارد) و آنچه کمک می‌کند، حضور <span class="en">bone loss</span> گسترده و پاکت‌های عمیق در رادیوگرافی است.</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۶ — فواصل تجویز رادیوگرافی بر اساس وضعیت بیمار (کارانزا)</caption>
+    <thead><tr><th>وضعیت بیمار</th><th>نوع و فاصلهٔ رادیوگرافی</th></tr></thead>
+    <tbody>
+      <tr><td class="k">پوسیدگی بالینی یا <span class="en">high risk</span> پوسیدگی</td><td>بایت‌وینگ خلفی هر <strong>۶ تا ۱۸ ماه</strong></td></tr>
+      <tr><td class="k">پوسیدگی دارد ولی <span class="en">high risk</span> نیست</td><td>بایت‌وینگ خلفی هر <strong>۲۴ تا ۳۶ ماه</strong></td></tr>
+      <tr><td class="k">بیماری پریودنتال تحت کنترل خوب نیست</td><td>گرافی <span class="en">PA</span> و/یا بایت‌وینگ عمودی نواحی مشکل‌دار هر <strong>۱۲ تا ۲۴ ماه</strong>؛ <span class="en">full-mouth</span> هر ۳ تا ۵ سال</td></tr>
+      <tr><td class="k">سابقهٔ درمان پریودنتال با کنترل خوب</td><td>بایت‌وینگ هر <strong>۲۴ تا ۳۶ ماه</strong>؛ <span class="en">full-mouth</span> هر ۵ سال</td></tr>
+      <tr><td class="k">ایمپلنت دندانی (بیمار خودمان)</td><td>گرافی <span class="en">PA</span>/بایت‌وینگ عمودی در <strong>۶، ۱۲ و ۳۶ ماه</strong> پس از قرار دادن پروتز؛ سپس هر ۳۶ ماه (مگر بروز مشکل بالینی)</td></tr>
+      <tr><td class="k">بیمار انتقالی (ایمپلنت/پریو با دندانپزشک دیگر)</td><td>اگر <span class="en">full-mouth</span> ندارد → سری کامل درخواست شود. اگر طی <strong>۲۴ ماه</strong> اخیر <span class="en">full-mouth</span> دارد → فقط از نواحی ایمپلنت و نقص پریودنتال عکس گرفته شود.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip"><span class="bt">نکته:</span> شکل ضایعهٔ استخوانی هم بعد از <span class="en">scaling root planning</span> بهبود پیدا می‌کند و محدود به بافت نرم نیست؛ پس فاز <span class="en">maintenance</span> مخصوصاً در کاندیداهای جراحی پریودنتال مهم است.</div>
+
+  <h4>پایش کنترل پلاک بیمار</h4>
+  <p>قبل از جلسهٔ <span class="en">recall</span> از بیمار بخواهید بهداشت دهان را در بهترین حالت انجام دهد (حتی مسواک را همراه بیاورد)؛ این‌گونه می‌توان «نهایت تلاش بیمار» را دید و ایرادات (مسواک زبر، مسواک کهنه، مسواک‌زدن تروماتیک) را اصلاح کرد. <strong>پیگیری فالو در افراد مسن بیشتر از جوانان است</strong>؛ اگر مراجعهٔ آنان کم شود، به‌دلیل ناتوانی جسمی و بی‌حوصلگی است.</p>
+  <div class="box warn">
+    <span class="bt">هشدار ابزار:</span>
+    وقتی <span class="en">root planning</span> ناکامل است ولی عمق پاکت نرمال (۱–۳ میلی‌متر) داریم، نباید پیزو وارد شود چون خودش می‌تواند باعث <span class="en">attachment loss</span> شود. برای آن نواحی از <span class="en">irrigation</span> استفاده کنید؛ اگر <span class="en">irrigator</span> نبود، از سرنگ شست‌وشو با نیدل معمولی استفاده کنید. شست‌وشودهنده‌ها اثر آنتی‌میکروبیال دارند.
+  </div>
+  <!-- 1-7 RECURRENCE -->
+  <h3 id="s1-recur">۱-۷ — عود بیماری و نشانه‌های شکست درمان</h3>
+  <p>عود به بیمار و دندانپزشک بستگی دارد: کنترل پلاک بیمار خوب نیست، یا دندانپزشک کار را درست انجام نمی‌دهد.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۷الف — علل عود بیماری پریودنتال</caption>
+    <thead><tr><th>#</th><th>علت عود</th></tr></thead>
+    <tbody>
+      <tr><td class="tc">۱</td><td>درمان ناکافی (عدم برداشت پلاک/جرم باقی‌مانده یا مجدداً تجمع‌یافته)</td></tr>
+      <tr><td class="tc">۲</td><td>کوتاهی دندانپزشک در تنظیم کارهای جلسهٔ <span class="en">recall</span></td></tr>
+      <tr><td class="tc">۳</td><td><span class="en">Restoration</span>‌های دارای مشکل (اورهنگ‌ها باید برداشته و روکش‌ها تعویض شوند) → زمینه‌ساز عود</td></tr>
+      <tr><td class="tc">۴</td><td>کوتاهی بیمار در مراجعه به جلسات فالو</td></tr>
+      <tr><td class="tc">۵</td><td>بیماری سیستمیک زمینه‌ساز؛ مثل دیابت کنترل‌نشده → آبسه‌های پریودنتال راجعه و پروگنوز <span class="en">hopeless</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۷ب — نشانه‌های شکست درمان (بیماری فعال) در جلسهٔ recall</caption>
+    <thead><tr><th>نشانه</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td class="k">برگشت التهاب</td><td>تغییر کلینیکی رنگ لثه و تمایل به خونریزی بعد از تحریک پروبینگ → شک به جرم باقی‌مانده</td></tr>
+      <tr><td class="k">افزایش عمق سالکوس/پاکت</td><td>افزایش عمق پروبینگ</td></tr>
+      <tr><td class="k">تحلیل پیش‌روندهٔ استخوان</td><td><span class="en">bone loss</span> قابل‌دیدن در رادیوگرافی</td></tr>
+      <tr><td class="k">افزایش لقی</td><td>افزایش <span class="en">grade</span> لقی دندان (<span class="en">mobility</span>)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box exam">
+    <span class="bt">سال اول طلایی است:</span>
+    در سال اول، عادات بهداشتی در بیمار نهادینه می‌شود. اگر بیمار در سال اول در <span class="en">recall</span>‌های منظم مراجعه کند، در سال‌های بعد هم احتمال مراجعه‌اش بیشتر است؛ و اگر قرار باشد مراجعه نکند، اکثراً این عدم‌مراجعه در همان سال اول رخ می‌دهد. <br><strong>نکتهٔ تصمیم‌گیری:</strong> حتی در فاز ۱ نباید در همان جلسهٔ recall تصمیم نهایی گرفت؛ بهتر است ۱ تا ۲ هفته به تعویق بیندازیم تا ادم و التهاب لثه بهتر شود و ارزیابی، درست و قوی باشد.
+  </div>
+
+  <!-- 1-8 MERIN -->
+  <h3 id="s1-merin">۱-۸ — جدول مرین (Merin Classification) — برنامهٔ زمان‌بندی recall</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۸ — طبقه‌بندی مرین و فاصلهٔ recall</caption>
+    <thead><tr><th>کلاس</th><th>مشخصات</th><th>فاصلهٔ recall</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="k">سال اول<br>(<span class="en">First year</span>)</td>
+        <td>درمان روتین با <span class="en">healing</span> بی‌حادثه.<br><strong>حالت سخت:</strong> پروتز پیچیده، درگیری فورکیشن، نسبت طول تاج به ریشهٔ نامناسب، یا همکاری مشکوک بیمار.</td>
+        <td class="tc">روتین: <strong>۳ ماه</strong><br>حالت سخت: <strong>۱ تا ۲ ماه</strong></td>
+      </tr>
+      <tr>
+        <td class="k">Class A</td>
+        <td>نتایج عالی که برای ۱ سال یا بیشتر خوب حفظ شده: بهداشت خوب، حداقل جرم، بدون مشکل اکلوزالی، بدون پروتز پیچیده، بدون پاکت باقی‌مانده، و هیچ دندانی با کمتر از ۵۰٪ استخوان آلوئولار باقی‌مانده.</td>
+        <td class="tc"><strong>۶ ماه تا ۱ سال</strong></td>
+      </tr>
+      <tr>
+        <td class="k">Class B</td>
+        <td>نتایج عموماً خوب که نسبتاً برای ۱ سال+ حفظ شده، اما با برخی عوامل منفی (پایین).</td>
+        <td class="tc"><strong>۳ تا ۴ ماه</strong><br><small>(بر اساس تعداد و شدت عوامل منفی)</small></td>
+      </tr>
+      <tr>
+        <td class="k">Class C</td>
+        <td>نتایج عموماً ضعیف پس از درمان و/یا چند عامل منفی؛ مشابه B اما نتایج اولیه خوب نبوده.</td>
+        <td class="tc"><strong>۱ تا ۳ ماه</strong><br><small>(و فکر به درمان مجدد یا کشیدن دندان‌های شدیداً درگیر)</small></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۸ب — مقایسهٔ عوامل منفی Class B و Class C</caption>
+    <thead><tr><th>عامل منفی</th><th>Class B</th><th>Class C</th></tr></thead>
+    <tbody>
+      <tr><td>بهداشت دهانی ضعیف یا ناپایدار</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td>تشکیل جرم سنگین (<span class="en">heavy calculus former</span>)</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td>بیماری سیستمیک زمینه‌ساز تخریب پریودنتال (مثل دیابت)</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td>پاکت‌های باقی‌مانده</td><td class="tc">برخی</td><td class="tc">زیاد</td></tr>
+      <tr><td>مشکلات اکلوزالی</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td>پروتز مشکل‌دار/پیچیده</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td>درمان ارتودنسی جاری</td><td class="tc">✔</td><td class="tc">—</td></tr>
+      <tr><td>پوسیدگی راجعه</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td>دندان‌هایی با کمتر از ۵۰٪ ساپورت استخوان</td><td class="tc">برخی</td><td class="tc">زیاد</td></tr>
+      <tr><td>سیگار</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td>سابقهٔ فامیلی مثبت یا تست ژنتیک مثبت</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td><span class="en">BOP</span> بیش از ۲۰٪ نواحی</td><td class="tc">✔</td><td class="tc">✔</td></tr>
+      <tr><td>جراحی پریودنتال اندیکاسیون دارد ولی به‌دلایل پزشکی/روانی/مالی انجام نشده</td><td class="tc">—</td><td class="tc">✔</td></tr>
+      <tr><td>وضعیت آن‌قدر پیشرفته که با جراحی پریودنتال بهبود نمی‌یابد</td><td class="tc">—</td><td class="tc">✔</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 1-9 REFERRAL -->
+  <h3 id="s1-refer">۱-۹ — عمومی یا متخصص؟ موارد ارجاع</h3>
+  <p>امروزه پیگیری بیماران پریودنتال بیشتر شده، چون هم دندان‌ها بلندمدت نگه‌داری می‌شوند و هم ارجاع بیشتر شده است. بخش عمدهٔ درمان پریودنتال در مراحل اولیه توسط دندانپزشک عمومی قابل انجام است، به دو علت: <strong>۱) شیوع بالای بیماری پریودنتال</strong> و <strong>۲) ارتباط نزدیک شرایط پریودنتال با مشکلات ترمیمی</strong> (کراون و ترمیم نامناسب که التهاب پایدار و گیر پلاک ایجاد می‌کنند).</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۹ — تقسیم درمان بین عمومی و متخصص بر اساس شدت پریودنتیت</caption>
+    <thead><tr><th>شدت</th><th>کلاس</th><th>درمان توسط</th></tr></thead>
+    <tbody>
+      <tr><td class="k">خفیف یا موضعی</td><td><span class="en">Class A — Mild or localized</span></td><td><span class="pill g">دندانپزشک عمومی</span></td></tr>
+      <tr><td class="k">متوسط</td><td><span class="en">Class B — Moderate</span></td><td><span class="pill a">همپوشانی عمومی و متخصص</span></td></tr>
+      <tr><td class="k">پیشرفته</td><td><span class="en">Class C — Advanced</span></td><td><span class="pill c">عمدتاً متخصص</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box note">
+    <span class="bt">موارد ارجاع به پریودنتیست:</span>
+    <ul style="margin:6px 0 0;">
+      <li>ناحیهٔ دیستال مولر دوم (دسترسی سخت، نیاز به جراح) و <span class="en">distal wedge</span> (نه فلپ سادهٔ تنها).</li>
+      <li>جراحی استخوان پیشرفته یا کارهای بازسازی (<span class="en">regenerative</span>) و پیوند استخوان.</li>
+      <li>درمان‌های <span class="en">advance</span> غیرجراحی.</li>
+      <li><span class="en">Attachment loss</span> ≥ ۵ میلی‌متر که پایدار است، یا پاکت باقی‌مانده، یا درگیری فورکیشن نیازمند بازسازی (مثل <span class="en">grade 2</span> که نیاز به <span class="en">membrane</span> دارد).</li>
+      <li>اگر <span class="en">L.A</span> &gt; ۵ میلی‌متر با درگیری فورکیشن باشد، حتی با ماندن بیش از ۵۰٪ استخوان ساپورتینگ، بهتر است متخصص انجام دهد.</li>
+    </ul>
+    <strong>عمومی می‌تواند:</strong> بیمار <span class="en">mild</span>، جینجیوکتومی، فلپ مینور یا جراحی استریل، و درمان‌های غیرجراحی مثل <span class="en">SRP</span>.<br>
+    <strong>فاز نگهدارنده</strong> هم بر اساس مقدار تخریب تعیین می‌شود؛ اگر نیاز به بازسازی باشد، بهتر است پریودنتیست انجام دهد.
+  </div>
+  <div class="box tip"><span class="bt">مهم‌ترین ابزار ارزیابی:</span> چارت‌بندی پروبینگ. مقایسهٔ پروبینگ‌های دوره‌ای (عمق پروب، <span class="en">L.A</span>، لقی) بیانگر سطح درمان و میزان بهبودی است؛ پس باید چارتی کامل و دقیق داشته باشیم.</div>
+
+  <!-- 1-10 REFRACTORY -->
+  <h3 id="s1-refract">۱-۱۰ — پریودنتیت راجعه (Refractory) و آنتی‌بیوتیک‌تراپی</h3>
+  <p>پریودنتیت راجعه به درمان مقاوم است و با انجام هر کاری دوباره عود می‌کند؛ بهداشت رعایت می‌شود، <span class="en">SRP</span> انجام می‌شود ولی مشکل حل نمی‌شود. علائم کلینیکی با پریودنتیت معمول هیچ تفاوتی ندارد. بهترین راه‌حل <strong>کشت میکروبی</strong> است تا بتوان آنتی‌بیوتیک مناسب را در کنار <span class="en">SRP</span> به‌کار برد (هرچند کشت در دندانپزشکی روتین نیست).</p>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۱۰ — انتخاب آنتی‌بیوتیک بر اساس کشت</caption>
+    <thead><tr><th>یافتهٔ کشت / هدف</th><th>آنتی‌بیوتیک انتخابی</th></tr></thead>
+    <tbody>
+      <tr><td>باکتری‌های گرم‌مثبت</td><td>آموکسی‌سیلین</td></tr>
+      <tr><td>بی‌هوازی‌های گرم‌منفی</td><td>مترونیدازول</td></tr>
+      <tr><td>در ایران (درمان پریودنتال)</td><td><mark>ترکیب آموکسی‌سیلین + مترونیدازول</mark></td></tr>
+      <tr><td>اگر کشت بیشتر گرم‌مثبت بود</td><td>آموکسی‌سیلین + کوآموکسی‌کلاو</td></tr>
+      <tr><td>اگر فراوانی با <span class="en">P. gingivalis</span> بود</td><td>آزیترومایسین</td></tr>
+      <tr><td>اگر <span class="en">A.a</span> نداشتیم</td><td>مترونیدازول</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn">
+    <span class="bt">احتیاط در تجویز مترونیدازول:</span>
+    بیمار نباید باردار باشد، در دورهٔ شیردهی نباشد، داروهای آنتی‌کواگولانت مصرف نکند، و از لیتیم استفاده نکند.
+  </div>
+
+  <!-- 1-11 IMPLANTITIS -->
+  <h3 id="s1-implant">۱-۱۱ — Implantitis و نگهداری ایمپلنت</h3>
+  <p>برای بیماران ایمپلنت، اصطلاح <span class="en">periodontitis</span> به <span class="en">implantitis</span> تغییر می‌کند. درمان ایمپلنت از دندان طبیعی مهم‌تر است چون از ابتدا اتصال الیاف وجود ندارد و فقط یک تطابق نزدیک هست که ممکن است گسسته شود.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۱-۱۱ — دندان طبیعی در برابر ایمپلنت</caption>
+    <thead><tr><th>ویژگی</th><th>دندان طبیعی</th><th>ایمپلنت</th></tr></thead>
+    <tbody>
+      <tr><td class="k">قرارگیری الیاف</td><td>زاویه‌دار، مقاومت بالا در برابر نیرو</td><td>الیاف کم و بدون جهت مشخص → مقاومت کم</td></tr>
+      <tr><td class="k">نوع اتصال</td><td>اتصال واقعی (الیاف شارپی)</td><td>فقط تطابق نزدیک → احتمال التهاب با پلاک بسیار بیشتر</td></tr>
+      <tr><td class="k">سرعت بروز مشکل</td><td>کندتر</td><td>بسیار سریع‌تر از دندان طبیعی</td></tr>
+      <tr><td class="k">دشواری درمان</td><td>—</td><td><span class="en">implantitis</span> دشوار است → تمرکز بر <strong>پیشگیری</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box note">
+    <span class="bt">اصول نگهداری ایمپلنت (شبیه دندان طبیعی، با چند نکته):</span>
+    <ol style="margin:6px 0 0;">
+      <li>از وسایل تمام‌فلزی (کورت، اسکیلر فلزی، اولتراسونیک با سر فلزی) استفاده نکنید؛ خشونت سطحی روی تیتانیوم ایجاد می‌کنند. از ابزارهای <strong>تیتانیومی یا پلاستیکی خاص</strong> استفاده کنید.</li>
+      <li>از خمیر پروفیلاکتیک فلوراید‌دار <strong>اسیدی</strong> استفاده نکنید (مواد اسیدی اطراف ایمپلنت ممنوع).</li>
+      <li>خمیر پروفیلاکسی بهتر است <span class="en">non-abrasive</span> باشد (خشونت سطحی → تجمع پلاک).</li>
+    </ol>
+  </div>
+
+  <p><strong>کیس مناسب ایمپلنت نیست:</strong> بیمار با بهداشت دهانی ضعیف، <span class="en">heavy smoker</span>، یا بیماری سیستمیک مثل دیابت کنترل‌نشده. ممکن است ابتدا ایمپلنت گیر داشته باشد ولی بعداً به مشکل بخورد؛ پس در مراحل اولیه بهداشت بیمار را اصلاح کنید. بیماران تصور می‌کنند چون شیء بی‌جان کاشته شده نیاز به مراقبت ندارد، در حالی که ایمپلنت سریع‌تر دچار مشکل می‌شود.</p>
+
+  <div class="box tip">
+    <span class="bt">درمان موکوزیت در برابر پری‌ایمپلنتیت:</span>
+    اگر شدت در حد <strong>موکوزیت / پری‌موکوزیت (جینجیویت)</strong> باشد، درمان راحت‌تر و بسیار مؤثر است: حذف عوامل موضعی با روش مکانیکی + آنتی‌میکروبیال مثل <strong>کلرهگزیدین</strong> + در صورت لزوم لیزر برای برطرف‌کردن آلودگی. اما اگر به <strong>پری‌ایمپلنتیت</strong> (درگیری انساج زیرین) تبدیل شود دیگر قابل پیش‌گویی نیست و کار مشکل‌تر می‌شود → <strong>حتماً به پریودنتیست ارجاع دهید.</strong>
+  </div>
+  <div class="box note">
+    <span class="bt">بهداشت پس از جراحی ایمپلنت:</span>
+    در فاز اولیهٔ بعد از جراحی، از مسواک نرم و گاز تمیز استفاده شود. <strong>پس از استئواینتگریشن</strong> می‌توان از مسواک عادی استفاده کرد، اما <strong>قبل از استئواینتگریشن مسواک برقی ممنوع</strong> است (ارتعاشات روی استئواینتگریشن اثر می‌گذارند).
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ====================================================== -->
+<!-- ================ SECTION 2: ENDO-PERIO =============== -->
+<!-- ====================================================== -->
+<section class="topic" id="s2">
+  <div class="sec-head">
+    <div class="num">۲</div>
+    <h2>ضایعات اندو-پریو (Endo-Perio Lesions)</h2>
+    <div class="meta">ارتباط پالپ و پریودنشیوم</div>
+  </div>
+
+  <p class="lead">عفونت می‌تواند از پالپ به پریودنشیوم منتقل شود و پریودنتیت بسازد، یا برعکس؛ پریودنتیتِ درمان‌نشده پیشرفت می‌کند و از راه‌های مکانیکی/فیزیکی به پالپ می‌رسد و دندان نیازمند اندو می‌شود.</p>
+
+  <p>سیر معمول ضایعهٔ پالپی: پالپ عفونی می‌شود ← نکروز ← پالپیت غیرقابل‌برگشت ← نیاز به اندو؛ اگر درمان به‌موقع نشود ممکن است ضایعهٔ پره‌اپیکال ایجاد شود.</p>
+
+  <!-- 2-1 -->
+  <h3 id="s2-anat">۲-۱ — راه‌های ارتباطی آناتومیک بین پالپ و پریودنشیوم</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۲-۱ — مسیرهای آناتومیک</caption>
+    <thead><tr><th>مسیر</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td class="k">۱) اپیکال فورامن (<span class="en">Apical foramen</span>)</td><td>راحت‌ترین و بزرگ‌ترین مسیر — راه اصلی (<span class="en">the main route</span>). منجر به <span class="en">Retrograde Periodontitis</span> می‌شود.</td></tr>
+      <tr><td class="k">۲) کانال‌های لترال/فرعی (<span class="en">Lateral / accessory canals</span>)</td><td>فراوانی: <span class="en">Apical 3rd &gt; Middle 3rd &gt; Coronal 3rd</span></td></tr>
+      <tr><td class="k">۳) توبول‌های عاجی (<span class="en">Dentinal tubules</span>)</td><td>ساختار مخروطی از کمپلکس پالپودنتین تا <span class="en">DEJ</span>. قطر کم در سطح دندان، قطر بیشتر نزدیک پالپ.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>وقتی دندان پوسیده می‌شود یا طی پروسهٔ نامناسب سمان از بین می‌رود، به توبول‌های عاجی دسترسی پیدا می‌کنیم. هرچه پوسیدگی/کنده‌شدگیِ سمان بیشتر به سمت پالپ برود، <strong>نفوذپذیری بیشتر</strong> می‌شود.</p>
+  <p>سیر از طریق فورامن اپیکال: عفونت ← پوسیدگی ← التهاب ← اسیدیتهٔ موضعی و افزایش فشار داخلی ← اگر درمان نشود نکروز ← رسیدن به <span class="en">PDL</span> ← یا ضایعهٔ <span class="en">PA</span> یا (راه آسان‌تر) درگیری فضای <span class="en">PDL</span>.</p>
+
+  <!-- 2-2 -->
+  <h3 id="s2-routes">۲-۲ — راه‌های غیرآناتومیک و عوامل عفونت پالپ</h3>
+  <div class="box note">
+    <span class="bt">راه‌های ارتباطی غیرآناتومیک (ما ایجاد می‌کنیم یا ایجاد می‌شوند):</span>
+    <span class="en">Vertical root fracture (VRF)</span> · <span class="en">Tooth perforations</span>.<br>
+    <strong>VRF</strong> در مراحل اولیه ممکن است قابل‌تشخیص نباشد؛ ولی وقتی میکروب از آن عبور کند و پالپ را درگیر یا عفونت ایجاد کند، از علائم می‌فهمیم VRF کجاست.
+  </div>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۲-۲ — عوامل ایجاد عفونت پالپی</caption>
+    <thead><tr><th>عامل</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td class="k">میکروارگانیسم‌ها</td><td>عامل اصلی</td></tr>
+      <tr><td class="k">تروما</td><td>—</td></tr>
+      <tr><td class="k"><span class="en">Thermomechanical irritants</span></td><td>کار با توربین حین ترمیم بدون شست‌وشوی مناسب → افزایش حرارت → نکروز. حتی افزایش بسیار کم دما (<strong>۵ یا ۶ درجهٔ سانتی‌گراد</strong>) می‌تواند احتمال تغییرات نکروتیک پالپ را بالا ببرد.</td></tr>
+      <tr><td class="k">مواد درمانی</td><td>اسید خیلی قوی، مواد ضدحساسیت نامناسب → نکروز پالپ.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn">
+    <span class="bt">میکروبیولوژی (مهم):</span>
+    در مراحل اولیهٔ پوسیدگی، بیشترین میکروارگانیسم‌ها <strong>هوازی</strong> هستند. هرچه عفونت عمیق‌تر و به سمت تشکیل آبسه می‌رود، <strong>بی‌هوازی‌ها بیشتر</strong> می‌شوند. در آبسه‌های اپیکال، بیشترین میکروارگانیسم <strong>بی‌هوازی</strong> است. <br><small>(نکته: در یک نسخهٔ جزوه «هوازی» برای آبسهٔ اپیکال نوشته شده که با منطق میکروبیولوژی هم‌خوان نیست؛ پاسخ صحیح بی‌هوازی است.)</small>
+  </div>
+
+  <!-- 2-3 -->
+  <h3 id="s2-class">۲-۳ — طبقه‌بندی بیماری پالپ (Classification of Pulpal Disease)</h3>
+  <p>۱) <span class="en">Reversible pulpitis</span> · ۲) <span class="en">Irreversible pulpitis</span> · ۳) <span class="en">Hyperplastic pulpitis</span> · ۴) <span class="en">Pulpal necrosis</span></p>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۲-۳ — وضعیت پالپ، علامت، وایتالیتی و پاسخ به سرما</caption>
+    <thead><tr><th>وضعیت پالپ</th><th>علامت</th><th>Vitality</th><th>پاسخ به سرما</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Normal pulp</td><td>بدون علامت</td><td>Vital</td><td>در حد نرمال</td></tr>
+      <tr><td class="k">Reversible pulpitis</td><td>حساس به فشار یا دما</td><td>Vital</td><td>حساسیت بیش از حد به سرما</td></tr>
+      <tr><td class="k">Symptomatic irreversible pulpitis</td><td>درد خودبه‌خودی و ضربان‌دار</td><td>Vital</td><td>حساسیت به سرما + <mark>پاسخ طول‌کشنده (lingering)</mark></td></tr>
+      <tr><td class="k">Asymptomatic irreversible pulpitis</td><td>ندارد</td><td>Vital</td><td>در حد نرمال</td></tr>
+      <tr><td class="k">Pulp necrosis</td><td>بدون علامت</td><td>Nonvital</td><td>بدون پاسخ</td></tr>
+      <tr><td class="k">Previously treated</td><td>متغیر</td><td>Nonvital</td><td>بدون پاسخ</td></tr>
+      <tr><td class="k">Previously initiated therapy</td><td>متغیر</td><td>متغیر</td><td>متغیر</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <ul>
+    <li>در تست <span class="en">irreversible pulpitis</span> درد طول‌کشنده وجود دارد و نیاز به اندو دارد.</li>
+    <li>نکروز و دندانی که <strong>درست اندو شده</strong> در تست جواب نمی‌دهند.</li>
+    <li>فیستول در باکال = آبسهٔ مزمن. آبسهٔ حاد = هنوز ضایعهٔ آن‌چنانی و رادیولوسنسی نیست ولی درد دارد (سمپتوماتیک).</li>
+  </ul>
+
+  <!-- 2-4 -->
+  <h3 id="s2-perirad">۲-۴ — طبقه‌بندی بیماری پری‌رادیکولار + Condensing osteitis</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۲-۴ — Classification of periradicular disease</caption>
+    <thead><tr><th>وضعیت</th><th>علامت</th><th>Pulpal Status</th><th>Percussion</th><th>Palpation</th><th>PARL</th><th>Sinus Tract</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Normal periapex</td><td>None</td><td>Varies</td><td>None</td><td>None</td><td>Not present</td><td>Not present</td></tr>
+      <tr><td class="k">Symptomatic apical periodontitis</td><td>Painful</td><td>Inflamed</td><td>Painful</td><td>Varies</td><td>Not present</td><td>Not present</td></tr>
+      <tr><td class="k">Asymptomatic apical periodontitis</td><td>None</td><td>Nonvital</td><td>None</td><td>None</td><td>Present</td><td>Not present</td></tr>
+      <tr><td class="k">Acute apical abscess</td><td>Painful</td><td>Inflamed</td><td>Painful</td><td>Painful</td><td>Varies</td><td>Not present</td></tr>
+      <tr><td class="k">Chronic apical abscess</td><td>None</td><td>Nonvital</td><td>None</td><td>None</td><td>Present</td><td>Present</td></tr>
+      <tr><td class="k">Condensing osteitis</td><td>None/pain</td><td>Inflamed</td><td>None</td><td>None</td><td>Radiopaque</td><td>Not present</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box note"><span class="bt">Condensing osteitis:</span> وقتی در پالپ عفونت داریم، یکی از پاسخ‌های بدن این است که در اطراف ریشه «کاندنسیتی» (تراکم استخوانی، رادیواوپک) بیشتر می‌شود — یک نوع پاسخ دفاعی بدن.</div>
+
+  <!-- 2-5 -->
+  <h3 id="s2-types">۲-۵ — انواع ضایعات مرتبط اندو و پریو</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۲-۵ — سه الگوی ضایعهٔ اندو-پریو</caption>
+    <thead><tr><th>نوع</th><th>مکانیسم</th><th>نکته</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Endo → Perio<br>(اندو-پریو)</td><td>پوسیدگی ← عفونت پالپی ← رسیدن به فضای <span class="en">PDL</span> از مسیرهای گفته‌شده ← درگیری PDL ← پریودنتیت بعد از ضایعهٔ اندو.</td><td>شایع‌تر</td></tr>
+      <tr><td class="k">Perio → Endo<br>(پریو-اندو)</td><td>پریودنتیت مستقلِ طولانی‌مدت گسترش می‌یابد و به پالپ می‌رسد. از کانال لترال/توبول عاجی بسیار نادر است. شایع‌ترین حالت: پریودنتیت آن‌قدر شدید شود که تا اپکس گسترش یابد و فورامن را درگیر کند ← قطع خون‌رسانی ← نکروز.</td><td>کم اتفاق می‌افتد</td></tr>
+      <tr><td class="k">Combined<br>(ترکیبی)</td><td>هم‌زمان هم دندان پوسیده و هم پریودنتیت داریم؛ هر دو ناحیه عفونی‌اند و دو عفونت یا به هم می‌رسند یا نمی‌رسند.</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- 2-6 -->
+  <h3 id="s2-dx">۲-۶ — تشخیص: درد پالپال در برابر درد پریودنتیت</h3>
+  <p><strong>راه‌های پیشگیری:</strong> از گرم‌شدن زیاد دندان حین تراش جلوگیری کنید (حرارت → نکروز)؛ اسکیلینگ مناسب داشته باشید تا فاصلهٔ پالپ و توبول‌ها خیلی کم و نفوذپذیری خیلی زیاد نشود.</p>
+  <p><strong>تشخیص اندو از علائم بالینی + رادیوگرافی:</strong> ۱) وجود پوسیدگی در دندان · ۲) تست وایتالیتی (نکروز و درد) · ۳) علائم درد.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۲-۶ — افتراق درد پالپال و درد پریودنتیت</caption>
+    <thead><tr><th>ویژگی</th><th>درد پالپال</th><th>درد پریودنتیت</th></tr></thead>
+    <tbody>
+      <tr><td class="k">بیدارکردن از خواب</td><td>بله، شب بیمار را بیدار می‌کند</td><td>خیر</td></tr>
+      <tr><td class="k">شدت / تسکین</td><td>خیلی شدید، با بروفن آرام نمی‌گیرد</td><td>درد مبهم (<span class="en">dull</span>)؛ هنگام غذا خوردن بیشتر</td></tr>
+      <tr><td class="k">محل درد</td><td>اغلب قابل لوکالیزه نیست؛ بعد آرام می‌گیرد (= نکروز شده)</td><td>—</td></tr>
+      <tr><td class="k">پروبینگ</td><td>یک ناحیهٔ منفرد؛ بقیه نرمال (عفونت از پره‌اپیکال، راه باریک در PDL، آزاد شدن چرک)</td><td>پخش است؛ همه‌جا امکان نفوذ هست (جرم پخش است)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip">
+    <span class="bt">تفکیک عمق پروب در ضایعهٔ اندویی منفرد:</span>
+    اگر عفونت از اپیکال به PDL رسیده باشد، عمق پروبِ باریک تا <strong>فورامن اپکس</strong> می‌رود. اگر <span class="en">VRF</span> داشته باشیم، همان عمق پروب باریک را داریم ولی تا فورامن نمی‌رود — فقط تا محل شکستگی (جایی که عفونت به سطح PDL رسیده) می‌رود.
+  </div>
+
+  <!-- 2-7 -->
+  <h3 id="s2-tx">۲-۷ — درمان: Primary endo-perio، عفونت خارج‌ریشه و آبسه</h3>
+  <div class="box exam">
+    <span class="bt">قانون طلایی درمان:</span>
+    در <strong>Primary endo-perio</strong> (عفونت اندویی که به سطح کرونال رسیده و پریودنشیوم را درگیر کرده)، درمان <strong>فقط اندو</strong> است. <mark>پروگنوز</mark> به وضعیت پریودنشیوم و پریودنتیت بستگی دارد (نشان می‌دهد دندان می‌ماند یا نه)، اما <strong>درمان همیشه اول اندو</strong> است، چون بخش بسیار زیادی از عفونت را برطرف می‌کند.
+  </div>
+
+  <h4>عفونت خارج‌ریشه‌ای (Extra-radicular infection)</h4>
+  <p>درون ریشه مشکلی نیست، خارج ریشه عفونی است. علل: <strong>اصلی‌ترین:</strong> ادامهٔ همان عفونت اینترارادیکولار (درناژ درست انجام نشده یا عفونت باقی مانده و میکروب‌ها ادامه داده‌اند). <strong>نادرتر:</strong> اکتینومایکوزیس‌های پری‌اپیکال یا گرانولوماتوز خارج‌ریشه. <br><strong>درمان:</strong> اگر مطمئنیم اندو عالی است و مشکل داخل ریشه نیست، جراحی می‌کنیم و سپس آنتی‌بیوتیک تجویز می‌کنیم.</p>
+
+  <div class="box note">
+    <span class="bt">توالی و زمان درمان:</span>
+    در ضایعهٔ تکی: ابتدا اندو، سپس پریودنتال. در ضایعهٔ <span class="en">PA</span> با اندو: استخوان تشکیل‌شده را <strong>۳ تا ۶ ماه</strong> بعد می‌بینیم، ولی ارزیابی کلی درمان <strong>۳ ماه</strong> بعد. درمان همیشه اول اندو، مگر ضایعهٔ پریودنتیت شدید وجود داشته باشد که در آن صورت <strong>هم اندو و هم SRP</strong>.
+  </div>
+
+  <div class="tablewrap">
+  <table>
+    <caption>جدول ۲-۷ — مدیریت آبسه</caption>
+    <thead><tr><th>نوع آبسه</th><th>اقدام</th></tr></thead>
+    <tbody>
+      <tr><td class="k">پریودنتال (قابل درناژ)</td><td>اگر بتوانیم، درناژ انجام می‌دهیم.</td></tr>
+      <tr><td class="k">پریودنتال نفوذ‌کرده به PDL</td><td>عفونت راحت‌ترین مسیر را انتخاب می‌کند و از سالکوس دندان خارج می‌شود؛ دیگر نیازی به درناژ نیست.</td></tr>
+      <tr><td class="k">زیرپریوست، مواج و اپیکال</td><td>اینسیژن و درناژ (<span class="en">I&amp;D</span>) انجام می‌دهیم.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn"><span class="bt">تجویز آنتی‌بیوتیک:</span> فقط زمانی که سلولیت یا علائم سیستمیک مثل تب وجود داشته باشد.</div>
+
+  <!-- 2-8 -->
+  <h3 id="s2-implant">۲-۸ — موکوزیت/پری‌ایمپلنتیت و Retrograde peri-implantitis</h3>
+  <p>همان‌طور که اطراف دندان «جینجیویت» (التهاب بدون درگیری استخوان) و «پریودنتیت» داریم، اطراف ایمپلنت هم <strong>پری‌موکوزیت</strong> و <strong>پری‌ایمپلنتیت</strong> داریم. <strong>فرق پری‌ایمپلنتیت با موکوزیت:</strong> در پری‌ایمپلنتیت علاوه بر التهاب، <mark>از دست رفتن استخوان</mark> هم داریم.</p>
+  <div class="box note">
+    <span class="bt">Retrograde pre-implantitis:</span>
+    التهاب پری‌ایمپلنتی که از کرونال ایجاد نمی‌شود، بلکه <strong>از اپکس</strong> شروع می‌شود، در اثر مشکلی که آنجا بوده:
+    <ul style="margin:6px 0 0;">
+      <li>حضور میکروب؛ مثلاً دندان قبلاً کشیده شده ولی عفونت باقی مانده و روی آن عفونت ایمپلنت گذاشته شده → <span class="en">bone loss</span>.</li>
+      <li>حرارت زیاد حین گذاشتن ایمپلنت بدون خنک‌کردن.</li>
+      <li>کار غیراستریل (ایمپلنت کثیف یا روکش بد).</li>
+      <li>اکلوزال بد.</li>
+    </ul>
+  </div>
+  <div class="box tip">
+    <span class="bt">درمان retrograde peri-implantitis:</span>
+    ناحیهٔ عفونی را باز می‌کنیم. <strong>اگر ثبات کافی نیست</strong> → ایمپلنت کامل برداشته، زیر آن تمیز و منتظر استخوان‌سازی می‌مانیم، سپس ایمپلنت گذاشته می‌شود. <strong>اگر ثبات دارد</strong> و فقط عفونت/بون‌لاس است → دبریدمان خوب، قرار دادن ایمپلنت، بستن فلپ، و تجویز آنتی‌بیوتیک.
+  </div>
+</section>
+
+<section class="topic" id="s3">
+  <div class="sec-head">
+    <div class="num">۳</div>
+    <h2>لیزر در پریودنتیکس <span class="en" style="font-weight:600;font-size:.7em;color:var(--petrol)">(Laser)</span></h2>
+  </div>
+  <p class="lead"><span class="en">LASER</span> سرواژهٔ <span class="en">Light Amplification by Stimulated Emission of Radiation</span> است. نور معمولی پخش می‌شود و اشعه‌هایش موازی نیستند؛ اما در لیزر نور <strong>همگن، هم‌جهت و با طول‌موج یکسان</strong> است و همین نور انرژی حرارتی تولید می‌کند که هدف درمانی ما روی بافت است.</p>
+
+  <h3>۳-۱ تعریف لیزر و چگونگی اثر بر بافت</h3>
+  <p>وقتی نور همگن و هم‌جهت به بافت می‌خورد، در <strong>بهترین حالت</strong> توسط همان سلول سطحی هدف <strong>جذب</strong> می‌شود (اینکه جذب چه سلول/بافتی شود به نوع لیزر، طول‌موج و خود بافت بستگی دارد). جذب باعث یک «انفجار سلولی» می‌شود، ماتریکس بین‌سلولی از بین می‌رود و بافت برداشته می‌شود.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>سرنوشت انرژی لیزر</th><th>توضیح</th><th>مطلوب؟</th></tr></thead>
+      <tbody>
+        <tr><td class="k">جذب <span class="en">(Absorption)</span> → <span class="en">Ablation</span></td><td>جذب در سلول هدف (مثلاً سلول دارای ملانین در دپیگمانتاسیون)؛ سلول و بافت اطرافش از بین می‌رود و حالت <strong>کربونیزه</strong> ایجاد می‌شود. <span class="en">Ablation = the surgical removal of body tissue</span>.</td><td class="tc"><span class="pill a">هدف اصلی</span></td></tr>
+        <tr><td class="k">عبور به عمق</td><td>اگر انرژی و طول‌موج زیاد باشد، از بافت سطحی رد شده و روی <strong>بافت عمقی‌تر</strong> اثر می‌گذارد؛ از این خاصیت زمانی استفاده می‌کنیم که بخواهیم روی بافت عمقی کار کنیم.</td><td class="tc"><span class="pill g">گاهی مفید</span></td></tr>
+        <tr><td class="k">پراکنش <span class="en">(Scatter)</span></td><td>انرژی پخش می‌شود؛ یا هیچ کاری نمی‌کند یا فقط <strong>حرارت</strong> ایجاد می‌کند.</td><td class="tc"><span class="pill c">نامطلوب</span></td></tr>
+        <tr><td class="k">انعکاس <span class="en">(Reflection)</span></td><td>به بافت‌های اطراف رفلکت می‌شود و با حرارتش به بافت‌هایی که نمی‌خواهیم آسیب می‌زند.</td><td class="tc"><span class="pill c">نامطلوب</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s3-types">۳-۲ انواع لیزر، مدیوم و واحدها</h3>
+  <p>تفاوت لیزرها از محفظه‌ای به نام <span class="en">medium</span> ناشی می‌شود؛ مادهٔ داخل این محفظه در لیزرهای مختلف فرق می‌کند و همین ماده، <strong>نور، طول‌موج، نفوذ و قدرت</strong> متفاوت ایجاد می‌کند. طول‌موج‌های مختلف نفوذ و قدرت متفاوت دارند.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>لیزر</th><th>ویژگی کلیدی (تأکید کتاب)</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">CO₂</span></td><td>از انواع رایج لیزرهای بافت نرم.</td></tr>
+        <tr><td class="k"><span class="en">Argon</span></td><td>از انواع لیزر.</td></tr>
+        <tr><td class="k"><span class="en">Diode</span></td><td>از انواع لیزر.</td></tr>
+        <tr><td class="k"><span class="en">Nd:YAG</span></td><td><strong>بالاترین نفوذ</strong>؛ تا <span class="en">subcutaneous</span> توانایی نفوذ دارد. (نکتهٔ پرتأکید کتاب)</td></tr>
+        <tr><td class="k"><span class="en">Erbium:YAG (Er:YAG)</span></td><td><strong>بهترین لیزر برای بافت‌های سخت</strong> (استخوان)؛ چون استخوان آب زیاد و هیدروکسی‌آپاتیت دارد و این لیزر روی این نوع بافت اثر می‌گذارد. معمولاً روی <strong>بافت نرم اثر نمی‌کند یا اثرش کمتر است.</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>واحدها:</strong> واحدهای فتوترمالِ انرژی لیزر <span class="en">Watt</span> و <span class="en">Hertz</span> هستند.
+  </div>
+
+  <h3 id="s3-bladevs">۳-۳ لیزر در برابر تیغ (Blade)</h3>
+  <p>یک خال روی صورت را هم می‌توان با تیغ برداشت و هم با لیزر؛ تفاوت‌ها:</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>معیار</th><th>لیزر <span class="en">(Laser)</span></th><th>تیغ <span class="en">(Blade)</span></th></tr></thead>
+      <tbody>
+        <tr><td class="k">دید جراحی / خونریزی</td><td>بدون خونریزی، دید عالی (مهم‌ترین مزیت)</td><td>حتی با بیشترین ساکشن، خونریزی و کاهش دید</td></tr>
+        <tr><td class="k">ترمیم</td><td>حالت کربونیزه/سوختگی → <strong>تعویق در ترمیم</strong></td><td>بدون سوختگی؛ ترمیم سریع‌تر</td></tr>
+        <tr><td class="k">پذیرش بیمار</td><td><strong>بالاتر</strong>؛ وحشت کمتر</td><td>کمتر</td></tr>
+        <tr><td class="k">نیاز به مهارت</td><td>نیاز به انرژی محاسبه‌شده و دقیق؛ آموزش کامل لازم (انرژی بیش از حد → نکروز)</td><td>کمتر</td></tr>
+        <tr><td class="k">تهاجم</td><td>در کل غیرتهاجمی (<span class="en">non-aggressive</span>)</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box exam">
+    <span class="pill">کیس کلینیکی نهایی (مهم برای امتحان)</span>
+    در یک بیمار، نیمی از ناحیهٔ دپیگمانتاسیون با <strong>لیزر</strong> و نیم دیگر با <strong>تیغ</strong> انجام شد تا مقایسه شود. لیزر کربونیزه‌شدن و حالت سوختگی داشت و خونریزی نداشت؛ تیغ خونریزی داشت ولی فقط یک لایه اپیتلیوم را خراش می‌داد. <strong>بعد از ۱٫۵ ماه، سمتِ تیغ بهتر بهبود یافته بود.</strong> (درس نهایی: اثر لیزر آن‌قدرها که در ابتدا تبلیغ می‌شود خاص نیست — مثل مسواک‌های برقی در ابتدای ورودشان.)
+  </div>
+
+  <h3 id="s3-uses">۳-۴ کاربردهای لیزر در درمان پریودنتال</h3>
+  <p>کاربردها: جراحی‌های استتیک، جراحی افزایش طول تاج <span class="en">(Crown Lengthening)</span>، نان‌سرجیکال تراپی (اتیولوژیک) و اثرات آنتی‌میکروبیال.</p>
+  <div class="box tip">
+    <span class="pill a">نکتهٔ مفهومی</span>
+    نام دیگر فاز نان‌سرجیکال تراپی، <strong>اتیولوژیک</strong> است (= برطرف کردن علت). علتِ بیشتر (همیشهٔ) بیماری‌های پریودنتال <strong>پلاک میکروبیال</strong> است، <strong>نه جرم</strong>؛ جرم یک عامل شایعِ ریتنتیو (مثل اورهنگ) است.
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>کاربرد</th><th>جزئیات</th></tr></thead>
+      <tbody>
+        <tr><td class="k">جراحی استتیک</td><td>دپیگمانتاسیون، فرنکتومی، <span class="en">CL</span> — می‌توان از لیزرهای متفاوت استفاده کرد.</td></tr>
+        <tr><td class="k">پری‌کورونیتیس <span class="en">(Pericoronitis)</span></td><td>می‌توان از لیزر استفاده کرد.</td></tr>
+        <tr><td class="k">افزایش طول تاج <span class="en">(CL)</span></td><td>ابتدا بافت نرم با لیزر/تیغ کنار می‌رود، سپس <strong>ساوندینگ استخوان</strong> (پروبینگ استخوان در بی‌حسی برای فهم شکل/ضخامت). اگر بخواهیم استخوان را هم جابه‌جا کنیم از <span class="en">Er:YAG</span> استفاده می‌شود.</td></tr>
+        <tr><td class="k">نان‌سرجیکال (اتیولوژیک)</td><td>برداشت جرم و پلاک با لیزر؛ اما نقش اصلی لیزر <strong>درمان مکمل</strong> (<span class="en">adjunct</span>) است و طبق کتاب هم تأثیر دارد.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box warn">
+    <span class="pill c">محدودیت لیزر در CL استخوانی</span>
+    لیزر فقط می‌تواند <strong>≤ ۱ میلی‌متر</strong> استخوان را ببرد. اگر بیوتایپ ضخیم باشد یا ضخامت کرست <strong>بیش از ۱ میلی‌متر</strong> باشد، بعد از لیزر به‌دلیل رشد مجدد لثه <strong>پاکت تشکیل شده و ضایعهٔ استخوانی</strong> ایجاد می‌شود. پس <span class="en">CL</span> با لیزر فقط وقتی قابل انجام است که استخوان نازک باشد یا ضخامت کرست <strong>زیر ۱ میلی‌متر</strong> باشد. <br><strong>ترتیب کار:</strong> برداشت بافت نرم ← ساوندینگ استخوان ← در صورت قابل‌قبول بودن، برداشت استخوان با لیزر.
+  </div>
+
+  <h3 id="s3-pdt">۳-۵ PDT، LLLT و LANAP</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>اصطلاح</th><th>تعریف</th><th>نکات کلیدی</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="k"><span class="en">Photodynamic Therapy (PDT)</span></td>
+          <td>استفاده از یک ماده (<span class="en">photosensitizer</span> = مادهٔ حساس به نور) که حساسیت بافت را به لیزر بیشتر می‌کند تا بتوان از لیزرِ <span class="en">low-level</span> با توان کمتر استفاده کرد. ماده جذب نور را زیاد می‌کند و با تابش نور، فرآیندی شروع شده که بافت هدف را از بین می‌برد.</td>
+          <td>می‌توان <span class="en">depigmentation</span> را با توان کمتر و کارایی بیشتر انجام داد. <br>در پری‌ایمپلنتیتیس <strong>۳ میکروب را کاهش می‌دهد</strong> (حفظ شود): <span class="en">A.a</span> + <span class="en">P. gingivalis</span> + <span class="en">Prevotella intermedia</span>.</td>
+        </tr>
+        <tr>
+          <td class="k"><span class="en">Low Level Laser Therapy (LLLT)</span></td>
+          <td>لیزر کم‌توان که معمولاً برای بهبودِ راحت‌تر و زودتر استفاده می‌شود: <strong>توان کم، زمان بیشتر.</strong></td>
+          <td>مثلاً بعد از جراحی فلپ → تشکیل سریع‌تر بافت گرانوله در پاکت‌ها، ترمیم زودتر و ورم کمتر.</td>
+        </tr>
+        <tr>
+          <td class="k"><span class="en">LANAP</span><br><span class="en" style="font-weight:400;font-size:.85em">Laser Assisted New Attachment Procedure</span></td>
+          <td>فقط با لیزر <span class="en">Nd:YAG</span> (در حد مطالعاتی)؛ بعد از جراحی به‌کار می‌رود تا <span class="en">attachment</span> بهتری ایجاد شود (regeneration اتچمنتِ از‌دست‌رفته).</td>
+          <td>به‌ویژه در نواحی <strong>قدامی و زیبایی</strong> مؤثر. عمق پروب را کمتر و اتچمنت را بیشتر می‌کند و سطح استخوان را تا حدودی بالا می‌برد.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>لیزر در پری‌ایمپلنتیتیس:</strong> دو کاربرد — (۱) <span class="en">Er:YAG</span> برای از‌بین‌بردن آلودگی‌های اطراف ایمپلنت؛ (۲) <span class="en">PDT</span> که سه میکروب بالا را کاهش می‌دهد. <em>(جفت «Er:YAG» و «سه میکروب PDT» را حفظ کنید.)</em>
+  </div>
+
+  <h3 id="s3-comp">۳-۶ عوارض، دما و نکتهٔ دپیگمانتاسیون</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>دما / علت</th><th>پیامد</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">≥ 47°C</span></td><td>شروع <strong>آسیب</strong> بافت.</td></tr>
+        <tr><td class="k"><span class="en">≥ 60°C</span></td><td><strong>نکروز</strong> بافت.</td></tr>
+        <tr><td class="k">علت اصلی عوارض</td><td><span class="en">Over-exposure</span> = زمان زیاد تابش (و انرژی بیش از حد). تخریب به‌جای اثر درمانی، با بالا رفتن دما رخ می‌دهد.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box warn">
+    <span class="pill c">دپیگمانتاسیون دائمی نیست</span>
+    دپیگمانتاسیون به هر روشی که انجام شود <strong>دائمی نخواهد بود</strong>؛ پس از <strong>۶ ماه یا بیشتر</strong> ممکن است رنگ برگردد. این را باید <strong>از همان ابتدا</strong> به بیمار گفت: «این رنگِ پوست شماست؛ من نمی‌توانم رنگ پوست را تغییر دهم، فقط به‌صورت موقت می‌توانم برش دارم.»
+  </div>
+  <div class="box tip">
+    <span class="pill a">تشخیص پیگمانتاسیون فیزیولوژیک از پاتولوژیک</span>
+    سه نشانهٔ فیزیولوژیک بودن: <strong>(۱) تاریخچه (history)</strong> · <strong>(۲) رنگ پوست بیمار</strong> · <strong>(۳) منتشر بودن در بافت (diffuse).</strong>
+  </div>
+  <div class="box note">
+    <strong>یادآوری فرق پری‌ایمپلنتیتیس و موکوزیتیس:</strong> در پری‌ایمپلنتیتیس علاوه بر التهاب، <strong>از دست رفتن استخوان</strong> هم داریم؛ در موکوزیتیس فقط التهاب مخاطی است.
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="topic" id="s4">
+  <div class="sec-head">
+    <div class="num">۴</div>
+    <h2>جراحی پلاستیک و زیبایی پریودنتال <span class="en" style="font-weight:600;font-size:.6em;color:var(--petrol)">(Periodontal Plastic Surgery)</span></h2>
+  </div>
+  <p class="lead">دکتر عرب — مرجع: <strong>فصل ۶۳ کارانزا ۲۰۱۵</strong> یا <strong>فصل ۶۵ کارانزا ۲۰۱۹</strong>. رفرنس امتحانیْ اسلایدهاست، اما امکان طرح یک‌دو سؤال از داخل کتاب وجود دارد.</p>
+
+  <h3>۴-۱ ترمینولوژی و اهداف</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>اصطلاح</th><th>تعریف</th><th>مطرح‌کننده</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">Mucogingival surgery</span></td><td>اصلاح رابطهٔ بین مخاط آلوئولار و لثه، جهت تصحیح مشکلات مربوط به لثهٔ چسبنده، عمق کم وستیبول، یا فرنوم‌های تداخل‌دارنده با لثهٔ مارجینال.</td><td>آقای <span class="en">Friedman</span> (فلیپ مناز/فریدمن) — اولین‌بار</td></tr>
+        <tr><td class="k"><span class="en">Periodontal plastic surgery</span></td><td>همان موکوجینجیوال اما <strong>گسترش‌یافته</strong>: اصلاح نواقص <strong>تکاملی، ترومایی، آناتومیک</strong> لثه و مخاط آلوئولار.</td><td>آقای <span class="en">Miller</span></td></tr>
+        <tr><td class="k"><span class="en">Mucogingival therapy</span></td><td>اقدامات <strong>غیرجراحی</strong> در اصلاح لثهٔ چسبنده و لثهٔ اطراف دندان؛ مثل بازسازی پاپیلا با درمان‌های ارتو و ترمیمی.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>جراحی پلاستیک پریودنتال شامل:</strong> جراحی‌های هایپرتروفی پریویی · افزایش طول تاج · جراحی‌های افزایش ابعاد ریج · جراحی‌های زیبایی · پوشش سطح ریشه · بازسازی پاپیلا · جراحی‌های زیبایی اطراف ایمپلنت · اکسپوژر دندان‌های نهفته در ارتودنسی.
+  </div>
+  <div class="box exam">
+    <span class="pill">۵ هدف اصلی</span>
+    (۱) مشکلات لثهٔ چسبنده · (۲) مشکلات عمق کم وستیبول · (۳) مشکلات فرنوم نابجا · (۴) درمان‌های جراحی زیبایی · (۵) مهندسی بافت.
+  </div>
+
+  <h3 id="s4-struct">۴-۲ ساختارها: لثهٔ چسبنده، وستیبول، فرنوم، مهندسی بافت</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>ساختار</th><th>تعریف و نکات</th></tr></thead>
+      <tbody>
+        <tr><td class="k">لثهٔ چسبنده</td><td>عرضِ بین <strong>موکوجینجیوال جانکشن (MGJ)</strong> تا عمق پاکت/عمق سالکوس لثه‌ای. کنار لثهٔ مارجینال قرار دارد و توسط شیار لثه از آن جدا می‌شود. <br><strong>اهداف:</strong> برداشت بهتر پلاک، کمک به زیبایی، کاهش التهاب اطراف دندان‌های ترمیم‌شده، اتصال بهتر مارجین لثه اطراف دندان و ایمپلنت.</td></tr>
+        <tr><td class="k">عمق وستیبول</td><td>فاصلهٔ بین مارجین لثه تا قاعدهٔ وستیبول. افزایشش → بهبود بهداشت دهانی و بهبود قرارگیری پروتزهای متحرک در فضای بی‌دندانی. <br><em>اگر لثهٔ چسبنده کافی نباشد ولی عمق وستیبول کافی باشد:</em> با مسواک‌زدن غیرتروماتیک می‌توان تا حدی پلاک را برداشت. <em>اگر هر دو ناکافی باشند:</em> جراحی موکوجینجوال پلاستیک لازم است.</td></tr>
+        <tr><td class="k">کشش فرنوم</td><td>اتصالات عضلانیِ گسترش‌یافته به‌سمت مارجین لثه که در برداشت پلاک تداخل دارد و مارجین لثه را متحرک می‌کند. <br><strong>اصلاح لازم نیست</strong> اگر لثهٔ چسبندهٔ کافی در کرونال فرنوم باشد و تداخلی با مارجین نداشته باشد. <strong>اصلاح لازم است</strong> اگر با مارجین و با تمیزکردن مؤثر ناحیهٔ سرویکال تداخل کند.</td></tr>
+        <tr><td class="k">مهندسی بافت</td><td>در آینده باعث می‌شود نیازی نباشد <span class="en">graft</span> را از کام برداریم؛ به‌جایش از مواد پیوندی استفاده می‌شود تا ناحیهٔ دونر <span class="en">(donor)</span> از جراحی حذف و ناراحتی کام کمتر شود.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>درمان‌های جراحی زیبایی شامل:</strong> اصلاح تحلیل لثه، آسیمتری لثه (عدم تقارن مارژین → گاهی نیاز به <span class="en">CL</span>)، <span class="en">gummy smile</span> (لثهٔ بیش از حد دیده‌شده)، و بازسازی پاپیلای از‌دست‌رفته (از <strong>سخت‌ترین</strong> جراحی‌های زیبایی).
+  </div>
+
+  <h3 id="s4-etio">۴-۳ اتیولوژی تحلیل لثه (Recession)</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>علت</th><th>مکانیسم</th></tr></thead>
+      <tbody>
+        <tr><td class="k">ترومای مسواک‌زدن</td><td>نیروی شدید و افقیِ مسواک → تحلیل لثه در قسمت مارژینال.</td></tr>
+        <tr><td class="k">موقعیت باکالی دندان</td><td>نازک‌شدن استخوان باکال → اگر لثه نازک باشد، تحلیل لثه.</td></tr>
+        <tr><td class="k">التهاب مزمن لثه</td><td>پیشرفت به بیماری پریودنتال.</td></tr>
+        <tr><td class="k">اتصالات عضلانی و کشش فرنوم</td><td>کشش مارژین لثه.</td></tr>
+        <tr><td class="k">درمان‌های ارتودنسی</td><td>حرکت دندان از موقعیت استخوانی خود → از‌دست‌رفتن استخوان باکال → کمک به تحلیل لثهٔ بیشتر.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s4-tech">۴-۴ تکنیک‌های افزایش عرض لثهٔ چسبنده و معیارهای انتخاب</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>تکنیک کلی</th><th>نتیجه</th></tr></thead>
+      <tbody>
+        <tr><td class="k">آگمنتیشن در <strong>اپیکالِ</strong> تحلیل<br><span class="en">(gingival augmentation apical to recession)</span></td><td>فقط <strong>عمق وستیبول</strong> را زیاد می‌کند؛ <strong>پوشش سطح ریشه نمی‌گیریم.</strong></td></tr>
+        <tr><td class="k">آگمنتیشن در <strong>کرونالِ</strong> تحلیل<br><span class="en">(gingival augmentation coronal to recession)</span></td><td>هم <strong>پوشش سطح ریشه</strong> و هم <strong>افزایش عمق وستیبول.</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box tip">
+    <span class="pill a">معیارهای انتخاب تکنیک جراحی</span>
+    <ul style="margin:6px 0;padding-inline-start:20px;">
+      <li>ناحیهٔ گیرنده فاقد هرگونه التهاب، جرم و پلاک باشد.</li>
+      <li><strong>مهم‌ترین:</strong> <span class="en">blood supply</span> ناحیهٔ گیرنده مناسب باشد تا بافت دهنده خونرسانی کافی بگیرد.</li>
+      <li>آناتومی ناحیهٔ گیرنده و دهنده (نظم دندانی و موکوجینجیوال جانکشن).</li>
+      <li>ثبات بافت <span class="en">graft</span> با تکنیک‌های سوچورینگ (هر حرکت graft → به‌مخاطره افتادن پیوند).</li>
+      <li>حداقل تروما در ناحیهٔ جراحی → خونرسانی بهتر در ناحیهٔ <span class="en">bed</span>.</li>
+    </ul>
+  </div>
+  <div class="box note">
+    <strong>دسته‌بندی تکنیک‌های آگمنتیشن اپیکال:</strong>
+    <ol style="margin:6px 0;padding-inline-start:20px;">
+      <li><span class="en">Free gingival autografts</span> (FGG): شامل a) <span class="en">Classic</span> · b) <span class="en">Accordion</span> · c) <span class="en">Strip</span> · d) <span class="en">Combination</span>.</li>
+      <li><span class="en">Free connective tissue autografts</span>: مثل جینجیوال اتوگرافت، فقط از <strong>بافت همبند</strong> استفاده می‌شود.</li>
+      <li><span class="en">Apically displaced flap</span>.</li>
+      <li>تکنیک‌های تخصصی: <span class="en">vestibular extension</span> و <span class="en">periosteal separation</span>.</li>
+    </ol>
+    <strong>تکنیک‌های فرعیِ جایگزین بافت دونر</strong> (تخصصی): استفاده از بافت‌های مهندسی‌شده مثل <span class="en">ADM (acellular dermal matrix)</span>؛ تکنیک‌های <span class="en">APT (alternative papilla tunnel)</span> و <span class="en">PRP (papilla retention pouch)</span>.
+  </div>
+
+  <h3 id="s4-fgg">۴-۵ FGG و تکنیک کلاسیک (The Classic Technique)</h3>
+  <p><strong><span class="en">Free gingival autografts (FGG):</span></strong> اکثر پیوندهای لثه از این مدل‌اند. ابتدا ناحیهٔ <span class="en">bed</span> (گیرنده) آماده، سپس بافت دهنده از کام (یا جای دیگر) برداشته و با سوچورینگ در <span class="en">bed</span> ثابت می‌شود.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th></th><th>مزایا</th><th>معایب</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="k">FGG</td>
+          <td>ساده و راحت · همزمان می‌توان چند دندان را آگمنت کرد · نخستین مرحلهٔ تکنیک دومرحله‌ای (برلیمولی) است.</td>
+          <td>دو ناحیه باید آماده شود (<span class="en">bed</span> + <span class="en">donor</span>) → ناراحتی بیشتر بیمار · <span class="en">blood supply</span> مناسب نیست · مشکلِ گیر و ثبات <span class="en">graft</span>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>تکنیک دومرحله‌ای (برلیمولی):</strong> وقتی تحلیل لثهٔ وسیع و عمق وستیبول ناکافی داریم → ابتدا در اپیکالِ تحلیل آگمنتیشن و عمق وستیبول کافی می‌گیریم؛ بعد از <strong>۲ ماه</strong> با تکنیک برلیمولی یا <span class="en">coronally advanced flap</span> بافت را کرونالی می‌کنیم و <span class="en">root coverage</span> می‌گیریم. اگر عمق وستیبول از ابتدا خوب باشد، با همین تکنیک هم آگمنتیشن کرونالی و هم اپیکالی می‌گیریم.
+  </div>
+  <div class="box exam">
+    <span class="pill">فاکتورهای مؤثر بر FGG</span>
+    <ul style="margin:6px 0;padding-inline-start:20px;">
+      <li><strong>ضخامت گرفت:</strong> نه زیاد ضخیم (لایه‌های سطحی خونرسانی بد + آسیب به عروق کام) نه نازک (نکروز). <strong>ایده‌آل ۱ تا ۱٫۵ میلی‌متر.</strong></li>
+      <li><strong>تکنیک بخیه:</strong> زیاد → پارگی <span class="en">graft</span>؛ کم → از‌دست‌رفتن ثبات.</li>
+      <li><strong>لختهٔ خونی بین graft و ریشه:</strong> اگر باشد مانع خونرسانی و باعث پس‌زدن پیوند؛ با گاز مرطوب چند دقیقه فشار می‌دهیم تا فضایی بین graft و ریشه نماند.</li>
+      <li><strong>آماده‌سازی سطح ریشه:</strong> با وسایل مکانیکال/دستی/التراسونیک تمیز، بدون هیچ جرم و پلاک.</li>
+      <li><strong>صاف‌کردن سطح ریشه:</strong> ریشه محدب و فاقد عروق است؛ هرچه تحدب بیشتر، سطح تماس ریشه با graft بیشتر. با فرز روند توربین تحدب را کم می‌کنیم (تا حساسیت ریشه ایجاد نشود) تا سطح تماس کاهش یابد و پیوند بهتر بگیرد.</li>
+    </ul>
+  </div>
+  <div class="box tip">
+    <span class="pill a">مراحل تکنیک کلاسیک</span>
+    (۱) آماده‌سازی <span class="en">bed</span> · (۲) تهیهٔ بافت دهنده از دونر · (۳) انتقال بافت به <span class="en">bed</span> و بخیه با سوچورینگ · (۴) توقف خونریزی دونر با بخیه/مواد هموستات و پایدارسازی.
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Step ۱ — برداشت فلپ</th><th>Partial thickness (پارشیال)</th><th>Full thickness (فول)</th></tr></thead>
+      <tbody>
+        <tr><td class="k">جداسازی</td><td>اپیتلیوم از پریوست جدا می‌شود؛ <strong>پریوست روی استخوان می‌ماند</strong>، استخوان اکسپوز نیست.</td><td>فلپ کاملاً از سطح استخوان جدا می‌شود (اپیتلیوم + بافت همبند زیرین + پریوست)؛ <strong>استخوان اکسپوز است.</strong></td></tr>
+        <tr><td class="k">موبیلیتی graft</td><td>بیشتر</td><td><strong>کمتر</strong></td></tr>
+        <tr><td class="k">تورم بعد جراحی</td><td>بیشتر</td><td><strong>کمتر</strong></td></tr>
+        <tr><td class="k">هموستاز</td><td>—</td><td><strong>بهتر</strong></td></tr>
+        <tr><td class="k">انقباض بعد جراحی</td><td>بیشتر</td><td><strong>۱٫۵ تا ۲ برابر کمتر</strong></td></tr>
+        <tr><td class="k">عیب</td><td>—</td><td><strong>تأخیر در ترمیم زخم در دو هفتهٔ اول</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box warn">
+    <span class="pill c">قانون عرض برش</span>
+    گسترش برش‌ها باید <strong>دو برابر پهنای لثهٔ چسبندهٔ موردنظر</strong> باشد، چون graft پس از پیوند <strong>تا ۵۰٪ انقباض</strong> پیدا می‌کند. میزان انقباض هم به عمق/گسترش graft و هم به کشش عضلات بستگی دارد (کشش بیشتر و bed عمیق‌تر → بلندشدن و انقباض بیشتر graft).
+  </div>
+  <div class="box note">
+    <strong>Step ۲ و ۳:</strong> اپیتلیوم کام برداشته و در <span class="en">bed</span> قرار می‌گیرد؛ سپس graft با سوچورینگ خاص فیکس می‌شود (ثبات graft بسیار مهم؛ نباید لختهٔ خونی بین graft و ریشه بماند چون مانع <span class="en">vascularization</span> است). <strong>Step ۴ (مدیریت دونر):</strong> توقف خونریزی فعال با هموستاتِ قابل‌جذب (<span class="en">Surgicel · Oxycel · Gelfoam</span>) یا هموستات کلاژن (<span class="en">microfibrillar</span>) یا سوچورینگِ داربست‌ساز در کام. سپس <span class="en">thin foil</span> + کوپک، و کوپک را بین دندان‌ها فیکس می‌کنیم.
+  </div>
+
+  <h3 id="s4-variants">۴-۶ تکنیک‌های Accordion / Strip / Combination</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>تکنیک</th><th>شرح</th><th>مزیت/نکته</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">Accordion</span></td><td>مثل کلاسیک، اما graft به اندازهٔ <span class="en">bed</span> نیست و کوچک‌تر است (خطای جراحی یا کوچک‌بودن دونر). با برش‌های فرعی در <strong>جهت مخالف</strong> graft، آن را گسترش و کش می‌دهیم.</td><td>بزرگ‌کردن graftِ کوچک.</td></tr>
+        <tr><td class="k"><span class="en">Strip</span></td><td>۲ یا ۳ نوار بافت لثه‌ای از کام به عرض <strong>۳ تا ۵ میلی‌متر</strong> و به طول <span class="en">bed</span> برمی‌داریم و در bed سوچور می‌کنیم.</td><td><strong>مزیت بزرگ:</strong> در دونر زخم بزرگ ایجاد نمی‌شود، <strong>نیازی به سوچور دونر نیست</strong>، ترمیم بهتر و ناراحتی کمتر بیمار.</td></tr>
+        <tr><td class="k"><span class="en">Combination</span></td><td>بافت دهنده از کام به عمق <strong>۳ تا ۴ میلی‌متر</strong> برداشته، بین دو آبسلانگ مرطوب و با تیغ بیستوری <span class="en">#15</span> از عرض به دو graft تقسیم می‌شود.</td><td>یکی: اپیتلیوم + لایهٔ نازک بافت همبند؛ دیگری: بافت همبند خالص.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s4-healing">۴-۷ ترمیم پیوند (روزشمار) و مطالعهٔ انقباض</h3>
+  <div class="box exam">
+    <span class="pill">اصل کلیدی</span>
+    موفقیت پیوند به <strong>بقای بافت همبند ساب‌اپیتلیال</strong> بستگی دارد؛ بافت اپیتلیوم متفلس (پوسته‌پوسته) شده و از دست می‌رود، اما این بقای بافت همبند ساب‌اپیتلیال است که موفقیت پیوند را تعیین می‌کند.
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>زمان</th><th>رخداد</th></tr></thead>
+      <tbody>
+        <tr><td class="k tc">روز ۱</td><td>بافت همبند دچار تغییرات ادماتوز و <span class="en">disorganized</span> می‌شود، اجزای سلولی از دست می‌رود و کم‌کم رجنره شده و بافت گرانولیشن تشکیل می‌دهد.</td></tr>
+        <tr><td class="k tc">روز ۲–۳</td><td>تشکیل بافت‌های فیبروزی بین graft و bed (تا چند روز)؛ <strong><span class="en">revascularization</span> (رگ‌زایی مجدد)</strong> در روز ۲ و ۳ اتفاق می‌افتد.</td></tr>
+        <tr><td class="k tc">روز ۴</td><td>یک لایهٔ نازک اپی‌تلیوم سطح graft را می‌پوشاند.</td></tr>
+        <tr><td class="k tc">روز ۷</td><td>رت‌پگ‌ها (<span class="en">rete pegs</span>) داخل بافت اپیتلیوم ظاهر می‌شوند.</td></tr>
+        <tr><td class="k tc">روز ۱۰</td><td>قسمت <strong>مرکزی</strong> graft (آخرین جزء) رگ‌زایی می‌شود.</td></tr>
+        <tr><td class="k tc">روز ۱۷</td><td><strong><span class="en">Functional integration</span> (یکپارچگی فانکشنال) = حالت ایده‌آل گرفت.</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <span class="pill g">مطالعهٔ ۲۴ هفته‌ای انقباض</span>
+    پیوندهای روی <strong>استخوان ۲۵٪</strong> و پیوندهای روی <strong>پریوست ۵۰٪</strong> انقباض داشتند؛ بیشترین انقباض در <strong>۶ هفتهٔ اول</strong> بود. علت انقباض بیشترِ پیوند روی پریوست: پریوست نسبت به استخوان کمی متحرک است و این تحرک انقباض graft را بیشتر می‌کند.
+  </div>
+
+  <h3 id="s4-ctg">۴-۸ CTG و فلپ جابه‌جاشدهٔ اپیکالی</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th></th><th><span class="en">FGG</span></th><th><span class="en">CTG</span> (Free connective tissue autograft)</th></tr></thead>
+      <tbody>
+        <tr><td class="k">بافت برداشتنی</td><td>اپیتلیوم + بافت همبند ساب‌اپیتلیوم</td><td>فقط <strong>بافت همبند ساب‌اپیتلیال</strong>؛ اپیتلیوم کام دست‌نخورده می‌ماند.</td></tr>
+        <tr><td class="k">ترمیم کام</td><td>زخم باز</td><td><span class="en">primary closure</span> → درد و ناراحتی کمتر.</td></tr>
+        <tr><td class="k">تطابق رنگ</td><td>تطابق رنگ خوبی ندارد، کمی فرق می‌کند.</td><td><strong>ایده‌آل</strong> از نظر رنگ لثه‌ای.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box exam">
+    <span class="pill">Apically displaced flap — سه حالت لبهٔ فلپ</span>
+    فلپ به‌صورت <span class="en">partial/full thickness</span> از استخوان جدا و اپیکالی‌تر قرار می‌گیرد؛ عرض لثهٔ چسبنده در اپیکالِ تحلیل را زیاد می‌کند اما <strong>عمق وستیبول را افزایش نمی‌دهد</strong> (در مواردی انجام می‌شود که عمق وستیبول کافی داریم).
+    <div class="tablewrap" style="margin-top:8px;">
+      <table>
+        <thead><tr><th>موقعیت لبهٔ فلپ</th><th>اثر</th></tr></thead>
+        <tbody>
+          <tr><td class="k">۱) مختصری کرونالی‌تر از کرست استخوان</td><td>فایبرهای سوپراکرستال و چسبندگی‌شان حفظ می‌شود؛ <strong>اما</strong> اگر مارژین ضخیم و سالکوس عمیق باشد → عود پاکت.</td></tr>
+          <tr><td class="k">۲) هم‌سطح کرست استخوان</td><td>اگر لبهٔ فلپ نازک باشد، کانتور لثهٔ ایده‌آل ایجاد می‌کند.</td></tr>
+          <tr><td class="k">۳) ۲ میلی‌متر پایین‌تر از کرست</td><td><strong>بهترین کانتور لثه‌ای</strong>؛ تنها عیب: چون استخوان کمی اکسپوز می‌ماند → تحلیل جزئی کرست استخوان.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3 id="s4-miller">۴-۹ طبقه‌بندی میلر (Miller) — بسیار مهم</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>کلاس</th><th>تحلیل نسبت به MGJ</th><th>تحلیل اینترپروگزیمال (نرم/استخوان)</th><th>ملپوزیشن</th><th>پروگنوز</th></tr></thead>
+      <tbody>
+        <tr><td class="k tc">I</td><td>تا MGJ نرسیده</td><td>ندارد</td><td>—</td><td class="tc"><span class="pill a">good–excellent</span></td></tr>
+        <tr><td class="k tc">II</td><td>تا MGJ یا فراتر</td><td>ندارد</td><td>—</td><td class="tc"><span class="pill a">good–excellent</span></td></tr>
+        <tr><td class="k tc">III</td><td>تا MGJ یا فراتر</td><td><strong>دارد</strong> (کرونالی‌تر از باکال)</td><td>خفیف ممکن است</td><td class="tc"><span class="pill g">partial coverage</span></td></tr>
+        <tr><td class="k tc">IV</td><td>فراتر از MGJ</td><td><strong>تحلیل شدید</strong></td><td><strong>شدید</strong></td><td class="tc"><span class="pill c">خیلی ضعیف</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    کلاس IV حتی با تکنیک‌های جراحی امروزی هم پروگنوز خیلی ضعیفی دارد. کلاس III نسبی است و به‌صورت <span class="en">partial coverage</span> در نظر گرفته می‌شود.
+  </div>
+
+  <h3 id="s4-cover">۴-۱۰ تکنیک‌های پوشش ریشه (Root Coverage)</h3>
+  <div class="box note">
+    <strong>تکنیک‌های آگمنتیشن کرونالی / <span class="en">root coverage</span>:</strong>
+    <ol style="margin:6px 0;padding-inline-start:20px;">
+      <li><span class="en">FGG</span></li>
+      <li><span class="en">CTG</span></li>
+      <li><span class="en">Pedicle grafts</span>: مثل <span class="en">lateral displace</span> و <span class="en">coronally positioned flap</span> (شامل تکنیک <span class="en">Tarnow</span>)</li>
+      <li><span class="en">Subepithelial connective tissue grafts</span>: مثل تکنیک <span class="en">Langer</span></li>
+      <li><span class="en">Guided tissue regeneration (GTR)</span></li>
+      <li><span class="en">Pouch and tunnel technique</span> یا <span class="en">coronally advanced tunnel technique</span></li>
+    </ol>
+    <small>(FGG و CTG در اپیکالِ تحلیل هم استفاده می‌شدند.)</small>
+  </div>
+  <div class="box exam">
+    <span class="pill">FGG روی سطح ریشه</span>
+    عینِ تکنیک کلاسیک است اما <strong>مرحلهٔ ۱ و ۲ فرق می‌کند</strong> (مرحلهٔ ۳ و ۴ مثل کلاسیک):
+    <ul style="margin:6px 0;padding-inline-start:20px;">
+      <li>چون پیوند روی ریشه قرار می‌گیرد، باید سطح ریشه <span class="en">root planing</span> کامل شود؛ توصیه به <strong>اسید سیتریک اشباع به مدت ۵ دقیقه.</strong></li>
+      <li>برش‌های جراحی فرق می‌کند: دو برش افقی در دو سمت تحلیل که پاپی اینتردنتال را کاملاً قطع می‌کند، و دو برش (در لاین انگل اینتردنتال) به‌سمت MGJ گسترش می‌یابد.</li>
+      <li>سعی می‌کنیم <strong>پریوستِ ناحیهٔ اپیکالِ تحلیل را سالم نگه داریم.</strong></li>
+    </ul>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="topic" id="s5">
+  <div class="sec-head">
+    <div class="num">۵</div>
+    <h2>ادامهٔ جراحی پلاستیک: تکنیک‌های پوشش ریشه و بازسازی پاپیلا <span class="en" style="font-weight:600;font-size:.55em;color:var(--petrol)">(عرب — جلسهٔ ۱۰)</span></h2>
+  </div>
+  <p class="lead">ادامهٔ مبحث موکوجینجیوال؛ سومین گروهِ تکنیک‌های آگمنتیشن لثه در کرونالِ تحلیل، <strong><span class="en">pedicle autograft</span></strong>هاست. در این تکنیک‌ها پایهٔ گرفت دست‌نخورده می‌ماند و خونرسانی عالی است.</p>
+
+  <h3>۵-۱ پدیکل گرفت‌ها (Pedicle Autografts) — سه نوع</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>نوع</th><th>توضیح کوتاه</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">Coronally positioned</span></td><td>فلپ همان دندان به‌سمت کرونال جابه‌جا می‌شود.</td></tr>
+        <tr><td class="k"><span class="en">Laterally positioned</span></td><td>فلپِ دندان مجاور به‌صورت لترالی روی ناحیهٔ تحلیل روتیت می‌شود.</td></tr>
+        <tr><td class="k"><span class="en">Semilunar pedicle</span></td><td>برش نیمه‌هلالی و جابه‌جایی کرونالی با نیروی جاذبه.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s5-lateral">۵-۲ Laterally Positioned Pedicle Graft (Double Papilla Flap)</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>مزایا</th><th>معایب</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>فقط یک ناحیه جراحی می‌شود؛ <strong>زخم ثانویه در کام ایجاد نمی‌شود</strong>. · وسکولاریتهٔ بافت <strong>عالی</strong> چون پایهٔ گرفت حفظ می‌شود → خونرسانی ایده‌آل.</td>
+          <td>فقط وقتی ممکن است که دندان‌های مجاور <strong>لثهٔ چسبندهٔ خوب با ضخامت ایده‌آل</strong> داشته باشند. · در ناحیهٔ <strong>دهنده تحلیل</strong> ایجاد می‌کند (روتیت‌کردن graft از دندان مجاور). · گاهی <span class="en">dehiscence</span> و <span class="en">fenestration</span> در دندان‌های مجاور. · فقط در تحلیلِ یک یا دو دندان کاربرد دارد.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>شرط لازم دیگر:</strong> عمق وستیبول کافی. <strong>روش:</strong> با برش‌های اطراف ناحیهٔ تحلیل، لثه را برمی‌داریم، لثهٔ دندان مجاور از استخوان جدا و لترالی روتیت و در ناحیهٔ تحلیل بخیه می‌شود.
+  </div>
+  <div class="box tip">
+    <span class="pill a">Partial یا Full thickness؟</span>
+    معمولاً <strong>partial ارجح است</strong>، مگر ضخامت لثه کافی نباشد (که آن‌وقت مخاط خیلی نازک و مستعد نکروز می‌شود → <strong>full thickness</strong> مناسب‌تر). مزایای partial وقتی ضخامت کافی است: (۱) ترمیم سریع‌تر ناحیهٔ دهنده · (۲) کاهش احتمال تحلیل استخوان، <span class="en">dehiscence</span> و <span class="en">fenestration</span> در ناحیهٔ دهنده.
+  </div>
+  <div class="box warn">
+    <span class="pill c">قوانین فلپ</span>
+    فلپ آزادشده باید <strong><span class="en">tension free</span></strong> باشد (با برش‌های <span class="en">releasing</span> تا موکوجینجیوال جانکشن). عرض فلپ باید <strong>دو برابر عرض تحلیل</strong> باشد تا مقداری از فلپ به سطوح مجاور گسترش یابد و به ثبات پیوند کمک کند.
+  </div>
+  <div class="box exam">
+    <span class="pill">تکنیک Double Papillary Flap</span>
+    زیرمجموعهٔ لترالی پوزیشن با <strong>پروگنوز بسیار ضعیف</strong>: دو نیمه‌پاپیلای بین‌دندانی به هم متصل و روی سطح ریشه سوچور می‌شوند؛ بخیه‌ها مانع خونرسانی خوب به فلپ روی ریشه می‌شوند و به‌دلیل فقدان منبع خونی مناسب، <strong>عملاً به‌کار نمی‌رود</strong>.
+  </div>
+
+  <h3 id="s5-coronal">۵-۳ Coronally Positioned Flap</h3>
+  <p><strong>اندیکاسیون:</strong> پوشش ریشه <span class="en">(root coverage)</span> در نواحی زیبایی یا حساسیت ریشه، یا آگمنتیشن لثه در کرونالِ تحلیل در نواحی مهم از نظر زیبایی.</p>
+  <div class="box warn">
+    <span class="pill c">محدودیت کلیدی</span>
+    نیاز به <strong>لثهٔ کراتینیزه در اپیکالِ تحلیل، حداقل ۳ میلی‌متر یا بیشتر</strong>. اگر این شرط نباشد تکنیک بی‌اثر است و باید از تکنیک دومرحله‌ای استفاده کرد.
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>مزایا</th></tr></thead>
+      <tbody>
+        <tr><td>قابل انجام برای چند دندان به‌طور همزمان.</td></tr>
+        <tr><td>عدم درگیری دندان‌های مجاور و درصد موفقیت بالا.</td></tr>
+        <tr><td>اگر جراحی موفق نباشد، شرایط <strong>بدتر نمی‌شود</strong> و لثه پسرفت بیشتری نمی‌کند و در همان موقعیت می‌ماند.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box tip">
+    <span class="pill a">مراحل جراحی</span>
+    <strong>مرحلهٔ ۱:</strong> دو برش عمودی در دو سمت تحلیل که فراتر از خط موکوجینجیوال گسترش می‌یابند؛ سپس یک برش <span class="en">internal bevel</span> در دیوارهٔ داخل پاکت (مارجین لثه) تا عمق پاکت → حذف دیوارهٔ پاکت؛ بافت به‌صورت <span class="en">partial thickness</span> آزاد می‌شود. <strong>مرحلهٔ ۲:</strong> <span class="en">SRP</span> سطح ریشه. <strong>مرحلهٔ ۳:</strong> فلپ متحرک را کرونالی‌تر قرار داده و سوچور می‌کنیم.
+  </div>
+  <div class="box note">
+    <strong>نکتهٔ شماتیک مهم:</strong> در دو سمت تحلیل، بافت <span class="en">partial thickness</span> آزاد می‌شود؛ اما در ناحیهٔ <strong>اپیکالِ تحلیل، فلپ را full thickness</strong> می‌زنیم تا وقتی کرونالی شد، آن لایهٔ ضخیم‌تر روی سطح اکسپوزِ ریشه قرار گیرد و احتمال بقای گرفت افزایش یابد.
+  </div>
+  <div class="box exam">
+    <span class="pill">تکنیک دومرحله‌ای</span>
+    وقتی لثهٔ چسبندهٔ کافی در اپیکالِ تحلیل نداریم (اما عمق وستیبول کافی است): ابتدا <strong>آگمنتیشن اپیکال با FGG</strong> (افزایش عرض لثهٔ چسبنده + عمق وستیبول)، سپس بعد از <strong>حداقل ۲ ماه</strong> که لثه ترمیم یافت و به فرم فانکشنال ایده‌آل برگشت، بافت را کرونالی می‌کنیم.
+  </div>
+
+  <h3 id="s5-semilunar">۵-۴ تکنیک نیمه‌هلالی (Semilunar)</h3>
+  <div class="box note">
+    <strong>اندیکاسیون:</strong> وقتی پوشش ریشهٔ بیش از <strong>۲ تا ۳ میلی‌متر</strong> نمی‌خواهیم (تحلیل ≤ ۳ میلی‌متر)، عمق وستیبول کافی، و <strong>بیوتایپ لثه ضخیم</strong>. در نواحی قدامی ماگزیلا موفق است و می‌توان همزمان چند دندان مجاور را آگمنت کرد.
+  </div>
+  <p><strong>روش:</strong> یک برش نیمه‌هلالی که ۲ تا ۳ میلی‌متر کوتاه‌تر از نوک پاپی است زده می‌شود؛ بافت به‌صورت <span class="en">partial thickness</span> آزاد و کرونالی می‌شود تا سطح اکسپوزِ ریشه را بپوشاند. <strong>نیازی به سوچور و پانسمان نیست</strong>؛ بافت با نیروی جاذبهٔ زمین در ناحیهٔ کرونالی قرار می‌گیرد و <span class="en">root coverage</span> حاصل می‌شود.</p>
+
+
+  <h3 id="s5-langer">۵-۵ Subepithelial Connective Tissue Graft (روش Langer)</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>مزایا</th><th>اندیکاسیون</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>قابل پیش‌بینی برای <span class="en">root coverage</span> · تطابق رنگی <strong>عالی</strong> · بافت دهنده کمتر مستعد خونریزی (فقط بافت همبند ساب‌اپیتلیال برداشته، اپیتلیوم کام دست‌نخورده) · ترمیم <span class="en">initial</span> بدون زخم ثانویه · <span class="en">healing</span> بهتر از FGG با درد/تورم/خونریزی کمتر · <span class="en">blood supply</span> عالی (ذخیرهٔ خونی دوگانه).</td>
+          <td>نواقص متعدد و بزرگ · عمق وستیبول کافی · ضخامت لثهٔ کافی (چون فلپ <span class="en">partial thickness</span> است).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box tip">
+    <span class="pill a">مراحل روش Langer</span>
+    <ol style="margin:6px 0;padding-inline-start:20px;">
+      <li>برش افقی با فاصلهٔ ۲ میلی‌متر اپیکالی‌تر از نوک پاپی (برای فلپ <span class="en">partial thickness</span>).</li>
+      <li>۲ برش عمودی با فاصلهٔ ۱ تا ۲ میلی‌متر از مارجین دندان مجاور، تا موکوجینجیوال جانکشن. فلپ باید <strong>یک دندان عریض‌تر</strong> از ناحیهٔ تحلیل باشد (مثلاً تحلیل در ۳ و ۴ → برش از دندان ۲ تا ۵).</li>
+      <li>پس از کنار زدن فلپ، <span class="en">SRP</span> سطح ریشه و کاهش تحدب.</li>
+      <li>بافت <span class="en">CTG</span> را با فاصلهٔ ۵ تا ۶ میلی‌متر از مارجین کام (ترجیحاً مولر به پرمولر) برمی‌داریم و بافت غددی و چربی را حذف می‌کنیم.</li>
+      <li><span class="en">CTG</span> را روی سطح اکسپوزِ ریشه قرار داده و سوچور می‌کنیم.</li>
+      <li>فلپ <span class="en">partial thickness</span> را روی <span class="en">CTG</span> قرار داده و بخیهٔ نهایی می‌زنیم.</li>
+    </ol>
+    ترجیحاً فلپ کاملاً <span class="en">CTG</span> را بپوشاند؛ اما اگر مقداری از <span class="en">CTG</span> اکسپوز بماند مشکلی پیش نمی‌آید.
+  </div>
+
+  <h3 id="s5-gtr">۵-۶ Guided Tissue Regeneration (GTR) در پوشش ریشه</h3>
+  <p>بازسازی هدایت‌شدهٔ بافت: با یک <strong>غشا</strong> داربستی می‌سازیم که مانع نفوذ سلول‌های اپیتلیال به سطح ریشه می‌شود تا فضا برای نفوذ سلول‌های <span class="en">PDL</span> حفظ شده و <span class="en">new attachment</span> تشکیل شود.</p>
+  <div class="box tip">
+    <span class="pill a">تکنیک</span>
+    یک برش <span class="en">internal bevel</span> در مارجین لثه + دو برش <span class="en">releasing</span>؛ فلپ ابتدا <span class="en">full thickness</span> تا موکوجینجیوال جانکشن، سپس از آنجا تا <strong>۸ میلی‌متر فراتر</strong> به‌صورت <span class="en">partial thickness</span>. غشا روی ریشه طوری قرار می‌گیرد که ۲ میلی‌متر از مارجین پریوست را بپوشاند.
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>نوع غشا</th><th>نکات</th></tr></thead>
+      <tbody>
+        <tr><td class="k">قابل جذب <span class="en">(resorbable)</span></td><td>به‌دلیل انعطاف زیاد روی ریشه می‌خوابد و فضا باقی نمی‌ماند → باید یک <strong>سوچور از داخل غشا</strong> رد کرد تا فضای بازسازی بافت زیر غشا حفظ شود.</td></tr>
+        <tr><td class="k">غیرقابل جذب <span class="en">(non-resorbable)</span></td><td>نیازی به سوچورِ نگه‌دارنده ندارد؛ ضربدر تیتانیومی روی آن حالت می‌دهد تا روی ریشه نخوابد و فضا ایجاد کند. <strong>۴ هفته بعد با جراحی <span class="en">partial</span> خارج می‌شود.</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    پس از قراردادن و فیکس غشا، فلپ کرونالی روی آن قرار می‌گیرد طوری که <strong>تمام سطح غشا پوشیده و هیچ سطحی اکسپوز نباشد</strong>. <strong>اندیکاسیون:</strong> تحلیل‌های تکی و موضعی با عمق اپیکوکرونالی بیش از <strong>۴٫۹۸ میلی‌متر</strong>، یا حساسیت ریشه. <strong>مزایا:</strong> حذف ناحیهٔ دهنده (ناراحتی کمتر) و نتایج زیبایی ایده‌آل (<span class="en">new attachment</span> با بافت کناری یکی می‌شود).
+  </div>
+
+  <h3 id="s5-tunnel">۵-۷ تکنیک Pouch and Tunnel</h3>
+  <p>تکنیک کیسه و تونل: <strong>حداقل برش و کنار زدن فلپ</strong>، بدون برش‌های <span class="en">releasing</span>. پاپی‌ها از زیر آزاد می‌شوند و مستقیم برش نمی‌خورند.</p>
+  <div class="box exam">
+    <span class="pill">برترین خونرسانی</span>
+    این تکنیک <strong>بهترین تکنیک از نظر خونرسانی به گرفت</strong> است و زیبایی بسیار خوبی دارد؛ بیشتر در قدام ماگزیلا. <br><strong>اندیکاسیون:</strong> عمق وستیبول کافی + ضخامت لثهٔ مناسب (چون برش <span class="en">partial thickness</span> است؛ اگر نازک باشد فلپ نکروز می‌شود).
+  </div>
+  <div class="box tip">
+    <span class="pill a">Creeping Reattachment</span>
+    یکی از مزایا: افزایش ضخامت لثه → افزایش ثبات مارجین لثه‌ای و افزایش احتمال <strong><span class="en">creeping reattachment</span></strong> (حرکت لثه به‌سمت کرونال). پس از هر پیوند، طی <strong>۶ ماه تا یک سال</strong> بافت لثه چند دهم میلی‌متر روی ریشه به‌سمت کرونال خزش می‌کند؛ یعنی شرایط لثه‌ای پس از ۶ ماه تا یک سال بهتر از یک تا دو ماه اول است.
+  </div>
+  <div class="box note">
+    <strong>عوامل موفقیت:</strong> <span class="en">blood supply</span> خوب · ثبات بافت <span class="en">CTG</span> داخل <span class="en">pouch</span> · مصون‌بودن بافت دهنده از ترومای خارجی طی <span class="en">healing</span>. <br><strong>روش:</strong> پاپی در جای خود حفظ، برش <span class="en">internal bevel</span> در تحلیل، آزادسازی <span class="en">partial thickness</span> پاپی از زیر (راس پاپی در جای خود می‌ماند)، قرار دادن <span class="en">CTG</span> کیسه‌ای و حرکت تونلی زیر پاپی، سوچور بافت همبند و کرونالی‌کردن فلپ. <br>تکنیک پیشرفته‌ترِ <span class="en">coronally advanced tunnel technique</span> در حیطهٔ تخصصی است.
+  </div>
+
+  <h3 id="s5-papilla">۵-۸ بازسازی پاپیلا (Papilla Reconstruction)</h3>
+  <p>یکی از <strong>سخت‌ترین و غیرقابل‌پیش‌بینی‌ترین</strong> جراحی‌های بافت نرم. دو علت اصلی از‌دست‌رفتن پاپیلا: <strong>(۱) بیماری‌های پریودنتال</strong> و <strong>(۲) تغییر تماس دندانی</strong> (تغییر فاصلهٔ اپیکالِ تماس تا کرست استخوان).</p>
+  <div class="box exam">
+    <span class="pill">قانون Tarnow (بسیار مهم)</span>
+    آنچه در بازسازی پاپیلا اهمیت دارد، <strong>فاصلهٔ بین اپیکالِ نقطهٔ تماس تا کرست استخوان</strong> است:
+    <div class="tablewrap" style="margin-top:8px;">
+      <table>
+        <thead><tr><th>فاصلهٔ تماس تا کرست</th><th>درصد بازسازی کامل پاپیلا</th></tr></thead>
+        <tbody>
+          <tr><td class="k tc">۵ میلی‌متر</td><td class="tc"><span class="pill a">۱۰۰٪</span></td></tr>
+          <tr><td class="k tc">۶ میلی‌متر</td><td class="tc"><span class="pill g">۵۰٪</span></td></tr>
+          <tr><td class="k tc">۷ میلی‌متر</td><td class="tc"><span class="pill c">۳۶٪</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    از‌دست‌رفتن پاپیلا → <strong>مثلث سیاه <span class="en">(black triangle)</span></strong>.
+  </div>
+  <div class="box note">
+    <strong>درمان‌های اصلی:</strong> درمان‌های ارتودنسی و ترمیمی (حفظ فاصلهٔ تماس تا کرست). درمان‌های <span class="en">bone graft</span> و پیوند بافت نرم در بازسازی پاپیلا <strong>غیرقابل پیش‌بینی</strong>اند (ناحیهٔ گیرنده کوچک و خونرسانی ناکافی). <br><strong>بهترین تکنیک ترکیبی:</strong> برش <span class="en">semilunar</span>، آزادسازی <span class="en">partial thickness</span>، برداشت <span class="en">CTG</span> از کام و سوچور در پاپی، قرار دادن <span class="en">bone graft</span> اینتردنتال، و حرکت تماس دندانی به‌سمت اپیکال با ترمیمی. اغلب مثلث سیاه تا حدی می‌ماند → با ترمیمی <span class="en">contact point</span> را اپیکالی می‌بریم (کمی دندان مربعی می‌شود ولی مثلث سیاه از بین می‌رود).
+  </div>
+  <div class="box tip">
+    <span class="pill a">ترتیب خونرسانی تکنیک‌ها</span>
+    بهترین تکنیک‌ها از نظر ذخیرهٔ خونی برای گرفت: ابتدا <strong><span class="en">pedicle graft</span></strong>ها (پایهٔ گرفت دست‌نخورده)، سپس <strong><span class="en">pouch and tunnel</span></strong>.
+  </div>
+
+  <h3 id="s5-gummy">۵-۹ Gummy Smile و برداشتن فرنوم</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>عوامل نمایش بیش از حد لثه <span class="en">(gummy smile)</span></th></tr></thead>
+      <tbody>
+        <tr><td>اکستروژن دنتوآلوئولار · رشد بیش از حد ورتیکالی ماگزیلا · رویش ناکامل تاج آناتومیک · لب بالای کوتاه · برگشتن بیش از حد لب حین صحبت/خنده.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    اگر تاج آناتومیک کامل رویش نکرده و اکسپوز نشده باشد، یکی از درمان‌های <span class="en">gummy smile</span> جراحی <strong><span class="en">CL</span> استتیک</strong> است (برداشتن مقداری لثه برای دیده‌شدن بیشتر تاج).
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>اصطلاح</th><th>تعریف</th></tr></thead>
+      <tbody>
+        <tr><td class="k">فرنکتومی <span class="en">(Frenectomy)</span></td><td><strong>قطع کامل فرنوم</strong> شامل تمام چسبندگی‌ها و اتصالات عضلانی زیرِ آن به استخوان. در دیاستم غیرطبیعی بین سانترال‌ها که عاملش فرنوم است، از فرنکتومی استفاده می‌کنیم.</td></tr>
+        <tr><td class="k">فرنوتومی <span class="en">(Frenotomy)</span></td><td>با یک برش، موقعیت جدید (اپیکالی‌تر) به فرنوم می‌دهیم. روش <strong>محافظه‌کارانه‌تر</strong> است.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box exam">
+    <span class="pill">سؤالات این جلسه</span>
+    (۱) دندان کانینِ روکش‌شدهٔ ماگزیلا با بیوتایپ ضخیم و تحلیل ۳ میلی‌متری → کدام تکنیک ارجح است؟ <em>(پاسخ: نیمه‌هلالی/Semilunar — تحلیل ≤۳mm، بیوتایپ ضخیم).</em> <br>(۲) در تکنیک <span class="en">SEMILUNAR</span> اگر عرض لثهٔ چسبنده کم باشد چه می‌توان کرد؟ <em>(باید ابتدا با تکنیک دومرحله‌ای/FGG عرض لثهٔ چسبنده را افزایش داد.)</em>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="topic" id="s6">
+  <div class="sec-head">
+    <div class="num">۶</div>
+    <h2>بازسازی پریودنتال و جراحی‌های Reconstructive <span class="en" style="font-weight:600;font-size:.55em;color:var(--petrol)">(هرندی — فصل ۶۳ کارانزا ۲۰۱۹)</span></h2>
+  </div>
+  <p class="lead">در مواجهه با ضایعات استخوانی پریودنتال دو طرح درمان داریم: <strong>جراحی ریزکتیو</strong> (حذف بافت‌ها) و در مقابل، <strong>جراحی‌های reconstructive / Periodontal regeneration</strong> (بازسازی پریودنشیوم). هدف ایده‌آلِ جراحی پریودنتال، <span class="en">regeneration</span> است.</p>
+
+  <h3>۶-۱ Repair در برابر Regeneration</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>پروسه</th><th>تعریف</th><th>نوع بافت حاصل</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">Repair</span> (ترمیم)</td><td>جایگزینی بافت همبند یا اپیتلیال؛ ثبات آن واضح نیست و <strong>هدف درمان regenerative نیست</strong>.</td><td><span class="en">Long junctional epithelium</span> · چسبندگی بافت همبند + تحلیل ریشه · انکیلوز/تحلیل ریشه (برتری سلول استخوانی).</td></tr>
+        <tr><td class="k"><span class="en">Regeneration</span></td><td>بازسازی کامل تمام اجزا (الیاف پریودنتال، استخوان، بافت نرم) در مکان صحیح.</td><td>هدف: سلول‌های <span class="en">PDL</span> و پروسکوالر <strong>سریع‌تر از استخوان</strong> به ناحیه برسند.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>چهار سرنوشت زخم پریودنتال</strong> بسته به سلول غالب: (۱) اپیتلیوم سریع‌تر → <span class="en">long junctional epithelium</span> · (۲) بافت همبند → اتصالات همبند ± تحلیل ریشه · (۳) سلول استخوانی سریع‌تر → تحلیل ریشه/انکیلوز · (۴) <span class="en">PDL</span> → <span class="en">new attachment</span> واقعی (هدف ما). سه مورد اول = <span class="en">repair</span>.
+  </div>
+
+  <h3 id="s6-eval">۶-۲ روش‌های ارزیابی نتیجهٔ درمان</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>روش</th><th>نکات</th></tr></thead>
+      <tbody>
+        <tr><td class="k">کلینیکی</td><td>مقایسهٔ پروبینگ قبل/بعد؛ <strong><span class="en">CAL</span> مفیدتر از عمق پاکت</strong> است (کاهش عمق پاکت لزوماً نشانهٔ اتچمنت جدید نیست؛ ممکن است صرفاً کاهش نفوذ پروب در اثر کاهش التهاب باشد). نیاز به استاندارد شیاردار برای ورود پروب.</td></tr>
+        <tr><td class="k">رادیوگرافی</td><td>روش استاندارد و تکرارپذیر؛ <span class="en">subtraction radiography</span> فایده را افزایش داده. روش <strong>ترکیبی خطی-کامپیوتری</strong> واقعی‌ترین اندازه را می‌دهد.</td></tr>
+        <tr><td class="k">جراحی مجدد <span class="en">(reentry)</span></td><td>دو عیب: (۱) جراحی غیرضروری · (۲) نمی‌تواند <strong>نوع</strong> اتچمنت را تعیین کند.</td></tr>
+        <tr><td class="k">هیستولوژیک</td><td><strong>تنها روشی که نوع بافت ترمیمی را مشخص می‌کند</strong> (gold standard). به‌دلیل ملاحظات اخلاقی در انسان کاربرد ندارد مگر دندانی که باید کشیده شود. شکاف مرجع روی بیس ضایعه ایجاد و کرونالِ آن بررسی می‌شود.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s6-graftless">۶-۳ چرا گاهی از گرفت استفاده نمی‌کنیم؟</h3>
+  <div class="box note">
+    ضایعات استخوانی بر اساس <strong>تعداد دیواره</strong> دسته‌بندی می‌شوند. در <strong>ضایعهٔ سه‌دیواره</strong> (فقط نقص یک دیواره)، پس از حذف بافت گرانولیشن، چون بافت نرم توسط سه دیواره حفظ می‌شود و <span class="en">collapse</span> نمی‌کند، می‌توان <span class="en">regenerative</span> را <strong>بدون گرفت</strong> انجام داد. <br>در <strong>آبسهٔ حاد پریودنتال</strong> و بیماران <strong>ANUG</strong> (سرعت تخریب بالا)، احتمال <span class="en">new attachment</span> پس از درمان بیشتر است. در ضایعات سه‌دیواره و آبسه‌های اندو-پریوی که دقیق درمان شده‌اند، می‌توان بدون گرفت <span class="en">regeneration</span> داشت.
+  </div>
+
+  <h3 id="s6-epi">۶-۴ حذف اپیتلیوم و جلوگیری از مهاجرت آن</h3>
+  <p>حضور اپیتلیوم جانکشنال و پاکت <strong>سدِّ موفقیت</strong> در <span class="en">regeneration</span> و کسب <span class="en">new attachment</span> است (مانع رسوب مستقیم بافت همبند و سمنتوم و ورود الیاف پریودنتال). نتایج کورتاژ (۵۰ تا ۱۰۰٪ متغیر، غیرقابل‌اعتماد)؛ التراسونیک و مواد شیمیایی کنترل‌ناپذیر و فقط جنبهٔ تاریخی دارند.</p>
+  <div class="box note">
+    <strong>پروسه‌های جراحی حذف اپیتلیوم:</strong> <span class="en">ENAP</span> · جینجیوکتومی تا کرست آلوئول · <span class="en">modified Widman flap</span> · <span class="en">coronally displaced flap</span>. <br>چون سرعت تکثیر اپیتلیوم خیلی بالاست، حذف اپیتلیوم به‌تنهایی برای <span class="en">new attachment</span> کافی نیست.
+  </div>
+  <div class="box tip">
+    <span class="pill a">سه روش جلوگیری از مهاجرت اپیتلیوم</span>
+    (۱) <strong><span class="en">root submergence</span></strong>: قطع تاج و پوشاندن ریشه با فلپ · (۲) برداشتن کل پاپیلای پوشانندهٔ ضایعه و جایگزینی با <span class="en">free autogenous graft</span> (FGG) · (۳) <strong><span class="en">coronally displaced flap</span></strong> (به‌ویژه فورکیشن مولر پایین؛ معمولاً همراه با اسید سیتریک روی ریشه).
+  </div>
+
+  <h3 id="s6-gtr">۶-۵ GTR و انواع غشا</h3>
+  <p>طبق فرضیهٔ <span class="en">GTR</span>، تنها سلول‌های <span class="en">PDL</span> توانایی بالقوهٔ <span class="en">regeneration</span> ساختمان‌های نگه‌دارندهٔ دندان را دارند. سدی از غشا، استخوان و <span class="en">PDL</span> را می‌پوشاند و موقتاً آن‌ها را از اپیتلیوم و بافت همبند لثه‌ای جدا می‌کند.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>نوع غشا</th><th>مثال</th></tr></thead>
+      <tbody>
+        <tr><td class="k">غیرقابل جذب</td><td><span class="en">Gortex</span> / پلی‌تترافلورواتیلن <span class="en">(ePTFE)</span>، تقویت‌شده با تیتانیوم.</td></tr>
+        <tr><td class="k">قابل جذب</td><td><span class="en">Biogide</span> (غشای دولایهٔ کلاژنی).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box warn">
+    <span class="pill c">غشای غیرقابل جذب — نکات</span>
+    اثربخشی به تکنیک جراحی بستگی دارد؛ حفظ لثهٔ کراتینیزه و فلپ ضخیم برای جلوگیری از پرفوریشن ضروری است. غشا <strong>۴ تا ۶ هفته</strong> می‌ماند و حتماً باید با <strong>جراحی دوم خارج</strong> شود. پس از خروج: تا <strong>۳ ماه پروب نشود</strong> و رادیوگرافی تقریباً بعد از <strong>۶ ماه</strong> (تا یک سال ادامه دارد). <br><strong>مهم‌ترین مشکل:</strong> اکسپوز شدن غشا به دهان → آلودگی با میکروفلور → کاهش <span class="en">new attachment</span> (می‌توان موقتاً با کلرهگزیدین موضعی کنترل کرد).
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>سه نوع غشای قابل جذب</th><th>تجزیه</th></tr></thead>
+      <tbody>
+        <tr><td class="k">پلیمر پلی‌گلیکوزید سنتتیک</td><td>(پلی‌لاکتیک‌اسید، کوپلیمر پلی‌لاکتات/پلی‌گالاکتات) → پلی‌لاکتید و پلی‌گلیکولید → اسید لاکتیک و پیرووات → چرخهٔ کربس. تنظیم با <span class="en">cross-linkage</span>.</td></tr>
+        <tr><td class="k">کلاژن</td><td>با کلاژناز، ژلاتیناز و پپتیداز.</td></tr>
+        <tr><td class="k">سولفات کلسیم</td><td>واکنش ژانت‌سل؛ تنظیم با <span class="en">heat-processed calcium sulfate chip</span>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>مزایای غشای قابل جذب:</strong> سازگاری بافتی بیشتر · زمان تجزیهٔ قابل‌تنظیم · <strong>عدم نیاز به جراحی دوم</strong> (در ناحیه جذب می‌شود).
+  </div>
+
+
+  <h3 id="s6-root">۶-۶ Biomodification سطح ریشه</h3>
+  <p>برای <span class="en">new attachment</span>، تمام رسوبات ریشه باید با <span class="en">root planing</span> کامل برداشته شوند. موادِ بهبود سطح ریشه:</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>ماده</th><th>اثر</th></tr></thead>
+      <tbody>
+        <tr><td class="k">اسید سیتریک</td><td>دمینرالیزه‌کردن سطح ریشه → القای سمنتوژنزیس و اتصال الیاف کلاژن. روی ریشهٔ <span class="en">root planed نشده</span> اثری ندارد؛ پس از <span class="en">root planing</span> یک ناحیهٔ دمینرالیزهٔ <strong>۴ میکرومتری</strong> با الیاف کلاژن اکسپوز ایجاد می‌کند. <span class="en">smear layer</span> را برداشته، توبول‌ها را قیفی و عریض می‌کند، اندوتوکسین و باکتری را حذف و با اتصال زودرس فیبرین مانع مهاجرت اپیتلیوم می‌شود.</td></tr>
+        <tr><td class="k">فیبرونکتین</td><td>گلیکوپروتئینی که فیبروبلاست‌ها برای اتصال به ریشه نیاز دارند. افزایش بیش از حد پلاسمایی مزیت قابل‌ملاحظه ندارد.</td></tr>
+        <tr><td class="k">تتراسایکلین</td><td>در <span class="en">in vitro</span>: افزایش باندینگ فیبرونکتین + برداشت <span class="en">smear layer</span> و اکسپوز توبول. در <span class="en">in vivo</span> نتایج قابل‌ملاحظه نبود؛ تتراسایکلین به‌تنهایی بهتر از ترکیب با فیبرونکتین بود.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s6-bio">۶-۷ فاکتورهای رشد و Emdogain</h3>
+  <p><strong>فاکتورهای رشد:</strong> مولکول‌های پلی‌پپتیدی که از ماکروفاژ، سلول‌های اندوتلیال، فیبروبلاست و پلاکت ترشح می‌شوند و وقایع ترمیم (پرولیفریشن فیبروبلاست از <span class="en">PDL</span> و تشکیل استخوان) را تنظیم می‌کنند.</p>
+  <div class="box exam">
+    <span class="pill">Emdogain (EMD)</span>
+    پروتئین‌های ماتریکس مینایی (مثل <strong>آملوژنین</strong>) که توسط غلاف هرتویگ ترشح می‌شوند و تشکیل سمنتوم آسلولار را القا می‌کنند. <span class="en">Emdogain</span> نام تجاری پروتئین ماتریکس مینایی از دندان‌های در حال تکامل خوک است (ژل غلیظ، با سرنگ تزریق می‌شود؛ عمدتاً آملوژنین + غیرآملوژنین: پرولین، تافتلین، آملوبلاستین، آملین). <br><strong>نکتهٔ کلیدی:</strong> مشتقات ماتریکس مینایی <strong><span class="en">Osteoinductive</span> نیستند بلکه <span class="en">Osteopromotive</span></strong> هستند (در ترکیب با <span class="en">FDBA</span> تشکیل استخوان را تحریک می‌کنند). در ضایعات <span class="en">Intra-bone</span> سودمند است.
+  </div>
+  <div class="box note">
+    <strong>PDGF:</strong> امروزه <span class="en">FDA</span> فقط <span class="en">rhPDGF</span> انسانی نوترکیب (<span class="en">GEM21</span>) را برای <span class="en">regeneration</span> پریودنتال تأیید کرده است. <br><strong>BMP</strong>ها در تکامل اسکلت نقش دارند: <strong>BMP-2</strong> قوی‌ترین فعالیت استخوان‌سازی؛ <strong>BMP-7</strong> (استئوژنیک پروتئین ۱) و <strong>BMP-3</strong> (استئوژنین) هم استخوان‌سازی را تحریک می‌کنند.
+  </div>
+
+  <h3 id="s6-graft">۶-۸ مواد پیوندی استخوانی</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>اصطلاح</th><th>تعریف</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">Osteogenesis</span></td><td>توانایی گرفت برای ساخت استخوان جدید توسط <strong>سلول‌های زندهٔ خودِ گرفت</strong>.</td></tr>
+        <tr><td class="k"><span class="en">Osteoinduction</span></td><td>فرایند شیمیایی؛ مولکول‌های گرفت (مثل <span class="en">BMP</span>) سلول‌های مجاور را به <strong>استئوبلاست</strong> تبدیل می‌کنند.</td></tr>
+        <tr><td class="k"><span class="en">Osteoconduction</span></td><td>اثر فیزیکی؛ ماتریکس گرفت به‌عنوان <strong>داربست</strong> برای نفوذ سلول‌های خارجی عمل می‌کند.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>نوع</th><th>منبع و نکات</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">Autograft</span></td><td>از خود فرد. منابع داخل‌دهانی: ساکت کشیده‌شده، ریج بی‌دندان، داخل فک، استئوپلاستی/استئوکتومی. تکنیک‌ها: <strong><span class="en">osseous coagulum</span></strong> (ذرات کوچک کورتیکال + خون؛ رابینسون)، <strong><span class="en">bone blend</span></strong> (سابیدن در کپسول)، <strong><span class="en">bone swaging</span></strong> (هل‌دادن استخوان مجاور به‌سمت ریشه)؛ استخوان اسفنجی (توبروزیتهٔ ماگزیلا، ساکت در حال التیام هفتهٔ ۸–۱۲). خارج‌دهانی (ایلیاک) امروزه به‌دلیل عوارض استفاده نمی‌شود.</td></tr>
+        <tr><td class="k"><span class="en">Allograft</span></td><td>از فرد دیگرِ همان گونه. باید آنتی‌ژنیسیته سرکوب شود. <strong>FDBA</strong> (freeze-dried) = <span class="en">osteoconductive</span> (۶۰٪ ضایعات پر شد، با اتوژن ۸۰٪). <strong>DFBA</strong> (دمینرالیزه) = <span class="en">osteoinductive</span> و استئوژنیک قوی‌تر و ارجح؛ دمینرالیزاسیون <span class="en">BMP</span> را اکسپوز می‌کند. ریسک <span class="en">HIV</span> ≈ ۱ در هر ۱ تا ۸ میلیون. D-FDBA کورتیکال بهتر از اسفنجی.</td></tr>
+        <tr><td class="k"><span class="en">Xenograft</span></td><td>از گونهٔ دیگر. <strong><span class="en">Bio-Oss</span></strong> = استخوان گاوی، <span class="en">osteoconductive</span>، همراه <span class="en">GTR</span>؛ ماتریکس مینرالیزهٔ متخلل، <span class="en">biocompatible</span> بدون پاسخ ایمنی. می‌تواند با پلی‌پپتید چسبندهٔ <strong>P-15</strong> (آنالوگ سنتتیک ۱۵ توالی اسیدآمینهٔ کلاژن نوع ۱) ترکیب شود. <strong>احتیاط:</strong> تراکم زیاد اطراف ایمپلنت → کاهش استخوان <span class="en">native</span> و اختلال اسئواینتگریشن.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>فسفات کلسیم (غیراستخوانی، osteoconductive):</strong> (۱) <strong>هیدروکسی‌آپاتیت</strong> Ca/P = ۱٫۶۷ (مشابه استخوان، غیرقابل‌جذب) · (۲) <strong>تری‌کلسیم‌فسفات</strong> Ca/P = ۱٫۵ (شبیه b-withlockite، تا حدی قابل جذب). موادی مثل غضروف، گچ پاریس و پلاستیک فقط جنبهٔ تاریخی دارند.
+  </div>
+  <div class="box tip">
+    <span class="pill a">معیارهای Schallhorn برای انتخاب ماده</span>
+    پذیرش بیولوژیک · قابلیت پیش‌بینی · سهولت کاربرد بالینی · حداقل عواقب بعد از جراحی · حداقل خطرات حین جراحی · پذیرش بیمار.
+  </div>
+
+  <h3 id="s6-te">۶-۹ مهندسی بافت و درخت تصمیم بالینی</h3>
+  <div class="box note">
+    <strong>سه جزء اصلی مهندسی بافت</strong> (+ زمان و شرایط مناسب): (۱) <strong>داربست/ماتریکس</strong> (کلاژن یا فسفات کلسیم) · (۲) <strong>سلول</strong> (استئوبلاست/فیبروبلاست) · (۳) <strong>مولکول‌های سیگنال‌دهنده</strong> (<span class="en">BMP, PDGF, IGF, TGF</span>).
+  </div>
+  <div class="box warn">
+    <span class="pill c">ملاحظات کلی جراحی regenerative</span>
+    طرح فلپ بر اساس نوع ضایعه (دو/سه‌دیواره، نواحی قدامی استتیک vs خلفی) · در صورت <span class="en">TFO</span> ابتدا <span class="en">occlusal adjustment</span> و حذف نیروهای تروماتیک (وگرنه ترمیم به‌مخاطره می‌افتد) · تجویز آنتی‌بیوتیک سیستمیک پس از جراحی (هرچند اطلاعات قطعی نیست) · ملاحظات بلندمدت: <strong>قطع سیگار</strong>، همکاری بیمار، وضعیت اندو خوب، بهداشت خوب، آناتومی قابل‌تصحیح، <strong>ارزیابی بعد از ۱۲ ماه</strong> (حداکثر بهبودی بعد از ۱۲ ماه). موفقیت باید <strong>بالینی</strong> باشد نه فقط آماری (نیم میلی‌متر چسبندگی از نظر آماری معنادار ولی بالینی کم‌ارزش است).
+  </div>
+  <div class="box exam">
+    <span class="pill">درخت تصمیم (Fig 63.4)</span>
+    <ul style="margin:6px 0;padding-inline-start:20px;">
+      <li>ضایعهٔ استخوانی <strong>≤ ۳ میلی‌متر</strong> و عمق پاکت <strong>≤ ۵</strong> → درمان <span class="en">non-surgical</span>.</li>
+      <li>عمق پروب <strong>&gt; ۵</strong> و ضایعه <strong>≤ ۳ میلی‌متر</strong> → جراحی <span class="en">resective</span>.</li>
+      <li>ضایعه <strong>&gt; ۳ میلی‌متر</strong> → درمان <span class="en">regeneration</span>.</li>
+    </ul>
+    احتمال نتیجهٔ مثبت: <strong>ضایعهٔ سه‌دیواره &gt; محیطی &gt; دودیواره</strong> · پاسخ مثبت به ضایعهٔ باریک &gt; پهن.
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="topic" id="s7">
+  <div class="sec-head">
+    <div class="num">۷</div>
+    <h2>نقش مکمل درمان ارتودنسی <span class="en" style="font-weight:600;font-size:.55em;color:var(--petrol)">(هرندی — فصل ۵۶ کارانزا ۲۰۱۹)</span></h2>
+  </div>
+
+  <h3>۷-۱ فواید ارتودنسی برای بیمار پریودنتال</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>#</th><th>فایده</th></tr></thead>
+      <tbody>
+        <tr><td class="tc k">۱</td><td>مرتب‌کردن دندان‌های نامرتب قدام ماگزیلا/مندیبل → دسترسی بهتر برای تمیزکردن همهٔ سطوح.</td></tr>
+        <tr><td class="tc k">۲</td><td>جابه‌جایی ورتیکالی دندان → بهبود انواع خاصی از ضایعات استخوانی و رفع نیاز به جراحی ریزکتیو.</td></tr>
+        <tr><td class="tc k">۳</td><td>بهبود <span class="en">esthetic</span> مرتبط با موقعیت مارجینال لثهٔ قدام ماگزیلا پیش از درمان ترمیمی.</td></tr>
+        <tr><td class="tc k">۴</td><td>کمک به بیمارانِ نیازمند <span class="en">forced eruption</span> در شکستگی شدید قدام ماگزیلا.</td></tr>
+        <tr><td class="tc k">۵</td><td>تصحیح امبراژورهای لثه‌ای باز و بازسازی پاپی‌های از‌دست‌رفته.</td></tr>
+        <tr><td class="tc k">۶</td><td>اصلاح وضعیت دندان‌های مجاور ناحیهٔ ایمپلنت و به‌دست‌آوردن فضای لازم.</td></tr>
+        <tr><td class="tc k">۷</td><td><span class="en">Uprighting</span> مولرها (به‌ویژه با تیلت مزیالی) → کاهش کانتور لثه‌ای عمیق و کاهش پاکت مزیال.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s7-pre">۷-۲ جراحی استخوانی پیش از ارتودنسی (Preorthodontic Osseous Surgery)</h3>
+  <div class="box note">
+    گاهی پیش از ارتودنسی به اصلاح نقایص استخوانی نیاز است؛ شدت آن به نوع ضایعه بستگی دارد: (۱) <span class="en">crater</span>ها · (۲) نقایص <span class="en">hemiseptal</span> · (۳) <span class="en">three wall defect</span> (سه‌دیواره) · (۴) <span class="en">furcation lesion</span>. کلینیسین تشخیص می‌دهد کدام نقص با ارتودنسی بهبود می‌یابد و کدام نیاز به اقدام پریودنتال (شامل جراحی) قبل از ارتو دارد.
+  </div>
+
+  <h3 id="s7-crater">۷-۳ Crater و Hemiseptal Defect</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>ضایعه</th><th>ماهیت</th><th>درمان</th></tr></thead>
+      <tbody>
+        <tr><td class="k"><span class="en">Crater</span></td><td>نقص <strong>دو‌دیواره</strong> اینترپروگزیمال؛ <strong>با ارتودنسی بهبود نمی‌یابد</strong>.</td><td>کریتر کم‌عمق (پاکت ۴–۵mm) ممکن است <span class="en">nonsurgical</span> نگه‌داری شود؛ وگرنه جراحی ریزکتیو (<span class="en">reshaping</span>) <strong>قبل از ارتو</strong>. تصمیم بر اساس: پاسخ به <span class="en">root planing</span>، مقاومت پریودنتال، محل ضایعه، امکان نگه‌داری غیرجراحی.</td></tr>
+        <tr><td class="k"><span class="en">Hemiseptal</span></td><td>نقص یک یا دو‌دیواره، اغلب اطراف دندان‌های با <span class="en">tipping</span> مزیالی یا <span class="en">supra eruption</span>.</td><td><strong>معمولاً با ارتودنسی صحیح برطرف می‌شود.</strong> قبل از ارتو باید التهاب کنترل شود؛ بعد از ارتو دندان‌ها حداقل <strong>۶ ماه</strong> تثبیت و دوباره ارزیابی پریودنتال شوند.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    در ضایعهٔ <span class="en">three wall</span>، درمان <span class="en">regenerative</span> مثل <span class="en">FDBA</span> انجام و اگر نتیجه پایدار بود، <strong>۳ تا ۶ ماه</strong> بعد ارتودنسی شروع می‌شود.
+  </div>
+
+  <h3 id="s7-bracket">۷-۴ موقعیت براکت و تراز کردن مارژینال ریج</h3>
+  <div class="box tip">
+    <span class="pill a">قاعدهٔ تعیین موقعیت براکت</span>
+    در پریودنشیومِ سالم، موقعیت براکت خلفی بر اساس <strong>مارژینال ریج و کاسپ</strong> تعیین می‌شود؛ ولی وقتی به‌علت رویش نامناسب، مارژینال ریج‌ها هم‌سطح نیستند، باید بر اساس <strong>استخوان اینترپروگزیمالِ رادیوگرافی</strong> تعیین شود. <br>اگر سطح استخوان اینترپروگزیمال با ناهمواری مارژینال ریج‌ها <strong>موازی</strong> باشد، با هم‌سطح‌کردن مارژینال ریج‌ها استخوان هم هم‌سطح می‌شود؛ ولی اگر استخوان <strong>افقی</strong> باشد، تصحیح ارتودنتیک مارژینال ریج‌ها <strong>ضایعهٔ همی‌سپتال</strong> می‌سازد → باید مارژینال ریج‌ها را با تراش هم‌سطح کرد (گاهی نیاز به اندو و ترمیم). بیماران طی <span class="en">leveling</span> هر ۲–۳ ماه ارزیابی شوند.
+  </div>
+  <div class="box note">
+    در پریودنشیومِ سالم: موقعیت براکت قدامی بر اساس لبهٔ انسیزال؛ اگر لبهٔ انسیزال و مارژینال ریج صحیح باشند، <span class="en">CEJ</span>ها هم‌موقعیت‌اند → نمای <span class="en">flat</span> و استخوان بین‌دندانی باثبات. اگر تحلیل استخوان وجود دارد، آناتومی تاج برای موقعیت براکت مناسب نیست و باید لبهٔ دندان تراش داده شود (در دندان وایتال تدریجی، برای تشکیل عاج ثانویه).
+  </div>
+
+  <h3 id="s7-furca">۷-۵ ضایعات فورکا و ارتودنسی</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>کلاس</th><th>نام</th></tr></thead>
+      <tbody>
+        <tr><td class="k tc">۱</td><td><span class="en">Incipient</span></td></tr>
+        <tr><td class="k tc">۲</td><td><span class="en">Moderate</span></td></tr>
+        <tr><td class="k tc">۳</td><td><span class="en">Advanced</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box warn">
+    <span class="pill c">مراقبت ویژه</span>
+    فورکا <strong>سخت‌ترین ضایعه برای نگه‌داری</strong> است و ممکن است حین ارتو بدتر شود → <span class="en">recall</span> هر ۲–۳ ماه ضروری است.
+  </div>
+  <div class="box note">
+    <strong>فورکا کلاس ۳ + نیاز به ارتو:</strong> یک راه، حذف ضایعه با <span class="en">hemisection</span> (نیاز به پریو + اندو + ترمیمی)؛ اما <strong>توصیه: اول ارتو</strong> و نگه‌داشتن فورکای دست‌نخورده حین ارتو، سپس اندو و سپس همی‌سکشن. <br>اگر طرح درمان = جداسازی ریشه‌ها + بریج: <strong>اول همی‌سکشن، اندو و جراحی پریو قبل از ارتو</strong>؛ سپس ریشه‌ها با ارتو ۷–۸ میلی‌متر از هم فاصله می‌گیرند → حذف فورکا. اگر ریشهٔ کوتاه/تحلیل پیشرفته/چسبندگی ریشه باشد، همی‌سکشن غیرممکن → کشیدن و ایمپلنت (ایمپلنت به‌عنوان انکوریج باید ۴ تا ۶ ماه قبل گذاشته شود).
+  </div>
+
+  <h3 id="s7-fracture">۷-۶ ریشهٔ شکسته و Forced Eruption</h3>
+  <p>در شکستگی نزدیک مارجین لثه که به ریج آلوئولار می‌رسد، ترمیم تاج تقریباً غیرممکن است (تجاوز به فضای بیولوژیک + التهاب دائمی). باید دید آیا با ارتو می‌توان ریشه را <span class="en">force eruption</span> کرد یا دندان باید کشیده شود.</p>
+  <div class="box exam">
+    <span class="pill">۶ فاکتور انتخاب درمان ریشهٔ شکسته</span>
+    (۱) طول ریشه · (۲) حد شکستگی · (۳) شکل/فرم ریشه · (۴) اهمیت نسبی دندان · (۵) زیبایی · (۶) پروگنوز اندو-پریو.
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>فاکتور</th><th>توضیح</th></tr></thead>
+      <tbody>
+        <tr><td class="k">طول ریشه</td><td>پس از <span class="en">force eruption</span> باید نسبت تاج به ریشه <strong>حداقل ۱:۱</strong> باشد. اگر شکستگی در حد استخوان است، <strong>۴ میلی‌متر</strong> اکستروژن لازم است: <strong>۲٫۵mm</strong> برای عرض بیولوژیک + <strong>۱٫۵mm</strong> برای <span class="en">ferrule</span>. اگر نسبت کمتر از ۱:۱ شود، کشیدن عاقلانه‌تر است.</td></tr>
+        <tr><td class="k">شکل ریشه</td><td>بهتر است پهن و غیرمخروطی؛ ریشهٔ مخروطی → ناحیهٔ سرویکال باریک و زیبایی به‌مخاطره. عرض کانال نباید بیش از <strong>۱/۳ عرض ریشه</strong> باشد (دیوارهٔ نازک → شکست زودرس).</td></tr>
+        <tr><td class="k">حد شکستگی</td><td>اگر ۲–۳ میلی‌متر اپیکالی‌تر از کرست آلوئول باشد، <span class="en">force eruption</span> خیلی مشکل/غیرممکن است.</td></tr>
+        <tr><td class="k">اهمیت / زیبایی / پروگنوز</td><td>بیمار جوان با دندان‌های مجاور سالم → محافظه‌کارانه (<span class="en">force eruption</span>). <span class="en">High lip line</span> → حفظ دندان اولویت دارد. شکستگی عمودی → پروگنوز <span class="en">poor</span> → کشیدن.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box note">
+    <strong>سرعت رویش:</strong> سریع → استخوان در محل می‌ماند، فقط ریشه کرونالی می‌شود (نیاز به <span class="en">fiberotomy</span> محیطی). آهسته → استخوان هم همراه دندان حرکت می‌کند (ممکن است بعداً <span class="en">CL</span> لازم شود). همزمان لثه هم کرونالی مهاجرت می‌کند → تاج کلینیکی کوتاه‌تر → اصلاح با جراحی (جینجیوکتومی ساده اگر نیاز به اصلاح استخوان نباشد، وگرنه فلپ). <br>پس از <span class="en">force eruption</span> نیاز به دورهٔ <span class="en">retentive</span> برای جلوگیری از <span class="en">reintrusion</span> است (الیاف اصلی تا <strong>۶ ماه</strong> جهت‌گیری جدید می‌گیرند).
+  </div>
+
+  <h3 id="s7-margin">۷-۷ مارژین لثهٔ ناهماهنگ، امبراژور باز و ایمپلنت-ارتو</h3>
+  <div class="box tip">
+    <span class="pill a">موقعیت ایده‌آل مارژین لثه</span>
+    (۱) مارژین دو سانترال هم‌سطح · (۲) مارژین سانترال اپیکالی‌تر از لترال و هم‌سطح کانین · (۳) کانتور مارژین لبیال تابع <span class="en">CEJ</span> طبیعی · (۴) پاپی بین دندان‌ها، نوک پاپیلا در وسط فاصلهٔ لبهٔ انسیزال و <span class="en">HOC</span> لبیال.
+  </div>
+  <div class="box note">
+    <strong>۴ فاکتور انتخاب درمان مارژین ناهماهنگ:</strong> (۱) ارتباط مارژین سانترال با <span class="en">lip line</span> (اگر حین خنده دیده نشود نیاز به درمان نیست) · (۲) عمق سالکوس (اگر سانترال کوتاه‌تر سالکوس بیشتری دارد → <span class="en">excisional gingivectomy</span>) · (۳) اگر سانترال کوتاه‌تر هنوز بلندتر از لترال است → <span class="en">extrusion</span> + تراش لبهٔ انسیزال · (۴) اگر لبهٔ انسیزال ساییده (نشانهٔ <span class="en">over eruption</span>) → <strong><span class="en">intrusion</span></strong> (حداقل ۶ ماه برای جلوگیری از اکستروژن مجدد).
+  </div>
+  <div class="box note">
+    <strong>امبراژور باز لثه‌ای — ۳ عامل:</strong> شکل تاج (محل <span class="en">HOC</span>) · زاویهٔ ریشه (<span class="en">root angulation</span>) · تحلیل استخوان. در حالت طبیعی نصف فضای اینترپروگزیمال را تماس و نصف را پاپیلا اشغال می‌کند (≈۱:۱). ابتدا با <span class="en">PA</span> زاویهٔ ریشه‌ها بررسی می‌شود؛ اگر واگرا → اصلاح موقعیت ریشه با براکت؛ اگر زاویه صحیح ولی مشکل شکل مثلثی → (۱) <span class="en">recontouring</span> با کامپوزیت/سرامیک یا (۲) تراش اینترپروگزیمال و بستن فضا با ارتو.
+  </div>
+  <div class="box exam">
+    <span class="pill">CL در برابر Intrusion (ساییدگی شدید)</span>
+    در دندان‌های ساییدهٔ شدید بدون طول تاج کافی: <strong>(۱) جراحی CL</strong> (در ریشهٔ کوتاه/مخروطی منع دارد) یا <strong>(۲) intrusion ارتودنتیک</strong> (حداکثر ۴ دندان قدامی ماگزیلا با تکیه‌گاه خلفی؛ براکت نزدیک لبهٔ انسیزال؛ حداقل ۶ ماه نگه‌دارنده). <strong>مزایای intrusion بیشتر از CL است</strong> مگر ریشهٔ پهن/بلند یا <span class="en">periodontal bone loss</span> افقی وسیع.
+  </div>
+  <div class="box note">
+    <strong>Implant-Orthodontic Interaction:</strong> ترکیب ارتو + ایمپلنت + پریو = دندانپزشکی <span class="en">inter-disciplinary</span>. اگر ایمپلنت <strong>انکوریج</strong> است → ابتدای کار گذاشته می‌شود (انکوریج مستقیم یا غیرمستقیم)؛ اگر <strong>جایگزین دندان</strong> است → دیرتر/انتهای ارتو (انکوریج دایرکت). نیاز به <span class="en">space management</span> (اینترکرونال/اینتررادیکولار) و گاهی <span class="en">augmentation</span> بافت سخت و نرم پیش از ایمپلنت.
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="topic" id="s8">
+  <div class="sec-head">
+    <div class="num">۸</div>
+    <h2>آماده‌سازی پریودنشیوم برای درمان ترمیمی <span class="en" style="font-weight:600;font-size:.55em;color:var(--petrol)">(Preparation for Restorative Dentistry)</span></h2>
+  </div>
+  <p class="lead">سلامت پریودنتال پیش‌شرط و جزء لاینفکِ درمان دندانپزشکی موفق است. تا زمانی که «بیس» (پریودنشیوم = لثه و استخوان اطراف) سالم نباشد، نباید به سراغ درمان <span class="en">Restorative</span> درازمدت رفت.</p>
+
+  <h3>۸-۱ چرا سلامت پریو مقدم است</h3>
+  <div class="box warn">
+    <span class="pill c">قاعدهٔ بنیادی</span>
+    در حضور پاکت پریودنتال و خونریزی، درمان ترمیمی در کوتاه‌مدت با <span class="en">failure</span> مواجه می‌شود (دهان سرشار از باکتری بی‌هوازی → ریسک شکست بالا). درمان اورژانس و درد (مثل اندو) مقدم است، اما <strong>درمان زیبایی قابل قبول نیست</strong> تا بیماری فعال برطرف شود.
+  </div>
+  <div class="box exam">
+    <span class="pill">چرا اول التهاب، بعد ترمیمی؟</span>
+    در التهاب، بافت لثه پُرحجم است. پس از رفع التهاب <strong><span class="en">shrinkage</span></strong> رخ می‌دهد و موقعیت مارجین لثه تغییر می‌کند. اگر اول ترمیمی/پروتز انجام شود و بعد التهاب رفع شود، به‌دلیل تغییر موقعیت مارجین، <strong>مارجین روکش لو می‌رود و درمان شکست می‌خورد</strong>. (در بافت سالم و غیرملتهب، احتمال <span class="en">shrinkage</span> پس از درمان ترمیمی زیرلثه‌ای ناچیز است.)
+  </div>
+  <div class="box note">
+    حین معاینه باید پروب در دست باشد؛ هر ناحیهٔ <span class="en">BOP</span> احتمال <span class="en">recession</span> و <span class="en">attachment loss</span> دارد. اولویت: درمان <span class="en">non-surgical</span>؛ در صورت عدم پاسخ، <span class="en">surgical</span>. بافت‌هایی که حین ترمیمی خونریزی نمی‌کنند، نتیجهٔ قابل‌پیش‌بینی‌تری دارند.
+  </div>
+
+  <h3 id="s8-tfo">۸-۲ نیروهای تروماتیک (TFO)</h3>
+  <div class="box note">
+    اگر دندان تحت اکلوژن تروماتیک و همزمان پریودنتیت باشد، تخریب پیش‌رونده محتمل است (افزایش سرعت <span class="en">attachment loss</span>، لقی، <span class="en">bone loss</span> بیشتر، ناراحتی). در صورت لزوم باید <strong>ادجاست اکلوزال قبل از ترمیمی</strong> انجام شود. رستوریشن روی دندانِ عاری از التهاب و تحت اکلوژن مناسب، ثبات پریودنتال بهتری دارد. <br><strong>بافت نرم:</strong> ضخامت و کیفیت لثه (کراتینیزه و <span class="en">attached</span>) عاملِ دفاع ساختاری است؛ اگر اطراف ایمپلنت لثهٔ چسبندهٔ کافی نباشد، احتمال <span class="en">failure</span> در کوتاه‌مدت بسیار زیاد است.
+  </div>
+
+  <h3 id="s8-phases">۸-۳ مراحل و کنترل بیماری فعال</h3>
+  <div class="box note">
+    آماده‌سازی پریودنشیوم به دو مرحله تقسیم می‌شود: (۱) <strong>کنترل آماس پریودنتال</strong> (غیرجراحی و جراحی) · (۲) <strong>جراحی پریودنتال پیش از پروتز <span class="en">(preprosthetic)</span></strong>.
+  </div>
+  <div class="box tip">
+    <span class="pill a">کنترل بیماری فعال</span>
+    <ul style="margin:6px 0;padding-inline-start:20px;">
+      <li><strong>درمان اورژانس</strong> (تسکین درد، توقف عفونت حاد؛ به‌ویژه درد اندودنتیک حاد) مقدم است.</li>
+      <li><strong>خارج‌کردن دندان‌های <span class="en">hopeless</span></strong> و حذف عوامل گیر پلاک (مارجین‌های <span class="en">overhang</span>، پوسیدگی درمان‌نشده).</li>
+      <li><strong>آموزش بهداشت دهان:</strong> در پاکت‌های عمیق (&gt; ۵mm) کنترل پلاک به‌تنهایی کافی نیست؛ تکنیک صحیح مسواک و نخ‌دندان لازم است.</li>
+      <li><strong>SRP:</strong> همراه با بهداشت، التهاب را به‌شدت کاهش می‌دهد (به‌ویژه در پاکت‌های عمیق).</li>
+    </ul>
+    <strong>نکته:</strong> ارزیابی مجدد <strong>۴ هفته</strong> پس از SRP (حداقل زمانِ صبر پس از التهاب خفیف) — بررسی اینکه عمق پروبینگ &lt; ۳mm شده و <span class="en">BOP</span> هست یا نه.
+  </div>
+  <div class="box note">
+    <strong>ارتودنسی مکمل:</strong> فقط پس از کنترل بیماری فعال. اگر درمان غیرجراحی کافی بوده، درمان نهایی پاکت را می‌توان به بعد از ارتو موکول کرد (ابتدا ارتو، سپس جراحی). اما اگر ضایعات <span class="en">angular</span> و پاکت‌ها ممکن است حین ارتو عمیق‌تر شوند، <strong>پریو قبل از ارتو</strong>. دندانِ با سابقهٔ تحلیل استخوان، تا زمانی که پریودنشیوم سالم است و لقی بیش از حد ندارد، می‌تواند بدون <span class="en">attachment loss</span> بیشتر حرکت ارتودنتیک کند.
+  </div>
+
+  <h3 id="s8-pre">۸-۴ جراحی پیش از درمان پروتزی (موکوجینجیوال)</h3>
+  <div class="box note">
+    شایع‌ترین تکنیک‌ها: <strong>افزایش عرض لثه</strong> و <strong>پوشش سطح ریشه</strong>؛ اغلب قبل از ترمیمی و به‌دلایل پروتزی یا مرتبط با حرکت ارتودنتیک. <br>اگر تحلیل لثه و اکسپوزِ ریشه داریم، در صورت امکان با جراحی بافت لثه را برمی‌گردانیم؛ <strong>نباید با فشار مادهٔ ترمیمی</strong> ناحیه را پوشاند (تحلیل لثه بدتر و سایز دندان دوبرابر می‌شود → <span class="en">overhang</span> و تجمع پلاک). پس از پیوند لثه، <strong>۲ ماه</strong> صبر تا ترمیم/<span class="en">healing</span> و سپس ترمیمی (تا مارجین به ثبات برسد و بعد قالب‌گیری روکش).
+  </div>
+
+  <h3 id="s8-ridge">۸-۵ حفظ مورفولوژی ریج (Socket Preservation)</h3>
+  <div class="box note">
+    همزمان با کشیدن دندان، استخوان شروع به تحلیل می‌کند و ممکن است <span class="en">defect</span> ایجاد شود. جراحی‌های <strong>حفظ ریج</strong> برای ایمپلنت/پانتیک آینده و جلوگیری از دفرمیتی نازیبا مفیدند. در تکنیک <strong><span class="en">socket preservation</span></strong>، مواد (گرفت استخوانی و…) داخل ساکت گذاشته می‌شود و یک پروتز موقت شکل پاپی‌ها را حفظ می‌کند → بعداً روکش با پاپیِ موجود و شکل قابل‌قبول.
+  </div>
+
+  <h3 id="s8-cl">۸-۶ افزایش طول تاج (CL) و عرض بیولوژیک</h3>
+  <p>جراحی <span class="en">crown lengthening</span> برای افزایش گیر و <span class="en">retention</span> پروتز، قالب‌گیری، و برقراری مارجین لثه‌ایِ استتیک به‌کار می‌رود (<span class="en">CL</span> استتیک در بیماران <span class="en">high lip line</span> با خندهٔ لثه‌ای). جراحی باید طوری باشد که <strong>عرض بیولوژیک حفظ شود</strong>.</p>
+  <div class="box exam">
+    <span class="pill">عرض بیولوژیک (≈ ۲ میلی‌متر)</span>
+    <div class="tablewrap" style="margin-top:8px;">
+      <table>
+        <thead><tr><th>جزء</th><th>اندازه</th></tr></thead>
+        <tbody>
+          <tr><td class="k">عمق سالکوس <span class="en">(sulcus)</span></td><td class="tc">≈ ۰٫۶۹ میلی‌متر (تا ۱)</td></tr>
+          <tr><td class="k"><span class="en">Junctional epithelium</span></td><td class="tc">۰٫۹۷ میلی‌متر</td></tr>
+          <tr><td class="k">بافت همبند <span class="en">(connective tissue)</span></td><td class="tc">۱٫۰۷ میلی‌متر</td></tr>
+          <tr><td class="k"><strong>عرض بیولوژیک</strong> (JE + CT)</td><td class="tc"><strong>۲٫۰۴ میلی‌متر</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    این لایهٔ ≈۲ میلی‌متری در تمام بدن نقش <strong>محافظ</strong> دارد. هنگام تراش و قالب‌گیری، <strong>مارجین تراش نباید وارد عرض بیولوژیک شود</strong>.
+  </div>
+  <div class="box warn">
+    <span class="pill c">دو مشکلِ پایین‌بردن لبهٔ روکش</span>
+    (۱) قالب‌گیری دقیق نباشد و لبهٔ روکش <span class="en">overhang</span> شود → تجمع پلاک · (۲) تجاوز به عرض بیولوژیک → التهاب، تشکیل پاکت و تحلیل استخوان. <br><strong>توصیه:</strong> حداقل فاصلهٔ مارجین لثه تا کرست استخوان <strong>۳ میلی‌متر</strong> باشد (۲ عرض بیولوژیک + ۱ سالکوس). اگر رستوریشن ۰٫۵ میلی‌متر در سالکوس قرار گیرد، عرض بیولوژیک برقرار و لثه سالم می‌ماند.
+  </div>
+  <div class="box tip">
+    <span class="pill a">دو حالت جراحی Crown Lengthening</span>
+    <ul style="margin:6px 0;padding-inline-start:20px;">
+      <li><strong>پاکت ۵mm + لثهٔ کراتینیزهٔ کافی:</strong> نیازی به اصلاح استخوان نیست؛ با <strong>۲ میلی‌متر ژنژیوکتومی</strong> عمق پاکت تا استخوان ۳mm می‌شود و همچنان ۳mm کراتینیزه در باکال می‌ماند (قبل از ژنژیوکتومی بررسی شود که ۳mm کراتینیزه باقی می‌ماند).</li>
+      <li><strong>لثهٔ چسبندهٔ ناکافی (&lt; ۳mm):</strong> نیاز به <strong>فلپ همراه با <span class="en">bone recontouring</span></strong>؛ دو برش ریلیزینگ، حفظ تمام بافت کراتینیزه و جابه‌جایی به پایین، سوچور فلپ به پریوست → کاهش عمق پاکت و حفظ کراتینیزه.</li>
+    </ul>
+  </div>
+  <div class="box exam">
+    <span class="pill">قاعدهٔ Ferrule و فاصلهٔ ۴ میلی‌متر</span>
+    در پوسیدگی/شکستگی، برای اطمینان از لبهٔ ترمیم روی سطح سالم و گیر کافی، حداقل <strong>۴ میلی‌متر</strong> از محدودهٔ اپیکالی پوسیدگی/خط شکستگی تا کرست لازم است. <br>اگر از حد پوسیدگی تا استخوان ۲mm باشد → <span class="en">CL</span>: فلپ کنار، استخوان ۱mm پایین‌تر تا فاصلهٔ ۳mm ایجاد شود. <br>در دندان شکسته با <span class="en">post</span> و روکش، <strong>۱ میلی‌متر <span class="en">ferrule</span></strong> لازم است؛ بدون ferrule مناسب، روکش به‌صورت اهرمی ریشه را می‌شکند (<strong><span class="en">vertical root fracture</span></strong>) و بیمار ظرف کمتر از ۶ ماه برمی‌گردد. ایده‌آل: قالب‌گیری بیش از ۵۰٪ دور دندان → نیرو به‌جای ریشه به استخوان می‌رود. <br><strong>۳mm فاصله + ۱mm ferrule = ۴ میلی‌متر</strong> از نسج سالمِ زیر پست تا استخوان.
+  </div>
+  <div class="box note">
+    <strong>بازسازی ریج آلوئولار:</strong> نقایص کوچکِ ریجِ ناحیهٔ پانتیکِ زیبایی → <span class="en">Soft Tissue Ridge Augmentation</span>. نقایص بزرگ‌تر یا ناحیهٔ ایمپلنت → بازسازی بافت سخت مثل <strong><span class="en">GBR (Guided Bone Regeneration)</span></strong>؛ در ایمپلنتِ برنامه‌ریزی‌شده، پیوند استخوان با <strong>غشای غیرقابل‌جذب تقویت‌شده با تیتانیوم</strong>.
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="topic" id="summary">
+  <div class="sec-head">
+    <div class="num">★</div>
+    <h2>مرور نهایی و نکات کلیدی</h2>
+  </div>
+  <p class="lead">جمع‌بندی فشردهٔ مهم‌ترین نکات هر چهار مبحث، برای مرور سریع پیش از امتحان.</p>
+
+  <h3>۱ · درمان حمایتی (Maintenance) — رشیدی</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>موضوع</th><th>نکتهٔ کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td class="k">ترتیب صحیح فازها</td><td>Phase I ← Reevaluation ← <strong>Phase IV</strong> ← Phase II (جراحی) ← Phase IV ← Phase III (restorative) ← Phase IV. <em>یعنی فاز ۴ بعد از هر فاز تکرار می‌شود.</em></td></tr>
+        <tr><td class="k">آمار اپیدمیولوژی</td><td>مراجعهٔ نامنظم: <span class="pill c">×۵٫۶</span> از‌دست‌دادن دندان · عدم همکاری: <span class="pill c">×۵۰</span> attachment loss · ۱۶٪ منظم / ۵۰٪ نامنظم / ۳۴٪ بدون مراجعه.</td></tr>
+        <tr><td class="k">SRP — تغییرات میکروبی</td><td>رادهای متحرک ↓ ۱ هفته · کوکسی گرم‌مثبت ↑ ۳ هفته · <strong>اسپیروکت‌ها ↓ ۷ هفته (طولانی‌ترین).</strong></td></tr>
+        <tr><td class="k">بازگشت بیماری</td><td>اگر پلاک زیرلثه‌ای برداشته نشود، <strong>۹–۱۱ هفته</strong> برای بازگشت به حالت اولیه کافی است.</td></tr>
+        <tr><td class="k">اتصال بعد از درمان</td><td><span class="en">Long junctional epithelium</span> — ضعیف‌تر از <span class="en">dentogingival unit</span>؛ با کوچک‌ترین نفوذ باکتری گسسته می‌شود.</td></tr>
+        <tr><td class="k">جدول مرین</td><td>سال اول: روتین <strong>۳ ماه</strong> / مشکل‌دار <strong>۱–۲ ماه</strong> · Class A: <strong>۶ ماه–۱ سال</strong> · Class B: <strong>۳–۴ ماه</strong> · Class C: <strong>۱–۳ ماه</strong> (نتایج اولیه ضعیف + فاکتورهای منفی B).</td></tr>
+        <tr><td class="k">عمومی یا متخصص</td><td>A خفیف→عمومی · B متوسط→همپوشانی · C پیشرفته→متخصص. ارجاع اگر <span class="en">AL ≥ 5mm</span> پایدار، فورکیشن نیازمند بازسازی (مثل grade 2 با membrane)، یا درمان advance غیرجراحی.</td></tr>
+        <tr><td class="k">پریودنتیت راجعه / آنتی‌بیوتیک</td><td>گرم‌مثبت→آموکسی‌سیلین · بی‌هوازی گرم‌منفی→مترونیدازول · ایران→ترکیب هر دو · P. gingivalis→آزیترومایسین. <strong>احتیاط مترونیدازول:</strong> بارداری، شیردهی، آنتی‌کواگولانت، لیتیم.</td></tr>
+        <tr><td class="k">ایمپلنت</td><td>درمان implantitis از دندان طبیعی مهم‌تر و دشوارتر است (الیاف زاویه‌دار ندارد). ابزار تیتانیومی/پلاستیکی · بدون خمیر اسیدی/ابریزیو · موکوزیت آسان، پری‌ایمپلنتیت سخت. قبل از اسئواینتگریشن مسواک برقی ممنوع.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>۲ · ضایعات اندو-پریو</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>موضوع</th><th>نکتهٔ کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td class="k">راه‌های آناتومیک</td><td>اپیکال فورامن (اصلی و بزرگ‌ترین → <span class="en">retrograde periodontitis</span>) · کانال لترال (<span class="en">apical ⅓ &gt; middle &gt; coronal</span>) · توبول‌های عاجی.</td></tr>
+        <tr><td class="k">راه‌های غیرآناتومیک</td><td><span class="en">VRF</span> (فرکچر عمودی) · پرفوریشن.</td></tr>
+        <tr><td class="k">عوامل عفونت پالپی</td><td>میکروارگانیسم · تروما · <span class="en">thermomechanical irritants</span> (حتی ↑ <strong>۵–۶°C</strong> دما خطر نکروز).</td></tr>
+        <tr><td class="k">سه الگو</td><td>Endo→Perio (شایع) · Perio→Endo (نادر، نیاز به درگیری اپکس) · Combined (هر دو مستقل).</td></tr>
+        <tr><td class="k">افتراق درد</td><td>پالپال: شب‌بیدارکن، شدید، با بروفن آرام نمی‌شود، منتشر، با نکروز آرام می‌گیرد · پریودنتیت: درد دال (مبهم)، شب‌بیدارکن نیست، پخش است.</td></tr>
+        <tr><td class="k">پروبینگ</td><td>پریودنتیت: پخش · ضایعهٔ اندویی: باریک و یک‌ناحیه‌ای، تا فورامن اپکس · <span class="en">VRF</span>: باریک ولی فقط تا محل شکستگی.</td></tr>
+        <tr><td class="k">درمان</td><td><strong>همیشه اول اندو</strong> (پرایمری اندو-پریو فقط اندو)؛ مگر پریودنتیت شدید همزمان → هم اندو هم SRP. آبسه: درناژ؛ آنتی‌بیوتیک فقط با سلولیت/تب. PA بعد از اندو: استخوان در ۳–۶ ماه، ارزیابی کلی ۳ ماه.</td></tr>
+        <tr><td class="k"><span class="en">Retrograde pre-implantitis</span></td><td>التهاب پری‌ایمپلنت از اپکس (نه کرونال): عفونت باقی‌مانده، حرارت تراش، کار غیراستریل، اکلوزال بد. درمان: بازکردن؛ بی‌ثبات→برداشت کامل، باثبات→دبریدمان + بستن + آنتی‌بیوتیک.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box warn">
+    <span class="pill c">تناقض در جزوه</span>
+    جزوه نوشته «در آبسهٔ اپیکال بیشترین میکروب <strong>هوازی</strong> است» — اما اصول میکروبیولوژی و کارانزا می‌گویند هرچه عفونت عمیق‌تر و به‌سمت آبسه برود، <strong>بی‌هوازی‌ها</strong> غالب می‌شوند. پس آبسهٔ اپیکال عمدتاً <strong>بی‌هوازی</strong> است (احتمالاً خطای تایپی جزوه).
+  </div>
+
+  <h3>۳ · لیزر</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>موضوع</th><th>نکتهٔ کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td class="k">برهم‌کنش با بافت</td><td>جذب→<span class="en">ablation</span>/کربونیزه (هدف) · عبور به عمق (گاهی مفید) · <span class="en">scatter</span> و <span class="en">reflection</span> (نامطلوب).</td></tr>
+        <tr><td class="k">انواع کلیدی</td><td><span class="en">Nd:YAG</span> = بالاترین نفوذ (تا subcutaneous) · <span class="en">Er:YAG</span> = بهترین برای بافت سخت/استخوان (آب+هیدروکسی‌آپاتیت)، روی نرم ضعیف. واحدها: Watt و Hertz.</td></tr>
+        <tr><td class="k">CL با لیزر</td><td>لیزر فقط ≤ ۱mm استخوان می‌برد؛ فقط اگر کرست &lt; ۱mm. ترتیب: بافت نرم ← ساوندینگ ← استخوان.</td></tr>
+        <tr><td class="k">PDT / LLLT / LANAP</td><td>PDT: photosensitizer + لیزر کم‌توان، ۳ میکروب ↓ (A.a + P.gingivalis + Prevotella intermedia) · LLLT: توان کم زمان زیاد، ترمیم سریع‌تر · LANAP: فقط Nd:YAG، رژنریشن قدامی/زیبایی.</td></tr>
+        <tr><td class="k">دما / عوارض</td><td><strong>≥۴۷°C آسیب · ≥۶۰°C نکروز</strong> · علت اصلی = over-exposure.</td></tr>
+        <tr><td class="k">دپیگمانتاسیون</td><td><strong>دائمی نیست</strong> (≈۶ ماه برمی‌گردد) → از ابتدا به بیمار بگویید. فیزیولوژیک: history + رنگ پوست + منتشر بودن.</td></tr>
+        <tr><td class="k">درس نهایی کیس</td><td>نصف لیزر / نصف تیغ → بعد از ۱٫۵ ماه <strong>تیغ بهتر</strong> بهبود یافت. علت بیماری پریو = <strong>پلاک میکروبیال</strong> (نه جرم).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>۴ · جراحی پلاستیک پریودنتال — عرب</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>موضوع</th><th>نکتهٔ کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td class="k">تعاریف</td><td>Mucogingival surgery (Friedman) · Periodontal plastic surgery (Miller، گسترده‌تر) · Mucogingival therapy (غیرجراحی).</td></tr>
+        <tr><td class="k">معیار مهم انتخاب</td><td>مهم‌ترین: <strong><span class="en">blood supply</span> ناحیهٔ گیرنده</strong>؛ به‌علاوه: عدم التهاب/جرم، آناتومی، ثبات graft با سوچور، حداقل تروما.</td></tr>
+        <tr><td class="k">آگمنتیشن</td><td>اپیکالِ تحلیل → فقط عمق وستیبول · کرونالِ تحلیل → پوشش ریشه + عمق وستیبول.</td></tr>
+        <tr><td class="k">FGG — اعداد</td><td>ضخامت ایده‌آل <strong>۱–۱٫۵mm</strong> · انقباض تا <strong>۵۰٪</strong> → برش <strong>۲ برابر</strong> عرض.</td></tr>
+        <tr><td class="k">Partial vs Full thickness</td><td>Full: موبیلیتی/تورم کمتر، هموستاز بهتر، انقباض ۱٫۵–۲ برابر کمتر، استخوان اکسپوز — عیب: تأخیر ترمیم ۲ هفته.</td></tr>
+        <tr><td class="k">واریانت‌ها</td><td>Accordion (گسترش graft کوچک) · Strip (نوار ۳–۵mm، بدون سوچور دونر) · Combination (تقسیم به اپیتلیوم+CT و CT خالص).</td></tr>
+        <tr><td class="k">روزشمار ترمیم</td><td>روز۱ disorganized · روز۲–۳ revascularization · روز۴ اپیتلیوم نازک · روز۷ rete pegs · روز۱۰ مرکز graft · <strong>روز۱۷ functional integration (ایده‌آل).</strong></td></tr>
+        <tr><td class="k">انقباض (مطالعهٔ ۲۴ هفته)</td><td>روی استخوان ۲۵٪ · روی پریوست ۵۰٪ · بیشترین در ۶ هفتهٔ اول.</td></tr>
+        <tr><td class="k">CTG</td><td>فقط بافت همبند ساب‌اپیتلیال؛ کام primary closure، درد کمتر، تطابق رنگ ایده‌آل.</td></tr>
+        <tr><td class="k">میلر</td><td>I/II بدون تحلیل اینترپروگزیمال (پروگنوز good–excellent) · III با تحلیل (partial coverage) · IV شدید + ملپوزیشن (خیلی ضعیف).</td></tr>
+        <tr><td class="k">FGG روی ریشه</td><td>root planing + <strong>اسید سیتریک اشباع ۵ دقیقه</strong>؛ برش‌های خاص؛ حفظ پریوست اپیکال.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>۵ · ادامهٔ جراحی پلاستیک — پوشش ریشه (عرب)</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>موضوع</th><th>نکتهٔ کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td class="k">پدیکل گرفت‌ها</td><td>Coronally / Laterally / Semilunar؛ پایهٔ گرفت دست‌نخورده → <strong>بهترین خونرسانی</strong>.</td></tr>
+        <tr><td class="k">Laterally positioned</td><td>یک ناحیه جراحی، خونرسانی عالی؛ اما تحلیل در دهنده، فقط ۱–۲ دندان. عرض فلپ <strong>۲ برابر</strong> تحلیل. Double papilla = پروگنوز ضعیف، به‌کار نمی‌رود.</td></tr>
+        <tr><td class="k">Coronally positioned</td><td>نیاز به <strong>≥۳mm لثهٔ کراتینیزهٔ اپیکال</strong>؛ اپیکالِ تحلیل full thickness. اگر ناکافی → تکنیک دومرحله‌ای (FGG + ۲ ماه صبر).</td></tr>
+        <tr><td class="k">Semilunar</td><td>تحلیل ≤۳mm، بیوتایپ ضخیم، وستیبول کافی؛ بدون سوچور (نیروی جاذبه).</td></tr>
+        <tr><td class="k">Langer (CTG)</td><td>تطابق رنگ عالی، ذخیرهٔ خونی دوگانه؛ فلپ یک دندان عریض‌تر؛ CTG با ۵–۶mm از مارجین کام.</td></tr>
+        <tr><td class="k">GTR پوشش ریشه</td><td>غشا ۲mm پریوست را بپوشاند؛ غیرقابل‌جذب ۴ هفته بعد خارج؛ اندیکاسیون تحلیل &gt;۴٫۹۸mm.</td></tr>
+        <tr><td class="k">Pouch &amp; Tunnel</td><td><strong>برترین خونرسانی به گرفت</strong>؛ creeping reattachment (خزش لثه ۶ ماه–۱ سال).</td></tr>
+        <tr><td class="k">Tarnow (پاپیلا)</td><td>فاصلهٔ تماس تا کرست: <strong>۵mm→۱۰۰٪ · ۶mm→۵۰٪ · ۷mm→۳۶٪</strong>. از‌دست‌رفتن پاپیلا → مثلث سیاه.</td></tr>
+        <tr><td class="k">فرنوم</td><td>فرنکتومی = قطع کامل (دیاستم) · فرنوتومی = جابه‌جایی اپیکالی (محافظه‌کارانه).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>۶ · بازسازی پریودنتال (هرندی)</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>موضوع</th><th>نکتهٔ کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Repair vs Regeneration</td><td>هدف = سلول <strong>PDL</strong> سریع‌تر از استخوان برسد (new attachment واقعی). LJE/انکیلوز = repair.</td></tr>
+        <tr><td class="k">ارزیابی</td><td>CAL مفیدتر از عمق پاکت؛ <strong>هیستولوژیک تنها روشِ تعیین نوع بافت</strong> (gold standard).</td></tr>
+        <tr><td class="k">بدون گرفت</td><td>ضایعهٔ <strong>سه‌دیواره</strong>، آبسهٔ حاد، ANUG → regeneration بدون گرفت ممکن است.</td></tr>
+        <tr><td class="k">حذف اپیتلیوم</td><td>root submergence · FGG روی پاپیلا · coronally displaced flap (فورکیشن مولر پایین).</td></tr>
+        <tr><td class="k">GTR / غشا</td><td>فقط PDL بازساز است. غیرقابل‌جذب (ePTFE/Gortex، جراحی دوم لازم) vs قابل‌جذب (Biogide، کلاژن، سولفات کلسیم). ۴–۶ هفته؛ ۳ ماه پروب نشود.</td></tr>
+        <tr><td class="k">Biomodification ریشه</td><td>اسید سیتریک (دمینرالیزه، عمق ۴µm، smear layer برداشته) · فیبرونکتین · تتراسایکلین.</td></tr>
+        <tr><td class="k">Emdogain</td><td>پروتئین مینایی (آملوژنین)؛ <strong>Osteopromotive نه Osteoinductive</strong>. PDGF = فقط GEM21 تأیید FDA. BMP-2 قوی‌ترین.</td></tr>
+        <tr><td class="k">گرفت‌ها</td><td>Osteogenesis/induction/conduction. Autograft (osseous coagulum/bone blend) · FDBA=conductive، <strong>DFBA=inductive</strong> ارجح · Bio-Oss (xenograft، conductive، P-15).</td></tr>
+        <tr><td class="k">درخت تصمیم</td><td>≤۳mm&PD≤۵→non-surgical · PD&gt;۵→resective · &gt;۳mm→regeneration. سه‌دیواره&gt;محیطی&gt;دودیواره. ارزیابی ۱۲ ماه.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>۷ · نقش مکمل ارتودنسی (هرندی)</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>موضوع</th><th>نکتهٔ کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Crater vs Hemiseptal</td><td>Crater (دودیواره) <strong>با ارتو درست نمی‌شود</strong> → ریزکتیو قبل از ارتو. Hemiseptal (۱–۲ دیواره) <strong>با ارتو درست می‌شود</strong>.</td></tr>
+        <tr><td class="k">موقعیت براکت</td><td>سالم→مارژینال ریج؛ ناهموار→استخوان اینترپروگزیمالِ رادیوگرافی. استخوان افقی + تراز ریج → ضایعهٔ همی‌سپتال.</td></tr>
+        <tr><td class="k">فورکا کلاس ۳</td><td>توصیه: اول ارتو، سپس اندو، سپس همی‌سکشن؛ اگر جداسازی ریشه/بریج → اول همی‌سکشن. ریشه‌ها ۷–۸mm فاصله. recall هر ۲–۳ ماه.</td></tr>
+        <tr><td class="k">Forced eruption</td><td>۶ فاکتور؛ نسبت تاج:ریشه ≥۱:۱؛ شکستگی حد استخوان → <strong>۴mm اکستروژن (۲٫۵ بیولوژیک + ۱٫۵ ferrule)</strong>. رویش سریع→fiberotomy.</td></tr>
+        <tr><td class="k">مارژین ناهماهنگ</td><td>۴ فاکتور: lip line · سالکوس→gingivectomy · بلندتر از لترال→extrusion · ساییدگی→<strong>intrusion ۶ ماه</strong>.</td></tr>
+        <tr><td class="k">امبراژور باز</td><td>۳ عامل: شکل تاج، زاویهٔ ریشه، تحلیل استخوان. ابتدا PA؛ واگرا→براکت، مثلثی→recontour/تراش.</td></tr>
+        <tr><td class="k">Intrusion vs CL</td><td>intrusion ارجح مگر ریشهٔ پهن/بلند یا bone loss افقی وسیع. ایمپلنت انکوریج ۴–۶ ماه قبل.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>۸ · آماده‌سازی برای درمان ترمیمی (هرندی)</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>موضوع</th><th>نکتهٔ کلیدی</th></tr></thead>
+      <tbody>
+        <tr><td class="k">اصل بنیادی</td><td>اول بیماری فعال رفع شود؛ التهاب→shrinkage→لو رفتن مارجین روکش. اول non-surgical.</td></tr>
+        <tr><td class="k">TFO</td><td>ادجاست اکلوزال قبل از ترمیمی؛ لثهٔ کراتینیزه/attached = دفاع ساختاری.</td></tr>
+        <tr><td class="k">کنترل بیماری</td><td>اورژانس → ext دندان hopeless → OHI → SRP → <strong>ارزیابی مجدد ۴ هفته</strong>.</td></tr>
+        <tr><td class="k">پیش از پروتز</td><td>پوشش ریشه با جراحی نه با فشار ماده (overhang)؛ پس از پیوند <strong>۲ ماه صبر</strong>.</td></tr>
+        <tr><td class="k">عرض بیولوژیک</td><td>سالکوس ۰٫۶۹ + JE ۰٫۹۷ + CT ۱٫۰۷؛ <strong>عرض بیولوژیک = ۲٫۰۴mm</strong>. فاصلهٔ مارجین تا کرست ≥۳mm.</td></tr>
+        <tr><td class="k">CL و Ferrule</td><td>پاکت ۵mm + کراتینیزهٔ کافی → ژنژیوکتومی ۲mm؛ ناکافی → فلپ + bone recontouring. شکسته: <strong>۴mm</strong> تا کرست (۳+۱ ferrule)؛ بدون ferrule → VRF.</td></tr>
+        <tr><td class="k">بازسازی ریج</td><td>نقص کوچک→soft tissue augmentation · بزرگ/ایمپلنت→<strong>GBR</strong> با غشای تیتانیومی.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box tip">
+    <span class="pill a">جمع‌بندی نهایی</span>
+    موفقیت همهٔ فازهای حمایتی، جراحی، بازسازی و ترمیمی به یک اصل واحد برمی‌گردد: <strong>کنترل علت (پلاک میکروبیال) + خونرسانی و ثبات بافت + رعایت عرض بیولوژیک + پایش منظم.</strong> در بازسازی، هدف رسیدنِ سلول‌های <span class="en">PDL</span> پیش از استخوان است؛ در ترمیمی، هیچ روکشی نباید پیش از سلامتِ پریودنشیوم گذاشته شود. هیچ درمانی باکتری را به صفر نمی‌رساند؛ هدف، کاهش دوز بیماری و حفظ بلندمدت نتیجه است.
+  </div>
+</section>
+</div>
+</main>
+</div>
+<button id="top" aria-label="بازگشت به بالا">↑</button>
+<script>
+(function(){
+  var nav = document.getElementById('side');
+  var menuBtn = document.getElementById('menuBtn');
+  var scrim = document.getElementById('scrim');
+  var top = document.getElementById('top');
+
+  function openNav(){ if(nav) nav.classList.add('open'); if(scrim) scrim.classList.add('open'); }
+  function closeNav(){ if(nav) nav.classList.remove('open'); if(scrim) scrim.classList.remove('open'); }
+
+  if(menuBtn) menuBtn.addEventListener('click', function(){
+    if(nav && nav.classList.contains('open')) closeNav(); else openNav();
+  });
+  if(scrim) scrim.addEventListener('click', closeNav);
+
+  // close nav after tapping a link (mobile)
+  var links = document.querySelectorAll('#side a');
+  for(var i=0;i<links.length;i++){
+    links[i].addEventListener('click', function(){
+      if(window.innerWidth <= 980) closeNav();
+    });
+  }
+
+  // back-to-top
+  if(top){
+    top.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 400) top.classList.add('show'); else top.classList.remove('show');
+    });
+  }
+
+  // scroll-spy: highlight active sub-link
+  var subs = Array.prototype.slice.call(document.querySelectorAll('#side a.sub'));
+  var targets = subs.map(function(a){
+    var id = a.getAttribute('href').slice(1);
+    return document.getElementById(id);
+  });
+  function spy(){
+    var pos = window.scrollY + 140;
+    var activeIdx = -1;
+    for(var i=0;i<targets.length;i++){
+      if(targets[i] && targets[i].offsetTop <= pos) activeIdx = i;
+    }
+    for(var j=0;j<subs.length;j++){
+      if(j===activeIdx) subs[j].classList.add('active'); else subs[j].classList.remove('active');
+    }
+  }
+  window.addEventListener('scroll', spy);
+  window.addEventListener('load', spy);
+  spy();
+})();
+</script>
+</body>
+</html>
