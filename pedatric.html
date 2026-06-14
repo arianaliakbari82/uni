@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوه جامع دندانپزشکی اطفال — آمادگی امتحان</title>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<style>
+@font-face{font-family:'Vazirmatn';src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');font-weight:900;font-display:swap}
+
+:root{
+  --paper:#FBF8F2; --paper2:#F3EDE2; --ink:#20303a; --ink-soft:#52646f;
+  --teal:#0c6b6e; --teal-dark:#084e50; --teal-soft:#e3f0ef;
+  --coral:#c8553d; --coral-soft:#fbe9e2; --gold:#b8860b;
+  --line:#dfd5c4; --line2:#cfc3ad; --white:#fff;
+  --shadow:0 1px 2px rgba(32,48,58,.06),0 8px 24px rgba(32,48,58,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.9;font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+/* keep latin terms LTR but inline in RTL flow */
+.en{direction:ltr;unicode-bidi:isolate;font-family:'Vazirmatn',Tahoma,sans-serif}
+
+/* ===== layout ===== */
+.wrap{display:flex;max-width:1280px;margin:0 auto;gap:0;align-items:flex-start}
+nav.toc{
+  position:sticky;top:0;align-self:flex-start;width:280px;flex:0 0 280px;height:100vh;overflow-y:auto;
+  background:linear-gradient(180deg,var(--teal-dark),var(--teal));color:#eafaf8;padding:26px 18px 60px;
+}
+nav.toc h2{font-size:18px;margin:0 0 4px;color:#fff;font-weight:900;letter-spacing:.3px}
+nav.toc .sub{font-size:12px;color:#bfe7e4;margin-bottom:18px}
+nav.toc a{display:block;color:#d8f3f0;text-decoration:none;font-size:13.5px;padding:7px 11px;border-radius:8px;margin:2px 0;transition:.15s;border-right:3px solid transparent}
+nav.toc a:hover{background:rgba(255,255,255,.12);color:#fff}
+nav.toc a.exam{background:var(--coral);color:#fff;font-weight:700;margin-top:14px;text-align:center;border-right:none}
+nav.toc a.exam:hover{background:#a8412c}
+nav.toc .grp{font-size:11px;color:#8fd4cf;text-transform:uppercase;letter-spacing:1px;margin:16px 6px 4px;font-weight:700}
+
+main{flex:1 1 auto;min-width:0;padding:0 clamp(16px,3vw,46px) 80px;max-width:920px}
+
+/* ===== hero ===== */
+header.hero{padding:54px 0 30px;border-bottom:3px solid var(--ink);margin-bottom:8px}
+.hero .kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--coral);background:var(--coral-soft);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.25;font-weight:900;margin:.1em 0;color:var(--ink)}
+.hero p.lead{font-size:18px;color:var(--ink-soft);max-width:640px;margin:14px 0 0}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.hero .meta span{font-size:12.5px;background:var(--white);border:1px solid var(--line);padding:6px 13px;border-radius:8px;color:var(--ink-soft);box-shadow:var(--shadow)}
+
+/* ===== sections ===== */
+section.chapter{padding:46px 0 10px;border-top:1px solid var(--line);scroll-margin-top:14px}
+section.chapter:first-of-type{border-top:none}
+.chnum{font-size:13px;font-weight:700;color:var(--teal);letter-spacing:1px}
+section.chapter>h2{font-size:clamp(23px,3.4vw,31px);font-weight:900;margin:.1em 0 .15em;color:var(--ink);line-height:1.3}
+.src{font-size:12.5px;color:var(--ink-soft);background:var(--paper2);display:inline-block;padding:3px 11px;border-radius:7px;margin-bottom:14px;border:1px solid var(--line)}
+h3{font-size:20px;font-weight:700;margin:30px 0 8px;color:var(--teal-dark);padding-right:13px;border-right:5px solid var(--teal);line-height:1.4}
+h4{font-size:17px;font-weight:700;margin:20px 0 6px;color:var(--ink)}
+p{margin:9px 0}
+ul,ol{margin:8px 0;padding-right:24px}
+li{margin:5px 0}
+strong{font-weight:700;color:var(--ink)}
+mark{background:linear-gradient(180deg,transparent 55%,#ffe9a8 55%);padding:0 2px;color:inherit}
+
+/* ===== tables ===== */
+.tbl-scroll{overflow-x:auto;margin:18px 0;border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;background:var(--white);font-size:14.5px;min-width:520px}
+caption{caption-side:top;text-align:right;font-weight:700;color:var(--teal-dark);padding:10px 14px 8px;font-size:15px;background:var(--teal-soft)}
+th,td{padding:11px 13px;text-align:right;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--teal-dark);color:#fff;font-weight:700;border-bottom:none;position:sticky;top:0;font-size:14px}
+tbody tr:nth-child(even){background:#faf7f1}
+tbody tr:hover{background:var(--teal-soft)}
+td:first-child,th:first-child{font-weight:600}
+table.compact{font-size:13.8px}
+
+/* ===== callouts ===== */
+.note{border-radius:12px;padding:14px 18px 14px 18px;margin:18px 0;border:1px solid;position:relative;font-size:15px}
+.note .tag{font-weight:700;font-size:13px;display:block;margin-bottom:3px}
+.note.exam{background:var(--coral-soft);border-color:#eab9a8}
+.note.exam .tag{color:var(--coral)}
+.note.key{background:#fff7e0;border-color:#e8d59a}
+.note.key .tag{color:var(--gold)}
+.note.tip{background:var(--teal-soft);border-color:#a9d6d2}
+.note.tip .tag{color:var(--teal-dark)}
+.note.warn{background:#fdecec;border-color:#f0bcbc}
+.note.warn .tag{color:#b53636}
+
+.defbox{background:var(--white);border:1px solid var(--line);border-right:5px solid var(--gold);border-radius:10px;padding:12px 16px;margin:14px 0;box-shadow:var(--shadow)}
+.defbox b{color:var(--teal-dark)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.card h4{margin-top:0;color:var(--teal-dark)}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+
+/* ===== quiz ===== */
+#exam{border-top:4px solid var(--coral);margin-top:50px;padding-top:36px}
+.exam-head{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;border-radius:16px;padding:26px 24px;margin-bottom:18px}
+.exam-head h2{color:#fff;margin:0 0 6px;font-size:27px;font-weight:900}
+.exam-head p{color:#d6f1ee;margin:4px 0}
+.quiz-bar{position:sticky;top:0;z-index:5;background:var(--paper);padding:10px 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line);margin-bottom:14px}
+.quiz-bar button{font-family:inherit;font-weight:700;font-size:14px;border:none;border-radius:9px;padding:10px 18px;cursor:pointer;transition:.15s}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:#a8412c}
+.btn-ghost{background:var(--white);color:var(--teal-dark);border:1px solid var(--line2)!important}
+.btn-ghost:hover{background:var(--teal-soft)}
+#score{font-weight:700;color:var(--teal-dark);font-size:15px;margin-right:auto}
+.q{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0;box-shadow:var(--shadow)}
+.q .qn{font-weight:700;color:var(--ink)}
+.q .qn .num{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;background:var(--teal-soft);color:var(--teal-dark);border-radius:8px;font-size:13px;margin-left:8px;font-weight:700}
+.opts{list-style:none;padding:0;margin:12px 0 0}
+.opts li{margin:7px 0}
+.opts label{display:flex;gap:9px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:9px;cursor:pointer;transition:.12s;font-size:15px;background:var(--paper)}
+.opts label:hover{border-color:var(--teal);background:var(--teal-soft)}
+.opts input{margin-top:6px;accent-color:var(--teal)}
+.q.answered label.correct{background:#e1f6ea;border-color:#7fcf9e}
+.q.answered label.wrong{background:#fbe3e0;border-color:#e69b8e}
+.expl{display:none;margin-top:11px;font-size:14px;background:var(--teal-soft);border-right:4px solid var(--teal);border-radius:8px;padding:9px 13px;color:var(--ink)}
+.q.answered .expl{display:block}
+
+footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0;color:var(--ink-soft);font-size:13px;text-align:center}
+
+/* mobile nav */
+.menu-btn{display:none}
+@media(max-width:980px){
+  nav.toc{position:fixed;right:0;top:0;z-index:50;transform:translateX(110%);transition:.25s;width:84%;max-width:320px;box-shadow:-8px 0 30px rgba(0,0,0,.2)}
+  nav.toc.open{transform:translateX(0)}
+  .menu-btn{display:flex;position:fixed;top:14px;left:14px;z-index:60;background:var(--teal);color:#fff;border:none;border-radius:10px;width:48px;height:48px;font-size:22px;cursor:pointer;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+  main{padding-top:6px}
+  .wrap{display:block}
+}
+@media print{nav.toc,.menu-btn,.quiz-bar{display:none}body{font-size:12px}main{max-width:100%}.q .expl{display:block}}
+</style>
+</head>
+<body>
+<button class="menu-btn" onclick="document.getElementById('toc').classList.toggle('open')" aria-label="فهرست">☰</button>
+<div class="wrap">
+
+<nav class="toc" id="toc">
+  <h2>فهرست جزوه</h2>
+  <div class="sub">دندانپزشکی اطفال — مرور کامل امتحانی</div>
+  <div class="grp">پالپ و اندو</div>
+  <a href="#c1">۱ · درمان پالپ دندان جوان</a>
+  <div class="grp">پریو و بافت نرم</div>
+  <a href="#c2">۲ · بیماری‌های لثه کودکان</a>
+  <a href="#c3">۳ · بیماری‌های پریودنتال</a>
+  <a href="#c4">۴ · آبسه و عفونت ادنتوژنیک</a>
+  <div class="grp">جراحی و ترمیمی</div>
+  <a href="#c5">۵ · جراحی و کشیدن دندان</a>
+  <a href="#c6">۶ · روکش استیل (SSC)</a>
+  <a href="#c7">۷ · فضانگهدارها</a>
+  <div class="grp">رویش و تکامل</div>
+  <a href="#c8">۸ · رویش دندان‌ها</a>
+  <a href="#c9">۹ · ناتال/نئوناتال و آنکیلوز</a>
+  <a href="#c10">۱۰ · سندرم‌ها و رویش تأخیری</a>
+  <div class="grp">بیماران سیستمیک</div>
+  <a href="#c11">۱۱ · اختلالات خونریزی‌دهنده</a>
+  <a href="#c12">۱۲ · آنمی داسی‌شکل</a>
+  <a href="#c13">۱۳ · سرطان کودکان و HSCT</a>
+  <a href="#c14">۱۴ · هپاتیت و ایدز</a>
+  <a href="#c15">۱۵ · کودکان با نیازهای خاص</a>
+  <a href="#exam" class="exam">★ آزمون ۱۰۰ سؤالی</a>
+</nav>
+
+<main>
+<header class="hero">
+  <span class="kicker">جزوه جامع امتحانی</span>
+  <h1>دندانپزشکی کودکان (اطفال)</h1>
+  <p class="lead">مرور کامل و یکپارچهٔ ۱۴ جلسهٔ درسی — همراه با جدول‌های مقایسه‌ای برای حفظ سریع، نکات امتحانی برجسته، و یک آزمون ۱۰۰ سؤالیِ تعاملی در پایان.</p>
+  <div class="meta">
+    <span>منابع: مک‌دونالد · نواک (Nowak) · کاساماسیمو</span>
+    <span>اساتید: بحرالعلومی، واعظ، امامی، فلاح، حیدری</span>
+    <span>۱۵ فصل + ۱۰۰ سؤال</span>
+  </div>
+</header>
+
+<!-- ================= CHAPTER 1 ================= -->
+<section class="chapter" id="c1">
+  <div class="chnum">فصل ۱</div>
+  <h2>درمان پالپ دندان‌های دائمی جوان</h2>
+  <div class="src">دکتر بحرالعلومی · فصل ۳۴ نواک ۲۰۱۹</div>
+
+  <p>به‌طور کلی ۵ روش درمانی برای پالپ مطرح است. سه روش اول (بیس پروتکتیو، IPT، DPC) تفاوت زیادی با دندان شیری ندارند و اندیکاسیون و روش یکسانی دارند؛ اما <strong>پالپوتومی و پالپکتومی</strong> در دندان شیری و دائمی جوان از نظر مواد و روش کمی متفاوت‌اند.</p>
+
+  <div class="tbl-scroll"><table>
+    <caption>۵ روش درمان پالپ</caption>
+    <thead><tr><th>ردیف</th><th>روش</th><th>کاربرد کوتاه</th></tr></thead>
+    <tbody>
+      <tr><td>۱</td><td>بیس‌های پروتکتیو <span class="en">(protective base)</span></td><td>پوسیدگی نه‌چندان عمیق</td></tr>
+      <tr><td>۲</td><td><span class="en">IPT</span> (درمان پالپ غیرمستقیم)</td><td>پوسیدگی عمیق نزدیک پالپ بدون علائم برگشت‌ناپذیر</td></tr>
+      <tr><td>۳</td><td><span class="en">DPC</span> (پالپ کپینگ مستقیم)</td><td>اکسپوژر pin point بدون خونریزی کنترل‌نشده</td></tr>
+      <tr><td>۴</td><td>پالپوتومی</td><td>partial (Cvek) یا cervical</td></tr>
+      <tr><td>۵</td><td>پالپکتومی</td><td>التهاب برگشت‌ناپذیر/نکروز</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="defbox"><b>دندان دائمی immature:</b> دندانی که تکامل ریشه کامل نیست و اپکس کاملاً بسته نشده — معمولاً از ۶ سالگی تا ۳ سال پس از رویش مولر سوم قابل رؤیت است. اپکس معمولاً <mark>۳ تا ۴ سال پس از رویش</mark> بسته می‌شود.</div>
+
+  <p>این دندان‌ها سلولاریتی پالپ بیشتر و منابع عروقی بیشتری دارند، بنابراین پتانسیل <span class="en">healing</span> بالاتری دارند. <strong>هدف اصلی: حفظ وایتالیتی پالپ تا حد ممکن</strong> تا رسوب دنتین ادامه پیدا کند و از دنتین فرکچر جلوگیری شود.</p>
+
+  <h3>دنتین ثالثیه: ترمیمی در برابر واکنشی</h3>
+  <p>رسوب دنتین در طول زندگی به‌صورت دنتین ثانویه ادامه دارد، اما در پاسخ به پوسیدگی و اعمال <span class="en">operative</span>، دنتین ثالثیه ترشح می‌شود. محرک ساخت دنتین واکنشی، همان سایتوکاین‌ها و <span class="en">growth factors</span> ذخیره‌شده در ماتریکس دنتین است که با تخریب اسیدی آزاد می‌شوند.</p>
+  <div class="tbl-scroll"><table>
+    <caption>مقایسهٔ دو نوع دنتین ثالثیه</caption>
+    <thead><tr><th>ویژگی</th><th>واکنشی <span class="en">(reactionary)</span></th><th>ترمیمی <span class="en">(reparative)</span></th></tr></thead>
+    <tbody>
+      <tr><td>شدت تحریک</td><td>تحریک خفیف</td><td>تحریک شدید</td></tr>
+      <tr><td>منشأ سلول</td><td>ادونتوبلاست‌های <span class="en">post-mitotic</span> موجود</td><td>سلول‌های <span class="en">odontoblast-like</span> از مزانشیم</td></tr>
+      <tr><td>کیفیت</td><td>بالاتر</td><td>پایین‌تر</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note key"><span class="tag">نکته کلیدی — RDT</span> مهم‌ترین فاکتور مؤثر بر ساخت دنتین ثالثیه، <strong>ضخامت عاج باقی‌مانده (RDT)</strong> است. بیشترین ساخت دنتین واکنشی وقتی است که RDT بین <mark>۰٫۲۵ تا ۰٫۵ میلی‌متر</mark> باشد. اگر کمتر از ۰٫۲۵ mm شود (حفره خیلی عمیق)، چون اکثر ادونتوبلاست‌ها از بین رفته‌اند، ساخت دنتین بسیار کم است.</div>
+
+  <h3>منشأ اکسپوژر و وضعیت عفونت</h3>
+  <div class="tbl-scroll"><table>
+    <caption>اکسپوژر پالپ بر اساس علت</caption>
+    <thead><tr><th>علت اکسپوژر</th><th>محل شایع</th><th>وضعیت پالپ و دنتین</th></tr></thead>
+    <tbody>
+      <tr><td>پوسیدگی</td><td>دندان‌های خلفی</td><td>پالپ و دنتین هر دو عفونی</td></tr>
+      <tr><td>ایاتروژنیک (فرز)</td><td>حین برداشت پوسیدگی</td><td>پالپ ملتهب نیست؛ دنتین <span class="en">infected</span></td></tr>
+      <tr><td>تروما</td><td>دندان‌های قدامی</td><td>نه پالپ نه دنتین عفونی؛ اگر سریع درمان شود <span class="en">vital</span> می‌ماند</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>تشخیص و معاینه</h3>
+  <ul>
+    <li><strong>نوع درد:</strong> درد تحریکی ← پالپ قابل برگشت؛ درد خودبه‌خود ← برگشت‌ناپذیر.</li>
+    <li>درد به دق/فشار مثبت ← التهاب به پری‌اپیکال رسیده (دقت: در دندان جوان گاهی درد ناشی از پری‌کرونیت رویش است).</li>
+    <li>تست‌های وایتالیتی (سرما/گرما/EPT) در دندان جوان چندان <span class="en">reliable</span> نیست؛ دندان باید ۴–۵ سال تحت فانکشن باشد تا عصب‌دهی کامل شود. <mark>تست سرما reliable تر از گرما</mark> است.</li>
+    <li>بهترین رادیوگرافی برای ارزیابی، <span class="en">BW</span> است (عمق پوسیدگی، مورفولوژی چمبر، پل کلسیفیه ساخته‌شده). <span class="en">PA</span> وقتی اپکس در BW دیده نشود برای بررسی PDL.</li>
+    <li>خونریزی پالپ ارغوانی/بنفش یا خونریزی فراوان ← وضعیت برگشت‌ناپذیر.</li>
+  </ul>
+  <div class="note tip"><span class="tag">انواع دنتین (از کتاب بخوانید)</span> <span class="en">soft / hard / leathery / firm</span> — تعریف هرکدام طبق کتاب مطالعه شود. اصطلاحات قدیمی <span class="en">infected/affected</span> دیگر استفاده نمی‌شوند.</div>
+
+  <h3>درمان‌های وایتال</h3>
+  <div class="grid2">
+    <div class="card"><h4>بیس پروتکتیو</h4><p>نام دیگر: <span class="en">selective caries removal to firm/leathery dentin</span>. دنتین infected برداشته، دنتین دمینرالیزه (affected) باقی، سپس بیس گلس‌آینومر یا کلسیم‌هیدروکساید. روش‌های شیمیومکانیکی: <span class="en">Carisolv</span> (۳ اسیدآمینه + کمی هیپوکلریت) و <span class="en">Papacarie</span>.</p></div>
+    <div class="card"><h4>IPT</h4><p>نام دیگر: <span class="en">selective caries removal to soft dentin</span>. پوسیدگی دیواره‌ها باید کامل حذف شود (جلوگیری از لیکیج)، اما یک لایه نازک دنتین سافت روی پالپ باقی می‌ماند. بهترین فرز: روند کارباید بزرگ (۶ یا ۸). از اکسکویتور و فرز کوچک پرهیز شود. ماده: کلسیم‌هیدروکساید یا گلس‌آینومر. امروزه یک‌جلسه‌ای انجام می‌شود.</p></div>
+  </div>
+  <div class="card"><h4>DPC</h4><p>برای اکسپوژر <span class="en">pin point</span> بدون خونریزی کنترل‌نشده و بدون درد خودبه‌خود. شست‌وشو با هیپوکلریت رقیق ← پنبه مرطوب برای کنترل خونریزی ← بهترین ماده <strong>MTA به ضخامت ۱٫۵–۲ mm</strong> (کلسیم‌هیدروکساید هم ممکن) ← بیس ← ترمیم. اگر خونریزی تا ۱۰ دقیقه بند نیامد ← نفوذ عمیق باکتری، نیاز به درمان رادیکال‌تر.</p></div>
+  <div class="note key"><span class="tag">ماده ایده‌آل پالپ کپینگ</span> Biocompatible · غیرقابل‌جذب · سیل‌کننده · القاکنندهٔ پل عاجی. <strong>MTA</strong> ایده‌آل‌ترین گزینه است (تحریک و میکرولیکیج کمتر از کلسیم‌هیدروکساید).</div>
+
+  <h3>پالپوتومی در دندان دائمی جوان</h3>
+  <div class="tbl-scroll"><table>
+    <caption>partial در برابر cervical pulpotomy</caption>
+    <thead><tr><th>ویژگی</th><th>پارشیال (Cvek)</th><th>سرویکال (apexogenesis)</th></tr></thead>
+    <tbody>
+      <tr><td>عمق برداشت</td><td>≈ ۲ mm از پالپ</td><td>تا ناحیهٔ اوریفیس‌ها</td></tr>
+      <tr><td>شست‌وشو</td><td>نرمال سالین ← هیپوکلریت ← پنبه مرطوب</td><td>مشابه Cvek</td></tr>
+      <tr><td>ماده</td><td>MTA (یا کلسیم‌هیدروکساید)</td><td>MTA</td></tr>
+      <tr><td>فرز</td><td>الماسی توربین، خنک‌کننده آب</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+  <p>دربارهٔ نیاز به اندو بعد از بسته‌شدن اپکس اختلاف‌نظر است؛ نظر غالب: <mark>فقط فالو شود</mark> چون احتمال نکروز پالپ ریشه‌ای بسیار پایین است.</p>
+
+  <h3>اپکسیفیکیشن و موارد اپکس باز</h3>
+  <p>اندیکاسیون: دندان نابالغ با پالپ نکروز که اپکس باز اجازهٔ سیل نمی‌دهد. باید یک <span class="en">barrier</span> در انتهای اپکس ایجاد کرد. در این روش ضخیم‌شدن دیواره‌ها یا افزایش طول رخ نمی‌دهد. انتهای کانال ممکن است همگرا، موازی یا متباعد (<span class="en">blunderbuss</span>) باشد.</p>
+  <div class="tbl-scroll"><table>
+    <caption>مقایسهٔ روش‌های مدیریت اپکس باز</caption>
+    <thead><tr><th>روش</th><th>ماده/مکانیسم</th><th>نکات مهم</th></tr></thead>
+    <tbody>
+      <tr><td>Long-term apexification</td><td>کلسیم‌هیدروکساید (PH بالا، حلالیت پایین)</td><td>قدیمی، چندجلسه، فالو هر ۳ ماه؛ عیب: <mark>Cervical Root Fracture</mark> (تضعیف دنتین)، وقت‌گیر، عدم مراجعه بیمار</td></tr>
+      <tr><td>Short-term / One-visit</td><td>پلاگ <strong>MTA</strong> در اپکس (ضخامت ۴–۵ mm)</td><td>"one visit" = بدون فالوآپ طولانی (نه لزوماً تک‌جلسه)؛ ۲–۳ جلسه؛ مزایا: هزینه و chair time کمتر، حفظ خواص عاج</td></tr>
+      <tr><td>Revascularization</td><td>هیپوکلریت + کلسیم‌هیدروکساید یا <strong>Triple Antibiotic</strong> (سیپروفلوکساسین+ماینوسایکلین+مترونیدازول)</td><td>ایجاد bleeding اپیکال با فایل ← MTA؛ ریشه بلند، اپکس بسته، دیواره ضخیم می‌شود</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><span class="tag">۵ شرط موفقیت Revascularization</span> ۱) نبود عفونت ۲) ایجاد scaffold ۳) حضور stem cell ۴) مولکول‌های سیگنال‌دهنده ۵) سیل کرونال خوب. بافت ساخته‌شده بیشتر شبیه <span class="en">cementum-like / bone-like</span> از رشد PDL است تا پالپ واقعی.</div>
+</section>
+
+<!-- ================= CHAPTER 2 ================= -->
+<section class="chapter" id="c2">
+  <div class="chnum">فصل ۲</div>
+  <h2>بیماری‌های لثه در کودکان</h2>
+  <div class="src">دکتر کاظم واعظ · بورد تخصصی دندانپزشکی کودکان</div>
+
+  <h3>آناتومی و ویژگی‌های لثهٔ کودک</h3>
+  <div class="tbl-scroll"><table>
+    <caption>لثه و استخوان آلوئول کودک در مقایسه با بالغ</caption>
+    <thead><tr><th>ویژگی</th><th>در کودکان</th></tr></thead>
+    <tbody>
+      <tr><td>رنگ لثه</td><td>قرمزتر (افزایش واسکولاریته + ضخامت کم اپیتلیوم)</td></tr>
+      <tr><td>سطح لثه</td><td>صاف‌تر، <span class="en">stippling</span> کمتر</td></tr>
+      <tr><td>عمق پروب دندان شیری</td><td>≈ ۲ mm (در فاسیال و لینگوال کم‌عمق‌تر)</td></tr>
+      <tr><td>عرض لثهٔ چسبنده</td><td>در مندیبل کمتر از ماگزیلا؛ با انتقال به دندان دائمی افزایش</td></tr>
+      <tr><td>استخوان آلوئول</td><td>ترابکول کمتر · کلسیفیه کمتر · فضای مغز استخوان بزرگ‌تر</td></tr>
+    </tbody>
+  </table></div>
+  <div class="defbox"><b>لثهٔ آزاد:</b> کرونالی‌تر از قاعدهٔ سالکوس. <b>لثهٔ چسبنده:</b> از شیار لثهٔ آزاد تا موکوژنژیوال‌جانکشن.</div>
+  <div class="note key"><span class="tag">نکته</span> شایع‌ترین فرم بیماری پریودنتال در کودکان <strong>ژنژیویت مارژینال</strong> است (از اوایل کودکی شروع می‌شود). فاکتور اتیولوژیک عمده: پلاک باکتریال (کلسیفیه و غیرکلسیفیه). ژنژیویت شدید در کودکان غیرشایع است.</div>
+
+  <h3>مراحل تشکیل پلاک</h3>
+  <div class="tbl-scroll"><table class="compact">
+    <caption>زمان‌بندی تشکیل پلاک پس از مسواک</caption>
+    <thead><tr><th>زمان</th><th>اتفاق</th></tr></thead>
+    <tbody>
+      <tr><td>۲ ساعت</td><td>شروع تشکیل پلاک؛ ابتدا اشکال کوکسی روی پلیکل</td></tr>
+      <tr><td>۳ ساعت</td><td>پوشش پلیکل با مواد نرم و هموار</td></tr>
+      <tr><td>۵ ساعت</td><td>گسترش میکروکولونی‌ها با تقسیم سلولی</td></tr>
+      <tr><td>۶–۱۲ ساعت</td><td>ماده پوشاننده نازک‌تر و منقطع می‌شود</td></tr>
+      <tr><td>۲۴ ساعت</td><td>برای اولین بار <span class="en">rod</span> ها ظاهر می‌شوند</td></tr>
+      <tr><td>۴۸ ساعت</td><td>سطح با راد و فیلامنتوس پوشیده می‌شود</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>ژنژیویت رویشی و ناشی از پلاک</h3>
+  <ul>
+    <li><strong>ژنژیویت رویشی:</strong> نوع گذرا، اغلب موضعی، با رویش دندان فروکش می‌کند. در دندان دائمی بیشترین بروز <mark>۶ تا ۷ سالگی</mark> (با رویش مولر اول و دوم دائمی).</li>
+    <li><strong>درمان پری‌کرونیت دردناک:</strong> شست‌وشو با شویندهٔ غیرمحرک (مثل پروکسیل). با تورم و درگیری غدد لنفاوی ← آنتی‌بیوتیک‌تراپی.</li>
+  </ul>
+
+  <h3>بیماری‌های لثه‌ای حاد</h3>
+  <div class="tbl-scroll"><table>
+    <caption>تمایز ضایعات حاد لثه</caption>
+    <thead><tr><th>ضایعه</th><th>عامل/ویژگی</th><th>زمان بهبود</th></tr></thead>
+    <tbody>
+      <tr><td>ژنژیواستوماتیت حاد هرپسی</td><td>HSV-1؛ زیر ۶ سال؛ لثهٔ قرمز آتشین، تب، لنفادنوپاتی، وزیکل ← زخم ۱–۳ mm با غشای خاکستری</td><td>۱۰–۱۴ روز</td></tr>
+      <tr><td>زخم آفتی عودکننده</td><td>مخاط غیرچسبنده؛ اوج ۱۰–۱۹ سال؛ نمای دهانهٔ آتشفشان با مارژین قرمز</td><td>۴–۱۲ روز</td></tr>
+      <tr><td>هرپس اولیه</td><td>—</td><td>۱۰ روز</td></tr>
+      <tr><td>هرپس عودکننده</td><td>۵٪ داخل دهان؛ تبخال</td><td>۵ روز</td></tr>
+      <tr><td>ANUG (عفونت ونسان)</td><td>نادر در پیش‌دبستانی؛ خونریزی لثه، درد، تب >۴۰°، بوی بد دهان</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h4>درمان هرپس حاد</h4><p>تسکینی: مایعات فراوان، بی‌حس‌کننده سطحی (دیفن‌هیدرامین) قبل از غذا، مکمل ویتامین، ضدتب سیستمیک (استامینوفن). ضدویروس با مشورت پزشک: <span class="en">آسیکلوویر ۵ بار/روز، ۱۰۰۰ mg، ۱۰ روز</span>.</p></div>
+    <div class="card"><h4>عود هرپس — تغذیه</h4><p>اسیدآمینهٔ <strong>آرژنین</strong> (غلات، آجیل، شکلات) عود را بدتر می‌کند؛ <strong>لیزین</strong> (لبنیات، مخمر) بهبود را تسریع و درد و دفعات عود را کم می‌کند. ضدآفتاب مانع عود ناشی از آفتاب است.</p></div>
+  </div>
+  <div class="note warn"><span class="tag">احتیاط شغلی</span> دندانپزشک در معرض عفونت اولیه روی انگشت (<span class="en">herpetic whitlow</span>) است؛ کودک با مکیدن انگشت ممکن است ضایعه روی شست ایجاد کند (≈ ۲ هفته).</div>
+
+  <h4>درمان زخم آفتی عودکننده</h4>
+  <ul>
+    <li>خط اول — موضعی: کورتیکواستروئید موضعی، آفتازول، چسب مخاطی (زایلکتین/ژل آلوئه‌ورا)، دهان‌شویه کلرهگزیدین+دگزامتازون/لیسترین.</li>
+    <li>موارد شدید: کورتیکواستروئید خوراکی (پردنیزولون).</li>
+    <li>علل: تروما خفیف (۷۵٪)، آلرژی، دیسفانکشن غدد بزاقی، کمبود تغذیه (آهن، B12، فولیک)، استرس، عفونت میکروبی.</li>
+  </ul>
+  <div class="note tip"><span class="tag">بیماری‌های سیستمیک مرتبط با آفت</span> بهجت، کرون، کولیت اولسراتیو، سیلیاک، نوتروپنی، نقص ایمنی، رایتر، لوپوس، سندرم <span class="en">MAGIC</span>.</div>
+
+  <h3>کاندیدیازیس حاد (برفک)</h3>
+  <p>کاندیدا فلور نرمال دهان است که با کاهش مقاومت میزبان پاتوژن می‌شود (در کم‌سن‌ها بعد از آنتی‌بیوتیک‌تراپی). پچ خزه‌مانند سفید برآمده که با گاز پاک می‌شود اما زیرش خونریزی‌دهنده است. کاندیدای نوزادی: ۲ هفتهٔ اول، علت عبور از واژن. <strong>درمان: سوسپانسیون نیستاتین ۱۰۰٬۰۰۰ واحد موضعی، ۴ بار/روز.</strong></p>
+
+  <h3>تغییریافته با فاکتور سیستمیک</h3>
+  <div class="tbl-scroll"><table>
+    <caption>افزایش حجم/التهاب لثه با منشأ سیستمیک و ژنتیک</caption>
+    <thead><tr><th>نوع</th><th>ویژگی شاخص</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td>ژنژیویت بلوغ (اندوکرین)</td><td>افزایش حجم سگمنت قدامی، پاپیلای پیازی؛ باکتری: <span class="en">Prevotella intermedia</span></td><td>بهداشت، حذف پلاک، ویتامین C (۵۰۰ mg)</td></tr>
+      <tr><td>فیبروماتوزیس ارثی لثه</td><td>افزایش حجم پیشرونده خوش‌خیم، سفت، بدون خونریزی؛ اتوزوم غالب؛ افزایش کلاژن و کاهش فیبروبلاست؛ عود و خونریزی غیرعادی حین جراحی</td><td>کنترل پلاک عالی + حذف جراحی</td></tr>
+      <tr><td>PIGO (فنی‌توئین)</td><td>ارتباط با دوز و بهداشت دارد، با سن ندارد؛ ۲–۳ هفته بعد شروع، اوج ۱۸–۲۴ ماه؛ لثهٔ سفت صورتی، با پروب خونریزی نمی‌کند</td><td>بهداشت + جراحی؛ فولیک‌اسید کاهنده</td></tr>
+      <tr><td>کمبود ویتامین C</td><td>التهاب مارژینال+پاپی، درد شدید، خونریزی خودبه‌خود</td><td>کودک: ۲۵۰–۵۰۰ mg/روز ۲ هفته؛ بزرگ‌تر: ۱ گرم/روز</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note key"><span class="tag">انواع PIGO و درمان</span> خفیف (<۱/۳ تاج): بهداشت روزانه؛ متوسط (۱/۳–۲/۳): بهداشت + دهان‌شویه ضدپلاک + در صورت امکان تغییر ضدتشنج؛ شدید (>۲/۳): جراحی.</div>
+</section>
+
+<!-- ================= CHAPTER 3 ================= -->
+<section class="chapter" id="c3">
+  <div class="chnum">فصل ۳</div>
+  <h2>بیماری‌های پریودنتال در کودکان</h2>
+  <div class="src">دکتر کاظم واعظ</div>
+
+  <div class="defbox"><b>پریودنتیت:</b> بیماری التهابی لثه و بافت‌های عمقی‌تر پریودنشیوم با تشکیل پاکت و تخریب استخوان آلوئول. تشخیص: پروبینگ؛ تأیید: رادیوگرافی <span class="en">BW</span> (ارتفاع استخوان نسبت به CEJ). از دست رفتن <mark>بیش از ۳ mm استخوان</mark> = از دست رفتن قطعی. در شیری‌ها معمولاً بین مولر اول و دوم.</div>
+
+  <h3>پریودنتیت مهاجم (زودرس)</h3>
+  <div class="tbl-scroll"><table>
+    <caption>LAP در برابر GAP</caption>
+    <thead><tr><th>ویژگی</th><th>موضعی (LAP)</th><th>ژنرالیزه (GAP)</th></tr></thead>
+    <tbody>
+      <tr><td>محل درگیری</td><td>>۱ دندان دائمی، معمولاً مولرهای اول و انسیزورها؛ الگوی دوطرفه متقارن</td><td>حین/بلافاصله بعد رویش شیری؛ اغلب همهٔ دندان‌ها</td></tr>
+      <tr><td>التهاب و پلاک</td><td>التهاب بافتی کم، جرم و پلاک ناچیز</td><td>ابتدا کم ولی به‌سرعت پیشرفت؛ تجمع زیاد جرم</td></tr>
+      <tr><td>سرعت تخریب استخوان</td><td>۳–۴ برابر پریودنتیت مزمن</td><td>از دست رفتن سریع، لقی، زود افتادن دندان (تا ۳ سالگی)</td></tr>
+      <tr><td>باکتری</td><td><span class="en">Aa</span> یا Aa + Pg</td><td>رادهای گرم‌منفی بی‌هوازی اختیاری (<span class="en">P. gingivalis</span>)</td></tr>
+      <tr><td>نقص میزبان</td><td>کموتاکسی نوتروفیل/مونوسیت، فاگوسیتوز، تولید لکوترین B4</td><td>کموتاکسی نوتروفیل، چسبندگی لکوسیت، پاسخ میزبان</td></tr>
+    </tbody>
+  </table></div>
+  <p>جنسیت/نژاد: آفریقایی‌آمریکایی > سفیدپوست؛ پسر > دختر (در GAP). ارتباط در دنتیشن شیری: اختلال دفاع میزبان، پوسیدگی‌های بین‌دندانی وسیع، سابقهٔ خانوادگی.</p>
+  <div class="note key"><span class="tag">درمان پریودنتیت مهاجم</span> ۱) تشخیص زودهنگام + آنتی‌بیوتیک مؤثر ۲) حذف مکانیکی عوامل میکروبی (جراحی/غیرجراحی). رژیم ترکیبی: <strong>آموکسی‌سیلین + مترونیدازول ۱–۲ هفته</strong> (Aa را حذف و Pg را سرکوب می‌کند).</div>
+
+  <h3>پریودنتیت به‌عنوان تظاهر سیستمیک</h3>
+  <div class="grid2">
+    <div class="card"><h4>اختلالات خونی</h4><p>نوتروپنی اکتسابی، لوسمی.</p></div>
+    <div class="card"><h4>اختلالات ژنتیکی</h4><p>نوتروپنی دوره‌ای، سندرم داون، پاپیلون‌لفور، چدیاک‌هیگاشی، اهلر‌دانلوس، هیپوفسفاتازیا، نقص چسبندگی لکوسیتی (LAD)، هیستوسیتوزیس.</p></div>
+  </div>
+  <div class="note tip"><span class="tag">از دست رفتن زودرس استخوان دندان شیری</span> بیشترین عامل: فاکتور موضعی (پریودنتیت، تروما، عفونت پوسیدگی). در نبود فاکتور موضعی ← بیماری سیستمیک: هیپوفسفاتازیا، پاپیلون‌لفور، هیستوسیتوز X، LAD، نوتروپنی، لوسمی، دیابت، اسکلرودرما، فیبروز دیسپلازی، آکرودینی، چدیاک‌هیگاشی.</div>
+
+  <h4>سندرم پاپیلون‌لفور</h4>
+  <ul>
+    <li>نادر، <strong>اتوزوم مغلوب</strong>، بدون برتری نژاد/جنس.</li>
+    <li>هایپرکراتوز کف دست و پا + تخریب پریودنتال شدید.</li>
+    <li>هیستولوژی: پالپ نرمال، سمنتوم ظاهراً نرمال، تجمع پلاک بازوفیلیک با تودهٔ فیلامنتوس روی کل ریشه.</li>
+    <li>درمان: شناسایی پاتوژن + آنتی‌بیوتیک مناسب؛ <mark>کشیدن زودهنگام تمام شیری‌ها</mark> برای داشتن زمان بی‌دندانی کافی قبل از رویش دائمی.</li>
+  </ul>
+
+  <h3>فرنوم، انکیلوگلوسیا و خودآزاری</h3>
+  <ul>
+    <li><strong>فرنوم طبیعی:</strong> اپیکالی‌تر از مارژین لثهٔ آزاد، در موکوژنژیوال‌جانکشن خاتمه می‌یابد و کششی به لثهٔ چسبنده وارد نمی‌کند. شایع‌ترین محل نابجا: قدام ماگزیلا فاسیال/میدلاین.</li>
+    <li><strong>انکیلوگلوسیا:</strong> خفیف ← با سن بهتر می‌شود؛ شدید ← جراحی.</li>
+    <li><strong>خودآزاری:</strong> سندرم تورت، تحلیل تروماتیک از مکیدن پستانک، گازگرفتن (لش‌نیهان، عدم‌حساسیت مادرزادی به درد، اوتیسم). درمان: اپلاینس محافظتی؛ گاهی کاربامازپین.</li>
+  </ul>
+
+  <h3>ارزیابی و غربالگری</h3>
+  <div class="grid2">
+    <div class="card"><h4>ثبت کنترل پلاک (O'Leary)</h4><p>محلول آشکارساز ← ارزیابی سطوح رنگ‌گرفته با سوند ← تقسیم تعداد سطوح دارای پلاک بر کل سطوح. اهمیت: ارزیابی پیشرفت بیمار در بهداشت. ضعف: تفاوت کمّی پلاک را نشان نمی‌دهد.</p></div>
+    <div class="card"><h4>PSR</h4><p>غربالگری پریودنتال؛ بعد از رویش انسیزورها و مولر اول دائمی. جایگزین معاینهٔ جامع نیست. سیستم دندانی به ۶ سکستانت تقسیم می‌شود.</p></div>
+  </div>
+  <div class="tbl-scroll"><table>
+    <caption>کدگذاری PSR</caption>
+    <thead><tr><th>کد</th><th>عمق سالکوس</th><th>جرم/خونریزی</th></tr></thead>
+    <tbody>
+      <tr><td>۰</td><td>≤ ۳٫۵ mm</td><td>بدون جرم، بدون خونریزی</td></tr>
+      <tr><td>۱</td><td>≤ ۳٫۵ mm</td><td>بدون جرم، با خونریزی خفیف</td></tr>
+      <tr><td>۲</td><td>≤ ۳٫۵ mm</td><td>مقداری جرم بالا/زیرلثه یا مارژین معیوب</td></tr>
+      <tr><td>۳</td><td>۳٫۵–۵٫۵ mm</td><td>—</td></tr>
+      <tr><td>۴</td><td>> ۵٫۵ mm</td><td>—</td></tr>
+      <tr><td>* دار</td><td colspan="2">درگیری فورکا، لقی غیرطبیعی، مشکل موکوژنژیوال یا تحلیل لثه</td></tr>
+    </tbody>
+  </table></div>
+  <p>بیمار با کد ۰/۱/۲ ← آموزش بهداشت و برداشت جرم؛ کد ۳/۴ ← ارزیابی و درمان جامع پریودنتال.</p>
+
+  <h3>استین‌های خارجی و جرم</h3>
+  <div class="tbl-scroll"><table>
+    <caption>مقایسهٔ استین‌ها</caption>
+    <thead><tr><th>استین</th><th>عامل/ویژگی</th><th>نکته</th></tr></thead>
+    <tbody>
+      <tr><td>سبز</td><td>باکتری کروموژنیک روی کوتیکول مینایی (پنی‌سیلیوم، آسپرژیلوس)</td><td>پسران بیشتر؛ ۱/۳ ژنژیوال لبیال قدام ماگزیلا؛ مینای زیرش خشن، عود</td></tr>
+      <tr><td>نارنجی</td><td>علت ناشناخته، شیوع کمتر</td><td>ساده‌تر برداشته می‌شود؛ بهداشت ضعیف</td></tr>
+      <tr><td>سیاه</td><td>اکتینومایسز؛ خط سیاه نازک</td><td>در زن‌ها بیشتر؛ عاری از پوسیدگی، بهداشت عالی؛ برداشت دشوار</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>جرم:</strong> در پیش‌دبستانی دیده نمی‌شود؛ در عقب‌ماندگی ذهنی مرتبط با فانکشن عضلانی غیرطبیعی، رژیم نرم، بهداشت ضعیف و نقص جریان بزاق.</p>
+  <div class="note tip"><span class="tag">پیگمانتاسیون در برابر استین</span> پیگمانتاسیون همراه با تغییرات شیمیایی در ساختار دندان است و بدون تغییر ساختار دندان قابل برداشت نیست؛ برخلاف استین خارجی.</div>
+</section>
+
+<!-- ================= CHAPTER 4 ================= -->
+<section class="chapter" id="c4">
+  <div class="chnum">فصل ۴</div>
+  <h2>آبسه‌ها و عفونت‌های ادنتوژنیک</h2>
+  <div class="src">دکتر کاظم واعظ</div>
+
+  <p>عفونت‌های ادنتوژنیک در کودکان و نوجوانان شایع‌تر از بزرگسالان است. علائم کلاسیک: قرمزی، درد، تورم و افزایش حرارت موضعی/عمومی. <mark>علت پخش سریع‌تر در استخوان: وجود فضای استخوانی وسیع‌تر در کودکان</mark> — و احتمال صدمه به دندان‌های در حال رویش.</p>
+  <div class="note warn"><span class="tag">عوارض جدی (ناشایع)</span> سلولیت · ترومبوز سینوس کاورنوس · آبسهٔ مغزی · کوری موقت · انسداد راه هوایی · گسترش عفونت به قفسهٔ سینه.</div>
+
+  <h3>آبسهٔ دنتوآلوئولار: حاد و مزمن</h3>
+  <div class="tbl-scroll"><table>
+    <caption>آبسهٔ حاد در برابر مزمن</caption>
+    <thead><tr><th>ویژگی</th><th>حاد</th><th>مزمن</th></tr></thead>
+    <tbody>
+      <tr><td>درد</td><td>درد، تب، احساس ناخوشی؛ حساس به دق/حرکت/دما</td><td>درد کمتر</td></tr>
+      <tr><td>رادیوگرافی</td><td>افزایش عرض PDL (مرحلهٔ اولیه)</td><td>ضایعهٔ مشخص‌تر</td></tr>
+      <tr><td>درناژ</td><td>—</td><td>فیستول درناژشونده</td></tr>
+      <tr><td>آنتی‌بیوتیک</td><td>اگر کشیدن انتخاب شود و سابقهٔ پزشکی عادی باشد، ضروری نیست</td><td>معمولاً ضروری نیست مگر مشکل سیستمیک/نقص‌ایمنی</td></tr>
+    </tbody>
+  </table></div>
+  <p>در دندان دائمی، آبسه به‌صورت ضایعهٔ پری‌اپیکال محدود با کپسول فیبروزه بروز می‌کند؛ اما در دندان شیری <strong>منتشرتر</strong> است چون بافت اطراف کمتر قادر به محصورسازی است. مبنای درمان: <strong>حذف علت = پالپ نکروز</strong> از طریق درناژ پالپ‌چمبر، لثه یا کشیدن.</p>
+  <div class="note key"><span class="tag">چرا بی‌حسی در آبسهٔ حاد دشوار است؟</span> تزریق محلول بی‌حسی در بافت ملتهب/عفونی ناخوشایند و غیرمؤثر است (در موارد شدید نیاز به بیهوشی عمومی). برای برداشت ساختار دندانی حین اکسس، اگر دندان با انگشت ثابت نگه داشته شود ناراحتی کم می‌شود (تراش بدون بی‌حسی).</div>
+
+  <h3>سلولیت</h3>
+  <p>عفونت منتشر بافت نرم، شایع‌تر در کودکان خردسال، به دلیل نکروز پالپ (در شیری شایع‌تر). تورم یک‌طرفهٔ صورت/گردن با بافت تیره و سفت؛ می‌تواند تهدیدکنندهٔ حیات باشد. این بیماران اغلب با تب >۴۰°، بی‌قراری و بی‌حالی به اورژانس مراجعه می‌کنند.</p>
+  <ul>
+    <li><strong>ماگزیلا:</strong> تورم/قرمزی چشم؛ گسترش به خلف ← آبسه/ترومبوز سینوس کاورنوس ← درگیری مغزی.</li>
+    <li><strong>مندیبل:</strong> انتشار به کف دهان. درگیری فضاهای ساب‌مندیبولار + ساب‌لینگوال + ساب‌منتال = <strong>آنژین لودویگ</strong>.</li>
+  </ul>
+  <div class="note warn"><span class="tag">آنژین لودویگ</span> بالا آمدن زبان و کف دهان ← انسداد راه هوایی؛ نیاز به مدیریت زودهنگام راه هوایی. علائم پیش‌بینی‌کننده: <span class="en">drooling</span>، خفگی/گرفتگی صدا، صدای زیر (<span class="en">high pitch</span>)، خس‌خس (<span class="en">wheezing</span>). مرگ‌ومیر گزارش‌شده ۱–۱۸٪ حتی با آنتی‌بیوتیک.</div>
+
+  <h3>درمان</h3>
+  <div class="tbl-scroll"><table>
+    <caption>راهبرد درمان بر اساس شدت</caption>
+    <thead><tr><th>وضعیت</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td>عفونت جزئی</td><td>پالپکتومی یا کشیدن</td></tr>
+      <tr><td>عفونت جدی‌تر</td><td>برش و درناژ (I&D)</td></tr>
+      <tr><td>سلولیت دندان شیری</td><td>معمولاً کشیدن؛ در مراحل اولیه به‌دلیل ماهیت منتشر، انسیژن توصیه نمی‌شود ← آنتی‌بیوتیک</td></tr>
+      <tr><td>آنژین لودویگ / انتشار به کف دهان</td><td>آنتی‌بیوتیک تزریقی، بستری</td></tr>
+    </tbody>
+  </table></div>
+  <p>درمان سریع دندان مبتلا همراه با آنتی‌بیوتیک وریدی، مقرون‌به‌صرفه‌تر و بستری کوتاه‌تری نسبت به درمان صرفاً با آنتی‌بیوتیک وریدی دارد.</p>
+  <div class="tbl-scroll"><table>
+    <caption>درمان آنتی‌بیوتیکی</caption>
+    <thead><tr><th>سرپایی</th><th>بستری (وریدی، عموماً سلولیت)</th></tr></thead>
+    <tbody>
+      <tr><td>پنی‌سیلین خوراکی، آموکسی‌سیلین (بهبود سریع‌تر، همکاری بهتر به‌دلیل فواصل طولانی‌تر)</td><td>آمپی‌سیلین/سولباکتام</td></tr>
+      <tr><td>آلرژی به پنی‌سیلین ← کلیندامایسین یا آزیترومایسین</td><td>کلیندامایسین</td></tr>
+      <tr><td>دورهٔ ۵–۷ روز</td><td>پنی‌سیلین + مترونیدازول (IV)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><span class="tag">موارد بستری در سلولیت</span> بیماران سیستمیک ناسالم · نیاز به نظارت دقیق · شک به عدم پیروی بیمار/والدین · انتشار به کف دهان (آنژین لودویگ).</div>
+</section>
+
+<!-- ================= CHAPTER 5 ================= -->
+<section class="chapter" id="c5">
+  <div class="chnum">فصل ۵</div>
+  <h2>جراحی و کشیدن دندان در کودکان</h2>
+  <div class="src">دکتر کاظم واعظ</div>
+
+  <p>پروسهٔ جراحی در کودکان بسیار شبیه بزرگسالان است، اما تفاوت‌های مهمی دارد. مهم‌ترین تفاوت در <strong>مدیریت رفتار بیمار</strong> است.</p>
+
+  <h3>ارزیابی قبل از عمل</h3>
+  <ol>
+    <li>گرفتن تاریخچهٔ پزشکی خوب (شرایط خاص مثل بیماری‌های خونریزی‌دهنده).</li>
+    <li>مشاورهٔ مناسب پزشکی و دندانپزشکی.</li>
+    <li>پیش‌بینی و پیشگیری از شرایط اورژانسی.</li>
+    <li>توانایی کامل برای درمان اورژانس هنگام بروز.</li>
+  </ol>
+  <p>ارزیابی دندانپزشکی کامل: رادیوگرافی مناسب قبل از کار، توجه به وضعیت فضاها و نیاز به فضانگهدار.</p>
+
+  <h3>وسایل</h3>
+  <div class="note key"><span class="tag">چرا فورسپس کوچک‌تر؟</span> ۱) قرارگیری راحت‌تر در حفرهٔ کوچک دهان ۲) پنهان‌شدن راحت‌تر در دست عمل‌کننده (کاهش ترس کودک) ۳) انطباق دقیق‌تر سر کوچک با آناتومی دندان شیری.</div>
+  <div class="note warn"><span class="tag">کنترااندیکاسیون</span> فورسپس <span class="en">cow horn</span> مندیبل برای دندان شیری ممنوع است (آسیب به پره‌مولرهای در حال تکامل). در دندان‌های تک‌ریشهٔ در حال رویش با ترمیم بزرگ، با کمترین نیرو احتیاط شود.</div>
+
+  <h3>مدیریت رفتار و موقعیت‌دهی</h3>
+  <ul>
+    <li>توضیح کامل پروسه؛ نشان دادن وسایل بی‌خطر (کورت: «این قاشق دندانت را تکان می‌دهد»).</li>
+    <li>قبل از کشیدن، نرمهٔ انگشت اشاره و شست در ناحیه قرار داده شود تا کودک کشش/فشار را حس کند (آن‌قدر سفت که سر بیمار جابه‌جا شود).</li>
+    <li>اطمینان از بی‌حسی کامل؛ اگر بیمار درد حس کند، جلب دوبارهٔ اعتماد کودک سخت است.</li>
+  </ul>
+  <div class="note tip"><span class="tag">پیشگیری از آسپیراسیون/بلع</span> فاکتورها: پوزیشن سوپاین · دید کم (حفرهٔ کوچک، زبان نسبتاً بزرگ) · حرکات غیرمنتظره. زاویهٔ فک بالا با کف اتاق <mark>نباید بیش از ۴۵ درجه</mark> باشد؛ در غیر این صورت گاز در خلف دهان قرار گیرد.</div>
+  <p><strong>نقش دست غیرعمل‌کننده:</strong> کنترل سر، پشتیبانی فک تحت درمان، کنار زدن گونه و زبان، لمس زائدهٔ آلوئولر و دندان‌های مجاور.</p>
+
+  <h3>اصول کلی کشیدن</h3>
+  <ol>
+    <li>جداکردن اتصالات اپیتلیالی با کورت/الواتور پریوست.</li>
+    <li>لق‌کردن با الواتور مناسب (بدون آسیب به دندان مجاور و زیرین).</li>
+    <li>قرار دادن فورسپس: ابتدا نوک لینگوال/پالاتال، سپس باکال.</li>
+    <li>بررسی بصری و با کورت؛ کورت امتداد دست برای لمس است نه برای خراش. <mark>کاربرد تهاجمی کورت در حفرهٔ شیری ممنوع</mark> (آسیب به جوانهٔ دائمی)؛ ضایعهٔ پاتولوژیک اپکس دائمی با دقت خارج شود.</li>
+    <li>لمس هر دو تابل باکال/لینگوال و برگرداندن آلوئول عریض‌شده به موقعیت قبل.</li>
+    <li>برداشت محافظه‌کارانهٔ تیزی‌های استخوان با رانژور/فایل.</li>
+    <li>هموستاز اولیه با پک گاز.</li>
+  </ol>
+  <div class="tbl-scroll"><table>
+    <caption>دستورات بعد از عمل</caption>
+    <thead><tr><th>#</th><th>دستور</th></tr></thead>
+    <tbody>
+      <tr><td>۱</td><td>گاز را ۳۰ دقیقه گاز بگیرید</td></tr>
+      <tr><td>۲</td><td>تا ۲۴ ساعت از نی استفاده نکنید</td></tr>
+      <tr><td>۳</td><td>روز جراحی دهان را نشویید/دهان‌شویه نزنید (سایر دندان‌ها مسواک شوند)</td></tr>
+      <tr><td>۴</td><td>ضددردها طبق دستور</td></tr>
+      <tr><td>۵</td><td>اگر بعد از ۴۸ ساعت درد/خونریزی غیرعادی ادامه یافت تماس بگیرید</td></tr>
+      <tr><td>۶</td><td>تف نکنید</td></tr>
+      <tr><td>۷</td><td>مایعات زیاد و هر چیز قابل بلع بخورید</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>تکنیک کشیدن بر اساس دندان</h3>
+  <div class="tbl-scroll"><table>
+    <caption>بی‌حسی و حرکت فورسپس</caption>
+    <thead><tr><th>دندان</th><th>بی‌حسی</th><th>حرکت/نکته</th></tr></thead>
+    <tbody>
+      <tr><td>مولر ماگزیلا</td><td>انفیلتراسیون ماگزیلا + تزریق پالاتال</td><td>اول پالاتال، سپس باکال‌-پالاتال؛ خروج اکلوزوباکال؛ ریشه‌های متباعد، خطر شکستن و کشیدن ناخواستهٔ پره‌مولر</td></tr>
+      <tr><td>قدامی ماگزیلا</td><td>انفیلتراسیون وستیبول + پالاتال</td><td>تک‌ریشه مخروطی؛ حرکات چرخشی-عمودی (مثل باز کردن میخ از دیوار)؛ احتمال شکستن کم</td></tr>
+      <tr><td>مولر مندیبل</td><td>بلاک آلوئولار تحتانی (± لانگ باکال)</td><td>ساپورت مندیبل با دست غیرعمل‌کننده (حفظ TMJ)؛ حرکات متناوب باکال‌-لینگوال؛ انفیلتراسیون به‌تنهایی کافی نیست</td></tr>
+      <tr><td>قدامی مندیبل</td><td>—</td><td>تک‌ریشه؛ حرکات چرخشی؛ مراقب نیرو به دندان مجاور (راحت لوکسه می‌شود)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>مدیریت ریشه‌های شکستهٔ شیری</h3>
+  <div class="note key"><span class="tag">قانون کلی</span> ریشهٔ باقی‌مانده <mark>≥ ۱/۳</mark> باید خارج شود؛ <mark>< ۱/۳</mark> ممکن است رها شود تا از آسیب به دندان جانشین جلوگیری شود. اکثر ریشه‌های باقی‌ماندهٔ شیری تحلیل خواهند رفت. برداشت تهاجمی نوک ریشه ← آسیب به دندان جایگزین؛ باقی‌گذاشتن ← خطر عفونت و تأخیر رویش. در پرونده ثبت و به والدین اطلاع داده شود.</div>
+</section>
+
+<!-- ================= CHAPTER 6 ================= -->
+<section class="chapter" id="c6">
+  <div class="chnum">فصل ۶</div>
+  <h2>روکش استیل زنگ‌نزن (SSC)</h2>
+  <div class="src">دکتر امامی · کاساماسیمو</div>
+
+  <p><span class="en">SSC</span> اولین بار توسط <strong>Humphrey در سال ۱۹۵۰</strong> معرفی شد. مطالعهٔ Randall روی ۱۲۱۰ کراون در برابر ۲۲۰۱ آمالگام (پیگیری ۲ تا ۱۰ سال) نشان داد کراون در ترمیم پوسیدگی‌های چندسطحی مولر شیری برتر از آمالگام است. به‌علاوه نقش محافظتی در برابر پوسیدگی‌های آینده دارد و مقرون‌به‌صرفه است.</p>
+
+  <h3>اندیکاسیون‌ها</h3>
+  <div class="tbl-scroll"><table>
+    <caption>موارد استفادهٔ SSC</caption>
+    <thead><tr><th>#</th><th>اندیکاسیون</th></tr></thead>
+    <tbody>
+      <tr><td>۱</td><td>پوسیدگی وسیع/چندسطحی شیری یا دائمی جوان — شامل مولر اول شیری با ضایعهٔ <mark>مزیال اینترپروگزیمال</mark> (ساپورت ناکافی برای آمالگام)</td></tr>
+      <tr><td>۲</td><td>دندان هیپوپلاستیک (شیری/دائمی)</td></tr>
+      <tr><td>۳</td><td>بعد از پالپوتومی یا پالپکتومی</td></tr>
+      <tr><td>۴</td><td>ناهنجاری ارثی: دنتینوژنزیس/آملوژنزیس ایمپرفکتا</td></tr>
+      <tr><td>۵</td><td>افراد ناتوان / بهداشت بسیار ضعیف</td></tr>
+      <tr><td>۶</td><td>اباتمنت فضانگهدار/پروتز (فقط SSC، نه زیرکونیا)</td></tr>
+      <tr><td>۷</td><td>کودکان نیازمند بیهوشی عمومی با ریسک بالای پوسیدگی</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note exam">⭐ <span class="tag">نکتهٔ امتحانی</span> پوسیدگی چندسطحی به‌ویژه <strong>درگیری سطح مزیال دندان D</strong>، آمالگام اندیکاسیون ندارد (گیر مناسب ایجاد نمی‌شود) و حتماً باید SSC شود.</div>
+
+  <h3>مراحل تراش و قرار دادن</h3>
+  <ol>
+    <li><strong>بررسی اکلوژن</strong> قبل از بی‌حسی و بستن رابردم.</li>
+    <li>بی‌حسی شامل باکال + لینگوال/پالاتال.</li>
+    <li>کاهش اکلوزال با فرز فیشور ۱۶۹ یا فوتبال: <mark>۱ تا ۱٫۵ mm</mark>، حفظ شیب کاسپ‌ها.</li>
+    <li>کاهش پروگزیمال ≈ ۱ mm، شکستن کانتکت، دیواره‌های عمودی با همگرایی مختصر، فینیش‌لاین feather-edge.</li>
+    <li>گرد کردن لاین‌انگل‌ها (زاویهٔ ۳۰–۴۵ درجه)؛ کاهش باکولینگوال محدود به ۱/۳ اکلوزال.</li>
+    <li>انتخاب کوچک‌ترین کراونی که بنشیند و کانتکت برقرار کند.</li>
+    <li>کوتاه‌کردن با قیچی مخصوص تا ≈ ۱ mm زیر مارژین ژنژیوال.</li>
+    <li><strong>کانتورینگ و کرمپینگ</strong>: ۱/۳ ژنژیوال جمع و حدود ۱ mm به داخل خم شود.</li>
+    <li>برداشت رابردم، بررسی اکلوژن، پالیش لبه‌های تیز.</li>
+    <li>سمان: داخل کاملاً خشک؛ بهترین سمان <strong>گلس‌آینومر</strong> (یا پلی‌کربوکسیلات/سلف‌رزین)؛ ۲/۳ کراون پر شود؛ اضافات فوری پاک شوند (نخ دندان گره‌دار).</li>
+  </ol>
+  <div class="tbl-scroll"><table>
+    <caption>SSC در برابر زیرکونیا</caption>
+    <thead><tr><th>ویژگی</th><th>SSC</th><th>زیرکونیا</th></tr></thead>
+    <tbody>
+      <tr><td>تراش</td><td>محافظه‌کارانه، حفظ نسج</td><td>وسیع‌تر</td></tr>
+      <tr><td>زیبایی</td><td>کمتر</td><td>بیشتر</td></tr>
+      <tr><td>هزینه</td><td>کمتر</td><td>بیشتر</td></tr>
+      <tr><td>اباتمنت پروتز</td><td>بله</td><td>خیر</td></tr>
+      <tr><td>تنظیم اکلوژن</td><td>غیرممکن (در صورت نیاز، دندان مقابل تنظیم شود)</td><td>بسیار دشوار</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><span class="tag">افتادن طبیعی</span> SSC همراه با تحلیل ریشهٔ دندان شیری خودبه‌خود می‌افتد و نیازی به خارج‌کردن قبل از افتادن نیست؛ این موضوع به والدین توضیح داده شود. هنگام خارج‌کردن کراون مراقب آسپیراسیون باشید (انگشت روی کراون؛ با رابردم ریسک کمتر).</div>
+  <div class="note warn"><span class="tag">قبل از سیمان زدن SSC</span> یک پد گاز ۲×۲ اینچ پشت دندان قرار دهید تا کراون به اوروفارنکس نیفتد.</div>
+</section>
+
+<!-- ================= CHAPTER 7 ================= -->
+<section class="chapter" id="c7">
+  <div class="chnum">فصل ۷</div>
+  <h2>فضانگهدارها (Space Maintainers)</h2>
+  <div class="src">دکتر امامی · کاساماسیمو</div>
+
+  <p>از دست رفتن زودرس دندان شیری ← حرکت دندان‌های مجاور ← کاهش طول قوس و اختلال رویش دائمی. مهم‌ترین مشکل: <strong>کوتاه‌شدن طول قوس</strong>.</p>
+  <div class="defbox"><b>SM (حفظ فضا):</b> اگر بلافاصله پس از از دست رفتن دندان، فضا کم نشده باشد. <b>SR (بازیابی فضا):</b> اگر فضا کم شده؛ نیاز به ارزیابی جامع (حفظ، بازیابی یا عدم درمان).</div>
+
+  <h3>ارزیابی نیاز — ۷ فاکتور</h3>
+  <div class="tbl-scroll"><table>
+    <caption>عوامل تعیین‌کنندهٔ نیاز به فضانگهدار</caption>
+    <thead><tr><th>#</th><th>فاکتور</th><th>نکته</th></tr></thead>
+    <tbody>
+      <tr><td>۱</td><td>بروز کاهش فضا</td><td>تقریباً همهٔ مولرهای شیری ← مقداری کاهش (مزیال مولر دائمی، دیستال قدامی)</td></tr>
+      <tr><td>۲</td><td>زمان سپری‌شده</td><td>بیشترین کاهش در <mark>۶ ماه اول</mark>؛ بسته‌شدن در ماگزیلا سریع‌تر از مندیبل</td></tr>
+      <tr><td>۳</td><td>سن/مرحلهٔ دندانی</td><td>رویش فعال مجاور ← کاهش فضای بیشتر</td></tr>
+      <tr><td>۴</td><td>میزان بسته‌شدن</td><td>مولر دوم شیری ماگزیلا: تا <strong>۸ mm</strong>؛ مندیبل: تا <strong>۴ mm</strong>؛ مولر اول بالا/پایین مشابه</td></tr>
+      <tr><td>۵</td><td>جهت بسته‌شدن</td><td>ماگزیلا: حرکت بدنی مزیال + چرخش مزیولینگوال حول ریشهٔ پالاتال؛ مندیبل: تیپینگ مزیال تاج + چرخش لینگوال</td></tr>
+      <tr><td>۶</td><td>زمان رویش جانشین</td><td>رویش وقتی ۳/۴ ریشه تشکیل شد (مستقل از سن)؛ از دست رفتن مولر شیری <strong>قبل ۷ سال ← تأخیر</strong>، <strong>بعد ۷ سال ← رویش زودرس</strong></td></tr>
+      <tr><td>۷</td><td>فقدان مادرزادی</td><td>قبل از SM، وجود جانشین با رادیوگرافی تأیید شود</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note key"><span class="tag">قانون استخوان روی تاج</span> به ازای هر <strong>۱ mm استخوان</strong> روی تاج دندان دائمی، ≈ <strong>۶ ماه</strong> تا رویش باقی است. اگر ۳/۴ ریشه تشکیل شده باشد، دندان در آستانهٔ رویش است و شاید نیازی به فضانگهدار نباشد.</div>
+
+  <h3>قدامی‌ها و کانین</h3>
+  <ul>
+    <li>دلایل جایگزینی قدامی: <strong>زیبایی</strong> (معتبرترین)، عملکرد، تکلم، حفظ فضا. شواهد کمی برای کاهش فضا با خارج‌کردن زودرس قدامی شیری وجود دارد؛ استثنا: قبل از رویش کانین شیری یا کراودینگ قدامی.</li>
+    <li>تکلم: اگر کودک مهارت گفتاری کسب کرده باشد، از دست رفتن قدامی مشکلی ایجاد نمی‌کند.</li>
+    <li>تغذیه: نقش اصلی جویدن با دندان‌های خلفی است؛ مشکلی ایجاد نمی‌شود.</li>
+    <li>از دست رفتن یک کانین شیری ← انحراف خط وسط، کالپس لینگوال انسیزورها، عمیق‌شدن بایت ← توصیه به کشیدن کانین مقابل برای تقارن.</li>
+    <li><strong>از دست رفتن دوطرفهٔ کانین شیری مندیبل ← حتماً Lingual Arch</strong> (وگرنه تمایل لینگوال شدید، دریفت دیستال انسیزورها، افزایش اوربایت و اورجت، کاهش محیط قوس).</li>
+  </ul>
+
+  <h3>انواع فضانگهدار</h3>
+  <div class="tbl-scroll"><table>
+    <caption>طبقه‌بندی فضانگهدارها</caption>
+    <thead><tr><th>نوع</th><th>زیرگروه</th><th>کاربرد</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="2">ثابت</td><td>یک‌طرفه: Band & Loop · Distal Shoe</td><td>یک دندان</td></tr>
+      <tr><td>دوطرفه: Lingual Arch (مندیبل)، Nance / TPA (ماگزیلا)</td><td>چند دندان / دو کوادرانت</td></tr>
+      <tr><td>متحرک</td><td>—</td><td>>۱ دندان در یک کوادرانت، بازسازی فانکشن</td></tr>
+    </tbody>
+  </table></div>
+
+  <h4>Band &amp; Loop</h4>
+  <ul>
+    <li>اندیکاسیون: از دست رفتن یک‌طرفهٔ مولر اول شیری (قبل/بعد رویش مولر اول دائمی)؛ از دست رفتن زودرس مولر دوم شیری (مشروط بر رویش مولر اول دائمی)؛ از دست رفتن دوطرفهٔ یک مولر شیری مندیبل قبل از رویش انسیزورها.</li>
+    <li>ساده، کم‌هزینه، نیاز به پیگیری مداوم، فانکشن اکلوزال را بازسازی نمی‌کند.</li>
+    <li>اگر مولر دوم شیری از دست رفت، بند روی <strong>مولر ۶</strong> قرار می‌گیرد (چون E حدود ۱۲ سالگی می‌افتد).</li>
+    <li>سیم ۳۶ میل؛ لوپ موازی ریج، ≈ ۱ mm از لثه فاصله، تکیه به دندان مجاور در نقطهٔ تماس؛ نباید مانع افزایش عرض بین‌کانینی شود.</li>
+    <li>کانتکت سفت ← استفاده از <span class="en">Separator</span> ۳–۷ روزه (بدون فرز/تراش).</li>
+    <li>سمان: زینک‌فسفات یا گلس‌آینومر (گلس‌آینومر در اطفال رایج‌تر، فلوراید آزاد می‌کند). فالو هر ۶ ماه. رویش دائمی = واضح‌ترین اندیکاسیون برداشت.</li>
+  </ul>
+  <div class="note warn"><span class="tag">برخلاف SSC</span> فضانگهدار خودبه‌خود خارج نمی‌شود؛ با شروع رویش دندان دائمی باید توسط دندانپزشک برداشته شود.</div>
+
+  <h4>Distal Shoe</h4>
+  <p>برای حفظ فضای مولر دوم شیری که <strong>قبل از رویش مولر اول دائمی</strong> از دست رفته. اکستنشن استیل (لحیم به انتهای دیستال بند+لوپ ۳۶ میل) ≈ ۱ mm زیر مارژینال‌ریج مزیال مولر دائمی رویش‌نیافته، رویش آن را هدایت می‌کند. به‌دلیل طراحی کانتیلور فقط یک دندان جایگزین؛ فانکشن بازسازی نمی‌شود؛ اپیتلیالیزاسیون کامل رخ نمی‌دهد. قبل از سیمان PA توصیه می‌شود.</p>
+  <div class="note warn"><span class="tag">کنترااندیکاسیون Distal Shoe</span> بیماران سیستمیک · نیازمند پروفیلاکسی اندوکاردیت · اختلالات خونی (blood dyscrasias) · سرکوب ایمنی · نقص مادرزادی قلب · سابقهٔ تب روماتیسمی · دیابت.</div>
+
+  <h4>دوطرفه: Lingual Arch / Nance / TPA</h4>
+  <div class="tbl-scroll"><table>
+    <caption>فضانگهدارهای دوطرفه</caption>
+    <thead><tr><th>وسیله</th><th>محل</th><th>عملکرد</th></tr></thead>
+    <tbody>
+      <tr><td>Lingual Arch</td><td>مندیبل (دوکوادرانت/چنددندان)</td><td>در شیری مندیبل توصیه نمی‌شود (جوانهٔ انسیزور دائمی لینگوال است ← تداخل رویش)؛ به‌جای آن دو Band & Loop. در ماگزیلای شیری امکان‌پذیر</td></tr>
+      <tr><td>Nance Arch</td><td>ماگزیلا</td><td>دکمهٔ آکریلی روی چین‌های کامی؛ از <strong>تیپینگ مزیال مولر ۶</strong> جلوگیری می‌کند</td></tr>
+      <tr><td>TPA</td><td>ماگزیلا</td><td>سیم بدون تماس با کام؛ تمیزتر و آسان‌تر؛ از حرکت بدنی و چرخش مزیولینگوال جلوگیری می‌کند اما اجازهٔ تیپینگ مزیال می‌دهد (احتمال کاهش فضا)</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>اپلاینس متحرک:</strong> وقتی >۱ دندان در یک کوادرانت از دست رفته (نبود اباتمنت مناسب، ضعف کانتیلور برای دهانهٔ دو دندانی)؛ علاوه بر جایگزینی چند دندان، فانکشن اکلوزال را هم بازمی‌گرداند.</p>
+  <div class="note key"><span class="tag">بهترین فضانگهدار</span> در بسیاری موارد، <strong>حفظ خود دندان شیری</strong> بهترین فضانگهدار طبیعی است. حتی یک ترمیم مناسب روی E، با حفظ کانتکت پروگزیمال، مانع دریفت مزیال مولر ۶ می‌شود. در آنکیلوز، دندان تا زمان قریب‌الوقوع‌شدن کاهش فضا حفظ، سپس کشیده و فضا حفظ می‌شود.</div>
+</section>
+
+<!-- ================= CHAPTER 8 ================= -->
+<section class="chapter" id="c8">
+  <div class="chnum">فصل ۸</div>
+  <h2>رویش دندان‌ها و اختلالات رویشی</h2>
+  <div class="src">دکتر امامی</div>
+
+  <p>تغییرات زمان رویش تا <mark>۶ ماه در هر دو جهت</mark> طبیعی است. سن رویش دندان دائمی نسبت به سایر جنبه‌های رشد فیزیکی، پدیدهٔ باثبات‌تری است.</p>
+  <div class="defbox"><b>رویش</b> نتیجهٔ یک سری وقایع متابولیک در استخوان آلوئول است: تحلیل استخوان در یک سمت و تشکیل در سمت مقابل فولیکول دندانی — و خود دندان در این روند دخالتی ندارد. سلول‌های تک‌هسته‌ای پیش‌ساز استئوکلاست در فولیکول، مسیر خروج از کریپت استخوانی را ایجاد می‌کنند.</p>
+
+  <h3>اصول کلیدی رویش</h3>
+  <ul>
+    <li>هر دندان از زمان تکمیل تاج به سمت اکلوژن حرکت می‌کند؛ فاصلهٔ تکمیل تاج تا اکلوژن کامل در دائمی ≈ <strong>۵ سال</strong>.</li>
+    <li>ظهور دندان به مرحلهٔ تشکیل ریشه نزدیک‌تر است تا سن تقویمی/استخوانی؛ هنگام ظهور بالینی ≈ <strong>۳/۴ ریشه</strong> تشکیل شده.</li>
+    <li>هورمون‌های مرتبط: هورمون رشد هیپوفیز، تیروئید، پروتئین مرتبط با پاراتیروئید.</li>
+    <li>رویش مندیبل عموماً زودتر از ماگزیلا؛ اما لترال، مولر اول و کانین تمایل به رویش زودتر در ماگزیلا دارند.</li>
+  </ul>
+  <div class="tbl-scroll"><table>
+    <caption>تفاوت جنسیتی در تکامل</caption>
+    <thead><tr><th>مرحله</th><th>تفاوت دختر و پسر</th></tr></thead>
+    <tbody>
+      <tr><td>تکامل اولیه و تشکیل تاج</td><td>مشابه</td></tr>
+      <tr><td>اتمام تاج</td><td>دختران ≈ ۰٫۳۵ سال جلوتر (در ۴ دندان)</td></tr>
+      <tr><td>تکامل ریشه</td><td>متوسط ۰٫۵۴ سال؛ بیشترین تفاوت در کانین (۰٫۹ سال)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>ترتیب رویش دندان‌های دائمی</h3>
+  <div class="tbl-scroll"><table>
+    <caption>شایع‌ترین ترتیب رویش</caption>
+    <thead><tr><th>فک</th><th>ترتیب</th></tr></thead>
+    <tbody>
+      <tr><td>مندیبل</td><td>مولر۱ ← سانترال ← لترال ← <strong>کانین</strong> ← پره‌مولر۱ ← پره‌مولر۲ ← مولر۲</td></tr>
+      <tr><td>ماگزیلا</td><td>مولر۱ ← سانترال ← لترال ← پره‌مولر۱ ← پره‌مولر۲ ← <strong>کانین</strong> ← مولر۲</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note key"><span class="tag">رویش مطلوب</span> در مندیبل، کانین قبل از پره‌مولرها رویش یابد ← حفظ طول قوس و جلوگیری از تیپینگ لینگوال ثنایاها (که اوربایت را زیاد می‌کند). با از دست رفتن زودرس کانین شیری یا ترتیب نامطلوب ← اندیکاسیون <strong>Lingual Arch پسیو</strong>. اگر مولر دوم دائمی مندیبل قبل از پره‌مولر دوم رویش یابد ← مهاجرت مزیال مولر اول و کمبود فضا برای پره‌مولر دوم.</div>
+  <p>در ماگزیلا، با از دست رفتن نابهنگام مولر شیری ← دریفت مزیال مولر اول دائمی ← نهفتگی کانین دائمی (معمولاً لیبیال). تأثیر از دست رفتن مولر شیری: کشیدن قبل از ۵ سالگی ← تأخیر پره‌مولر؛ بعد از ۵ سالگی ← کاهش تأخیر؛ در ۸–۱۰ سالگی ← تسریع رویش.</p>
+
+  <h3>رویش لینگوال ثنایای دائمی مندیبل</h3>
+  <p>بسیار شایع و اساساً <strong>نرمال</strong> است؛ زبان و رشد ادامه‌یافتهٔ آلوئول، دندان را به موقعیت طبیعی هدایت می‌کنند و موقعیت طی چند ماه بهبود می‌یابد.</p>
+  <div class="note tip"><span class="tag">رویکرد انتظار دقیق</span> اگر قبل از ۷٫۵ سالگی شناسایی شود نیازی به کشیدن نیست (تقریباً همیشه خودبه‌خود تصحیح می‌شود). اصلاح خودبه‌خود سانترال در ۹۵٪ موارد در سن ۸ سال و ۲ ماه و لترال در ۸ سال و ۴ ماه رخ می‌دهد. اگر در کودک بزرگ‌تر بدون شواهد تحلیل ریشهٔ شیری باشد ← شیری مربوطه خارج شود.</p>
+
+  <h3>دندان درآوردن و اختلالات همراه</h3>
+  <ul>
+    <li>افزایش ترشح بزاق و بردن دست به دهان از نشانه‌هاست.</li>
+    <li>رویش بروز عفونت را افزایش نمی‌دهد، دما/ESR/WBC را بالا نمی‌برد، اسهال/سرفه/اختلال خواب ایجاد نمی‌کند — اما بی‌قراری روزانه، مکیدن انگشت، افزایش آب‌ریزش و کاهش اندک اشتها ایجاد می‌کند.</li>
+    <li>افزایش اندکی در دما در روز ظهور اولین دندان دیده شده؛ اما ارتباط با تب و اختلالات سیستمیک قابل‌توجیه نیست.</li>
+    <li>جراحی حذف بافت پوشاننده اندیکاسیون ندارد. بی‌حس‌کنندهٔ سطحی غیرمحرک ۳–۴ بار/روز (در نوزادان احتیاط — جذب سریع و خطر دوز سمی).</li>
+  </ul>
+  <div class="tbl-scroll"><table>
+    <caption>ضایعات همراه رویش</caption>
+    <thead><tr><th>ضایعه</th><th>ویژگی</th><th>درمان</th></tr></thead>
+    <tbody>
+      <tr><td>هماتوم/کیست رویشی</td><td>بافت برآمدهٔ آبی-بنفش پر از خون؛ ناحیهٔ مولر دوم شیری/مولر اول دائمی؛ ناشی از تروما حین فانکشن</td><td>خودمحدودشونده؛ به‌ندرت جراحی؛ اطمینان‌بخشی به والدین</td></tr>
+      <tr><td>سکستروم رویشی</td><td>قطعهٔ کوچک استخوان غیرزنده روی تاج مولر دائمی؛ مرکب از عاج و سمنتوم؛ نسبت Ca/P بالا</td><td>اهمیت بالینی اندک؛ خودبه‌خود جذب؛ در صورت تحریک، حذف آسان</td></tr>
+      <tr><td>رویش اکتوپیک</td><td>کمبود طول قوس/فاکتورهای موضعی ← رویش در محل غیرطبیعی؛ گاهی جابه‌جایی واقعی</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ================= CHAPTER 9 ================= -->
+<section class="chapter" id="c9">
+  <div class="chnum">فصل ۹</div>
+  <h2>دندان‌های ناتال/نئوناتال و آنکیلوز</h2>
+  <div class="src">دکتر امامی</div>
+
+  <h3>دندان‌های ناتال و نئوناتال</h3>
+  <div class="defbox"><b>ناتال:</b> در بدو تولد موجود است. <b>نئوناتال:</b> طی ۳۰ روز اول زندگی رویش می‌یابد. <mark>۸۵٪</mark> این دندان‌ها ثنایای شیری مندیبل هستند و فقط درصد اندکی اضافی‌اند؛ معمولاً جفت ظاهر می‌شوند. مولرهای ناتال/نئوناتال به‌ندرت دیده می‌شوند.</div>
+  <ul>
+    <li>به‌علت تکامل کم ریشه، لقی زیاد دارند؛ اگر خطر آسپیراسیون باشد ← خارج کردن توصیه می‌شود.</li>
+    <li>لبهٔ انسایزال تیز می‌تواند سطح لینگوال زبان را پاره کند (<strong>بیماری Riga-Fede</strong>) ← گاهی خارج‌کردن.</li>
+    <li>بعد از خارج‌کردن: کورتاژ دقیق حفره برای حذف بقایای سلول‌های ادنتوژنیک (جلوگیری از ساختار شبه‌دندان آتیپیک).</li>
+    <li><strong>روش ارجح:</strong> باقی‌گذاشتن دندان و توضیح مزیت نگهداری؛ در زمان کوتاه تثبیت می‌شود.</li>
+    <li>دندان نئوناتال حفظ‌شده ممکن است شیردهی را دردناک کند؛ توصیه به شیردوش/شیشه؛ نوزاد یاد می‌گیرد گاز نگیرد.</li>
+  </ul>
+
+  <h3>ضایعات سفید نوزادی</h3>
+  <div class="tbl-scroll"><table>
+    <caption>مرواریدهای مینایی، Bohn، کیست دنتال‌لامینا</caption>
+    <thead><tr><th>ضایعه</th><th>محل</th><th>منشأ</th></tr></thead>
+    <tbody>
+      <tr><td>مرواریدهای مینایی (Epstein pearls)</td><td>امتداد رافهٔ میدپالاتال</td><td>بقایای بافت اپیتلیال به‌دام‌افتاده</td></tr>
+      <tr><td>Bohn nodule</td><td>دیواره‌های باکال/لینگوال ریج، روی کام دور از رافه</td><td>بقایای غدد بزاقی (هیستولوژی متفاوت)</td></tr>
+      <tr><td>کیست دنتال‌لامینا</td><td>کرست ریج ماگزیلا/مندیبل</td><td>بقایای دنتال‌لامینا</td></tr>
+    </tbody>
+  </table></div>
+  <p>این ضایعات معمولاً متعدد و بدون تغییر اندازه‌اند و درمان نمی‌خواهند (طی چند هفته خودبه‌خود از بین می‌روند). ممکن است به‌اشتباه دندان ناتال تشخیص داده شوند.</p>
+
+  <h3>دندان آنکیلوز</h3>
+  <p>اینفرااکلوژن: دندان مجاور به رشد آلوئول ادامه می‌دهد. اختلال در ریتم رویشی. شایع‌ترین: <strong>مولر شیری مندیبل</strong>. آنکیلوز قدامی شیری رخ نمی‌دهد مگر تروما. ارتباط با فقدان مادرزادی دندان دائمی جانشین.</p>
+  <div class="note key"><span class="tag">۳ نظریهٔ علت آنکیلوز مولر شیری</span> ۱) الگوی خانوادگی ۲) نژادی (سیاه‌پوست بسیار کمتر) ۳) تحلیل و ترمیم متناوب. تحلیل از سطح داخلی/لینگوال ریشه شروع، با دوره‌های استراحت قطع می‌شود؛ در دورهٔ ترمیمی اتصال محکم استخوان-دندان ایجاد می‌شود. آنکیلوز معمولاً تا قبل از شروع تحلیل ریشه رخ نمی‌دهد.</div>
+  <h4>تشخیص و درمان</h4>
+  <ul>
+    <li>خارج از اکلوژن؛ حتی با تحلیل پیشرفته، لق نیست. دق: صدای <strong>solid</strong> (در برابر صدای <strong>cushioned</strong> دندان نرمال). رادیوگرافی: شکست در تداوم غشای پریودنتال.</li>
+    <li>درمان: تا نبود پوسیدگی غیرعادی یا کاهش طول قوس ← فقط تحت‌نظر (انتظار دقیق + فالو منظم). معمولاً تحلیل و افتادن طبیعی رخ می‌دهد.</li>
+    <li>اگر جانشین دائمی ابنورمال باشد (آژنزی، رویش اکتوپیک) ← مداخلهٔ زودهنگام. در غیاب جانشین ← SSC، Overlay یا رزین کامپوزیت باندشونده (ترجیح فعلی: ترمیم باندشونده) برای برقراری اکلوژن، فقط پس از حداکثر رویش دندان‌های فک.</li>
+  </ul>
+  <h4>دندان دائمی آنکیلوز و inostosis مینا</h4>
+  <p>رویش ناکامل مولر دائمی ممکن است به آنکیلوز ناحیهٔ کوچک ریشه مربوط باشد؛ ابتدا برداشت بافت نرم/استخوان روی اکلوزال + سمان جراحی، سپس تکنیک <strong>luxation</strong> (شکستن آنکیلوز استخوانی)؛ در صورت عدم موفقیت، ۶ ماه بعد تکرار. <strong>inostosis مینا:</strong> تحریک فولیکول/پریودنشیوم به‌علت عفونت مزمن ← تخریب اپیتلیوم مینایی ← تحلیل مینا و رسوب استخوان/سمنتوم ← فیکس‌شدن محکم دندان رویش‌نیافته.</p>
+</section>
+
+<!-- ================= CHAPTER 10 ================= -->
+<section class="chapter" id="c10">
+  <div class="chnum">فصل ۱۰</div>
+  <h2>سندرم‌ها و رویش تأخیری</h2>
+  <div class="src">دکتر امامی</div>
+
+  <h3>سندرم داون (تریزومی ۲۱)</h3>
+  <div class="tbl-scroll"><table>
+    <caption>یافته‌های سندرم داون</caption>
+    <thead><tr><th>حوزه</th><th>یافته</th></tr></thead>
+    <tbody>
+      <tr><td>رویش</td><td>تأخیری؛ اولین شیری تا ۲ سالگی، تکمیل تا ۵ سالگی؛ ترتیب غیرنرمال؛ شیری‌ها تا ۱۵ سالگی</td></tr>
+      <tr><td>عمومی</td><td>آنومالی چشم/گوش، نقص مادرزادی قلب، عقب‌ماندگی ذهنی خفیف-متوسط؛ مرتبط با سن مادر</td></tr>
+      <tr><td>چهره/فک</td><td>عقب‌ماندگی رشد ماگزیلا و مندیبل، صورت میانی کوچک، زبان بزرگ، تمایل به پروتروژن و کراودینگ</td></tr>
+      <tr><td>پریو</td><td>شیوع بالاتر بیماری پریودنتال (ایمنی سلولی/هومورال مختل، نقص فاگوسیتیک)؛ کلونیزاسیون پاتوژن قبل ۵ سالگی؛ کاندیدا آلبیکانس بیشتر</td></tr>
+      <tr><td>پوسیدگی</td><td>استعداد معمولاً پایین</td></tr>
+      <tr><td>رفتار</td><td>اغلب خوش‌مشرب و قابل‌کنترل با روش‌های مرسوم؛ کاهش مقاومت به عفونت در نظر گرفته شود</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>کلیدوکرانیال دیسپلازیا</h3>
+  <ul>
+    <li>سندرم مادرزادی نادر؛ تشخیص بر اساس <strong>فقدان کلاویکل</strong>؛ فونتانل بزرگ، سوچورهای باز حتی اواخر کودکی؛ سینوس‌ها (به‌ویژه فرونتال) کوچک.</li>
+    <li>پروگناتیسم مندیبل (افزایش طول مندیبل + کوتاهی قاعدهٔ جمجمه)؛ ماگزیلا عمودی کوتاه.</li>
+    <li>تکامل دنتیشن تأخیری؛ دنتیشن شیری کامل در ۱۵ سالگی غیرمعمول نیست؛ ویژگی متمایز: <strong>دندان‌های اضافی (سوپرنیومرری)</strong>.</li>
+  </ul>
+
+  <h3>اختلالات هورمونی و رویش تأخیری</h3>
+  <div class="tbl-scroll"><table>
+    <caption>کم‌کاری تیروئید/هیپوفیز و کوتولگی</caption>
+    <thead><tr><th>وضعیت</th><th>ویژگی عمومی</th><th>یافتهٔ دندانی</th></tr></thead>
+    <tbody>
+      <tr><td>کم‌کاری مادرزادی تیروئید (کرتینیسم)</td><td>نقص ذهنی، کوتولگی، سر بزرگ، اندام کوتاه، چاقی؛ امروز با غربالگری نوزادان شناسایی</td><td>تأخیر در همهٔ مراحل؛ اندازهٔ دندان طبیعی؛ کراودینگ (فک کوچک)، زبان بزرگ، اپن‌بایت قدامی، ژنژیویت هیپرپلاستیک</td></tr>
+      <tr><td>هیپوتیروئیدی جوانی (Juvenile)</td><td>۶–۱۲ سالگی؛ بدون الگوی صورتی/بدنی مادرزادی؛ چاقی کمتر</td><td>افتادن و رویش تأخیری؛ مثال: بیمار ۱۴ سال با دندان‌های مشابه کودک ۹–۱۰ ساله</td></tr>
+      <tr><td>کم‌کاری هیپوفیز (Hypopituitarism / کوتولگی هیپوفیزی)</td><td>کاهش رشد استخوان/بافت نرم؛ کاملاً متناسب اما شبیه کودک کوچک‌تر؛ درجاتی از ناتوانی شناختی</td><td>اندازهٔ دندان طبیعی؛ رویش تأخیری؛ در موارد شدید شیری‌ها تحلیل نمی‌روند ← <strong>کشیدن شیری تجویز نمی‌شود</strong> (رویش دائمی قطعی نیست)</td></tr>
+      <tr><td>کوتولگی آکندروپلاستیک</td><td>در بدو تولد؛ غضروف استخوان دراز کلسیفیه نمی‌شود؛ سر بزرگ، تنه طبیعی؛ اتوزوم غالب؛ مرتبط با <strong>سن بالای پدر</strong></td><td>ماگزیلای کوچک ← کراودینگ و تمایل اپن‌بایت؛ ژنژیویت مزمن</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><span class="tag">مقایسهٔ سن پدر/مادر</span> سندرم داون با سن <strong>مادر</strong>؛ کوتولگی آکندروپلاستیک با سن <strong>پدر</strong> مرتبط است.</div>
+</section>
+
+<!-- ================= CHAPTER 11 ================= -->
+<section class="chapter" id="c11">
+  <div class="chnum">فصل ۱۱</div>
+  <h2>اختلالات خونریزی‌دهنده</h2>
+  <div class="src">دکتر فلاح · فصل ۴ نواک · فصل ۲۷ مک‌دونالد</div>
+
+  <div class="defbox"><b>مراحل هموستاز:</b> ۱) انقباض عروق ۲) هموستاز اولیه (کلاژن ECM + فاکتور von Willebrand + پلاکت + فیبرینوژن ← پلاگ پلاکتی) ۳) هموستاز ثانویه (cross-link فیبرین ← لختهٔ نامحلول) ۴) فیبرینولیز.</div>
+
+  <h3>هموفیلی A و B و بیماری von Willebrand</h3>
+  <div class="tbl-scroll"><table>
+    <caption>مقایسهٔ اختلالات انعقادی</caption>
+    <thead><tr><th>ویژگی</th><th>هموفیلی A</th><th>هموفیلی B</th><th>بیماری vWD</th></tr></thead>
+    <tbody>
+      <tr><td>نقص</td><td>فاکتور ۸</td><td>فاکتور ۹ (بیماری کریسمس)</td><td>فاکتور von Willebrand</td></tr>
+      <tr><td>هموستاز مختل</td><td>ثانویه</td><td>ثانویه</td><td>اولیه (پلاگ پلاکتی)</td></tr>
+      <tr><td>توارث</td><td>وابسته به X مغلوب (پسران)</td><td>وابسته به X مغلوب</td><td>نوع ۱و۲ اتوزوم غالب، نوع ۳ مغلوب</td></tr>
+      <tr><td>شیوع</td><td>شایع‌ترین ارثی انعقادی؛ شایع‌تر از B</td><td>کمتر</td><td>شایع‌ترین اختلال خونریزی‌دهندهٔ ارثی</td></tr>
+      <tr><td>تظاهر تیپیک</td><td>همارتروز (خونریزی مفصل/عضله)</td><td>—</td><td>خونریزی پوست/مخاط، بینی، قاعدگی سنگین</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl-scroll"><table>
+    <caption>طبقه‌بندی شدت هموفیلی A (درصد فاکتور ۸)</caption>
+    <thead><tr><th>شدت</th><th>درصد فاکتور ۸</th></tr></thead>
+    <tbody>
+      <tr><td>خفیف</td><td>۶ تا ۴۰٪</td></tr>
+      <tr><td>متوسط</td><td>۱ تا ۵٪</td></tr>
+      <tr><td>شدید</td><td>کمتر از ۱٪ (خونریزی خودبه‌خود)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note key"><span class="tag">علائم تشخیصی هموفیلی A</span> بیمار مذکر با خونریزی غیرطبیعی؛ شمارش پلاکت، زمان ترومبین و پروترومبین نرمال، اما <strong>aPTT طولانی</strong>. توارث: مرد سالم + مادر ناقل ← ۵۰٪ پسران بیمار، ۵۰٪ دختران ناقل؛ انتقال مرد به مرد وجود ندارد.</div>
+  <ul>
+    <li>مفصل زانو با پروفیلاکسی فاکتور ۸ باثبات‌تر؛ امروزه <strong>مچ پا</strong> اولین مفصل درگیر است. هماتوم داخل‌عضلانی ← فشار بر ساختار حیاتی، فلج عصب، انسداد راه هوایی.</li>
+    <li>درمان: تزریق منظم فاکتور ۸ در جراحی‌های بزرگ؛ کنسانترهٔ فاکتور پایهٔ درمان معاصر. <strong>وازوپرسین (دسموپرسین)</strong> سطح vWF را بالا می‌برد (موارد خفیف-متوسط)، اوج اثر ۲۰–۶۰ دقیقه، طول ۴ ساعت. ۱۵٪ هموفیلی شدید آنتی‌بادی علیه فاکتور ۸ می‌سازند.</li>
+    <li>آنتی‌فیبرینولیتیک: آمینوکاپروئیک اسید (هر ۶ ساعت، loading ۵۰–۱۰۰ mg/kg)، ترانگزامیک اسید (هر ۸ ساعت، حداکثر ۲۵ mg/kg).</li>
+  </ul>
+
+  <h3>ملاحظات درمان دندانپزشکی</h3>
+  <div class="tbl-scroll"><table>
+    <caption>راهبرد درمانی بر اساس نوع کار</caption>
+    <thead><tr><th>اقدام</th><th>ملاحظه</th></tr></thead>
+    <tbody>
+      <tr><td>جرم‌گیری بالای لثه</td><td>هموفیلی خفیف/متوسط: بدون پیش‌درمانی</td></tr>
+      <tr><td>جرم‌گیری زیر لثه</td><td>مشورت با هماتولوژیست؛ ابتدا جرم بالای لثه، ۷–۱۴ روز صبر، سپس زیرلثه با تزریق فاکتور ۱ ساعت قبل</td></tr>
+      <tr><td>بلاک IAN / PSA</td><td>در هموفیلی شدید تا تصحیح هموستاز ممنوع (خطر خونریزی عمیق و انسداد راه هوایی)؛ خفیف-متوسط نیاز به فاکتور ۱ ساعت قبل + اسپیره</td></tr>
+      <tr><td>بی‌حسی ایمن ترمیمی</td><td><strong>PDL</strong> ایمن‌ترین (بدون نیاز فاکتور)؛ داخل‌پالپی هم مشکلی ندارد؛ انفیلتراسیون با احتیاط</td></tr>
+      <tr><td>درمان پالپ</td><td>پالپوتومی/پالپکتومی بر کشیدن ارجح؛ اگر ترمیمی، IBT ارجح؛ اجتناب از پر کردن ورای اپکس</td></tr>
+      <tr><td>کشیدن چندریشه/دائمی</td><td>تزریق فاکتور ۱ ساعت قبل (۳۰–۴۰٪ تصحیح) + آنتی‌فیبرینولیتیک ۵–۱۰ روز</td></tr>
+      <tr><td>کشیدن تک‌ریشهٔ شیری</td><td>ریشه کامل ← فقط فاکتور؛ ریشه ناکامل ← آنتی‌فیبرینولیتیک + هموستاتیک موضعی</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note exam">⭐ <span class="tag">نکتهٔ امتحانی — افتادن دندان شیری (مک‌دونالد)</span> exfoliation نرمال (لق و افتادن): فقط فشار مستقیم انگشت/گاز چند دقیقه + مواد topical. اگر بعد از افتادن خونریزی آهسته و مداوم ← آنتی‌فیبرینولیتیک سیستمیک. اگر لثه حین افتادن مکرراً تروما ببیند ← تزریق فاکتور (در صورت عدم اجتناب، شیری ex شود).</div>
+  <ul>
+    <li><strong>کنترل درد:</strong> آسپرین و NSAID کنترااندیکاسیون (اثر بر پلاکت)؛ درد متوسط ← استامینوفن؛ شدید ← مخدر (استامینوفن‌کدئین، هیدروکدون، اکسی‌کدون). Celecoxib برای بزرگسالان.</li>
+    <li><strong>عوارض جراحی:</strong> ۳–۴ روز بعد با جذب لخته در فیبرینولیز خونریزی راجعه؛ نیاز به فاکتور + هموستاتیک موضعی + آنتی‌فیبرینولیتیک. <strong>Liver clot:</strong> لختهٔ غیرطبیعی بیرون‌زده؛ فاکتور ۱ ساعت قبل، خارج‌کردن لخته، شست‌وشو، پک مجدد، آنتی‌فیبرینولیتیک.</li>
+  </ul>
+</section>
+
+<!-- ================= CHAPTER 12 ================= -->
+<section class="chapter" id="c12">
+  <div class="chnum">فصل ۱۲</div>
+  <h2>آنمی سلول داسی‌شکل</h2>
+  <div class="src">دکتر فلاح</div>
+  <ul>
+    <li>شایع‌ترین اختلال خونی ارثی؛ گلبول قرمز داسی‌شکل و شکننده ← انسداد عروق و کم‌خونی.</li>
+    <li>هموگلوبین <strong>۶ تا ۹ g/dL</strong> (نرمال ۱۲–۱۸).</li>
+  </ul>
+  <div class="grid2">
+    <div class="card"><h4>علائم/عوارض</h4><p>درد استخوانی و احشایی، کم‌خونی (تخریب سلول داسی)، خطر عفونت (درگیری مغز استخوان)، سکته و آسیب اندام، کاهش عمر.</p></div>
+    <div class="card"><h4>عوارض دهانی-صورتی</h4><p>پوسیدگی، هیپومینرالیزاسیون، درد، نوروپاتی، تورم صورت، مال‌اکلوژن، نکروز پالپ. رادیوگرافی: رادیولوسنسی ژنرالیزه، از دست رفتن ترابکول با لامینادورای برجسته، افزایش فضای ترابکولار. رتروژن مندیبل، افزایش اورجت، دیاستم.</p></div>
+  </div>
+  <div class="note key"><span class="tag">مدیریت دندانپزشکی</span> برنامه‌ریزی دقیق؛ <strong>پیشگیری از بحران داسی</strong> (کنترل استرس، کم‌آبی، کمبود اکسیژن)؛ مشورت با پزشک؛ توجه به اختلال ایمنی، پروفیلاکسی آنتی‌بیوتیکی، بی‌حسی موضعی و بی‌هوشی عمومی. درمان قطعی: پیوند سلول بنیادی مغز استخوان. <strong>پالپوتومی بر کشیدن ارجح؛ پالپکتومی به‌شرط اطمینان از باقی‌ماندن دندان بدون عفونت.</strong></div>
+</section>
+
+<!-- ================= CHAPTER 13 ================= -->
+<section class="chapter" id="c13">
+  <div class="chnum">فصل ۱۳</div>
+  <h2>سرطان‌های کودکان و پیوند سلول بنیادی</h2>
+  <div class="src">دکتر فلاح</div>
+
+  <p>سرطان <strong>دومین علت مرگ کودکان ۵–۱۴ سال</strong> در آمریکاست. بیشترین بروز بدخیمی: سال اول زندگی؛ دومین اوج: ۲–۳ سالگی. شایع‌ترین: لوسمی حاد، تومور مغزی، تومور بافت نرم، تومور کلیه. <strong>بیماری موضعی ← رادیوتراپی؛ سیستمیک ← شیمی‌درمانی.</strong></p>
+
+  <h3>لوسمی لنفوئیدی حاد (ALL)</h3>
+  <p>شایع‌ترین سرطان کودکان (۸۰٪ لوسمی کودکی، ۵۶٪ در بلوغ)؛ اوج بروز ۴ سالگی. علائم: بی‌اشتهایی، تحریک‌پذیری، بی‌حالی، کم‌خونی، خونریزی پتشی، تب، لنفادنوپاتی، بزرگی طحال/کبد. سر و گردن: لنفادنوپاتی، گلودرد، خونریزی لثه، زخم دهانی.</p>
+  <div class="tbl-scroll"><table>
+    <caption>۴ فاز درمان ALL</caption>
+    <thead><tr><th>فاز</th><th>توضیح</th></tr></thead>
+    <tbody>
+      <tr><td>۱) القای فروکش</td><td>۲۸ روز؛ ۳–۴ داروی وریدی (تخریب لنفوبلاست‌ها)</td></tr>
+      <tr><td>۲) پروفیلاکسی CNS</td><td>رادیوتراپی جمجمه یا تزریق نخاعی (داروی وریدی از سد خونی-مغزی عبور نمی‌کند)؛ هفتگی</td></tr>
+      <tr><td>۳) تقویت/تشدید</td><td>از بین بردن هر سلول لوسمی باقی‌مانده</td></tr>
+      <tr><td>۴) نگهداری (maintenance)</td><td>۲٫۵–۳ سال؛ سرکوب رشد و تجویز مداوم دارو</td></tr>
+    </tbody>
+  </table></div>
+  <p>شمارش سلول خونی ۵–۷ روز پس از هر سیکل کاهش، ۲–۳ هفته پایین می‌ماند ← کودک مستعد عفونت.</p>
+
+  <h3>ملاحظات دندانپزشکی</h3>
+  <div class="tbl-scroll"><table>
+    <caption>تصمیم بر اساس پلاکت و ANC</caption>
+    <thead><tr><th>شاخص</th><th>محدوده</th><th>اقدام</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="2">پلاکت</td><td>۴۰٬۰۰۰–۷۵٬۰۰۰</td><td>تزریق پلاکت قبل و ۲۴ ساعت بعد</td></tr>
+      <tr><td>زیر ۴۰٬۰۰۰</td><td>تعویق اعمال دندانپزشکی</td></tr>
+      <tr><td rowspan="4">ANC (نوتروپنی)</td><td>>۱۵۰۰ (طبیعی)</td><td>همهٔ اقدامات بی‌خطر</td></tr>
+      <tr><td>۱۰۰۰–۱۵۰۰ (خفیف)</td><td>اقدامات انتخابی با احتیاط</td></tr>
+      <tr><td>۵۰۰–۱۰۰۰ (متوسط)</td><td>فقط اورژانس با هماهنگی پزشک</td></tr>
+      <tr><td>کمتر از ۵۰۰ (شدید)</td><td>فقط اورژانس در بیمارستان + آنتی‌بیوتیک وریدی وسیع‌الطیف</td></tr>
+    </tbody>
+  </table></div>
+  <p>اگر زمان محدود است (اولویت): درمان عفونت، خارج‌کردن دندان عفونی/hopeless، درمان پریودنتال. اگر زمان کافی: جرم‌گیری، بازسازی ترمیم معیوب، پالیش لبهٔ تیز، خارج‌کردن شیری با عفونت پالپی.</p>
+  <div class="note exam">⭐ <span class="tag">نکتهٔ امتحانی — درمان پالپ در لوسمی</span> در بیماران لوسمی، درمان پالپ (پالپوتومی/پالپکتومی) برای دندان شیری انجام <strong>نمی‌شود</strong> و به‌سمت aggressive و ex می‌رویم (سرکوب ایمنی ← شکست درمان ← درگیری کل بدن). در دندان دائمی غیرزندهٔ علامت‌دار: درمان ریشه حداقل ۱ هفته قبل از شروع درمان سرطان؛ اگر ممکن نبود ← کشیدن + آنتی‌بیوتیک ۱ هفته. دندان قبلاً اندوشده و سالم تهدید نیست.</div>
+
+  <h3>پیوند سلول بنیادی خون‌ساز (HSCT)</h3>
+  <div class="tbl-scroll"><table>
+    <caption>انواع پیوند بر اساس منبع</caption>
+    <thead><tr><th>منبع</th><th>نوع پیوند</th></tr></thead>
+    <tbody>
+      <tr><td>مغز استخوان خود بیمار</td><td>اتولوگ</td></tr>
+      <tr><td>دهندهٔ خویشاوند/غیرخویشاوند انسانی</td><td>آلوژنیک</td></tr>
+      <tr><td>دوقلوی همسان</td><td>سینوژنیک</td></tr>
+      <tr><td>گونهٔ متفاوت</td><td>زنوژنیک</td></tr>
+    </tbody>
+  </table></div>
+  <p>رژیم‌ها: <strong>Myeloablative</strong> (دوز بالای سمی) در برابر <strong>Non-myeloablative</strong> (سایتوپنی کمتر). دریافت پیوند معمولاً روز ۲۰–۳۰. دو تفاوت با درمان سرطان: ۱) دوره‌های استراحت با بازگشت شمارش وجود ندارد ۲) سرکوب ایمنی طولانی پس از پیوند (بازگشت ایمنی تا ۱ سال در صورت نبود GVHD مزمن). همهٔ کارهای دندانپزشکی قبل از بستری کامل شود.</p>
+
+  <h3>عوارض دهانی شیمی/رادیوتراپی</h3>
+  <div class="note key"><span class="tag">موکوزیت</span> شایع‌ترین علت درد دهانی در درمان سرطان و شایع‌ترین عارضهٔ HSCT. لایهٔ بازال قادر به جایگزینی سلول سطحی نیست ← التهاب ژنرالیزه. تغییرات ۴–۷ روز بعد، بهبود ۱۰–۱۴ روز. درمان: تسکینی + پیشگیری از عفونت/تروما (ضدقارچ موضعی، آنتی‌بیوتیک). موکوزیت مزمن شدید ← خطر تغییرات بدخیمی.</div>
+  <p><strong>ناهنجاری‌های دندانی/کرانیوفاسیال</strong> (هرچه کودک کوچک‌تر، به‌ویژه قبل ۶ سال، خطر بیشتر): آژنزی، توقف تکامل ریشه با ریشهٔ نازک و بسته‌شدن زودهنگام اپکس، تاج مخروطی/گلبولار، اپسیتی و نقص مینا/عاج، میکرودنشیا، پالپ‌چمبر بزرگ، تارودنتیسم، اکلوژن غیرطبیعی. رشد عمودی کندیل و ارتفاع آلوئولر نامطلوب.</p>
+  <p><strong>عفونت راجعهٔ HSV</strong> در نقص ایمنی بزرگ/پیش‌رونده/دائمی؛ تشخیص با تأخیر؛ در مناطق کراتینیزه و غیرکراتینیزه. پروفیلاکسی با آسیکلوویر؛ ضایعهٔ بهبودنیافته در ۷–۱۰ روز ← کشت/بیوپسی.</p>
+</section>
+
+<!-- ================= CHAPTER 14 ================= -->
+<section class="chapter" id="c14">
+  <div class="chnum">فصل ۱۴</div>
+  <h2>هپاتیت ویروسی و ایدز</h2>
+  <div class="src">دکتر فلاح</div>
+
+  <h3>هپاتیت ویروسی</h3>
+  <p>علائم بالینی مشترک هپاتیت حاد (A,B,C,E): زردی، بی‌حالی، بی‌اشتهایی، تهوع/استفراغ، درد شکم. در کودکان و نوزادان، <span class="en">HAV</span> اغلب خفیف و بدون زردی.</p>
+  <div class="tbl-scroll"><table>
+    <caption>مقایسهٔ انواع هپاتیت</caption>
+    <thead><tr><th>ویژگی</th><th>A و E</th><th>B (HBV)</th><th>C (HCV)</th></tr></thead>
+    <tbody>
+      <tr><td>انتقال اصلی</td><td>مدفوعی-دهانی (آب/غذای آلوده)</td><td>خونی-تماسی و جنسی</td><td>تماس خونی (سرنگ مشترک)</td></tr>
+      <tr><td>خطر در دندانپزشکی</td><td>کم (با بهداشت دست)</td><td>بسیار بالا (مقاومت ویروس)</td><td>متوسط (نیاز به تماس خونی مستقیم)</td></tr>
+      <tr><td>عفونت مزمن</td><td>خیر</td><td>بله (درصدی)</td><td>بله (۷۰–۸۵٪)</td></tr>
+      <tr><td>واکسن مؤثر</td><td>بله (HAV)</td><td>بله (بسیار مؤثر)</td><td>خیر</td></tr>
+      <tr><td>ناقل بدون علامت</td><td>نادر</td><td>شایع</td><td>بسیار شایع</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl-scroll"><table>
+    <caption>مارکرهای هپاتیت B</caption>
+    <thead><tr><th>مارکر</th><th>معنی</th></tr></thead>
+    <tbody>
+      <tr><td>HBsAg</td><td>عفونت فعال (حاد/مزمن)؛ قابلیت انتقال؛ مثبت = فرد عفونی</td></tr>
+      <tr><td>anti-HBs</td><td>ایمنی (پس از واکسن موفق یا بهبود)؛ مثبت = محافظت‌شده</td></tr>
+      <tr><td>HBeAg</td><td>تکثیر فعال و شدید، عفونت‌زایی بسیار بالا</td></tr>
+      <tr><td>anti-HBe</td><td>کاهش تکثیر و عفونت‌زایی نسبی</td></tr>
+      <tr><td>anti-HBc (Total)</td><td>تماس گذشته/حال؛ در حاد، مزمن و بهبودیافته مثبت</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>ایدز (HIV)</h3>
+  <p>HIV به لنفوسیت T کمکی (CD4+) و ماکروفاژ حمله می‌کند (از طریق گیرندهٔ CD4 و هم‌گیرنده CCR5 + پروتئین gp120). دورهٔ نهفتگی تا یک دهه. تظاهرات اولیه: کاهش وزن، عدم رشد، بزرگی کبد/طحال، لنفادنوپاتی ژنرالیزه، اسهال مزمن. برخلاف بزرگسالان، عفونت باکتریایی شدید راجعه به‌ویژه <span class="en">Pneumocystis jirovecii</span> در کودکان شایع است.</p>
+  <div class="tbl-scroll"><table>
+    <caption>تظاهرات دهانی ایدز</caption>
+    <thead><tr><th>دسته</th><th>نمونه و عامل</th></tr></thead>
+    <tbody>
+      <tr><td>قارچی (شایع‌ترین)</td><td>Candida albicans: کاندیدیازیس غشای کاذب (برفک)، هیپرپلاستیک، آتروفیک (اریتماتو)، انگولار کیلایتیس. کاندیدیازیس مزمن = پیش‌آگهی ضعیف</td></tr>
+      <tr><td>ویروسی</td><td>زگیل دهانی (HPV)؛ هرپس (HSV) با ظاهر slit-like روی زبان؛ لکوپلاکیای مودار دهان (OHL) — فقط در HIV، عامل EBV، کنارهٔ جانبی زبان</td></tr>
+      <tr><td>باکتریایی/پریو</td><td>پریودنتیت پیش‌رونده زودهنگام؛ اریتم خطی لثه (LGE)، پریودنتیت زخمی نکروزدهنده (NUP)</td></tr>
+      <tr><td>بدخیم</td><td>سارکوم کاپوسی (شایع‌ترین، HHV-8، کام سخت)؛ لنفوم غیرهوچکین (دومین، اغلب B-cell)</td></tr>
+      <tr><td>ایدیوپاتیک</td><td>زخم آفتی غیرمعمول بزرگ، تورم غدد بزاقی (پاروتید + خشکی دهان)، پورپورای ترومبوسایتوپنیک</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ================= CHAPTER 15 ================= -->
+<section class="chapter" id="c15">
+  <div class="chnum">فصل ۱۵</div>
+  <h2>دندانپزشکی کودکان با نیازهای خاص</h2>
+  <div class="src">دکتر حیدری · اوتیسم، فلج مغزی، داون، قلبی/تنفسی، نابینایی/ناشنوایی</div>
+
+  <h3>چالش‌ها و اصول کلی</h3>
+  <ul>
+    <li>کمبود نیروی متخصص و آگاه؛ مطب باید با ورود صندلی چرخدار، ارتفاع قابل‌تنظیم و ساکشن هماهنگ باشد.</li>
+    <li>ریسک بسیار بالای بیماری دهان؛ نیاز به هماهنگی بین‌رشته‌ای و مشاوره با پزشک معالج قبل از هر اقدام.</li>
+    <li>برقراری <strong>رابطهٔ درمانی پایدار (Dental Home)</strong>؛ جلسهٔ اول، سنگ‌بنای رابطه با والدین.</li>
+    <li>تاریخچهٔ پزشکی/دندانپزشکی کامل؛ هرگز بر اساس فرض عمل نشود (داروها، آلرژی، سیر بیماری).</li>
+  </ul>
+  <div class="note key"><span class="tag">اصل طلایی</span> در این کودکان، <strong>پیشگیری از درمان مهم‌تر است</strong> و به ضرورت مطلق تبدیل می‌شود. ارزیابی ریسک پوسیدگی ← طرح پیشگیری اختصاصی + مشارکت فعال والدین (≈ <strong>۹۰٪ بهداشت بر عهدهٔ والدین</strong>).</div>
+
+  <h3>چالش رادیوگرافی و معاینه</h3>
+  <p>در کودک CP که نمی‌تواند دهان را باز/ثابت نگه دارد، توالی روش‌ها: مدیریت رفتاری ← ثابت‌سازی (والدین/پرسنل/وسایل مثل پاپوزبرد) ← آرام‌بخشی/بیهوشی عمومی. توصیهٔ آکادمیک: اگر کودک قرار است در جلسهٔ بعد تحت بیهوشی/آرام‌بخشی درمان شود، <strong>همهٔ رادیوگرافی‌ها در همان جلسهٔ بیهوشی</strong> تهیه شود.</p>
+
+  <h3>بهداشت، مسواک و رژیم</h3>
+  <div class="tbl-scroll"><table>
+    <caption>توصیه‌های بهداشتی</caption>
+    <thead><tr><th>مورد</th><th>توصیه</th></tr></thead>
+    <tbody>
+      <tr><td>مسواک</td><td>نایلونی نرم multitufted؛ دستهٔ ارگونومیک ضخیم؛ مسواک برقی (جذاب + حساسیت‌زدایی)؛ تجاری با ساکشن داخلی برای بزاق زیاد/خطر آسپیراسیون</td></tr>
+      <tr><td>روش</td><td><strong>اسکراب افقی</strong> (ساده، سریع، نتایج خوب در برداشت پلاک)</td></tr>
+      <tr><td>باز نگه‌داشتن دهان</td><td>آبسلانگ پوشیده با اسفنج، عمودی بین مولرها</td></tr>
+      <tr><td>نخ دندان</td><td>روزانه (حتی با عدم همکاری)</td></tr>
+      <tr><td>شیشهٔ شیر</td><td>قطع تا ۱۲ ماهگی؛ بعد از رویش دندان‌ها مصرف دلخواه شیرمادر متوقف</td></tr>
+      <tr><td>داروهای قندی</td><td>شربت/سوسپانسیون پرقند ← شست‌وشوی دهان/مسواک بعد از مصرف</td></tr>
+    </tbody>
+  </table></div>
+  <p>CP اغلب دیسفاژی دارد ← غذای پورهٔ نرم با تماس طولانی با دندان ← پوسیدگی بیشتر. بیماری‌های متابولیک/سندرمی (PKU، دیابت، پرادر-ویلی) ← محدودیت غذایی. رژیم پیشگیرانهٔ زودهنگام با مشورت متخصص تغذیه.</p>
+
+  <h3>فلوراید و سیلنت</h3>
+  <div class="note key"><span class="tag">قاعدهٔ طلایی فلوراید</span> ابتدا فلوراید سیستمیک دریافتی (آب/مکمل) تعیین شود. به‌دلیل ریسک بالا، <strong>چه آب فلورایده باشد چه نباشد، حتماً فلوراید موضعی استفاده می‌شود</strong> (وارنیش سدیم‌فلوراید نیم‌درصد خنثی بعد از پروفیلاکسی منظم). خمیردندان فلورایددار روزانه؛ در بهداشت ضعیف مزمن و پوسیدگی بالا ← دهان‌شویهٔ سدیم‌فلوراید ۰٫۰۵٪ خنثی؛ شب‌ها ژل استانوس‌فلوراید/APF.</div>
+  <p><strong>سیلنت پیت و فیشور:</strong> در >۹۰٪ موارد مانع پوسیدگی اکلوزال. در بیمار تحت بیهوشی عمومی با فیشور عمیق، گاهی به‌جای سیلنت رزینی از <strong>گلس‌آینومر</strong> (چسبندگی شیمیایی + آزادسازی فلوراید + دوام بیشتر) یا کامپوزیت استفاده می‌شود تا درمان قطعی‌تر باشد. در براکسیسم شدید و پوسیدگی بین‌دندانی ← SSC.</p>
+  <p><strong>نظارت:</strong> در کودکان عادی سالی ۲ بار کافی است، اما در این کودکان بسته به ریسک ممکن است هر ۳، ۲، ۱ ماه یا حتی ۲ هفته یک‌بار. ارجاع به موقع به متخصص مربوطه.</p>
+
+  <h3>ثابت‌سازی حفاظتی (Protective Stabilization)</h3>
+  <p>راهی مؤثر برای تشخیص و کارهای کوتاه‌مدت؛ توسط والدین، پرسنل یا وسیلهٔ خاص. برای کودک غیرهمکار به‌دلیل سن/معلولیت که فوراً نیاز به تشخیص یا درمان محدود دارد، یا حفاظت از آسیب کودک/پرسنل.</p>
+  <div class="tbl-scroll"><table>
+    <caption>اندیکاسیون و کنترااندیکاسیون</caption>
+    <thead><tr><th>اندیکاسیون</th><th>کنترااندیکاسیون</th></tr></thead>
+    <tbody>
+      <tr><td>کودک غیرهمکار (سن کم/معلولیت) نیازمند درمان فوری محدود</td><td>بیمار همکار</td></tr>
+      <tr><td>بیمار نیازمند درمان که با سایر روش‌ها همکاری نمی‌کند</td><td>شرایط پزشکی/جسمانی محدودکننده (آسم، نارسایی تنفسی)</td></tr>
+      <tr><td>در خطر بودن ایمنی کودک/پرسنل بدون ثابت‌سازی</td><td>سابقهٔ تروما فیزیکی/روانی از ثابت‌سازی قبلی</td></tr>
+      <tr><td>حین درمان، حرکت ناگهانی شدید (خطر آسیب با ابزار تیز)</td><td>نیاز به جلسات طولانی غیراورژانس که آرام‌بخشی ممکن است</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note warn"><span class="tag">۷ اصل اخلاقی ثابت‌سازی</span> ۱) نباید تنبیه تلقی شود (اصطلاح مثبت: «کمربند ایمنی») ۲) فقط با نیاز واقعی ۳) رضایت‌نامهٔ آگاهانهٔ کتبی ضروری ۴) نظارت مداوم (تنفس، رنگ مخاط) ۵) جدی‌گرفتن آسیب روانی (شب‌ادراری، کابوس، ترس) ۶) خطر اختلال تنفسی (پایش با پالس‌اکسیمتر) ۷) <strong>اگر بیش از ۱–۲ دندان نیاز به درمان دارد، از ابتدا بیهوشی عمومی</strong>، نه ثابت‌سازی.</div>
+
+  <h3>وسایل ثابت‌سازی</h3>
+  <div class="tbl-scroll"><table class="compact">
+    <caption>دهان‌بازکن‌ها و وسایل ثابت‌سازی تنه</caption>
+    <thead><tr><th>وسیله</th><th>کاربرد/مزیت</th><th>عیب</th></tr></thead>
+    <tbody>
+      <tr><td>آبسلانگ پوشیده / Bite Block</td><td>ساده، ارزان، یک‌بارمصرف، آسیب حداقل</td><td>—</td></tr>
+      <tr><td>Molt Mouth Prop (قیچی معکوس)</td><td>باز نگه‌داشتن طولانی؛ دو سایز بالغ/کودک</td><td>زخم کام/لب؛ مخاطرهٔ راه هوایی با باز شدن بیش‌ازحد؛ لق‌شدن دندان</td></tr>
+      <tr><td>Papoose Board</td><td>سایزهای متعدد، قابل‌استفادهٔ مجدد، ثابت‌کنندهٔ سر متصل</td><td>نظارت تنفس دشوار با آرام‌بخشی؛ ریسک هایپرترمی/تحریک پوست</td></tr>
+      <tr><td>Triangular sheet</td><td>کنترل بیمار مقاوم؛ نشستن عمودی برای رادیوگرافی</td><td>سرخوردن بیمار ← مخاطرهٔ راه هوایی؛ دشوار برای کوچک‌ها</td></tr>
+      <tr><td>Pedi-Wrap</td><td>اجازهٔ حرکت؛ پارچهٔ شبکه‌ای ← تهویه بهتر، کاهش هایپرترمی</td><td>—</td></tr>
+      <tr><td>Beanbag chair insert</td><td>برای نیاز به حمایت بیشتر/ثابت‌سازی کمتر (CP هیپوتونیک/اسپاستیک)؛ قابل‌شست‌وشو</td><td>یک سایز برای همه</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><span class="tag">CP — نکات تکمیلی</span> حرکات غیرارادی <span class="en">Athetoid</span>؛ ترشح بزاق زیاد (<span class="en">Drooling/Sialorrhea</span>) ← خطر آسپیراسیون؛ رفلکس گگ شدید ← گاهی کارهای بیداری غیرممکن. در نوزادان CP، بی‌حس‌کنندهٔ سطحی با احتیاط (جذب سریع).</div>
+</section>
+
+<section class="chapter" id="exam">
+  <div class="exam-head">
+    <h2>★ آزمون جامع ۱۰۰ سؤالی</h2>
+    <p>روی گزینه‌ها بزنید؛ پاسخ صحیح سبز و توضیح آن بلافاصله نمایش داده می‌شود. امتیاز شما بالای صفحه به‌روز می‌شود.</p>
+  </div>
+  <div class="quiz-bar">
+    <button class="btn-primary" onclick="_resetQuiz()">شروع دوباره</button>
+    <button class="btn-ghost" onclick="_revealAll()">نمایش همهٔ پاسخ‌ها</button>
+    <span id="score">پاسخ‌داده: ۰/۱۰۰ — درست: ۰</span>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱</span>مهم‌ترین فاکتور مؤثر بر ساخت دنتین ثالثیه کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q1"><span>نوع ماده ترمیمی</span></label></li>
+      <li><label><input type="radio" name="q1"><span>ضخامت عاج باقی‌مانده (RDT)</span></label></li>
+      <li><label><input type="radio" name="q1"><span>روش کاربرد ماده</span></label></li>
+      <li><label><input type="radio" name="q1"><span>سن بیمار</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> RDT مهم‌ترین فاکتور است؛ بیشترین ساخت دنتین واکنشی در RDT بین ۰٫۲۵–۰٫۵ mm رخ می‌دهد.</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۲</span>بهترین ماده برای پالپ کپینگ مستقیم (DPC) کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q2"><span>گلس‌آینومر</span></label></li>
+      <li><label><input type="radio" name="q2"><span>کلسیم‌هیدروکساید</span></label></li>
+      <li><label><input type="radio" name="q2"><span>MTA به ضخامت ۱٫۵–۲ mm</span></label></li>
+      <li><label><input type="radio" name="q2"><span>زینک‌اکساید-اوژنول</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> MTA ایده‌آل‌ترین ماده است (تحریک و میکرولیکیج کمتر)؛ به ضخامت ۱٫۵–۲ mm.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳</span>اپکس دندان دائمی معمولاً چند سال پس از رویش به داخل دهان بسته می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q3"><span>۱ تا ۲ سال</span></label></li>
+      <li><label><input type="radio" name="q3"><span>۳ تا ۴ سال</span></label></li>
+      <li><label><input type="radio" name="q3"><span>۵ تا ۶ سال</span></label></li>
+      <li><label><input type="radio" name="q3"><span>بلافاصله</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> اپکس معمولاً ۳ تا ۴ سال پس از رویش بسته می‌شود.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۴</span>در روش Long-term apexification شایع‌ترین عارضه کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q4"><span>نکروز پالپ</span></label></li>
+      <li><label><input type="radio" name="q4"><span>Cervical Root Fracture</span></label></li>
+      <li><label><input type="radio" name="q4"><span>تحلیل خارجی ریشه</span></label></li>
+      <li><label><input type="radio" name="q4"><span>عفونت سینوس</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> کلسیم‌هیدروکساید دنتین را تضعیف می‌کند ← شکستگی سرویکال ریشه.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵</span>داروهای Triple Antibiotic در روش Revascularization شامل کدام‌اند؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q5"><span>پنی‌سیلین+مترونیدازول+کلیندامایسین</span></label></li>
+      <li><label><input type="radio" name="q5"><span>سیپروفلوکساسین+ماینوسایکلین+مترونیدازول</span></label></li>
+      <li><label><input type="radio" name="q5"><span>آموکسی‌سیلین+ماینوسایکلین+مترونیدازول</span></label></li>
+      <li><label><input type="radio" name="q5"><span>آزیترومایسین+سیپروفلوکساسین+مترونیدازول</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> ترکیب کلاسیک: سیپروفلوکساسین + ماینوسایکلین + مترونیدازول.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶</span>بهترین رادیوگرافی برای ارزیابی اولیه دندان دائمی جوان نیازمند پالپ‌تراپی کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q6"><span>PA</span></label></li>
+      <li><label><input type="radio" name="q6"><span>BW (بایت‌وینگ)</span></label></li>
+      <li><label><input type="radio" name="q6"><span>پانورامیک</span></label></li>
+      <li><label><input type="radio" name="q6"><span>اکلوزال</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> BW عمق پوسیدگی، مورفولوژی چمبر و پل کلسیفیه را به‌خوبی نشان می‌دهد.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۷</span>در دندان دائمی جوان کدام تست وایتالیتی reliable تر است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q7"><span>تست گرما</span></label></li>
+      <li><label><input type="radio" name="q7"><span>تست سرما</span></label></li>
+      <li><label><input type="radio" name="q7"><span>EPT</span></label></li>
+      <li><label><input type="radio" name="q7"><span>تست دق</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> تست سرما نسبت به گرما در دندان دائمی جوان قابل‌اعتمادتر است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸</span>درمان IPT با کدام نام دیگر شناخته می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q8"><span>selective caries removal to firm dentin</span></label></li>
+      <li><label><input type="radio" name="q8"><span>selective caries removal to soft dentin</span></label></li>
+      <li><label><input type="radio" name="q8"><span>complete caries removal</span></label></li>
+      <li><label><input type="radio" name="q8"><span>stepwise excavation کامل</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> IPT = selective caries removal to soft dentin؛ یک لایه نازک دنتین سافت روی پالپ باقی می‌ماند.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹</span>شایع‌ترین فرم بیماری پریودنتال در کودکان کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q9"><span>پریودنتیت مهاجم</span></label></li>
+      <li><label><input type="radio" name="q9"><span>ژنژیویت مارژینال</span></label></li>
+      <li><label><input type="radio" name="q9"><span>ANUG</span></label></li>
+      <li><label><input type="radio" name="q9"><span>فیبروماتوزیس</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> ژنژیویت مارژینال شایع‌ترین فرم است که از اوایل کودکی شروع می‌شود.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۰</span>عامل ژنژیواستوماتیت حاد هرپسی کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q10"><span>HSV-2</span></label></li>
+      <li><label><input type="radio" name="q10"><span>HSV-1</span></label></li>
+      <li><label><input type="radio" name="q10"><span>EBV</span></label></li>
+      <li><label><input type="radio" name="q10"><span>CMV</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> عامل HSV-1 است؛ معمولاً در کودکان زیر ۶ سال.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۱</span>کدام اسیدآمینه باعث افزایش عود هرپس می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q11"><span>لیزین</span></label></li>
+      <li><label><input type="radio" name="q11"><span>آرژنین</span></label></li>
+      <li><label><input type="radio" name="q11"><span>گلایسین</span></label></li>
+      <li><label><input type="radio" name="q11"><span>متیونین</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> آرژنین (غلات، آجیل، شکلات) عود را بدتر و لیزین بهبود را تسریع می‌کند.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۲</span>درمان کاندیدیازیس حاد (برفک) در کودکان چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q12"><span>آسیکلوویر موضعی</span></label></li>
+      <li><label><input type="radio" name="q12"><span>نیستاتین ۱۰۰٬۰۰۰ واحد موضعی ۴ بار/روز</span></label></li>
+      <li><label><input type="radio" name="q12"><span>کلرهگزیدین</span></label></li>
+      <li><label><input type="radio" name="q12"><span>فلوکونازول وریدی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> سوسپانسیون نیستاتین ۱۰۰٬۰۰۰ واحد موضعی، ۴ بار در روز.</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۱۳</span>PIGO (رشد بیش از حد لثه با فنی‌توئین) با کدام مورد ارتباط ندارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q13"><span>دوز دارو</span></label></li>
+      <li><label><input type="radio" name="q13"><span>رعایت بهداشت دهان</span></label></li>
+      <li><label><input type="radio" name="q13"><span>سن بیمار</span></label></li>
+      <li><label><input type="radio" name="q13"><span>تجمع پلاک</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> PIGO با دوز و بهداشت ارتباط دارد اما با سن بیمار ارتباطی ندارد.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۴</span>درمان ژنژیویت ناشی از کمبود ویتامین C در کودکان چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q14"><span>۱ گرم ویتامین C روزانه ۲ هفته</span></label></li>
+      <li><label><input type="radio" name="q14"><span>۲۵۰–۵۰۰ mg ویتامین C روزانه ۲ هفته</span></label></li>
+      <li><label><input type="radio" name="q14"><span>آنتی‌بیوتیک</span></label></li>
+      <li><label><input type="radio" name="q14"><span>کورتیکواستروئید خوراکی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> کودکان: ۲۵۰–۵۰۰ mg روزانه ۲ هفته؛ بزرگ‌ترها: ۱ گرم.</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۱۵</span>از دست رفتن چند میلی‌متر استخوان به‌عنوان از دست رفتن قطعی محسوب می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q15"><span>بیش از ۱ mm</span></label></li>
+      <li><label><input type="radio" name="q15"><span>بیش از ۲ mm</span></label></li>
+      <li><label><input type="radio" name="q15"><span>بیش از ۳ mm</span></label></li>
+      <li><label><input type="radio" name="q15"><span>بیش از ۵ mm</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> بیش از ۳ mm از دست رفتن استخوان = از دست رفتن قطعی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۶</span>باکتری دخیل در LAP (پریودنتیت مهاجم موضعی) عمدتاً کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q16"><span>P. gingivalis</span></label></li>
+      <li><label><input type="radio" name="q16"><span>Aa (Aggregatibacter)</span></label></li>
+      <li><label><input type="radio" name="q16"><span>Prevotella</span></label></li>
+      <li><label><input type="radio" name="q16"><span>Streptococcus</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> LAP عمدتاً با Aa یا Aa + Pg مرتبط است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۷</span>رژیم آنتی‌بیوتیکی ترکیبی پریودنتیت مهاجم کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q17"><span>پنی‌سیلین + مترونیدازول</span></label></li>
+      <li><label><input type="radio" name="q17"><span>آموکسی‌سیلین + مترونیدازول</span></label></li>
+      <li><label><input type="radio" name="q17"><span>کلیندامایسین + آزیترومایسین</span></label></li>
+      <li><label><input type="radio" name="q17"><span>سفالکسین + مترونیدازول</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> آموکسی‌سیلین + مترونیدازول ۱–۲ هفته (Aa حذف، Pg سرکوب).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۸</span>سندرم پاپیلون‌لفور چه نوع توارثی دارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q18"><span>اتوزوم غالب</span></label></li>
+      <li><label><input type="radio" name="q18"><span>اتوزوم مغلوب</span></label></li>
+      <li><label><input type="radio" name="q18"><span>وابسته به X غالب</span></label></li>
+      <li><label><input type="radio" name="q18"><span>وابسته به X مغلوب</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> اتوزوم مغلوب، بدون برتری نژاد/جنس؛ هایپرکراتوز کف دست و پا.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۹</span>استین سبز روی دندان کودکان عمدتاً ناشی از چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q19"><span>اکتینومایسز</span></label></li>
+      <li><label><input type="radio" name="q19"><span>باکتری کروموژنیک روی کوتیکول مینایی</span></label></li>
+      <li><label><input type="radio" name="q19"><span>رسوب آهن</span></label></li>
+      <li><label><input type="radio" name="q19"><span>کلرهگزیدین</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> استین سبز از باکتری کروموژنیک (پنی‌سیلیوم/آسپرژیلوس) روی کوتیکول مینایی؛ مینای زیرش خشن.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۰</span>استین سیاه با کدام ارگانیسم مرتبط است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q20"><span>کاندیدا</span></label></li>
+      <li><label><input type="radio" name="q20"><span>اکتینومایسز</span></label></li>
+      <li><label><input type="radio" name="q20"><span>استرپتوکوک</span></label></li>
+      <li><label><input type="radio" name="q20"><span>لاکتوباسیل</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> استین سیاه با اکتینومایسز؛ افراد عاری از پوسیدگی با بهداشت عالی، در زنان بیشتر.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۱</span>در نبود فاکتور موضعی، از دست رفتن زودرس استخوان دندان شیری نشانهٔ چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q21"><span>رویش طبیعی</span></label></li>
+      <li><label><input type="radio" name="q21"><span>بیماری سیستمیک</span></label></li>
+      <li><label><input type="radio" name="q21"><span>ترومای خفیف</span></label></li>
+      <li><label><input type="radio" name="q21"><span>استین خارجی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> در نبود فاکتور موضعی ← بیماری سیستمیک (هیپوفسفاتازیا، پاپیلون‌لفور، LAD، نوتروپنی، لوسمی...).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۲</span>چرا عفونت دندانی در کودکان سریع‌تر در استخوان پخش می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q22"><span>استخوان متراکم‌تر</span></label></li>
+      <li><label><input type="radio" name="q22"><span>فضای استخوانی وسیع‌تر</span></label></li>
+      <li><label><input type="radio" name="q22"><span>ایمنی قوی‌تر</span></label></li>
+      <li><label><input type="radio" name="q22"><span>ریشه‌های بلندتر</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> وجود فضای استخوانی وسیع‌تر در کودکان باعث پخش سریع‌تر می‌شود.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۳</span>آنژین لودویگ درگیری همزمان کدام فضاها است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q23"><span>باکال + کانین + تمپورال</span></label></li>
+      <li><label><input type="radio" name="q23"><span>ساب‌مندیبولار + ساب‌لینگوال + ساب‌منتال</span></label></li>
+      <li><label><input type="radio" name="q23"><span>پاروتید + ماستر + پتریگوئید</span></label></li>
+      <li><label><input type="radio" name="q23"><span>رتروفارنژیال تنها</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> آنژین لودویگ = درگیری ساب‌مندیبولار + ساب‌لینگوال + ساب‌منتال ← انسداد راه هوایی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۴</span>در آبسهٔ حاد چرا بی‌حسی دشوار است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q24"><span>خونریزی زیاد</span></label></li>
+      <li><label><input type="radio" name="q24"><span>تزریق در بافت ملتهب/عفونی غیرمؤثر است</span></label></li>
+      <li><label><input type="radio" name="q24"><span>کمبود محلول</span></label></li>
+      <li><label><input type="radio" name="q24"><span>ترس کودک</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> تزریق محلول در بافت ملتهب/عفونی ناخوشایند و غیرمؤثر است؛ گاهی نیاز به بیهوشی عمومی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۵</span>آبسه در دندان شیری در مقایسه با دائمی چگونه است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q25"><span>محدودتر و کپسوله</span></label></li>
+      <li><label><input type="radio" name="q25"><span>منتشرتر</span></label></li>
+      <li><label><input type="radio" name="q25"><span>بدون علامت</span></label></li>
+      <li><label><input type="radio" name="q25"><span>فقط مزمن</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> آبسهٔ شیری منتشرتر است چون بافت اطراف کمتر قادر به محصورسازی است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۶</span>درمان سرپایی آبسه/عفونت دندانی در کودک با آلرژی به پنی‌سیلین چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q26"><span>سفالکسین</span></label></li>
+      <li><label><input type="radio" name="q26"><span>کلیندامایسین یا آزیترومایسین</span></label></li>
+      <li><label><input type="radio" name="q26"><span>مترونیدازول تنها</span></label></li>
+      <li><label><input type="radio" name="q26"><span>تتراسایکلین</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> در آلرژی به پنی‌سیلین، کلیندامایسین یا آزیترومایسین تجویز می‌شود.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۷</span>مبنای اصلی درمان آبسهٔ دنتوآلوئولار چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q27"><span>فقط آنتی‌بیوتیک</span></label></li>
+      <li><label><input type="radio" name="q27"><span>حذف علت (پالپ نکروز) و درناژ</span></label></li>
+      <li><label><input type="radio" name="q27"><span>فقط مسکن</span></label></li>
+      <li><label><input type="radio" name="q27"><span>فقط دهان‌شویه</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> مبنای درمان: حذف علت عفونت (پالپ نکروز) از طریق درناژ، اندو یا کشیدن.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۸</span>سلولیت در کودکان عمدتاً به‌دلیل چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q28"><span>تروما</span></label></li>
+      <li><label><input type="radio" name="q28"><span>نکروز پالپ</span></label></li>
+      <li><label><input type="radio" name="q28"><span>آلرژی</span></label></li>
+      <li><label><input type="radio" name="q28"><span>کمبود ویتامین</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> سلولیت عفونت منتشر بافت نرم به‌دلیل نکروز پالپ است (در شیری شایع‌تر).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۲۹</span>کاربرد فورسپس cow horn مندیبل برای دندان شیری چرا کنترااندیکاسیون دارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q29"><span>شکستن تاج</span></label></li>
+      <li><label><input type="radio" name="q29"><span>آسیب به پره‌مولر در حال تکامل</span></label></li>
+      <li><label><input type="radio" name="q29"><span>عدم گیر</span></label></li>
+      <li><label><input type="radio" name="q29"><span>درد بیشتر</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> احتمال آسیب به پره‌مولرهای در حال تکامل وجود دارد.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳۰</span>برای جلوگیری از آسپیراسیون، زاویهٔ فک بالا با کف اتاق نباید بیش از چند درجه باشد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q30"><span>۳۰ درجه</span></label></li>
+      <li><label><input type="radio" name="q30"><span>۴۵ درجه</span></label></li>
+      <li><label><input type="radio" name="q30"><span>۶۰ درجه</span></label></li>
+      <li><label><input type="radio" name="q30"><span>۹۰ درجه</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> زاویه نباید بیش از ۴۵ درجه باشد؛ در غیر این صورت گاز در خلف دهان قرار گیرد.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳۱</span>قانون کلی برای ریشهٔ شکستهٔ شیری کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q31"><span>همیشه خارج شود</span></label></li>
+      <li><label><input type="radio" name="q31"><span>ریشهٔ ≥ ۱/۳ خارج، &lt; ۱/۳ رها</span></label></li>
+      <li><label><input type="radio" name="q31"><span>همیشه رها شود</span></label></li>
+      <li><label><input type="radio" name="q31"><span>با لیزر برداشته شود</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> ریشهٔ ≥ ۱/۳ باید خارج شود؛ &lt; ۱/۳ ممکن است رها شود تا به جانشین آسیب نرسد.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳۲</span>اولین حرکت فورسپس در کشیدن مولر ماگزیلا به کدام سمت است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q32"><span>باکال</span></label></li>
+      <li><label><input type="radio" name="q32"><span>پالاتال</span></label></li>
+      <li><label><input type="radio" name="q32"><span>مزیال</span></label></li>
+      <li><label><input type="radio" name="q32"><span>دیستال</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> اول پالاتال، سپس حرکات باکال-پالاتال؛ خروج اکلوزوباکال.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳۳</span>بی‌حسی کافی برای کشیدن مولر مندیبل چگونه حاصل می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q33"><span>فقط انفیلتراسیون</span></label></li>
+      <li><label><input type="radio" name="q33"><span>بلاک آلوئولار تحتانی (± لانگ‌باکال)</span></label></li>
+      <li><label><input type="radio" name="q33"><span>فقط پالاتال</span></label></li>
+      <li><label><input type="radio" name="q33"><span>داخل‌پالپی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> انفیلتراسیون به‌تنهایی کافی نیست؛ بلاک IAN لازم است.</div>
+  </div>
+  <div class="q" data-ans="0">
+    <div class="qn"><span class="num">۳۴</span>کاربرد تهاجمی کورت در حفرهٔ دندان شیری چرا ممنوع است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q34"><span>آسیب به جوانهٔ دندان دائمی</span></label></li>
+      <li><label><input type="radio" name="q34"><span>خونریزی</span></label></li>
+      <li><label><input type="radio" name="q34"><span>عفونت</span></label></li>
+      <li><label><input type="radio" name="q34"><span>شکستن کورت</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> احتمال آسیب به جوانهٔ دندان دائمی جایگزین.</div>
+  </div>
+  <div class="q" data-ans="3">
+    <div class="qn"><span class="num">۳۵</span>چرا دندانپزشکان فورسپس کوچک‌تر برای کودکان ترجیح می‌دهند؟ (نادرست را بیابید)</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q35"><span>قرارگیری راحت‌تر در دهان کوچک</span></label></li>
+      <li><label><input type="radio" name="q35"><span>پنهان‌شدن راحت‌تر در دست</span></label></li>
+      <li><label><input type="radio" name="q35"><span>انطباق دقیق‌تر با آناتومی شیری</span></label></li>
+      <li><label><input type="radio" name="q35"><span>افزایش نیروی وارده</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> افزایش نیرو دلیل نیست؛ سه مورد دیگر صحیح است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳۶</span>SSC اولین بار توسط چه کسی و در چه سالی معرفی شد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q36"><span>Randall، ۱۹۶۰</span></label></li>
+      <li><label><input type="radio" name="q36"><span>Humphrey، ۱۹۵۰</span></label></li>
+      <li><label><input type="radio" name="q36"><span>Seale، ۱۹۷۰</span></label></li>
+      <li><label><input type="radio" name="q36"><span>Frankl، ۱۹۴۵</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> Humphrey در سال ۱۹۵۰ SSC را به دندانپزشکی کودکان معرفی کرد.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳۷</span>کدام مورد اندیکاسیون قطعی SSC و کنترااندیکاسیون آمالگام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q37"><span>پوسیدگی سطحی اکلوزال</span></label></li>
+      <li><label><input type="radio" name="q37"><span>درگیری مزیال سطح دندان D</span></label></li>
+      <li><label><input type="radio" name="q37"><span>حفرهٔ کلاس V</span></label></li>
+      <li><label><input type="radio" name="q37"><span>پوسیدگی شیاری خفیف</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> درگیری مزیال دندان D ← ساپورت ناکافی برای آمالگام ← حتماً SSC.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳۸</span>بهترین سمان برای SSC در اطفال کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q38"><span>زینک‌فسفات</span></label></li>
+      <li><label><input type="radio" name="q38"><span>گلس‌آینومر</span></label></li>
+      <li><label><input type="radio" name="q38"><span>زینک‌اکساید-اوژنول</span></label></li>
+      <li><label><input type="radio" name="q38"><span>کامپوزیت رزین</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> گلس‌آینومر انتخاب رایج‌تر و مناسب‌تر (آزادسازی فلوراید).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۳۹</span>میزان کاهش سطح اکلوزال در تراش SSC چقدر است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q39"><span>۰٫۵ mm</span></label></li>
+      <li><label><input type="radio" name="q39"><span>۱ تا ۱٫۵ mm</span></label></li>
+      <li><label><input type="radio" name="q39"><span>۲ تا ۲٫۵ mm</span></label></li>
+      <li><label><input type="radio" name="q39"><span>۳ mm</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> کاهش اکلوزال ۱ تا ۱٫۵ mm با حفظ شیب کاسپ‌ها.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۴۰</span>آیا SSC قبل از افتادن دندان شیری باید خارج شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q40"><span>بله، حتماً</span></label></li>
+      <li><label><input type="radio" name="q40"><span>خیر، همراه دندان خودبه‌خود می‌افتد</span></label></li>
+      <li><label><input type="radio" name="q40"><span>فقط در مولر اول</span></label></li>
+      <li><label><input type="radio" name="q40"><span>فقط با درد</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> SSC همراه با تحلیل ریشهٔ شیری خودبه‌خود می‌افتد.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۴۱</span>کانتورینگ و کرمپینگ در کدام بخش کراون انجام می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q41"><span>یک‌سوم اکلوزال</span></label></li>
+      <li><label><input type="radio" name="q41"><span>یک‌سوم ژنژیوال (سرویکال)</span></label></li>
+      <li><label><input type="radio" name="q41"><span>کل سطح باکال</span></label></li>
+      <li><label><input type="radio" name="q41"><span>سطح اکلوزال</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> ۱/۳ ژنژیوال کانتور و ≈ ۱ mm به داخل خم می‌شود (گیر مکانیکی).</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۴۲</span>از دست رفتن مولر دوم شیری ماگزیلا حداکثر چند mm کاهش فضا ایجاد می‌کند؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q42"><span>۲ mm</span></label></li>
+      <li><label><input type="radio" name="q42"><span>۴ mm</span></label></li>
+      <li><label><input type="radio" name="q42"><span>۸ mm</span></label></li>
+      <li><label><input type="radio" name="q42"><span>۱۲ mm</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> تا ۸ mm در ماگزیلا (مندیبل تا ۴ mm).</div>
+  </div>
+  <div class="q" data-ans="3">
+    <div class="qn"><span class="num">۴۳</span>کدام مورد کنترااندیکاسیون Distal Shoe نیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q43"><span>نقص مادرزادی قلب</span></label></li>
+      <li><label><input type="radio" name="q43"><span>سرکوب ایمنی</span></label></li>
+      <li><label><input type="radio" name="q43"><span>دیابت</span></label></li>
+      <li><label><input type="radio" name="q43"><span>کودک سالم بدون مشکل سیستمیک</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> کودک سالم کنترااندیکاسیون نیست؛ موارد سیستمیک، نقص قلب، دیابت و... هستند.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۴۴</span>از دست رفتن مولر شیری قبل از ۷ سالگی روی رویش جانشین چه اثری دارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q44"><span>تسریع رویش</span></label></li>
+      <li><label><input type="radio" name="q44"><span>تأخیر رویش</span></label></li>
+      <li><label><input type="radio" name="q44"><span>بدون اثر</span></label></li>
+      <li><label><input type="radio" name="q44"><span>نهفتگی همیشگی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> قبل از ۷ سالگی ← تأخیر؛ بعد از ۷ سالگی ← رویش زودرس.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۴۵</span>در از دست رفتن دوطرفهٔ کانین شیری مندیبل چه وسیله‌ای ضروری است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q45"><span>Band &amp; Loop</span></label></li>
+      <li><label><input type="radio" name="q45"><span>Lingual Arch</span></label></li>
+      <li><label><input type="radio" name="q45"><span>Nance</span></label></li>
+      <li><label><input type="radio" name="q45"><span>Distal Shoe</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> حتماً Lingual Arch (وگرنه تمایل لینگوال، افزایش اوربایت/اورجت، کاهش قوس).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۴۶</span>چرا Lingual Arch در دندان شیری مندیبل توصیه نمی‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q46"><span>گران است</span></label></li>
+      <li><label><input type="radio" name="q46"><span>جوانهٔ انسیزور دائمی لینگوال است و سیم با رویش تداخل می‌کند</span></label></li>
+      <li><label><input type="radio" name="q46"><span>شکننده است</span></label></li>
+      <li><label><input type="radio" name="q46"><span>زیبا نیست</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> جوانهٔ انسیزور دائمی لینگوال رشد می‌کند؛ سیم مزاحم رویش است ← به‌جای آن دو Band &amp; Loop.</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۴۷</span>معتبرترین دلیل جایگزینی دندان قدامی شیری از دست‌رفته چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q47"><span>تغذیه</span></label></li>
+      <li><label><input type="radio" name="q47"><span>تکلم</span></label></li>
+      <li><label><input type="radio" name="q47"><span>زیبایی</span></label></li>
+      <li><label><input type="radio" name="q47"><span>حفظ فضا</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> زیبایی معتبرترین دلیل است؛ از دست رفتن قدامی معمولاً کاهش فضای جدی ایجاد نمی‌کند.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۴۸</span>به ازای هر ۱ mm استخوان روی تاج دندان دائمی، چند ماه تا رویش باقی است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q48"><span>۳ ماه</span></label></li>
+      <li><label><input type="radio" name="q48"><span>۶ ماه</span></label></li>
+      <li><label><input type="radio" name="q48"><span>۹ ماه</span></label></li>
+      <li><label><input type="radio" name="q48"><span>۱۲ ماه</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> تقریباً ۶ ماه به ازای هر ۱ mm استخوان.</div>
+  </div>
+  <div class="q" data-ans="0">
+    <div class="qn"><span class="num">۴۹</span>تفاوت Nance با TPA چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q49"><span>Nance دکمهٔ آکریلی روی چین‌های کامی دارد</span></label></li>
+      <li><label><input type="radio" name="q49"><span>TPA دکمهٔ آکریلی دارد</span></label></li>
+      <li><label><input type="radio" name="q49"><span>هر دو یکسان‌اند</span></label></li>
+      <li><label><input type="radio" name="q49"><span>Nance متحرک است</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> Nance دکمهٔ آکریلی روی رو‌گای کامی دارد و از تیپینگ مزیال مولر ۶ جلوگیری می‌کند.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۰</span>هنگام ظهور بالینی دندان، تقریباً چه نسبتی از ریشه تشکیل شده است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q50"><span>نصف</span></label></li>
+      <li><label><input type="radio" name="q50"><span>سه‌چهارم</span></label></li>
+      <li><label><input type="radio" name="q50"><span>کامل</span></label></li>
+      <li><label><input type="radio" name="q50"><span>یک‌چهارم</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> حدود ۳/۴ ریشه تشکیل شده است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۱</span>شایع‌ترین ترتیب رویش دائمی در مندیبل با کدام دندان شروع می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q51"><span>سانترال</span></label></li>
+      <li><label><input type="radio" name="q51"><span>مولر اول</span></label></li>
+      <li><label><input type="radio" name="q51"><span>کانین</span></label></li>
+      <li><label><input type="radio" name="q51"><span>لترال</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> مولر اول مندیبل اغلب اولین دندان دائمی است که رویش می‌یابد.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۲</span>هماتوم رویشی (کیست رویشی) معمولاً در کدام ناحیه دیده می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q52"><span>انسیزور قدامی</span></label></li>
+      <li><label><input type="radio" name="q52"><span>مولر دوم شیری و مولر اول دائمی</span></label></li>
+      <li><label><input type="radio" name="q52"><span>کانین</span></label></li>
+      <li><label><input type="radio" name="q52"><span>پره‌مولر</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> معمولاً در ناحیهٔ مولر دوم شیری و مولر اول دائمی؛ بافت آبی-بنفش پر از خون.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۳</span>سکستروم رویشی از چه ترکیبی تشکیل شده است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q53"><span>مینا و عاج</span></label></li>
+      <li><label><input type="radio" name="q53"><span>عاج و سمنتوم</span></label></li>
+      <li><label><input type="radio" name="q53"><span>فقط استخوان</span></label></li>
+      <li><label><input type="radio" name="q53"><span>فقط مینا</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> مرکب از عاج و سمنتوم؛ نسبت Ca/P بالاتر از استخوان طبیعی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۴</span>رویش لینگوال ثنایای دائمی مندیبل چگونه تلقی می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q54"><span>پاتولوژیک</span></label></li>
+      <li><label><input type="radio" name="q54"><span>اساساً نرمال</span></label></li>
+      <li><label><input type="radio" name="q54"><span>نیازمند جراحی فوری</span></label></li>
+      <li><label><input type="radio" name="q54"><span>نشانهٔ تومور</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> بسیار شایع و اساساً نرمال؛ معمولاً طی چند ماه تصحیح می‌شود.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۵</span>اصلاح خودبه‌خود سانترال دائمی با رویش لینگوال در چه سنی رخ می‌دهد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q55"><span>۶ سال</span></label></li>
+      <li><label><input type="radio" name="q55"><span>۸ سال و ۲ ماه</span></label></li>
+      <li><label><input type="radio" name="q55"><span>۱۰ سال</span></label></li>
+      <li><label><input type="radio" name="q55"><span>۱۲ سال</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> در ۹۵٪ موارد در سن ۸ سال و ۲ ماه (لترال در ۸ سال و ۴ ماه).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۶</span>بیماری Riga-Fede ناشی از چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q56"><span>عفونت قارچی</span></label></li>
+      <li><label><input type="radio" name="q56"><span>لبهٔ انسایزال تیز دندان ناتال که زبان را پاره می‌کند</span></label></li>
+      <li><label><input type="radio" name="q56"><span>آلرژی</span></label></li>
+      <li><label><input type="radio" name="q56"><span>کمبود ویتامین</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> زخم سطح لینگوال زبان به‌علت لبهٔ تیز دندان ناتال/نئوناتال.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۷</span>روش ارجح برخورد با دندان نئوناتال کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q57"><span>خارج‌کردن فوری</span></label></li>
+      <li><label><input type="radio" name="q57"><span>باقی‌گذاشتن دندان و توضیح به والدین</span></label></li>
+      <li><label><input type="radio" name="q57"><span>سایش لبه</span></label></li>
+      <li><label><input type="radio" name="q57"><span>روکش</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> روش ارجح: حفظ دندان و توضیح مزیت نگهداری؛ مگر خطر آسپیراسیون یا Riga-Fede.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۸</span>مرواریدهای مینایی (Epstein pearls) در کجا تشکیل می‌شوند؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q58"><span>دیواره باکال ریج</span></label></li>
+      <li><label><input type="radio" name="q58"><span>رافهٔ میدپالاتال</span></label></li>
+      <li><label><input type="radio" name="q58"><span>کرست ریج</span></label></li>
+      <li><label><input type="radio" name="q58"><span>کف دهان</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> در امتداد رافهٔ میدپالاتال؛ بقایای بافت اپیتلیال.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۵۹</span>Bohn nodule از بقایای چه چیزی است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q59"><span>دنتال‌لامینا</span></label></li>
+      <li><label><input type="radio" name="q59"><span>غدد بزاقی</span></label></li>
+      <li><label><input type="radio" name="q59"><span>اپیتلیوم رافه</span></label></li>
+      <li><label><input type="radio" name="q59"><span>ادونتوبلاست</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> Bohn nodule بقایای غدد بزاقی؛ روی دیواره‌های باکال/لینگوال ریج و کام دور از رافه.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۰</span>شایع‌ترین دندان دچار آنکیلوز کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q60"><span>انسیزور شیری</span></label></li>
+      <li><label><input type="radio" name="q60"><span>مولر شیری مندیبل</span></label></li>
+      <li><label><input type="radio" name="q60"><span>کانین</span></label></li>
+      <li><label><input type="radio" name="q60"><span>پره‌مولر</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> مولرهای شیری مندیبل بیشترین آنکیلوز را دارند.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۱</span>صدای دق دندان آنکیلوز چگونه است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q61"><span>cushioned</span></label></li>
+      <li><label><input type="radio" name="q61"><span>solid</span></label></li>
+      <li><label><input type="radio" name="q61"><span>بدون صدا</span></label></li>
+      <li><label><input type="radio" name="q61"><span>زنگ‌دار</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> آنکیلوز صدای solid؛ دندان نرمال صدای cushioned (به‌دلیل غشای پریودنتال).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۲</span>در دندان آنکیلوز با تحلیل پیشرفته ریشه، لقی چگونه است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q62"><span>لق است</span></label></li>
+      <li><label><input type="radio" name="q62"><span>لق نیست</span></label></li>
+      <li><label><input type="radio" name="q62"><span>فقط شب لق است</span></label></li>
+      <li><label><input type="radio" name="q62"><span>بسته به سن</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> دندان آنکیلوزه حتی با تحلیل پیشرفته لق نیست.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۳</span>سندرم داون با سن کدام والد مرتبط است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q63"><span>پدر</span></label></li>
+      <li><label><input type="radio" name="q63"><span>مادر</span></label></li>
+      <li><label><input type="radio" name="q63"><span>هیچ‌کدام</span></label></li>
+      <li><label><input type="radio" name="q63"><span>هر دو برابر</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> سندرم داون با سن مادر مرتبط است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۴</span>کوتولگی آکندروپلاستیک با سن کدام والد مرتبط است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q64"><span>مادر</span></label></li>
+      <li><label><input type="radio" name="q64"><span>پدر</span></label></li>
+      <li><label><input type="radio" name="q64"><span>هیچ‌کدام</span></label></li>
+      <li><label><input type="radio" name="q64"><span>پدربزرگ</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> برخلاف داون، آکندروپلازی با سن پدر مرتبط است (اتوزوم غالب).</div>
+  </div>
+  <div class="q" data-ans="0">
+    <div class="qn"><span class="num">۶۵</span>تشخیص کلیدوکرانیال دیسپلازیا بر اساس چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q65"><span>فقدان کلاویکل</span></label></li>
+      <li><label><input type="radio" name="q65"><span>فقدان مندیبل</span></label></li>
+      <li><label><input type="radio" name="q65"><span>فقدان دندان</span></label></li>
+      <li><label><input type="radio" name="q65"><span>نقص قلب</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> تشخیص بر اساس فقدان (یا بقایای) کلاویکل؛ ویژگی متمایز: دندان‌های اضافی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۶</span>در کم‌کاری هیپوفیز (کوتولگی هیپوفیزی) دربارهٔ کشیدن شیری چه توصیه‌ای است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q66"><span>حتماً کشیده شود</span></label></li>
+      <li><label><input type="radio" name="q66"><span>کشیدن تجویز نمی‌شود</span></label></li>
+      <li><label><input type="radio" name="q66"><span>فقط مولرها کشیده شوند</span></label></li>
+      <li><label><input type="radio" name="q66"><span>با لیزر برداشته شود</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> کشیدن شیری تجویز نمی‌شود چون رویش دائمی قطعی نیست.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۷</span>در سندرم داون شیوع کدام بیماری دهانی بیشتر است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q67"><span>پوسیدگی</span></label></li>
+      <li><label><input type="radio" name="q67"><span>بیماری پریودنتال</span></label></li>
+      <li><label><input type="radio" name="q67"><span>استین</span></label></li>
+      <li><label><input type="radio" name="q67"><span>آبسه</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> شیوع بیماری پریودنتال بیشتر است (نقص ایمنی سلولی/هومورال و فاگوسیتیک)؛ استعداد پوسیدگی پایین.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۸</span>کم‌کاری مادرزادی تیروئید (کرتینیسم) چه عارضه‌ای دارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q68"><span>رشد بیش‌ازحد</span></label></li>
+      <li><label><input type="radio" name="q68"><span>نقص ذهنی و کوتولگی</span></label></li>
+      <li><label><input type="radio" name="q68"><span>افزایش پوسیدگی شدید</span></label></li>
+      <li><label><input type="radio" name="q68"><span>ماکروگناتیا</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> کرتینیسم نقص ذهنی و کوتولگی ایجاد می‌کند؛ امروزه با غربالگری نوزادان شناسایی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۶۹</span>نقص در هموفیلی A کدام فاکتور است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q69"><span>فاکتور ۹</span></label></li>
+      <li><label><input type="radio" name="q69"><span>فاکتور ۸</span></label></li>
+      <li><label><input type="radio" name="q69"><span>فاکتور von Willebrand</span></label></li>
+      <li><label><input type="radio" name="q69"><span>فاکتور ۷</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> هموفیلی A = نقص فاکتور ۸ (هموفیلی B = فاکتور ۹).</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۷۰</span>شایع‌ترین اختلال خونریزی‌دهندهٔ ارثی کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q70"><span>هموفیلی A</span></label></li>
+      <li><label><input type="radio" name="q70"><span>هموفیلی B</span></label></li>
+      <li><label><input type="radio" name="q70"><span>بیماری von Willebrand</span></label></li>
+      <li><label><input type="radio" name="q70"><span>ITP</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> vWD شایع‌ترین اختلال خونریزی‌دهندهٔ ارثی (نقص هموستاز اولیه).</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۷۱</span>در هموفیلی A کدام آزمایش طولانی می‌شود؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q71"><span>زمان پروترومبین</span></label></li>
+      <li><label><input type="radio" name="q71"><span>زمان ترومبین</span></label></li>
+      <li><label><input type="radio" name="q71"><span>aPTT</span></label></li>
+      <li><label><input type="radio" name="q71"><span>شمارش پلاکت</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> aPTT طولانی؛ پلاکت، PT و ترومبین نرمال.</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۷۲</span>ایمن‌ترین بی‌حسی برای درمان ترمیمی در بیمار هموفیلی کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q72"><span>بلاک IAN</span></label></li>
+      <li><label><input type="radio" name="q72"><span>انفیلتراسیون</span></label></li>
+      <li><label><input type="radio" name="q72"><span>PDL</span></label></li>
+      <li><label><input type="radio" name="q72"><span>PSA</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> PDL ایمن‌ترین است (بدون نیاز به فاکتور)؛ بلاک در شدید ممنوع.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۷۳</span>کدام داروی ضد درد در هموفیلی کنترااندیکاسیون دارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q73"><span>استامینوفن</span></label></li>
+      <li><label><input type="radio" name="q73"><span>آسپرین و NSAID</span></label></li>
+      <li><label><input type="radio" name="q73"><span>کدئین</span></label></li>
+      <li><label><input type="radio" name="q73"><span>هیدروکدون</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> آسپرین و NSAID بر عملکرد پلاکت اثر دارند ← ممنوع.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۷۴</span>در exfoliation نرمال دندان شیری در هموفیلی چه اقدامی کافی است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q74"><span>تزریق فاکتور</span></label></li>
+      <li><label><input type="radio" name="q74"><span>فشار مستقیم انگشت/گاز + مواد topical</span></label></li>
+      <li><label><input type="radio" name="q74"><span>بستری</span></label></li>
+      <li><label><input type="radio" name="q74"><span>آنتی‌بیوتیک</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> فقط فشار مستقیم چند دقیقه + مواد topical کافی است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۷۵</span>وازوپرسین (دسموپرسین) چه اثری دارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q75"><span>کاهش فاکتور ۸</span></label></li>
+      <li><label><input type="radio" name="q75"><span>افزایش سطح vWF</span></label></li>
+      <li><label><input type="radio" name="q75"><span>تخریب پلاکت</span></label></li>
+      <li><label><input type="radio" name="q75"><span>افزایش فیبرینولیز</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> سطح vWF را بالا می‌برد (موارد خفیف-متوسط)؛ اوج اثر ۲۰–۶۰ دقیقه.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۷۶</span>Liver clot چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q76"><span>لختهٔ طبیعی</span></label></li>
+      <li><label><input type="radio" name="q76"><span>لختهٔ غیرطبیعی بیرون‌زده از ساکت روی چند دندان</span></label></li>
+      <li><label><input type="radio" name="q76"><span>عفونت کبدی</span></label></li>
+      <li><label><input type="radio" name="q76"><span>تومور</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> لختهٔ غیرطبیعی بیرون‌زده؛ درمان: فاکتور، خارج‌کردن لخته، پک مجدد، آنتی‌فیبرینولیتیک.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۷۷</span>میزان هموگلوبین در آنمی داسی‌شکل معمولاً چقدر است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q77"><span>۱۲–۱۸ g/dL</span></label></li>
+      <li><label><input type="radio" name="q77"><span>۶–۹ g/dL</span></label></li>
+      <li><label><input type="radio" name="q77"><span>۱۰–۱۱ g/dL</span></label></li>
+      <li><label><input type="radio" name="q77"><span>کمتر از ۳ g/dL</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> ۶ تا ۹ g/dL (نرمال ۱۲–۱۸).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۷۸</span>مهم‌ترین اصل مدیریت دندانپزشکی در آنمی داسی‌شکل چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q78"><span>استفاده از NSAID</span></label></li>
+      <li><label><input type="radio" name="q78"><span>پیشگیری از بحران داسی (استرس، کم‌آبی، کمبود اکسیژن)</span></label></li>
+      <li><label><input type="radio" name="q78"><span>کشیدن همهٔ دندان‌ها</span></label></li>
+      <li><label><input type="radio" name="q78"><span>عدم بی‌حسی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> پیشگیری از بحران داسی با کنترل استرس، کم‌آبی و کمبود اکسیژن.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۷۹</span>درمان قطعی آنمی داسی‌شکل چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q79"><span>تزریق خون مکرر</span></label></li>
+      <li><label><input type="radio" name="q79"><span>پیوند سلول بنیادی مغز استخوان</span></label></li>
+      <li><label><input type="radio" name="q79"><span>فلوراید</span></label></li>
+      <li><label><input type="radio" name="q79"><span>آنتی‌بیوتیک</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> پیوند سلول بنیادی مغز استخوان درمان قطعی است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۰</span>شایع‌ترین سرطان کودکان کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q80"><span>تومور مغزی</span></label></li>
+      <li><label><input type="radio" name="q80"><span>لوسمی لنفوئیدی حاد (ALL)</span></label></li>
+      <li><label><input type="radio" name="q80"><span>تومور کلیه</span></label></li>
+      <li><label><input type="radio" name="q80"><span>لنفوم</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> ALL شایع‌ترین (۸۰٪ لوسمی کودکی)، اوج بروز ۴ سالگی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۱</span>اگر پلاکت بین ۴۰٬۰۰۰ تا ۷۵٬۰۰۰ باشد، چه اقدامی لازم است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q81"><span>تعویق همه کارها</span></label></li>
+      <li><label><input type="radio" name="q81"><span>تزریق پلاکت قبل و ۲۴ ساعت بعد</span></label></li>
+      <li><label><input type="radio" name="q81"><span>بدون اقدام</span></label></li>
+      <li><label><input type="radio" name="q81"><span>فقط آنتی‌بیوتیک</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> تزریق پلاکت قبل و ۲۴ ساعت بعد از کار دندانپزشکی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۲</span>اگر ANC کمتر از ۵۰۰ باشد چه می‌کنیم؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q82"><span>همهٔ اقدامات بی‌خطر</span></label></li>
+      <li><label><input type="radio" name="q82"><span>فقط اورژانس در بیمارستان + آنتی‌بیوتیک وریدی</span></label></li>
+      <li><label><input type="radio" name="q82"><span>کار انتخابی با احتیاط</span></label></li>
+      <li><label><input type="radio" name="q82"><span>فقط جرم‌گیری</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> ریسک بالای عفونت تهدیدکننده؛ فقط اورژانس در بیمارستان با آنتی‌بیوتیک وریدی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۳</span>در بیمار لوسمی، درمان پالپ دندان شیری چگونه است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q83"><span>پالپوتومی ارجح</span></label></li>
+      <li><label><input type="radio" name="q83"><span>انجام نمی‌شود؛ به‌سمت ex</span></label></li>
+      <li><label><input type="radio" name="q83"><span>پالپکتومی ارجح</span></label></li>
+      <li><label><input type="radio" name="q83"><span>DPC</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> درمان پالپ شیری انجام نمی‌شود (سرکوب ایمنی، خطر درگیری کل بدن) ← ex.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۴</span>شایع‌ترین علت درد دهانی در درمان سرطان و شایع‌ترین عارضهٔ HSCT چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q84"><span>پوسیدگی</span></label></li>
+      <li><label><input type="radio" name="q84"><span>موکوزیت</span></label></li>
+      <li><label><input type="radio" name="q84"><span>آبسه</span></label></li>
+      <li><label><input type="radio" name="q84"><span>استوماتیت آفتی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> موکوزیت (التهاب ژنرالیزه مخاط)؛ بهبود ۱۰–۱۴ روز.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۵</span>پیوند از مغز استخوان خود بیمار چه نام دارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q85"><span>آلوژنیک</span></label></li>
+      <li><label><input type="radio" name="q85"><span>اتولوگ</span></label></li>
+      <li><label><input type="radio" name="q85"><span>سینوژنیک</span></label></li>
+      <li><label><input type="radio" name="q85"><span>زنوژنیک</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> اتولوگ (خود بیمار)؛ آلوژنیک = دهندهٔ انسانی دیگر.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۶</span>درمان دندان دائمی غیرزندهٔ علامت‌دار قبل از شیمی‌درمانی باید حداقل چه زمانی قبل باشد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q86"><span>۱ روز</span></label></li>
+      <li><label><input type="radio" name="q86"><span>۱ هفته</span></label></li>
+      <li><label><input type="radio" name="q86"><span>۱ ماه</span></label></li>
+      <li><label><input type="radio" name="q86"><span>۳ ماه</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> حداقل ۱ هفته قبل؛ اگر ممکن نبود، کشیدن + آنتی‌بیوتیک ۱ هفته.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۷</span>کدام هپاتیت بیشترین خطر را در دندانپزشکی دارد؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q87"><span>HAV</span></label></li>
+      <li><label><input type="radio" name="q87"><span>HBV</span></label></li>
+      <li><label><input type="radio" name="q87"><span>HCV</span></label></li>
+      <li><label><input type="radio" name="q87"><span>HEV</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> HBV به‌دلیل مقاومت ویروس بیشترین خطر را دارد.</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۸۸</span>راه انتقال اصلی HAV و HEV چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q88"><span>خونی</span></label></li>
+      <li><label><input type="radio" name="q88"><span>جنسی</span></label></li>
+      <li><label><input type="radio" name="q88"><span>مدفوعی-دهانی</span></label></li>
+      <li><label><input type="radio" name="q88"><span>تنفسی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> مدفوعی-دهانی (آب و غذای آلوده).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۸۹</span>مارکر HBsAg مثبت نشان‌دهندهٔ چیست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q89"><span>ایمنی</span></label></li>
+      <li><label><input type="radio" name="q89"><span>عفونت فعال و قابلیت انتقال</span></label></li>
+      <li><label><input type="radio" name="q89"><span>واکسیناسیون موفق</span></label></li>
+      <li><label><input type="radio" name="q89"><span>بهبودی کامل</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> HBsAg مثبت = عفونت فعال (حاد/مزمن) و فرد عفونی.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۰</span>شایع‌ترین تظاهر دهانی ایدز کدام دسته است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q90"><span>باکتریایی</span></label></li>
+      <li><label><input type="radio" name="q90"><span>قارچی (کاندیدا)</span></label></li>
+      <li><label><input type="radio" name="q90"><span>بدخیم</span></label></li>
+      <li><label><input type="radio" name="q90"><span>ویروسی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> عفونت‌های قارچی (Candida albicans) شایع‌ترین دسته است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۱</span>لکوپلاکیای مودار دهان (OHL) با کدام ویروس مرتبط و در کجاست؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q91"><span>HSV، کام</span></label></li>
+      <li><label><input type="radio" name="q91"><span>EBV، کنارهٔ جانبی زبان</span></label></li>
+      <li><label><input type="radio" name="q91"><span>HPV، لب</span></label></li>
+      <li><label><input type="radio" name="q91"><span>HHV-8، کام سخت</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> OHL با EBV، فقط در HIV، روی کنارهٔ جانبی زبان (غیرقابل کنده شدن).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۲</span>شایع‌ترین بدخیمی مرتبط با ایدز کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q92"><span>لنفوم غیرهوچکین</span></label></li>
+      <li><label><input type="radio" name="q92"><span>سارکوم کاپوسی</span></label></li>
+      <li><label><input type="radio" name="q92"><span>کارسینوم سلول سنگفرشی</span></label></li>
+      <li><label><input type="radio" name="q92"><span>ملانوم</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> سارکوم کاپوسی (HHV-8)؛ شایع‌ترین محل داخل دهان: کام سخت.</div>
+  </div>
+  <div class="q" data-ans="2">
+    <div class="qn"><span class="num">۹۳</span>در کودکان با نیازهای خاص، حدود چند درصد بهداشت دهان بر عهدهٔ والدین است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q93"><span>۵۰٪</span></label></li>
+      <li><label><input type="radio" name="q93"><span>۷۰٪</span></label></li>
+      <li><label><input type="radio" name="q93"><span>۹۰٪</span></label></li>
+      <li><label><input type="radio" name="q93"><span>۳۰٪</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> تقریباً ۹۰٪ مسئولیت بهداشت بر عهدهٔ والدین است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۴</span>روش مسواک زدن توصیه‌شده برای کودکان خاص کدام است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q94"><span>باس</span></label></li>
+      <li><label><input type="radio" name="q94"><span>اسکراب افقی</span></label></li>
+      <li><label><input type="radio" name="q94"><span>استیلمن</span></label></li>
+      <li><label><input type="radio" name="q94"><span>چارترز</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> اسکراب افقی: ساده، سریع، نتایج خوب در برداشت پلاک.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۵</span>شیشهٔ شیر حداکثر تا چه سنی مجاز است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q95"><span>۶ ماهگی</span></label></li>
+      <li><label><input type="radio" name="q95"><span>۱۲ ماهگی</span></label></li>
+      <li><label><input type="radio" name="q95"><span>۲ سالگی</span></label></li>
+      <li><label><input type="radio" name="q95"><span>۳ سالگی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> حداکثر تا ۱۲ ماهگی (پایان یک سالگی).</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۶</span>کدام مورد دربارهٔ فلوراید موضعی در کودکان خاص صحیح است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q96"><span>فقط در مناطق بدون فلوراید آب</span></label></li>
+      <li><label><input type="radio" name="q96"><span>حتماً چه آب فلورایده باشد چه نباشد</span></label></li>
+      <li><label><input type="radio" name="q96"><span>فقط با پوسیدگی فعال</span></label></li>
+      <li><label><input type="radio" name="q96"><span>هرگز استفاده نشود</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> به‌دلیل ریسک بالا، فلوراید موضعی در هر صورت استفاده می‌شود.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۷</span>بر اساس ۷ اصل ثابت‌سازی، اگر بیش از ۱–۲ دندان نیاز به درمان داشته باشد چه می‌کنیم؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q97"><span>ثابت‌سازی طولانی</span></label></li>
+      <li><label><input type="radio" name="q97"><span>از ابتدا بیهوشی عمومی</span></label></li>
+      <li><label><input type="radio" name="q97"><span>فقط آرام‌بخشی خفیف</span></label></li>
+      <li><label><input type="radio" name="q97"><span>به جلسهٔ بعد موکول</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> برای کار گسترده، از ابتدا بیهوشی عمومی ایمن‌تر و اخلاقی‌تر است.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۸</span>کدام مورد دربارهٔ Papoose Board صحیح است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q98"><span>یک سایز دارد</span></label></li>
+      <li><label><input type="radio" name="q98"><span>ثابت‌کنندهٔ سر متصل دارد و در سایزهای متعدد است</span></label></li>
+      <li><label><input type="radio" name="q98"><span>تهویهٔ عالی دارد</span></label></li>
+      <li><label><input type="radio" name="q98"><span>قابل‌استفادهٔ مجدد نیست</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> پاپوزبرد سایزهای متعدد و ثابت‌کنندهٔ سر متصل دارد؛ عیب: ریسک هایپرترمی و نظارت تنفس دشوار.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۹۹</span>کدام وسیلهٔ ثابت‌سازی برای CP هیپوتونیک/اسپاستیک با نیاز به حمایت بیشتر مناسب است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q99"><span>Papoose Board</span></label></li>
+      <li><label><input type="radio" name="q99"><span>Beanbag chair insert</span></label></li>
+      <li><label><input type="radio" name="q99"><span>Molt prop</span></label></li>
+      <li><label><input type="radio" name="q99"><span>Triangular sheet</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> Beanbag dental chair insert برای حمایت بیشتر و ثابت‌سازی کمتر؛ قابل‌شست‌وشو.</div>
+  </div>
+  <div class="q" data-ans="1">
+    <div class="qn"><span class="num">۱۰۰</span>قبل از هرگونه ثابت‌سازی حفاظتی چه چیزی الزامی است؟</div>
+    <ul class="opts">
+      <li><label><input type="radio" name="q100"><span>رضایت شفاهی</span></label></li>
+      <li><label><input type="radio" name="q100"><span>رضایت‌نامهٔ آگاهانهٔ کتبی</span></label></li>
+      <li><label><input type="radio" name="q100"><span>حضور دو پرستار</span></label></li>
+      <li><label><input type="radio" name="q100"><span>بیهوشی</span></label></li>
+    </ul>
+    <div class="expl"><strong>پاسخ:</strong> رضایت‌نامهٔ آگاهانهٔ کتبی از والدین الزامی است (شفاهی کافی نیست).</div>
+  </div>
+</section>
+
+<footer>
+  جزوهٔ مرور دندانپزشکی اطفال · تهیه‌شده بر پایهٔ محتوای جلسات درسی برای آمادگی امتحان<br>
+  در صورت تناقض با اسلاید/کتاب مرجع، همیشه منبع رسمی درس ملاک است.
+</footer>
+</main>
+</div>
+
+<script>
+// quiz logic injected after questions are present
+function initQuiz(){
+  const qs=[...document.querySelectorAll('.q')];
+  let answered=0, correct=0;
+  qs.forEach(q=>{
+    const ans=+q.dataset.ans;
+    q.querySelectorAll('.opts input').forEach((inp,i)=>{
+      inp.addEventListener('change',()=>{
+        if(q.classList.contains('answered'))return;
+        q.classList.add('answered');answered++;
+        const labels=q.querySelectorAll('.opts label');
+        labels[ans].classList.add('correct');
+        if(i!==ans){labels[i].classList.add('wrong');}
+        else correct++;
+        updateScore(answered,correct,qs.length);
+      });
+    });
+  });
+  window._revealAll=()=>{
+    qs.forEach(q=>{
+      if(q.classList.contains('answered'))return;
+      q.classList.add('answered');
+      q.querySelectorAll('.opts label')[+q.dataset.ans].classList.add('correct');
+    });
+    document.getElementById('score').textContent='پاسخ‌های صحیح نمایش داده شد';
+  };
+  window._resetQuiz=()=>{
+    qs.forEach(q=>{q.classList.remove('answered');q.querySelectorAll('input').forEach(i=>i.checked=false);q.querySelectorAll('label').forEach(l=>l.classList.remove('correct','wrong'));});
+    updateScore(0,0,qs.length);window.scrollTo({top:document.getElementById('exam').offsetTop-10,behavior:'smooth'});
+  };
+}
+function updateScore(a,c,t){document.getElementById('score').textContent=`پاسخ‌داده: ${a}/${t} — درست: ${c}`;}
+document.addEventListener('DOMContentLoaded',initQuiz);
+document.querySelectorAll('nav.toc a').forEach(a=>a.addEventListener('click',()=>document.getElementById('toc').classList.remove('open')));
+</script>
+</body>
+</html>
