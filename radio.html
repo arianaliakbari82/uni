@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوهٔ جامع ضایعات استخوانی فک و صورت — بر اساس Wood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --film:#0d1117;          /* رنگ زمینهٔ فیلم رادیوگرافی */
+    --bone:#8a939b;          /* خاکستری استخوان */
+    --ink:#1a1d23;
+    --paper:#f5f3ee;
+    --paper2:#fbfaf6;
+    --line:#dcd7cc;
+    --muted:#6b7280;
+
+    /* رادیولوسنت = تیره / آبی فولادی */
+    --rl:#1f6feb; --rl-bg:#eaf1fb; --rl-soft:#d3e3fa; --rl-ink:#0b3a7a;
+    /* رادیواوپک = کهربایی / روشن */
+    --ro:#b8860b; --ro-bg:#fbf3df; --ro-soft:#f3e3b8; --ro-ink:#7a5a06;
+    /* مخلوط = بنفش */
+    --mx:#7c3aed; --mx-bg:#f1e9fc; --mx-soft:#e2d2f8; --mx-ink:#4c1d95;
+
+    --danger:#c0392b; --danger-bg:#fbe9e7;
+    --ok:#1e7d52; --ok-bg:#e6f4ec;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Vazirmatn',Tahoma,'Segoe UI',system-ui,sans-serif;
+    font-size:15px; line-height:1.85; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--rl-ink); text-decoration:none}
+  /* ---------- چیدمان کلی ---------- */
+  .wrap{display:grid; grid-template-columns:260px 1fr; gap:0; max-width:1500px; margin:0 auto}
+  /* ---------- نوار کناری / فهرست ---------- */
+  aside{
+    position:sticky; top:0; align-self:start; height:100vh; overflow-y:auto;
+    background:var(--film); color:#c9d1d9; padding:22px 16px; border-inline-start:1px solid #21262d;
+  }
+  aside .brand{font-weight:800; font-size:17px; color:#fff; line-height:1.5; margin-bottom:4px}
+  aside .brand small{display:block; font-weight:400; color:#8b949e; font-size:12px; margin-top:6px}
+  aside nav{margin-top:18px; font-size:13.5px}
+  aside .grp{margin:14px 0 6px; font-weight:700; color:#fff; display:flex; align-items:center; gap:8px}
+  aside .dot{width:10px; height:10px; border-radius:50%; flex:none}
+  aside .dot.rl{background:var(--rl)} aside .dot.ro{background:var(--ro)} aside .dot.mx{background:var(--mx)}
+  aside a{display:block; color:#9aa4b1; padding:3px 18px; border-radius:6px; transition:.15s}
+  aside a:hover{background:#161b22; color:#fff}
+  /* ---------- محتوای اصلی ---------- */
+  main{padding:0 26px 80px; min-width:0}
+  header.hero{
+    background:radial-gradient(120% 140% at 80% -20%,#1b2a4a 0%,var(--film) 60%);
+    color:#fff; margin:0 -26px 28px; padding:38px 40px 30px; position:relative; overflow:hidden;
+  }
+  header.hero h1{font-size:30px; font-weight:800; margin:0 0 8px; line-height:1.45}
+  header.hero p{margin:6px 0 0; color:#aeb8c6; max-width:760px; font-size:14.5px}
+  header.hero .tag{display:inline-block; background:#1f6feb22; border:1px solid #1f6feb55; color:#9cc2ff;
+    font-size:12px; padding:3px 12px; border-radius:30px; margin-bottom:14px}
+  /* شِماتیک فیلم گوشهٔ هدر */
+  header.hero .filmstrip{position:absolute; inset-inline-end:34px; top:34px; opacity:.9; display:none}
+  @media(min-width:900px){header.hero .filmstrip{display:block}}
+
+  .note{background:var(--paper2); border:1px solid var(--line); border-inline-start:4px solid var(--rl);
+    border-radius:10px; padding:14px 18px; margin:18px 0; font-size:13.5px; color:#374151}
+  .note b{color:var(--ink)}
+
+  h2.sec{font-size:23px; font-weight:800; margin:46px 0 4px; padding-top:10px; display:flex; align-items:center; gap:12px}
+  h2.sec .pill{font-size:12px; font-weight:700; padding:4px 12px; border-radius:30px}
+  .pill.rl{background:var(--rl-bg); color:var(--rl-ink); border:1px solid var(--rl-soft)}
+  .pill.ro{background:var(--ro-bg); color:var(--ro-ink); border:1px solid var(--ro-soft)}
+  .pill.mx{background:var(--mx-bg); color:var(--mx-ink); border:1px solid var(--mx-soft)}
+  h2.sec + .seclead{color:var(--muted); margin:0 0 18px; font-size:13.5px}
+
+  h3.sub{font-size:18px; font-weight:700; margin:34px 0 6px; padding-bottom:8px; border-bottom:2px solid var(--line)}
+  h3.sub .hint{font-size:12.5px; font-weight:400; color:var(--muted)}
+
+  /* ---------- جدول‌ها ---------- */
+  .tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:12px; margin:14px 0 6px; background:#fff;
+    box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  table{border-collapse:collapse; width:100%; min-width:880px; font-size:13px}
+  thead th{position:sticky; top:0; z-index:2; text-align:right; font-weight:700; padding:11px 12px; color:#fff;
+    font-size:12.5px; white-space:nowrap}
+  .t-rl thead th{background:var(--rl)} .t-ro thead th{background:var(--ro)} .t-mx thead th{background:var(--mx)}
+  tbody td{padding:11px 12px; border-top:1px solid var(--line); vertical-align:top; line-height:1.7}
+  tbody tr:nth-child(even){background:var(--paper2)}
+  tbody tr:hover{background:var(--rl-bg)}
+  .t-ro tbody tr:hover{background:var(--ro-bg)} .t-mx tbody tr:hover{background:var(--mx-bg)}
+  td .nm{font-weight:700; color:var(--ink); display:block}
+  td .en{font-weight:400; color:var(--muted); font-size:11.5px; display:block; direction:ltr; text-align:right}
+  td b{color:var(--rl-ink)} .t-ro td b{color:var(--ro-ink)} .t-mx td b{color:var(--mx-ink)}
+  .key{background:#fff4cc; padding:0 3px; border-radius:3px; font-weight:600}
+  .mal{color:var(--danger); font-weight:700}
+  th.col-nm{min-width:150px} th.col-rx{min-width:200px}
+
+  /* ---------- کارت شِماتیک ---------- */
+  .schema-row{display:flex; flex-wrap:wrap; gap:14px; margin:16px 0}
+  .schema{background:var(--film); border:1px solid #21262d; border-radius:12px; padding:12px; width:172px; text-align:center}
+  .schema svg{display:block; width:100%; height:120px; border-radius:6px; background:#000}
+  .rximg{display:block; width:100%; height:140px; object-fit:cover; border-radius:6px; background:#000}
+  .fnote{color:#8b949e; font-size:10px; margin-top:6px; line-height:1.5}
+  .fnote code{color:#cdd4dc; background:#161b22; padding:1px 5px; border-radius:4px; font-size:9.5px; direction:ltr; display:inline-block}
+  .credit{color:#7d8794; font-size:9.5px; margin-top:5px; line-height:1.4; direction:ltr; text-align:center}
+  .credit a{color:#58a6ff}
+  .schema .cap{color:#c9d1d9; font-size:11.5px; margin-top:8px; line-height:1.5}
+  .schema .cap b{color:#fff; display:block; font-size:12.5px}
+
+  .legend{display:flex; flex-wrap:wrap; gap:16px; font-size:12.5px; color:var(--muted); margin:10px 0 0}
+  .legend span{display:inline-flex; align-items:center; gap:7px}
+  .sw{width:16px; height:12px; border-radius:3px; display:inline-block; border:1px solid #0003}
+
+  footer{margin-top:50px; padding:22px 0; border-top:1px solid var(--line); color:var(--muted); font-size:12.5px; text-align:center}
+
+  @media(max-width:900px){
+    .wrap{grid-template-columns:1fr}
+    aside{position:static; height:auto; border:none; border-bottom:1px solid #21262d}
+    aside nav{columns:2; font-size:12.5px}
+    main{padding:0 14px 60px}
+    header.hero{margin:0 -14px 22px; padding:28px 18px}
+    header.hero h1{font-size:23px}
+  }
+  @media print{
+    aside{display:none} .wrap{display:block} header.hero{background:#222}
+    .tablewrap{overflow:visible; break-inside:avoid} thead th{position:static}
+    body{font-size:11px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ================= فهرست کناری ================= -->
+<aside>
+  <div class="brand">جزوهٔ ضایعات استخوانی فک
+    <small>تشخیص افتراقی بر پایهٔ Wood &amp; Goaz — دسته‌بندی رادیوگرافیک</small>
+  </div>
+  <nav>
+    <a href="#how">راهنمای استفاده و چارچوب</a>
+    <a href="#approach">روش برخورد گام‌به‌گام</a>
+
+    <div class="grp"><span class="dot rl"></span> رادیولوسنت (Radiolucent)</div>
+    <a href="#periapical-rl">۱. پری‌اپیکال</a>
+    <a href="#pericoronal">۲. پری‌کرونال</a>
+    <a href="#interradicular">۳. بین‌دندانی</a>
+    <a href="#solitary-wd">۴. منفرد با حاشیهٔ مشخص</a>
+    <a href="#multilocular">۵. مولتی‌لوکولار</a>
+    <a href="#illdefined">۶. منفرد با حاشیهٔ نامشخص</a>
+    <a href="#multiple-rl">۷. چندگانهٔ مجزا</a>
+    <a href="#generalized-rl">۸. رارفکشن منتشر</a>
+
+    <div class="grp"><span class="dot ro"></span> رادیواوپک (Radiopaque)</div>
+    <a href="#periapical-ro">۹. پری‌اپیکال اوپک</a>
+    <a href="#solitary-ro">۱۰. منفرد اوپک</a>
+    <a href="#multiple-ro">۱۱. چندگانه/منتشر اوپک</a>
+
+    <div class="grp"><span class="dot mx"></span> مخلوط (Mixed)</div>
+    <a href="#mixed">۱۲. رادیولوسنت–رادیواوپک</a>
+
+    <a href="#patterns" style="margin-top:14px">اطلس الگوهای کلاسیک</a>
+    <a href="#summary">جمع‌بندی تشخیص افتراقی</a>
+  </nav>
+</aside>
+
+<!-- ================= محتوای اصلی ================= -->
+<main>
+<header class="hero">
+  <span class="tag">Oral &amp; Maxillofacial Radiology · Differential Diagnosis</span>
+  <h1>ضایعات استخوانی فک و صورت — جزوهٔ جامع تشخیص افتراقی</h1>
+  <p>بر اساس چارچوب کلاسیک <b style="color:#cdb">Wood &amp; Goaz (Differential Diagnosis of Oral and Maxillofacial Lesions)</b>؛ همهٔ ضایعات بر پایهٔ <b style="color:#cdb">ظاهر رادیوگرافیک</b> (محل، تعداد، حاشیه، ساختار داخلی) دسته‌بندی شده‌اند تا منطق تشخیصی کتاب را عیناً دنبال کنی.</p>
+  <svg class="filmstrip" width="150" height="92" viewBox="0 0 150 92">
+    <rect width="150" height="92" rx="8" fill="#000" stroke="#30363d"/>
+    <rect x="10" y="10" width="40" height="72" rx="4" fill="#3a4250"/>
+    <ellipse cx="30" cy="46" rx="11" ry="15" fill="#0a0c10"/>
+    <rect x="56" y="10" width="40" height="72" rx="4" fill="#3a4250"/>
+    <circle cx="76" cy="46" r="13" fill="#eef2f6"/>
+    <rect x="102" y="10" width="38" height="72" rx="4" fill="#3a4250"/>
+    <ellipse cx="121" cy="38" rx="9" ry="11" fill="#0a0c10"/>
+    <circle cx="121" cy="60" r="8" fill="#eef2f6"/>
+  </svg>
+</header>
+
+<!-- راهنما -->
+<section id="how">
+<div class="note">
+<b>این جزوه چطور سازماندهی شده؟</b><br>
+دقیقاً مثل کتاب Wood، ضایعات بر اساس آنچه «روی فیلم می‌بینی» مرتب شده‌اند، نه بر اساس ماهیت بافتی. ابتدا تعیین کن ضایعه <b>رادیولوسنت</b> (تیره‌تر از استخوان)، <b>رادیواوپک</b> (روشن‌تر از استخوان) یا <b>مخلوط</b> است؛ سپس به <b>محل</b> (پری‌اپیکال، پری‌کرونال، بین‌دندانی…)، <b>تعداد</b> (منفرد/چندگانه) و <b>حاشیه</b> (مشخص و کورتیکه = معمولاً خوش‌خیم؛ نامشخص/پروانه‌خورده = بدخیم یا عفونت) برو. هر جدول همان منطق را پیاده می‌کند.
+</div>
+<div class="legend">
+  <span><span class="sw" style="background:#0a0c10"></span> رادیولوسنت (تیره روی فیلم)</span>
+  <span><span class="sw" style="background:#eef2f6"></span> رادیواوپک (روشن روی فیلم)</span>
+  <span><span class="sw" style="background:#3a4250"></span> استخوان نرمال</span>
+  <span><span class="key">هایلایت زرد</span> = نکتهٔ کلیدی/پاتوگنومونیک</span>
+  <span><span class="mal">قرمز</span> = ضایعهٔ بدخیم/خطرناک</span>
+</div>
+</section>
+
+<!-- روش برخورد -->
+<section id="approach">
+<h3 class="sub">روش برخورد گام‌به‌گام به هر ضایعه <span class="hint">(چک‌لیست تشخیصی Wood)</span></h3>
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr><th class="col-nm">معیار</th><th>چه می‌پرسیم؟</th><th>تفسیر تشخیصی</th></tr></thead>
+<tbody>
+<tr><td><span class="nm">دانسیتهٔ کلی</span></td><td>رادیولوسنت / اوپک / مخلوط؟</td><td>اولین انشعاب درخت تشخیص. مخلوط معمولاً ضایعهٔ در حال بلوغ یا بافت کلسیفیه‌ساز است.</td></tr>
+<tr><td><span class="nm">محل (Locus)</span></td><td>پری‌اپیکال، پری‌کرونال، بین‌ریشه‌ای، یا مستقل از دندان؟ فک بالا یا پایین؟ خلف یا قدام؟</td><td>مثلاً پری‌کرونال → فولیکولی؛ قدام ماگزیلا بین لترال و کانین → نازوپالاتین/گلوبولوماگزیلاری.</td></tr>
+<tr><td><span class="nm">تعداد و کانتور</span></td><td>منفرد یا چندگانه؟ یونی‌لوکولار یا مولتی‌لوکولار؟</td><td>چندگانه → سیستمیک (میلوما، متاستاز، هیپرپاراتیروئیدی، سندرم‌ها). مولتی‌لوکولار → آملوبلاستوما/OKC/CGCG.</td></tr>
+<tr><td><span class="nm">حاشیه (Border)</span></td><td>مشخص و کورتیکه؟ مشخص بدون کورتکس؟ نامشخص و منتشر («پروانه‌خورده»)؟</td><td><b>کورتیکه = رشد آهسته/خوش‌خیم.</b> <span class="mal">نامشخص/تهاجمی = بدخیمی یا استئومیلیت.</span></td></tr>
+<tr><td><span class="nm">اثر بر ساختارهای مجاور</span></td><td>جابه‌جایی دندان؟ تحلیل ریشه؟ تحلیل کورتکس؟ گشادشدن (Expansion)؟</td><td>جابه‌جایی = خوش‌خیمِ آهسته. <span class="mal">تحلیل/نفوذ سریع کورتکس و spiking ریشه = بدخیم.</span></td></tr>
+<tr><td><span class="nm">ساختار داخلی</span></td><td>کاملاً پوک؟ سپتوم؟ شیشه‌مات؟ پشم‌پنبه‌ای؟ کلسیفیکاسیون پراکنده؟</td><td>Ground glass→فیبروس دیسپلازی؛ Cotton-wool→پاژه؛ Sunburst→استئوسارکوم.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="note" style="border-inline-start-color:var(--danger)">
+<b>پرچم‌های قرمز بدخیمی (در هر دسته):</b> حاشیهٔ نامشخص و نفوذی، تخریب سریع کورتکس، تحلیل ریشه به‌صورت تیز و نامنظم (spiking)، گشادشدن بدون کورتکس واکنشی، پارستزی/بی‌حسی لب (علامت Vincent)، رشد سریع، و واکنش پریوست از نوع Sunburst یا Codman triangle.
+</div>
+</section>
+
+<!-- ===================== رادیولوسنت ===================== -->
+<h2 class="sec" id="periapical-rl"><span class="pill rl">RADIOLUCENT</span> ۱) رادیولوسنسی‌های پری‌اپیکال</h2>
+<p class="seclead">رادیولوسنسی در ناحیهٔ اپکس دندان. <b>کلید طلایی تشخیص افتراقی = تست حیات پالپ.</b> ضایعات التهابی (گرانولوم، کیست، آبسه) همیشه با دندان <b>غیرزنده</b> همراه‌اند؛ ضایعات تکاملی/دیسپلاستیک (PCOD، استئواسکلروز ایدیوپاتیک اولیه، کیست تروماتیک) دندانِ <b>زنده</b> دارند.</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="periapical_granuloma_cyst" src="images/periapical_granuloma_cyst.jpg" alt="periapical_granuloma_cyst" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="20" y="10" width="120" height="60" fill="#3a4250"/>
+      <path d="M70 10 L90 10 L84 70 L76 70 Z" fill="#e9edf2"/><rect x="70" y="4" width="20" height="10" fill="#cfd6de"/>
+      <ellipse cx="80" cy="82" rx="22" ry="20" fill="#0a0c10" stroke="#11151c" stroke-width="2"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/periapical_granuloma_cyst.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>گرانولوم/کیست پری‌اپیکال</b>RL گرد در اپکس دندانِ غیرزنده</div></div>
+  <div class="schema"><img class="rximg" data-key="traumatic_bone_cyst" src="images/traumatic_bone_cyst.jpg" alt="traumatic_bone_cyst" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="20" y="10" width="120" height="60" fill="#3a4250"/>
+      <path d="M70 10 L90 10 L84 70 L76 70 Z" fill="#e9edf2"/>
+      <path d="M52 90 Q80 70 108 90 Q80 110 52 90" fill="#0a0c10"/>
+      <text x="80" y="116" fill="#7d8794" font-size="9" text-anchor="middle">scalloping</text>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/traumatic_bone_cyst.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>کیست استخوانی تروماتیک</b>اسکالوپ بین ریشه‌ها، دندان زنده</div></div>
+  <div class="schema"><img class="rximg" data-key="pcod_mature" src="images/pcod_mature.jpg" alt="pcod_mature" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="20" y="10" width="120" height="60" fill="#3a4250"/>
+      <path d="M70 10 L90 10 L84 70 L76 70 Z" fill="#e9edf2"/>
+      <ellipse cx="80" cy="84" rx="20" ry="18" fill="#0a0c10"/>
+      <circle cx="80" cy="84" r="9" fill="#e9edf2"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pcod_mature.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>PCOD مرحلهٔ بلوغ</b>هاله RL پیرامون تودهٔ اوپک، دندان زنده</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / جنس / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>بالینی (حیات پالپ)</th><th>هیستوپاتولوژی</th><th>تشخیص افتراقی و درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">گرانولوم پری‌اپیکال</span><span class="en">Periapical granuloma</span></td>
+  <td>هر سنی؛ شایع‌ترین RL پری‌اپیکال؛ هر دندان پوسیده/ترمیم‌شده</td>
+  <td>RL گرد/بیضی کوچک (معمولاً <b>&lt;۱cm</b>)، چسبیده به اپکس، حاشیهٔ نسبتاً مشخص ولی بدون کورتکس مشخص؛ پیوستگی فضای PDL.</td>
+  <td><span class="mal">دندان غیرزنده</span>؛ معمولاً بی‌علامت، تست‌های حیات منفی.</td>
+  <td>بافت گرانولاسیون التهابی مزمن + سلول‌های پلاسما/لنفوسیت؛ بدون اپی‌تلیوم آستری.</td>
+  <td>DDx: کیست رادیکولار (تنها با هیستو افتراق قطعی). <b>درمان:</b> درمان ریشه یا اپیکواکتومی.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست رادیکولار (پری‌اپیکال)</span><span class="en">Radicular / periapical cyst</span></td>
+  <td>۳۰–۵۰ سال؛ <b>شایع‌ترین کیست فک</b>؛ بیشتر قدام ماگزیلا</td>
+  <td>RL گرد با <b>حاشیهٔ کورتیکه و مشخص</b>، اغلب <b>&gt;۱cm</b>؛ ممکن است تحلیل ریشه و جابه‌جایی دندان مجاور دهد.</td>
+  <td><span class="mal">دندان غیرزنده</span>؛ معمولاً بی‌علامت مگر عفونی شود.</td>
+  <td>کیست با آستر اپی‌تلیوم سنگفرشی غیرکراتینیزه (منشأ بقایای Malassez)؛ Rushton bodies ممکن.</td>
+  <td>DDx: گرانولوم، کیست لترال رادیکولار. <b>درمان:</b> انوکلیشن + درمان ریشه. (باقی‌مانده = کیست رزیجوال).</td>
+</tr>
+<tr>
+  <td><span class="nm">آبسهٔ پری‌اپیکال</span><span class="en">Periapical abscess</span></td>
+  <td>هر سنی؛ دندان نکروز عفونی</td>
+  <td>حاد: ممکن است RL مشخصی نداشته باشد (فقط پهن‌شدن PDL). مزمن: <b>RL با حاشیهٔ نامشخص و منتشر</b>، گاه با ساینوس تخلیه‌کننده.</td>
+  <td><span class="mal">غیرزنده</span>؛ درد، تورم، حساسیت به دق، تب در حاد.</td>
+  <td>تجمع چرک، نوتروفیل فراوان، باکتری.</td>
+  <td>DDx: استئومیلیت اولیه، گرانولوم. <b>درمان:</b> درناژ، RCT/کشیدن، آنتی‌بیوتیک.</td>
+</tr>
+<tr>
+  <td><span class="nm">اسکار پری‌اپیکال</span><span class="en">Periapical (surgical) scar</span></td>
+  <td>سابقهٔ اپیکواکتومی</td>
+  <td>RL باقی‌مانده در محل جراحی قبلی که <b>ثابت می‌ماند و بزرگ نمی‌شود</b> در فالوآپ.</td>
+  <td>دندانِ درمان‌شدهٔ بدون علامت.</td>
+  <td>بافت فیبروز کلاژنه (ترمیم به‌جای استخوان).</td>
+  <td>DDx: ضایعهٔ راجعه. <b>درمان:</b> فقط مشاهده.</td>
+</tr>
+<tr>
+  <td><span class="nm">دیسپلازی سمنتو-استخوانی پری‌اپیکال — مرحلهٔ اولیه</span><span class="en">Periapical cemento-osseous dysplasia (early/osteolytic)</span></td>
+  <td>زن سیاه‌پوست میانسال؛ <b>قدام مندیبل (اینسایزورها)</b></td>
+  <td>مرحلهٔ اول کاملاً <b>RL</b> پری‌اپیکال شبیه گرانولوم؛ سپس مخلوط؛ نهایتاً اوپک با هالهٔ RL.</td>
+  <td><span style="color:var(--ok);font-weight:700">دندان زنده!</span> بی‌علامت، کشف اتفاقی.</td>
+  <td>بافت فیبروز سلولی + ترابکول‌های استخوان و توده‌های سمان‌مانند.</td>
+  <td><b>افتراق حیاتی از گرانولوم با تست پالپ.</b> <b>درمان:</b> هیچ — فقط مشاهده (بیوپسی ممنوع چون خونرسانی کم → استئومیلیت).</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست استخوانی تروماتیک (ساده)</span><span class="en">Traumatic / simple bone cyst</span></td>
+  <td>نوجوان/جوان؛ <b>بدنهٔ خلفی مندیبل</b></td>
+  <td>RL تک‌حفره‌ای با <b>اسکالوپ‌شدن مشخص بین ریشهٔ دندان‌ها</b>؛ بدون تحلیل ریشه؛ حاشیهٔ نازک.</td>
+  <td><span style="color:var(--ok);font-weight:700">دندان‌ها زنده</span>؛ بی‌علامت؛ سابقهٔ تروما.</td>
+  <td>حفرهٔ خالی یا با مایع سروزی؛ «کیست کاذب» بدون آستر اپی‌تلیال.</td>
+  <td>DDx: OKC، CGCG. <b>درمان:</b> کاوش جراحی (باز کردن خود محرک ترمیم است).</td>
+</tr>
+<tr>
+  <td><span class="nm">استئواسکلروز ایدیوپاتیک (مرحلهٔ قبل)/پاپیلای دندانی</span><span class="en">Normal anatomy mimics</span></td>
+  <td>—</td>
+  <td>ساختارهای آناتومیک (فورامن منتال، فوسای ساب‌مندیبولار، پاپیلای دندان در حال رویش) می‌توانند RL پری‌اپیکال کاذب بسازند.</td>
+  <td>دندان زنده، بدون علامت.</td>
+  <td>—</td>
+  <td>با تغییر زاویهٔ پرتو (SLOB) و ادامهٔ فضای PDL سالم افتراق می‌یابند. <b>درمان:</b> هیچ.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="pericoronal"><span class="pill rl">RADIOLUCENT</span> ۲) رادیولوسنسی‌های پری‌کرونال</h2>
+<p class="seclead">RL مرتبط با <b>تاج دندان نهفته</b> (اغلب مولر سوم یا کانین). نکتهٔ افتراقی کلیدی: محل اتصال به دندان و وجود یا نبود کلسیفیکاسیون داخلی. کیست دانتی‌جروس در محل CEJ می‌چسبد؛ ضایعهٔ &gt;۳–۴mm یا نامتقارن باید مشکوک به نئوپلاسم باشد.</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="dentigerous_cyst" src="images/dentigerous_cyst.jpg" alt="dentigerous_cyst" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="15" y="6" width="130" height="108" fill="#3a4250"/>
+      <path d="M58 70 q22 -16 44 0 l-6 38 h-32 z" fill="#e9edf2"/>
+      <path d="M64 64 q16 -50 32 0 q-16 -22 -32 0" fill="#0a0c10"/>
+      <ellipse cx="80" cy="44" rx="34" ry="26" fill="none" stroke="#0a0c10" stroke-width="10"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/dentigerous_cyst.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>کیست دانتی‌جروس</b>اتصال در CEJ، احاطهٔ تاج</div></div>
+  <div class="schema"><img class="rximg" data-key="aot_adenomatoid" src="images/aot_adenomatoid.jpg" alt="aot_adenomatoid" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="15" y="6" width="130" height="108" fill="#3a4250"/>
+      <path d="M62 60 q18 -10 36 0 l-7 48 h-22 z" fill="#e9edf2"/>
+      <ellipse cx="80" cy="50" rx="40" ry="38" fill="#0a0c10"/>
+      <g fill="#dfe6ee"><circle cx="68" cy="42" r="2.5"/><circle cx="86" cy="38" r="2"/><circle cx="92" cy="52" r="2.5"/><circle cx="70" cy="58" r="2"/><circle cx="82" cy="60" r="2.2"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/aot_adenomatoid.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>تومور آدنوماتوئید (AOT)</b>RL وسیع با «دانه‌برف» کلسیفیه</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / جنس / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>بالینی</th><th>هیستوپاتولوژی</th><th>تشخیص افتراقی و درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">کیست دانتی‌جروس (فولیکولی)</span><span class="en">Dentigerous cyst</span></td>
+  <td>۱۰–۳۰ سال؛ <b>شایع‌ترین کیست تکاملی</b>؛ مولر سوم پایین و کانین بالا</td>
+  <td>RL تک‌حفره‌ای با حاشیهٔ کورتیکه که <b>دقیقاً در CEJ به تاج می‌چسبد</b>؛ می‌تواند دندان را جابه‌جا و ریشهٔ مجاور را تحلیل دهد. فضای &gt;۳mm مشکوک.</td>
+  <td>بی‌علامت؛ تأخیر در رویش دندان.</td>
+  <td>آستر اپی‌تلیوم سنگفرشی نازک غیرکراتینیزه (۲–۴ لایه)، دیوارهٔ فیبروز.</td>
+  <td>DDx: OKC، آملوبلاستوما، فولیکول هیپرپلاستیک. <b>درمان:</b> انوکلیشن + خارج‌سازی دندان؛ خطر تبدیل به آملوبلاستوما/SCC.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست رویشی</span><span class="en">Eruption cyst</span></td>
+  <td>کودکان؛ روی دندان در حال رویش</td>
+  <td>معادل بافت‌نرمِ کیست دانتی‌جروس؛ تورم آبی-بنفش روی ریج.</td>
+  <td>تورم نرم نوسانی روی دندان.</td>
+  <td>مشابه دانتی‌جروس در بافت نرم.</td>
+  <td><b>درمان:</b> اغلب خودبه‌خود با رویش پاره می‌شود؛ گاه مارسوپیالیزیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">کراتوسیست ادونتوژنیک (OKC)</span><span class="en">Odontogenic keratocyst</span></td>
+  <td>۲۰–۴۰ سال؛ <b>زاویه و راموس مندیبل</b></td>
+  <td>RL تک یا مولتی‌لوکولار با حاشیهٔ نازک اسکالوپ؛ رشد در <b>جهت قدامی–خلفی</b> با گشادشدنِ کم؛ تحلیل/جابه‌جایی ملایم.</td>
+  <td>اغلب بی‌علامت؛ <b>عود بالا</b>.</td>
+  <td><span class="key">آستر کراتینیزهٔ پاراکراتوتیک ۶–۸ لایه، لایهٔ بازال پالیسادِ ستونی، سطح موجدار.</span></td>
+  <td>چندتایی → <b>سندرم گورلین (NBCCS)</b>. <b>درمان:</b> انوکلیشن تهاجمی + محلول کارنوی/استئکتومی محیطی.</td>
+</tr>
+<tr>
+  <td><span class="nm">آملوبلاستوما یونی‌سیستیک</span><span class="en">Unicystic ameloblastoma</span></td>
+  <td>جوانان (دههٔ ۲)؛ مولر سوم مندیبل</td>
+  <td>RL تک‌حفره‌ای پری‌کرونال شبیه دانتی‌جروس؛ گاه با لبهٔ اسکالوپ؛ گشادشدن بیشتر.</td>
+  <td>بی‌علامت تا تورم.</td>
+  <td>آستر اپی‌تلیومی با لایهٔ بازال پالیساد + هستهٔ قطبی‌شدهٔ معکوس (Vickers-Gorlin).</td>
+  <td>DDx: دانتی‌جروس، OKC. <b>درمان:</b> انوکلیشن؛ اگر mural → رزکسیون.</td>
+</tr>
+<tr>
+  <td><span class="nm">فیبروم آملوبلاستیک</span><span class="en">Ameloblastic fibroma</span></td>
+  <td>کودک/نوجوان (&lt;۲۰)؛ خلف مندیبل</td>
+  <td>RL تک/مولتی‌لوکولار مشخص، اغلب مرتبط با تاج دندان نروییده.</td>
+  <td>تورم بدون درد، آهسته.</td>
+  <td>هم اپی‌تلیوم و هم مزانشیم نئوپلاستیک (بدون سخت‌نسج).</td>
+  <td>DDx: دانتی‌جروس، آملوبلاستوما. <b>درمان:</b> انوکلیشن محافظه‌کارانه.</td>
+</tr>
+<tr>
+  <td><span class="nm">تومور ادونتوژنیک آدنوماتوئید (AOT)</span><span class="en">Adenomatoid odontogenic tumor</span></td>
+  <td><b>قانون دوسوم:</b> ۲/۳ زنان جوان، ۲/۳ ماگزیلای قدامی، ۲/۳ مرتبط با <b>کانین نهفته</b></td>
+  <td>RL با حاشیهٔ مشخص که <b>فراتر از CEJ تا روی ریشه گسترش می‌یابد</b>؛ غالباً کلسیفیکاسیون ریز «دانه‌برف/floccule».</td>
+  <td>تورم آهسته، بی‌درد.</td>
+  <td>ساختارهای دوکتال/روزت با مواد ائوزینوفیلیک؛ کپسول ضخیم.</td>
+  <td>DDx: دانتی‌جروس، COC، CEOT. <b>درمان:</b> انوکلیشن ساده؛ عود تقریباً صفر.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست ادونتوژنیک کلسیفیه‌شونده (گورلین)</span><span class="en">Calcifying odontogenic cyst (COC)</span></td>
+  <td>دههٔ ۲–۳؛ قدام فک‌ها</td>
+  <td>RL تک‌حفره‌ای که ممکن است <b>کلسیفیکاسیون پراکنده</b> داشته باشد (مخلوط)؛ گاه با ادونتوم همراه.</td>
+  <td>تورم بی‌درد.</td>
+  <td><span class="key">سلول‌های شبح (Ghost cells)</span> + کلسیفیکاسیون.</td>
+  <td>DDx: AOT، CEOT. <b>درمان:</b> انوکلیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">فولیکول دندانی هیپرپلاستیک</span><span class="en">Hyperplastic dental follicle</span></td>
+  <td>کودک/نوجوان؛ دندان نروییده</td>
+  <td>گشادشدن خفیف فضای فولیکولی، معمولاً <b>متقارن و &lt;۲.۵mm</b>.</td>
+  <td>بی‌علامت.</td>
+  <td>بافت همبند فولیکولی نرمال.</td>
+  <td>افتراق از دانتی‌جروس اولیه دشوار؛ <b>درمان:</b> اغلب مشاهده.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست پارادنتال</span><span class="en">Paradental cyst</span></td>
+  <td>جوان؛ سطح باکال مولر سوم پایینِ نیمه‌رویش‌یافتهٔ ملتهب</td>
+  <td>RL در سمت <b>باکال/دیستال</b> دندان نیمه‌رویش‌یافته، با پالپ زنده.</td>
+  <td>سابقهٔ پری‌کورونیت.</td>
+  <td>آستر التهابی شبیه کیست رادیکولار.</td>
+  <td><b>درمان:</b> انوکلیشن ± خارج‌سازی دندان.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="interradicular"><span class="pill rl">RADIOLUCENT</span> ۳) رادیولوسنسی‌های بین‌دندانی</h2>
+<p class="seclead">RL بین ریشهٔ دو دندانِ مجاور یا در فضاهای بین‌دندانی. محل قدامی ماگزیلا (خط وسط یا بین لترال و کانین) و کناره‌های ریشه راهنمای اصلی است. حیات پالپ دوباره کلیدی است: کیست لترال پریودنتال دندان زنده دارد، کیست لترال رادیکولار غیرزنده.</p>
+
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / جنس / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>بالینی</th><th>هیستوپاتولوژی</th><th>تشخیص افتراقی و درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">کیست نازوپالاتین (مجرای انسیزیو)</span><span class="en">Nasopalatine duct cyst</span></td>
+  <td>۴۰–۶۰ سال؛ مرد؛ <b>خط وسط ماگزیلای قدامی</b>؛ شایع‌ترین کیست غیرادونتوژنیک</td>
+  <td>RL <b>قلبی‌شکل/گرد</b> در خط وسط بین/بالای ریشهٔ سنترال‌ها، حاشیهٔ کورتیکه؛ آستانهٔ تشخیص &gt;<b>۶mm</b> (فورامن نرمال کوچک‌تر).</td>
+  <td>تورم کام قدامی، ترشح شور.</td>
+  <td>آستر متغیر (سنگفرشی/تنفسی)؛ دستهٔ نوروواسکولار در دیواره.</td>
+  <td>DDx: فورامن انسیزیو بزرگ، کیست رادیکولار سنترال. <b>درمان:</b> انوکلیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست لترال پریودنتال</span><span class="en">Lateral periodontal cyst</span></td>
+  <td>میانسال؛ <b>ناحیهٔ پرمولر–کانین مندیبل</b></td>
+  <td>RL گرد/بیضی مشخص کورتیکه در <b>کنار ریشهٔ دندان زنده</b>؛ اغلب &lt;۱cm. واریانت چندحفره‌ای = Botryoid.</td>
+  <td><span style="color:var(--ok);font-weight:700">دندان زنده</span>؛ بی‌علامت.</td>
+  <td>آستر نازک با تجمعات سلول شفاف (clear cell plaques) گلیکوژن‌دار.</td>
+  <td>DDx: کیست لترال رادیکولار، OKC. <b>درمان:</b> انوکلیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست لترال رادیکولار</span><span class="en">Lateral radicular cyst</span></td>
+  <td>هر سنی؛ کنار ریشهٔ دندان عفونی</td>
+  <td>RL در کنار ریشه، در محل خروج <b>کانال فرعی</b> لترال.</td>
+  <td><span class="mal">دندان غیرزنده</span>.</td>
+  <td>التهابی مشابه کیست رادیکولار.</td>
+  <td>افتراق از کیست لترال پریودنتال با <b>تست پالپ</b>. <b>درمان:</b> RCT/انوکلیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">«رادیولوسنسی گلوبولوماگزیلاری»</span><span class="en">Globulomaxillary radiolucency</span></td>
+  <td>—؛ بین <b>لترال و کانین ماگزیلا</b></td>
+  <td>RL <b>گلابی‌شکل معکوس</b> که ریشه‌ها را واگرا می‌کند. <b>یک موجودیت واحد نیست</b> بلکه محلِ شایع چند ضایعه.</td>
+  <td>بسته به علت.</td>
+  <td>متغیر.</td>
+  <td>DDx: کیست رادیکولار، OKC، کیست لترال پریودنتال، ادونتوژنیک‌های دیگر. <b>درمان:</b> بر اساس تشخیص نهایی.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست مدین (مندیبولار/پالاتال)</span><span class="en">Median mandibular/palatal cyst</span></td>
+  <td>بالغین؛ خط وسط</td>
+  <td>RL خط وسط؛ احتمالاً OKC یا کیست رادیکولار در خط وسط (وجود مستقلش بحث‌برانگیز است).</td>
+  <td>دندان‌های مجاور معمولاً زنده.</td>
+  <td>متغیر.</td>
+  <td>DDx: نازوپالاتین (در ماگزیلا). <b>درمان:</b> انوکلیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">درگیری فورکا/استخوان پریودنتال</span><span class="en">Periodontal bone loss / furcation</span></td>
+  <td>بزرگسالان با پریودنتیت</td>
+  <td>RL زاویه‌دار/افقی در کرست استخوان آلوئول و فورکیشن مولرها.</td>
+  <td>پاکت، تحرک، التهاب لثه.</td>
+  <td>التهاب پریودنتال.</td>
+  <td>DDx: ضایعهٔ اندو-پریو ترکیبی. <b>درمان:</b> پریودنتال.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="solitary-wd"><span class="pill rl">RADIOLUCENT</span> ۴) رادیولوسنسی منفرد با حاشیهٔ مشخص</h2>
+<p class="seclead">RL تک، با حاشیهٔ مشخص (کورتیکه یا غیرکورتیکه)، مستقل از رابطهٔ مستقیم با دندان. <b>حاشیهٔ کورتیکهٔ صاف = رشد آهسته و خوش‌خیم.</b> این دسته از کیست‌های ساده تا نئوپلاسم‌های خوش‌خیم تهاجمی را در بر می‌گیرد.</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="stafne_defect" src="images/stafne_defect.jpg" alt="stafne_defect" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <path d="M10 40 q70 -34 140 0 l0 44 q-70 30 -140 0 z" fill="#3a4250"/>
+      <line x1="14" y1="58" x2="146" y2="58" stroke="#222" stroke-width="3"/>
+      <ellipse cx="118" cy="70" rx="20" ry="14" fill="#0a0c10" stroke="#cfd6de" stroke-width="2"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/stafne_defect.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>دفکت استاتیک (Stafne)</b>زیر کانال مندیبل، خلف، کورتیکه</div></div>
+  <div class="schema"><img class="rximg" data-key="residual_unicystic_ameloblastoma" src="images/residual_unicystic_ameloblastoma.jpg" alt="residual_unicystic_ameloblastoma" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="20" width="136" height="80" fill="#3a4250"/>
+      <ellipse cx="80" cy="60" rx="46" ry="34" fill="#0a0c10" stroke="#cfd6de" stroke-width="2"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/residual_unicystic_ameloblastoma.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>کیست رزیجوال/آملوبلاستوما یونی</b>RL تک‌حفره با حاشیهٔ صاف</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / جنس / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>بالینی</th><th>هیستوپاتولوژی</th><th>تشخیص افتراقی و درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">کیست رزیجوال (باقی‌مانده)</span><span class="en">Residual cyst</span></td>
+  <td>میانسال/مسن؛ ناحیهٔ بی‌دندانی پس از کشیدن دندان</td>
+  <td>RL گرد کورتیکه در محل دندان کشیده‌شده (کیست رادیکولار باقی‌مانده).</td>
+  <td>بی‌علامت.</td>
+  <td>آستر سنگفرشی غیرکراتینیزه التهابی.</td>
+  <td>DDx: OKC رزیجوال، حفرهٔ ترمیمی. <b>درمان:</b> انوکلیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست پریماری/OKC پریموردیال</span><span class="en">Primordial cyst / OKC</span></td>
+  <td>جوان؛ خلف مندیبل (به‌جای دندان غایب)</td>
+  <td>RL تک‌حفره مشخص در محلی که دندان نباید/تشکیل نشده.</td>
+  <td>بی‌علامت؛ عود بالا اگر OKC.</td>
+  <td>اگر کراتینیزه = OKC.</td>
+  <td>DDx: همهٔ RLهای تک‌حفره. <b>درمان:</b> انوکلیشن تهاجمی.</td>
+</tr>
+<tr>
+  <td><span class="nm">دفکت غدهٔ بزاقی مندیبل (استاتیک/استافنه)</span><span class="en">Stafne (static) bone defect</span></td>
+  <td>مرد میانسال؛ <b>زیر کانال مندیبل، زاویهٔ خلفی</b></td>
+  <td>RL گرد <b>کاملاً کورتیکه و ثابت</b>، <b>پایین‌تر از کانال مندیبولار</b>؛ کاوش لینگوال غدهٔ ساب‌مندیبولار است.</td>
+  <td><span style="color:var(--ok);font-weight:700">کاملاً بی‌علامت</span> و غیرتکاملی.</td>
+  <td>بافت غدهٔ بزاقی نرمال یا چربی.</td>
+  <td>پاتوگنومونیک با محل و کورتکس؛ نیاز به سیالوگرافی/MRI. <b>درمان:</b> هیچ.</td>
+</tr>
+<tr>
+  <td><span class="nm">آملوبلاستوما (تک‌حفره/توپر)</span><span class="en">Ameloblastoma</span></td>
+  <td>۳۰–۵۰ سال؛ <b>راموس و خلف مندیبل</b></td>
+  <td>RL تک‌حفره با حاشیهٔ مشخص؛ گشادشدن باکولینگوال، <b>تحلیل ریشه و جابه‌جایی دندان</b>؛ نوع توپر اغلب مولتی‌لوکولار.</td>
+  <td>تورم بدون درد، رشد آهسته اما تهاجم موضعی.</td>
+  <td>اپی‌تلیوم با لایهٔ بازال پالیساد و قطبیت معکوس؛ رتیکولوم ستاره‌ای.</td>
+  <td>DDx: OKC، CGCG، میگزوما. <b>درمان:</b> رزکسیون با حاشیهٔ سالم (۱–۱.۵cm)؛ عود بالا با کورتاژ.</td>
+</tr>
+<tr>
+  <td><span class="nm">میگزومای ادونتوژنیک</span><span class="en">Odontogenic myxoma</span></td>
+  <td>۲۰–۴۰ سال؛ خلف مندیبل</td>
+  <td>RL تک یا مولتی‌لوکولار با سپتوم‌های <b>نازک، مستقیم و زاویه‌دار («تنیس راکت/شعله‌ای»)</b>؛ جابه‌جایی دندان.</td>
+  <td>تورم آهسته بی‌درد.</td>
+  <td>بافت میگزوماتوز ژلاتینی شل با کلاژن کم.</td>
+  <td>DDx: آملوبلاستوما، CGCG. <b>درمان:</b> رزکسیون (کپسول ندارد، عود).</td>
+</tr>
+<tr>
+  <td><span class="nm">گرانولوم سلول ژانت مرکزی (مرحلهٔ اولیه)</span><span class="en">Central giant cell granuloma</span></td>
+  <td><b>&lt;۳۰ سال، زن</b>؛ <b>قدام مندیبل (عبور از خط وسط)</b></td>
+  <td>اوایل RL تک‌حفره؛ سپس مولتی‌لوکولار با سپتوم‌های ظریف؛ گاه تهاجمی با تحلیل ریشه.</td>
+  <td>تورم بی‌درد؛ نوع تهاجمی دردناک.</td>
+  <td>سلول‌های ژانت چندهسته‌ای در استرومای فیبروز عروقی + هموسیدرین.</td>
+  <td><b>مشابه «تومور قهوه‌ای» هیپرپاراتیروئیدی</b> → چک کلسیم/PTH. <b>درمان:</b> کورتاژ ± تزریق استروئید/کلسی‌تونین.</td>
+</tr>
+<tr>
+  <td><span class="nm">همانژیوم مرکزی استخوان</span><span class="en">Central hemangioma</span></td>
+  <td>کودک/جوان؛ زن؛ خلف مندیبل</td>
+  <td>RL مولتی‌لوکولار «<b>کندوی عسل/چرخ ارابه</b>»؛ گاه گشادشدن.</td>
+  <td>ممکن است نبض/تریل؛ <span class="mal">خطر خونریزی شدید هنگام بیوپسی/کشیدن دندان!</span></td>
+  <td>کانال‌های عروقی.</td>
+  <td><b>قبل از هر مداخله آسپیراسیون و آنژیوگرافی.</b> <b>درمان:</b> آمبولیزاسیون/جراحی.</td>
+</tr>
+<tr>
+  <td><span class="nm">تومور ادونتوژنیک سنگفرشی</span><span class="en">Squamous odontogenic tumor</span></td>
+  <td>جوان/میانسال؛ کنار ریشه</td>
+  <td>RL مثلثی/نیم‌دایره کنار ریشهٔ دندان زنده.</td>
+  <td>گاه تحرک دندان.</td>
+  <td>جزایر اپی‌تلیوم سنگفرشی بالغ.</td>
+  <td>DDx: کیست لترال، پریودنتیت. <b>درمان:</b> اکسیزیون موضعی.</td>
+</tr>
+<tr>
+  <td><span class="nm">فیبروم استخوانی‌کننده (اولیه/لیتیک)</span><span class="en">Ossifying fibroma (early)</span></td>
+  <td>۲۰–۴۰ سال؛ زن؛ خلف مندیبل</td>
+  <td>اوایل RL کاملاً مشخص و کورتیکه (مرکزدار)؛ سپس مخلوط و اوپک.</td>
+  <td>تورم آهستهٔ متقارن.</td>
+  <td>استرومای فیبروز + ترابکول/توده‌های سمان‌مانند؛ <b>کپسوله</b>.</td>
+  <td>افتراق مهم از فیبروس دیسپلازی (FD کپسول ندارد و در استخوان محو می‌شود). <b>درمان:</b> انوکلیشن (به‌خوبی جدا می‌شود).</td>
+</tr>
+<tr>
+  <td><span class="nm">هیستیوسیتوز سلول لانگرهانس (منفرد)</span><span class="en">Langerhans cell histiocytosis</span></td>
+  <td>کودک/جوان؛ هر جای فک</td>
+  <td>RL «<b>پانچ‌شده/scooped-out</b>» با حاشیهٔ نسبتاً مشخص؛ درگیری آلوئول → <b>«دندان شناور»</b>.</td>
+  <td>درد، تورم، تحرک دندان، زخم لثه.</td>
+  <td>سلول‌های لانگرهانس + ائوزینوفیل؛ گرانول Birbeck، CD1a/S100+.</td>
+  <td>DDx: پریودنتیت تهاجمی، بدخیمی. <b>درمان:</b> کورتاژ/استروئید؛ بررسی سیستمیک.</td>
+</tr>
+<tr>
+  <td><span class="nm">دفکت مغز استخوان استئوپوروتیک فوکال</span><span class="en">Focal osteoporotic marrow defect</span></td>
+  <td>زن میانسال؛ ناحیهٔ مولر مندیبل بی‌دندان</td>
+  <td>RL نامنظمِ کم‌رنگ بدون گشادشدن، در محل کشیدن دندان قبلی.</td>
+  <td>بی‌علامت، اتفاقی.</td>
+  <td>مغز استخوان هماتوپویتیک نرمال.</td>
+  <td>تشخیص با رد سایرین؛ <b>درمان:</b> هیچ (گاه بیوپسی برای اطمینان).</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="multilocular"><span class="pill rl">RADIOLUCENT</span> ۵) رادیولوسنسی مولتی‌لوکولار</h2>
+<p class="seclead">RL چندحفره‌ای با سپتوم‌های استخوانی داخلی. این یکی از کلاسیک‌ترین تشخیص‌های افتراقی است. <b>نکتهٔ افتراقی = شکل سپتوم‌ها، محل، سن، و یک/دوطرفه‌بودن.</b> «کف صابون = آملوبلاستوما»، «کندوی عسل = همانژیوم/میگزوما»، «دوطرفه در کودک = کروبیسم».</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="ameloblastoma_soap_bubble" src="images/ameloblastoma_soap_bubble.jpg" alt="ameloblastoma_soap_bubble" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="10" y="22" width="140" height="76" fill="#0a0c10" stroke="#cfd6de" stroke-width="2"/>
+      <g fill="none" stroke="#aeb8c6" stroke-width="2.5">
+        <circle cx="42" cy="48" r="16"/><circle cx="74" cy="58" r="20"/><circle cx="110" cy="50" r="18"/>
+        <circle cx="55" cy="80" r="14"/><circle cx="98" cy="82" r="15"/>
+      </g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/ameloblastoma_soap_bubble.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>آملوبلاستوما</b>«کف صابون» — حباب‌های بزرگ</div></div>
+  <div class="schema"><img class="rximg" data-key="hemangioma_myxoma_honeycomb" src="images/hemangioma_myxoma_honeycomb.jpg" alt="hemangioma_myxoma_honeycomb" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="10" y="22" width="140" height="76" fill="#0a0c10" stroke="#cfd6de" stroke-width="2"/>
+      <g fill="none" stroke="#aeb8c6" stroke-width="1.6">
+        <path d="M18 30 h124 M18 48 h124 M18 66 h124 M18 84 h124"/>
+        <path d="M38 24 v74 M62 24 v74 M86 24 v74 M110 24 v74 M134 24 v74"/>
+      </g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/hemangioma_myxoma_honeycomb.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>همانژیوم/میگزوما</b>«کندوی عسل» — حفرات ریز</div></div>
+  <div class="schema"><img class="rximg" data-key="cherubism" src="images/cherubism.jpg" alt="cherubism" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <path d="M6 60 q24 -42 60 0 z" fill="#0a0c10" stroke="#cfd6de" stroke-width="2"/>
+      <path d="M154 60 q-24 -42 -60 0 z" fill="#0a0c10" stroke="#cfd6de" stroke-width="2"/>
+      <text x="80" y="95" fill="#7d8794" font-size="9" text-anchor="middle">دوطرفهٔ متقارن</text>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/cherubism.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>کروبیسم</b>دوطرفه، زاویهٔ مندیبل، کودک</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / جنس</th><th>محل ترجیحی</th><th class="col-rx">الگوی مولتی‌لوکولار / ویژگی متمایز</th><th>سرنخ کلیدی</th><th>درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">آملوبلاستوما</span><span class="en">Ameloblastoma</span></td>
+  <td>۳۰–۵۰؛ بدون ترجیح جنسی</td>
+  <td><b>راموس/زاویه و خلف مندیبل</b></td>
+  <td>حباب‌های درشت «<b>کف صابون</b>»؛ گشادشدن باکولینگوال شدید، <b>تحلیل ریشه</b> و جابه‌جایی دندان.</td>
+  <td>تهاجم موضعی، نفوذ به مدولا فراتر از مرز رادیوگرافیک.</td>
+  <td>رزکسیون با حاشیه</td>
+</tr>
+<tr>
+  <td><span class="nm">کراتوسیست (OKC)</span><span class="en">Odontogenic keratocyst</span></td>
+  <td>۲۰–۴۰</td>
+  <td>زاویه/راموس مندیبل</td>
+  <td>سپتوم‌های ظریف؛ رشد <b>قدامی-خلفی با گشادشدن کم</b>؛ حاشیهٔ اسکالوپ.</td>
+  <td>عود بالا؛ چندتایی = سندرم گورلین.</td>
+  <td>انوکلیشن تهاجمی + کارنوی</td>
+</tr>
+<tr>
+  <td><span class="nm">گرانولوم سلول ژانت مرکزی</span><span class="en">Central giant cell granuloma</span></td>
+  <td><b>&lt;۳۰، زن</b></td>
+  <td><b>قدام مندیبل، عبور از خط وسط</b></td>
+  <td>سپتوم‌های ظریف عمود بر حاشیه؛ گاه گرانولار.</td>
+  <td>چک PTH برای رد «تومور قهوه‌ای».</td>
+  <td>کورتاژ ± تزریق دارو</td>
+</tr>
+<tr>
+  <td><span class="nm">میگزومای ادونتوژنیک</span><span class="en">Odontogenic myxoma</span></td>
+  <td>۲۰–۴۰</td>
+  <td>خلف مندیبل</td>
+  <td>سپتوم‌های <b>نازک، مستقیم، زاویه‌دار</b> («تنیس‌راکت/کندوی عسل»).</td>
+  <td>ژله‌ای، بدون کپسول، عود.</td>
+  <td>رزکسیون</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست استخوانی آنوریسمال</span><span class="en">Aneurysmal bone cyst</span></td>
+  <td><b>&lt;۲۰، جوان</b></td>
+  <td>خلف مندیبل</td>
+  <td>RL مولتی‌لوکولار <b>«بادکرده/ballooning»</b> با گشادشدن کورتکس؛ سطوح مایع-مایع در MRI/CT.</td>
+  <td>رشد سریع، حفرات پر از خون.</td>
+  <td>کورتاژ/اکسیزیون</td>
+</tr>
+<tr>
+  <td><span class="nm">کروبیسم</span><span class="en">Cherubism</span></td>
+  <td><b>کودک ۲–۵ سال</b>؛ ارثی AD</td>
+  <td><b>دوطرفهٔ متقارن زاویهٔ مندیبل</b> (± ماگزیلا)</td>
+  <td>RL مولتی‌لوکولار <b>دوطرفه</b>؛ دندان‌های جابه‌جا/نروییده «شناور»؛ ظاهر «صورت فرشته».</td>
+  <td>دوطرفگی + سن پایین + سابقهٔ خانوادگی.</td>
+  <td>اغلب با بلوغ پسرفت می‌کند</td>
+</tr>
+<tr>
+  <td><span class="nm">همانژیوم مرکزی</span><span class="en">Central hemangioma</span></td>
+  <td>کودک/جوان، زن</td>
+  <td>خلف مندیبل</td>
+  <td>«<b>کندوی عسل/چرخ ارابه</b>» با خطوط شعاعی؛ گاه گشادشدن.</td>
+  <td><span class="mal">نبض/تریل؛ خطر خونریزی کشنده.</span></td>
+  <td>آمبولیزاسیون قبل از جراحی</td>
+</tr>
+<tr>
+  <td><span class="nm">فیبروم آملوبلاستیک</span><span class="en">Ameloblastic fibroma</span></td>
+  <td>کودک/نوجوان</td>
+  <td>خلف مندیبل</td>
+  <td>RL مولتی/تک‌حفره مشخص، اغلب با دندان نروییده.</td>
+  <td>سن پایین.</td>
+  <td>انوکلیشن محافظه‌کارانه</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="illdefined"><span class="pill rl">RADIOLUCENT</span> ۶) رادیولوسنسی منفرد با حاشیهٔ نامشخص</h2>
+<p class="seclead"><span class="mal">دستهٔ پرخطر.</span> حاشیهٔ منتشر و نفوذی («پروانه‌خورده / moth-eaten»)، تخریب کورتکس، و تحلیل ریشهٔ تیز = نشانهٔ <b>بدخیمی یا استئومیلیت</b>. پارستزی لب (علامت Vincent) زنگ خطر جدی است. بیوپسی فوری ضروری است.</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="moth_eaten_osteomyelitis" src="images/moth_eaten_osteomyelitis.jpg" alt="moth_eaten_osteomyelitis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="20" width="136" height="80" fill="#3a4250"/>
+      <g fill="#0a0c10"><circle cx="50" cy="45" r="7"/><circle cx="70" cy="60" r="9"/><circle cx="92" cy="48" r="6"/><circle cx="108" cy="66" r="8"/><circle cx="60" cy="78" r="5"/><circle cx="86" cy="74" r="7"/><circle cx="120" cy="50" r="5"/><circle cx="40" cy="64" r="5"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/moth_eaten_osteomyelitis.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>پروانه‌خورده (Moth-eaten)</b>استئومیلیت / بدخیمی</div></div>
+  <div class="schema"><img class="rximg" data-key="sunburst_osteosarcoma" src="images/sunburst_osteosarcoma.jpg" alt="sunburst_osteosarcoma" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="55" width="136" height="45" fill="#3a4250"/>
+      <g stroke="#eef2f6" stroke-width="2"><line x1="80" y1="55" x2="50" y2="12"/><line x1="80" y1="55" x2="70" y2="8"/><line x1="80" y1="55" x2="92" y2="8"/><line x1="80" y1="55" x2="112" y2="14"/><line x1="80" y1="55" x2="80" y2="6"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/sunburst_osteosarcoma.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>تابش خورشید (Sunburst)</b>استئوسارکوم — واکنش پریوست</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>بالینی</th><th>هیستوپاتولوژی</th><th>درمان/پیش‌آگهی</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">استئومیلیت (حاد/مزمن)</span><span class="en">Osteomyelitis</span></td>
+  <td>هر سن؛ مندیبل (خونرسانی کمتر)</td>
+  <td>RL «پروانه‌خورده» نامشخص؛ مزمن: قطعات استخوان مرده (<b>سکستروم</b>) و واکنش پریوست لایه‌ای.</td>
+  <td>درد، تورم، تب، ترشح چرک، پارستزی.</td>
+  <td>التهاب چرکی + استخوان نکروزه.</td>
+  <td>آنتی‌بیوتیک طولانی + دبریدمان/سکسترکتومی.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئورادیونکروز / MRONJ</span><span class="en">ORN / MRONJ</span></td>
+  <td>سابقهٔ رادیوتراپی یا بیس‌فسفونات</td>
+  <td>RL نامنظم با اوپسیتهٔ سکستر؛ تأخیر در ترمیم حفرهٔ کشیدن دندان.</td>
+  <td>استخوان اکسپوز دردناک، عدم ترمیم &gt;۸ هفته.</td>
+  <td>استخوان نکروز غیرحیاتی.</td>
+  <td>محافظه‌کارانه؛ پرهیز از جراحی وسیع.</td>
+</tr>
+<tr>
+  <td><span class="nm">کارسینوم سلول سنگفرشی (تهاجم به استخوان)</span><span class="en">Squamous cell carcinoma</span></td>
+  <td>مسن؛ مندیبل خلفی/ریج آلوئول</td>
+  <td>RL نامنظم «پروانه‌خورده» با تخریب کورتکس؛ <span class="mal">تحلیل ریشهٔ تیز، دندان «شناور» در RL</span>.</td>
+  <td>زخم بدخیم لثه، درد، تحرک دندان، پارستزی.</td>
+  <td>جزایر اپی‌تلیوم بدخیم با کراتین مروارید.</td>
+  <td>جراحی ± رادیو/کمو؛ پیش‌آگهی متغیر.</td>
+</tr>
+<tr>
+  <td><span class="nm">کارسینوم متاستاتیک به فک</span><span class="en">Metastatic carcinoma</span></td>
+  <td>مسن؛ <b>خلف مندیبل</b> (مغز استخوان فعال)</td>
+  <td>RL نامشخص منفرد یا چندگانه؛ منشأ شایع: پستان، ریه، پروستات، کلیه، تیروئید.</td>
+  <td>درد، تورم، <b>پارستزی (Numb chin)</b>، تحرک دندان.</td>
+  <td>بسته به تومور اولیه.</td>
+  <td>تسکینی؛ پیش‌آگهی بد.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئوسارکوم</span><span class="en">Osteosarcoma</span></td>
+  <td><b>۳۰–۴۰ در فک</b> (دیرتر از استخوان‌های دراز)؛ مندیبل/ماگزیلا</td>
+  <td>RL یا مخلوط نامنظم؛ <span class="mal">گشادشدن متقارن یک‌نواخت فضای PDL</span>، واکنش <b>«تابش خورشید»</b> و Codman triangle.</td>
+  <td>تورم سریع، درد، پارستزی، شُلی دندان.</td>
+  <td>استرومای سارکوماتوز که <b>استئویید مستقیم</b> می‌سازد.</td>
+  <td>رزکسیون وسیع + کمو؛ پیش‌آگهی محتاطانه.</td>
+</tr>
+<tr>
+  <td><span class="nm">کندروسارکوم</span><span class="en">Chondrosarcoma</span></td>
+  <td>میانسال؛ <b>ماگزیلای قدامی</b>، سپتوم بینی، کندیل</td>
+  <td>RL/مخلوط با کلسیفیکاسیون نقطه‌ای/پاپ‌کورن غضروفی؛ گشادشدن PDL.</td>
+  <td>تورم بدون درد اولیه.</td>
+  <td>غضروف بدخیم.</td>
+  <td>رزکسیون وسیع (به کمو/رادیو مقاوم).</td>
+</tr>
+<tr>
+  <td><span class="nm">فیبروسارکوم / سارکوم‌های دیگر</span><span class="en">Fibrosarcoma</span></td>
+  <td>هر سن</td>
+  <td>RL نفوذی نامشخص با تخریب استخوان.</td>
+  <td>تودهٔ سریع‌الرشد.</td>
+  <td>دوک‌سلولی الگوی شاه‌ماهی استخوان.</td>
+  <td>جراحی وسیع.</td>
+</tr>
+<tr>
+  <td><span class="nm">کارسینوم/سارکوم ادونتوژنیک بدخیم</span><span class="en">Ameloblastic carcinoma</span></td>
+  <td>میانسال</td>
+  <td>RL نامشخص تهاجمی با تخریب کورتکس (آملوبلاستومای بدخیم‌شده).</td>
+  <td>رشد سریع، درد.</td>
+  <td>آملوبلاستوما با آتیپی و میتوز بالا.</td>
+  <td>رزکسیون وسیع.</td>
+</tr>
+<tr>
+  <td><span class="nm">لنفوم (از جمله بورکیت)</span><span class="en">Lymphoma / Burkitt</span></td>
+  <td>بورکیت: کودک (آفریقا)، ماگزیلا</td>
+  <td>RL نامشخص منتشر؛ تخریب لامینا دورا، تورم سریع و گسترده.</td>
+  <td>تورم بسیار سریع، شُلی دندان.</td>
+  <td>«آسمان پرستاره» (بورکیت).</td>
+  <td>شیمی‌درمانی (به‌خوبی پاسخ‌دهنده).</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="multiple-rl"><span class="pill rl">RADIOLUCENT</span> ۷) رادیولوسنسی‌های چندگانهٔ مجزا</h2>
+<p class="seclead">چند RL جداگانه = به‌شدت به‌نفع بیماری <b>سیستمیک یا سندرمیک</b>. همیشه به متاستاز، میلوما، هیستیوسیتوز و سندرم گورلین فکر کن.</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="punched_out_myeloma" src="images/punched_out_myeloma.jpg" alt="punched_out_myeloma" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="14" width="136" height="92" fill="#3a4250"/>
+      <g fill="#0a0c10"><circle cx="40" cy="40" r="9"/><circle cx="72" cy="34" r="8"/><circle cx="106" cy="44" r="10"/><circle cx="55" cy="72" r="9"/><circle cx="90" cy="78" r="8"/><circle cx="124" cy="74" r="9"/><circle cx="30" cy="86" r="6"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/punched_out_myeloma.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>پانچ‌شده (Punched-out)</b>میلوما / متاستاز / LCH</div></div>
+  <div class="schema"><img class="rximg" data-key="floating_teeth_lch" src="images/floating_teeth_lch.jpg" alt="floating_teeth_lch" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="14" width="136" height="92" fill="#0a0c10"/>
+      <g fill="#e9edf2"><path d="M40 30 l8 0 -3 40 -2 0z"/><path d="M70 26 l8 0 -3 44 -2 0z"/><path d="M100 32 l8 0 -3 38 -2 0z"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/floating_teeth_lch.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>دندان شناور (Floating teeth)</b>LCH / پریودنتیت شدید</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>سرنخ سیستمیک / تشخیصی</th><th>درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">مولتیپل میلوما</span><span class="en">Multiple myeloma</span></td><td>مسن (&gt;۴۰)؛ جمجمه، مندیبل</td>
+  <td>RLهای متعدد <b>«پانچ‌شده» با حاشیهٔ تیز و بدون اسکلروز</b>، هم‌اندازه.</td>
+  <td>پروتئین M، بنس-جونز ادراری، پلاسماسل مغز استخوان، درد استخوان.</td><td>کمو/پیوند؛ پیش‌آگهی بد.</td>
+</tr>
+<tr>
+  <td><span class="nm">کارسینوم متاستاتیک</span><span class="en">Metastatic carcinoma</span></td><td>مسن؛ خلف مندیبل</td>
+  <td>RLهای متعدد <b>نامشخص و نامنظم</b> (برخلاف مرز تیز میلوما).</td>
+  <td>سابقهٔ سرطان (پستان/ریه/پروستات/کلیه/تیروئید)، پارستزی.</td><td>تسکینی.</td>
+</tr>
+<tr>
+  <td><span class="nm">هیستیوسیتوز سلول لانگرهانس</span><span class="en">Langerhans cell histiocytosis</span></td><td>کودک/جوان</td>
+  <td>RLهای «پانچ‌شده»؛ درگیری آلوئول → دندان شناور.</td>
+  <td>ضایعات پوست/جمجمه، دیابت بی‌مزه (Hand-Schüller-Christian)، CD1a+.</td><td>کورتاژ/استروئید/کمو سیستمیک.</td>
+</tr>
+<tr>
+  <td><span class="nm">سندرم نووس سلول بازال (گورلین)</span><span class="en">Basal cell nevus syndrome</span></td><td>جوان؛ ارثی AD (PTCH1)</td>
+  <td><b>OKCهای متعدد</b> در هر دو فک.</td>
+  <td>BCCهای متعدد، کلسیفیکاسیون فالکس، دنده‌های دوشاخه، گودی کف دست/پا.</td><td>برداشتن کیست‌ها + پیگیری مادام‌العمر.</td>
+</tr>
+<tr>
+  <td><span class="nm">دیسپلازی سمنتو-استخوانی فلورید (مرحلهٔ اولیه)</span><span class="en">Florid COD (early)</span></td><td>زن سیاه‌پوست مسن</td>
+  <td>چند RL پری‌اپیکال در چند ربع که بعداً اوپک می‌شوند.</td>
+  <td><b>دندان‌ها زنده</b>؛ دوطرفه/متقارن.</td><td>مشاهده.</td>
+</tr>
+<tr>
+  <td><span class="nm">لوسمی</span><span class="en">Leukemia</span></td><td>کودکان</td>
+  <td>RL منتشر، نازک‌شدن لامینا دورا، تحلیل کرست آلوئول.</td>
+  <td>هیپرتروفی/خونریزی لثه، خستگی، عفونت مکرر.</td><td>کمو سیستمیک.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="generalized-rl"><span class="pill rl">RADIOLUCENT</span> ۸) کاهش دانسیتهٔ منتشر (Generalized Rarefactions)</h2>
+<p class="seclead">کاهش کلی تراکم استخوان در سراسر فک‌ها — معمولاً تظاهر بیماری‌های متابولیک/خونی. <b>وضعیت لامینا دورا و الگوی ترابکولاسیون</b> سرنخ اصلی است.</p>
+
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr>
+  <th class="col-nm">بیماری</th><th>پاتوفیزیولوژی</th><th class="col-rx">یافتهٔ رادیوگرافیک شاخص</th><th>یافتهٔ آزمایشگاهی/سیستمیک</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">هیپرپاراتیروئیدی</span><span class="en">Hyperparathyroidism</span></td>
+  <td>PTH↑ → بازجذب استخوان</td>
+  <td><span class="key">از بین رفتن لامینا دورا</span>، الگوی <b>«شیشهٔ مات/ground glass»</b>، <b>تومور قهوه‌ای</b> (RL مشابه CGCG)، نازک‌شدن کورتکس.</td>
+  <td>کلسیم↑، فسفر↓، PTH↑، ALP↑. «استخوان، سنگ، شکم، روان».</td>
+</tr>
+<tr>
+  <td><span class="nm">استئوپوروز</span><span class="en">Osteoporosis</span></td>
+  <td>کاهش تودهٔ استخوان</td>
+  <td>کاهش تراکم عمومی، نازک‌شدن کورتکس تحتانی مندیبل، ترابکول‌های درشت‌شده.</td>
+  <td>زن یائسه، شکستگی، DEXA↓.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئومالاسی/راشیتیسم</span><span class="en">Osteomalacia / rickets</span></td>
+  <td>کمبود ویتامین D / معدنی‌نشدن</td>
+  <td>کاهش تراکم، لامینا دورا محو، تأخیر رویش، مینای هیپوپلاستیک.</td>
+  <td>کلسیم/فسفر↓، ALP↑.</td>
+</tr>
+<tr>
+  <td><span class="nm">تالاسمی</span><span class="en">Thalassemia</span></td>
+  <td>هایپرپلازی مغز استخوان</td>
+  <td><b>ترابکول «سیم مرغی/chicken-wire»</b>، گشادشدن ماگزیلا («صورت موش‌خرما»)، «<b>مو-روی-سر/hair-on-end</b>» در جمجمه.</td>
+  <td>آنمی میکروسیتیک، هموگلوبینوپاتی.</td>
+</tr>
+<tr>
+  <td><span class="nm">آنمی سلول داسی</span><span class="en">Sickle cell anemia</span></td>
+  <td>هایپرپلازی مغز استخوان + انفارکت</td>
+  <td>ترابکول «<b>پلکانی/stepladder</b>» بین دندان‌ها، کاهش تراکم.</td>
+  <td>کرایز درد، Hb داسی.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئوپوروز سیرکومسکریپتا (پاژه فاز اول)</span><span class="en">Osteoporosis circumscripta</span></td>
+  <td>مرحلهٔ لیتیک پاژه</td>
+  <td>RL وسیع جمجمه‌ای قبل از فاز اوپک پشم‌پنبه‌ای.</td>
+  <td>ALP بسیار بالا.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- ===================== رادیواوپک ===================== -->
+<h2 class="sec" id="periapical-ro"><span class="pill ro">RADIOPAQUE</span> ۹) رادیواوپسیتی‌های پری‌اپیکال</h2>
+<p class="seclead">تودهٔ روشن‌تر از استخوان در اپکس. <b>سه افتراق کلیدی:</b> (۱) حیات پالپ، (۲) وجود/نبود هالهٔ RL دور توده، (۳) اتصال یا عدم اتصال به ریشه. سمنتوبلاستوما به ریشه می‌چسبد و هالهٔ RL دارد؛ استئواسکلروز ایدیوپاتیک هاله ندارد و دندان زنده است؛ استئیت متراکم‌کننده با دندان غیرزنده همراه است.</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="condensing_osteitis" src="images/condensing_osteitis.jpg" alt="condensing_osteitis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="20" y="6" width="120" height="56" fill="#3a4250"/>
+      <path d="M70 6 L90 6 L84 62 L76 62 Z" fill="#e9edf2"/>
+      <ellipse cx="80" cy="74" rx="22" ry="18" fill="#f2f4f7"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/condensing_osteitis.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>استئیت متراکم‌کننده</b>اوپک بدون هاله، دندان غیرزنده</div></div>
+  <div class="schema"><img class="rximg" data-key="cementoblastoma" src="images/cementoblastoma.jpg" alt="cementoblastoma" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="20" y="6" width="120" height="48" fill="#3a4250"/>
+      <path d="M72 6 L88 6 L83 54 L77 54 Z" fill="#e9edf2"/>
+      <circle cx="80" cy="74" r="24" fill="#0a0c10"/>
+      <circle cx="80" cy="74" r="19" fill="#f2f4f7"/>
+      <path d="M80 55 l0 38" stroke="#cfd6de" stroke-width="3"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/cementoblastoma.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>سمنتوبلاستوما</b>توده چسبیده به ریشه + هالهٔ RL</div></div>
+  <div class="schema"><img class="rximg" data-key="idiopathic_osteosclerosis" src="images/idiopathic_osteosclerosis.jpg" alt="idiopathic_osteosclerosis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="20" y="6" width="120" height="60" fill="#3a4250"/>
+      <ellipse cx="92" cy="80" rx="16" ry="13" fill="#f2f4f7"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/idiopathic_osteosclerosis.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>استئواسکلروز ایدیوپاتیک</b>جزیرهٔ متراکم، بدون هاله، زنده</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-ro">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>حیات پالپ / هاله RL</th><th>هیستوپاتولوژی / درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">استئیت متراکم‌کننده (استئومیلیت اسکلروزان فوکال)</span><span class="en">Condensing osteitis</span></td>
+  <td>جوان/میانسال؛ <b>اپکس مولر اول مندیبل</b></td>
+  <td>تودهٔ اوپک منتشر در اپکس دندانِ دارای پوسیده/پالپیت مزمن؛ بدون گشادشدن.</td>
+  <td><span class="mal">غیرزنده/پالپیت</span>؛ <b>بدون هالهٔ RL</b>.</td>
+  <td>استخوان متراکم واکنشی به التهاب خفیف. درمان: RCT؛ ضایعه ممکن بماند (استخوان اسکلروتیک باقی‌مانده/osteosclerosis).</td>
+</tr>
+<tr>
+  <td><span class="nm">استئواسکلروز ایدیوپاتیک (انوستوز/جزیرهٔ استخوان متراکم)</span><span class="en">Idiopathic osteosclerosis</span></td>
+  <td>جوان؛ <b>پره‌مولر/مولر مندیبل</b></td>
+  <td>تودهٔ اوپک متراکم با حاشیهٔ مشخص، بدون رابطه با التهاب؛ ثابت می‌ماند.</td>
+  <td><span style="color:var(--ok);font-weight:700">دندان زنده</span>؛ <b>بدون هالهٔ RL</b>.</td>
+  <td>استخوان متراکم بدون علت. درمان: هیچ (یافتهٔ اتفاقی).</td>
+</tr>
+<tr>
+  <td><span class="nm">سمنتوبلاستوما</span><span class="en">Cementoblastoma</span></td>
+  <td><b>&lt;۲۵ سال</b>؛ <b>اپکس مولر/پرمولر اول مندیبل</b></td>
+  <td>تودهٔ اوپک گرد <b>چسبیده و در ادامهٔ ریشه</b>، با الگوی شعاعی داخلی و <b>هالهٔ RL محیطی</b>؛ محو شدن طرح ریشه.</td>
+  <td><span style="color:var(--ok);font-weight:700">دندان زنده</span>؛ <b>هالهٔ RL دارد</b>؛ گاه درد/تورم.</td>
+  <td>سمنتوبلاست‌ها + سمان شبیه استئوبلاستوما. درمان: خارج‌سازی دندان + توده.</td>
+</tr>
+<tr>
+  <td><span class="nm">هایپرسمنتوز</span><span class="en">Hypercementosis</span></td>
+  <td>بزرگسالان؛ هر دندان (به‌ویژه پره‌مولر)</td>
+  <td>کلفت‌شدن گلابی‌شکل ریشه از سمان اضافی؛ <b>فضای PDL و لامینا دورا دور آن سالم می‌ماند</b>.</td>
+  <td>دندان معمولاً زنده.</td>
+  <td>سمان ثانویهٔ اضافی. درمان: هیچ (همراه پاژه/اکلوژن بیش از حد).</td>
+</tr>
+<tr>
+  <td><span class="nm">دیسپلازی سمنتو-استخوانی پری‌اپیکال (مرحلهٔ بالغ)</span><span class="en">Mature PCOD</span></td>
+  <td>زن سیاه‌پوست میانسال؛ قدام مندیبل</td>
+  <td>تودهٔ اوپک پری‌اپیکال با <b>هالهٔ RL محیطی</b> (مرحلهٔ نهایی پس از RL و مخلوط).</td>
+  <td><span style="color:var(--ok);font-weight:700">دندان زنده!</span></td>
+  <td>توده‌های سمان/استخوان در فیبروز. <b>درمان: هیچ — بیوپسی نکن.</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="solitary-ro"><span class="pill ro">RADIOPAQUE</span> ۱۰) رادیواوپسیتی منفرد</h2>
+<p class="seclead">تودهٔ اوپک منفرد مستقل از اپکس. ابتدا تعیین کن داخل‌استخوانی است یا کلسیفیکاسیون بافت‌نرم رویِ تصویر (سیالولیت، گرهٔ کلسیفیه، تونسیلولیت). توروس و استئوم شایع‌ترین‌های داخل‌استخوانی خوش‌خیم‌اند.</p>
+
+<div class="tablewrap">
+<table class="t-ro">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>بالینی</th><th>درمان / نکته</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">توروس / اگزوستوز</span><span class="en">Torus / exostosis</span></td>
+  <td>بزرگسالان؛ <b>کام میانی (پالاتینوس)</b> و <b>لینگوال پره‌مولر (مندیبولاریس)</b></td>
+  <td>تودهٔ اوپک یکنواخت با حاشیهٔ صاف، روی سطح استخوان.</td>
+  <td>برجستگی استخوانی سفت، بی‌علامت.</td>
+  <td>فقط در صورت تداخل با پروتز برداشته می‌شود.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئوم</span><span class="en">Osteoma</span></td>
+  <td>جوان/میانسال؛ مندیبل، سینوس، کندیل</td>
+  <td>تودهٔ اوپک گرد مشخص، محیطی (periosteal) یا مرکزی (endosteal).</td>
+  <td>رشد آهسته، بی‌درد.</td>
+  <td><b>چندتایی → سندرم گاردنر را رد کن.</b> اکسیزیون اگر علامت‌دار.</td>
+</tr>
+<tr>
+  <td><span class="nm">ریشهٔ باقی‌مانده</span><span class="en">Retained root tip</span></td>
+  <td>هر سن؛ ناحیهٔ بی‌دندانی</td>
+  <td>قطعهٔ اوپک با دانسیتهٔ عاج، گاه با کانال ریشه قابل‌رؤیت و باقی‌ماندهٔ PDL.</td>
+  <td>بی‌علامت.</td>
+  <td>برداشتن اگر علامت‌دار/عفونی.</td>
+</tr>
+<tr>
+  <td><span class="nm">جسم خارجی</span><span class="en">Foreign body</span></td>
+  <td>سابقهٔ ترمیم/جراحی/تروما</td>
+  <td>اوپسیتهٔ بسیار متراکم با شکل غیرآناتومیک (آمالگام، گوتاپرکا، فلز، گلوله).</td>
+  <td>متغیر.</td>
+  <td>بر اساس علامت.</td>
+</tr>
+<tr>
+  <td><span class="nm">ادونتوم کمپلکس (بالغ)</span><span class="en">Complex odontoma</span></td>
+  <td>کودک/جوان؛ خلف مندیبل</td>
+  <td>تودهٔ اوپک نامنظم بدون شکل دندانی، با <b>هالهٔ RL نازک</b>؛ مانع رویش.</td>
+  <td>تأخیر رویش دندان.</td>
+  <td>انوکلیشن؛ خوش‌خیم.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئوبلاستوم / استئوئید استئوما</span><span class="en">Osteoblastoma / osteoid osteoma</span></td>
+  <td>جوان؛ خلف مندیبل</td>
+  <td>اوپک یا مخلوط با هالهٔ RL؛ استئوئید استئوما &lt;۲cm و بسیار دردناک شبانه.</td>
+  <td>درد (پاسخ به NSAID در استئوئید استئوما).</td>
+  <td>اکسیزیون.</td>
+</tr>
+<tr>
+  <td><span class="nm">سیالولیت / گرهٔ لنفی کلسیفیه / تونسیلولیت (بافت نرم)</span><span class="en">Sialolith / calcified node</span></td>
+  <td>بزرگسالان؛ مجرای ساب‌مندیبولار، گردن، لوزه</td>
+  <td>اوپسیتهٔ <b>روی استخوان نیست</b>؛ سیالولیت در مسیر مجرا، گرهٔ کلسیفیه با ظاهر «کلم‌گل».</td>
+  <td>سیالولیت: تورم دردناک هنگام غذا.</td>
+  <td>افتراق با تصاویر زاویه‌دار/CBCT. درمان بسته به نوع.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec" id="multiple-ro"><span class="pill ro">RADIOPAQUE</span> ۱۱) رادیواوپسیتی‌های چندگانه و منتشر</h2>
+<p class="seclead">افزایش تراکم در چند ناحیه یا کل اسکلت. <b>پشم‌پنبه‌ای = پاژه</b>؛ <b>چند توده با هالهٔ RL در چند ربع نزد زن مسن = فلورید COD</b>؛ <b>استخوان‌های متراکم شکننده + کم‌خونی = استئوپتروز</b>.</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="cotton_wool_paget" src="images/cotton_wool_paget.jpg" alt="cotton_wool_paget" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="14" width="136" height="92" fill="#3a4250"/>
+      <g fill="#f2f4f7" opacity=".95"><circle cx="40" cy="40" r="13"/><circle cx="66" cy="52" r="16"/><circle cx="98" cy="42" r="14"/><circle cx="120" cy="62" r="15"/><circle cx="52" cy="78" r="14"/><circle cx="88" cy="80" r="16"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/cotton_wool_paget.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>پشم‌پنبه‌ای (Cotton-wool)</b>بیماری پاژه</div></div>
+  <div class="schema"><img class="rximg" data-key="florid_cod" src="images/florid_cod.jpg" alt="florid_cod" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="14" width="136" height="92" fill="#3a4250"/>
+      <g><circle cx="46" cy="46" r="14" fill="#f2f4f7"/><circle cx="46" cy="46" r="18" fill="none" stroke="#0a0c10" stroke-width="3"/>
+         <circle cx="104" cy="44" r="13" fill="#f2f4f7"/><circle cx="104" cy="44" r="17" fill="none" stroke="#0a0c10" stroke-width="3"/>
+         <circle cx="74" cy="82" r="15" fill="#f2f4f7"/><circle cx="74" cy="82" r="19" fill="none" stroke="#0a0c10" stroke-width="3"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/florid_cod.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>فلورید COD</b>توده‌های اوپک با هالهٔ RL، چند ربع</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-ro">
+<thead><tr>
+  <th class="col-nm">بیماری</th><th>سن / محل</th><th class="col-rx">ویژگی رادیوگرافیک شاخص</th><th>یافتهٔ بالینی/آزمایشگاهی</th><th>درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">دیسپلازی سمنتو-استخوانی فلورید</span><span class="en">Florid cemento-osseous dysplasia</span></td>
+  <td><b>زن سیاه‌پوست مسن</b>؛ چند ربع، دوطرفه</td>
+  <td>توده‌های اوپک لوبوله با <b>هالهٔ RL</b> در ناحیهٔ اپیکال چند ربع؛ خطر استئومیلیت.</td>
+  <td><b>دندان‌ها زنده</b>؛ بی‌علامت مگر عفونی.</td>
+  <td>مشاهده؛ از کشیدن دندان/بیوپسی بپرهیز.</td>
+</tr>
+<tr>
+  <td><span class="nm">بیماری پاژه استخوان</span><span class="en">Paget's disease of bone</span></td>
+  <td>مسن (&gt;۴۰)؛ مرد؛ <b>ماگزیلا بیشتر</b>، جمجمه</td>
+  <td>الگوی <b>«پشم‌پنبه‌ای»</b> اوپک منتشر، <b>هایپرسمنتوز</b>، گشادشدن متقارن فک، فاصله‌افتادن دندان‌ها.</td>
+  <td>بزرگ‌شدن جمجمه (تنگ‌شدن کلاه!)، <b>ALP بسیار بالا</b>، درد استخوان.</td>
+  <td>بیس‌فسفونات؛ خطر استئوسارکوم ثانویه.</td>
+</tr>
+<tr>
+  <td><span class="nm">سندرم گاردنر</span><span class="en">Gardner syndrome</span></td>
+  <td>ارثی AD (APC)</td>
+  <td><b>استئوم‌های متعدد</b> فک/جمجمه، دندان‌های اضافی و نهفته، ادونتوم.</td>
+  <td><span class="mal">پولیپ‌های روده با پتانسیل بدخیمی بالا</span>، کیست اپیدرموئید پوست.</td>
+  <td>غربالگری کولون حیاتی است.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئوپتروز (آلبرس-شونبرگ)</span><span class="en">Osteopetrosis</span></td>
+  <td>ارثی؛ کل اسکلت</td>
+  <td>استخوان <b>بسیار متراکم و یکنواخت</b>، محو شدن مرز کورتکس/مدولا، تأخیر رویش.</td>
+  <td><span class="mal">شکنندگی استخوان، نارسایی مغز استخوان (آنمی)، استئومیلیت مندیبل، فلج اعصاب کرانیال.</span></td>
+  <td>پیوند مغز استخوان (نوع شدید).</td>
+</tr>
+<tr>
+  <td><span class="nm">استئومیلیت اسکلروزان منتشر / مزمن</span><span class="en">Diffuse sclerosing osteomyelitis</span></td>
+  <td>میانسال؛ مندیبل</td>
+  <td>اسکلروز منتشر مخلوط با RL، واکنش پریوست؛ همراه SAPHO.</td>
+  <td>درد و تورم عودکننده.</td>
+  <td>آنتی‌بیوتیک/ضدالتهاب طولانی.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- ===================== مخلوط ===================== -->
+<h2 class="sec" id="mixed"><span class="pill mx">MIXED</span> ۱۲) ضایعات مخلوط رادیولوسنت–رادیواوپک</h2>
+<p class="seclead">ترکیب نواحی تیره و روشن = ضایعهٔ <b>در حال بلوغ یا تولیدکنندهٔ سخت‌نسج</b>. سرنخ تفکیک: شیشهٔ مات و محوشدن مرز = فیبروس دیسپلازی؛ ساختار دندان‌مانند = ادونتوم؛ کلسیفیکاسیون «برف‌رانده» دور دندان نهفته = CEOT.</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="fibrous_dysplasia" src="images/fibrous_dysplasia.jpg" alt="fibrous_dysplasia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="14" width="136" height="92" fill="#3a4250"/>
+      <rect x="40" y="30" width="80" height="60" fill="#6f7884"/>
+      <text x="80" y="105" fill="#7d8794" font-size="9" text-anchor="middle">شیشهٔ مات، مرز محو</text>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/fibrous_dysplasia.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>فیبروس دیسپلازی</b>Ground glass، در استخوان محو می‌شود</div></div>
+  <div class="schema"><img class="rximg" data-key="compound_odontoma" src="images/compound_odontoma.jpg" alt="compound_odontoma" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="14" width="136" height="92" fill="#3a4250"/>
+      <ellipse cx="80" cy="60" rx="40" ry="32" fill="#0a0c10"/>
+      <g fill="#e9edf2"><path d="M62 48 l6 0 -2 16 -2 0z"/><path d="M76 44 l6 0 -2 18 -2 0z"/><path d="M90 50 l6 0 -2 14 -2 0z"/><path d="M70 70 l6 0 -2 14 -2 0z"/><path d="M86 72 l6 0 -2 12 -2 0z"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/compound_odontoma.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>ادونتوم مرکب</b>دندانک‌های ریز (denticles) در RL</div></div>
+  <div class="schema"><img class="rximg" data-key="ceot_pindborg" src="images/ceot_pindborg.jpg" alt="ceot_pindborg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="12" y="14" width="136" height="92" fill="#3a4250"/>
+      <path d="M62 64 q18 -10 36 0 l-6 40 h-24z" fill="#cfd6de"/>
+      <ellipse cx="80" cy="52" rx="40" ry="34" fill="#0a0c10"/>
+      <g fill="#f2f4f7"><circle cx="60" cy="44" r="3"/><circle cx="74" cy="38" r="3.5"/><circle cx="92" cy="46" r="3"/><circle cx="66" cy="58" r="3"/><circle cx="86" cy="60" r="3.2"/><circle cx="100" cy="56" r="2.6"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/ceot_pindborg.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>CEOT (پیندبورگ)</b>«برف‌رانده» دور دندان نهفته</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-mx">
+<thead><tr>
+  <th class="col-nm">ضایعه</th><th>سن / جنس / محل</th><th class="col-rx">ویژگی رادیوگرافی</th><th>بالینی / حیات پالپ</th><th>هیستوپاتولوژی</th><th>تشخیص افتراقی و درمان</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="nm">فیبروس دیسپلازی</span><span class="en">Fibrous dysplasia</span></td>
+  <td><b>کودک/جوان (&lt;۲۰)</b>؛ <b>ماگزیلا (مونوستوتیک)</b>، یک‌طرفه</td>
+  <td>الگوی <b>«شیشهٔ مات/پوست‌پرتقالی»</b>؛ <span class="key">حاشیهٔ نامشخص که در استخوان نرمال محو می‌شود (بدون کپسول)</span>؛ گشادشدن یک‌نواخت، جابه‌جایی کانال/سینوس به بالا.</td>
+  <td>تورم بدون درد یک‌طرفهٔ صورت؛ دندان‌ها زنده.</td>
+  <td>ترابکول‌های ناهنجار شکل «حروف چینی/C-shape» در استرومای فیبروز، بدون حاشیهٔ استئوبلاستی.</td>
+  <td><b>افتراق کلیدی از فیبروم استخوانی‌کننده (که کپسول‌دار و جداست).</b> پلی‌اوستوتیک + کافه‌اوله + اندوکرین = <b>مک‌کیون-آلبرایت</b>. درمان: تراش زیبایی پس از تثبیت؛ رزکسیون نمی‌شود.</td>
+</tr>
+<tr>
+  <td><span class="nm">فیبروم استخوانی‌کننده (مرحلهٔ مخلوط)</span><span class="en">Ossifying fibroma</span></td>
+  <td>۲۰–۴۰؛ زن؛ خلف مندیبل</td>
+  <td>ضایعهٔ <b>به‌خوبی محصور و مرکزدار</b> با کلسیفیکاسیون متمرکز؛ گشادشدن متقارن.</td>
+  <td>تورم آهسته؛ دندان‌ها زنده.</td>
+  <td>استرومای فیبروز + ترابکول/توده‌های سمان‌مانند، کپسوله.</td>
+  <td>برخلاف FD به‌خوبی از استخوان جدا می‌شود. درمان: انوکلیشن؛ نوع جوانان (juvenile) تهاجمی‌تر.</td>
+</tr>
+<tr>
+  <td><span class="nm">دیسپلازی سمنتو-استخوانی (مرحلهٔ بینابینی)</span><span class="en">COD (intermediate)</span></td>
+  <td>زن سیاه‌پوست میانسال؛ قدام/چند ربع مندیبل</td>
+  <td>توده‌های مخلوط RL-RO پری‌اپیکال؛ مرحلهٔ گذار بین RL اولیه و RO نهایی.</td>
+  <td><b>دندان‌ها زنده</b>؛ بی‌علامت.</td>
+  <td>فیبروز + سمان/استخوان.</td>
+  <td>افتراق از استئومیلیت/فیبروم؛ <b>درمان: مشاهده، بیوپسی نکن.</b></td>
+</tr>
+<tr>
+  <td><span class="nm">ادونتوم (مرکب / کمپلکس، در حال تکامل)</span><span class="en">Developing odontoma</span></td>
+  <td>کودک/نوجوان؛ مرکب=قدام ماگزیلا، کمپلکس=خلف مندیبل</td>
+  <td>RL با کلسیفیکاسیون داخل آن و <b>هالهٔ RL</b>؛ مرکب = <b>دندانک‌های ریز شبیه دندان</b>، کمپلکس = تودهٔ اوپک بی‌شکل.</td>
+  <td>تأخیر رویش دندان؛ بی‌علامت.</td>
+  <td>مینا، عاج، سمان منظم (هامارتوم).</td>
+  <td>شایع‌ترین تومور ادونتوژنیک. درمان: انوکلیشن (پیش‌آگهی عالی).</td>
+</tr>
+<tr>
+  <td><span class="nm">تومور اپیتلیال ادونتوژنیک کلسیفیه (CEOT / پیندبورگ)</span><span class="en">Calcifying epithelial odontogenic tumor</span></td>
+  <td>میانسال؛ خلف مندیبل</td>
+  <td>RL تک/مولتی با کلسیفیکاسیون پراکنده <b>«برف‌رانده/driven snow»</b>، اغلب مرتبط با <b>دندان نهفته</b>.</td>
+  <td>تورم آهسته.</td>
+  <td>اپی‌تلیوم چندوجهی + <b>آمیلوئید</b> و حلقه‌های کلسیفیه (Liesegang).</td>
+  <td>DDx: AOT، COC، ادونتوم. درمان: اکسیزیون موضعی با حاشیه.</td>
+</tr>
+<tr>
+  <td><span class="nm">کیست ادونتوژنیک کلسیفیه (گورلین)</span><span class="en">Calcifying odontogenic cyst</span></td>
+  <td>دههٔ ۲–۳؛ قدام فک</td>
+  <td>RL با کلسیفیکاسیون نامنظم، گاه همراه ادونتوم.</td>
+  <td>تورم بی‌درد.</td>
+  <td><b>سلول‌های شبح + کلسیفیکاسیون.</b></td>
+  <td>درمان: انوکلیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">فیبرو-ادونتومِ آملوبلاستیک</span><span class="en">Ameloblastic fibro-odontoma</span></td>
+  <td>کودک؛ خلف مندیبل</td>
+  <td>RL مشخص با کلسیفیکاسیون شبیه ادونتوم، اغلب با دندان نهفته.</td>
+  <td>تورم بی‌درد.</td>
+  <td>بافت نرم فیبروم آملوبلاستیک + سخت‌نسج ادونتوم.</td>
+  <td>درمان: انوکلیشن.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئومیلیت مزمن با سکستروم</span><span class="en">Chronic osteomyelitis</span></td>
+  <td>هر سن؛ مندیبل</td>
+  <td>زمینهٔ RL با قطعات اوپک <b>سکستروم</b>؛ واکنش پریوست «پوست‌پیازی».</td>
+  <td>درد، ترشح، فیستول.</td>
+  <td>استخوان نکروز + التهاب.</td>
+  <td>سکسترکتومی + آنتی‌بیوتیک.</td>
+</tr>
+<tr>
+  <td><span class="nm">استئوسارکوم (نوع مخلوط)</span><span class="en">Osteosarcoma</span></td>
+  <td>۳۰–۴۰ در فک</td>
+  <td>مخلوط نامنظم با <b>«تابش خورشید»</b>، Codman triangle، و <span class="mal">گشادشدن یک‌نواخت فضای PDL</span>.</td>
+  <td>تورم سریع، درد، پارستزی.</td>
+  <td>استرومای بدخیم سازندهٔ استئویید.</td>
+  <td>رزکسیون وسیع + کمو.</td>
+</tr>
+<tr>
+  <td><span class="nm">کندروسارکوم</span><span class="en">Chondrosarcoma</span></td>
+  <td>میانسال؛ ماگزیلای قدامی</td>
+  <td>مخلوط با کلسیفیکاسیون غضروفی «پاپ‌کورن/حلقه‌ای».</td>
+  <td>تورم بدون درد.</td>
+  <td>غضروف بدخیم.</td>
+  <td>رزکسیون وسیع.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- ===================== اطلس الگوهای کلاسیک ===================== -->
+<h2 class="sec" id="patterns"><span class="pill" style="background:#eceff3;color:#333;border:1px solid #d6dbe2">ATLAS</span> اطلس الگوهای کلاسیک (Pathognomonic Patterns)</h2>
+<p class="seclead">هر الگوی داخلی یا واکنش پریوست، یک «امضای تشخیصی» است. این اطلس الگوهای کلیدی را کنار هم می‌گذارد تا با دیدن نمای رادیوگرافی بتوانید سریع به سمت گروه درست بروید. (شکل‌ها طرح‌وارهٔ آموزشی‌اند، نه رادیوگراف واقعی.)</p>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="pattern_ground_glass" src="images/pattern_ground_glass.jpg" alt="pattern_ground_glass" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="14" y="14" width="132" height="92" rx="6" fill="#7d8794"/>
+      <rect x="14" y="14" width="132" height="92" rx="6" fill="url(#gg)" opacity="0.5"/>
+      <defs><pattern id="gg" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7" fill="#cdd4dc"/></pattern></defs>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_ground_glass.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Ground glass / شیشه‌مات</b>دیسپلازی فیبروز</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_cotton_wool" src="images/pattern_cotton_wool.jpg" alt="pattern_cotton_wool" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <g fill="#e9edf2"><ellipse cx="48" cy="44" rx="20" ry="15"/><ellipse cx="96" cy="38" rx="22" ry="16"/><ellipse cx="118" cy="72" rx="19" ry="15"/><ellipse cx="64" cy="80" rx="22" ry="16"/><ellipse cx="32" cy="78" rx="14" ry="12"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_cotton_wool.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Cotton-wool / پشم‌پنبه‌ای</b>بیماری پاژه (مرحلهٔ بلوغ)</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_sunburst" src="images/pattern_sunburst.jpg" alt="pattern_sunburst" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="0" y="72" width="160" height="48" fill="#3a4250"/>
+      <g stroke="#eef2f6" stroke-width="2.5"><line x1="80" y1="72" x2="40" y2="14"/><line x1="80" y1="72" x2="62" y2="8"/><line x1="80" y1="72" x2="80" y2="6"/><line x1="80" y1="72" x2="98" y2="8"/><line x1="80" y1="72" x2="120" y2="14"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_sunburst.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Sunburst / تابش خورشید</b>استئوسارکوم</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_soap_bubble" src="images/pattern_soap_bubble.jpg" alt="pattern_soap_bubble" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="16" y="20" width="128" height="80" rx="10" fill="#3a4250"/>
+      <g fill="#0a0c10"><circle cx="48" cy="48" r="20"/><circle cx="92" cy="44" r="22"/><circle cx="118" cy="74" r="17"/><circle cx="62" cy="80" r="19"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_soap_bubble.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Soap-bubble / حباب صابون</b>آملوبلاستوما (حفرات بزرگ)</div></div>
+</div>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="pattern_honeycomb" src="images/pattern_honeycomb.jpg" alt="pattern_honeycomb" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="16" y="18" width="128" height="84" fill="#0a0c10"/>
+      <g stroke="#6f7884" stroke-width="2" fill="none"><path d="M28 30 H132 M28 54 H132 M28 78 H132 M44 18 V102 M76 18 V102 M108 18 V102"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_honeycomb.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Honeycomb / لانه‌زنبوری</b>میگزوم ادونتوژنیک، همانژیوم</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_driven_snow" src="images/pattern_driven_snow.jpg" alt="pattern_driven_snow" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="16" y="18" width="128" height="84" rx="8" fill="#2b323d"/>
+      <g fill="#eef2f6"><circle cx="40" cy="40" r="3"/><circle cx="64" cy="32" r="2.4"/><circle cx="92" cy="44" r="3.2"/><circle cx="118" cy="36" r="2.6"/><circle cx="52" cy="64" r="2.8"/><circle cx="80" cy="70" r="3.4"/><circle cx="108" cy="66" r="2.6"/><circle cx="68" cy="88" r="2.6"/><circle cx="100" cy="90" r="3"/><circle cx="36" cy="84" r="2.4"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_driven_snow.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Driven-snow / برف‌رانده</b>CEOT (پیندبورگ)</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_floating_teeth" src="images/pattern_floating_teeth.jpg" alt="pattern_floating_teeth" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="0" y="64" width="160" height="56" fill="#0a0c10"/>
+      <g fill="#e9edf2"><path d="M44 18 L56 18 L52 64 L48 64 Z"/><path d="M74 18 L86 18 L83 64 L77 64 Z"/><path d="M104 18 L116 18 L112 64 L108 64 Z"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_floating_teeth.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Floating teeth / دندان شناور</b>LCH، مالتیپل میلوما، پریو پیشرفته</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_punched_out" src="images/pattern_punched_out.jpg" alt="pattern_punched_out" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="10" y="10" width="140" height="100" fill="#3a4250"/>
+      <g fill="#0a0c10"><circle cx="40" cy="36" r="11"/><circle cx="84" cy="30" r="9"/><circle cx="120" cy="44" r="12"/><circle cx="58" cy="72" r="10"/><circle cx="104" cy="80" r="11"/><circle cx="30" cy="90" r="8"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_punched_out.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Punched-out / سوراخ‌پانچ</b>مالتیپل میلوما</div></div>
+</div>
+
+<div class="schema-row">
+  <div class="schema"><img class="rximg" data-key="pattern_moth_eaten" src="images/pattern_moth_eaten.jpg" alt="pattern_moth_eaten" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="10" y="10" width="140" height="100" fill="#3a4250"/>
+      <g fill="#0a0c10"><circle cx="34" cy="30" r="6"/><circle cx="58" cy="24" r="4"/><circle cx="80" cy="40" r="7"/><circle cx="108" cy="28" r="5"/><circle cx="128" cy="48" r="6"/><circle cx="44" cy="58" r="5"/><circle cx="72" cy="66" r="8"/><circle cx="100" cy="60" r="5"/><circle cx="124" cy="78" r="6"/><circle cx="38" cy="86" r="5"/><circle cx="66" cy="94" r="6"/><circle cx="96" cy="88" r="5"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_moth_eaten.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Moth-eaten / بیدخورده</b>استئومیلیت، بدخیمی</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_hair_on_end" src="images/pattern_hair_on_end.jpg" alt="pattern_hair_on_end" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="0" y="80" width="160" height="40" fill="#3a4250"/>
+      <g stroke="#eef2f6" stroke-width="2"><line x1="20" y1="80" x2="20" y2="20"/><line x1="36" y1="80" x2="36" y2="14"/><line x1="52" y1="80" x2="52" y2="22"/><line x1="68" y1="80" x2="68" y2="12"/><line x1="84" y1="80" x2="84" y2="20"/><line x1="100" y1="80" x2="100" y2="14"/><line x1="116" y1="80" x2="116" y2="22"/><line x1="132" y1="80" x2="132" y2="16"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_hair_on_end.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Hair-on-end / موسیخ</b>تالاسمی، سیکل‌سل</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_codman_triangle" src="images/pattern_codman_triangle.jpg" alt="pattern_codman_triangle" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="0" y="78" width="160" height="42" fill="#3a4250"/>
+      <path d="M40 78 L120 78 L100 40 Z" fill="none" stroke="#eef2f6" stroke-width="3"/>
+      <line x1="40" y1="78" x2="100" y2="40" stroke="#eef2f6" stroke-width="4"/>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_codman_triangle.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Codman triangle</b>استئوسارکوم (واکنش پریوست)</div></div>
+  <div class="schema"><img class="rximg" data-key="pattern_onion_skin" src="images/pattern_onion_skin.jpg" alt="pattern_onion_skin" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback" style="display:none"><svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#11151c"/>
+      <rect x="0" y="84" width="160" height="36" fill="#3a4250"/>
+      <g fill="none" stroke="#cdd4dc" stroke-width="2.5"><path d="M30 84 Q80 60 130 84"/><path d="M24 84 Q80 48 136 84"/><path d="M18 84 Q80 36 142 84"/></g>
+    </svg><div class="fnote">برای عکس واقعی فایل <code>images/pattern_onion_skin.jpg</code> را در پوشه قرار دهید</div></div><div class="cap"><b>Onion-skin / پوست‌پیازی</b>استئومیلیت گاره، یوینگ</div></div>
+</div>
+
+<div class="tablewrap">
+<table class="t-mx">
+<thead><tr>
+  <th class="col-nm">الگو (Pattern)</th><th>توصیف</th><th class="col-rx">تشخیص(های) مرتبط</th><th>نکتهٔ افتراقی کلیدی</th>
+</tr></thead>
+<tbody>
+<tr><td><span class="nm">شیشه‌مات</span><span class="en">Ground glass</span></td><td>ریزدانه، مات یک‌نواخت، حدود محو با استخوان مجاور.</td><td>دیسپلازی فیبروز (تک/چنداستخوانه).</td><td>محو شدن تدریجی در استخوان نرمال (برخلاف فیبروم اوسیفایه که کپسول مشخص دارد).</td></tr>
+<tr><td><span class="nm">پشم‌پنبه‌ای</span><span class="en">Cotton-wool</span></td><td>توده‌های پنبه‌مانند اوپک نامنظم.</td><td>بیماری پاژه، فلوریدِ COD مرحلهٔ بلوغ.</td><td>پاژه = منتشر و دوطرفه + بزرگی جمجمه؛ COD = محدود به فک حول ریشه‌ها.</td></tr>
+<tr><td><span class="nm">تابش خورشید</span><span class="en">Sunburst / sun-ray</span></td><td>اسپیکول‌های استخوانی شعاعی عمود بر کورتکس.</td><td>استئوسارکوم؛ گاه کندروسارکوم، همانژیوم.</td><td>همراه با گشادشدن یک‌نواخت فضای PDL و پارستزی → بدخیم.</td></tr>
+<tr><td><span class="nm">حباب صابون</span><span class="en">Soap-bubble</span></td><td>مولتی‌لوکولر با حفرات بزرگ و سپتوم منحنی.</td><td>آملوبلاستوما (کلاسیک)، CGCG، ABC.</td><td>آملوبلاستوما تحلیل ریشه و گشادشدن شدید کورتکس می‌دهد.</td></tr>
+<tr><td><span class="nm">لانه‌زنبوری</span><span class="en">Honeycomb</span></td><td>حفرات کوچک متعدد و منظم.</td><td>میگزوم ادونتوژنیک، همانژیوم مرکزی.</td><td>میگزوم سپتوم‌های نازکِ مستقیم با زاویهٔ تند («tennis racket/step-ladder») دارد.</td></tr>
+<tr><td><span class="nm">برف‌رانده</span><span class="en">Driven-snow</span></td><td>کلسیفیکاسیون‌های ریز پراکنده در زمینهٔ RL.</td><td>CEOT (پیندبورگ).</td><td>اغلب حول تاج دندان نهفته؛ هیستو = آمیلوئید + حلقه‌های Liesegang.</td></tr>
+<tr><td><span class="nm">دندان شناور</span><span class="en">Floating teeth</span></td><td>دندان‌ها بدون تکیه‌گاه استخوانی در زمینهٔ RL معلق‌اند.</td><td>LCH، مالتیپل میلوما، پریودنتیت پیشرفته/ تهاجمی، بدخیمی.</td><td>در کودک → LCH؛ در بزرگسال با درد استخوانی → میلوما/متاستاز.</td></tr>
+<tr><td><span class="nm">سوراخ‌پانچ</span><span class="en">Punched-out</span></td><td>RLهای گرد متعدد با حاشیهٔ تیز و بدون اسکلروز حاشیه‌ای.</td><td>مالتیپل میلوما (و LCH).</td><td>میلوما: جمجمه + پروتئین بنس‌جونز؛ فاقد حاشیهٔ اسکلروتیک (برخلاف کیست‌ها).</td></tr>
+<tr><td><span class="nm">بیدخورده</span><span class="en">Moth-eaten</span></td><td>کانون‌های تخریب کوچک نامنظم به‌هم‌پیوسته با حاشیهٔ مبهم.</td><td>استئومیلیت حاد، SCC، متاستاز، لنفوم.</td><td>پیشرفت سریع + پارستزی + تخریب کورتکس = بدخیمی/عفونت مهاجم.</td></tr>
+<tr><td><span class="nm">موسیخ</span><span class="en">Hair-on-end</span></td><td>ترابکول‌های عمودی موازی در دیپلوهٔ پهن‌شده.</td><td>تالاسمی، کم‌خونی سیکل‌سل.</td><td>پهن‌شدن دیپلوهٔ جمجمه + هایپرپلازی مغز استخوان؛ زمینهٔ هموگلوبینوپاتی.</td></tr>
+<tr><td><span class="nm">مثلث کادمن</span><span class="en">Codman triangle</span></td><td>برخاستن کورتکس و رسوب استخوان واکنشی به‌شکل مثلث.</td><td>استئوسارکوم (و دیگر بدخیمی‌های مهاجم).</td><td>نشانهٔ تهاجمِ سریع و تخریب پریوست.</td></tr>
+<tr><td><span class="nm">پوست‌پیازی</span><span class="en">Onion-skin</span></td><td>لایه‌های موازی استخوان واکنشی پریوست.</td><td>استئومیلیت گاره (Garré)، سارکوم یوینگ.</td><td>در کودک/نوجوان با تورم سفت گونه و سابقهٔ عفونت دندانی → گاره.</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ===================== جمع‌بندی تشخیص افتراقی ===================== -->
+<h2 class="sec" id="summary"><span class="pill" style="background:#eceff3;color:#333;border:1px solid #d6dbe2">SUMMARY</span> جمع‌بندی و مرجع سریع تشخیص افتراقی</h2>
+<p class="seclead">سه جدول جمع‌بندی برای مرور سریع پیش از امتحان یا کنار یونیت: ۱) بر اساس نمای رادیوگرافی، ۲) بر اساس محل، ۳) بر اساس سن. برای جزئیات کامل به بخش مربوطه در بالا مراجعه کنید.</p>
+
+<h3 style="font-size:17px;font-weight:800;margin:26px 0 8px">۱) بر اساس نمای رادیوگرافی (مسیر تصمیم‌گیری Wood)</h3>
+<div class="tablewrap">
+<table class="t-rl">
+<thead><tr><th class="col-nm">نما</th><th>تک‌کانونی شایع</th><th>چندکانونی / منتشر شایع</th><th>«طلایی» برای افتراق</th></tr></thead>
+<tbody>
+<tr><td><span class="nm">رادیولوسنت پری‌اپیکال</span></td><td>گرانولوم، کیست رادیکولار، آبسه</td><td>PCOD اولیه، فلوریدِ COD</td><td><b>تست حیات پالپ</b> (غیرزنده=التهابی / زنده=دیسپلاستیک).</td></tr>
+<tr><td><span class="nm">RL پری‌کرونال</span></td><td>کیست دنتی‌جروس، OKC، آملوبلاستومای یونی‌سیستیک</td><td>—</td><td>اتصال هاله به <b>CEJ</b> دندان نهفته = دنتی‌جروس؛ عبور از CEJ یا چندحفره‌ای = OKC/تومور.</td></tr>
+<tr><td><span class="nm">RL بین‌ریشه‌ای</span></td><td>کیست نازوپالاتین، کیست پریودنتال جانبی</td><td>—</td><td>محل (خط وسط قدامی=نازوپالاتین؛ کنار ریشهٔ زندهٔ کانین/پره‌مولر=LPC).</td></tr>
+<tr><td><span class="nm">RL تک، حدود مشخص</span></td><td>کیست باقی‌مانده، OKC، آملوبلاستوما، میگزوم، CGCG</td><td>—</td><td>حاشیهٔ کورتیکهٔ مشخص = خوش‌خیم آهسته؛ اسکالوپ بین ریشه‌ها = کیست تروماتیک/OKC.</td></tr>
+<tr><td><span class="nm">RL مولتی‌لوکولر</span></td><td>آملوبلاستوما، OKC، CGCG، میگزوم، ABC</td><td>کروبیسم (دوطرفه کودک)</td><td>حباب‌صابون+تحلیل ریشه=آملوبلاستوما؛ دوطرفهٔ زاویهٔ فک در کودک=کروبیسم.</td></tr>
+<tr><td><span class="nm">RL با حاشیهٔ مبهم</span></td><td>استئومیلیت، SCC، متاستاز، استئوسارکوم</td><td>—</td><td><span class="mal">پارستزی، تخریب کورتکس، Sunburst، گشادشدن یک‌نواخت PDL = بدخیمی.</span></td></tr>
+<tr><td><span class="nm">RLهای متعدد مجزا</span></td><td>—</td><td>مالتیپل میلوما، متاستاز، LCH، NBCCS (گورلین)</td><td>سن کودک=LCH؛ بزرگسال+درد+بنس‌جونز=میلوما؛ کیست‌های متعدد فک+نقص پوستی=گورلین.</td></tr>
+<tr><td><span class="nm">RL منتشر / کاهش تراکم عمومی</span></td><td>—</td><td>هایپرپاراتیروئیدی، استئوپروز، تالاسمی، سیکل‌سل</td><td>محو لامینا دورا + تومور قهوه‌ای=هایپرپاراتیروئیدی؛ موسیخ=هموگلوبینوپاتی.</td></tr>
+<tr><td><span class="nm">رادیواوپک پری‌اپیکال</span></td><td>استئیت متراکم‌شونده، استئواسکلروز ایدیوپاتیک، سمنتوبلاستوما، هایپرسمنتوز، PCOD بالغ</td><td>—</td><td>متصل به ریشه + هالهٔ RL + دندان زنده=سمنتوبلاستوما؛ بدون هاله، دندان زنده=استئواسکلروز.</td></tr>
+<tr><td><span class="nm">RO تک</span></td><td>توروس/اگزوستوز، استئوما، ریشهٔ باقی‌مانده، ادونتومِ کمپلکس</td><td>—</td><td>چند استئوما+کیست‌اپیدرموئید+پولیپ روده=سندرم گاردنر.</td></tr>
+<tr><td><span class="nm">ROهای متعدد</span></td><td>—</td><td>فلوریدِ COD، پاژه، گاردنر، استئوپتروز</td><td>پشم‌پنبه‌ای دوطرفه+بزرگی جمجمه=پاژه؛ حول ریشه‌ها در زن میانسال آفریقایی=فلوریدِ COD.</td></tr>
+<tr><td><span class="nm">مخلوط RL/RO</span></td><td>دیسپلازی فیبروز، فیبروم اوسیفایه، COD حدواسط، ادونتومِ در حال تکامل، CEOT، COC</td><td>—</td><td>شیشه‌مات با حدود محو=FD؛ تودهٔ کپسول‌دار جابه‌جاکننده=فیبروم اوسیفایه.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 style="font-size:17px;font-weight:800;margin:30px 0 8px">۲) بر اساس محل آناتومیک</h3>
+<div class="tablewrap">
+<table class="t-ro">
+<thead><tr><th class="col-nm">محل</th><th>ضایعات شاخص</th></tr></thead>
+<tbody>
+<tr><td><span class="nm">خط وسط قدام ماگزیلا</span></td><td>کیست نازوپالاتین، کیست مدین پالاتال، ادونتومِ مرکب، AOT (قدام، حول کانین نهفته).</td></tr>
+<tr><td><span class="nm">بین کانین و لترال (گلوبولوماگزیلاری)</span></td><td>کیست رادیکولار جانبی، OKC، کیست پریودنتال جانبی، تومور ادونتوژنیک (واگرایی ریشه‌ها).</td></tr>
+<tr><td><span class="nm">خلف مندیبل / زاویه و راموس</span></td><td>کیست دنتی‌جروس، OKC، آملوبلاستوما، میگزوم، ادونتومِ کمپلکس، CEOT، استافنه (زیر کانال، خلفی).</td></tr>
+<tr><td><span class="nm">دوطرفه</span></td><td>کروبیسم (کودک)، NBCCS/گورلین (OKCهای متعدد)، فلوریدِ COD، تالاسمی.</td></tr>
+<tr><td><span class="nm">زیر کانال مندیبل، گوشهٔ خلفی‌تحتانی</span></td><td>نقص استخوانی استافنه (Stafne) — کاذب، ثابت، بدون علامت.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 style="font-size:17px;font-weight:800;margin:30px 0 8px">۳) بر اساس سن غالب</h3>
+<div class="tablewrap">
+<table class="t-mx">
+<thead><tr><th class="col-nm">گروه سنی</th><th>ضایعات شایع/شاخص</th></tr></thead>
+<tbody>
+<tr><td><span class="nm">کودک و نوجوان</span></td><td>کیست دنتی‌جروس، کروبیسم (دوطرفه)، LCH (دندان شناور)، فیبروم آملوبلاستیک، ادونتوم، ABC، سارکوم یوینگ، استئومیلیت گاره، بورکیت (ماگزیلای آفریقایی).</td></tr>
+<tr><td><span class="nm">جوان (دههٔ ۲–۳)</span></td><td>OKC، AOT، CGCG، فیبروم اوسیفایه، دیسپلازی فیبروز، COC/گورلین، کیست تروماتیک استخوانی.</td></tr>
+<tr><td><span class="nm">میانسال</span></td><td>آملوبلاستوما، میگزوم، CEOT، فلوریدِ COD (زن آفریقایی)، استئوسارکوم فک، کندروسارکوم.</td></tr>
+<tr><td><span class="nm">مسن</span></td><td>بیماری پاژه، مالتیپل میلوما، متاستاز (پستان/پروستات/ریه/کلیه/تیروئید)، SCC، ORN/MRONJ.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note" style="border-inline-start-color:var(--ok)">
+<b>یک جملهٔ جمع‌بندی:</b> همیشه از همان مسیر Wood جلو بروید — اول <b>نما</b> (RL / RO / مخلوط)، بعد <b>تعداد و محل</b>، بعد <b>حاشیه</b> (مشخص/کورتیکه = خوش‌خیم؛ مبهم/نفوذی = بدخیم یا عفونی)، بعد <b>اثر بر دندان و کورتکس</b> (جابه‌جایی = آهسته؛ تحلیل تیز و تخریب کورتکس = مهاجم)، و در ضایعات پری‌اپیکال همیشه <b>تست حیات پالپ</b> را اضافه کنید. این پنج گام، اکثر تشخیص‌های افتراقی را جمع می‌کند.
+</div>
+
+</main>
+</div>
+
+<footer>
+<div style="max-width:1100px;margin:0 auto;padding:0 22px">
+  <p style="margin:0 0 6px"><b>جزوهٔ ضایعات استخوانی فکین</b> — تنظیم‌شده بر مبنای چارچوب تشخیص افتراقی بر اساس نمای رادیوگرافیِ <i>Wood &amp; Goaz, Differential Diagnosis of Oral and Maxillofacial Lesions</i>.</p>
+  <p style="margin:0;color:#aeb6c0">طرح‌وارهٔ رادیوگرافی‌ها اصلی و آموزشی‌اند (برای پرهیز از مسائل کپی‌رایت) و جایگزین اطلس تصویری واقعی کتاب نیستند. این جزوه مرجع مرور است، نه جایگزین قضاوت بالینی و رادیولوژیست.</p>
+</div>
+</footer>
+
+
+<script>
+/* ============================================================
+   نقشهٔ منابع عکس‌های واقعی (با لایسنس آزاد + ذکر منبع)
+   برای هر ضایعه، آدرس مستقیم عکس و نام منبع را وارد کنید.
+   فقط از عکس‌های دارای لایسنس آزاد استفاده کنید (Wikimedia Commons،
+   مقالات Open-Access با لایسنس CC-BY، یا public domain).
+   مثال:
+     "ameloblastoma_soap_bubble": {
+        src: "https://upload.wikimedia.org/wikipedia/commons/…/file.jpg",
+        credit: "Wikimedia Commons — Author Name, CC BY-SA 4.0"
+     },
+   اگر برای ضایعه‌ای آدرسی وارد نشود یا لینک باز نشود،
+   به‌طور خودکار همان طرح‌وارهٔ آموزشی نمایش داده می‌شود.
+   کلیدها (data-key) دقیقاً همان نام فایل‌ها هستند؛ فهرست کامل
+   در images/_filenames.txt آمده است.
+   ============================================================ */
+const SOURCES = {
+  // "dentigerous_cyst":            { src: "", credit: "" },
+  // "ameloblastoma_soap_bubble":   { src: "", credit: "" },
+  // "fibrous_dysplasia":           { src: "", credit: "" },
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('img.rximg').forEach(function (img) {
+    const key = img.getAttribute('data-key');
+    const s = SOURCES[key];
+    img.addEventListener('load', function () {
+      const cap = img.parentElement.querySelector('.cap');
+      const info = SOURCES[img.getAttribute('data-key')];
+      if (cap && info && info.credit && !cap.querySelector('.credit')) {
+        const c = document.createElement('div');
+        c.className = 'credit';
+        c.textContent = 'منبع: ' + info.credit;
+        cap.appendChild(c);
+      }
+    });
+    if (s && s.src) { img.src = s.src; }   /* بارگذاری از سایت مبدأ */
+  });
+});
+</script>
+
+</body>
+</html>
